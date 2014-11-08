@@ -21,8 +21,8 @@ require("jquery.highlight.js");
         +'</div></a></div>';
     }
 
-    $('#service-name').html(apiInfo.item.title )
-    .webuiPopover({content:content, closeable:true});
+    // $('#service-name').html(apiInfo.item.title )
+    // .webuiPopover({content:content, closeable:true});
 
     $('.BigImage-image').attr('src', '/icons/' + apiInfo.item.iconBig);
     $('.panelTopic-image').attr('src', '/icons/' + apiInfo.item.icon);
