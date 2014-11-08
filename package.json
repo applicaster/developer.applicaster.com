@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "postinstall": "node node_modules/.bin/gulp bld"
   },
   "author": "",
   "license": "MIT",
@@ -42,9 +43,7 @@
     "express-session": "^1.9.1",
     "dotenv": "^0.4.0",
     "normalize.scss": "^0.1.0",
-    "gulp-sass": "^1.2.2"
-  },
-  "devDependencies": {
+    "gulp-sass": "^1.2.2",
     "gulp-filter": "^1.0.2",
     "gulp-plumber": "^0.6.6"
   }

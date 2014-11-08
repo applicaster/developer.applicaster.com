@@ -1,6 +1,6 @@
 'use strict';
-var dotenv = require('dotenv');
-dotenv.load();
+// var dotenv = require('dotenv');
+// dotenv.load();
 
 var gulp = require("gulp");
 var sass = require('gulp-sass');
@@ -35,8 +35,8 @@ gulp.task('bld', function(done){
   .addFormating()
   .distributeFiles();
 
-  var startExpress = require('./server.js');
-  startExpress();
+  // var startExpress = require('./server.js');
+  // startExpress();
 });
 
 // WORKFLOW CONTROLLER
