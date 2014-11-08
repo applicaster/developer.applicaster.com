@@ -1,0 +1,29 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="/bower_components/webui-popover/dist/jquery.webui-popover.min.css")
+    link(rel="stylesheet" href="../screen.css")
+  body
+    .Header.u-posFixed
+      span.Header-mainTitle
+        a.u-unstyledLink.Header-logo(href="/", alt="Applicaster") &nbsp;
+        span.Header-text Developer Documentation (ALPHA)
+      .Header-border
+    .SideMenu
+      .TocifyWrapper.tocify-wrapper
+        //- .search
+        //-   input#input-search.search(type='text', placeholder='Search')
+        //- ul.search-results
+        #toc.tocify
+          
+    .Content.Header-benathHeader.SideMenu-asideSideMenu
+      - each api in apis
+        a.panelTopic.PanelTopic--teaser(href="#{api.url}")
+          img.panelTopic-image(src='icons/#{api.icon}')
+          .panelTopic-header #{api.kit}
+          h1.panelTopic-title #{api.title}
+  script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+  script(src='/bower_components/webui-popover/dist/jquery.webui-popover.min.js')
+  script(src='bundle.js')

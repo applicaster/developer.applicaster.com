@@ -1,0 +1,24 @@
+/**
+ * 1. Make sure fixed elements are promoted into a new layer, for performance
+ *    reasons.
+ */
+
+.u-posFixed {
+  position: fixed !important;
+  backface-visibility: hidden; /* 1 */
+}
+.u-unstyledLink {
+  text-decoration: none !important;
+}
+
+.u-noMaxWidth {
+  max-width: none !important;
+}
+
+.u-textAlignCenter {
+  text-align: center !important;
+}
+
+.u-marginAuto {
+  margin:auto !important;
+}

@@ -1,0 +1,35 @@
+ /*
+ Content Typography
+
+Headings elemenent inside content shouold have
+the `Typography--h` class by default.
+
+ Markup:
+ <div class="Content">
+   <h1 class="Typography--h">H1. Heading 1</h1>
+   <h2 class="Typography--h">H2. Heading 2</h2>
+   <h3 class="Typography--h">H3. Heading 3</h2>
+ </div>
+
+ Styleguide 1.0
+ */
+
+.Content {
+  position:relative;
+  line-height:1.4em;
+  color: $main-text;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: $main-bg;
+  padding: 20px;
+  overflow: hidden;
+  min-height:100%;
+}
+//Content direct childs shouldn't pass the 800px width limit
+// This is for readablity on large screens
+.Content-inner>* {
+  max-width:650px;
+  margin-left: auto;
+  margin-right: auto;
+  /* text-align: justify; */
+}

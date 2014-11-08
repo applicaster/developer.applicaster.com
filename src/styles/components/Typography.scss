@@ -1,0 +1,40 @@
+.Typography--h {
+  line-height:1.2em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.Typography--table {
+  border-collapse: separate;
+  margin-bottom: 1em;
+  overflow: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.Typography--img {
+  max-width:100%;
+}
+
+.Typography--cell {
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.Typography--th {
+  padding: 5px 10px;
+}
+
+.Typography--td {
+  padding: 10px;
+}
+
+.Typography--row {
+  background-color: lighten($main-bg, 4.2%);
+}
+
+.Typography--row:nth-child(even) {
+  background-color: lighten($main-bg, 2.4%);
+}

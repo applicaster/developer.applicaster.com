@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Questions Service",
+    "kit": "GAME-KIT",
+    "url": "question-service",
+    "glob": "content/question-service/**",
+    "icon": "content/question-service/images/game-kit-logo.png",
+    "iconBig": "content/question-service/images/game-kit-logo-lg.png",
+    "splitView": true
+  },
+  {
+    "title": "js2native",
+    "kit": "PLATFORM-KIT",
+    "url": "js2native",
+    "glob": "content/js2native/**",
+    "icon": "content/js2native/images/platform-kit-logo.png",
+    "splitView": false
+  },
+  {
+    "title": "Media Atom Feed",
+    "kit": "PLATFORM-KIT",
+    "url": "media-ato-feed",
+    "glob": "content/applicaster-media-atom-feed/**",
+    "icon": "content/js2native/images/platform-kit-logo.png",
+    "splitView": false
+  }
+]

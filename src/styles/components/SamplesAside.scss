@@ -1,0 +1,56 @@
+.SamplesAside {
+  position:relative;
+  /* padding: 20px 0; */
+  background: linear-gradient(to right, transparent 0%, transparent 50%, $examples-bg 50%);
+  overflow:hidden;
+}
+
+/*
+Chrome hack  linear-gradient in 50% isn't in the middle
+Had to add an extra element for the backgroud devider
+*/
+.SamplesAside-bgChromeHack {
+  position:absolute;
+  top:0;
+  left:50%;
+  right:0;
+  bottom:0;
+  background: $examples-bg;
+}
+
+.SamplesAside>* {
+  width:50%;
+  padding:0 20px;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.SamplesAside-sample {
+  float: right;
+  clear: right;
+  padding:10px 20px;
+}
+
+// Make sure Content-aside form previous sections
+// aren't appearing near the current section
+
+.SamplesAside-section {
+  clear: both
+}
+
+
+@media #{$sm-viewport} , #{$md-viewport} {
+  .SamplesAside-bgChromeHack {
+    display:none;
+  }
+  .SamplesAside {
+    background-image: none;
+  }
+  .SamplesAside>* {
+    width:100%;
+  }
+  .SamplesAside-samples {
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,83 @@
+$nav-width: 230px; // width of the navbar
+$search-box-border-color: #666;
+$nav-v-padding: 10px; // padding used vertically around search boxes and results
+$nav-padding: 15px; // padding to left and right of navbar
+$nav-indent: 10px; // extra padding for ToC subitems
+$nav-footer-border-color: #666;
+
+.TocifyWrapper {
+
+  margin-top: 20px;
+
+  .tocify-item>a, .toc-footer li {
+    padding: 0 $nav-padding 0 $nav-padding;
+    display: block;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  // The Table of Contents is composed of multiple nested
+  // unordered lists.  These styles remove the default
+  // styling of an unordered list because it is ugly.
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 28px;
+  }
+
+  li {
+    color: $nav-text;
+  /*   @include transition-property('background');
+  @include transition-timing-function('linear');
+  @include transition-duration(230ms); */
+  }
+
+  // This is the currently selected ToC entry
+  .tocify-focus {
+    /* @include box-shadow(0px 1px 0px \$nav-active-shadow); */
+    background-color: $nav-active-bg;
+    color: $nav-active-text;
+  }
+
+  // Subheaders are the submenus that slide open
+  // in the table of contents.
+  .tocify-subheader {
+    display: none; // tocify will override this when needed
+    background-color: $nav-subitem-bg;
+    font-weight: 500;
+    .tocify-item>a {
+      padding-left: $nav-padding + $nav-indent;
+      font-size: 12px;
+    }
+
+    // for embossed look:
+    /* @include embossed-bg; */
+    &>li:last-child {
+      box-shadow: none; // otherwise it'll overflow out of the subheader
+    }
+  }
+
+  .toc-footer {
+    padding: 1em 0;
+    margin-top: 1em;
+    border-top: 1px dashed $nav-footer-border-color;
+
+    li,a {
+      color: $nav-text;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    li {
+      font-size: 0.8em;
+      line-height: 1.7;
+      text-decoration: none;
+    }
+  }
+
+}

@@ -1,0 +1,28 @@
+.SideMenu {
+  transition: left 0.3s ease-in-out;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 30;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 230px;
+  background-color: rgb(57, 57, 57);
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 60px;
+}
+
+.SideMenu-asideSideMenu {
+  margin-left: 230px;
+}
+
+@media #{$sm-viewport} {
+  .SideMenu {
+    display:none;
+  }
+  .SideMenu-asideSideMenu {
+    margin-left: 0;
+  }
+}
