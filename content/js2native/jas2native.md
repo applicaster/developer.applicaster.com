@@ -9,7 +9,9 @@ To use the SDK you need to include the following in your HTML:
 
 
 >```markup
-<script src="http://assets-production.applicaster.com/js2native/v1/js2native.js"></script>
+<script
+  src="http://assets-production.applicaster.com/js2native/v1/js2native.js">
+</script>
 ```
 
 # Examples

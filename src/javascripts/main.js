@@ -21,24 +21,7 @@ require("jquery.highlight.js");
         +'</div></a></div>';
     }
 
-    // $('#service-name').html(apiInfo.item.title )
-    // .webuiPopover({content:content, closeable:true});
-
-    $('.BigImage-image').attr('src', '/icons/' + apiInfo.item.iconBig);
-    $('.panelTopic-image').attr('src', '/icons/' + apiInfo.item.icon);
-    $('.panelTopic-header').html(apiInfo.item.kit);
-    $('.panelTopic-title').html(apiInfo.item.title);
-
-    if(!apiInfo.item.splitView) {
-      $('.SamplesAside-bgChromeHack')
-      .removeClass('SamplesAside-bgChromeHack');
-      $('.SamplesAside')
-      .removeClass('SamplesAside');
-      $('.SamplesAside-sample')
-      .removeClass('SamplesAside-sample')
-
-
-    }
+  
 
 
   }

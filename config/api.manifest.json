@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Question Service",
+    "kit": "GAME-KIT",
+    "relativeURL": "question-service",
+    "package": "../content/question-service/",
+    "glob": "./**",
+    "splitView" : true,
+    "internal": true
+  },
+  {
+    "title": "Media Atom Feed",
+    "kit": "PLATFORM-KIT",
+    "relativeURL": "media-atom-feed",
+    "package": "https://token@github.com/applicaster/applicaster-developer-documentation.git",
+    "glob": "./src/applicaster-media-atom-feed.md"
+  },
+  {
+    "title": "Developer Documentation",
+    "kit": "PLATFORM-KIT",
+    "relativeURL": "dev-doc-readme",
+    "package": "../docs/",
+    "glob": "./**",
+    "internal": true
+  }
+]

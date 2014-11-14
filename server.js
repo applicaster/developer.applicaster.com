@@ -1,12 +1,11 @@
+var utils = require('./utils');
 var EXPRESS_PORT = process.env.PORT;
-var EXPRESS_ROOT = './dist';
+var EXPRESS_ROOT = utils.consts.DESTINATION;
 var LIVERELOAD_PORT = 35729;
 
-
-var express = require('express')
-  , passport = require('passport')
-  , ApplicasterStrategy = require('./passport-applicaster/index.js').Strategy;
-
+var express = require('express'),
+  passport = require('passport'),
+  ApplicasterStrategy = require('./passport-applicaster/index.js').Strategy;
 
 passport.use(new ApplicasterStrategy({
     clientID: process.env.OAUTH_CLIENT_ID,
@@ -19,7 +18,6 @@ passport.use(new ApplicasterStrategy({
     });
   }
 ));
-
 
 module.exports = function() {
   var express = require('express');
@@ -34,14 +32,12 @@ module.exports = function() {
   app.use(bodyParser());
   app.use(methodOverride());
   app.use(session({ secret: 'keyboard cat' }));
-  // Initialize Passport!  Also use passport.session() middleware, to support
-  // persistent login sessions (recommended).
+  app.set('view engine', 'jade');
   app.use(passport.initialize());
   app.use(passport.session());
-  // app.use(app.router);
-  app.use(require('connect-livereload')());
-  app.use( ensureAuthenticated, express.static(EXPRESS_ROOT));
-
+  app.use( '/public', express.static(EXPRESS_ROOT + '/public'));
+  app.use( '/released', ensureAuthenticated, express.static(EXPRESS_ROOT + '/released'));
+  app.use( '/internal', ensureInternalAuthenticated, express.static(EXPRESS_ROOT + '/internal'));
 
   app.listen(EXPRESS_PORT);
 
@@ -51,6 +47,19 @@ module.exports = function() {
 
   passport.deserializeUser(function(obj, done) {
     done(null, obj);
+  });
+
+  app.set('views', __dirname+'/src');
+  app.set('view engine', 'jade');
+
+  app.get('/', ensureAuthenticated, function(req, res){
+
+    apis = require('./utils').getApis();
+    if (!isInternalAuthenticated(req)){
+      var _ = require('lodash');
+      apis = _.reject(apis, {internal: true});
+    }
+    res.render('index',{apis: apis});
   });
 
   app.get('/access-token', ensureAuthenticated, function(req, res){
@@ -70,24 +79,39 @@ module.exports = function() {
     }
   );
 
-
   app.get('/logout', function(req, res){
     req.logout();
     res.redirect('/');
   });
 
-  function ensureAuthenticated(req, res, next) {
-    switch(req.path) {
-        case '/auth/applicaster/callback':
-        case '/auth/applicaster':
-        case 'logout':
-            return next();
-            break;
+  app.all('*', function (req, res) {
+    res.send('Not found', 404);
+  });
+
+  function isInternalAuthenticated (req) {
+    var _ = require('lodash');
+    return _.find(req.session.passport.user._json.accounts, {name: 'Applicaster'})
+  }
+
+  function ensureInternalAuthenticated (req, res, next) {
+    if (req.isAuthenticated()) {
+      if(isInternalAuthenticated(req)) {
+        return next();
+      }
+      else{
+        res.status(403);
+        res.send({ "error": '403' });
+        return;
+      }
     }
-    if (req.path )
-    if (req.isAuthenticated()) { return next(); }
     res.redirect('/auth/applicaster/callback');
   }
 
+  function ensureAuthenticated(req, res, next) {
 
-}
+    if (req.isAuthenticated()) {
+      return next();
+    }
+    res.redirect('/auth/applicaster/callback');
+  }
+};

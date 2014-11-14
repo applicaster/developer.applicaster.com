@@ -30,8 +30,13 @@ body {
 
 //Override prism.css defaults
 pre[class*='language-'] > code[data-language] {
-  max-height: none
+  max-height: none;
+  padding:0;
+  font-size: 13px;
+  overflow: auto;
+
 }
+
 
 @import "../plugins/search.scss";
 

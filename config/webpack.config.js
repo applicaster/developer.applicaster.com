@@ -1,4 +1,5 @@
 var webpack = require("webpack");
+var utils = require('../utils');
 module.exports = {
     entry: "./src/javascripts/main.js",
     resolve: {
@@ -9,10 +10,8 @@ module.exports = {
         // new webpack.optimize.UglifyJsPlugin()
     ],
     output: {
-        path: "./dist",
+        path: utils.consts.DESTINATION + "/public",
         filename: "bundle.js"
-
-
     },
     module: {
         loaders: [

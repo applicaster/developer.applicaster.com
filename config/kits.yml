@@ -1,0 +1,8 @@
+---
+-
+  name: GAME-KIT
+  # all icon images are located in ./src/images/icons
+  icon: game-kit-icon.png
+-
+  name: PLATFORM-KIT
+  icon: platform-kit-icon.png

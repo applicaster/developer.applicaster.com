@@ -3,8 +3,7 @@ html
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
     link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
-    link(rel="stylesheet" href="/bower_components/webui-popover/dist/jquery.webui-popover.min.css")
-    link(rel="stylesheet" href="../screen.css")
+    link(rel="stylesheet" href="/public/screen.css")
   body
     .Header.u-posFixed
       span.Header-mainTitle
@@ -13,9 +12,6 @@ html
       .Header-border
     .SideMenu
       .TocifyWrapper.tocify-wrapper
-        //- .search
-        //-   input#input-search.search(type='text', placeholder='Search')
-        //- ul.search-results
         #toc.tocify
     .Content.Header-benathHeader.SideMenu-asideSideMenu
       .SamplesAside-bgChromeHack
@@ -26,5 +22,4 @@ html
           h1.panelTopic-title
         | <%= contents %>
   script(src='https://code.jquery.com/jquery-2.1.1.min.js')
-  script(src='/bower_components/webui-popover/dist/jquery.webui-popover.min.js')
-  script(src='../bundle.js')
+  script(src='/public/bundle.js')

@@ -76,7 +76,7 @@ Strategy.prototype.userProfile = function(accessToken, done) {
  * @return {Object} params
  */
 Strategy.prototype.authorizationParams = function() {
-  return { type: 'web_server' };
+  return { type: 'web_server', client_env: 'production' };
 };
 
 /**

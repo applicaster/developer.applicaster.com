@@ -18,12 +18,16 @@ Had to add an extra element for the backgroud devider
   background: $examples-bg;
 }
 
-.SamplesAside>* {
+.SamplesAside > * {
   width:50%;
   padding:0 20px;
   box-sizing: border-box;
   margin-left: 0;
   margin-right: 0;
+}
+
+.SamplesAside > ul {
+  padding-left:40px;
 }
 
 .SamplesAside-sample {

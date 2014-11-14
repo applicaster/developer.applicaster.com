@@ -14,6 +14,7 @@
 
 .Typography--img {
   max-width:100%;
+  margin: 20px 0;
 }
 
 .Typography--cell {
@@ -37,4 +38,11 @@
 
 .Typography--row:nth-child(even) {
   background-color: lighten($main-bg, 2.4%);
+}
+
+.Typography--ul {
+  list-style-type: disc;
+  margin: 1em 0;
+  padding-left: 40px;
+
 }
