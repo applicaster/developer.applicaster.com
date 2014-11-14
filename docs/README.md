@@ -5,26 +5,26 @@ The project imports the documentation data from Applicaster Github repositories 
 ## Motivation
 When building the tool the following considerations were taken into account:
 
-* Have [a single source of truth](http://www.wikiwand.com/en/Specification_by_example#/Examples_as_a_single_source_of_truth) By providing an website for accessing all the documentation documents we have.
-* "Living Documentation" - Keep the documentation as a close to the code as possible - making them maintainable by the developers themselves and ease the process of keeping them up-to-date.
-* Maintain as much as possible the current workflow of our repos documentation. Docs can be taken form the code itself or from Github wiki.
+* Have [a single source of truth](http://www.wikiwand.com/en/Specification_by_example#/Examples_as_a_single_source_of_truth) by providing a website for accessing all the documentation documents we have.
+* "Living Documentation" - Keep the documentation as a close to the code as possible - making it maintainable by the developers themselves and ease the process of keeping information up-to-date.
+* Maintain as much as possible the current workflow of our repos documentation. Docs can be taken form the code itself or from a Github wiki.
 
 ## Accessing the documentation
 Because Applicaster documentation holds propriety & technical information, Only logged in users with a valid Applicaster single sign on [account](accounts.applicaster.com) can access the documentation.
 
-The documentation documents are divided into two groups: **`releases`** and **`internal`**; As the names imply - the **`releases`** section is available of authenticated users, while the **`internal`** section can be access only 
+The documentation packages are divided into two groups: **`releases`** and **`internal`**; As the names imply - the **`releases`** section is available for all authenticated users, while the **`internal`** section can be accessed only by Applicaster employees.
 
 # Guides
 ## How to add a new documentation package
 
 ### Setting up your repo
-For the guide lets assume you created a new private Github repo in [the Applicaster Organisation](https://github.com/applicaster) called **My-Best-API** and created a README.md file inside the docs folder
+Lets assume you created a new private Github repo in [the Applicaster Organisation](https://github.com/applicaster) called **My-Best-API** and created a README.md file inside the docs folder.
 
 > **Note:** The documentation tool only accept documents that were written in [Markdown](http://daringfireball.net/projects/markdown/) and their relative linked and images assets.
 
 ![image](my-best-api1.jpg)
 
-Because **My-Best-API** is a private repo we will need to add the **`applicaster-developer-documentation (PULL ONLY)`** team to the repo in the repo settings page.
+Because **My-Best-API** is a private repo, we will need to add the **`applicaster-developer-documentation (PULL ONLY)`** team to the repo in its Github settings page.
 This will allow the documentation tool to import the docs on its build process.
 **Failing to add the team to the repo will cause the build to fail.**
 
@@ -60,8 +60,10 @@ The package manifest is a JSON object with the following properties:
 | `"splitView"`| If to use a split view representation template in the docs. Good for documentation with short text example snippets | `false` | No |
 | `"internal"` | If set to true the docs will be available only to Applicaster employees. If not set or set to false the docs will available to all the users who have access to the documentation platform - this includes Applicaster customers and 3rd party developers | `false` | No |
 
+* Once done, create a Pull Request with the added changes.
+
 ## Recommendation for well built and well styled documentation package
-Applicaster Developer Documentation is capable to show any document that is a valid Markdown document. Nevertheless, There are a few recommendations that will make sure The documentation will look good inside the tool.
+Applicaster Developer Documentation is capable to show any document that is a valid Markdown document. Nevertheless, There are a few recommendations that will make sure that the documentation will look good inside the tool.
 
 * Always start your documentation with H1 heading (`#`).
 * Use H1 headings (`#`) to Start a new documentation section.
