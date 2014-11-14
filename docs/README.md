@@ -5,7 +5,7 @@ The project imports the documentation data from Applicaster Github repositories 
 ## Motivation
 When building the tool the following considerations were taken into account:
 
-* Have [a single source of truth](http://www.wikiwand.com/en/Specification_by_example#/Examples_as_a_single_source_of_truth) by providing a website for accessing all the documentation documents we have.
+* Have [a single source of truth](http://www.wikiwand.com/en/Specification_by_example#/Examples_as_a_single_source_of_truth) by providing a website for accessing all the documentation documents Applicaster has.
 * "Living Documentation" - Keep the documentation as a close to the code as possible - making it maintainable by the developers themselves and ease the process of keeping information up-to-date.
 * Maintain as much as possible the current workflow of our repos documentation. Docs can be taken form the code itself or from a Github wiki.
 
@@ -24,7 +24,7 @@ Lets assume you created a new private Github repo in [the Applicaster Organisati
 
 ![image](my-best-api1.jpg)
 
-Because **My-Best-API** is a private repo, we will need to add the **`applicaster-developer-documentation (PULL ONLY)`** team to the repo in its Github settings page.
+Because **My-Best-API** is a private repo, you will need to add the **`applicaster-developer-documentation (PULL ONLY)`** team to the repo in its Github settings page.
 This will allow the documentation tool to import the docs on its build process.
 **Failing to add the team to the repo will cause the build to fail.**
 
@@ -70,4 +70,5 @@ Applicaster Developer Documentation is capable to show any document that is a va
 * Use H2 headings (`##`) for sub-sections.
 * If possible Put all your documentation in a single file - In most cases well written documentation should feet into a single page.
 * use blockquote (`>`) to highlight important section in your doc - this can be used for a notation, warning etc.
+* Put your docs markdown files and related assets on a separate folder (naming it docs is a good naming convention). use the folder relative path as the value of the `glob` manifest key. This will make sure that all relevant linked assets are available and not broken.
 
