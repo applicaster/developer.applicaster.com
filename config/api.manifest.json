@@ -22,9 +22,9 @@
     "internal": true
   },
   {
-    "title": "WIKI IOS Example",
+    "title": "iOS Feed Integration",
     "kit": "PLATFORM-KIT",
-    "relativeURL": "test",
+    "relativeURL": "ios-feed-integration",
     "package": "https://token@github.com/applicaster/Applicaster-iOS-SDK-Lite-Static.wiki.git",
     "glob": "./Feed-integration-instructions.md",
     "internal": true
