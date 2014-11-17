@@ -22,6 +22,14 @@
     "internal": true
   },
   {
+    "title": "WIKI IOS Example",
+    "kit": "PLATFORM-KIT",
+    "relativeURL": "test",
+    "package": "https://github.com/applicaster/Applicaster-iOS-SDK-Lite-Static.wiki.git",
+    "glob": "./Feed-integration-instructions.md",
+    "internal": true
+  },
+  {
     "title": "Question Service",
     "kit": "GAME-KIT",
     "relativeURL": "question-service",
