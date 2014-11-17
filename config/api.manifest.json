@@ -1,19 +1,17 @@
 [
   {
-    "title": "Question Service",
-    "kit": "GAME-KIT",
-    "relativeURL": "question-service",
-    "package": "../content/question-service/",
-    "glob": "./**",
-    "splitView" : true,
-    "internal": true
-  },
-  {
     "title": "Media Atom Feed",
-    "kit": "PLATFORM-KIT",
+    "kit": "CONTENT-KIT",
     "relativeURL": "media-atom-feed",
     "package": "https://token@github.com/applicaster/applicaster-developer-documentation.git",
     "glob": "./src/applicaster-media-atom-feed.md"
+  },
+  {
+    "title": "JS2Native",
+    "kit": "PLATFORM-KIT",
+    "relativeURL": "js2native",
+    "package": "https://token@github.com/applicaster/js2native.git",
+    "glob": "./docs/README.md"
   },
   {
     "title": "Developer Documentation",
@@ -21,6 +19,15 @@
     "relativeURL": "dev-doc-readme",
     "package": "../docs/",
     "glob": "./**",
+    "internal": true
+  },
+  {
+    "title": "Question Service",
+    "kit": "GAME-KIT",
+    "relativeURL": "question-service",
+    "package": "../content/question-service/",
+    "glob": "./**",
+    "splitView" : true,
     "internal": true
   }
 ]
