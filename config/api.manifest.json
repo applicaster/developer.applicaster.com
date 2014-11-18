@@ -1,9 +1,9 @@
 [
   {
-    "title": "Media Atom Feed",
+    "title": "atom-enhancements PR",
     "kit": "CONTENT-KIT",
     "relativeURL": "media-atom-feed",
-    "package": "https://token@github.com/applicaster/applicaster-developer-documentation.git",
+    "package": "https://token@github.com/applicaster/applicaster-developer-documentation.git#atom-enhancements",
     "glob": "./src/applicaster-media-atom-feed.md"
   },
   {
