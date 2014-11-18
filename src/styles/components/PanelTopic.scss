@@ -4,6 +4,7 @@
   /* padding: 10px; */
 /*   width: 45%; */
   text-decoration:none;
+  position: relative;
 }
 
 .PanelTopic--teaser {
@@ -11,6 +12,7 @@
   border: 1 solid #797979;
   float: left;
   width: 45%;
+
 }
 
 .PanelTopic--teaser:hover {
@@ -22,6 +24,15 @@
   margin-bottom: 20px;
 }
 
+.PanelTopic-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.43);
+  padding: 0 5px;
+  font-size: 0.8em;
+  color: #fff;
+}
 
 .PanelTopic-image {
   margin-top: 40px;
