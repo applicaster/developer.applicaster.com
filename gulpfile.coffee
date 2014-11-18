@@ -142,6 +142,7 @@ convert2Html = (doc) ->
     $('.panelTopic-title').html(doc.title)
 
     if(doc.internal)
+      $('.Content').addClass('u-internal')
       $('.PanelTopic-badge').text('Internal')
     if(!doc.splitView)
       $('.SamplesAside-bgChromeHack')

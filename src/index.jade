@@ -16,7 +16,8 @@ html
           
     .Content.Header-benathHeader.SideMenu-asideSideMenu
       - each api in apis
-        a.panelTopic.PanelTopic--teaser(href="#{api.url}")
+        
+        a.panelTopic.PanelTopic--teaser(href="#{api.url}" class=api.internal ? "u-internal" : "")
           if api.internal
             .PanelTopic-badge Internal
           img.panelTopic-image(src='/public/images/icons/#{api.icon}')
