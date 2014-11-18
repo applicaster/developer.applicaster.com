@@ -2,9 +2,10 @@
   {
     "title": "atom-enhancements PR",
     "kit": "CONTENT-KIT",
-    "relativeURL": "media-atom-feed",
+    "relativeURL": "atom-enhancements-pr",
     "package": "https://token@github.com/applicaster/applicaster-developer-documentation.git#atom-enhancements",
-    "glob": "./src/applicaster-media-atom-feed.md"
+    "glob": "./src/applicaster-media-atom-feed.md",
+    "internal": true
   },
   {
     "title": "JS2Native",
