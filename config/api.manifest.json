@@ -1,18 +1,18 @@
 [
   {
+    "title": "JS2Native",
+    "kit": "PLATFORM-KIT",
+    "relativeURL": "js2native",
+    "package": "https://token@github.com/applicaster/js2native.git",
+    "glob": "./docs/README.md"
+  },
+  {
     "title": "atom-enhancements PR",
     "kit": "CONTENT-KIT",
     "relativeURL": "atom-enhancements-pr",
     "package": "https://token@github.com/applicaster/applicaster-developer-documentation.git#atom-enhancements",
     "glob": "./src/applicaster-media-atom-feed.md",
     "internal": true
-  },
-  {
-    "title": "JS2Native",
-    "kit": "PLATFORM-KIT",
-    "relativeURL": "js2native",
-    "package": "https://token@github.com/applicaster/js2native.git",
-    "glob": "./docs/README.md"
   },
   {
     "title": "Developer Documentation",
