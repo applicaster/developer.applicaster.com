@@ -4,7 +4,7 @@
     "kit": "PLATFORM-KIT",
     "relativeURL": "js2native",
     "package": "https://token@github.com/applicaster/js2native.git",
-    "glob": "./docs/README.md"
+    "glob": "./docs/readme.md"
   },
   {
     "title": "atom-enhancements PR",
