@@ -18,6 +18,7 @@ webpackConf = require('./config/webpack.config.js')
 gulpJade = require('gulp-jade')
 dotenv = require('dotenv')
 utils = require('./utils')
+header = require('gulp-header')
 
 dotenv.load()
 
@@ -120,9 +121,13 @@ convert2Html = (doc) ->
   gulp.src(utils.consts.DESTINATION + '/' + doc.url + '/index.md')
   .pipe(markdown({langPrefix: 'language-'}))
   .pipe cheerio(($) ->
+    #
+    $.root().prepend(jade2html('src/header.jade', doc))
+    #
     $("blockquote").addClass("SamplesAside-sample").addClass "Sample"
     $("img").addClass "Typography--img"
     $("h1, h2, h3, h4, h5").addClass "Typography--h"
+    $("dt").addClass "Typography--dt"
     $("table").addClass "Typography--table"
     $("table").addClass "Typography--table"
     $("tr").addClass "Typography--row"
@@ -144,6 +149,7 @@ convert2Html = (doc) ->
     if(doc.internal)
       $('.Content').addClass('u-internal')
       $('.PanelTopic-badge').text('Internal')
+
     if(!doc.splitView)
       $('.SamplesAside-bgChromeHack')
       .removeClass('SamplesAside-bgChromeHack')
@@ -154,5 +160,5 @@ convert2Html = (doc) ->
   )
   .pipe(gulp.dest(utils.consts.DESTINATION + '/' + doc.url))
 
-jade2html = (jadeFile) ->
-  jade.renderFile(jadeFile)
+jade2html = (jadeFile, options = {}) ->
+  jade.renderFile(jadeFile, options)

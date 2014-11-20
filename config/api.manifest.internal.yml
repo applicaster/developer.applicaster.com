@@ -1,0 +1,36 @@
+---
+# List of INTERNAL Docs packages
+  # -
+  #   title: "JS2Native"
+  #   kit: "PLATFORM-KIT"
+  #   relativeURL: "js2native"
+  #   package: "/Users/gabrielguy/repos/applicaster/js2native/#hard-code-js-location"
+  #   glob: "./docs/readme.md"
+  -
+    title: "atom-enhancements PR"
+    kit: "CONTENT-KIT"
+    relativeURL: "atom-enhancements-pr"
+    package: "https://token@github.com/applicaster/applicaster-developer-documentation.git#atom-enhancements"
+    glob: "./src/applicaster-media-atom-feed.md"
+    commetsURL: "https://github.com/applicaster/applicaster-developer-documentation/pull/11"
+    notes:
+      ATOM enhencments draft. includes notations
+      about "updated", "summery", "author name" &  "alternate link" elements
+  -
+    title: "Developer Documentation"
+    kit: "PLATFORM-KIT"
+    relativeURL: "dev-doc-readme"
+    package: "../docs/"
+    glob: "./**"
+  -
+    title: "iOS Feed Integration"
+    kit: "PLATFORM-KIT"
+    relativeURL: "ios-feed-integration"
+    package: "https://token@github.com/applicaster/Applicaster-iOS-SDK-Lite-Static.wiki.git"
+    glob: "./Feed-integration-instructions.md"
+  -
+    title: "Question Service"
+    kit: "GAME-KIT"
+    relativeURL: "question-service"
+    package: "../content/question-service/"
+    glob: "./**"
