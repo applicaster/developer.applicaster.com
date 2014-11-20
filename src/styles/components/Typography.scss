@@ -10,6 +10,7 @@
   overflow: auto;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
+  width:100%;
 }
 
 .Typography--img {
@@ -30,6 +31,9 @@
 
 .Typography--td {
   padding: 10px;
+}
+.Typography--dt {
+  font-weight: bold;
 }
 
 .Typography--row {
