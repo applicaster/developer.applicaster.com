@@ -55,7 +55,7 @@ module.exports = function() {
   app.get('/', ensureAuthenticated, function(req, res){
 
     apis = require('./utils').getApis();
-    if (!isInternalAuthenticated(req)){
+    if (!req.user.isInternalAuthenticated){
       var _ = require('lodash');
       apis = _.reject(apis, {internal: true});
     }
@@ -88,14 +88,10 @@ module.exports = function() {
     res.send('Not found', 404);
   });
 
-  function isInternalAuthenticated (req) {
-    var _ = require('lodash');
-    return _.find(req.session.passport.user._json.accounts, {name: 'Applicaster'})
-  }
 
   function ensureInternalAuthenticated (req, res, next) {
     if (req.isAuthenticated()) {
-      if(isInternalAuthenticated(req)) {
+      if(req.user.isInternalAuthenticated) {
         return next();
       }
       else{
@@ -110,6 +106,7 @@ module.exports = function() {
   function ensureAuthenticated(req, res, next) {
 
     if (req.isAuthenticated()) {
+      console.log(req.profile);
       return next();
     }
     res.redirect('/auth/applicaster/callback');

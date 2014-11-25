@@ -3,6 +3,7 @@
  */
 var util = require('util')
   , OAuth2Strategy = require('passport-oauth2')
+  , _ = require('lodash')
   , Profile = require('./profile')
   , InternalOAuthError = require('passport-oauth2').InternalOAuthError
   , APIError = require('./errors/apierror');
@@ -60,8 +61,7 @@ Strategy.prototype.userProfile = function(accessToken, done) {
     var profile = Profile.parse(json);
     profile.provider  = 'applicaster';
     profile.accessToken = accessToken;
-    profile._raw = body;
-    profile._json = json;
+    profile.isInternalAuthenticated = _.find(json.accounts, {name: 'Applicaster'});
 
 
     done(null, profile);
