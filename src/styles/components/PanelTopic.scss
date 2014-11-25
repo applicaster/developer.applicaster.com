@@ -12,6 +12,7 @@
   border: 1 solid #797979;
   float: left;
   width: 45%;
+  border-radius:5px;
 
 }
 
@@ -32,6 +33,7 @@
   padding: 0 5px;
   font-size: 0.8em;
   color: #fff;
+  border-top-left-radius: 5px;
 }
 
 .PanelTopic-image {
@@ -50,7 +52,7 @@
   font-weight: 200;
   color: #d93e97;
   background: transparent;
-  border-bottom: solid 1px #aaa;
+  /* border-bottom: solid 1px #aaa; */
   padding-bottom: 40px;
   font-size: 2em;
   line-height: 1.3em;
