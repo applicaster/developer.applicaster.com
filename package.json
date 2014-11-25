@@ -50,6 +50,7 @@
     "coffee-script": "^1.8.0",
     "q": "^1.1.1",
     "js-yaml": "^3.2.3",
-    "gulp-header": "^1.2.2"
+    "gulp-header": "^1.2.2",
+    "gulp-front-matter": "^1.0.0"
   }
 }

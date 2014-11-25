@@ -19,6 +19,7 @@ gulpJade = require('gulp-jade')
 dotenv = require('dotenv')
 utils = require('./utils')
 header = require('gulp-header')
+frontMatter = require('gulp-front-matter')
 
 dotenv.load()
 
@@ -109,6 +110,9 @@ concatMarkdown = (doc) ->
   mdFilter = gulpFilter('**.md')
   gulp.src(utils.consts.DESTINATION + '/' + doc.url + '/**')
   .pipe(mdFilter)
+  .pipe(frontMatter(
+    remove: true
+  ))
   .pipe(concat('index.md'))
   .pipe(mdFilter.restore())
   .pipe(gulp.dest(utils.consts.DESTINATION + '/' + doc.url))
