@@ -11,11 +11,11 @@
 # List of RELEASES Docs packages.
 #
   -
-    title: "Media Atom v1.1.0"
+    title: "Media Atom v1.2.0"
     kit: "CONTENT-KIT"
     relativeURL: "media-atom"
     package: "https://token@github.com/applicaster/applicaster-developer-documentation.git"
-    glob: "./src/applicaster-media-atom-feed.md"
+    glob: "./src/content/**"
   -
     title: "JS2Native"
     kit: "PLATFORM-KIT"
