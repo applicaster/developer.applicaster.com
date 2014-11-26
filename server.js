@@ -21,17 +21,21 @@ passport.use(new ApplicasterStrategy({
 
 module.exports = function() {
   var express = require('express');
-  var morgan = require('morgan');
+  var logger = require('morgan');
   var cookieParser = require('cookie-parser');
-  var bodyParser = require('body-parser');
+  // var bodyParser = require('body-parser');
   var methodOverride = require('method-override');
   var session = require('express-session');
   var app = express();
-  app.use(morgan());
+  app.use(logger("combined"));
   app.use(cookieParser());
-  app.use(bodyParser());
+  // app.use(bodyParser());
   app.use(methodOverride());
-  app.use(session({ secret: 'keyboard cat' }));
+  app.use(session({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true
+  }));
   app.set('view engine', 'jade');
   app.use(passport.initialize());
   app.use(passport.session());
@@ -85,7 +89,7 @@ module.exports = function() {
   });
 
   app.all('*', function (req, res) {
-    res.send('Not found', 404);
+    res.status(404).send('File Not found');
   });
 
 
@@ -104,9 +108,7 @@ module.exports = function() {
   }
 
   function ensureAuthenticated(req, res, next) {
-
     if (req.isAuthenticated()) {
-      console.log(req.profile);
       return next();
     }
     res.redirect('/auth/applicaster/callback');
