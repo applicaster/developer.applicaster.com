@@ -58,6 +58,14 @@ ul {
   padding: 0;
 }
 
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f5f2f0;
+  border-radius: 4px;
+}
+
 /**
  * Suppress the focus outline on links that cannot be accessed via keyboard.
  * This prevents an unwanted focus outline from appearing around elements that
