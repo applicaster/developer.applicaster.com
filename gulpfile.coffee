@@ -126,7 +126,7 @@ convert2Html = (doc) ->
   .pipe(markdown({langPrefix: 'language-'}))
   .pipe cheerio(($) ->
     #
-    $.root().prepend(jade2html('src/header.jade', doc))
+    $.root().prepend(jade2html('src/docHeader.jade', doc))
     #
     $("blockquote").addClass("SamplesAside-sample").addClass "Sample"
     $("img").addClass "Typography--img"

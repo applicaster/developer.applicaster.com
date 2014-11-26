@@ -1,26 +1,14 @@
-html
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
-    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
-    link(rel="stylesheet" href="/public/screen.css")
-  body
-    .Header.u-posFixed
-      span.Header-mainTitle
-        a.u-unstyledLink.Header-logo(href="/", alt="Applicaster") &nbsp;
-        span.Header-text Developer Documentation
-      .Header-border
-    .SideMenu
-      .TocifyWrapper.tocify-wrapper
-        #toc.tocify
-    .Content.Header-benathHeader.SideMenu-asideSideMenu
-      .SamplesAside-bgChromeHack
-      .SamplesAside.Content-inner
-        .panelTopic.panelTopic--banner.u-noMaxWidth.u-textAlignCenter
-          .PanelTopic-badge
-          img.panelTopic-image
-          .panelTopic-header
-          h1.panelTopic-title
-        | <%= contents %>
-  script(src='https://code.jquery.com/jquery-2.1.1.min.js')
-  script(src='/public/bundle.js')
+include header.jade
+.Content.Header-benathHeader.SideMenu-asideSideMenu
+  .SamplesAside-bgChromeHack
+  .SamplesAside.Content-inner
+    .panelTopic.panelTopic--banner.u-noMaxWidth.u-textAlignCenter
+      .PanelTopic-badge
+      img.panelTopic-image
+      .panelTopic-header
+      h1.panelTopic-title
+    | <%= contents %>
+    hr
+    p © 2014 Applicaster LTD. All rights reserved.
+script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+script(src='/public/bundle.js')

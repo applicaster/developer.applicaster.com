@@ -25,3 +25,22 @@
 .u-internal {
   background: repeating-linear-gradient( 45deg, rgba(150, 150, 150, 0.1), rgba(150, 150, 150, 0.1) 10px, rgba(224, 224, 224, 0) 10px, rgba(198, 198, 198, 0) 20px ) !important;
 }
+
+.u-pullRight {
+  float:right !important;
+}
+
+.u-clearFix {
+  clear:both !important;
+}
+
+@media #{$sm-viewport} {
+  .u-hideOnSmall {
+    display: none !important;
+  }
+}
+@media #{$md-viewport} {
+  .u-hideOnMedium {
+    display: none !important;
+  }
+}

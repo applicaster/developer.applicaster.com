@@ -1,8 +1,18 @@
-if internal
-  blockquote
-    dl
-      if notes
-        dt Notes:
-        dd #{notes}
-      dt Package:
-      dd #{sanitizedPackage}
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="/public/screen.css")
+  body
+    .Header.u-posFixed
+      span.Header-mainTitle
+        a.u-unstyledLink.Header-logo(href="/", alt="Applicaster") &nbsp;
+        span.Header-text Developer Documentation
+      a.SpecialLink.u-pullRight.u-hideOnSmall.u-hideOnMedium(
+        href="mailto:support@applicaster.com?subject=Developer Documentation Ticket"
+      ) Need Help? Contact support@applicaster.com
+      .Header-border
+    .SideMenu
+      .TocifyWrapper.tocify-wrapper
+        #toc.tocify
