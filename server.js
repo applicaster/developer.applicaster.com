@@ -10,7 +10,7 @@ var express = require('express'),
 passport.use(new ApplicasterStrategy({
     clientID: process.env.OAUTH_CLIENT_ID,
     clientSecret: process.env.OAUTH_CLIENT_SECRET,
-    callbackURL: "/auth/applicaster/callback"
+    callbackURL: "http://localhost:4001/auth/applicaster/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     process.nextTick(function () {
@@ -27,7 +27,7 @@ module.exports = function() {
   var methodOverride = require('method-override');
   var session = require('express-session');
   var app = express();
-  app.use(logger("combined"));
+  // app.use(logger("combined"));
   app.use(cookieParser());
   // app.use(bodyParser());
   app.use(methodOverride());
@@ -89,7 +89,11 @@ module.exports = function() {
   });
 
   app.all('*', function (req, res) {
-    res.status(404).send('File Not found');
+    res.status(404).render('error', {errMsg: "404 File Not Found<br>Please Contact support@applicaster.com "});
+  });
+
+  app.use(function(err, req, res, next){
+    res.status(500).render('error',{errMsg: "Something Went Wrong<br>Please Contact support@applicaster.com"});
   });
 
 

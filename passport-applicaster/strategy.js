@@ -1,113 +1,71 @@
 /**
- * Module dependencies.
- */
+* Module dependencies.
+*/
 var util = require('util')
-  , OAuth2Strategy = require('passport-oauth2')
-  , _ = require('lodash')
-  , Profile = require('./profile')
-  , InternalOAuthError = require('passport-oauth2').InternalOAuthError
-  , APIError = require('./errors/apierror');
-
-
+, OAuth2Strategy = require('passport-oauth').OAuth2Strategy
+, InternalOAuthError = require('passport-oauth').InternalOAuthError
+, _ = require('lodash')
+, baseURL = 'https://accounts.applicaster.com';
 
 function Strategy(options, verify) {
   options = options || {};
-  var url = 'https://accounts.applicaster.com';
-  options.authorizationURL = options.authorizationURL ||  url + '/oauth/authorize';
-  options.tokenURL = options.tokenURL ||  url + '/oauth/token';
+  options.authorizationURL = options.authorizationURL || baseURL +'/oauth/authorize';
+  options.tokenURL = options.tokenURL || baseURL + '/oauth/token';
+  options.scopeSeparator = options.scopeSeparator || ',';
+  options.customHeaders = options.customHeaders || {};
 
   OAuth2Strategy.call(this, options, verify);
   this.name = 'applicaster';
-  this._userProfileURL = options.userProfileURL || url + '/oauth/user.json';
 }
 
 /**
- * Inherit from `OAuth2Strategy`.
- */
+* Inherit from `OAuth2Strategy`.
+*/
 util.inherits(Strategy, OAuth2Strategy);
 
 
 /**
- *
- * This function constructs a normalized profile, with the following properties:
- *
- * @param {String} accessToken
- * @param {Function} done
- * @api protected
- */
-Strategy.prototype.userProfile = function(accessToken, done) {
-  this._oauth2.get(this._userProfileURL, accessToken, function (err, body, res) {
-    var json;
+* Retrieve user profile from Dropbox.
+*
+* This function constructs a normalized profile, with the following properties:
+*
+*   - `provider`         always set to `dropbox`
+*   - `id`               the user's Dropbox ID
+*   - `username`         the user's Dropbox username
+*   - `displayName`      the user's full name
+*   - `profileUrl`       the URL of the profile for the user on Dropbox
+*   - `emails`           the user's email addresses
+*
+* @param {String} accessToken
+* @param {Function} done
+* @api protected
+*/
 
-    if (err) {
-      if (err.data) {
-        try {
-          json = JSON.parse(err.data);
-        } catch (_) {}
-      }
-
-      if (json && json.error && typeof json.error == 'string') {
-        return done(new APIError(json.error));
-      }
-      return done(new InternalOAuthError('Failed to fetch user profile', err));
-    }
-
-    try {
-      json = JSON.parse(body);
-    } catch (ex) {
-      return done(new Error('Failed to parse user profile'));
-    }
-
-    var profile = Profile.parse(json);
-    profile.provider  = 'applicaster';
-    profile.accessToken = accessToken;
-    profile.isInternalAuthenticated = _.find(json.accounts, {name: 'Applicaster'});
-
-
-    done(null, profile);
-  });
-};
-
-/**
- * Return extra parameters to be included in the authorization request.
- *
- * Adds type=web_server to params
- *
- * @return {Object} params
- */
 Strategy.prototype.authorizationParams = function() {
   return { type: 'web_server', client_env: 'production' };
-};
+}
 
-/**
- * Return extra parameters to be included in the token request.
- *
- * Adds type=web_server to params
- *
- * @return {Object} params
- */
-Strategy.prototype.tokenParams = function() {
-  return { type: 'web_server' };
-};
+Strategy.prototype.userProfile = function(accessToken, done) {
+  this._oauth2.get(baseURL + '/oauth/user.json', accessToken, function (err, body, res) {
+    if (err) { console.log('err'); return done(new InternalOAuthError('failed to fetch user profile', err)); }
 
-/**
- * Parse error response from OAuth 2.0 token endpoint.
- *
- * @param {String} body
- * @param {Number} status
- * @return {Error}
- * @api protected
- */
-Strategy.prototype.parseErrorResponse = function(body, status) {
-  var json = JSON.parse(body);
-  if (json.error && typeof json.error == 'string' && !json.error_description) {
-    return new APIError(json.error);
+      try {
+        var json = JSON.parse(body);
+
+        var profile = { provider: 'applicaster' };
+        var profile = { provider: 'applicaster' };
+        profile.accessToken = accessToken;
+        profile.isInternalAuthenticated = _.find(json.accounts, {name: 'Applicaster'});
+
+        done(null, profile);
+      } catch(e) {
+        done(e);
+      }
+    });
   }
-  return OAuth2Strategy.prototype.parseErrorResponse.call(this, body, status);
-};
 
 
-/**
- * Expose `Strategy`.
- */
-module.exports = Strategy;
+  /**
+  * Expose `Strategy`.
+  */
+  module.exports = Strategy;
