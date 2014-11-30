@@ -10,7 +10,7 @@ var express = require('express'),
 passport.use(new ApplicasterStrategy({
     clientID: process.env.OAUTH_CLIENT_ID,
     clientSecret: process.env.OAUTH_CLIENT_SECRET,
-    callbackURL: "http://localhost:4001/auth/applicaster/callback"
+    callbackURL: "/auth/applicaster/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     process.nextTick(function () {
