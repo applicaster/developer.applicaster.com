@@ -23,24 +23,6 @@ function Strategy(options, verify) {
 */
 util.inherits(Strategy, OAuth2Strategy);
 
-
-/**
-* Retrieve user profile from Dropbox.
-*
-* This function constructs a normalized profile, with the following properties:
-*
-*   - `provider`         always set to `dropbox`
-*   - `id`               the user's Dropbox ID
-*   - `username`         the user's Dropbox username
-*   - `displayName`      the user's full name
-*   - `profileUrl`       the URL of the profile for the user on Dropbox
-*   - `emails`           the user's email addresses
-*
-* @param {String} accessToken
-* @param {Function} done
-* @api protected
-*/
-
 Strategy.prototype.authorizationParams = function() {
   return { type: 'web_server', client_env: 'production' };
 }

@@ -93,7 +93,12 @@ module.exports = function() {
   });
 
   app.use(function(err, req, res, next){
-    res.status(500).render('error',{errMsg: "Something Went Wrong<br>Please Contact support@applicaster.com"});
+    var errMsg = "Something Went Wrong<br>Please Contact support@applicaster.com"
+    console.log(err.code)
+    if (err.code == 'You are not authorized for this service.') {
+      errMsg = "you are not authorised to access this service.<br>please contact support@applicaster.com to grant you access.";
+    }
+    res.status(500).render('error',{errMsg: errMsg});
   });
 
 
