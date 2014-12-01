@@ -17,7 +17,7 @@
     package: "https://token@github.com/applicaster/applicaster-developer-documentation.git"
     glob: "./src/content/**"
   -
-    title: "JS2Native"
+    title: "JS2Native v1.1.0"
     kit: "PLATFORM-KIT"
     relativeURL: "js2native"
     package: "https://token@github.com/applicaster/js2native.git"
