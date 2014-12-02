@@ -33,5 +33,5 @@ TOKEN=<github applicaster-developer-documentation user token followed by the @ s
 
 With an authorised account username do:
 ```bash
-  $ git push heroku masters
+  $ git push heroku master
 ```
