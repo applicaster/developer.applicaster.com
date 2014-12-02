@@ -1,6 +1,11 @@
 # Overview
-Applicaster Developer Documentation is a static site builder that holds all the relevant technical and development documentation in a single place.
-The project imports the documentation data from Applicaster Github repositories (public & private) using a manifest file located at `config/api.manifest.json`.
+Applicaster Developer Documentation is a tool that holds all the relevant technical and development documentation in a single place.
+The project imports the documentation data from Applicaster Github repositories (public & private) using two manifest files: 
+
+* `config/api.manifest.internal.yml`
+* `config/api.manifest.released.yml`
+
+> **Note:** Documentation imports happen every hour making sure that the docs stay in sync.
 
 ## Motivation
 When building the tool the following considerations were taken into account:
@@ -33,20 +38,18 @@ This will allow the documentation tool to import the docs on its build process.
 Now that everything is set up, you can add your **My-Best-API** docs package into the Applicaster Developer Documentation manifest.
 
 ### Adding the documentation package to Applicaster Developer Documentation
-* Fork [github.com/applicaster/slatedocs.git](https://github.com/applicaster/slatedocs.git) repository
-*  Open the `config/api.manifest.json` file and add your package manifest.
-The package manifest is a JSON object with the following properties:
+* Fork [github.com/applicaster/developer.applicaster.com.git](https://github.com/applicaster/developer.applicaster.com.git) repository
+*  Open the `config/api.manifest.released.yml` file and add your package manifest.
+> **Note:** If you want to add a documenation package for internal use only open the `config/api.manifest.internal.yml` file instead
+The package manifest is a YML object with the following properties:
 
-```javascript
-	{
-	    "title": "My Best API",
-	    "kit": "PALTFORM-KIT",
-	    "relativeURL": "my-best-api",
-	    "package": "https://token@github.com/applicaster/my-best-api.git",
-	    "glob": "./docs/",
-	    "splitView" : true,
-	    "internal": true
-	 }
+```markup
+	-
+    title: "My Best API"
+    kit: "PALTFORM-KIT"
+    relativeURL: "my-best-api"
+    package: "https://token@github.com/applicaster/my-best-api.git"
+    glob: "./docs/**"
 ```
 #### Properties Description
 
@@ -55,10 +58,9 @@ The package manifest is a JSON object with the following properties:
 | `"title"` | Will be the title of the docs package in the documentation tool | - | Yes |
 | `"kit"` | The Applicaster Kit the documentation belongs to. Can be one of the following: "PLATFORM-KIT", "CONTENT-KIT", "APP-STUDIO", "GAME-KIT", "INFRASTRUCTURE" |  "PLATFORM-KIT" | No |
 | `"relativeURL"` | The Relative URL that the documents will be located | - | Yes |
-| `"package"` | The Place that the documentation files are located. In most cases this will be an https ling to the Github repo. In case this is a private repo you the token@ prefix as mentioned in the example above. The package conforms to the [Bower](http://bower.io/docs/api/#install) package definition.| - | Yes |
+| `"package"` | The Place that the documentation files are located. In most cases this will be an https link to the Github repo. In case this is a private repo you the token@ prefix as mentioned in the example above. The package conforms to the [Bower](http://bower.io/docs/api/#install) package definition.| - | Yes |
 | `"glob"` | The package root relative path the docs are located in | - | Yes |
-| `"splitView"`| If to use a split view representation template in the docs. Good for documentation with short text example snippets | `false` | No |
-| `"internal"` | If set to true the docs will be available only to Applicaster employees. If not set or set to false the docs will available to all the users who have access to the documentation platform - this includes Applicaster customers and 3rd party developers | `false` | No |
+
 
 * Once done, create a Pull Request with the added changes.
 
@@ -71,4 +73,3 @@ Applicaster Developer Documentation is capable to show any document that is a va
 * If possible Put all your documentation in a single file - In most cases well written documentation should feet into a single page.
 * use blockquote (`>`) to highlight important section in your doc - this can be used for a notation, warning etc.
 * Put your docs markdown files and related assets on a separate folder (naming it docs is a good naming convention). use the folder relative path as the value of the `glob` manifest key. This will make sure that all relevant linked assets are available and not broken.
-
