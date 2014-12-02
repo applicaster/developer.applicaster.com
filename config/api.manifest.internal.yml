@@ -7,12 +7,6 @@
     package: "../docs/"
     glob: "./**"
   -
-    title: "iOS Feed Integration"
-    kit: "PLATFORM-KIT"
-    relativeURL: "ios-feed-integration"
-    package: "https://token@github.com/applicaster/Applicaster-iOS-SDK-Lite-Static.wiki.git"
-    glob: "./Feed-integration-instructions.md"
-  -
     title: "Question Service"
     kit: "GAME-KIT"
     relativeURL: "question-service"

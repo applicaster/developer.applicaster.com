@@ -22,3 +22,15 @@
     relativeURL: "js2native"
     package: "https://token@github.com/applicaster/js2native.git"
     glob: "./docs/readme.md"
+  -
+    title: "iOS Feed Integration"
+    kit: "GAME-KIT"
+    relativeURL: "ios-feed-integration"
+    package: "https://token@github.com/applicaster/Applicaster-iOS-SDK-Lite-Static.wiki.git"
+    glob: "./Feed-integration-instructions.md"
+  -
+    title: "Android Feed Integration"
+    kit: "GAME-KIT"
+    relativeURL: "ios-feed-integration"
+    package: "https://token@github.com/applicaster/feed-android-dist.git"
+    glob: "./README.md"
