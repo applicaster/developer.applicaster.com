@@ -10,13 +10,13 @@
       selectors: 'h1, h2',
       extendPage: false,
       theme: 'none',
-      smoothScroll: false,
+      smoothScroll: true,
       showEffectSpeed: 0,
       hideEffectSpeed: 180,
       ignoreSelector: '.toc-ignore',
       highlightOffset: 60,
-      scrollTo: 20,
-      scrollHistory: true,
+      scrollTo: 80,
+      scrollHistory: false,
       hashGenerator: function (text, element) {
         return element.prop('id');
       }
