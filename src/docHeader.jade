@@ -1,8 +1,10 @@
 if internal
   blockquote
     dl
-      if notes
-        dt Notes:
-        dd #{notes}
       dt Package:
       dd #{sanitizedPackage}
+if notes
+  blockquote
+    dl
+      dt Notes:
+      dd #{notes}
