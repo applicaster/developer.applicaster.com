@@ -42,3 +42,9 @@
     relativeURL: "media-atom"
     package: "https://token@github.com/applicaster/applicaster-developer-documentation.git#bf7021a7257cf241f313869c5bde238b5d1ae5ad"
     glob: "./src/content/**"
+  -
+    title: "Stars Public API v3"
+    kit: "GAME-KIT"
+    relativeURL: "stars-public-v3"
+    package: "https://token@github.com/applicaster/stars.git#imporve-v3-docs"
+    glob: "./doc/**"
