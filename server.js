@@ -23,13 +23,10 @@ module.exports = function() {
   var express = require('express');
   var logger = require('morgan');
   var cookieParser = require('cookie-parser');
-  // var bodyParser = require('body-parser');
   var methodOverride = require('method-override');
   var session = require('express-session');
   var app = express();
-  // app.use(logger("combined"));
   app.use(cookieParser());
-  // app.use(bodyParser());
   app.use(methodOverride());
   app.use(session({
     secret: 'keyboard cat',
@@ -64,10 +61,6 @@ module.exports = function() {
       apis = _.reject(apis, {internal: true});
     }
     res.render('index',{apis: apis});
-  });
-
-  app.get('/access-token', ensureAuthenticated, function(req, res){
-    res.send({ "accessToken": req.user.accessToken });
   });
 
   app.get('/auth/applicaster/callback',
