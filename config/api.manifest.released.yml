@@ -18,6 +18,12 @@
     package: "https://token@github.com/applicaster/applicaster-developer-documentation.git#cc8482dcdb8074931a260263f0a0f531f5706066"
     glob: "./src/content/**"
   -
+    title: "EPG Ingestion"
+    kit: "CONTENT-KIT"
+    relativeURL: "epg-ingestion"
+    package: "https://token@github.com/applicaster/applicaster2.git#develop"
+    glob: "./doc/features/epg-ingestion.md"
+  -
     title: "JS2Native v1.1.0"
     kit: "PLATFORM-KIT"
     relativeURL: "js2native"
