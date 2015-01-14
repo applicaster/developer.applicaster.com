@@ -38,7 +38,7 @@
   -
     title: "Android Feed Integration"
     kit: "GAME-KIT"
-    relativeURL: "ios-feed-integration"
+    relativeURL: "android-feed-integration"
     package: "https://token@github.com/applicaster/feed-android-dist.git"
     glob: "./README.md"
   -
