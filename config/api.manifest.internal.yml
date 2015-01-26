@@ -12,3 +12,9 @@
     relativeURL: "question-service"
     package: "../content/question-service/"
     glob: "./**"
+  -
+    title: "Stars Public API v3 (Feed 3)"
+    kit: "GAME-KIT"
+    relativeURL: "stars-public-v3-feed3"
+    package: "https://token@github.com/applicaster/stars.git#add-feed3-features"
+    glob: "./doc/**"
