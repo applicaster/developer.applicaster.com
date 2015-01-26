@@ -43,7 +43,7 @@
     glob: "./README.md"
   -
    title: "Android Applicaster SDK Integration"
-    kit: "INFRASTRUCTURE"
+    kit: "PLATFORM-KIT"
     relativeURL: "android-applicaster-sdk-integration"
     package: "https://token@github.com/applicaster/android-sdk-dist.git"
     glob: "./README.md"
