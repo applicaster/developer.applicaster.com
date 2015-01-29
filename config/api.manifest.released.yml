@@ -42,6 +42,12 @@
     package: "https://token@github.com/applicaster/feed-android-dist.git"
     glob: "./README.md"
   -
+    title: "Android Applicaster SDK Integration"
+    kit: "PLATFORM-KIT"
+    relativeURL: "android-applicaster-sdk-integration"
+    package: "https://token@github.com/applicaster/android-sdk-dist.git"
+    glob: "./README.md"
+  -
     title: "Media Atom v1.2.0"
     notes: "Please note that this document describes a previous API version."
     kit: "CONTENT-KIT"
