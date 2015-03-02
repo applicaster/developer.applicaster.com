@@ -53,6 +53,13 @@ getDocsPackages = (options) ->
   .install(docsPackages, undefined,
     {directory: './', cwd: utils.consts.TEMP_FOLDER}
   )
+  .on('log', (log)->
+    if log.id is 'resolved'
+      console.log '.'
+      console.log log.message
+    else
+      process.stdout.write('.')
+  )
   .on('end', (installed) ->
     deferred.resolve(options)
   )

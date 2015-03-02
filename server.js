@@ -41,6 +41,7 @@ module.exports = function() {
   app.use( '/internal', ensureInternalAuthenticated, express.static(EXPRESS_ROOT + '/internal'));
 
   app.listen(EXPRESS_PORT);
+  console.log('Server running on http://localhost:' + EXPRESS_PORT)
 
   passport.serializeUser(function(user, done) {
     done(null, user);

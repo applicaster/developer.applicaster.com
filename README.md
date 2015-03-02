@@ -29,6 +29,14 @@ TOKEN=<github applicaster-developer-documentation user token followed by the @ s
   $ node index # Start node server
 ```
 
+## Add new docs package
+
+Instructions can be found on the web here:
+http://developer.applicaster.com/internal/dev-doc-readme/
+
+Or locally under ./docs/README.md 
+
+
 ## Deploy
 
 With an authorised account username do:
