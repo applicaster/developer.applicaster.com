@@ -60,3 +60,10 @@
     relativeURL: "stars-public-v3"
     package: "https://token@github.com/applicaster/stars.git#imporve-v3-docs"
     glob: "./doc/**"
+
+  -
+    title: "VOD Ingestion via RSS"
+    kit: "PLATFORM-KIT"
+    relativeURL: "vod-ingestion-rss"
+    package: "https://token@github.com/applicaster/vod-rss-media-documentation.git"
+    glob: "./RSSVODIngestion.md"
