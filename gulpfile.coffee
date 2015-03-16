@@ -43,7 +43,7 @@ getDocsPackages = (options) ->
 
   docsPackages = _.compact(_.map(options.docsManifest, (docsPackage)->
     pack = md5(docsPackage.url)
-    pack += '=' + docsPackage.package.replace('token@', process.env.TOKEN)
+    pack += '=' + docsPackage.package.replace('token@', process.env.TOKEN + '@')
     pack
   ))
   bower.commands
