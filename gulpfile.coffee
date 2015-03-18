@@ -42,9 +42,8 @@ getDocsPackages = (options) ->
   deferred = q.defer()
 
   docsPackages = _.compact(_.map(options.docsManifest, (docsPackage)->
-    pack = md5(docsPackage.url)
-    pack += '=' + docsPackage.package.replace('token@', process.env.TOKEN)
-    pack
+    md5URL = md5(docsPackage.url)
+    "#{md5URL}=#{docsPackage.package.replace('token@', process.env.TOKEN + '@')}"
   ))
   bower.commands
   .cache.clean
