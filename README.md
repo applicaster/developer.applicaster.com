@@ -16,7 +16,7 @@ The project is hosted on Heroku by the name: applicaster-developer
 ### Prerequisites
 To test and develop locally you first need to get the following data:
 
-* from accounts.applicaster.com click on the and click the apps tab.
+* From accounts.applicaster.com click on the Applications tab.
 * Choose "Applicaster Docs" and click on the (i) button.
 * Copy the UID and Secret (on the next steps you'll need to put those values
 into the .env file)
@@ -25,7 +25,7 @@ team. If you are not, please ask to be added to the team by a Github Account
 owner (e.g. Gavri)
 * Go to https://github.com/settings/applications and generate a new token.
 Make sure the repo option is checked (should be checked by default).
-Copy the genrated token.
+Copy the generated token.
 
 
 create a file named .env in the root directory and the following environment 
