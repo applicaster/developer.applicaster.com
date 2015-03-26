@@ -36,6 +36,12 @@
     package: "https://token@github.com/applicaster/Applicaster-iOS-SDK-Lite-Static.wiki.git"
     glob: "./Feed-integration-instructions.md"
   -
+    title: "iOS CrossMates Integration"
+    kit: "GAME-KIT"
+    relativeURL: "ios-crossmates-integration"
+    package: "https://token@github.com/applicaster/Applicaster-iOS-SDK-Lite-Static.wiki.git"
+    glob: "./Crossmates-integration-instructions.md" 
+  -
     title: "Android Feed Integration"
     kit: "GAME-KIT"
     relativeURL: "android-feed-integration"
