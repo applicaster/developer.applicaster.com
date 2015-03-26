@@ -1,5 +1,5 @@
 var utils = require('./utils');
-var EXPRESS_PORT = 4001; 
+var EXPRESS_PORT = process.env.PORT; 
 var EXPRESS_ROOT = utils.consts.DESTINATION;
 var LIVERELOAD_PORT = 35729;
 
