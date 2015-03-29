@@ -48,6 +48,12 @@
     package: "https://token@github.com/applicaster/feed-android-dist.git"
     glob: "./README.md"
   -
+    title: "Android CrossMates Integration"
+    kit: "GAME-KIT"
+    relativeURL: "android-crossmates-integration"
+    package: "https://token@github.com/applicaster/Crossmates-Demo-Android.git"
+    glob: "./README.md"
+  -
     title: "Android Applicaster SDK Integration"
     kit: "PLATFORM-KIT"
     relativeURL: "android-applicaster-sdk-integration"
