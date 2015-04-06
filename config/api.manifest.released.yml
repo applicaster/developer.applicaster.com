@@ -70,7 +70,7 @@
     title: "Stars Public API v3"
     kit: "GAME-KIT"
     relativeURL: "stars-public-v3"
-    package: "https://token@github.com/applicaster/stars.git#imporve-v3-docs"
+    package: "https://token@github.com/applicaster/stars.git#add-feed3-features"
     glob: "./doc/**"
 
   -
