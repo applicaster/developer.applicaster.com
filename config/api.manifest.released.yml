@@ -21,7 +21,7 @@
     title: "EPG Ingestion"
     kit: "CONTENT-KIT"
     relativeURL: "epg-ingestion"
-    package: "https://token@github.com/applicaster/applicaster2.git#develop"
+    package: "https://token@github.com/applicaster/applicaster2.git#master"
     glob: "./doc/features/epg-ingestion.md"
   -
     title: "JS2Native v1.1.0"
@@ -79,3 +79,9 @@
     relativeURL: "vod-ingestion-rss"
     package: "https://token@github.com/applicaster/vod-rss-media-documentation.git"
     glob: "./RSSVODIngestion.md"
+  -
+    title: "VOD ingestion via XML"
+    kit: "PLATFORM-KIT"
+    relativeURL: "vod-ingestion-xml"
+    package: "https://token@github.com/applicaster/applicaster2.git#master"
+    glob: "./doc/features/ingestion/vod_via_xml.md"
