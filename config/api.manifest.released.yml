@@ -12,12 +12,6 @@
 #
 
   -
-    title: "Media Atom v2.0.1"
-    kit: "CONTENT-KIT"
-    relativeURL: "media-atom-2"
-    package: "https://token@github.com/applicaster/applicaster-developer-documentation.git#cc8482dcdb8074931a260263f0a0f531f5706066"
-    glob: "./src/content/**"
-  -
     title: "EPG Ingestion"
     kit: "CONTENT-KIT"
     relativeURL: "epg-ingestion"
@@ -61,7 +55,6 @@
     glob: "./README.md"
   -
     title: "Media Atom v1.2.0"
-    notes: "Please note that this document describes a previous API version."
     kit: "CONTENT-KIT"
     relativeURL: "media-atom"
     package: "https://token@github.com/applicaster/applicaster-developer-documentation.git#bf7021a7257cf241f313869c5bde238b5d1ae5ad"
