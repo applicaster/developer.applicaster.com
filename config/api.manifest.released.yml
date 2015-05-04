@@ -57,14 +57,14 @@
     title: "Media Atom v1.2.0"
     kit: "CONTENT-KIT"
     relativeURL: "media-atom"
-    package: "https://token@github.com/applicaster/applicaster-developer-documentation.git#bf7021a7257cf241f313869c5bde238b5d1ae5ad"
+    package: "https://token@github.com/applicaster/applicaster-developer-documentation.git"
     glob: "./src/content/**"
   -
-  	title: "On Screen Graphics Reports Export"
+    title: "On Screen Graphics Reports Export"
     kit: "GAME-KIT"
     relativeURL: "on-screen-graphics-reports"
-    package: "https://token@github.com/applicaster/applicaster-widgets.git"
-    glob: "./doc/features/on-screen_graphics_reports_export.md"
+    package: "https://token@github.com/applicaster/applicaster-widgets.git#OSG-fix-docs-folder-structure"
+    glob: "./doc/features/on_screen_graphics_reports_export/**"
   -
     title: "Stars Public API v3"
     kit: "GAME-KIT"
