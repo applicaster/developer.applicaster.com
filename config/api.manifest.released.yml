@@ -60,7 +60,7 @@
     package: "https://token@github.com/applicaster/applicaster-developer-documentation.git#bf7021a7257cf241f313869c5bde238b5d1ae5ad"
     glob: "./src/content/**"
   -
-   	title: "On Screen Graphics Reports Export"
+  	title: "On Screen Graphics Reports Export"
     kit: "GAME-KIT"
     relativeURL: "on-screen-graphics-reports"
     package: "https://token@github.com/applicaster/applicaster-widgets.git"
