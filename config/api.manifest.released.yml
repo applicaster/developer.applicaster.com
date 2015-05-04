@@ -60,12 +60,17 @@
     package: "https://token@github.com/applicaster/applicaster-developer-documentation.git#bf7021a7257cf241f313869c5bde238b5d1ae5ad"
     glob: "./src/content/**"
   -
+   	title: "On Screen Graphics Reports Export"
+    kit: "GAME-KIT"
+    relativeURL: "on-screen-graphics-reports"
+    package: "https://token@github.com/applicaster/applicaster-widgets.git"
+    glob: "./doc/features/on-screen_graphics_reports_export.md"
+  -
     title: "Stars Public API v3"
     kit: "GAME-KIT"
     relativeURL: "stars-public-v3"
     package: "https://token@github.com/applicaster/stars.git#add-feed3-features"
     glob: "./doc/**"
-
   -
     title: "VOD Ingestion via RSS"
     kit: "PLATFORM-KIT"
