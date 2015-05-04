@@ -1,3 +1,5 @@
+[ ![Codeship Status for applicaster/developer.applicaster.com](https://codeship.com/projects/5f7e9510-d479-0132-56d5-5a6d300c202d/status?branch=master)](https://codeship.com/projects/77789)
+
 # Applicaster Developer Documentation
 Info about the project can be found at docs/README.md
 
@@ -52,7 +54,7 @@ Or locally under ./docs/README.md
 
 ## Deploy
 
-With an authorised account username do:
-```bash
-  $ git push heroku master
-```
+To deploy to http://developer.applicaster.com/ we use Codeship for continuous
+deployment. Please create a Pull Request with your changes. once merged to
+the master branch it will be deployed automatically.
+
