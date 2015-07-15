@@ -18,6 +18,12 @@
     package: "https://token@github.com/applicaster/applicaster2.git#master"
     glob: "./doc/features/epg-ingestion.md"
   -
+    title: "Authorization Provider"
+    kit: "PLATFORM-KIT"
+    relativeURL: "authorization-provider"
+    package: "https://token@github.com/applicaster/applicaster2.git#3772815c84"
+    glob: "./doc/features/authorization_provider/**"
+  -
     title: "JS2Native v1.1.0"
     kit: "PLATFORM-KIT"
     relativeURL: "js2native"
