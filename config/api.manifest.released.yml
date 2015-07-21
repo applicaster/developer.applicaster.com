@@ -21,7 +21,7 @@
     title: "Authorization Provider"
     kit: "PLATFORM-KIT"
     relativeURL: "authorization-provider"
-    package: "https://token@github.com/applicaster/applicaster2.git#3772815c84"
+    package: "https://token@github.com/applicaster/applicaster2.git#6fe6d4350e"
     glob: "./doc/features/authorization_provider/**"
   -
     title: "JS2Native v1.1.0"
