@@ -45,7 +45,7 @@
     title: "Android Feed Integration"
     kit: "GAME-KIT"
     relativeURL: "android-feed-integration"
-    package: "https://token@github.com/applicaster/feed-android-dist.git"
+    package: "https://token@github.com/applicaster/feed_android.git"
     glob: "./README.md"
   -
     title: "Android CrossMates Integration"
@@ -55,9 +55,9 @@
     glob: "./README.md"
   -
     title: "Android Applicaster SDK Integration"
-    kit: "PLATFORM-KIT"
+    kit: "GAME-KIT"
     relativeURL: "android-applicaster-sdk-integration"
-    package: "https://token@github.com/applicaster/android-sdk-dist.git"
+    package: "https://token@github.com/applicaster/applicaster-android-sdk.git"
     glob: "./README.md"
   -
     title: "Media Atom v1.2.0"
