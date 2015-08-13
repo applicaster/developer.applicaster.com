@@ -1,0 +1,15 @@
+@import "../../common/stylesheets/baseline";
+
+.ProductFilter {
+  margin-top: 10px;
+  margin-left:10px;
+}
+
+.ProductFilter-h3 {
+  text-transform: uppercase;
+  @include baseline(12px);
+}
+
+.ProductFilter-li {
+  @include baseline(12px);
+}

@@ -1,0 +1,74 @@
+@import "node_modules/normalize.scss/normalize";
+
+@import "./prism";
+/* see https://github.com/suitcss/base/blob/master/lib/base.css */
+
+html,
+body {
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  padding: 2px 4px;
+  color: #c7254e;
+  background-color: #f5f2f0;
+  border-radius: 4px;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  word-break: break-word;
+}

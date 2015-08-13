@@ -1,0 +1,49 @@
+/**
+ * 1. Make sure fixed elements are promoted into a new layer, for performance
+ *    reasons.
+ */
+
+.u-posFixed {
+  position: fixed !important;
+  backface-visibility: hidden; /* 1 */
+}
+.u-unstyledLink {
+  text-decoration: none !important;
+}
+
+.u-noMaxWidth {
+  max-width: none !important;
+}
+
+.u-textAlignCenter {
+  text-align: center !important;
+}
+
+.u-marginAuto {
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+.u-internal {
+  background: repeating-linear-gradient( 45deg, rgba(150, 150, 150, 0.1), rgba(150, 150, 150, 0.1) 10px, rgba(224, 224, 224, 0) 10px, rgba(198, 198, 198, 0) 20px ) !important;
+}
+
+.u-pullRight {
+  float:right !important;
+}
+
+.u-clearFix {
+  clear:both !important;
+}
+
+.u-weight700 {
+  font-weight: 700 !important;
+}
+
+.u-hide {
+  display:none !important;
+}
+
+.u-show {
+  display:block !important;
+}

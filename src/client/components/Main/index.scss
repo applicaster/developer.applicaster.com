@@ -1,0 +1,100 @@
+@import "../../common/stylesheets/baseline";
+
+$main-bg: #ffffff;
+$main-text: #333; // main content text color
+
+.Content {
+  @include baseline(20px);
+  position: relative;
+  color: $main-text;
+  font-family: 'Open Sans', sans-serif;
+  background-color: $main-bg;
+  padding: 20px;
+  overflow: hidden;
+  min-height:100%;
+  margin-right: 230px;
+  margin-top: 60px;
+}
+//Content direct childs shouldn't pass the 800px width limit
+// This is for readablity on large screens
+.Content-inner>* {
+  max-width:650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Typography--code {
+ @include baseline(14px);
+}
+
+.Typography--h1 {
+  @include baseline(40px);
+}
+
+.Typography--h2 {
+  @include baseline(30px);
+}
+
+.Typography--h3 {
+  @include baseline(25px);
+}
+
+.Typography--h4 {
+  @include baseline(22px);
+}
+
+.Typography--h5 {
+  @include baseline(14px);
+}
+
+
+.Typography--table {
+  border-collapse: separate;
+  margin-bottom: 1em;
+  overflow: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  width:100%;
+}
+
+.Typography--img {
+  max-width:100%;
+  margin: 20px 0;
+}
+
+.Typography--cell {
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.Typography--th {
+  padding: 5px 10px;
+}
+
+.Typography--td {
+  padding: 10px;
+}
+.Typography--dt {
+  font-weight: bold;
+}
+
+.Typography--row {
+  background-color: lighten($main-bg, 4.2%);
+}
+
+.Typography--row:nth-child(even) {
+  background-color: lighten($main-bg, 2.4%);
+}
+
+.Typography--ul {
+  list-style-type: disc;
+  margin: 1em 0;
+  padding-left: 40px;
+
+}
+
+.Copywrite {
+ @include baseline(15px);
+}

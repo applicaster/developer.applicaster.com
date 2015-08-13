@@ -1,0 +1,62 @@
+/*
+Header
+
+Some description text.
+
+Markup:
+<div class="Header">
+  <span class="Header-mainTitle">
+    <a href="#" class="u-unstyledLink Header-logo"></a>
+    Header Label
+  </span>
+  <div class="Header-border"></div>
+</div>
+
+Styleguide 2.0
+*/
+
+$header-height: 60px;
+
+.Header {
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: $header-height;
+  white-space: nowrap;
+}
+
+.Header-logo {
+  background: url('./images/applicaster-logo.png') center center no-repeat;
+  height: 100%;
+  width: 118px;
+  display: block;
+  float:left;
+  padding: 0 15px;
+  margin-top:1px;
+  margin-left:15px;
+  .Header-text {
+    padding-left: 130px;
+  }
+}
+
+.Header-mainTitle {
+  font-size: 1.1em;
+  margin-left: 5px;
+  line-height: $header-height;
+}
+
+.Header-border {
+  background-image: linear-gradient(to right, #d93e97 0%, #d93e97 33%, #207cca 33%, #51c4cd 33%, #51c4cd 69%, #51c4cd 69%, #fec73c 69%);
+  width:100%;
+  height:3px;
+  line-height: 0;
+}
+
+.Header-benathHeader {
+  margin-top: $header-height;
+}
+
+

@@ -1,0 +1,290 @@
+<h1 id="stars-public-api-v3-feed-crossmates-" class="Typography--h1">Stars Public API v3 (Feed &amp; Crossmates)</h1>
+<p>This document describes the Stars public API and it is used to read events
+form both the Feed &amp; Crossmates Applicaster products.</p>
+<h1 id="terminology" class="Typography--h1">Terminology</h1>
+<h2 id="timeline" class="Typography--h2">Timeline</h2>
+<p>A timeline is a container of events and can be of type &quot;crossmates&quot; or &quot;feed&quot;.
+Each account can have more than one timeline.</p>
+<h2 id="feeds-event-sources-" class="Typography--h2">Feeds (event sources)</h2>
+<p>A Feed describes the published sender of a broadcaster event and typically has
+the same name of the show (see diagram below #1 #2).</p>
+<h2 id="events" class="Typography--h2">Events</h2>
+<p>An Event is a content post that is sent to the end user in a given time.</p>
+<h2 id="episodes-feed-type-only-" class="Typography--h2">Episodes (Feed type only)</h2>
+<p>An episode describes a range of time in which a timeline is active and viewable
+by the end user on the device.</p>
+<h2 id="zones" class="Typography--h2">Zones</h2>
+<p>A zone is a scope of events and episodes that refers to the closest available
+timezone of the client. <code class="Typography--code">Feeds</code> <code class="Typography--code">Episodes</code> &amp; <code class="Typography--code">Events</code> are all scoped to the set
+timezone and MUST be declared on each GET request for each of those models.
+A Timeline can have more than one zones.</p>
+<h2 id="timeline-customizations-feed-type-only-" class="Typography--h2">Timeline Customizations (Feed type only)</h2>
+<p>The Feed look and feel can be controlled from a remote server. The timeline
+customisation is an API end point that holds the list of configurable items - color values and URLs for images and icons.</p>
+<h1 id="common-workflow-for-feed-type-timeline" class="Typography--h1">Common Workflow for <em>Feed</em> Type timeline</h1>
+<h2 id="prerequisites" class="Typography--h2">prerequisites</h2>
+<ul class="Typography--ul">
+<li>To access the timelines you must have an Applicaster <code class="Typography--code">&lt;account_id&gt;</code>.</li>
+<li><code class="Typography--code">&lt;Base URL&gt;</code> for production server requests is <code class="Typography--code">http://stars.applicaster.com/</code></li>
+<li><code class="Typography--code">&lt;Base URL&gt;</code> for any other environment server (e.g. qa)
+is <code class="Typography--code">http://stars.&lt;environment-name&gt;.applicaster.com/</code></li>
+</ul>
+<h2 id="workflow" class="Typography--h2">Workflow</h2>
+<blockquote class="SamplesAside-sample Sample">
+<p>Note: The API exposes more fields for other usege - only the relevant JSON
+properties that are used by the Feed are documented.</p>
+</blockquote>
+<p><img src="./public/stars-public-v3/feed-client-diagram.png" alt="feed-client-diagram" class="Typography--img"></p>
+<ul class="Typography--ul">
+<li>1 - Events source (feeds) avatar</li>
+<li>2 - Events source (feeds) name</li>
+<li>3 - The event text</li>
+<li>4 - The event image</li>
+</ul>
+<h3 id="request-for-available-timelines" class="Typography--h3">Request for available timelines</h3>
+<p><strong>Request:</strong> GET <code class="Typography--code">&lt;Base URL&gt;/v3/accounts/&lt;account_id&gt;/timelines.json</code></p>
+<p><strong>Response:</strong></p>
+<pre class="u-marginAuto"><code class="language-javascript Typography--code">[
+  {
+    id: &quot;&lt;timeline_id&gt;&quot;, //the timeline ID
+    live: true, //If set to false the client should treat the timeline as hidden for the end user view
+    name: &quot;Adventure Time with Finn and Jake&quot;,
+    zones: {
+        &quot;514ebfe878249b1c11999002&quot;: -21600, // GMT offset in sceonds, for example GMT-6
+        &quot;514ebfe878249b1c11999004&quot;: 3600// GMT +1
+    },
+    type: &quot;feed&quot;, // Can be crossmates or feed
+    poll_policy: {
+        events_rate: 30, // the refresh rate in seconds to request for new events
+        facebook_posts_rate: 30, // the refresh rate in seconds to request for new Facebook posts
+        twitter_tweets_rate: 30, // the refresh rate in seconds to request for new Twitter tweets
+        facebook_posts_count: 50, // Limit for Facebook posts on each request
+        twitter_tweets_count: 50 // Limit for Twitter tweets on each request
+    },
+  },
+  ...
+]
+</code></pre>
+<h3 id="request-for-next-5-episodes-including-current-one-" class="Typography--h3">Request for next 5 episodes (including current one)</h3>
+<p>Choose the zone that is the closest the yours - typically there will be only one
+ zone so pick that one.</p>
+<blockquote class="SamplesAside-sample Sample">
+<p>Note: If there isn&apos;t any live episode at the moment the client should treat
+the timeline as disabled and can present a countdown to the up next set episode
+if available.</p>
+</blockquote>
+<p><strong>Request:</strong> GET <code class="Typography--code">&lt;Base URL&gt;/v3/zones/&lt;zone_id&gt;/episodes.json</code></p>
+<p><strong>Response:</strong></p>
+<pre class="u-marginAuto"><code class="language-javascript Typography--code">[
+    {
+        name: &quot;Episode name&quot;,
+        welcome_text: &quot;welcome&quot;, //The text to appear as the first event in the Feed
+        end_text: &quot;end&quot;, //The text to appear as the last event in the Feed
+        facebook_page: &quot;1437221886512103&quot;, // The connected Facebook page
+        external_link: { //external link e.g. URL scheme for the live view in the app
+            label: &quot;google&quot;,
+            url: &quot;http://www.google.com&quot;
+        },
+        enable_fb_post: true, // Should we allow user posting from the feed? set to false if the Facebook page is restricted for comments
+        id: &quot;54a3bd86c0a406979f000001&quot;, // episode ID
+        starts: 1420019640, //Unix timestamp describing when the episodes starts
+        ends: 1420193323, //Unix timestamp describing when the episodes ends
+        twitter_hashtags: [ //array of twitter hashtags or usernames to pull from
+            &quot;#baby&quot; // can be also @someusername to pull data from a specific username
+        ],
+    hashtags: [ //array of hashtags to pre-fill user posts on the feed (from Feed v3)
+      &quot;#hello&quot;
+    ],
+        image: { //The image of the episode typically used for the start and end events image
+            default_image: &quot;http://assets-production.applicaster.com/qa/stars/uploads/54a3bd86c0a406979f000001_1420017035.jpg&quot;,
+            thumb: &quot;http://assets-production.applicaster.com/qa/stars/uploads/thumb_max800_54a3bd86c0a406979f000001_1420017035.jpg&quot;
+        }
+    }
+]
+</code></pre>
+<h3 id="request-list-of-timeline-feeds-event-sources-" class="Typography--h3">Request list of timeline feeds (event sources)</h3>
+<p>A timeline can have more than one event sources (called feeds in the v3 API)
+that can broadcast an event.
+This allows to add metadata on top of each event like the name
+(1 in the diagram above) and avatar (2 in the diagram above) of the event source.</p>
+<p><strong>Request:</strong> GET <code class="Typography--code">&lt;Base URL&gt;/v3/zones/&lt;zone_id&gt;/feeds.json</code></p>
+<p><strong>Response:</strong></p>
+<pre class="u-marginAuto"><code class="language-javascript Typography--code">[
+  {
+    id: &quot;514ebfe878249b1c11000002&quot;,
+    name: &quot;Feed name&quot;,
+    image: {
+      default_image: &quot;http://assets-development.applicaster.com/uploads/x_2280ec90.jpg&quot;,
+      thumb: &quot;http://assets-development.applicaster.com/uploads/thumb_x_2280ec90.jpg&quot;
+    }
+  },
+  ...
+]
+</code></pre>
+<h3 id="request-a-list-of-events" class="Typography--h3">Request a list of events</h3>
+<p>Returns last 25 events from last to first (after <code class="Typography--code">unix_timestamp_utc</code> and until
+  <code class="Typography--code">Time.now</code>).
+On most cases you should put on the since param the timestamp of the last event
+you got on the previous request.
+For the first request put the <code class="Typography--code">start_time</code> of the episode.</p>
+<p>The following event types are supported in the Feed (and described and the
+response example below);</p>
+<ul class="Typography--ul">
+<li>Link event</li>
+<li>Message event</li>
+<li>Image event</li>
+<li>Video event</li>
+<li>Audio event</li>
+<li>Questionnaire event - soon to be replaced by a new question mechanism.</li>
+<li>Widgets Question - soon to be replaced by a new question mechanism.</li>
+</ul>
+<p><strong>Request:</strong> <code class="Typography--code">&lt;Base URL&gt;/v3/zones/&lt;zone_id&gt;/events.json?feed_ids[]=&lt;feed_id1&gt;&amp;feed_ids[]=&lt;feed_id2&gt;&amp;feed_ids[]=&lt;feed_id_n&gt;&amp;since=:unix_timestamp_utc</code></p>
+<p><strong>Response:</strong></p>
+<pre class="u-marginAuto"><code class="language-javascript Typography--code">[
+ //Link event
+ {
+   id: &quot;514f00c378249be220000003&quot;,
+   text: &quot;link text&quot;
+   type: &quot;link&quot;,
+   timestamp: 1364990487, // UNIX UTC timestamp
+   link: {
+     url: &quot;http://www.google.com&quot;,
+     orientation: 2, // 0-portrait, 1-landscape, 2-both
+     close_button: false,
+     navigation: false,
+     fullscreen: true
+     is_take_over: true //boolean should the link pop out as a takeover (from Feed v3)
+     take_over_duration: 0 //in seconds default to 0 - can be null if is_take_over isn&apos;t set. close the link takeover automatically after the set seconds
+   },
+   feed_ids: [&quot;515ab77578249b379e000004&quot;], //Using this id you can add get the extra metadata from the matching event source (the feeds array) e.g. event source name and avatar.
+   image: {
+     default_image: &quot;http://assets-development.applicaster.com/uploads/x_2280ec90.jpg&quot;,
+     thumb: &quot;http://assets-development.applicaster.com/uploads/thumb_x_2280ec90.jpg&quot;
+   },
+   image_orientation: &quot;portrait&quot;, // or landscape
+ },
+ // Message event
+ {
+   id: &quot;514f00c378249be220000003&quot;,
+   text: &quot;I bet you want to know more about my life?&quot;,
+   timestamp: 1364990487, // UNIX UTC timestamp
+   feed_ids: [&quot;515ab77578249b379e000004&quot;],
+   type: &quot;message&quot;,
+ },
+ // Image event
+ {
+   id: &quot;514f00c378249be220000003&quot;,
+   text: &quot;I bet you want to know more about my life?&quot;,
+   timestamp: 1364990487, // UNIX UTC timestamp
+   feed_ids: [&quot;515ab77578249b379e000004&quot;],
+   image: {
+     default_image: &quot;http://assets-development.applicaster.com/uploads/x_2280ec90.jpg&quot;,
+     thumb: &quot;http://assets-development.applicaster.com/uploads/thumb_x_2280ec90.jpg&quot;
+   },
+   image_orientation: &quot;portrait&quot;, // or landscape
+   type: &quot;image&quot;,
+ },
+ // Video event
+ {
+   id: &quot;514f00c378249be220000003&quot;,
+   text: &quot;I bet you want to know more about my life?&quot;,
+   timestamp: 1364990487, // UNIX UTC timestamp
+   feed_ids: [&quot;515ab77578249b379e000004&quot;],
+   image: {
+     default_image: &quot;http://assets-development.applicaster.com/uploads/x_2280ec90.jpg&quot;,
+     thumb: &quot;http://assets-development.applicaster.com/uploads/thumb_x_2280ec90.jpg&quot;
+   },
+   video: &quot;http://assets-development.applicaster.com/uploads/thumb_x_2280ec90.mp4&quot;,
+   type: &quot;video&quot;,
+ },
+ // Audio event
+ {
+   id: &quot;514f00c378249be220000003&quot;,
+   text: &quot;I bet you want to know more about my life?&quot;,
+   timestamp: 1364990487, // UNIX UTC timestamp
+   feed_ids: [&quot;515ab77578249b379e000004&quot;],
+   image: {
+     default_image: &quot;http://assets-development.applicaster.com/uploads/x_2280ec90.jpg&quot;,
+     thumb: &quot;http://assets-development.applicaster.com/uploads/thumb_x_2280ec90.jpg&quot;
+   },
+   image_orientation: &quot;portrait&quot;, // or landscape
+   audio: &quot;http://assets-development.applicaster.com/uploads/come-on.mp3&quot;,
+   type: &quot;audio&quot;,
+ },
+ //Questionnaire event
+ {
+   id: &quot;514f00c378249be220000003&quot;,
+   text: &quot;questionnaire text&quot;
+   type: &quot;questionnaire&quot;,
+   timestamp: 1364990487, // UNIX UTC timestamp
+   link: {
+     url: &quot;http://admin.applicaster.com/activities/referrer/51bf18c29415b0d69e0003e1/51bf19626f9bc5fe8a0008a7,51bf19dc9415b0d69e0003e3&quot;,
+     orientation: 2, // 0-portrait, 1-landscape, 2-both
+     close_button: false,
+     navigation: false,
+     fullscreen: false
+   },
+   feed_ids: [&quot;515ab77578249b379e000004&quot;],
+   image: {
+     default_image: &quot;http://assets-development.applicaster.com/uploads/x_2280ec90.jpg&quot;,
+     thumb: &quot;http://assets-development.applicaster.com/uploads/thumb_x_2280ec90.jpg&quot;
+   },
+ },
+ //Widgets Question
+ {
+    text: &quot;Question text&quot;,
+    type: &quot;widgets_question&quot;,
+    image_orientation: &quot;landscape&quot;,
+    feed_ids: [&quot;54a26449c0a4063338000001&quot;],
+    id: &quot;54a4e124c0a406f0d0000003&quot;,
+    timestamp: 1420091692,
+    image: {
+        default_image: &quot;http://assets-production.applicaster.com/qa/stars/uploads/54a4e124c0a406f0d0000003_1420091684.jpg&quot;,
+        thumb: &quot;http://assets-production.applicaster.com/qa/stars/uploads/thumb_max800_54a4e124c0a406f0d0000003_1420091684.jpg&quot;
+    },
+    widgets_question: { //The URL for the widgets_question API will be provided on a different doc - ask data from Applicaster product.
+        url: &quot;http://widgets.qa.applicaster.com/api/public/v1/questions/54a4e124c0a40666f70005e7.json&quot;,
+        ends_at: 1420091932,
+        is_take_over: false
+    },
+    template: &quot;quiz_image&quot;
+},
+ ...
+]
+</code></pre>
+<h3 id="request-timeline-customizations-feed-only-" class="Typography--h3">Request timeline customizations (Feed Only)</h3>
+<p>Returns a list of configurable properties for the Feed look and feel.</p>
+<blockquote class="SamplesAside-sample Sample">
+<p>Note: Colors are represented in aRGB format. More information can be found here: <a href="http://en.wikipedia.org/wiki/RGBA_color_space#ARGB">http://en.wikipedia.org/wiki/RGBA_color_space#ARGB</a></p>
+</blockquote>
+<p><strong>Request:</strong> GET <code class="Typography--code">&lt;Base URL&gt;/v3/timelines/&lt;timeline_id&gt;/timeline_customizations.json</code></p>
+<p><strong>Response:</strong></p>
+<pre class="u-marginAuto"><code class="language-javascript Typography--code">{
+  colors: {
+    main_color: &quot;ffc60021&quot;, //color in aRBA format see note above
+    secondary_color: &quot;ff242424&quot;,
+    text_color: &quot;ffdadada&quot;,
+    background_color: &quot;fffefefe&quot;
+  },
+  icons: {
+    like: &quot;http://...png&quot;, //Image URL can be null if no image is set
+    liked: &quot;http://...png&quot;,,
+    retweet: &quot;http://...png&quot;,,
+    retweeted: &quot;http://...png&quot;,,
+    share: &quot;http://...png&quot;,,
+    write_a_post: &quot;http://...png&quot;,,
+    comment: &quot;http://...png&quot;,,
+    live: &quot;http://...png&quot;,,
+    back: &quot;http://...png&quot;,
+  },
+  images: {
+    background_portrait: &quot;http://...png&quot;,,
+    background_landscape: &quot;http://...png&quot;,
+  }
+}
+</code></pre>
+<p>#Common Workflow for <em>Crossmates</em> Type timeline</p>
+<blockquote class="SamplesAside-sample Sample">
+<p>Currently the Crossmates public API is not available for 3rd party
+implementation. Please contact Applicaster product for support on that matter.</p>
+</blockquote>
