@@ -1,14 +1,15 @@
 {
-  "name": "react1",
+  "name": "developer.applicaster.com",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "build": "webpack --progress --colors && gulp",
     "start": "babel-node src/server/index.js",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "test": "echo test placeholder"
   },
-  "author": "",
+  "author": "applicaster",
   "dependencies": {
     "autoprefixer-loader": "^2.0.0",
     "axios": "^0.5.4",
