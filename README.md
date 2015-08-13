@@ -1,0 +1,1 @@
+[![Circle CI](https://circleci.com/gh/applicaster/developer.applicaster.com/tree/developer2.svg?style=svg&circle-token=270bab912b237794482346a0dbece739cf7515fe)](https://circleci.com/gh/applicaster/developer.applicaster.com/tree/developer2)
