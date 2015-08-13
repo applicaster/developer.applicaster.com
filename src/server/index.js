@@ -6,52 +6,52 @@ import dotenv from 'dotenv';
 
 dotenv.load();
 
-let server = new Hapi.Server();
+const server = new Hapi.Server();
 server.connection({ port: process.env.PORT });
 
-server.register({ register:applicasterAccounts, options: {} }, (err) => {
+server.register({ register: applicasterAccounts, options: {} }, () => {
 
   server.route({
     method: 'GET',
     path: '/',
-    config:{
+    config: {
       auth: 'applicaster',
       handler: (request, reply) => {
         reply.file('./src/client/index.html');
-      }
-    }
+      },
+    },
   });
 
   server.route({
     method: 'GET',
     path: '/favicon.png',
-    config:{
+    config: {
       handler: (request, reply) => {
         reply.file('./src/client/favicon.png');
-      }
-    }
+      },
+    },
   });
 
 
   server.route({
     method: 'GET',
     path: '/prism.js',
-    config:{
+    config: {
       handler: (request, reply) => {
         reply.file('./src/client/common/js/prism.js');
-      }
-    }
+      },
+    },
   });
 
 
   server.route({
     method: 'GET',
     path: '/bundle.js',
-    config:{
+    config: {
       handler: (request, reply) => {
         reply.file('./dist/bundle.js');
-      }
-    }
+      },
+    },
   });
 
   server.route({
@@ -61,9 +61,10 @@ server.register({ register:applicasterAccounts, options: {} }, (err) => {
       auth: 'applicaster',
       handler: {
         directory: {
-          path: 'public'
-        }
-      }}
+          path: 'public',
+        },
+      },
+    },
   });
 
   server.route({
@@ -73,10 +74,10 @@ server.register({ register:applicasterAccounts, options: {} }, (err) => {
       auth: 'applicaster',
       handler: {
         directory: {
-          path: 'internal'
-        }
-      }
-    }
+          path: 'internal',
+        },
+      },
+    },
   });
   server.route({
     method: 'GET',
@@ -91,11 +92,11 @@ server.register({ register:applicasterAccounts, options: {} }, (err) => {
           tocFile = './public-toc.json';
         }
         reply.file(tocFile);
-      }
-    }
+      },
+    },
   });
 
-  server.start((err) => {
+  server.start(() => {
   });
 
 });

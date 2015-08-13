@@ -1,8 +1,7 @@
 import { connect } from 'redux/react';
-import { bindActionCreators } from 'redux';
 import React, { Component } from 'react';
 
-import ProductFilter from '../ProductFilter'
+import ProductFilter from '../ProductFilter';
 
 import './index.scss';
 import '../../common/stylesheets/utils.scss';
@@ -11,7 +10,7 @@ import '../../common/stylesheets/utils.scss';
 export default class SideMenu extends Component {
 
   render() {
-    const {products, dispatch} = this.props;
+    const { products } = this.props;
     return (
       <div className="SideMenu">
         <div id="menu">
@@ -21,9 +20,6 @@ export default class SideMenu extends Component {
           <div className="tocify" id="toc"></div>
         </div>
       </div>
-    )
-  };
-
+    );
+  }
 }
-
-
