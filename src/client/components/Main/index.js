@@ -7,7 +7,7 @@ import { RouteHandler } from 'react-router';
 
 import './index.scss';
 
-export default class Page extends Component {
+export default class Main extends Component {
 
   render() {
     return (
@@ -17,7 +17,6 @@ export default class Page extends Component {
         <div className="Content">
           <div className="Content-inner">
             <RouteHandler/>
-            <div className="Copywrite">© 2015 Applicaster LTD. All rights reserved.</div>
           </div>
         </div>
       </div>
