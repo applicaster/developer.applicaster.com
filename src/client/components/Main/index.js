@@ -14,7 +14,7 @@ export default class Main extends Component {
       <div>
         <Header/>
         <SideMenu/>
-        <div className="Content">
+        <div className="Content SideMenu-asideSideMenu">
           <div className="Content-inner">
             <RouteHandler/>
           </div>
