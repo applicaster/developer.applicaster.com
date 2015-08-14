@@ -1,6 +1,10 @@
 import Bell from 'bell';
 import Axios from 'axios';
 import dotenv from 'dotenv';
+import _ from 'lodash';
+
+const INTERNAL_GLOBAL_ROLE = 'docs:drafts';
+const BASE_URL = 'https://accounts2.applicaster.com';
 
 dotenv.load();
 
@@ -19,33 +23,36 @@ export const loggedInScheme = (server) => {
 
   return {
     authenticate: (request, reply) => {
-      // console.log('----', request.route.settings.plugins);
       if (request.session.get('applicaster') === undefined) {
         reply('redirect to login').redirect('/auth/applicaster/callback');
       } else {
-        Axios.get(`https://accounts2.applicaster.com/api/v1/users/current.json?access_token=${request.session.get('applicaster').token}`)
+        Axios.get(`${BASE_URL}/api/v1/users/current.json?access_token=${request.session.get('applicaster').token}`)
         .then((response) => {
+          if (_.get(request, 'route.settings.plugins.applicasterAccounts.internal')) {
+            if (!_.includes(response.data.global_roles, INTERNAL_GLOBAL_ROLE)) {
+              throw new Error('permission denied!');
+            }
+          }
           reply.continue({credentials: {globalRoles: response.data.global_roles}});
         })
-        .catch(() => {
-          reply({err: 'err'});
+        .catch((err) => {
+          reply({err: err});
         });
       }
     },
   };
 };
 
-
 const plugin = {
   register: (server, options, next) => {
     const login = {
       provider: {
         protocol: 'oauth2',
-        auth: 'https://accounts2.applicaster.com/oauth/authorize',
-        token: 'https://accounts2.applicaster.com/oauth/token',
+        auth: `${BASE_URL}/oauth/authorize`,
+        token: `${BASE_URL}/oauth/token`,
         scopeSeparator: ',',
         profile: (credentials, params, get, callback) => {
-          get('https://accounts2.applicaster.com/api/v1/users/current.json', params, (profile) => {
+          get(`${BASE_URL}/api/v1/users/current.json`, params, (profile) => {
             credentials.profile = profile;
             return callback();
           });

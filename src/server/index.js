@@ -72,6 +72,7 @@ server.register({ register: applicasterAccounts, options: {} }, () => {
     path: '/internal/{param*}',
     config: {
       auth: 'applicaster',
+      plugins: {applicasterAccounts: {internal: true}},
       handler: {
         directory: {
           path: 'internal',
