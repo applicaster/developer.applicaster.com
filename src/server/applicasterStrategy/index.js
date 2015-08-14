@@ -9,7 +9,7 @@ const BASE_URL = 'https://accounts2.applicaster.com';
 dotenv.load();
 
 export const loggedInScheme = (server) => {
-  const opts1 = {
+  const opts = {
     cookieOptions: {
       password: 'password',
       isSecure: false,
@@ -18,7 +18,7 @@ export const loggedInScheme = (server) => {
 
   server.register({
     register: require('yar'),
-    options: opts1,
+    options: opts,
   }, () => { });
 
   return {
