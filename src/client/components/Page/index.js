@@ -13,20 +13,19 @@ export default class Page extends Component {
   }
 
   componentDidMount() {
-    this.setState({copyStyle: { display : 'none'}});
+    this.setState({copyStyle: { display: 'none'}});
     request(`/${this.props.params.type}/${this.props.params.page}/index.html`, (err, res) => {
       this.setState({content: { __html: (res.text)}});
       Prism.highlightAll();
-      this.setState({copyStyle: { display : 'block'}});
+      this.setState({copyStyle: { display: 'block'}});
     });
   }
-
 
   render() {
     return (
       <div>
-      <div dangerouslySetInnerHTML={this.state.content} />
-      <div style={this.state.copyStyle} className="Copywrite">© 2015 Applicaster LTD. All rights reserved.</div> 
+        <div dangerouslySetInnerHTML={this.state.content} />
+        <div style={this.state.copyStyle} className="Copywrite">© 2015 Applicaster LTD. All rights reserved.</div>
       </div>
     );
   }
