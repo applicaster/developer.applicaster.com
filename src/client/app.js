@@ -36,6 +36,10 @@ const routes = (
   </Route>
 );
 
-Router.run(routes, (Handler) => {
+Router.run(routes, (Handler, state) => {
+  mixpanel.identify(window.userEmail);
+  mixpanel.track('Change route', {
+    path: state.path,
+  });
   React.render(<Handler/>, document.getElementById('react'));
 });

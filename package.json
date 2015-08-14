@@ -36,6 +36,7 @@
     "gulp-sass": "^2.0.4",
     "gulp-wrap": "^0.11.0",
     "gulp-yaml": "^0.2.4",
+    "handlebars": "^3.0.3",
     "hapi": "^8.8.1",
     "hapi-auth-basic": "^3.0.0",
     "joi": "^6.6.1",

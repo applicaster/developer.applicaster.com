@@ -11,13 +11,23 @@ server.connection({ port: process.env.PORT });
 
 server.register({ register: applicasterAccounts, options: {} }, () => {
 
+  server.views({
+    engines: {
+      html: require('handlebars'),
+    },
+    path: './src/client',
+  });
+
   server.route({
     method: 'GET',
     path: '/',
     config: {
       auth: 'applicaster',
       handler: (request, reply) => {
-        reply.file('./src/client/index.html');
+        const data = {
+          email: request.auth.credentials.data.email,
+        };
+        reply.view('index', data);
       },
     },
   });

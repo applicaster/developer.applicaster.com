@@ -33,7 +33,10 @@ export const loggedInScheme = (server) => {
               throw new Error('permission denied!');
             }
           }
-          reply.continue({credentials: {globalRoles: response.data.global_roles}});
+          reply.continue({credentials: {
+            globalRoles: response.data.global_roles,
+            data: response.data,
+          }});
         })
         .catch((err) => {
           reply({err: err});
