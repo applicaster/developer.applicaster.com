@@ -1,18 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'redux/react';
 import { bindActionCreators } from 'redux';
 import * as ProductsActions from '../../actions/ProductsActions';
 
 // Import child components
-import Header from '../Header';
-import SideMenu from '../SideMenu';
 import ProductGroup from '../ProductGroup';
-import ProductFilter from '../ProductFilter'
 
 import './index.scss';
 
 @connect(state => ({ products: state.products }))
 export default class ProductList extends Component {
+
+  static propTypes = {
+    products: PropTypes.array,
+    query: PropTypes.object,
+    dispatch: PropTypes.object,
+  }
 
   constructor(props) {
     super(props);
@@ -22,12 +25,12 @@ export default class ProductList extends Component {
   }
 
   render() {
-    const {products, query, dispatch} = this.props;
-    let show = (label) => {
-      let showItem = (query.product) ? (label === query.product) : true;
+    const { products, query } = this.props;
+    const show = (label) => {
+      const showItem = (query.product) ? (label === query.product) : true;
       return {
-        display: (showItem) ? 'block' : 'none'
-      }
+        display: (showItem) ? 'block' : 'none',
+      };
     };
     return (
       <div>
@@ -39,6 +42,5 @@ export default class ProductList extends Component {
         )}
       </div>
     );
-  };
-
+  }
 }

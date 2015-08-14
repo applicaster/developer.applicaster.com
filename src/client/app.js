@@ -1,19 +1,19 @@
 import React from 'react';
-import Router from 'react-router';  
-import { DefaultRoute, Link, Route, RouteHandler, Redirect } from 'react-router';
+import Router from 'react-router';
+import { Route, RouteHandler, Redirect } from 'react-router';
 import PageHandler from './components/Page';
 import MainHandler from './components/Main';
-import ProductListHandler from './components/ProductList'
-import { createRedux, bindActionCreators } from 'redux';
+import ProductListHandler from './components/ProductList';
+import { createRedux } from 'redux';
 import { Provider } from 'redux/react';
 import * as stores from './stores';
 
-import "./common/stylesheets/base.scss";
+import './common/stylesheets/base.scss';
 
 
 const redux = createRedux(stores);
 
-let App = React.createClass({
+const App = React.createClass({
 
   render() {
     return (
@@ -23,10 +23,10 @@ let App = React.createClass({
         </Provider>
       </div>
     );
-  }
+  },
 });
 
-let routes = (
+const routes = (
   <Route name="app" path="/" handler={App}>
     <Route name="main" path="/released" handler={MainHandler}>
       <Route name="page" path="/:type/:page" handler={PageHandler}/>
@@ -36,6 +36,6 @@ let routes = (
   </Route>
 );
 
-Router.run(routes, function (Handler) {
+Router.run(routes, (Handler) => {
   React.render(<Handler/>, document.getElementById('react'));
 });

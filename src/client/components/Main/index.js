@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'redux/react';
 
 // Import child components
 import Header from '../Header';
@@ -23,7 +22,7 @@ export default class Page extends Component {
         </div>
       </div>
     );
-  };
+  }
 
 }
 

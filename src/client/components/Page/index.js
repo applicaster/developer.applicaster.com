@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import { connect } from 'redux/react';
-import request from "superagent";
-import { PUBLIC_FOLDER } from '../../../shared/settings';
-
-// Import child components
-import Header from '../Header';
-import SideMenu from '../SideMenu';
+import React, { Component, PropTypes } from 'react';
+import request from 'superagent';
 
 export default class Page extends Component {
+
+  static propTypes = {
+    params: PropTypes.object,
+  };
 
   constructor(props) {
     super(props);
@@ -16,7 +14,7 @@ export default class Page extends Component {
 
   componentDidMount() {
     request(`/${this.props.params.type}/${this.props.params.page}/index.html`, (err, res) => {
-      this.setState({content: { __html: (res.text)}})
+      this.setState({content: { __html: (res.text)}});
       Prism.highlightAll();
     });
   }
@@ -25,6 +23,6 @@ export default class Page extends Component {
     return (
       <div dangerouslySetInnerHTML={this.state.content} />
     );
-  };
+  }
 
 }

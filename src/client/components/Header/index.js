@@ -13,7 +13,7 @@ export default class Header extends Component {
           </span>
           <div className="Header-border"></div>
         </div>
-    )
-  };
+    );
+  }
 }
 

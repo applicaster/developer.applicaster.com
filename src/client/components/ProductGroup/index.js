@@ -1,37 +1,41 @@
-import React, { Component } from 'react'; 
-import { DefaultRoute, Link, Route, RouteHandler, Redirect } from 'react-router';
+import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 import { getFolder } from '../../../shared/utils';
 
 export default class ProductGroup extends Component {
 
+  static propTypes = {
+    group: PropTypes.object,
+  }
+
   render() {
     const {label, teasers} = this.props.group;
-    let aStyle = {
-      marginTop: "1em",
-      marginBottom:"2em",
-      borderBottom:"solid 1px #ccc",
-      paddingBottom:"1em",
-      textDecoration: "none",
-      display: "block"
+    const aStyle = {
+      marginTop: '1em',
+      marginBottom: '2em',
+      borderBottom: 'solid 1px #ccc',
+      paddingBottom: '1em',
+      textDecoration: 'none',
+      display: 'block',
     };
 
-    let labelStyle = {
-      fontFamily: "sans-serif",
-      fontWeight: "300",
-      fontSize: "1.5em",
-      color: "#666",
-      lineHeight: "3em",
-      borderBottom: "solid 1px #D3D3D3",
-      marginBottom: "1em"
+    const labelStyle = {
+      fontFamily: 'sans-serif',
+      fontWeight: '300',
+      fontSize: '1.5em',
+      color: '#666',
+      lineHeight: '3em',
+      borderBottom: 'solid 1px #D3D3D3',
+      marginBottom: '1em',
     };
 
-    let platformStyle = {
-      fontSize: "0.8em",
-      color: "#D93E97"
-    }
+    const platformStyle = {
+      fontSize: '0.8em',
+      color: '#D93E97',
+    };
 
-    let descStyle ={
-      fontSize: "18px"
+    const descStyle = {
+      fontSize: '18px',
     };
 
     return (
@@ -41,7 +45,7 @@ export default class ProductGroup extends Component {
             <Link to="page"
                   params={{
                     type: getFolder(teaser),
-                    page: teaser.folder
+                    page: teaser.folder,
                   }}
                   key={teaser.folder}
                   style={aStyle}>
@@ -53,7 +57,7 @@ export default class ProductGroup extends Component {
           )}
       </div>
     );
-  };
+  }
 
 }
 

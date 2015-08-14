@@ -5,6 +5,10 @@ import './index.scss';
 
 export default class ProductFilter extends Component {
 
+  static propTypes = {
+    products: PropTypes.string,
+  };
+
   render() {
     const {products} = this.props;
     return (
@@ -28,8 +32,6 @@ export default class ProductFilter extends Component {
         </ul>
       </div>
     );
-  };
+  }
 
 }
-
-
