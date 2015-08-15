@@ -26,6 +26,7 @@ server.register({ register: applicasterAccounts, options: {} }, () => {
       handler: (request, reply) => {
         const data = {
           email: request.auth.credentials.data.email,
+          mixpanelEnabled: process.env.MIXPANEL_ENABLED ? true : false,
         };
         reply.view('index', data);
       },

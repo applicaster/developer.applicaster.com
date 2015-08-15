@@ -10,7 +10,6 @@ import * as stores from './stores';
 
 import './common/stylesheets/base.scss';
 
-
 const redux = createRedux(stores);
 
 const App = React.createClass({
@@ -37,9 +36,11 @@ const routes = (
 );
 
 Router.run(routes, (Handler, state) => {
-  mixpanel.identify(window.userEmail);
-  mixpanel.track('Change route', {
-    path: state.path,
-  });
+  if (window.applicasterDocs.mixpanelEnabled) {
+    mixpanel.identify(window.applicasterDocs.userEmail);
+    mixpanel.track('Change route', {
+      path: state.path,
+    });
+  }
   React.render(<Handler/>, document.getElementById('react'));
 });
