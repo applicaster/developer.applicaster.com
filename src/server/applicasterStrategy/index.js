@@ -24,7 +24,9 @@ export const loggedInScheme = (server) => {
   return {
     authenticate: (request, reply) => {
       if (request.session.get('applicaster') === undefined) {
-        reply('redirect to login').redirect('/auth/applicaster/callback');
+        console.log('REDIRECTING ...');
+        request.session.clear('applicaster');
+        reply.redirect('/auth/applicaster/callback');
       } else {
         Axios.get(`${BASE_URL}/api/v1/users/current.json?access_token=${request.session.get('applicaster').token}`)
         .then((response) => {
@@ -39,7 +41,8 @@ export const loggedInScheme = (server) => {
           }});
         })
         .catch((err) => {
-          reply({err: err});
+          request.session.clear('applicaster');
+          reply.redirect('/auth/applicaster/callback');
         });
       }
     },
@@ -66,10 +69,12 @@ const plugin = {
       clientId: process.env.OAUTH_CLIENT_ID,
       clientSecret: process.env.OAUTH_CLIENT_SECRET,
     };
+
     server.register(Bell, () => {
       server.auth.strategy('login', 'bell', login);
       server.auth.scheme('myScheme', loggedInScheme);
       server.auth.strategy('applicaster', 'myScheme', false, { role: 'docs:drafts' });
+
       server.route({
         method: 'GET',
         path: '/auth/applicaster/callback',
