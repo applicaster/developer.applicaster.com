@@ -92,7 +92,12 @@ $main-text: #333; // main content text color
   list-style-type: disc;
   margin: 1em 0;
   padding-left: 40px;
+}
 
+.Typography--ol {
+  list-style-type: decimal;
+  margin: 1em 0;
+  padding-left: 40px;
 }
 
 .Copywrite {
