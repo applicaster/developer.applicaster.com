@@ -153,7 +153,7 @@
   owner: gavri
 - folder: docs-styleguide
   internal: true
-  title: Docs Styleguide
+  title: Docs Style Guide
   description: >
     Learn how to write docs using the Markdown format and see an example of how
     the styling take affect on the site.
