@@ -143,7 +143,19 @@
   type: Technical
   owner: ?
 
-#"Developer Documentation"
-#- folder: docs-how-to
-#  internal: true
-#  title: How To Write Docs
+"Developer Documentation":
+- folder: docs-how-to
+  internal: true
+  title: How To Write and publish Docs
+  description: >
+    This doc describes how to write and publish new and exitsing documents.
+ type: Technical
+ owner: gavri
+- folder: docs-styleguide
+  internal: true
+  title: Docs Styleguide
+  description: >
+    Learn how to write docs using the Markdown format and see an example of how
+    the styling take affect on the site.
+ type: Technical
+ owner: gavri
