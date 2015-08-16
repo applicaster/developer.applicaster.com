@@ -14,6 +14,10 @@ const ymlPath = './content/toc.yml';
 
 let toc = yaml.safeLoad(fs.readFileSync(ymlPath, 'utf8'));
 
+let getSection = (isInternal) => {
+  return (isInternal) ? INTERNAL_FOLDER : PUBLIC_FOLDER;
+};
+
 export default function() {
   gulp.task('default', () => {
     let publicJson = [];
@@ -33,10 +37,10 @@ export default function() {
           $('img').each(function(index, element) {
             let src =  $(this).attr('src')
             if (_.startsWith(src, './')) {
-              $(this).attr('src', `./${PUBLIC_FOLDER}/${pack.folder}/${src.substring(2)}`);
+              $(this).attr('src', `./${getSection(pack.internal)}/${pack.folder}/${src.substring(2)}`);
             }
             if (_.startsWith(src, '/')) {
-              $(this).attr('src', `./${PUBLIC_FOLDER}/${pack.folder}/${src.substring(1)}`);
+              $(this).attr('src', `./${getSection(pack.internal)}/${pack.folder}/${src.substring(1)}`);
             }
           });
           $("blockquote").addClass("SamplesAside-sample").addClass("Sample")
@@ -56,6 +60,7 @@ export default function() {
           $("td").addClass("Typography--cell").addClass("Typography--td")
           $("pre").addClass("u-marginAuto")
           $("ul").addClass("Typography--ul")
+          $("ol").addClass("Typography--ol")
             $(".language-objective-c").addClass("language-objectivec")
           $(".language-objective-c").removeClass("language-objective-c")
         }))
