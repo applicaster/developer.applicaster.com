@@ -40,6 +40,7 @@ export const loggedInScheme = (server) => {
           }});
         })
         .catch((err) => {
+          console.log(err);
           request.session.clear('applicaster');
           reply.redirect('/auth/applicaster/callback');
         });
@@ -72,7 +73,7 @@ const plugin = {
     server.register(Bell, () => {
       server.auth.strategy('login', 'bell', login);
       server.auth.scheme('myScheme', loggedInScheme);
-      server.auth.strategy('applicaster', 'myScheme', false, { role: 'docs:drafts' });
+      server.auth.strategy('applicaster', 'myScheme', false, { role: INTERNAL_GLOBAL_ROLE });
 
       server.route({
         method: 'GET',
