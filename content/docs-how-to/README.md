@@ -8,7 +8,7 @@ technical and development documentation in a single place.
 ## Accessing the documentation
 Because Applicaster documentation holds propriety & technical information, Only
 logged in users with a valid Applicaster single sign on
-[account](accounts.applicaster.com) can access the documentation.
+[account](https://accounts.applicaster.com) can access the documentation.
 Each doc can be set as an Internal doc. Internal documents are documents that we
 want to restrict from a general Applicaster Accounts user.
 This is good for draft documents, internal APIs and documents that our customers
