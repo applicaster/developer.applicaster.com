@@ -1,6 +1,6 @@
 # VOD Ingestion via RSS
 
-###Overview
+### Overview
 
 
 The VOD RSS ingestion process is meant to load video assets to Applicaster’s systems.  
@@ -17,7 +17,7 @@ If using Applicaster’s CDN and delivery services you will also need a video fi
 This file should be of the highest quality possible, the system will transcode this file  
  to multiple bitrates and make sure it’s compatible to all devices required. 
 
-##Example
+## Example
 
 #### Create the show category on Applicaster CMS
 We'll present a scenario for a show name "Best Show" with 2 seasons.  
@@ -171,7 +171,7 @@ and is used to specify the enclosed media content.
  
 
 
-###The `<media:content>` As `<item>`'s Sub-element 
+### The `<media:content>` As `<item>`'s Sub-element 
 Defines the item video attributes. The required attributes are:
 
 * **medium** - The type of the media file is: image, audio, video, document.  
@@ -184,7 +184,7 @@ with the type attribute – For VOD purpose use : medium="video"
  by Apple.
 
 
-###The `<media:content>` As `<media:group>`'s Sub-element 
+### The `<media:content>` As `<media:group>`'s Sub-element 
 
 The `<media:content>` is a sub-element of `<item>` that lists images that the app can use  
  for the application’s UI.  
