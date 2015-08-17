@@ -22,7 +22,7 @@ Once the reports are calculated and stored in Applicaster CMS ,they are sent to 
 
 Please contact one of Applicaster representative to get your widgets XML reports feed.
 
-##Questionnaires XML feed reports Structure: 
+## Questionnaires XML feed reports Structure: 
 
 ```
 <root xmlns:media="http://search.yahoo.com/mrss/" 
@@ -99,7 +99,7 @@ Please contact one of Applicaster representative to get your widgets XML reports
 	* numeric_value - (optional) When an average result is needed to be calculated, a numeric value can be applied for each answer (as the example above)
 
 
-##Supported OSG platforms 
+## Supported OSG platforms 
 
 
 This XML feed reports can later be fed into an on screen graphics software, where broadcasters can monitor and moderate what goes on air.

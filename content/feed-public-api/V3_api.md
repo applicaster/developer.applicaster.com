@@ -318,7 +318,7 @@ Returns a list of configurable properties for the Feed look and feel.
 }
 ```
 
-#Common Workflow for *Crossmates* Type timeline
+# Common Workflow for *Crossmates* Type timeline
 
 >Currently the Crossmates public API is not available for 3rd party
 implementation. Please contact Applicaster product for support on that matter.

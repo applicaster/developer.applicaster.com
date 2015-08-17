@@ -3,7 +3,7 @@
 <a name="Prerequisite"/>
 ## Prerequisite
 
-###Preparing your workspace:
+### Preparing your workspace:
 
 `git clone https://github.com/applicaster/crossmates-android-dist.git`
 
