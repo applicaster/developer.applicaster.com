@@ -24,7 +24,6 @@ export const loggedInScheme = (server) => {
   return {
     authenticate: (request, reply) => {
       if (request.session.get('applicaster') === undefined) {
-        console.log('REDIRECTING ...');
         request.session.clear('applicaster');
         reply.redirect('/auth/applicaster/callback');
       } else {
