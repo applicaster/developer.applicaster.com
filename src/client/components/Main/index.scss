@@ -49,10 +49,8 @@ $main-text: #333; // main content text color
 
 
 .Typography--table {
-  border-collapse: separate;
   margin-bottom: 1em;
   overflow: auto;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   width:100%;
 }
@@ -70,6 +68,7 @@ $main-text: #333; // main content text color
 }
 
 .Typography--th {
+  color: #D93E97;
   padding: 5px 10px;
 }
 
