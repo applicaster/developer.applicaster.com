@@ -16,7 +16,7 @@ Once a Questionnaire is defined 'Questions' can be added to it.
 Question answer can be of either type string or numeric.     
  
 
-![image](assets/questionnaires-cms-ui.png) 
+![image](/assets/questionnaires-cms-ui.png) 
 
 Once the reports are calculated and stored in Applicaster CMS ,they are sent to an external XML.
 
