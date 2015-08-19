@@ -57,10 +57,12 @@ server.register({ register: applicasterAccounts, options: {} }, () => {
 
   server.route({
     method: 'GET',
-    path: '/bundle.js',
+    path: '/{param*}',
     config: {
-      handler: (request, reply) => {
-        reply.file('./dist/bundle.js');
+      handler: {
+        directory: {
+          path: 'dist',
+        },
       },
     },
   });
