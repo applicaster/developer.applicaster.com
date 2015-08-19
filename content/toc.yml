@@ -7,63 +7,57 @@
     The authorization provider service, gives the ability to grant/deny
     end user access to content, through external authorization systems.
     This product aims to allow customers to connect any type of
-    'entry pass' to their content
+    'entry pass' to their content.
   type: Technical
   tags: JWT
-  owner: lirzi
+  owner: l.deutsch@applicaster.com
 
 "Feed":
 - folder: ios-feed-integration
   internal: false
   title: iOS Feed Integration
   description: >
-    This document serves an integration guide for Applicaster iOS SDK into a
-    new app and adding Feed activity button. This guide accompanies an iOS
-    project that implements this integration and can be used as a reference
-    implementation.
+    This document describes how to integrate Applicaster iOS Feed SDK to an external
+    iOS App.
   type: Technical
-  owner: udi
+  owner: u.lumnitz@applicaster.com
 
 - folder: android-feed-integration
   internal: false
   title: Android Feed Integration
   description: >
-    This document serves an integration guide for Applicaster Android SDK into a
-    new app and adding Feed activity button. This guide accompanies an Android
-    project that implements this integration and can be used as a reference
-    implementation.
+    This document describes how to integrate Applicaster Android Feed SDK to an external
+    iOS App.
   type: Technical
-  owner: udi
+  owner: u.lumnitz@applicaster.com
 
 - folder: feed-public-api
   internal: false
   title: Feed Public API
   description: >
-    This document describes the Stars public API and it is used to read events
-    form the Feed product.
+    This document describes the Stars public API. Using this API a client will be able to
+    consume events form the Feed product.
   type: Technical
-  owner: udi
+  owner: u.lumnitz@applicaster.com
 
 "Crossmates":
 - folder: ios-crossmates-integration
   internal: false
   title: iOS Crossmates Integration
   description: >
-    This document serves an integration guide for Applicaster iOS SDK into a new app
-    and adding Crossmates activity button. This guide accompanies an iOS project that
-    implements this integration and can be used as a reference implementation.
+    This document describes how to integrate Applicaster iOS Crossmates SDK to an external
+    iOS App.
   type: Technical
-  owner: udi
+  owner: u.lumnitz@applicaster.com
 
 - folder: android-crossmates-integration
   internal: false
   title: Android Crossmates Integration
   description: >
-    This document serves an integration guide for Applicaster Android SDK into a new app
-    and adding Crossmates activity button. This guide accompanies an Android project that
-    implements this integration and can be used as a reference implementation.
+    This document describes how to integrate Applicaster Android Crossmates SDK to an external
+    Android App.
   type: Technical
-  owner: udi
+  owner: u.lumnitz@applicaster.com
 
 "Questions":
 #- folder: ultimate-questions-api
@@ -78,7 +72,7 @@
     on-screen graphics providers. This document gives background to our widgets product
     and explanation as to how to use and export the reports. 
   type: Technical
-  owner: Gavri
+  owner: g.guy@applicaster.com
 
 "App Integration":
 - folder: js2native
@@ -87,14 +81,17 @@
   description: >
     The Applicaster.JS2Native SDK provides access to native capabilities in
     WebViews running inside applicaster's native apps.
+  type: Technical
+  owner: g.guy@applicaster.com
 
 - folder: android-applicaster-sdk-integration
   internal: false
-  title: Android Applicatser SDK Integration
+  title: Android Applicaster SDK Integration
   description: >
-    This document serves as an integration guide for Applicaster Android SDK into a new app
+    This document describes how to integrate Applicaster Android SDK to your
+    iOS App.
   type: Technical
-  owner: ?
+  owner: u.lumnitz@applicaster.com
 
 
 "Zapp":
@@ -108,7 +105,7 @@
     You can set for each channel in the app its own ingestion URL. This URL should
     hold a JSON file that contains a list of programs to add/update to the EPG.
   type: Technical
-  owner: ?
+  owner: n.friedman@applicaster.com
 
 - folder: media-atom
   internal: false
@@ -121,18 +118,18 @@
     resource types: article, image and
     imageGallery.
   type: Technical
-  owner: ?
+  owner: p.kramarov@applicaster.com
 
 - folder: vod-ingestion-rss
   internal: false
   title: VOD Ingestion Via RSS
   description: >
-    The VOD RSS ingestion process is meant to load video assets to Applicaster’s systems.  
-    This works by configuring a URL in Applicaster’s CMS that will be queried regularly.  
-    Each Category built on Applicaster's CMS (Show or Season nature), can be configured with   
+    The VOD RSS ingestion process is meant to load video assets to Applicaster’s systems.
+    This works by configuring a URL in Applicaster’s CMS that will be queried regularly.
+    Each Category built on Applicaster's CMS (Show or Season nature), can be configured with
     it's own URL, defining her belonging VOD's.
   type: Technical
-  owner: ?
+  owner: n.friedman@applicaster.com
 
 - folder: vod-ingestion-xml
   internal: false
@@ -141,7 +138,7 @@
     The VOD XML ingestion process loads assets to Applicaster’s CMS.
     This works by configuring an HTTP(s) URL in the CMS that will be queried regularly.
   type: Technical
-  owner: ?
+  owner: n.friedman@applicaster.com
 
 "Developer Documentation":
 - folder: docs-how-to
@@ -150,7 +147,7 @@
   description: >
     This doc describes how to write and publish new and exitsing documents.
   type: Technical
-  owner: gavri
+  owner: g.guy@applicaster.com
 - folder: docs-styleguide
   internal: true
   title: Docs Style Guide
@@ -158,4 +155,4 @@
     Learn how to write docs using the Markdown format and see an example of how
     the styling take affect on the site.
   type: Technical
-  owner: gavri
+  owner: g.guy@applicaster.com
