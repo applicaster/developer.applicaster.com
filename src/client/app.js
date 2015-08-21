@@ -6,13 +6,15 @@ import PageHandler from './components/Page';
 import MainHandler from './components/Main';
 import ProductListHandler from './components/ProductList';
 import Home from './components/Home';
-import { createRedux } from 'redux';
-import { Provider } from 'redux/react';
-import * as stores from './stores';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import productsApp from './reducers';
+import thunk from 'redux-thunk';
 
 import './common/stylesheets/base.scss';
 const ThemeManager = new Styles.ThemeManager();
-const redux = createRedux(stores);
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const store = createStoreWithMiddleware(productsApp);
 const App = React.createClass({
 
   childContextTypes: {
@@ -28,7 +30,7 @@ const App = React.createClass({
   render() {
     return (
       <div>
-        <Provider redux={redux}>
+        <Provider store={store}>
           {() =><RouteHandler/>}
         </Provider>
       </div>

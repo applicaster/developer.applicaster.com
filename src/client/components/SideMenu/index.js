@@ -1,4 +1,4 @@
-import { connect } from 'redux/react';
+import { connect } from 'react-redux';
 import React, { Component, PropTypes } from 'react';
 import ProductFilter from '../ProductFilter';
 import './index.scss';
