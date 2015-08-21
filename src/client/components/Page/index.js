@@ -7,17 +7,23 @@ export default class Page extends Component {
     params: PropTypes.object,
   };
 
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
+    this.context = context;
     this.state = {content: { __html: ''}};
   }
 
   componentDidMount() {
     this.setState({copyStyle: { display: 'none'}});
     request(`/${this.props.params.type}/${this.props.params.page}/index.html`, (err, res) => {
-      this.setState({content: { __html: (res.text)}});
-      Prism.highlightAll();
-      this.setState({copyStyle: { display: 'block'}});
+      if (err) {
+        // Redirect to homepage on Error
+        this.context.router.transitionTo('home', {}, {err: true});
+      } else {
+        this.setState({content: { __html: (res.text)}});
+        Prism.highlightAll();
+        this.setState({copyStyle: { display: 'block'}});
+      }
     });
   }
 
@@ -31,3 +37,7 @@ export default class Page extends Component {
   }
 
 }
+
+Page.contextTypes = {
+  router: React.PropTypes.object.isRequired,
+};
