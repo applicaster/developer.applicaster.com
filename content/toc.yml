@@ -40,6 +40,14 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
+  - folder: web-feed-config
+  internal: true
+  title: Web Feed Configuration
+  description: >
+    This document describes how to configure the web feed link.
+  type: Technical
+  owner: l.deutsch@applicaster.com
+
 "Crossmates":
 - folder: ios-crossmates-integration
   internal: false
