@@ -99,6 +99,12 @@ $main-text: #333; // main content text color
   padding-left: 40px;
 }
 
+.Typography--blockquote {
+  background-color: #EBEBEB;
+  padding: 20px;
+  margin: 10px 0;
+}
+
 .Copywrite {
  @include baseline(15px);
 }

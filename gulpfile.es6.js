@@ -43,7 +43,7 @@ export default function() {
               $(this).attr('src', `./${getSection(pack.internal)}/${pack.folder}/${src.substring(1)}`);
             }
           });
-          $("blockquote").addClass("SamplesAside-sample").addClass("Sample")
+          $("blockquote").addClass("Typography--blockquote")
           $("img").addClass("Typography--img")
           $("h1").addClass("Typography--h1")
           $("h2").addClass("Typography--h2")

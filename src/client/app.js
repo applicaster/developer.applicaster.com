@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 import productsApp from './reducers';
 import thunk from 'redux-thunk';
 import * as ProductsActions from './actions/ProductsActions';
+import { DOCS_FOLDER } from '../shared/settings';
 
 import './common/stylesheets/base.scss';
 const ThemeManager = new Styles.ThemeManager();
@@ -48,13 +49,13 @@ const routes = (
     <Route name="main" path="/released" handler={MainHandler}>
       <Route name="home" path="/home" handler={Home}/>
       <Route name="productsList" path="/products-list" handler={ProductListHandler}/>
-      <Route name="page" path="/:type/:page" handler={PageHandler}/>
+      <Route name="page" path={`/${DOCS_FOLDER}/:type/:page`} handler={PageHandler}/>
     </Route>
     <Redirect from="*" to="home"/>
   </Route>
 );
 
-Router.run(routes, (Handler, state) => {
+Router.run(routes, Router.HistoryLocation, (Handler, state) => {
   if (window.applicasterDocs.mixpanelEnabled) {
     mixpanel.identify(window.applicasterDocs.userEmail);
     mixpanel.track('Change route', {

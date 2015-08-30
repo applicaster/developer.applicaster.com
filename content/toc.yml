@@ -95,6 +95,13 @@
 
 
 "Zapp":
+- folder: zapp-release-notes
+  internal: true
+  title: Zapp Release Notes
+  description: >
+    Release notes list of the Zapp product ordered by release date.
+  type: Release Notes
+  owner: g.guy@applicaster.com
 
 "Content Ingestion":
 - folder: epg-ingestion
