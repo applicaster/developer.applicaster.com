@@ -12,7 +12,8 @@ export default class SectionHeader extends Component {
       fontWeight: '300',
       fontSize: '1.5em',
       color: '#666',
-      lineHeight: '3em',
+      paddingTop: '1em',
+      paddingBottom: '1em',
       borderBottom: 'solid 1px #D3D3D3',
       marginBottom: '1em',
     };
@@ -22,4 +23,3 @@ export default class SectionHeader extends Component {
     );
   }
 }
-
