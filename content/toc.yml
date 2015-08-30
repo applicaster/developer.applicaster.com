@@ -157,11 +157,11 @@
   type: Technical
   owner: g.guy@applicaster.com
 
-  "AIS"
-  -folder: ais-api
-   internal: true
-   title: AIS API 1.0
-   description: >
-     This document outlines how to work with the AIS API
-   type: Technical
-   owner: y.osteen@applicaster.com
+"AIS":
+- folder: ais-api
+  internal: true
+  title: AIS API 1.0
+  description: >
+    This document outlines how to work with the AIS API
+  type: Technical
+  owner: y.osteen@applicaster.com
