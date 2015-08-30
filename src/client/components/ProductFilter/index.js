@@ -11,9 +11,10 @@ export default class ProductFilter extends Component {
 
   render() {
     const {products} = this.props;
+    const docTypes = [ 'Release Notes', 'Technical' ];
     return (
       <div className="ProductFilter">
-        <h3 className="ProductFilter-h3">Proudct Filter</h3>
+        <h3 className="ProductFilter-h3">Filter By Proudct</h3>
         <ul>
           <li>
           <Link to="productsList" className="ProductFilter-li u-unstyledLink">
@@ -26,6 +27,23 @@ export default class ProductFilter extends Component {
                   query={{product: product.label}}
                   className="ProductFilter-li u-unstyledLink">
               {product.label}
+            </Link>
+            </li>
+          )}
+        </ul>
+        <h3 className="ProductFilter-h3">Filter By Document Type</h3>
+        <ul>
+          <li>
+          <Link to="productsList" className="ProductFilter-li u-unstyledLink">
+            All Types
+          </Link>
+          </li>
+          {docTypes.map(docType =>
+            <li key={docType}>
+            <Link to="productsList"
+                  query={{docType: docType}}
+                  className="ProductFilter-li u-unstyledLink">
+              {docType}
             </Link>
             </li>
           )}

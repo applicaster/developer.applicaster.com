@@ -6,8 +6,11 @@
 }
 
 .ProductFilter-h3 {
-  text-transform: uppercase;
   @include baseline(12px);
+  margin-top: 20px;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
 .ProductFilter-li {
