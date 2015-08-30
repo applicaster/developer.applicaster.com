@@ -11,10 +11,16 @@ The key "global" in the API refers to app-level users.
  
   #### Required params
    `access_token` - required
+      
+If you do not know how to generate an access_token, you can ask Applicaster Support. We will be providing documentation in the future.
 
    ` date ` - require Date from the format `%Y-%m-%d`, unless return 422 error
 
   `bucket_ids` - list of bucket ids, return 422 error if one or more ids are not valid.
+
+      To access the bucket_id for an account, go to ais.applicaster.com, and choose an account. You will be able to see the bucket_id at the top of the screen of the info tab as such:
+
+![ais-screenshot](./images/ais-bucket-id-screenshot.png)
 
 ##### url example: 
 ` /backend/usage_reports.json?access_token=valid-access-token&bucket_ids[]=bucket-id-1&bucket_ids[]=bucket-id-1&date=2015-1-1`
