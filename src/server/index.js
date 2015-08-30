@@ -1,7 +1,7 @@
 import Hapi from 'hapi';
 import _ from 'lodash';
 import { applicasterAccounts } from './applicasterStrategy';
-import { TOC_JSON } from '../shared/settings';
+import { DOCS_FOLDER, TOC_JSON } from '../shared/settings';
 import dotenv from 'dotenv';
 
 dotenv.load();
@@ -32,6 +32,22 @@ server.register({ register: applicasterAccounts, options: {} }, () => {
       },
     },
   });
+
+   server.route({
+    method: 'GET',
+    path: `/${DOCS_FOLDER}/{param*}`,
+    config: {
+      auth: 'applicaster',
+      handler: (request, reply) => {
+        const data = {
+          email: request.auth.credentials.data.email,
+          mixpanelEnabled: process.env.MIXPANEL_ENABLED ? true : false,
+        };
+        reply.view('index', data);
+      },
+    },
+  });
+
 
   server.route({
     method: 'GET',
