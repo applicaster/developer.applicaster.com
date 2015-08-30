@@ -39,5 +39,5 @@ export default class Page extends Component {
 }
 
 Page.contextTypes = {
-  router: React.PropTypes.object.isRequired,
+  router: React.PropTypes.func,
 };

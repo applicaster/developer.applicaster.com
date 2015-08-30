@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as ProductsActions from '../../actions/ProductsActions';
 
 // Import child components
 import ProductGroup from '../ProductGroup';
@@ -14,14 +12,10 @@ export default class ProductList extends Component {
   static propTypes = {
     products: PropTypes.array,
     query: PropTypes.object,
-    dispatch: PropTypes.object,
   }
 
   constructor(props) {
     super(props);
-    const { dispatch} = this.props;
-    const actions = bindActionCreators(ProductsActions, dispatch);
-    actions.getProducts();
   }
 
   render() {

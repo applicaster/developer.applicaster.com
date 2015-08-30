@@ -6,15 +6,20 @@ import PageHandler from './components/Page';
 import MainHandler from './components/Main';
 import ProductListHandler from './components/ProductList';
 import Home from './components/Home';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, bindActionCreators } from 'redux';
 import { Provider } from 'react-redux';
 import productsApp from './reducers';
 import thunk from 'redux-thunk';
+import * as ProductsActions from './actions/ProductsActions';
 
 import './common/stylesheets/base.scss';
 const ThemeManager = new Styles.ThemeManager();
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(productsApp);
+const actions = bindActionCreators(ProductsActions, store.dispatch);
+actions.getProducts();
+
+
 const App = React.createClass({
 
   childContextTypes: {
