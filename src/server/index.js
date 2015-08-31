@@ -1,12 +1,18 @@
 import Hapi from 'hapi';
 import _ from 'lodash';
 import { applicasterAccounts } from './applicasterStrategy';
-import { DOCS_FOLDER, TOC_JSON } from '../shared/settings';
+import { DOCS_FOLDER, TOC_JSON, INTERNAL_ROLE } from '../shared/settings';
 import dotenv from 'dotenv';
 
 dotenv.load();
 
 const server = new Hapi.Server();
+
+const hasInternalPermissions = (request) => {
+  let {data, globalRoles} = request.auth.credentials;
+  return _.includes(globalRoles, INTERNAL_ROLE) || data.admin;
+}
+
 server.connection({ port: process.env.PORT });
 
 server.register({ register: applicasterAccounts, options: {} }, () => {
@@ -146,7 +152,7 @@ server.register({ register: applicasterAccounts, options: {} }, () => {
       auth: 'applicaster',
       handler: (request, reply) => {
         let tocFile;
-        if (_.includes(request.auth.credentials.globalRoles, 'docs:drafts')) {
+        if (hasInternalPermissions(request)) {
           tocFile = './internal-toc.json';
         } else {
           tocFile = './public-toc.json';

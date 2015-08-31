@@ -2,9 +2,13 @@ import Bell from 'bell';
 import Axios from 'axios';
 import dotenv from 'dotenv';
 import _ from 'lodash';
+import { INTERNAL_ROLE } from '../../shared/settings';
 
-const INTERNAL_GLOBAL_ROLE = 'docs:drafts';
 const BASE_URL = 'https://accounts2.applicaster.com';
+
+const isInternalRoute = (request) => {
+ return  _.get(request, 'route.settings.plugins.applicasterAccounts.internal');
+}
 
 dotenv.load();
 
@@ -29,8 +33,8 @@ export const loggedInScheme = (server) => {
       } else {
         Axios.get(`${BASE_URL}/api/v1/users/current.json?access_token=${request.session.get('applicaster').token}`)
         .then((response) => {
-          if (_.get(request, 'route.settings.plugins.applicasterAccounts.internal')) {
-            if (!_.includes(response.data.global_roles, INTERNAL_GLOBAL_ROLE)) {
+          if (isInternalRoute(request)) {
+            if (!(_.includes(response.data.global_roles, INTERNAL_ROLE) || response.data.admin)) {
               throw new Error('permission denied!');
             }
           }
@@ -73,7 +77,7 @@ const plugin = {
     server.register(Bell, () => {
       server.auth.strategy('login', 'bell', login);
       server.auth.scheme('myScheme', loggedInScheme);
-      server.auth.strategy('applicaster', 'myScheme', false, { role: INTERNAL_GLOBAL_ROLE });
+      server.auth.strategy('applicaster', 'myScheme', false, { role: INTERNAL_ROLE});
 
       server.route({
         method: 'GET',
