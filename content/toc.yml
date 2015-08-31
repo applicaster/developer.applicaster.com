@@ -13,6 +13,14 @@
   owner: l.deutsch@applicaster.com
 
 "Feed":
+- folder: feed-release-notes
+  internal: false
+  title: Feed Release Notes
+  description: >
+    Release notes list of the Feed product ordered by release date.
+  type: Release Notes
+  owner: u.lumnitz@applicaster.com
+
 - folder: ios-feed-integration
   internal: false
   title: iOS Feed Integration
