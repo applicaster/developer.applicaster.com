@@ -3,10 +3,6 @@ general:
     ignore:
       - master
 deployment:
-  staging:
-    branch: developer2
-    heroku:
-      appname: ancient-hamlet-4919
   production:
     branch: developer2
     heroku:
