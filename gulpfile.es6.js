@@ -37,10 +37,10 @@ export default function() {
           $('img').each(function(index, element) {
             let src =  $(this).attr('src')
             if (_.startsWith(src, './')) {
-              $(this).attr('src', `./${getSection(pack.internal)}/${pack.folder}/${src.substring(2)}`);
+              $(this).attr('src', `/${getSection(pack.internal)}/${pack.folder}/${src.substring(2)}`);
             }
             if (_.startsWith(src, '/')) {
-              $(this).attr('src', `./${getSection(pack.internal)}/${pack.folder}/${src.substring(1)}`);
+              $(this).attr('src', `/${getSection(pack.internal)}/${pack.folder}/${src.substring(1)}`);
             }
           });
           $("blockquote").addClass("Typography--blockquote")

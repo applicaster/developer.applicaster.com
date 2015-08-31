@@ -48,6 +48,36 @@ server.register({ register: applicasterAccounts, options: {} }, () => {
     },
   });
 
+   server.route({
+    method: 'GET',
+    path: '/home',
+    config: {
+      auth: 'applicaster',
+      handler: (request, reply) => {
+        const data = {
+          email: request.auth.credentials.data.email,
+          mixpanelEnabled: process.env.MIXPANEL_ENABLED ? true : false,
+        };
+        reply.view('index', data);
+      },
+    },
+  });
+
+   server.route({
+    method: 'GET',
+    path: '/products-list',
+    config: {
+      auth: 'applicaster',
+      handler: (request, reply) => {
+        const data = {
+          email: request.auth.credentials.data.email,
+          mixpanelEnabled: process.env.MIXPANEL_ENABLED ? true : false,
+        };
+        reply.view('index', data);
+      },
+    },
+  });
+
 
   server.route({
     method: 'GET',
