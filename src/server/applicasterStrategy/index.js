@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import _ from 'lodash';
 import { INTERNAL_ROLE } from '../../shared/settings';
 
-const BASE_URL = 'https://accounts2.applicaster.com';
+const BASE_URL = 'https://accounts.applicaster.com';
 
 const isInternalRoute = (request) => {
  return  _.get(request, 'route.settings.plugins.applicasterAccounts.internal');

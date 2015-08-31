@@ -71,7 +71,7 @@ documents)
 | Name | Description | Default Value | Mandatory
 | -- |-- | -- | -- |
 | `folder` | The name of the folder your document is located at | - | Yes
-| `internal` | Set to true if you want the document to be available for users with the `internal` permission (as set on accounts2)| - | Yes
+| `internal` | Set to true if you want the document to be available for users with the `internal` permission (as set on accounts)| - | Yes
 | `title` | The title of the document | - | Yes
 | `description` | The description of the document - use the `>` character to create a multiline text. | - | Yes
 | `type` | The type of the document. can be "Technical" or "Release Notes" for now | - | Yes
