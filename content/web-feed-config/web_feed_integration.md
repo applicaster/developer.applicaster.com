@@ -9,13 +9,13 @@ It is possible to embed this feed to the broadcaster’s website on a specific s
 ## Link Configuration
 The web feed URL will always **start** like this: 
 
-	http://212.150.87.124/feed_1.1/  
+	http://assets-production.applicaster.com/static/feed/1.2/index.html?  
 
 This link has several parameters that need to be added:
 
 **Account*** – The specific Stars account. For example:  
 	
-	http://212.150.87.124/feed_1.1/?account=54aa34dfa4f7c396da00001e
+	http://assets-production.applicaster.com/static/feed/1.2/index.html?account=54aa34dfa4f7c396da00001e
 	  
 **Timeline** – Optional parameter, to select a specific account's timeline to display in the feed. The timeline must be an existing timeline of the account. If the timeline doesn't exist, or no value is passed to this parameter, the chosen timeline will be the first one of the account.  
 
@@ -23,4 +23,4 @@ This link has several parameters that need to be added:
 
 The final link may look like this:
 
-	http://212.150.87.124/feed_1.1/?account=54aa34dfa4f7c396da00001e&timeline=54b8297d121ce08974000002&environment=qa
+	http://assets-production.applicaster.com/static/feed/1.2/index.html?account=54aa34dfa4f7c396da00001e&timeline=54b8297d121ce08974000002&environment=qa
