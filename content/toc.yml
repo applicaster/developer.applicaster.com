@@ -48,6 +48,14 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
+- folder: group-chat-setup
+  internal: false
+  title: Group Chat Setup
+  description: >
+    This document describes how to configure the group chat link per customer/timeline, and how to customize the group chat from Stars.
+  type: Technical
+  owner: l.deutsch@applicaster.com
+
 "Crossmates":
 - folder: ios-crossmates-integration
   internal: false
