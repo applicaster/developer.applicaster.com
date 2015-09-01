@@ -48,7 +48,7 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
-  - folder: web-feed-config
+- folder: web-feed-config
   internal: true
   title: Web Feed Configuration
   description: >
