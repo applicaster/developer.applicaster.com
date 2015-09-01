@@ -68,8 +68,14 @@
   owner: u.lumnitz@applicaster.com
 
 "Questions":
-#- folder: ultimate-questions-api
-#internal: false
+- folder: questions-sdks
+  internal: false
+  title: Questions Editor & Client SDKs
+  description: >
+    This document describes how to develp new templates questions using Applicaster
+    javascript SDKS.
+  type: Technical
+  owner: g.guy@applicaster.com
 
 - folder: on-screen-graphics-reports
   internal: false
