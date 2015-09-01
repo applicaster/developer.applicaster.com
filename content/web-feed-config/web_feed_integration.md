@@ -1,4 +1,4 @@
-#Web Feed Configuration
+# Web Feed Configuration
 ## Description
 Our FEED product is now also available on the web. Using our public API enables producing front-end development for any platform.  
 
