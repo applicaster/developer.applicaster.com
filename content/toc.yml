@@ -75,6 +75,16 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
+"Group Chat":
+- folder: group-chat-setup
+  internal: true
+  title: Group Chat Setup
+  description: >
+    This internal document is intended for Applicaster employees to understand what is the Web Group Chat product, 
+    how to configure the link for it per customer, and how to customize it.
+  type: Technical
+  owner: l.deutsch@applicaster.com
+
 "Questions":
 - folder: questions-sdks
   internal: false
