@@ -115,6 +115,14 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
+"Modular":
+- folder: modular-release-notes
+  internal: true
+  title: Modular Release Notes
+  description: >
+    Release notes list of the Modular product ordered by release date.
+  type: Release Notes
+  owner: p.kramarov@applicaster.com
 
 "Zapp":
 - folder: zapp-release-notes
