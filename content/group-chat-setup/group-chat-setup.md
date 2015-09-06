@@ -12,7 +12,7 @@ This product keeps users up to date and involved in the show off broadcast time,
 The broadcaster can easily define the characters, write the chat content and customize the look & feel of the group chat front-end within the starlight CMS. 
 The end users get to follow the conversation, like and share bits of the talk. 
 
-![image](assets/group_chat_example.jpg =320x568)
+![image](./assets/group_chat_example.jpg =320x568)
 
 
 ### Link Configuration
@@ -29,9 +29,17 @@ The link to selection menu of the group chat will always **start** like this:
 
 This link has several parameters that need to be added:
 
-**Account** - The starlight account ID.  
-**Timeline** - The starlight timeline ID.  
-**Top Bar** (Optional) - If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
+**account** - The Starlight account ID. 
+This can be obtained from the link in Starlight, as it appears after the 'accounts', see picture below.
+
+![image](./assets/account_id.png =1000x200)
+ 
+**timeline** - The Starlight timeline ID.  
+This can be obtained from the link when opening the relevant feed (=timeline) in Starlight, as it appears after the 'feeds', see picture below.
+
+![image](./assets/timeline_id.png =700x400)
+
+**topbar** (Optional) - If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
 
 #### Single Group Chat Link
 
@@ -42,12 +50,23 @@ The link to a single group chat will always **start** like this:
 
 This link has several parameters that need to be added:
 
-**Account** - The starlight account ID.  
-**Timeline** - The starlight timeline ID.  
-**Top Bar** (Optional) - If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
-**Name** - Title of the groupchat which will appear at the top of the page.  
-**Image** - URL of an image of the groupchat which will appear in the right top corner of the page.  
-**Environment** - If the account is not in production, an environment must be specified (qa / demo / server). 
+**account** - The Starlight account ID (obtained as explained above).
+
+
+**timeline** - The Starlight timeline ID (obtained as explained above).
+
+**topbar** (Optional) - If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
+
+
+**name** - Title of the groupchat which will appear at the top of the page.
+
+  
+**image** - URL of an image of the groupchat which will appear in the right top corner of the page.  
+
+
+**environment** - If the account is not in production, an environment must be specified (qa / demo / server). 
+
+
 **active** - Always add the parameter "active=1" to the inner chat.
 
 Here’s an example of what the link may look like once the parameters are configured:
@@ -58,13 +77,13 @@ Here’s an example of what the link may look like once the parameters are confi
 Group Chat customization can be controlled using the [Starlight CMS](http://cms.applicaster.com) customization section which can be found on the main feed page:
 
 
-![image](assets/main_page.png =700x400)
+![image](./assets/main_page.png =700x400)
 
 
 #### Color Customizations
 When going into the customization section, step 2 is the one that is relevant for Group Chat, and it allows the color customizations at first:
 
-![image](assets/customizations.png =700x400)
+![image](./assets/customizations.png =700x400)
 
 Below is a description of each color type and what it affects:
 
@@ -78,7 +97,7 @@ Below is a description of each color type and what it affects:
 Secondly, the section below allows icon customization.
 For this product, only the Liked and Like icons are relevant, and these are the buttons that will be displayed next each message.
 
-![image](assets/icons.png =700x400)
+![image](./assets/icons.png =700x400)
 
 ### Enabling Group Chat In The App
 
