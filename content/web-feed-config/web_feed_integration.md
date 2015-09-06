@@ -18,13 +18,13 @@ The web feed URL will always **start** like this:
 
 This link has several parameters that need to be added:
 
-**Account** – The specific Stars account. For example:
+**account** – The specific Stars account. For example:
 	
 	http://assets-production.applicaster.com/static/feed/1.2/index.html?account=54aa34dfa4f7c396da00001e
 	
-**Timeline** – Optional parameter, to select a specific account's timeline to display in the feed. The timeline must be an existing timeline of the account. If the timeline doesn't exist, or no value is passed to this parameter, the chosen timeline will be the first one of the account.
+**timeline** – Optional parameter, to select a specific account's timeline to display in the feed. The timeline must be an existing timeline of the account. If the timeline doesn't exist, or no value is passed to this parameter, the chosen timeline will be the first one of the account.
 
-**Environment** – If the feed is on a test environment, the URL should have a parameter with the correct environment name – qa / server / test.
+**environment** – If the feed is on a test environment, the URL should have a parameter with the correct environment name – qa / server / test.
 
 The final link may look like this:
 
