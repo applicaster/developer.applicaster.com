@@ -12,7 +12,7 @@ This product keeps users up to date and involved in the show off broadcast time,
 The broadcaster can easily define the characters, write the chat content and customize the look & feel of the group chat front-end within the starlight CMS. 
 The end users get to follow the conversation, like and share bits of the talk. 
 
-![image](./assets/group_chat_example.jpg =320x568)
+![image](./assets/group_chat_example.jpg)
 
 
 ### Link Configuration
@@ -32,12 +32,12 @@ This link has several parameters that need to be added:
 **account** - The Starlight account ID. 
 This can be obtained from the link in Starlight, as it appears after the 'accounts', see picture below.
 
-![image](./assets/account_id.png =1000x200)
+![image](./assets/account_id.png)
  
 **timeline** - The Starlight timeline ID.  
 This can be obtained from the link when opening the relevant feed (=timeline) in Starlight, as it appears after the 'feeds', see picture below.
 
-![image](./assets/timeline_id.png =700x400)
+![image](./assets/timeline_id.png)
 
 **topbar** (Optional) - If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
 
@@ -77,13 +77,13 @@ Here’s an example of what the link may look like once the parameters are confi
 Group Chat customization can be controlled using the [Starlight CMS](http://cms.applicaster.com) customization section which can be found on the main feed page:
 
 
-![image](./assets/main_page.png =700x400)
+![image](./assets/main_page.png)
 
 
 #### Color Customizations
 When going into the customization section, step 2 is the one that is relevant for Group Chat, and it allows the color customizations at first:
 
-![image](./assets/customizations.png =700x400)
+![image](./assets/customizations.png)
 
 Below is a description of each color type and what it affects:
 
@@ -97,7 +97,7 @@ Below is a description of each color type and what it affects:
 Secondly, the section below allows icon customization.
 For this product, only the Liked and Like icons are relevant, and these are the buttons that will be displayed next each message.
 
-![image](./assets/icons.png =700x400)
+![image](./assets/icons.png)
 
 ### Enabling Group Chat In The App
 
