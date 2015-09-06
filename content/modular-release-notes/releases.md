@@ -2,9 +2,12 @@
 
 ## 2.5.2 (Work In Progress)
 
+E-Planning SDK Update
+> E-Planning Ad Engine SDK update.
+
 ***
 
-## 2.5.1 (September 3, 2015)
+## 2.5.1 (September 6, 2015)
 
 Component Background CMS Color
 > Allows the component to take the background color from CMS. The color of the background will be set by the category that is presented in the component.
@@ -14,6 +17,7 @@ Component Background Image
 
 Additional Multi-Channel EPG Layout for Tablets
 > New layout for the multi-channel epg for Tablets/iPads is available as an option for the customers.
+
 
 Morpheus (Analytics)
 > Analytics Powerful Aggregator.
