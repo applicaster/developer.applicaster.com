@@ -3,6 +3,19 @@
 * [Release Notes](#)
 * [Known Issues](#known-issues)
 
+## 1.3.0 Open-Customer-Permissions - (Sep 7, 2015)
+
+### New Features
+
+* Customers can now configure their apps’ texts remotely without going through the
+project manager.
+* Customers can now set their apps’ assets.
+
+> **Note:** To see the assets changes in action. A new build is required.
+
+* Zapp now alerts the user if there are any configurations missing for a
+successful build.
+
 ## 1.2.0 Android-Automation - (Aug 27, 2015)
 
 ### New Features
