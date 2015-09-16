@@ -25,54 +25,55 @@ In this case please note that the menu will show ALL timelines in the account as
 
 The link to selection menu of the group chat will always **start** like this: 
 
-    http://assets-production.applicaster.com/static/groupchat/1.1/index.html
+    http://assets-production.applicaster.com/static/groupchat/production/index.html
 
-This link has several parameters that need to be added:
+This link has several parameters that should be added (compulsory parameters are marked with a *)
 
-**account** - The Starlight account ID. 
+**account*** - The Starlight account ID. 
 This can be obtained from the link in Starlight, as it appears after the 'accounts', see picture below.
 
 ![image](./assets/account_id.png)
- 
-**timeline** - The Starlight timeline ID.  
-This can be obtained from the link when opening the relevant feed (=timeline) in Starlight, as it appears after the 'feeds', see picture below.
 
-![image](./assets/timeline_id.png)
+**topbar** If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
 
-**topbar** (Optional) - If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
+Here’s an example of what the link may look like once the parameters are configured:
 
+	http://assets-production.applicaster.com/static/groupchat/production/index.html?account=54aa34dfa4f7c396da00001e
+	
 #### Single Group Chat Link
 
 
 The link to a single group chat will always **start** like this: 
 
-    http://assets-production.applicaster.com/static/groupchat/1.1/chats/index.html
+    http://assets-production.applicaster.com/static/groupchat/production/chats/index.html
 
 This link has several parameters that need to be added:
 
-**account** - The Starlight account ID (obtained as explained above).
+**account*** - The Starlight account ID (obtained as explained above).
+
+**timeline*** - The Starlight timeline ID.  
+This can be obtained from the link when opening the relevant feed (=timeline) in Starlight, as it appears after the 'feeds', see picture below.
+
+![image](./assets/timeline_id.png)
+
+**topbar** - If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
 
 
-**timeline** - The Starlight timeline ID (obtained as explained above).
-
-**topbar** (Optional) - If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
-
-
-**name** - Title of the groupchat which will appear at the top of the page.
+**name*** - Title of the groupchat which will appear at the top of the page.
 
   
-**image** - URL of an image of the groupchat which will appear in the right top corner of the page.  
+**image*** - URL of an image of the groupchat which will appear in the right top corner of the page.  
 
 
 **environment** - If the account is not in production, an environment must be specified (qa / demo / server). 
 
 
-**active** - Always add the parameter "active=1" to the inner chat.
+**active*** - Always add the parameter "active=1" to the inner chat.
 
 Here’s an example of what the link may look like once the parameters are configured:
 
-    http://assets-production.applicaster.com/static/groupchat/1.1/chats/index.html?account=54aa34dfa4f7c396da00001e&timeline=55d574b116fa3ac02e00000c&environment=qa&name=Our%20Family&image=http://assets-production.applicaster.com/qa/stars/uploads/thumb_max800_55d9862c16fa3a2247000001_1440319020.png&active=1
-
+	http://assets-production.applicaster.com/static/groupchat/production/chats/index.html?account=54aa34dfa4f7c396da00001e&timeline=55efe65a16fa3a1e08000002&environment=qa&name=groupchat&image=https://lh5.ggpht.com/sQWHRHcRxGCkAoGBflyTupVKc4oB8RIFZBdQFSe3JSCNcBqjqZhZdB2JLLCzVUfCAQ=h900&active=1
+	
 ### Customization
 Group Chat customization can be controlled using the [Starlight CMS](http://cms.applicaster.com) customization section which can be found on the main feed page:
 
