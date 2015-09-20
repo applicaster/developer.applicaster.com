@@ -3,6 +3,17 @@
 * [Release Notes](#)
 * [Known Issues](#known-issues)
 
+
+## 1.4.0 Zapp-Roles - (Sep 20, 2015)
+
+### New Features
+
+* You can access Zapp production form [zapp.applicaster.com](https://zapp.applicaster.com)
+* Zapp now has 3 types of roles of authorisation (managed from applicaster accounts)
+	* **SDK Developer** - Can create edit & deleted SDK versions
+	* **App Admin** - Can create edit & delete apps. Can create edit & delete app versions. Can configure assets and localisation strings.
+	* **User** - Can configure assets and localisation strings of existing app versions.
+
 ## 1.3.0 Open-Customer-Permissions - (Sep 7, 2015)
 
 ### New Features
