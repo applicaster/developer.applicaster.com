@@ -5,6 +5,7 @@
 | 1.0.0 | First Release. |
 | 1.1.0 | Support for image galleries. |
 | 1.2.0 | Notations about "updated", "summery", "author name" and "alternate link" elements. |
+| 1.2.1 | Support of inline images in article. |
 
 
 # Overview
@@ -26,7 +27,7 @@ Category link and declared as an "Applicaster Media Atom" link type.
 The app will maintain the same order and structure
 as those in the provided Atom Feed.
 
-![image](images/atom-link-type.png)
+![image](./images/atom-link-type.png)
 
 # Media Atom Feed Specifications
 The key words "MUST", "MUST NOT", "REQUIRED",
@@ -260,12 +261,15 @@ depends on the Entry type:
 Article type MUST contain the escaped embedded HTML markup
 within.
 Any HTML tags that are not of the following `<p>`,
-`<a>`, `<strong>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`
+`<a>`, `<strong>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<img>`
 Aren't recommended and can cause bad article formatting.
 
 Image type MUST have a `src` attribute with the
 link to the full sized image. The maximum image
 size SHOULD NOT be bigger than 1200x1200px.
+The image is responsive to the device screen on Android only.
+One Image is allowed per row.
+Multiple inline images are possible per article.
 
 Image-gallery type MUST have a `src` attribute
 with the link to an *Applicaster Atom Feed* that
