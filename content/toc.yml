@@ -48,6 +48,14 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
+- folder: feed-analytics
+  internal: false
+  title: Feed Analytics
+  description: >
+    This is a documentation of the Feed analytics events. 
+  type: Technical
+  owner: u.lumnitz@applicaster.com
+  
 - folder: web-feed-config
   internal: true
   title: Web Feed Configuration
