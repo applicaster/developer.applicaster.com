@@ -34,11 +34,22 @@ This can be obtained from the link in Starlight, as it appears after the 'accoun
 
 ![image](./assets/account_id.png)
 
-**topbar** If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
+**topbar** - If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
+	
+**environment** - If the account is not in production, an environment must be specified (qa / demo / server).
+
+**show_dates** - If you would like to see dates and times of the groupchat messages in the group chat, please set this paramaeter to the value of 1.
+
+**show_likes** - If you would like to see the Like icon next to the messages in the groupchat, please set this paramaeter to the value of 1.
+
+**show_user_name** - If you would like to see the usernames of the groupchat members on each message in the groupchat, please set this paramaeter to the value of 1.
+
 
 Here’s an example of what the link may look like once the parameters are configured:
 
 	http://assets-production.applicaster.com/static/groupchat/production/index.html?account=54aa34dfa4f7c396da00001e
+ 
+
 	
 #### Single Group Chat Link
 
@@ -65,7 +76,13 @@ This can be obtained from the link when opening the relevant feed (=timeline) in
 **image*** - URL of an image of the groupchat which will appear in the right top corner of the page.  
 
 
-**environment** - If the account is not in production, an environment must be specified (qa / demo / server). 
+**show_dates** - If you would like to see dates and times of the groupchat messages in the group chat, please set this paramaeter to the value of 1.
+
+
+**show_likes** - If you would like to see the Like icon next to the messages in the groupchat, please set this paramaeter to the value of 1.
+
+
+**show_user_name** - If you would like to see the usernames of the groupchat members on each message in the groupchat, please set this paramaeter to the value of 1.
 
 
 **active*** - Always add the parameter "active=1" to the inner chat.
