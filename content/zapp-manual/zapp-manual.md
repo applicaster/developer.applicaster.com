@@ -8,7 +8,7 @@ The idea is to have an app ready from a chosen Zapp template with all common App
 After you complete the task you’ll have an app with the following features:
 
 * Structured dummy content.
-* dummy EPG according to the template options.
+* Dummy EPG according to the template options.
 * The option to fire Sync button events.
 
 
