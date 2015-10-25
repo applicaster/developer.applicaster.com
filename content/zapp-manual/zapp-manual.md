@@ -15,9 +15,9 @@ After you complete the task you’ll have an app with the following features:
 ### The following should be configured separately - please ask support help if needed.
 
 * Setting up - push notifications.
-* Setting App feed, Crossmates in Starlight.
+* Setting up app Feed, CrossMates, GroupChat in Stars or Starlight.
 * Uploading videos manually or setting up ingestion
-* Setting App Atom Feeds for news articles.
+* Setting up Atom feeds for news articles.
 
 [The road is long…](https://www.youtube.com/watch?v=Si7gu9yGz64) but its going to get shorter.
 
