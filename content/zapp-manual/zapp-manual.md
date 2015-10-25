@@ -204,11 +204,12 @@ Click on the button to create new version.
 * Version give the wanted app version - for new apps start with version 1.0
 * SDK version should be pre-configured - leave as is.
 * Choose a template according to your needs. If you don’t know what template to choose please consult the Zapp PO.
-* Import Settings From - for new apps use ‘SKD’
+
+> If there is already a version created for this app - you'll see another field called 'Import Settings From' - please use the ‘SDK’ option.
 
 ### Fill out optional fields  
 * In the URL scheme put the same URL scheme you put when you created the app on Applicaster2 (earlier in the manual).
-* Facebook App Id - Please contact support if you don’t know how to set a Facebook App id.
+* Facebook App ID - Please contact support if you don’t know how to set a Facebook App ID.
 * Twitter API Key - Please contact support if you don’t know how to set Twitter.
 * Twitter API Secret - Please contact support if you don’t know how to set Twitter.
 
