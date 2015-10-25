@@ -52,10 +52,10 @@
   internal: false
   title: Feed Analytics
   description: >
-    This is a documentation of the Feed analytics events. 
+    This is a documentation of the Feed analytics events.
   type: Technical
   owner: u.lumnitz@applicaster.com
-  
+
 - folder: web-feed-config
   internal: true
   title: Web Feed Configuration
@@ -88,7 +88,7 @@
   internal: true
   title: Group Chat Setup
   description: >
-    This internal document is intended for Applicaster employees to understand what is the Web Group Chat product, 
+    This internal document is intended for Applicaster employees to understand what is the Web Group Chat product,
     how to configure the link for it per customer, and how to customize it.
   type: Technical
   owner: l.deutsch@applicaster.com
@@ -110,7 +110,7 @@
     The Applicaster Widgets provide end-users with interaction and engagement based around
     the broadcaster's content. The reports of these interactions can be easily exported to
     on-screen graphics providers. This document gives background to our widgets product
-    and explanation as to how to use and export the reports. 
+    and explanation as to how to use and export the reports.
   type: Technical
   owner: g.guy@applicaster.com
 
@@ -149,6 +149,15 @@
   description: >
     Release notes list of the Zapp product ordered by release date.
   type: Release Notes
+  owner: g.guy@applicaster.com
+
+- folder: zapp-manual
+  internal: true
+  title: DRAFT Zapp Configuration Manual
+  description: >
+    This manual was created to guid Applicaster employees on how to create and
+    set up a new app for a new account.
+  type: Technical
   owner: g.guy@applicaster.com
 
 "Content Ingestion":
