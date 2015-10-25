@@ -146,7 +146,7 @@ GO to the account that you created and add the following:
 ## Create a New App phase 1 (Zapp Tab)
 Click on the ’New App’ button
 Choose the account you created and give your app a name - **name should not contain spaces or special characters**.
-
+ADD AN IMAGE!
 Leave the Form open as you’ll need to gather some data from the other CMSs and paste it in the form
 
 ## Copy AIS Bucket ID. (AIS Tab)
