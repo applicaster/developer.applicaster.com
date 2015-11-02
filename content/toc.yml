@@ -93,6 +93,15 @@
   type: Technical
   owner: l.deutsch@applicaster.com
 
+"Messenger":
+- folder: messenger-release-notes
+  internal: true
+  title: Messenger Release notes
+  description: >
+    Release notes list of the Messenger product ordered by release date.
+  type: Release Notes
+  owner: l.deutsch@applicaster.com
+
 "Questions":
 - folder: questions-sdks
   internal: false

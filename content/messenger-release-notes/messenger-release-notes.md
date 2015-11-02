@@ -11,7 +11,7 @@ The Messenger was produced in order to give real life talents and tv stars the a
 In other words, the Messengers are a native CMS for TV stars.
 
 
-## 1.0.0 First Release
+## 1.0.0 First Release (November 1st, 2015)
 
 ### New Features
 
