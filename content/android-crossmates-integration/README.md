@@ -1,23 +1,39 @@
-# Android Crossmates Integration
+Applicaster Crossmates
+==================
+
+[TOC]
+
 
 <a name="Prerequisite"/>
 ## Prerequisite
 
-### Preparing your workspace:
+###Preparing your workspace:
 
-`git clone https://github.com/applicaster/crossmates-android-dist.git`
+1. Add the Feed dependencies to your project.
+```
+   compile ('com.applicaster:crossmates_android:3.4.0')
+```
 
-`cd crossmates-android-dist`
+2.
+ Add to the build.gradle in the Project level, maven (Bintray) authentication,
+If you already have Bintray user send us reqest to "applicaster-ltd" organization.
+Otherwise, We can provide you Reader user and  passworld.
 
-`git submodule update --init --recursive `.
-
-In your IDE,add the following projects to your workspace:
-
-1. ***crossmates-android-dist*** project.
-2. ***android-sdk-dist*** project, and set the it as a library project of ***crossmates-android-dist***.
-
-
-**Set the ** ***crossmates-sdk-dist***  **as a library project of your project.**
+```
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            credentials{
+                username 'bintray_user_name'
+                password 'bintray_api_key'
+            }
+            url 'https://dl.bintray.com/applicaster-ltd/maven'
+        }
+    }
+}
+```
 
 <a name="Integrate Applicaster SDK"/>
 ## Integrate Applicaster SDK
@@ -174,7 +190,6 @@ An example could be found in the CrossmatesSample project.
 
 This will set the banner configuration class as the default class and invoke the *populateBanners* method on each one of the Crossmates activities.
  Please consult Applicaster's developers for more information.
-
 
 
 

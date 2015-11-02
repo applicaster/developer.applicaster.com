@@ -1,22 +1,53 @@
-# Android Feed Integration
+Feed-Demo-Android
+==================
 
+Feed integration pack + demo app - Android
+
+[TOC]
+
+**This is a sample project demonstrating how to integrate Feed in your project.**
+
+
+Now you can use this sample as a reference for your integration.
+
+
+<a name="Prerequisite"/>
 ## Prerequisite
 
-### Preparing your workspace:
+###Preparing your workspace:
 
-`git clone https://github.com/applicaster/feed-android-dist.git`
+1. Add the Feed dependencies to your project.
+```
+   compile ('com.applicaster:feed_android:3.5.0')
+```
+2.
+Adding 3'th party dependencies:
+```
+    compile 'com.nhaarman.listviewanimations:library:2.5.2@aar'
+    compile 'com.daimajia.androidanimations:library:1.0.6@aar'
+    compile 'com.daimajia.easing:library:1.0.0@aar'
+```
 
-`cd feed-android-dist`
+3.
+ Add to the build.gradle in the Project level, maven (Bintray) authentication,
+If you already have Bintray user send us reqest to "applicaster-ltd" organization.
+Otherwise, We can provide you Reader user and  passworld.
 
-`git submodule update --init --recursive `.
-
-In your IDE,add the following projects to your workspace:
-
-1. ***feed-sdk-dist*** project.
-2. ***android-sdk-dist*** project, and set the it as a library project of ***feed-sdk-dist***.
-3. ***ViewPagerIndicatorLibrary*** project, and set it as a library project of the  ***feed-sdk-dist***.
-
-**Set the ** ***feed-sdk-dist***  **as a library project of your project.**
+```
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            credentials{
+                username 'bintray_user_name'
+                password 'bintray_api_key'
+            }
+            url 'https://dl.bintray.com/applicaster-ltd/maven'
+        }
+    }
+}
+```
 
 <a name="Integrate Applicaster SDK"/>
 ## Integrate Applicaster SDK
@@ -62,44 +93,12 @@ In order to customize the default button, do the following:
 
 
 
-
-### 2. AndroidManifest.xml
-
-#### Add the following activities to the AndroidManifest file:
-
-```xml
-<activity
-	android:name="com.applicaster.activities.CombinedFeedActivity"
-	android:screenOrientation="portrait"
-	android:configChanges="orientation"
-    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
-</activity>	
-
-<activity
-    android:name="com.applicaster.activities.FeedItemActivity"
-    android:screenOrientation="portrait"
-	android:configChanges="orientation"
-    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
-</activity>
-
-<activity
-    android:name="com.applicaster.activities.PostOnFeedActivity"
-    android:screenOrientation="portrait"
- 	android:configChanges="orientation"
-    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-    android:windowSoftInputMode="stateVisible|adjustPan"
->
-</activity>
-
-```
-
-
-### 3. Fonts 
+### 2. Fonts 
 
 * In **/assets/fonts** of the project copy all *Roboto* fonts from the sample project
 
 
-### 4. Banners 
+### 3. Banners 
 
  In order to populate a bottom screen banner, create a class that implements 
 **BannersConfigurationI** and add your banner implementation to the *** populateFeedBanners ** method:
@@ -136,8 +135,6 @@ public class BannerConfiguration implements BannersConfigurationI{
 
  
  Please consult Applicaster's developers for more information.
-
-
 
 
 
