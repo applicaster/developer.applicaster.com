@@ -21,6 +21,15 @@
   type: Release Notes
   owner: u.lumnitz@applicaster.com
 
+- folder: iOS-Feed-by-CocoaPods
+  internal: false
+  title: iOS - Integrate Applicaster Feed by CocoaPods
+  description: >
+    This document describes how to integrate Applicaster iOS Feed SDK to an external
+    iOS App by CocoaPods
+  type: Technical
+  owner: u.lumnitz@applicaster.com
+  
 - folder: ios-feed-integration
   internal: false
   title: iOS Feed Integration
