@@ -21,7 +21,7 @@ Now you can use this sample as a reference for your integration.
    compile ('com.applicaster:feed_android:3.5.0')
 ```
 2.
-Adding 3'th party dependencies:
+Adding 3rd party dependencies:
 ```
     compile 'com.nhaarman.listviewanimations:library:2.5.2@aar'
     compile 'com.daimajia.androidanimations:library:1.0.6@aar'
@@ -29,9 +29,9 @@ Adding 3'th party dependencies:
 ```
 
 3.
- Add to the build.gradle in the Project level, maven (Bintray) authentication,
-If you already have Bintray user send us reqest to "applicaster-ltd" organization.
-Otherwise, We can provide you Reader user and  passworld.
+Add to the build.gradle in the Project level, maven (Bintray) authentication.
+If you already have a Bintray user, please send us a request to "applicaster-ltd" organization.
+Otherwise, we can provide you with a Reader, user and  password.
 
 ```
 allprojects {
@@ -60,14 +60,14 @@ Use the following link:
 <a name="Integrate Feed SDK"/>
 ## Integrate Feed SDK
 
-### 1. Create the UI for launching Feed.
+### 1. Create the UI for Launching Feed
 
 The button for launching the Feed (from the Action Bar / Top Navigation Bar) can be either ON or OFF, depending on whether or not the Feed feature is active and there is an episode running while using the app.
 The Feed SDK is responsible for checking the Feed availability.
 
 The assets for this button (default mode and selected mode) are loaded from the CMS, to allow the broadcaster to change them for different shows, without the need to release a new app. 
 
-* Add the following code to you layout xml:
+* Add the following code to your layout xml:
 
 
 
@@ -81,7 +81,7 @@ The assets for this button (default mode and selected mode) are loaded from the 
 
 
 
-The app should contain default assets for cases when the loading of the assets from the CMS fail. If the Feed is disabled, the “selected” asset will be displayed, and so the button will appear as not clickable.
+The app should contain default assets for cases when the loading of the assets from the CMS fails. If the Feed is disabled, the “selected” asset will be displayed, and so the button will appear as not clickable.
 
 **Customizing the Feed Button**
 
@@ -95,7 +95,7 @@ In order to customize the default button, do the following:
 
 ### 2. Fonts 
 
-* In **/assets/fonts** of the project copy all *Roboto* fonts from the sample project
+* In **/assets/fonts** of the project, copy all *Roboto* fonts from the sample project.
 
 
 ### 3. Banners 
