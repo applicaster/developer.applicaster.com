@@ -1,13 +1,10 @@
 Applicaster Crossmates
 ==================
 
-[TOC]
-
-
 <a name="Prerequisite"/>
 ## Prerequisite
 
-###Preparing your workspace:
+### Preparing your workspace:
 
 1. Add the Feed dependencies to your project.
 ```
@@ -159,12 +156,12 @@ Override crossmates_icon_no_notifications.png,crossmates_icon_no_notifications_p
 ```
 
 
-### 3. Fonts 
+### 3. Fonts
 
 * In **/assets/fonts** of the project, copy all *Roboto* fonts from the sample project.
 
 ### 4. **Banners**
- 
+
 ####  Banner Layout
 
 Create *crossmates_banner.xml* according to the Ad provider.
@@ -174,23 +171,18 @@ For different banner layouts for different devices, add different xmls to the re
 An example can be found in the CrossmatesSample project.
 
 ####  Banner Implementation
- 
- In order to implement banners, create a new Class which implements `CrossmatesBannersConfigurationI`. 
+
+ In order to implement banners, create a new Class which implements `CrossmatesBannersConfigurationI`.
  Override `populateCrossmatesBanners(Context context, ViewGroup bannerContainer)` and add the relevant code.
- 
+
  An example can be found in **CrossmatesSample** project.
- 
+
  Add to `onCreate` method of your Intro/splash activity the following code:
- 
- ```java
+
+ ```
   //loading app specific banners configuration
    APDynamicConfiguration.setCrossmatesBannerConfiguration(new CrossmatesSampleBannersConfiguration());
-
 ```
 
 This will set the banner configuration class as the default class and invoke the *populateBanners* method on each one of the Crossmates activities.
  Please consult Applicaster's developers for more information.
-
-
-
-

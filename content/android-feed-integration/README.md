@@ -3,8 +3,6 @@ Feed-Demo-Android
 
 Feed integration pack + demo app - Android
 
-[TOC]
-
 **This is a sample project demonstrating how to integrate Feed in your project.**
 
 
@@ -14,14 +12,17 @@ Now you can use this sample as a reference for your integration.
 <a name="Prerequisite"/>
 ## Prerequisite
 
-###Preparing your workspace:
+### Preparing your workspace:
 
 1. Add the Feed dependencies to your project.
+
 ```
    compile ('com.applicaster:feed_android:3.5.0')
 ```
+
 2.
 Adding 3rd party dependencies:
+
 ```
     compile 'com.nhaarman.listviewanimations:library:2.5.2@aar'
     compile 'com.daimajia.androidanimations:library:1.0.6@aar'
@@ -65,7 +66,7 @@ Use the following link:
 The button for launching the Feed (from the Action Bar / Top Navigation Bar) can be either ON or OFF, depending on whether or not the Feed feature is active and there is an episode running while using the app.
 The Feed SDK is responsible for checking the Feed availability.
 
-The assets for this button (default mode and selected mode) are loaded from the CMS, to allow the broadcaster to change them for different shows, without the need to release a new app. 
+The assets for this button (default mode and selected mode) are loaded from the CMS, to allow the broadcaster to change them for different shows, without the need to release a new app.
 
 * Add the following code to your layout xml:
 
@@ -93,48 +94,33 @@ In order to customize the default button, do the following:
 
 
 
-### 2. Fonts 
+### 2. Fonts
 
 * In **/assets/fonts** of the project, copy all *Roboto* fonts from the sample project.
 
 
-### 3. Banners 
+### 3. Banners
 
- In order to populate a bottom screen banner, create a class that implements 
+ In order to populate a bottom screen banner, create a class that implements
 **BannersConfigurationI** and add your banner implementation to the *** populateFeedBanners ** method:
 
-```java
+```
 public class BannerConfiguration implements BannersConfigurationI{
-	
 	@Override
     public void populateCrossmatesBanners(Context context, ViewGroup viewGroup) {
-
     }
-
     @Override
     public void populateFeedBanners(Context context, ViewGroup bannerContainer, String adId) {
-
         APBannerViewController bannerController = new APBannerViewController(context, bannerContainer, null, null, adId, "%@");
         bannerController.displayBanners();
     }
-
     @Override
     public void populateGenericAppMainActivityBanners(Context context, ViewGroup viewGroup) {
-
     }
-
     @Override
     public void populateGenericAppShowActivityBanners(Context context, ViewGroup viewGroup, String s) {
-
     }
-
 }
-
 ```
 
-
- 
  Please consult Applicaster's developers for more information.
-
-
-
