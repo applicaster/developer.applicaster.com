@@ -1,4 +1,4 @@
-This document explains how to add the Applicaster SDK using CocoaPods to your project   
+This document explains how to add the Applicaster SDK using CocoaPods to your project.   
 
 **A Few Notes**
 ***
