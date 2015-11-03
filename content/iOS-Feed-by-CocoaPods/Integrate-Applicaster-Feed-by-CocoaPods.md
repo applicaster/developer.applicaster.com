@@ -140,7 +140,7 @@ The following headers should be included in the files which access the Applicast
 }
 ```
 
-**Feed usage**
+**Feed Usage**
 
 + Add the following code to applicaster:loadedWithAccountID: in your `AppDelegate`:
 ```objective-c
@@ -245,12 +245,12 @@ Applicaster Feed supports multiple timelines (feeds). In order to handle them, a
 }
 ```
 
-**Pulling Episodes for a specific timeline**
+**Pulling Episodes for a Specific Timeline**
 
-Applicaster Feed allows you to pull all the available episodes for a specific timeline. You can use this ability only for retrieving episodes from a timeline checked as "Live" in Applicaster's management system.
-One possible usage of this ability is creating a custom page and promote live/future episodes, for example.
+Applicaster Feed allows you to pull all available episodes for a specific timeline. You can use this ability only for retrieving episodes from a timeline set to "Live" in Applicaster's content management system.
+One possible usage of this ability is to create a custom page and promote live/future episodes, for example.
 
-The next example shows you how to retrieve all the live and future episodes for a specific timeline. In this case it only pulls the episodes for the first timeline if exists:
+The next example shows you how to retrieve all the live and future episodes for a specific timeline. In this case, it only pulls the episodes for the first timeline if it exists:
 
 ```objective-c
 #import <Applicaster/APFeedTimeline.h>
@@ -287,7 +287,7 @@ The next example shows you how to retrieve all the live and future episodes for 
 }
 ```
 
-+ The dictionary contains all data you need for the event including the event name. here is an example of a real event dictionary which indicates that a user is opened the Feed:
++ The dictionary contains all data you need for the event, including the event name. Here is an example of a real event dictionary which indicates that a user has opened the Feed:
 ```
  "Episode name" = "Best Episode";
     "Facebook page ID" = "";
