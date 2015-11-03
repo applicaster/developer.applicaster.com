@@ -95,7 +95,7 @@
 
 "Messenger":
 - folder: messenger-release-notes
-  internal: true
+  internal: false
   title: Messenger Release notes
   description: >
     Release notes list of the Messenger product ordered by release date.

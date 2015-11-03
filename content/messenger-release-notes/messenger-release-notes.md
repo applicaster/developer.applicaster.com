@@ -17,7 +17,7 @@ In other words, the Messengers are a native CMS for TV stars.
 
 #### Generic (Applicable for both Messengers)
 
-* Main Messenger selection screen - select between CM Messenger and GC Messenger with ability to turn each off remotely.
+* Main Messenger Selection Screen - select between CM Messenger and GC Messenger with ability to turn each off remotely.
 * Messenger Web Login
 * Account Selection
 * Account Settings (Selecting TV Show, Character and Episode)
@@ -25,7 +25,6 @@ In other words, the Messengers are a native CMS for TV stars.
 * Log Out Button (Requires a password)
 
 #### GroupChat Messenger Specific
-
 
 * Group List Screen
 * GroupChat Screen (the chat itself)
