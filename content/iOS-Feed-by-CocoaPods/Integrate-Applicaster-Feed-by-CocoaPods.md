@@ -1,12 +1,12 @@
-This document will explain how to add the Applicaster SDK using CocoaPods to your project   
+This document explains how to add the Applicaster SDK using CocoaPods to your project   
 
-**A few notes:**
+**A Few Notes**
 ***
-+ Applicaster iOS SDK Requires Xcode 6.3.2, deployment target 7.0 or above and has 64 bit support (valid architectures - armv7, arm64)
++ Applicaster iOS SDK requires Xcode 6.3.2, deployment target 7.0 or above and has 64-bit support (valid architectures - armv7, arm64)
 + It uses CocoaPods as a distribution platfrom and to manage 3rd party dependencies
 
 
-**3rd party libraries**
+**3rd Party Libraries**
 ***
 The following libraries are directly linked with the Applicaster library:   
 + Cocoa Lumberjack 1.9.2  
@@ -19,28 +19,28 @@ The following libraries are directly linked with the Applicaster library:
 + FreeWheel  
 + ePlanning  
 
-If these libraries cause duplicate symbols in your code - please notify us and we will also move it to a Pod.
+If these libraries cause duplicate symbols in your code - please notify us and we will also move it into a Pod.
 
 
-**Applicaster SDK integration guide**
+**Applicaster SDK Integration Guide**
 ***
 1. Install the CocoaPods framework: https://guides.cocoapods.org/using/getting-started.html
-2. Create a file named "Podfile" in the root directory of your project (note it does not contain an extension)
-3. Edit the file and make sure it has the basic configuration: https://guides.cocoapods.org/using/using-cocoapods.html
-4. Make sure the following official CocoaPods PodSpecs repository is used by your Podfile:  
+2. Create a file named "Podfile" in the root directory of your project (note that it does not contain an extension)
+3. Edit the file and ensure it has the basic configuration: https://guides.cocoapods.org/using/using-cocoapods.html
+4. Ensure the following official CocoaPods PodSpecs repository is used by your Podfile:  
     `source 'https://github.com/CocoaPods/Specs.git'`
 5. Applicaster uses the following private PodSpecs repository (for which you should have access to)  
     `source 'git@github.com:applicaster/CocoaPods.git'`
 6. The repository provides the core Applicaster Pod which you may include to your Podfile:  
     `pod 'Applicaster'`
-7. The APFeed and APCrossmates Pods are also available (note that they already include a reference to the required core Applicaster Pod so you may omit it):  
+7. The APFeed and APCrossmates Pods are also available (note that they already include a reference to the required core Applicaster Pod, so you may omit it):  
     `pod 'APFeed'`  
     `pod 'APCrossmates'`  
 8. The Applicaster SDK also depends on the following `Amazon SDK` Pod which must be added:  
     `pod 'AWSiOSSDK', '1.7.1'` 
-9. Using *terminal*, with your project root directory as the *working path*, run `pod install`. This will download all the necessary files which are required to integrate the Applicaster SDK into your project. Visit the CocoaPods web page for more information.
+9. Using *terminal*, with your project root directory as the *working path*, run `pod install`. This will download all the necessary files which are required to integrate the Applicaster SDK into your project. Visit the CocoaPods webpage for more information.
 10. You will notice the CocoaPods installer automatically created a new Xcode `workspace`, into which your original project was added with an additional `Pods` project.
-10. Due to a limitation with the required specific version of the `Amazon SDK` Pod, it is necessary to make **recursive** the `HEADER_SEARCH_PATHS` that points to the headers of the generated `AWSiOSSDK` target in the automatically created `Pods` project in your workspace (otherwise you will receive a compile error).
+10. Due to a limitation with the required specific version of the `Amazon SDK` Pod, it is necessary to make **recursive** the `HEADER_SEARCH_PATHS` that points to the headers of the generated `AWSiOSSDK` target in the automatically created `Pods` project in your workspace (otherwise, you will receive a compile error).
 
 **Usage**
 ***
@@ -197,9 +197,9 @@ The following headers should be included in the files which access the Applicast
 }
 ```
 
-**Using multiple timelines**
+**Using Multiple Timelines**
 
-Applicaster Feed supports multiple timelines (feeds), in order to handle them a small change should be done as both the launch command and the notification for the feed status change should be checked for the relevant timeline.
+Applicaster Feed supports multiple timelines (feeds). In order to handle them, a small change should be done as both the launch command and the notification for the feed status change should be checked for the relevant timeline.
 
 + In order to launch a specific timeline:
 ```objective-c
