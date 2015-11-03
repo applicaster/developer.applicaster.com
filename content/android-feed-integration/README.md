@@ -31,7 +31,7 @@ Adding 3rd party dependencies:
 3.
 Add to the build.gradle in the Project level, maven (Bintray) authentication.
 If you already have a Bintray user, please send us a request to "applicaster-ltd" organization.
-Otherwise, we can provide you with a Reader, user and  password.
+Otherwise, we can provide you with a Reader user and  password.
 
 ```
 allprojects {
