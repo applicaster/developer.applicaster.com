@@ -1,22 +1,54 @@
-# Android Feed Integration
+Feed-Demo-Android
+==================
 
+Feed integration pack + demo app - Android
+
+**This is a sample project demonstrating how to integrate Feed in your project.**
+
+
+Now you can use this sample as a reference for your integration.
+
+
+<a name="Prerequisite"/>
 ## Prerequisite
 
 ### Preparing your workspace:
 
-`git clone https://github.com/applicaster/feed-android-dist.git`
+1. Add the Feed dependencies to your project.
 
-`cd feed-android-dist`
+```
+   compile ('com.applicaster:feed_android:3.5.0')
+```
 
-`git submodule update --init --recursive `.
+2.
+Adding 3rd party dependencies:
 
-In your IDE,add the following projects to your workspace:
+```
+    compile 'com.nhaarman.listviewanimations:library:2.5.2@aar'
+    compile 'com.daimajia.androidanimations:library:1.0.6@aar'
+    compile 'com.daimajia.easing:library:1.0.0@aar'
+```
 
-1. ***feed-sdk-dist*** project.
-2. ***android-sdk-dist*** project, and set the it as a library project of ***feed-sdk-dist***.
-3. ***ViewPagerIndicatorLibrary*** project, and set it as a library project of the  ***feed-sdk-dist***.
+3.
+Add to the build.gradle in the Project level, maven (Bintray) authentication.
+If you already have a Bintray user, please send us a request to "applicaster-ltd" organization.
+Otherwise, we can provide you with a Reader user and  password.
 
-**Set the ** ***feed-sdk-dist***  **as a library project of your project.**
+```
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            credentials{
+                username 'bintray_user_name'
+                password 'bintray_api_key'
+            }
+            url 'https://dl.bintray.com/applicaster-ltd/maven'
+        }
+    }
+}
+```
 
 <a name="Integrate Applicaster SDK"/>
 ## Integrate Applicaster SDK
@@ -29,14 +61,14 @@ Use the following link:
 <a name="Integrate Feed SDK"/>
 ## Integrate Feed SDK
 
-### 1. Create the UI for launching Feed.
+### 1. Create the UI for Launching Feed
 
 The button for launching the Feed (from the Action Bar / Top Navigation Bar) can be either ON or OFF, depending on whether or not the Feed feature is active and there is an episode running while using the app.
 The Feed SDK is responsible for checking the Feed availability.
 
-The assets for this button (default mode and selected mode) are loaded from the CMS, to allow the broadcaster to change them for different shows, without the need to release a new app. 
+The assets for this button (default mode and selected mode) are loaded from the CMS, to allow the broadcaster to change them for different shows, without the need to release a new app.
 
-* Add the following code to you layout xml:
+* Add the following code to your layout xml:
 
 
 
@@ -50,7 +82,7 @@ The assets for this button (default mode and selected mode) are loaded from the 
 
 
 
-The app should contain default assets for cases when the loading of the assets from the CMS fail. If the Feed is disabled, the “selected” asset will be displayed, and so the button will appear as not clickable.
+The app should contain default assets for cases when the loading of the assets from the CMS fails. If the Feed is disabled, the “selected” asset will be displayed, and so the button will appear as not clickable.
 
 **Customizing the Feed Button**
 
@@ -62,82 +94,33 @@ In order to customize the default button, do the following:
 
 
 
+### 2. Fonts
 
-### 2. AndroidManifest.xml
-
-#### Add the following activities to the AndroidManifest file:
-
-```xml
-<activity
-	android:name="com.applicaster.activities.CombinedFeedActivity"
-	android:screenOrientation="portrait"
-	android:configChanges="orientation"
-    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
-</activity>	
-
-<activity
-    android:name="com.applicaster.activities.FeedItemActivity"
-    android:screenOrientation="portrait"
-	android:configChanges="orientation"
-    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
-</activity>
-
-<activity
-    android:name="com.applicaster.activities.PostOnFeedActivity"
-    android:screenOrientation="portrait"
- 	android:configChanges="orientation"
-    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-    android:windowSoftInputMode="stateVisible|adjustPan"
->
-</activity>
-
-```
+* In **/assets/fonts** of the project, copy all *Roboto* fonts from the sample project.
 
 
-### 3. Fonts 
+### 3. Banners
 
-* In **/assets/fonts** of the project copy all *Roboto* fonts from the sample project
-
-
-### 4. Banners 
-
- In order to populate a bottom screen banner, create a class that implements 
+ In order to populate a bottom screen banner, create a class that implements
 **BannersConfigurationI** and add your banner implementation to the *** populateFeedBanners ** method:
 
-```java
+```
 public class BannerConfiguration implements BannersConfigurationI{
-	
 	@Override
     public void populateCrossmatesBanners(Context context, ViewGroup viewGroup) {
-
     }
-
     @Override
     public void populateFeedBanners(Context context, ViewGroup bannerContainer, String adId) {
-
         APBannerViewController bannerController = new APBannerViewController(context, bannerContainer, null, null, adId, "%@");
         bannerController.displayBanners();
     }
-
     @Override
     public void populateGenericAppMainActivityBanners(Context context, ViewGroup viewGroup) {
-
     }
-
     @Override
     public void populateGenericAppShowActivityBanners(Context context, ViewGroup viewGroup, String s) {
-
     }
-
 }
-
 ```
 
-
- 
  Please consult Applicaster's developers for more information.
-
-
-
-
-
