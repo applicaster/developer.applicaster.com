@@ -1,6 +1,6 @@
 # Stars Public API v3 (Feed & Crossmates)
 
-This document describes the Stars public API and it is used to read events
+This document describes the Stars Public API and it is used to read events
 form both the Feed & Crossmates Applicaster products.
 
 
@@ -66,7 +66,7 @@ properties that are used by the Feed are documented.
     live: true, //If set to false the client should treat the timeline as hidden for the end user view
     name: "Adventure Time with Finn and Jake",
     zones: {
-        "514ebfe878249b1c11999002": -21600, // GMT offset in sceonds, for example GMT-6
+        "514ebfe878249b1c11999002": -21600, // GMT offset in seconds, for example GMT-6
         "514ebfe878249b1c11999004": 3600// GMT +1
     },
     type: "feed", // Can be crossmates or feed
@@ -105,10 +105,10 @@ if available.
 			label: "google",
 			url: "http://www.google.com"
 		},
-		enable_fb_post: true, // Should we allow user posting from the feed? set to false if the Facebook page is restricted for comments
+		enable_fb_post: true, // Should we allow user posting from the Feed? Set to false if the Facebook page is restricted for comments
 		id: "54a3bd86c0a406979f000001", // episode ID
-		starts: 1420019640, //Unix timestamp describing when the episodes starts
-		ends: 1420193323, //Unix timestamp describing when the episodes ends
+		starts: 1420019640, //Unix timestamp describing when the episode starts
+		ends: 1420193323, //Unix timestamp describing when the episode ends
 		twitter_hashtags: [ //array of twitter hashtags or usernames to pull from
 			"#baby" // can be also @someusername to pull data from a specific username
 		],
