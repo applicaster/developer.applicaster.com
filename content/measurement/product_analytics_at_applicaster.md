@@ -1,6 +1,6 @@
 # Product Analytics at Applicaster
 
-##### “Continuous measurement and monitoring will help you continuously improve your app as it progresses into more mature releases.” - Pierre-Luc Simard (CTO of Mirego)
+> “Continuous measurement and monitoring will help you continuously improve your app as it progresses into more mature releases.” - Pierre-Luc Simard (CTO of Mirego)
 
 Consumer products (like the Feed) and customer products (like Starlight) involve user interaction that can be measured to better understand and improve our product offering. In the case of consumer products, this data can also help our customers make better use of our products.
 
@@ -8,7 +8,7 @@ This section outlines the process for ensuring we get to take advantage of the b
 
 ### Steps of Procedure
 
-1. When developing a new product or feature, ask yourself the following questions: 
+1. When developing a new product or feature, ask yourself the following questions:
     * How can I tell that this product/feature is succeeding?
     * What questions will I want to be able to answer about how the product is being used so that I can continue to iterate more effectively on it?
         * Identify what you’d want to understand before building your next iteration of this product.
