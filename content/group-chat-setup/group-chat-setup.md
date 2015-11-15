@@ -34,6 +34,10 @@ This can be obtained from the link in Starlight, as it appears after the 'accoun
 
 ![image](./assets/account_id.png)
 
+**active*** - Always add the parameter "active=1" to the inner chat.
+
+**ga_id** - Set this parameter to the value of the Google Analytics account that is set up for this customer. In this way the customer will receive GroupChat analytics about how end users are using this product. This value is not compulsary in order for the product to work, but we **highly recommend** not releasing it without analytics.
+
 **topbar** - If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
 	
 **environment** - If the account is not in production, an environment must be specified (qa / demo / server).
@@ -44,10 +48,13 @@ This can be obtained from the link in Starlight, as it appears after the 'accoun
 
 **show_user_name** - If you would like to see the usernames of the groupchat members on each message in the groupchat, please set this paramaeter to the value of 1.
 
+**rtl** - If you would like the GroupChat messages to be suited for a right-to-left language, set this parameter to the value of 1.
 
-Here’s an example of what the link may look like once the parameters are configured:
+**lang** - If you would like the GroupChat general texts to be in a language other than language, please set it here. Currently we support Spanish (parameter value 'es'), and Hebrew (parameter value 'he').
 
-	http://assets-production.applicaster.com/static/groupchat/production/index.html?account=54aa34dfa4f7c396da00001e
+Here’s an example of what the link may look like once some of the parameters are configured:
+
+	http://assets-production.applicaster.com/static/groupchat/production/index.html?account=54aa34dfa4f7c396da00001e&active=1&ga_id=UA-60163404-3
  
 
 	
@@ -67,29 +74,32 @@ This can be obtained from the link when opening the relevant feed (=timeline) in
 
 ![image](./assets/timeline_id.png)
 
+**active*** - Always add the parameter "active=1" to the inner chat.
+
+**ga_id** - Set this parameter to the value of the Google Analytics account that is set up for this customer. In this way the customer will receive GroupChat analytics about how end users are using this product. This value is not compulsary in order for the product to work, but we **highly recommend** not releasing it without analytics.
+
 **topbar** - If the value is set to 0, no top bar will appear (this is good for when displaying the group chat web inside the Group Chat Messenger app, for example, otherwise this is irrelevant).
 
+**environment** - If the account is not in production, an environment must be specified (qa / demo / server).
 
 **name*** - Title of the groupchat which will appear at the top of the page.
-
   
 **image*** - URL of an image of the groupchat which will appear in the right top corner of the page.  
 
-
 **show_dates** - If you would like to see dates and times of the groupchat messages in the group chat, please set this paramaeter to the value of 1.
-
 
 **show_likes** - If you would like to see the Like icon next to the messages in the groupchat, please set this paramaeter to the value of 1.
 
-
 **show_user_name** - If you would like to see the usernames of the groupchat members on each message in the groupchat, please set this paramaeter to the value of 1.
 
+**rtl** - If you would like the GroupChat messages to be suited for a right-to-left language, set this parameter to the value of 1.
 
-**active*** - Always add the parameter "active=1" to the inner chat.
+**lang** - If you would like the GroupChat general texts to be in a language other than language, please set it here. Currently we support Spanish (parameter value 'es'), and Hebrew (parameter value 'he').
 
-Here’s an example of what the link may look like once the parameters are configured:
 
-	http://assets-production.applicaster.com/static/groupchat/production/chats/index.html?account=54aa34dfa4f7c396da00001e&timeline=55efe65a16fa3a1e08000002&environment=qa&name=groupchat&image=https://lh5.ggpht.com/sQWHRHcRxGCkAoGBflyTupVKc4oB8RIFZBdQFSe3JSCNcBqjqZhZdB2JLLCzVUfCAQ=h900&active=1
+Here’s an example of what the link may look like once some of the parameters are configured:
+
+	http://assets-production.applicaster.com/static/groupchat/production/chats/index.html?account=54aa34dfa4f7c396da00001e&timeline=55efe65a16fa3a1e08000002&environment=qa&name=groupchat&image=https://lh5.ggpht.com/sQWHRHcRxGCkAoGBflyTupVKc4oB8RIFZBdQFSe3JSCNcBqjqZhZdB2JLLCzVUfCAQ=h900&active=1&ga_id=UA-60163404-3&show_likes=1&lang=es
 	
 ### Customization
 Group Chat customization can be controlled using the [Starlight CMS](http://cms.applicaster.com) customization section which can be found on the main feed page:
@@ -113,7 +123,8 @@ Below is a description of each color type and what it affects:
 
 #### Icon Customizations
 Secondly, the section below allows icon customization.
-For this product, only the Liked and Like icons are relevant, and these are the buttons that will be displayed next each message.
+For this product, the Liked and Like icons are relevant, and these are the buttons that will be displayed next each message.
+The Back button can also be customized and it will be displayed at the top left of the GroupChat webview. 
 
 ![image](./assets/icons.png)
 
