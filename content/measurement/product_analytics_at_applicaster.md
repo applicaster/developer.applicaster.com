@@ -32,7 +32,7 @@ This section outlines the process for ensuring we get to take advantage of the b
     * Notify me that the events have passed testing and provide me with the file you made in step 2
         * I will merge that file with the master where all other events and properties are held
     *  Update the documentation center where you maintain your events and properties
-     * If you don't already have an existing product analytics where this document exists, create one.
+     * If you don't already have an existing product analytics document, create one.
         * You can find a template [here](https://drive.google.com/a/applicaster.com/file/d/0By6c4nYJWWA0TXpTVnNYeGtnSnM/view?usp=sharing)
         * For an example of an existing one for the Feed, [click here](http://developer.applicaster.com/docs/public/feed-analytics)
         * This documentation differs from the file created in step 2 in that it is self-contained to your product or feature, and is for a more public audience. As such, it is more descriptive than technical in nature.
