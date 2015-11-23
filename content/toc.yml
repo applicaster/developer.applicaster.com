@@ -239,11 +239,20 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
-"Product Analytics":
+"Measurement & Analytics":
 - folder: measurement
   internal: true
   title: Product Analytics at Applicaster
   description: >
     This document outlines the procedure for how to manage product analytics and benefit from its implementation
+  type: Technical
+  owner: y.osteen@applicaster.com
+
+  "Measurement & Analytics":
+- folder: measurement
+  internal: true
+  title: Morpheus Release Notes
+  description: >
+    Release notes of Morpheus, Applicaster's technology for analytics delivery
   type: Technical
   owner: y.osteen@applicaster.com
