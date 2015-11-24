@@ -248,7 +248,6 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
-  "Measurement & Analytics":
 - folder: measurement
   internal: true
   title: Morpheus Release Notes
