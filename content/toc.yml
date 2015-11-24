@@ -240,7 +240,7 @@
   owner: y.osteen@applicaster.com
 
 "Measurement & Analytics":
-- folder: measurement
+- folder: product_analytics_at_applicaster
   internal: true
   title: Product Analytics at Applicaster
   description: >
@@ -248,10 +248,10 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
-- folder: measurement
+- folder: morpheus_release_notes
   internal: true
   title: Morpheus Release Notes
   description: >
     Release notes of Morpheus, Applicaster's technology for analytics delivery
-  type: Technical
+  type: Release Notes
   owner: y.osteen@applicaster.com
