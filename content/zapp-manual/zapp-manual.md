@@ -1,15 +1,10 @@
-# DRAFT Zapp Configuration Manual
+# Zapp Configuration Manual
 
 ## Introduction
 This manual was created to guide Applicaster employees on how to create and set up a new app for a new account.
 
 The idea is to have an app ready from a chosen Zapp template with all common Applicaster features enabled with sample of content.
 
-After you complete the task you’ll have an app with the following features:
-
-* Structured dummy content.
-* Dummy EPG according to the template options.
-* The option to fire Sync button events.
 
 
 ### The following should be configured separately - please ask support help if needed.
@@ -18,6 +13,8 @@ After you complete the task you’ll have an app with the following features:
 * Setting up app Feed, CrossMates, GroupChat in Stars or Starlight.
 * Uploading videos manually or setting up ingestion.
 * Setting up Atom feeds for news articles.
+* Configuring app template specific collection.
+* Configuring app template specific extensions.
 
 [The road is long…](https://www.youtube.com/watch?v=Si7gu9yGz64) but its going to get shorter.
 
@@ -89,32 +86,6 @@ Go back to the Broadcaster section under Management - and choose the Content Cat
 
 ![](./broadcaster2.png)
 
-## Fix Broadcaster ID (Applicaster2 Tab)
-
-* Copy the Broadcaster ID
-* Go to VOD -> Settings
-* For each CDN URL paste that Account ID after the `broadcasters/`  path
-
-![](./fix-cdn-url-bug.png)
-
-## Add mandatory UI_Tags (Applicaster2 Tab)
-Go to VOD section and go to the Collections tab and create 6 new collections with the following UI_Tags:
-
-1. Home UI_tag: home_collection
-2. Nav bar UI_tag: navbar_collection
-3. Side Menu UI_tag: side_menu_collection
-4. Side Menu Two Level ???: sidemenu_two_level
-5. Home Tablet ???: home_collection_tablet
-6. Settings ???: settings_collection
-7. Channels: channels_collection
-!!! we should move channels_collection from the template to the the SDK.
-
-??? what is “shows_activities” ui_tag?
-??? what is “category ui_tag” ui_tag?
-
-You should see the following once you are done:
-
-![](./collections.png)
 
 ## Create a New App (Applicaster2 Tab)
 Go to Management -> Apps -> New
@@ -146,7 +117,7 @@ GO to the account that you created and add the following:
 ## Create a New App phase 1 (Zapp Tab)
 Click on the ’New App’ button
 Choose the account you created and give your app a name - **name should not contain spaces or special characters**.
-ADD AN IMAGE!
+
 Leave the Form open as you’ll need to gather some data from the other CMSs and paste it in the form
 
 ## Copy AIS Bucket ID. (AIS Tab)
@@ -215,9 +186,6 @@ Click on the button to create new version.
 
 ![](./zapp-app-version.png)
 
-
 # Specific configurations Per template.
+Once you finish all the steps above you should continue to configure the app’s content - collections and categories according to the app structure & template. Please refer to the specific template manual for more information.
 
-## Fuzion Template
-
-### Setting up dummy content.
