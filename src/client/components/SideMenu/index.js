@@ -4,15 +4,11 @@ import ProductFilter from '../ProductFilter';
 import './index.scss';
 import '../../common/stylesheets/utils.scss';
 
-@connect(state => ({ products: state.products }))
-export default class SideMenu extends Component {
-
-  static propTypes = {
-    products: PropTypes.array,
-  };
+class SideMenu extends Component {
 
   render() {
     const { products } = this.props;
+    console.log('products1', products);
     return (
       <div className="SideMenu">
         <div id="menu">
@@ -25,3 +21,11 @@ export default class SideMenu extends Component {
     );
   }
 }
+
+function select(state) {
+  return {
+    products: state.products
+  }
+}
+
+export default connect(select)(SideMenu)

@@ -1,23 +1,15 @@
 import _ from "lodash";
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
+import Router, { Link }  from 'react-router';
+import Qs from 'qs';
 import { getFolder } from '../../../shared/utils';
 import SectionHeader from '../SectionHeader';
+import { DOCS_FOLDER } from '../../../shared/settings';
 
-export default class ProductGroup extends Component {
-
-  static propTypes = {
-    group: PropTypes.object,
-  }
-
-  constructor(props, context) {
-    super(props, context);
-    this.context = context;
-
-  }
+export default React.createClass({
 
   render() {
-    let { docType } = this.context.router.getCurrentQuery();
+    const { docType } = Qs.parse(location.search.substring(1))
     const {label, teasers} = this.props.group;
     const platformStyle = {
       fontSize: '0.8em',
@@ -49,19 +41,14 @@ export default class ProductGroup extends Component {
         }, false);
       }
       return {display: (showItem) ? 'block' : 'none',};
-
     }
 
     return (
       <div style={showGroup(teasers)}>
         <SectionHeader title={label} />
           {teasers.map(teaser =>
-            <Link to="page"
+            <Link to={`/${DOCS_FOLDER}/${getFolder(teaser)}/${teaser.folder}`}
               style={show(teaser.type)}
-              params={{
-                type: getFolder(teaser),
-                page: teaser.folder,
-              }}
               key={teaser.folder}>
               <h3>{teaser.title}</h3>
               <p style={descStyle}>{teaser.description}</p>
@@ -72,8 +59,4 @@ export default class ProductGroup extends Component {
     );
   }
 
-}
-
-ProductGroup.contextTypes = {
-  router: React.PropTypes.func,
-}
+})

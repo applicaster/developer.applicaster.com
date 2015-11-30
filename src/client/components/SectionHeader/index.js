@@ -2,10 +2,6 @@ import React, { Component, PropTypes } from 'react';
 
 export default class SectionHeader extends Component {
 
-  static propTypes = {
-    title: PropTypes.string,
-  };
-
   render() {
 
     const sectionHeaderStyle = {

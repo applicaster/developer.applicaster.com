@@ -15,7 +15,7 @@ const hasInternalPermissions = (request) => {
 
 server.connection({ port: process.env.PORT });
 
-server.register({ register: applicasterAccounts, options: {} }, () => {
+server.register([require('vision'), require('inert'), { register: applicasterAccounts, options: {} }], () => {
 
   server.views({
     engines: {

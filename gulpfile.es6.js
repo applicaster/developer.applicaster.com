@@ -18,7 +18,7 @@ let getSection = (isInternal) => {
   return (isInternal) ? INTERNAL_FOLDER : PUBLIC_FOLDER;
 };
 
-export default function() {
+export function runGulpTasks() {
   gulp.task('default', () => {
     let publicJson = [];
     let internalJson = [];
@@ -28,7 +28,7 @@ export default function() {
       publicTeasers = [];
       internalTeasers = [];
       _.forEach(product, (pack) => {
-        let mdFilter = gulpFilter('**.md');
+        let mdFilter = gulpFilter('**.md', {restore: true});
         gulp.src(`./${CONTENT_FOLDER}/${pack.folder}/**`)
         .pipe(mdFilter)
         .pipe(gulpConcat('index.md'))
@@ -64,7 +64,7 @@ export default function() {
             $(".language-objective-c").addClass("language-objectivec")
           $(".language-objective-c").removeClass("language-objective-c")
         }))
-        .pipe(mdFilter.restore())
+        .pipe(mdFilter.restore)
         .pipe(gulp.dest(`${getFolder(pack)}/${pack.folder}`));
         internalTeasers.push(pack);
         if (!pack.internal) {

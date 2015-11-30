@@ -1,7 +1,8 @@
 import React from 'react';
 import Router from 'react-router';
+import { render } from 'react-dom'
 import { Styles } from 'material-ui';
-import { Route, RouteHandler, Redirect } from 'react-router';
+import { Route, RouteHandler, Redirect, IndexRoute} from 'react-router';
 import PageHandler from './components/Page';
 import MainHandler from './components/Main';
 import ProductListHandler from './components/ProductList';
@@ -12,55 +13,41 @@ import productsApp from './reducers';
 import thunk from 'redux-thunk';
 import * as ProductsActions from './actions/ProductsActions';
 import { DOCS_FOLDER } from '../shared/settings';
+import createBrowserHistory from 'history/lib/createBrowserHistory'
 
 import './common/stylesheets/base.scss';
-const ThemeManager = new Styles.ThemeManager();
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(productsApp);
 const actions = bindActionCreators(ProductsActions, store.dispatch);
 actions.getProducts();
 
-
 const App = React.createClass({
 
-  childContextTypes: {
-    muiTheme: React.PropTypes.object,
-  },
-
-  getChildContext() {
-    return {
-      muiTheme: ThemeManager.getCurrentTheme(),
-    };
-  },
-
-  render() {
+  render(){
     return (
       <div>
-        <Provider store={store}>
-          {() =><RouteHandler/>}
-        </Provider>
+        {this.props.children}
       </div>
-    );
-  },
-});
-
-const routes = (
-  <Route name="app" path="/" handler={App}>
-    <Route name="main" path="/released" handler={MainHandler}>
-      <Route name="home" path="/home" handler={Home}/>
-      <Route name="productsList" path="/products-list" handler={ProductListHandler}/>
-      <Route name="page" path={`/${DOCS_FOLDER}/:type/:page`} handler={PageHandler}/>
-    </Route>
-    <Redirect from="*" to="home"/>
-  </Route>
-);
-
-Router.run(routes, Router.HistoryLocation, (Handler, state) => {
-  if (window.applicasterDocs.mixpanelEnabled) {
-    mixpanel.identify(window.applicasterDocs.userEmail);
-    mixpanel.track('Change route', {
-      path: state.path,
-    });
+    )
   }
-  React.render(<Handler/>, document.getElementById('react'));
+
 });
+
+render((
+  <div>
+    <Provider store={store}>
+      <Router history={createBrowserHistory()}>
+        <Route path="/" component={App}>
+          <Route component={MainHandler}>
+            <IndexRoute component={Home} />
+            <Route path="/home" component={Home}/>
+            <Route path="/products-list" component={ProductListHandler}/>
+            <Route path={`/${DOCS_FOLDER}/:type/:page`} component={PageHandler}/>
+            <Redirect from="*" to="/home"/>
+         </Route>
+       </Route>
+      </Router>
+    </Provider>
+  </div>
+)
+  , document.getElementById('react'));
