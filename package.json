@@ -26,6 +26,7 @@
     "babel-plugin-transform-runtime": "^6.1.18",
     "babel-preset-react": "^6.1.18",
     "babel-preset-stage-0": "^6.1.18",
+    "babel-register": "^6.2.0",
     "babel-runtime": "^6.2.0",
     "bell": "^6.0.0",
     "css-loader": "^0.23.0",
