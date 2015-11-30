@@ -1,6 +1,8 @@
 machine:
   node:
-    version: 5.0.0
+    version: 4.1.0
+  npm:
+    version: 3.3.9
 general:
   branches:
     ignore:
