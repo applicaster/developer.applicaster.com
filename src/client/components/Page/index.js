@@ -3,10 +3,6 @@ import request from 'superagent';
 
 export default class Page extends Component {
 
-  static propTypes = {
-    params: PropTypes.object,
-  };
-
   constructor(props, context) {
     super(props, context);
     this.context = context;
@@ -17,8 +13,7 @@ export default class Page extends Component {
     this.setState({copyStyle: { display: 'none'}});
     request(`/${this.props.params.type}/${this.props.params.page}/index.html`, (err, res) => {
       if (err) {
-        // Redirect to homepage on Error
-        this.context.router.transitionTo('home', {}, {err: true});
+        console.log('ERROR',err);
       } else {
         this.setState({content: { __html: (res.text)}});
         Prism.highlightAll();
