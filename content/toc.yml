@@ -169,6 +169,15 @@
   type: Release Notes
   owner: g.guy@applicaster.com
 
+- folder: zapp-manual
+  internal: true
+  title: DRAFT Zapp Configuration Manual
+  description: >
+    This manual was created to guid Applicaster employees on how to create and
+    set up a new app for a new account.
+  type: Technical
+  owner: g.guy@applicaster.com
+
 "Content Ingestion":
 - folder: epg-ingestion
   internal: false
