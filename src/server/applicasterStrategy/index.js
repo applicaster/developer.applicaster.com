@@ -29,6 +29,7 @@ export const loggedInScheme = (server) => {
     authenticate: (request, reply) => {
       if (request.session.get('applicaster') === undefined) {
         request.session.clear('applicaster');
+        request.session.set('docs-path', request.path)
         reply.redirect('/auth/applicaster/callback');
       } else {
         Axios.get(`${BASE_URL}/api/v1/users/current.json?access_token=${request.session.get('applicaster').token}`)
@@ -87,7 +88,8 @@ const plugin = {
           handler: (request, reply) => {
             const token = request.auth.credentials.token;
             request.session.set('applicaster', {token: token});
-            reply().redirect('/');
+            const redirectURL = request.session.get('docs-path') || '/';
+            reply().redirect(redirectURL);
           },
         },
       });
