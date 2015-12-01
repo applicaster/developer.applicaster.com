@@ -95,11 +95,19 @@
 "Group Chat":
 - folder: group-chat-setup
   internal: true
-  title: Group Chat Setup
+  title: GroupChat Setup
   description: >
-    This internal document is intended for Applicaster employees to understand what is the Web Group Chat product,
+    This internal document is intended for Applicaster employees to understand what is the Web GroupChat product,
     how to configure the link for it per customer, and how to customize it.
   type: Technical
+  owner: l.deutsch@applicaster.com
+
+- folder: group-chat-release-notes
+  internal: false
+  title: GroupChat Release Notes
+  description: >
+    Release notes of the GroupChat product ordered by release date.
+  type: Release Notes
   owner: l.deutsch@applicaster.com
 
 "Messenger":
