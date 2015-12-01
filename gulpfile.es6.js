@@ -45,6 +45,7 @@ export function runGulpTasks() {
           });
           $("blockquote").addClass("Typography--blockquote")
           $("img").addClass("Typography--img")
+          $("p").addClass("Typography--p")
           $("h1").addClass("Typography--h1")
           $("h2").addClass("Typography--h2")
           $("h3").addClass("Typography--h3")

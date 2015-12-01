@@ -23,6 +23,10 @@ $main-text: #333; // main content text color
   margin-right: auto;
 }
 
+.Typography--p {
+  margin-bottom: 1em;
+}
+
 .Typography--code {
  @include baseline(14px);
 }
