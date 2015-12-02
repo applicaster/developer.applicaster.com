@@ -13,7 +13,7 @@ The end users get to follow the conversation, like and share bits of the talk.
 * Partial loading of messages with a 'Load previous messages' button
 * Google Analytics Improvements
 
-## 1.6 (November 15th, 2015)
+## 1.6 (November 11th, 2015)
 * Google Analytics support
 * Right to Left support
 * Top bar separate Right to Left support
@@ -21,22 +21,22 @@ The end users get to follow the conversation, like and share bits of the talk.
 * UI Improvements
 * Fixed iOS bug
 
-## 1.5 (October 30th, 2015)
+## 1.5 (October 18th, 2015)
 * Counting of the likes on messages
 
-## 1.4 (October 15th, 2015)
+## 1.4 (October 11th, 2015)
 * Ability to hide/show the like buttons
 * Message composer name
 
-## 1.3 (September 30th, 2015)
+## 1.3 (September 16th, 2015)
 * Add times and days (with ability to hide if needed) 
 
-## 1.2 (September 10th, 2015)
+## 1.2 (September 9th, 2015)
 * Bug Fixes
 * Load improvements
 * Open image messages in bigger screen
 
-## 1.1 (August 30th, 2015)
+## 1.1 (August 31th, 2015)
 * Top bar on/off support
 * Menu selection (ability to have more than one group chat in one app)
 * Dynamic back button from Stars customization
