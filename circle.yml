@@ -1,10 +1,13 @@
 machine:
   node:
-    version: 4.1.0
+    version: 5.0.0
 general:
   branches:
     ignore:
       - master
+dependencies:
+  pre:
+    - npm install -g npm@3.3.9
 deployment:
   production:
     branch: developer2
