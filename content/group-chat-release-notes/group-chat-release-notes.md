@@ -12,6 +12,7 @@ The end users get to follow the conversation, like and share bits of the talk.
 * UI Improvements
 * Partial loading of messages with a 'Load previous messages' button
 * Google Analytics Improvements
+* Added Message Impressions to Analytics
 
 ## 1.6 (November 11th, 2015)
 * Google Analytics support
