@@ -8,10 +8,15 @@ This product keeps users up to date and involved in the show off broadcast time,
 The broadcaster can easily define the characters, write the chat content and customize the look & feel of the group chat front-end within the starlight CMS. 
 The end users get to follow the conversation, like and share bits of the talk. 
 
+## 1.8 (December 7th, 2015)
+* Changed number of default messages to load each time to 15 messages.
+* Fixed bug of landscape and portrait rotation UI
+
 ## 1.7 (December 1st, 2015)
 * UI Improvements
 * Partial loading of messages with a 'Load previous messages' button
 * Google Analytics Improvements
+* Added Message Impressions to Analytics
 
 ## 1.6 (November 11th, 2015)
 * Google Analytics support
