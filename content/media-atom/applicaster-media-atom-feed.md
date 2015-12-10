@@ -74,7 +74,7 @@ client. HTTP\`s `Cache-Control` header with a
 	[Link](./examples/article+video.xml)
     
   * Feed that holds image gallery entries.
-	[Link](./examples/article+video.xml)
+	[Link](./examples/galleries.xml)
 
 
 ## Elements and Attributes Description
