@@ -1,6 +1,6 @@
 # GroupChat Analytics Events
 
-Note: All the data is currently being sent to GoogleAnalytics only given that GoogleAnalytics ID is configured as outlined in the [GroupChat documentation](http://developer.applicaster.com/docs/internal/group-chat-setup)
+Note: All the data is currently being sent to GoogleAnalytics only, given that GoogleAnalytics ID is configured as outlined in the [GroupChat documentation](http://developer.applicaster.com/docs/internal/group-chat-setup)
 
 Event Name | Insight
 --------------- | ---------------
