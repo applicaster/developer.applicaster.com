@@ -111,7 +111,7 @@
   owner: l.deutsch@applicaster.com
 
 
-  - folder: group-chat-analytics
+- folder: group-chat-analytics
   internal: false
   title: GroupChat Analytics
   description: >
