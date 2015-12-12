@@ -14,18 +14,22 @@ Applicaster *Media Atom Feed* is a feature that
 allows the broadcaster to integrate list of
 External resources and present them in the app.
 Currently Applicaster supports the following 
-resource types: **Article**, **Video**, **Image** and
-**imageGallery**. The broadcaster should host the
+resource types: **Article**, **Gallery** 
+and **Video**. The broadcaster should host the
 resources in its own servers and provide
 Applicaster with the links to the Atom feeds
 according to the specifications
 below.
 
+* Video - HLS video content, uppon tapping the content will be preseted on a standard video player.
+
+### Setup
+
 Each Atom Feed link will need to be added to
 Applicater CMS into the appropriate Applicaster
 Category link and declared as an "Applicaster Media Atom" link type.
 
-The app will maintain the same order and structure
+>The app will maintain the same order and structure
 as those in the provided Atom Feed.
 
 ![image](./images/atom-link-type.png)
@@ -71,17 +75,17 @@ client. HTTP\`s `Cache-Control` header with a
   ##### Feed Examples
 
   * Feed that holds mix of video and article entries.
-	[Link](./examples/article+video.xml)
+	[Link](https://gist.githubusercontent.com/PhilipKram/46117bb42124caac6640/raw/fac1c565c25c486f35a0eee56608f5cd54c5d17e/atom-article+video.xml)
     
   * Feed that holds image gallery entries.
-	[Link](./examples/galleries.xml)
+	[Link](https://gist.githubusercontent.com/PhilipKram/e572ba6cfe96a2b2cc59/raw/d05afd656ae332eccc633f19a09bcbdad7e868bd/atom-gallery.xml)
 
 
 ## Elements and Attributes Description
 Described below are all the custom extensions
 added to the Atom 1.0 Standard.
 
-### Feed
+### feed
 `<feed>` <span class="badge">XPath: /feed</span>
 
 The `<feed>` element MUST contain the
