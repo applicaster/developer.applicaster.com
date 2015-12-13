@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+xmlns:applicaster="http://schemas.applicaster.com/atom/1"
+xml:lang="en-us">
+<title>News Feed Title</title>
+<subtitle>News Feed Subtitle</subtitle>
+<link rel="self" type="application/atom+xml"
+href="http://www.example.com/news_feed.atom"/>
+<updated>2006-04-06T13:00:00-08:00</updated>
+<id>http://www.example.com/article_feed.atom</id>
+<author><name>Some Name</name></author>
+<entry>
+<applicaster:type value="image"/>
+<title>Example Image Title #1</title>
+<summary>Example Summery</summary>
+<id>http://media.example.org/example-image.png</id>
+<published>2005-04-06T13:00:00-08:00</published>
+<updated>2005-04-06T20:25:05-08:00</updated>
+<content type="image/png"
+src="http://media.example.org/example-image.png"/>
+<applicaster:mediaGroup type="thumbnail">
+<applicaster:mediaItem src="http://example.org/image-large.png" scale="large"/>
+<applicaster:mediaItem src="http://example.org/image-small.png" scale="small"/>
+</applicaster:mediaGroup>
+</entry>
+<entry>
+<applicaster:type value="image"/>
+<title>Example Image Title #1</title>
+<summary>Example Summery</summary>
+<id>http://media.example.org/example-image.png</id>
+<published>2005-04-06T13:00:00-08:00</published>
+<updated>2005-04-06T20:25:05-08:00</updated>
+<content type="image/png"
+src="http://media.example.org/example-image.png"/>
+<applicaster:mediaGroup type="thumbnail">
+<applicaster:mediaItem src="http://example.org/image-large.png" scale="large"/>
+<applicaster:mediaItem src="http://example.org/image-small.png" scale="small"/>
+</applicaster:mediaGroup>
+</entry>
+<entry>
+<applicaster:type value="image"/>
+<title>Example Image Title #1</title>
+<summary>Example Summery</summary>
+<id>http://media.example.org/example-image.png</id>
+<published>2005-04-06T13:00:00-08:00</published>
+<updated>2005-04-06T20:25:05-08:00</updated>
+<content type="image/png"
+src="http://media.example.org/example-image.png"/>
+<applicaster:mediaGroup type="thumbnail">
+<applicaster:mediaItem src="http://example.org/image-large.png" scale="large"/>
+<applicaster:mediaItem src="http://example.org/image-small.png" scale="small"/>
+</applicaster:mediaGroup>
+</entry>
+<entry>
+<applicaster:type value="image"/>
+<title>Example Image Title #1</title>
+<summary>Example Summery</summary>
+<id>http://media.example.org/example-image.png</id>
+<published>2005-04-06T13:00:00-08:00</published>
+<updated>2005-04-06T20:25:05-08:00</updated>
+<content type="image/png"
+src="http://media.example.org/example-image.png"/>
+<applicaster:mediaGroup type="thumbnail">
+<applicaster:mediaItem src="http://example.org/image-large.png" scale="large"/>
+<applicaster:mediaItem src="http://example.org/image-small.png" scale="small"/>
+</applicaster:mediaGroup>
+</entry>
+</feed>
