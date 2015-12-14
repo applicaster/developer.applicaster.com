@@ -281,3 +281,19 @@
     Release notes of Morpheus, Applicaster's technology for analytics delivery
   type: Release Notes
   owner: y.osteen@applicaster.com
+
+- folder: analytics-events-catalogue
+  internal: true
+  title: Analytics Events Catalogue
+  description: >
+    A file linking to all the product-level analytics documentation
+  type: Technical
+  owner: y.osteen@applicaster.com 
+
+- folder: success-measurement-and-agile-development
+  internal: true
+  title: Success Measurement and Agile Development 
+  description: >
+    This document describes how to incorporate success measurement into your agile development processes
+  type: Technical
+  owner: y.osteen@applicaster.com  
