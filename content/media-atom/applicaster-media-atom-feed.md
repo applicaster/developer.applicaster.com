@@ -22,6 +22,10 @@ according to the specifications
 below.
 
 * Video - HLS video content, uppon tapping the content will be preseted on a standard video player.
+* Article - Uppon tapping, the article will be presented in the following layout:
+![image](./images/article_inline_images2.png)
+* Gallery - Uppon tapping, the gallery will be presented in the following layout:
+![image](./images/photoGallery4.png)
 
 ### Setup
 
@@ -41,18 +45,11 @@ The key words "MUST", "MUST NOT", "REQUIRED",
 document are to be interpreted as described in
 [RFC 2119](http://tools.ietf.org/html/rfc2119).
 
-The *Applicaster Media Atom Feed* format conforms
-with the Atom 1.0 Standard as described at [RFC
-4287](http://tools.ietf.org/html/rfc4287) and MUST
-pass the [W3C Atom
-Validator](http://validator.w3.org/feed/).
+The *Applicaster Media Atom Feed* format conforms with the Atom 1.0 Standard as described at [RFC 4287](http://tools.ietf.org/html/rfc4287) and MUST pass the [W3C Atom Validator](http://validator.w3.org/feed/).
 
-Each Atom feed SHOULD hold multiple “atom:entry”
-nodes.
+Each Atom feed SHOULD hold multiple “atom:entry” nodes.
 Any change done in an existing Atom Feed will be
-available immediately on the client after app
-start up and without the need to change anything
-on the Applicaster CMS.
+available immediately on the client after app start up and without the need to change anything on the Applicaster CMS.
 
 
 > **Note:** Make sure your servers can hold the
