@@ -3,8 +3,9 @@ This document will explain how to add the Applicaster SDK using CocoaPods to you
 
 **A few notes:**
 ***
-+ Applicaster iOS SDK Requires Xcode 7.1, deployment target 7.0 or above and has 64 bit support (valid architectures - armv7, arm64)
-+ It uses CocoaPods as a distribution platfrom and to manage 3rd party dependencies
++ Applicaster iOS SDK Requires Xcode 7.1, deployment target 7.0 or above and has 64 bit support (valid architectures - armv7, arm64).
++ It uses CocoaPods as a distribution platfrom and to manage 3rd party dependencies.
++ A demo project can be found on [GitHub](https://github.com/applicaster/ApplicasterFeedDemo-iOS)
 
 
 **3rd party libraries**
@@ -54,7 +55,37 @@ The following Pods are used by Applicaster:
     `pod 'AWSiOSSDK', '1.7.1'` 
 9. Using *terminal*, with your project root directory as the *working path*, run `pod install`. This will download all the necessary files which are required to integrate the Applicaster SDK into your project. Visit the CocoaPods web page for more information.
 10. You will notice the CocoaPods installer automatically created a new Xcode `workspace`, into which your original project was added with an additional `Pods` project.
-10. Due to a limitation with the required specific version of the `Amazon SDK` Pod, it is necessary to make **recursive** the `HEADER_SEARCH_PATHS` that points to the headers of the generated `AWSiOSSDK` target in the automatically created `Pods` project in your workspace (otherwise you will receive a compile error).
+11. Due to a limitation with the required specific version of the `Amazon SDK` Pod, it is necessary to make **recursive** the `HEADER_SEARCH_PATHS` that points to the headers of the generated `AWSiOSSDK` target in the automatically created `Pods` project in your workspace (otherwise you will receive a compile error).
+
+**Other required configurations**
+***
++ Add the following entry to your target's Info.plist:
+```objective-c
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+```  
++ When compiling with iOS 9, add the following Facebook SDK related entries to your target's Info.plist (https://developers.facebook.com/docs/ios/ios9):
+```objective-c
+    <array>
+        <string>fbapi</string>
+        <string>fbapi20130214</string>
+        <string>fbapi20130410</string>
+        <string>fbapi20130702</string>
+        <string>fbapi20131010</string>
+        <string>fbapi20131219</string>    
+        <string>fbapi20140410</string>
+        <string>fbapi20140116</string>
+        <string>fbapi20150313</string>
+        <string>fbapi20150629</string>
+        <string>fbauth</string>
+        <string>fbauth2</string>
+        <string>fb-messenger-api20140430</string>
+    </array>
+```
++ Add your Facebook AppId to the URL types as a scheme (https://developers.facebook.com/docs/ios/getting-started#settings, see section 5)  
 
 **Usage**
 ***
