@@ -265,6 +265,15 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
+"Apple TV":
+- folder: Apple-TV-Icons-Images-Guide
+  internal: false
+  title: Apple TV Icones and Images Guide
+  description: >
+    This document will guide you how to create the best icons and images for Apple TV app.
+  type: Technical
+  owner: u.lumnitz@applicaster.com
+  
 "Measurement & Analytics":
 - folder: product_analytics_at_applicaster
   internal: true
