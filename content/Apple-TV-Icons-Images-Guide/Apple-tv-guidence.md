@@ -16,9 +16,6 @@ The separation between layers, along with use of transparency, creates a feeling
 
 For more information on layered images, please check the AppleTV human guidelines [link]((https://developer.apple.com/tvos/human-interface-guidelines/icons-and-images/)
 
-
-
-
 ###Important:### 
 
 You need to follow and maintain AppleTV design guideline for the icon size in order for Apple to approve your app in the AppStore.
