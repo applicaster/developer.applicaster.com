@@ -266,9 +266,9 @@
   owner: y.osteen@applicaster.com
 
 "Measurement & Analytics":
-- folder: product_analytics_at_applicaster
+- folder: product_analytics_procedure
   internal: true
-  title: Product Analytics at Applicaster
+  title: Product Analytics Procedure
   description: >
     This document outlines the procedure for how to manage product analytics and benefit from its implementation
   type: Technical
