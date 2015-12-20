@@ -7,8 +7,9 @@ Every category should have this hierarchy: TLC/Generic — Show — Season — V
 
 **Home collection** - UI tag is: `tv_home_collection`.
 Defines the content of the home screen, the title will shown in the app. The home collection should include 2 child collections:
+
 1. **Promoted collection** - UI tag is: `tv_promoted_collection`. This collection includes the promoted VODs that will shown in the home screen top carousel.
-1. **List collection** - UI tag is: `tv_list_collection`. This collection should include all the categories we want to show in the home screen below the carousel. Every category should have VODs as its children.
+2. **List collection** - UI tag is: `tv_list_collection`. This collection should include all the categories we want to show in the home screen below the carousel. Every category should have VODs as its children.
 
 ### Define the app style
 In the Apple TV VOD app you can define the app style by changing the app text color, background color or main background asset.
