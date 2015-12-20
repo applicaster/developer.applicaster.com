@@ -266,6 +266,14 @@
   owner: y.osteen@applicaster.com
 
 "Apple TV":
+- folder: Apple-TV-Admin-Settings-Guide
+  internal: true
+  title: Admin Settings for Apple TV
+  description: >
+    This document will guide you how to set the data and style for Apple TV app.
+  type: Technical
+  owner: u.lumnitz@applicaster.com
+
 - folder: Apple-TV-Icons-Images-Guide
   internal: false
   title: Apple TV Icones and Images Guide
