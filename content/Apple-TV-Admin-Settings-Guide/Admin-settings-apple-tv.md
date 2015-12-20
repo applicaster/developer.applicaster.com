@@ -1,7 +1,9 @@
 ## Applicaster Admin settings for Apple TV
 
 Applicaster AppleTV gives you the chance to provide your users with the perfect TV viewing experience.
+
 This product consists of few elements, such as various screens and a menu, that structure that app clearly for you as a broadcaster and your users.
+
 From a content point of view, you can set the Type and Order across the app. From a design pont of view, you can set the text color, background color or add a background asset.
 
 Please follow the below guidelines in order to complete the app configuration:
