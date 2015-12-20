@@ -1,6 +1,7 @@
-##Apple TV Icons and Images
+## Apple TV Icons and Images
 
 All our in-app images have a ratio of 16:9. The largest Image in the app is 1920x1080. You will only be asked to upload 1920x1080 images and we will do all the scaling and fit for you.
+
 When ingesting content into Applicaster Admin console, ensure the image key is: 'tvml_image'.
 [More details regarding VOD ingestion](http://developer.applicaster.com/docs/public/vod-ingestion-xml).
 
@@ -16,7 +17,7 @@ The separation between layers, along with use of transparency, creates a feeling
 
 For more information on layered images, please check the AppleTV human guidelines [link]((https://developer.apple.com/tvos/human-interface-guidelines/icons-and-images/)
 
-###Important:### 
+### Important:
 
 You need to follow and maintain AppleTV design guideline for the icon size in order for Apple to approve your app in the AppStore.
 
