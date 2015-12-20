@@ -19,7 +19,7 @@ I've created a [template product analytics worksheet](https://docs.google.com/a/
 1. Identify your goals
     * Defining measurement should always be goal-oriented. Before starting development, you need to ask yourself critical questions that not only will help you identify what to measure, but also will help you to develop a sharper focus of the business aims of your initiative.
     * Fill out [the worksheet](https://docs.google.com/a/applicaster.com/spreadsheets/d/117p3q_W3yzZrTfeHViEYGhx_FUkeidoHUNJRN5MILpM/edit?usp=sharing) by listing your goals in response to the following questions:
-        * #### Product Success Goals
+        * ***Product Success Goals***
         * "How can I tell that this product/feature is succeeding?"
             *   I recommend putting these goals in question form 
                 *   i.e. Do users of this feature launch the app more frequently? Do people watch video after using this feature? 
@@ -33,12 +33,12 @@ I've created a [template product analytics worksheet](https://docs.google.com/a/
             * You can learn more about HEART [here](https://library.gv.com/how-to-choose-the-right-ux-metrics-for-your-product-5f46359ab5be#.lwpjv7nbl) and [here](http://www.dtelepathy.com/ux-metrics/#intro)
                 * Please note that while HEART is a great method for stimulating ideas about what goals you have, I don't recommend the Goals-->Signal-->Metric approach. 
                 * Rather, I recommed using the framework to identify goals with the end-users in mind, placing those goals in the worksheet, and moving on to the next questions to identify further goals:
-        * #### Iterative Planning Goals
+        * ***Iterative Planning Goals***
         * What questions will I want to be able to answer about how the product is being used so that I can continue to iterate more effectively on it?
             * Identify what you’d want to understand before building your next iteration of this product.
             * For example, if you are thinking about deprecating a feature, you will of course want to check how many users interact with that feature, and if those users move on to be more engaged. 
             * Or if you think that a certain area may come off as clickable even though it is not, you may want to track if users try to tap on it.
-        * #### Client Goals
+        * ***Client Goals***
         * If you’re building a consumer product, it is important that you identify what questions our clients would want to ask about how the product is being used in order to:
             * Measure their success
             * Improve upon this success
