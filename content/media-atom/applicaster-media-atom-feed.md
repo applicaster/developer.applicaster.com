@@ -13,8 +13,8 @@
 Applicaster *Media Atom Feed* is a feature that
 allows the broadcaster to integrate list of
 External resources and present them in the app.
-Currently Applicaster supports the following 
-resource types: **Article**, **Gallery** 
+Currently Applicaster supports the following
+resource types: **Article**, **Gallery**
 and **Video**. The broadcaster should host the
 resources in its own servers and provide
 Applicaster with the links to the Atom feeds
@@ -72,10 +72,10 @@ client. HTTP\`s `Cache-Control` header with a
   ##### Feed Examples
 
   * Feed that holds mix of video and article entries.
-	[Link](https://gist.githubusercontent.com/PhilipKram/46117bb42124caac6640/raw/fac1c565c25c486f35a0eee56608f5cd54c5d17e/atom-article+video.xml)
-    
+	[Link](https://gist.githubusercontent.com/PhilipKram/46117bb42124caac6640/raw/d52b1d7475d105374fef7773336657befdd45e1c/atom-article+video.xml)
+
   * Feed that holds image gallery entries.
-	[Link](https://gist.githubusercontent.com/PhilipKram/e572ba6cfe96a2b2cc59/raw/d05afd656ae332eccc633f19a09bcbdad7e868bd/atom-gallery.xml)
+	[Link](https://gist.githubusercontent.com/PhilipKram/e572ba6cfe96a2b2cc59/raw/b7e60ad4a90056decc264b11af597bea1b75d91c/atom-gallery.xml)
 
 
 ## Elements and Attributes Description
@@ -211,10 +211,10 @@ SHOULD have 16:9 aspect ratio.
 articles - hold the articles item image in full
 view mode.
 * <kbd>video</kbd>: Relevant only for
-articles - hold the articles item video. 
-Please note: 
-	* The play button will present from the app and should not be include in the video image. 
-	* In case the entry include "detailed-view" and "video" types the app will ignore the "detailed-view" and will show only the "video". 
+articles - hold the articles item video.
+Please note:
+	* The play button will present from the app and should not be include in the video image.
+	* In case the entry include "detailed-view" and "video" types the app will ignore the "detailed-view" and will show only the "video".
 
 
 ### applicaster media item
