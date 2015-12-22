@@ -1,18 +1,33 @@
 # Zapp Release Notes
 
-* [Release Notes](#)
-* [Known Issues](#known-issues)
 
+## 1.5.0 L1 - (Dec 22, 2015)
+
+## New Features
+
+* L1 layout ready for use for both iOS & Android.
+* Full keys support for assets, styles, analytics, localization.
+* Support for left to right and right to left from the Zapp UI.
+* UI improvements - add breadcrumbs in Zapp.
+
+
+## Known Issues
+
+* Keys are being reset when upgrading the SKD.
+* No debug dialog on debug version on Android.
+* No notifications when build failed.
+
+***
 
 ## 1.4.0 Zapp-Roles - (Sep 20, 2015)
 
 ### New Features
 
 * You can access Zapp production form [zapp.applicaster.com](https://zapp.applicaster.com)
-* Zapp now has 3 types of roles of authorisation (managed from applicaster accounts)
+* Zapp now has 3 types of roles of authorization (managed from applicaster accounts)
 	* **SDK Developer** - Can create edit & deleted SDK versions
-	* **App Admin** - Can create edit & delete apps. Can create edit & delete app versions. Can configure assets and localisation strings.
-	* **User** - Can configure assets and localisation strings of existing app versions.
+	* **App Admin** - Can create edit & delete apps. Can create edit & delete app versions. Can configure assets and localization strings.
+	* **User** - Can configure assets and localization strings of existing app versions.
 
 ## 1.3.0 Open-Customer-Permissions - (Sep 7, 2015)
 
@@ -57,18 +72,3 @@ developers can download the created asset library and embed it in their code.
 Allow to configure remotely all texts of the app including their translations.
 
 ***
-
-## <a name="known-issues"></a> Known Issues
-
-### General
-* Currently automated build is only available on Android.
-* Zapp supports building a single template without the option to configure app colours.
-
-### Assets Section
-
-* ‘empty' thumbnail doesn’t appear after deleting an asset.
-* trash doesn’t always appear when uploading an asset.
-
-
-
-
