@@ -281,7 +281,7 @@
     This document will guide you how to create the best icons and images for Apple TV app.
   type: Technical
   owner: u.lumnitz@applicaster.com
-  
+
 "Measurement & Analytics":
 - folder: product_analytics_procedure
   internal: true
@@ -305,12 +305,21 @@
   description: >
     A file linking to all the product-level analytics documentation
   type: Technical
-  owner: y.osteen@applicaster.com 
+  owner: y.osteen@applicaster.com
 
 - folder: success-measurement-and-agile-development
   internal: true
-  title: Success Measurement and Agile Development 
+  title: Success Measurement and Agile Development
   description: >
     This document describes how to incorporate success measurement into your agile development processes
   type: Technical
-  owner: y.osteen@applicaster.com  
+  owner: y.osteen@applicaster.com
+
+"Product Guidelines":
+- folder: product-release-checklist
+  internal: true
+  title: Product Release Checklist
+  description: >
+    A checklist to follow before releasing a new product/feature
+  type: Technical
+  owner: l.deutsch@applicaster.com
