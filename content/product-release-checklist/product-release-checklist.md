@@ -18,7 +18,7 @@ User Manual | Make sure Support has the info and that it is produced in [Zendesk
 Release Notes | Write and upload to [Developer Center](http://developer.applicaster.com/)
 Customer Notification | Consult with GM’s and PM’s whether specific customers need to be notified BEFORE the release. This applies mainly when the product has UI/functional impact. Notification details should be uploaded to Zendesk.
 Marketing Signoff | Discuss Newsletter, company website, feature website, movie, PR
-Update Roadmap Portal | At every stage of the feature (up next/in progress/released) make sure [Roadmap](roadmap.applicaster.com) is updated
+Update Roadmap Portal | At every stage of the feature (up next/in progress/released) make sure [Roadmap](https://roadmap.applicaster.com/) is updated
 
 
 *Compulsory step in every product/feature release
