@@ -4,7 +4,7 @@
 
 ## New Features
 
-* Bug Fix - keys are update when upgrading an SDK.
+* Bug Fix - keys are updated when upgrading an SDK.
 * Bug Fix - Debug dialog is enabled on Android on debug versions.
 * Monitoring of app build status on Slack - channel #platform_notifictions
 
