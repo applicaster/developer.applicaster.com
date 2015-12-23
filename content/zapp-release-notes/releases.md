@@ -1,5 +1,14 @@
 # Zapp Release Notes
 
+## 1.6.0 L1 - (Dec 23, 2015)
+
+## New Features
+
+* Bug Fix - keys are updated when upgrading an SDK.
+* Bug Fix - Debug dialog is enabled on Android on debug versions.
+* Monitoring of app build status on Slack - channel #platform_notifictions
+
+
 
 ## 1.5.0 L1 - (Dec 22, 2015)
 
@@ -13,7 +22,7 @@
 
 ## Known Issues
 
-* Keys are being reset when upgrading the SKD.
+* Keys are being reset when upgrading the SDK.
 * No debug dialog on debug version on Android.
 * No notifications when build failed.
 
