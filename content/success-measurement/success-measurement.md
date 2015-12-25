@@ -1,4 +1,4 @@
-# Success Measurement and Agile Development
+# Success Measurement Best Practices
 
 Each PSP and user story in the Applicaster development process must have a business value and meaningful ROI. As such, there should be some measure for success. It is incorrect to view something as "Done" simply because it is released. You must be able to determine if the product or feature, in production, has succeeded.
 

@@ -307,9 +307,9 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
-- folder: success-measurement-and-agile-development
+- folder: success-measurement
   internal: true
-  title: Success Measurement and Agile Development
+  title: Success Measurement Best Practices
   description: >
     This document describes how to incorporate success measurement into your agile development processes
   type: Technical
