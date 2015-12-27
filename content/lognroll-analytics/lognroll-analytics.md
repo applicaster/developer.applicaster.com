@@ -6,7 +6,7 @@ The analytics description of this product is separated into two:
 1. **User Profile Analytics** - these are analytics that are the core of the value this product brings. In the case of a logged in user, this product provides user profiles within MixPanel, which allows the customer to determine the winner/s of a specific logNroll activity.
 
 ## Feature Analytics
-Note: In Alpha versions (and until further notice), these analytics are being sent to Google Analytics only, given that Google Analytics ID is configured as outlined in the [logNroll documentation](http://)
+Note: In the Alpha version (and until further notice), these analytics are being sent to one specific Google Analytics account only, so that we can examine the way the feature works.
 
 Event Name | Insight
 --------------- | ---------------
@@ -20,7 +20,7 @@ View Screen | See which screens are viewed most, in order to optimize logNroll b
 
 
 ## User Data Analytics
-Note: All this data is currently being sent to Mixpanel only, given that MixPanel token is configured as outlined in the [logNroll documentation](http://)
+Note: All this data is currently being sent to Mixpanel only, given that MixPanel token is configured as outlined in the [logNroll Zendesk Article](https://applicaster.zendesk.com/hc/en-us/articles/206949946-Storyline)
 
 Event Name | Insight
 --------------- | ---------------
