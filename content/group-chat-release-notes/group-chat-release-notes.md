@@ -8,6 +8,9 @@ This product keeps users up to date and involved in the show off broadcast time,
 The broadcaster can easily define the characters, write the chat content and customize the look & feel of the group chat front-end within the starlight CMS. 
 The end users get to follow the conversation, like and share bits of the talk. 
 
+## 1.9 (December 25th, 2015)
+* Support of native back button in Android to move between GroupChat page and GroupChat menu page
+
 ## 1.8 (December 7th, 2015)
 * Changed number of default messages to load each time to 15 messages.
 * Fixed bug of landscape and portrait rotation UI
