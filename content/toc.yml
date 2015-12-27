@@ -169,7 +169,7 @@
   owner: u.lumnitz@applicaster.com
 
 "logNroll":
-- folder: logNroll-release-notes
+- folder: lognroll-release-notes
   internal: true
   title: logNroll Release Notes
   description: >
@@ -177,7 +177,7 @@
   type: Release Notes
   owner: l.deutsch@applicaster.com
 
-- folder: logNroll-analytics
+- folder: lognroll-analytics
   internal: true
   title: logNroll Analytics Document
   description: >
