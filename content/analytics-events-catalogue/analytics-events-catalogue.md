@@ -20,3 +20,7 @@ This document links to the analytics documentation for Applicaster's consumer pr
 #### GroupChat
 
 [GroupChat - Analytics Events](http://developer.applicaster.com/docs/public/group-chat-analytics)
+
+#### logNroll
+
+[logNroll - Analytics Events](http://developer.applicaster.com/docs/internal/lognroll-analytics)
