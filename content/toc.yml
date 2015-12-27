@@ -168,6 +168,23 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
+"logNroll":
+- folder: logNroll-release-notes
+  internal: true
+  title: logNroll Release Notes
+  description: >
+    Release notes of the logNroll product ordered by release date.
+  type: Release Notes
+  owner: l.deutsch@applicaster.com
+
+- folder: logNroll-analytics
+  internal: true
+  title: logNroll Analytics Document
+  description: >
+    An internal document describing the different analytics measured on the logNroll product.
+  type: Technical
+  owner: l.deutsch@applicaster.com
+
 "Modular":
 - folder: modular-release-notes
   internal: true
