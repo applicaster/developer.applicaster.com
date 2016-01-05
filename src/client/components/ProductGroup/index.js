@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { Component, PropTypes } from 'react';
 import Router, { Link }  from 'react-router';
-import Qs from 'qs';
+import Qs from 'qs/dist/qs.js';
 import { getFolder } from '../../../shared/utils';
 import SectionHeader from '../SectionHeader';
 import { DOCS_FOLDER } from '../../../shared/settings';
