@@ -4,10 +4,9 @@ Applicaster AppleTV gives you the chance to provide your users with the perfect 
 
 This product consists of few elements, such as various screens and a menu, that structure that app clearly for you as a broadcaster and your users.
 
-From a content point of view, you can set the Type and Order across the app. From a design pont of view, you can set the text color, background color or add a background asset.
+From a content point of view, you can set the Type and Order across the app. From a design point of view, you can set the text color, background color or add a background asset.
 
 Please follow the below guidelines in order to complete the app configuration:
-
 
 ### Define the app data
 **TV Menu Collection** - UI tag: `tv_menu_collection`.
@@ -22,9 +21,9 @@ Defines the content of the home screen, the title will shown in the app. The hom
 
 ### Define the app style
 In the Apple TV VOD app you can define the app style by changing the app text color, background color or main background asset.
-At the moment, those three parameters are set by "admin extentions". In the future it will move to ZAPP style settings.
+At the moment, those three parameters are set by "admin extensions". In the future it will move to ZAPP style settings.
 
-The json extentions should be:
+The JSON extensions should be:
 ```
 [
 {"section":"advertising","entities":["app"],"type":"text","key":"apple_tv_text_color"},
@@ -32,3 +31,8 @@ The json extentions should be:
 {"section":"advertising","entities":["app"],"type":"image","key":"apple_tv_background_image"}
 ]
 ```
+
+### Make sure you follow the Apple TV project plan guidelines
+
+Duplicate the following <a href="https://docs.google.com/document/d/1Vbs-3P5YR_fadz7nJDOD_OHcGunpeUW6IBVDYg5vsxc/edit" target="_blank">guidelines doc</a>
+into the Google Drive production folder to keep track of the project status.
