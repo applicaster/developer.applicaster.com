@@ -8,6 +8,8 @@ general:
 dependencies:
   pre:
     - npm install -g npm@3.3.9
+  override:
+    - npm install
 deployment:
   production:
     branch: developer2
