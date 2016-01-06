@@ -29,7 +29,7 @@ The implementation and API reference is document below at the *usage*  section o
 > Note: See the **Deploying To Production** section to see how to host your templates for production use.
 
 
-### Questions Editor js SDK (BETA)
+### Questions Editor js SDK
 
 Applicaster Questions Editor SDK provides a way to build your own question editor template and to hook it into the Applicaster’s Question service. Using the SDK the editor can access and save questions without the need of any backend capabilities.
 
@@ -46,7 +46,7 @@ on an HTML form to a mini-app that presents Live previews while configuring the 
 To use the SDK you need to include the following in your editor HTML:
 
 ```html
-<script src=“https://cms.applicaster.com/assets/sdks/questions_sdk.v0.1.js”></script>
+<script src=“https://cms.applicaster.com/assets/sdks/questions_sdk.v1.js”></script>
 ```
 
 ### API Reference
@@ -84,6 +84,42 @@ Applicaster.QuestionsSDK.uploadFile()
   // catch errors
   console.log(error)
 });
+```
+
+#### QuestionsSDK.getAccountId()
+Get the account id
+
+```javascript 
+Applicaster.QuestionsSDK.getAccountId()
+.then(function(accountId) {
+  //populate the account id
+  console.log(accountId)
+})
+.catch(function(error) {
+  // catch errors
+  console.log(error)
+});
+```
+
+#### QuestionsSDK.getEnvironment()
+Get the current environment name of the editor
+```javascript 
+Applicaster.QuestionsSDK.getEnvironment()
+.then(function(environment) {
+  //populate the environment name
+  console.log(environment)
+})
+.catch(function(error) {
+  // catch errors
+  console.log(error)
+});
+```
+
+#### QuestionsSDK.version()
+Get the current environment name of the editor
+```javascript 
+Applicaster.QuestionsSDK.version()
+//populate the version of SDK
 ```
 
 ### Callbacks
