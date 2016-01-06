@@ -1,5 +1,12 @@
 # Zapp Release Notes
 
+## 1.7.0 Bulk Upload - (Jan 6, 2016)
+
+* You can now upload all assets in a bulk using zip file.
+> Note: folder structure, file names and sizes are crucial for a successful upload.
+* Apps home new UI. + Option for searching the apps.
+
+
 ## 1.6.0 L1 - (Dec 23, 2015)
 
 ## New Features
