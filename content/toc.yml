@@ -203,9 +203,17 @@
   type: Release Notes
   owner: g.guy@applicaster.com
 
+- folder: zapp-project
+  internal: true
+  title: Zapp App Project Process
+  description: >
+    The following document describes the process and material needed to create an App in a Zapp
+  type: Technical
+  owner: g.guy@applicaster.com
+
 - folder: zapp-manual
   internal: true
-  title: DRAFT Zapp Configuration Manual
+  title: Zapp Configuration Manual
   description: >
     This manual was created to guid Applicaster employees on how to create and
     set up a new app for a new account.
