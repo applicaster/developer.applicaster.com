@@ -1,12 +1,12 @@
-# iOS - Integrate Applicaster Feed by CocoaPods
+
++ # iOS - Integrate Applicaster Feed by CocoaPods
 This document will explain how to add the Applicaster SDK using CocoaPods to your project   
 
 **A few notes:**
 ***
-+ Applicaster iOS SDK Requires Xcode 7.1, deployment target 7.0 or above and has 64 bit support (valid architectures - armv7, arm64).
-+ It uses CocoaPods as a distribution platfrom and to manage 3rd party dependencies.
++ Applicaster iOS SDK Requires Xcode 7.1, deployment target 7.0 or above and has 64 bit support (valid architectures - armv7, arm64)
++ It uses CocoaPods as a distribution platfrom and to manage 3rd party dependencies
 + A demo project can be found on [GitHub](https://github.com/applicaster/ApplicasterFeedDemo-iOS)
-
 
 **3rd party libraries**
 ***
@@ -16,9 +16,10 @@ The following libraries are directly linked with the Applicaster library:
 + Zipkit 1.0.2  
 + SHMKit (commit 7a964057e218d1582a3c91e268755cdd9538bfcb)  
 + CSURITemplate Kit 0.4  
-+ Appoxee 3.0  
++ Appoxee 3.2.7  
 + FreeWheel  
 + ePlanning  
++ AWS 1.71
 
 If these libraries cause duplicate symbols in your code - please notify us and we will also move it to a Pod.
 
@@ -27,15 +28,15 @@ The following Pods are used by Applicaster:
 + FBSDKCoreKit = 4.7.0
 + FBSDKLoginKit = 4.7.0
 + FBSDKShareKit = 4.7.0
-+ google-cast-sdk ~> 2.5.2
-+ GoogleAnalytics-iOS-SDK ~> 3.10
-+ Google-Mobile-Ads-SDK ~> 6.11.1
-+ HockeySDK ~> 3.6
-+ FlurrySDK ~> 5.4
-+ Mixpanel ~>2.9.0
-+ comScore-iOS-SDK
-+ AFNetworking ~> 2.4
-+ TTTAttributedLabel ~> 1.13.1
++ google-cast-sdk = 2.5.2
++ GoogleAnalytics = 3.14.0
++ Google-Mobile-Ads-SDK = 6.11.1
++ HockeySDK = 3.6.4
++ Flurry-iOS-SDK = 7.3.0
++ Mixpanel = 2.9.0
++ comScore-iOS-SDK = 3.1509.15
++ AFNetworking = 2.4.1
++ TTTAttributedLabel = 1.13.1
 
 **Applicaster SDK integration guide**
 ***
@@ -51,11 +52,9 @@ The following Pods are used by Applicaster:
 7. The APFeed and APCrossmates Pods are also available (note that they already include a reference to the required core Applicaster Pod so you may omit it):  
     `pod 'APFeed'`  
     `pod 'APCrossmates'`  
-8. The Applicaster SDK also depends on the following `Amazon SDK` Pod which must be added:  
-    `pod 'AWSiOSSDK', '1.7.1'` 
-9. Using *terminal*, with your project root directory as the *working path*, run `pod install`. This will download all the necessary files which are required to integrate the Applicaster SDK into your project. Visit the CocoaPods web page for more information.
-10. You will notice the CocoaPods installer automatically created a new Xcode `workspace`, into which your original project was added with an additional `Pods` project.
-11. Due to a limitation with the required specific version of the `Amazon SDK` Pod, it is necessary to make **recursive** the `HEADER_SEARCH_PATHS` that points to the headers of the generated `AWSiOSSDK` target in the automatically created `Pods` project in your workspace (otherwise you will receive a compile error).
+8. Using *terminal*, with your project root directory as the *working path*, run `pod install`. This will download all the necessary files which are required to integrate the Applicaster SDK into your project. Visit the CocoaPods web page for more information.
+9. You will notice the CocoaPods installer automatically created a new Xcode `workspace`, into which your original project was added with an additional `Pods` project.
+10. Due to a limitation it is necessary to make **recursive** the `HEADER_SEARCH_PATHS` that points to the headers of the generated `Applicaster`, `APFeed`, `APCrossmates` frameworks in your project target (otherwise you will receive a compile error due to missing headers).
 
 **Other required configurations**
 ***
