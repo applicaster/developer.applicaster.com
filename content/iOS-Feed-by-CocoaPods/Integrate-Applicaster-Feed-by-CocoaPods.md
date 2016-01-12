@@ -95,13 +95,13 @@ The following headers should be included in the files which access the Applicast
 #import <Applicaster/APApplicaster.h>
 #import <ApplicasterCore/ApplicasterCore.h>
 ```  
-  
+
 **AppDelegate:**
 
 + Add implementation for `APApplicasterControllerDelegate`
 + Add the following properties:
 ```objective-c
-    // These properties will help forwarding launch information and recieved URL scheme 
+    // These properties will help forwarding launch information and recieved URL scheme
     // after Applicaster Controller does it's initial loading
     @property (nonatomic, strong) NSURL *appLaunchURL;
     @property (nonatomic, strong) NSDictionary *remoteLaunchInfo;
@@ -123,7 +123,7 @@ The following headers should be included in the files which access the Applicast
 
 + In case no deep linking is done by the app, add the following to the `AppDelegate`:
 ```objective-c
-- (BOOL)application:(UIApplication *)application
+  (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation
@@ -225,7 +225,7 @@ The following headers should be included in the files which access the Applicast
     {
         self.feedButton.enabled = YES;
     }
-    else 
+    else
     {
         self.feedButton.enabled = NO;
     }
@@ -250,7 +250,7 @@ Applicaster Feed supports multiple timelines (feeds), in order to handle them a 
 - (IBAction)feedButtonTapped:(id)sender
 {
     [[APTimelinesManager sharedManager] presentFeedWithTimelineID:<Timeline id> completionHandler:^(BOOL success) {
-        
+
     }];
 }
 ```
