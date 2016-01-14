@@ -70,6 +70,33 @@ Applicaster.QuestionsSDK.get()
 });
 ```
 
+
+#### QuestionsSDK.getQuestions()
+Get questions index ordered by last (limit to 50).
+You will find each question includes `editorUrl` - URL to editor template and `templateUrl`, client template url with question data encoded within the query.
+
+```javascript 
+Applicaster.QuestionsSDK.getQuestions()
+.then(function(questions) {
+  console.log(questions)
+  //Here is an example of a array of questions object:
+  //[{
+    //editorUrl: "https://...editor/index_min.html?json=01"
+    //extensions: Object
+    //id: "77db1427-0775-4895"
+    //name: ""
+    //refs: Array[2]
+    //state: "opened"
+    //templateUrl: "http://..template/index.html?appli-payload=eyJxdWVzdG.."
+    //text: "Question title"
+  //}]
+})
+.catch(function(error) {
+  // catch errors
+  console.log(error)
+});
+```
+
 #### QuestionsSDK.uploadFile()
 Upload an image file using Applicaster Starlight CMS file uploader dialog
 and get back the URL to the uploaded file 
