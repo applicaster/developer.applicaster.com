@@ -1,5 +1,22 @@
 # Zapp Release Notes
 
+## 1.8.0 Various New Features - (Jan 30, 2016)
+
+## New Features
+* When building a version, we added an indication that shows if the build is in process, and we prevent users of building another version while a build is currently in process.
+* Finally (!) there is no need to copy fields from other systems when creating a new version/new App. Bucket, Broadcaster, Api private key are pulled automatically. The configuration process is a little bit easier.
+* Less configuration is needed - Now, when creating a new app it automatically creates the relevant apps in the AIS. All push certificates/keys are configured via Zapp.
+* Adding Zapp Audit. On the top left corner, there is a small flag. Clicking on it will lead you to a section that will show you each action that was done in the system. Now every step that was done has a name behind it.
+* Adding the templates section. Through this section you can view, add and update exisiting templates status. Just make sure that the template was added to the code.
+* You can now mark if a version is using a Video splash or a static image splash and upload the relevant file.
+* Auto retry on build timeouts (Backend)
+* Crash log ID can be set when creating or updating an app.
+* For developers - added the option to view the params that are sent to CircleCi build and use it locally for development and testing.
+* Adding breadcrumbs to all app version screens.
+* Bug Fix - Fixing the strange behaviour that was changing the color to the word transparent when setting transparent RGBA or HEX value.
+* Bug Fix - Fixing issue that allowed saving an empty color.
+
+
 ## 1.7.0 Bulk Upload - (Jan 6, 2016)
 
 * You can now upload all assets in a bulk using zip file.
