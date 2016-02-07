@@ -4,7 +4,7 @@ This document will explain how to add the Applicaster SDK using CocoaPods to you
 
 **A few notes:**
 ***
-+ Applicaster iOS SDK Requires Xcode 7.1, deployment target 7.0 or above and has 64 bit support (valid architectures - armv7, arm64)
++ Applicaster iOS SDK Requires Xcode 7.2, deployment target 8.0 or above and has 64 bit support (valid architectures - armv7, arm64)
 + It uses CocoaPods as a distribution platfrom and to manage 3rd party dependencies
 + A demo project can be found on [GitHub](https://github.com/applicaster/ApplicasterFeedDemo-iOS)
 
@@ -28,14 +28,13 @@ The following Pods are used by Applicaster:
 + FBSDKCoreKit = 4.7.0
 + FBSDKLoginKit = 4.7.0
 + FBSDKShareKit = 4.7.0
-+ google-cast-sdk = 2.5.2
 + GoogleAnalytics = 3.14.0
-+ Google-Mobile-Ads-SDK = 6.11.1
-+ HockeySDK = 3.6.4
++ Google-Mobile-Ads-SDK = 7.6.0
++ HockeySDK = 3.8.5
 + Flurry-iOS-SDK = 7.3.0
-+ Mixpanel = 2.9.0
++ Mixpanel ~> 2.9.0
 + comScore-iOS-SDK = 3.1509.15
-+ AFNetworking = 2.4.1
++ AFNetworking = 2.6.3
 + TTTAttributedLabel = 1.13.1
 
 **Applicaster SDK integration guide**
