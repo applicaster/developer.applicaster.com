@@ -63,7 +63,6 @@ https://docs.google.com/a/applicaster.com/document/d/1GN8SvWybBN0NHXh7QcoefJO4gE
 
 ## Zapp Process
 
-* Send custom fonts to Gavri (if doesn't exist in Zapp)
 * Account Creation and setup http://developer.applicaster.com/docs/internal/zapp-manual
 * Add CMS Content https://docs.google.com/a/applicaster.com/document/d/1MRQLA74-PRst3wDlKtJueMcs-5onf-5GmUXy5bjuS3M/edit?usp=sharing
 * Zapp App Customization based on Style Guides https://drive.google.com/a/applicaster.com/folderview?id=0Bz61HeYk8FoKeDdFYXpxcjlYaUE&usp=sharing
