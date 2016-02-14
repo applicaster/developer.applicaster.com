@@ -63,25 +63,6 @@ Go back to the Broadcaster section under Management - and choose the Content Cat
 
 ![](./broadcaster2.png)
 
-
-## Create a New App (Applicaster2 Tab)
-Go to Management -> Apps -> New
-
-** If you are creating both iOS and Android apps you should do the following process twice - one for each platform.
-
-* Give your new app a name.
-* Choose Identifier - this will be used as the unique identifier in the AppStore or the GooglePlay store. The name should be as follows com.<app_name>  where <app_name> should be replaced with the desired app name - use lowercase letters and numbers only.
-
-* Choose the desired store (only iOS or Android are currently supported).
-* Pick the account you just created.
-* Give the app a URL scheme - you can use the same <app_name> you used above - but make sure that you put the same scheme for both the Android and iOS apps you create.
-
-
-![](./new_app.png)
-
-![](./url-scheme.png)
-
-
 ## Create a New App phase 1 (Zapp Tab)
 Click on the ’New App’ button
 Choose the account you created and give your app a name - **name should not contain spaces or special characters**.
@@ -111,7 +92,7 @@ Click on the button to create new version.
 > If there is already a version created for this app - you'll see another field called 'Import Settings From' - please use the ‘SDK’ option.
 
 ### Fill out optional fields
-* In the URL scheme put the same URL scheme you put when you created the app on Applicaster2 (earlier in the manual).
+* Give the app a URL scheme - you can use the same <app_name> you used above - but make sure that you put the same scheme for both the Android and iOS apps you create.
 * Facebook App ID - Please contact support if you don’t know how to set a Facebook App ID.
 * Twitter API Key - Please contact support if you don’t know how to set Twitter.
 * Twitter API Secret - Please contact support if you don’t know how to set Twitter.
