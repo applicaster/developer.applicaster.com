@@ -1,4 +1,13 @@
 # Zapp Release Notes
+## 1.9.0 Various New Features - (Feb 14, 2016)
+
+## New Features
+* Now you can upload custom fonts to App when creating or editing it. No need for any PR or any additional work.
+* There is no need to create the apps on Applicaster2 anymore. Apps are created when creating new app on Zapp, or creating a new version (and the app does not exist on Applicaster2 server).
+
+## Bug Fixes
+* Bug Fix - Fix bug the ask to upload release certificates every time trying to build a new release version.
+* Some other backend bug fixes.
 
 ## 1.8.0 Various New Features - (Jan 30, 2016)
 
