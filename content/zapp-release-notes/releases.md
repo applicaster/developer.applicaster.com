@@ -1,4 +1,15 @@
 # Zapp Release Notes
+
+## 1.10.0 Apple TV - (Feb 23, 2016)
+
+## New Features
+* You can configure and build APPLE TV versions. Create new tvOS SDK and customize your app.  
+* Remote configurations - when creating an app it creates a remote configuration file consists of styling, assets, localization and general configuration.
+
+## Bug Fixes
+* Bug Fix - Fix bug that did not recognize non image asset if default was not uploaded.
+* Some other backend bug fixes.
+
 ## 1.9.0 Various New Features - (Feb 14, 2016)
 
 ## New Features
