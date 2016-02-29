@@ -331,6 +331,15 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
+-folder:applicaster-analytics-service
+ internal: true
+ title: Applicaster Analytics Service
+ description: >
+    This technical document is intended to explain the role and architecture of Applicaster Analytics Service
+ type: Technical
+ owner: y.osteen@applicaster.com
+
+
 "Product Guidelines":
 - folder: product-release-checklist
   internal: true
