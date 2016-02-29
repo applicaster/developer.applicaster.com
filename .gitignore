@@ -6,3 +6,4 @@ dist/**
 public-toc.json
 internal-toc.json
 npm-debug.log
+.DS_Store
