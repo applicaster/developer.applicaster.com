@@ -55,6 +55,7 @@ Pod sub dependencies by Applicaster SDK:
 #### Other required configurations
 
 When compiling with iOS 9 BaseSDK:
++ Set `Enable Bitcode` to `No` (Selected Target-->Build Settings-->Build Options-->Enable Bitcode)
 + Add the following entry to your target's Info.plist:
 ```plist
     <key>NSAppTransportSecurity</key>
@@ -89,16 +90,13 @@ When compiling with iOS 9 BaseSDK:
 
 The following header should be included in the files which access the Applicaster Feed API:
 
-++objective-c++
+__objective-c__
 ```objective-c
 #import <Applicaster/APApplicaster.h>
 ```
 
-++swift++  
-Add bridging `<#Target-Name>-Bridging-Header.h` if it dosen't exist in your project.
-```objective-c
-#import <Applicaster/APApplicaster.h>
-```
+__swift__  
+Add bridging `<#Target-Name>-Bridging-Header.h` if it dosen't exist in your project. Add the objective-c header to bridging header.
 
 **AppDelegate:**
 
@@ -254,7 +252,7 @@ The values for the following keys will be provided by Applicaster `APAccountID`,
 }
 ```
 
-###Using multiple timelines
+### Using multiple timelines
 
 Applicaster Feed supports multiple timelines (feeds), in order to handle them a small change should be done as both the launch command and the notification for the feed status change should be checked for the relevant timeline.
 
@@ -298,7 +296,7 @@ Applicaster Feed supports multiple timelines (feeds), in order to handle them a 
 }
 ```
 
-###Pulling Episodes for a specific timeline
+### Pulling Episodes for a specific timeline
 
 Applicaster Feed allows you to pull all the available episodes for a specific timeline. You can use this ability only for retrieving episodes from a timeline checked as "Live" in Applicaster's management system.
 One possible usage of this ability is creating a custom page and promote live/future episodes, for example.
@@ -320,7 +318,7 @@ One possible usage of this ability is creating a custom page and promote live/fu
 }
 ```
 
-###Analytics
+### Analytics
 
 + In order to get all events from Feed, all you have to do is listen to our user default notification named `kAPFeedAnalyticsNotification`:  
 ```objective-c
