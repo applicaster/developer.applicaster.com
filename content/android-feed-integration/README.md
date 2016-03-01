@@ -17,7 +17,7 @@ Now you can use this sample as a reference for your integration.
 1. Add the Feed dependencies to your project.
 
 ```
-   compile ('com.applicaster:feed_android:3.5.0')
+   compile ('com.applicaster:feed_android:3.7.0')
 ```
 
 2.
@@ -55,7 +55,7 @@ allprojects {
 
 Use the following link:
 
-[Integrating Applicaster SDK](https://github.com/applicaster/android-sdk-dist/blob/master/README.md)
+[Integrating Applicaster SDK](http://developer.applicaster.com/docs/public/android-applicaster-sdk-integration)
 
 
 <a name="Integrate Feed SDK"/>
