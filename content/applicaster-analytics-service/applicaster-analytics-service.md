@@ -3,9 +3,8 @@
 1. [About](#about)
 2. [Terminology](#terminology)
 3. [Architecture](#architecture)
-4. [Contributing](#contributing)
-5. [Environment Variables](#environment-variables)
-6. [Run Locally](#run-locally)
+
+
 ## About
 #### Why?
 Enhance applicaster's products with analytics, to provide transperancy for
@@ -61,39 +60,7 @@ the same name.
 3. [Analyzer](#architecture)
   * API endpoint: `/analyzer/...`
 ![architecture][architecture sketch]
-## Environment Variables
-* `AWS_ACCESS_KEY_ID`
-* `AWS_SECRET_ACCESS_KEY`
-* `AWS_BUCKET`
-* `AWS_PATH_ACCOUNTS_GATS_MAPPING`: path at `S3` to configuredGATMapping
-* `AWS_PATH_PREFIX`
-* `GOOGLE_ANALYTICS_OAUTH_REDIRECT_URL`
-* `GOOGLE_CLIENT_ID`
-* `GOOGLE_CLIENT_SECRET`
-* `GOOGLE_ANALYTICS_API_VERSION`: the desired API verion to query.
-* `GOOGLE_ANALYTICS_SCOPE_READ_ONLY`: the service asks the user for a read only access.
-* `MONGOLAB_URI`: path to mongodb uri
-* `NODE_ENV`
-## Run Locally
-#### prerequisites
-* Install [mongoDB][mongoDB]
-* Install [nodejs and npm][nodejs and npm] 
-* Configure [google developers console project][google developers console project]
-* Set local [.env][.env] file
-#### development
-```bash
-$ npm install
-```
-```bash
-$ npm run dev
-```
-#### test 
-```bash
-$ npm test
-```
-```bash
-$ npm run lint
-```
+
 [docs]: https://github.com/applicaster/applicaster-analytics-service/tree/master/docs
 [authentication docs]: https://github.com/applicaster/applicaster-analytics-service/blob/master/docs/components/authentication.md
 [architecture sketch]: https://github.com/applicaster/applicaster-analytics-service/blob/master/docs/assets/architecture.png?raw=true

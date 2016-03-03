@@ -331,7 +331,7 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
--folder:applicaster-analytics-service
+- folder: applicaster-analytics-service
  internal: true
  title: Applicaster Analytics Service
  description: >
