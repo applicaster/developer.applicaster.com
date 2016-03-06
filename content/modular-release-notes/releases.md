@@ -13,7 +13,7 @@ Each version of the Modular product, offers new features that are supported and 
 - Transparent Webview on Player
 - Native Share
 - Landscape Smartphone
-- Validation Flow 
+- Validation Flow
 - Verification Flow
 - Broadcast Switch
 - Root API
@@ -45,7 +45,8 @@ Each version of the Modular product, offers new features that are supported and 
 - Validation Flow
 - Numbers Lock Flow
 - Numbers Lock templates
-- Verification Flow> E-Planning Ad Engine SDK update.
+- Verification Flow
+- E-Planning Ad Engine SDK update.
 
 ## 2.5.2 iOS
 
