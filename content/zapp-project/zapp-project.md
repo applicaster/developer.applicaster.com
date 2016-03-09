@@ -1,71 +1,93 @@
-# Zapp App Project Process
+# Zapp App Process
 
-The following document describes the process and material needed to create an App in a Zapp.
+This documents describes the process and materials needed to create an App in a Zapp.
 
+1. Pick a Zapp Layout
+2. Provide assets & styles 
+3. Create the Account 
+4. Fill out Zapp App Checklist
+5. Set up the CMS according to the Layout Configuration Guide
+6. Set up Zapp Customization (Assets, Fonts & Styles)
+7. Create Build + Download apps
+8. QA & Acceptance
+9. Submission
 
-## Project Overview (Project/Account Manager)
-* **Brief:** get a brief from the customer on the desired App
-* **Design Materials:** Get all the design materials the customer can provide
-	* Brand book
-	* Fonts
-	* images
-	* Does the customer have any limitation on image sizes/aspect ratios they can provide for the App? (this may eliminate some of the available Layouts)
-* **Content Type:** What type of content will be shown in the App?
-	* VOD
-	* Live Programs
-	* EPG
-	* Atom (Article, PhotoGallery, Video)
-	* HTML
-* **Content Tree:** What is the content tree (hierarchy)?
-* **App Screens:** What screens will be used:
-	* Home
-	* All Shows
-	* Show screen
-	* EPG (Single/Multichannel)
-	* Settings
-	* Live
-	* Generic Screens
-* **Features:** What features will be used in the App?
-	* Feed
-	* Special Category
-	* Ultimate Question
-	* Group Chat
-* **Content Upload:** How will the content get uploaded to the system?
-	* Manually
-	* Ingestion - the following link provides the documentation needed for content ingestion http://developer.applicaster.com/docs/public/vod-ingestion-xml
-* **Integrations:** Are there any 3rd party integrations?
-	* Ooyala
-	* The platform
-	* Data Factory
-	* Other
-* **Analytics:** What analytics providers does the customer use/would like to use.
+### The Process
+### 1. Pick a Zapp Layout
+- Define which existing Zapp Layout you wish to use.
+- Base your decision on the layouts supported features and limitations and match it to your customer’s needs.
+- Existing Zapp Layouts (L1-L12, except L11) are both UI and feature-dependent. This means only certain layouts will have support for specific screens, features or content types, such as VODs, Live Programs, EPG, ATOM (Article, Photo Gallery and Video) along with HTML.
+- L11 and future Zapp Layouts will be composed of all the possible screens & content types any customer could use/need:
+    -   Screens:
+        - Homescreen
+        - All Shows
+        - Show Screen
+        - Article Screen
+        - Video Article Screen
+        - Photo Gallery Screen
+        - EPG
+        - Mixed Category Screen
+        - Breaking News Screen
+    - Content Types:
+        - VODs
+        - Programs
+            - Live
+            - Future
+            - Past
+        - EPG
+        - ATOM 
+            - Article
+            - Photo Gallery
+            - Video 
 
+### 2. Provide Assets & Styles
+-   Work with a designer to create an adaptation of the layout for your app. Provide the designer with:
+    - Layout PSD’s from [this folder](https://www.dropbox.com/sh/ypssnz1b6lz0u80/AABXTnPpE_x47cG-GN_c02zoa?dl=0). 
+    - Any design materials provided by the customer (Brand guidelines, fonts, etc.).
+    - Downloaded Zapp Assets from an existing app based on the chosen Layout or alternatively, there are white-label assets under the respective Layout folder in [this link](https://drive.google.com/folderview?id=0Bz61HeYk8FoKWmhKRm9MMnNCV28&usp=sharing). 
+    - Define the required screens based on the existing Zapp Layout’s availability.
 
-## App Checklist
-In the following link you will find a template for each app checklist. In order to submit a version to the store this checklist must be filled by the PM/Account Manager.
-https://docs.google.com/a/applicaster.com/document/d/1GN8SvWybBN0NHXh7QcoefJO4gElH-lnXm42CNbWjelI/edit?usp=sharing
+- The designer should provide you with: 
+    - Adapted design based on the layout (screen PNGs and PSDs).
+    - Assets folder for iOS and/or Android (each file should be named “assets.zip”).
+    - The designer should respect the naming convention for the file and the assets, the sizes and their order based on the assets file you provided.
+    - Fonts in OTF & TTF formats.
 
-## Design
-* Pick a layout from the existing Zapp layouts based on the customer information and design limitations.
-* Provide the designer with the following:
-	* Chosen Layout PSD from the following folder:
-  https://www.dropbox.com/sh/ypssnz1b6lz0u80/AABXTnPpE_x47cG-GN_c02zoa?dl=0
-	* Any design materials provided by the customer
-	* Required screens
-	* Content Type - VOD, Live Programs, EPG, Atom (Article, PhotoGallery, Video), HTML
-
-
-  * Once the design is approved by the customer provide the designer with the white label asset folder of the chosen Layout. The assets folder can be found in the following link under the chosen Layout folder.   https://drive.google.com/folderview?id=0Bz61HeYk8FoKWmhKRm9MMnNCV28&usp=sharing
-	* Style Guides
-	* Design Player Dock Assets:
-	https://drive.google.com/a/applicaster.com/folderview?id=0Bz61HeYk8FoKS2FKeDF3ZXhpRkk&usp=sharing
+### 3. Create the Account
+- Request Account Creation
+    - Please send an email to support and fill out [this template](https://docs.google.com/a/applicaster.com/spreadsheets/d/1huH5slEp9uWKhylRje88oOtORHo_ADgEjx-YM-8iQaY/edit?usp=sharing).
+    - Alternatively, if you want to create the account yourself, make sure you’ve received training from support and are authorized to do so - this is to avoid any future issues with your app - and make sure you always follow the latest documentation.
 
 
-## Zapp Process
+### 4. Fill out the Zapp App Checklist 
+- Create a copy of [this document](https://docs.google.com/a/applicaster.com/document/d/1GN8SvWybBN0NHXh7QcoefJO4gElH-lnXm42CNbWjelI/edit?usp=sharing) and fill it out.
+    - For Demo purposes: fill out the brief (p.1 -5).
+    - For Store versions: fill out the entire document.
 
-* Account Creation and setup http://developer.applicaster.com/docs/internal/zapp-manual
-* Add CMS Content https://docs.google.com/a/applicaster.com/document/d/1MRQLA74-PRst3wDlKtJueMcs-5onf-5GmUXy5bjuS3M/edit?usp=sharing
-* Zapp App Customization based on Style Guides https://drive.google.com/a/applicaster.com/folderview?id=0Bz61HeYk8FoKeDdFYXpxcjlYaUE&usp=sharing
-* Upload Assets to Zapp
-* Create Build
-* QA
+
+
+### 5. Set Up the CMS
+- Follow the Layout’s Configuration Guide - you may find the Configuration Guide within that Layout’s folder in our [Zapp Google Drive Folder](https://drive.google.com/open?id=0Bz61HeYk8FoKWmhKRm9MMnNCV28). Basically the process involves:
+    - Recreating the exact same VOD Library Content Hierarchy for that Layout,
+    - Configuring the exact same collections.
+- Additionally, it’s important to ingest or upload the content and assign it to the proper categories.
+- Configure:
+    - Feature Management
+    - Broadcaster Image Settings 
+    - Video Dock 
+    - VOD Configuration (CDN)
+
+### 6. Set Up Zapp Customization
+- Upload assets to Zapp
+- Upload font files if the app is using app-specific fonts. Otherwise, define fonts in Styles.
+- Customize Zapp Styles (fonts & colors) using the Style Guides provided in the Layout’s Configuration Guide in the [Zapp Google Drive Folder](https://drive.google.com/open?id=0Bz61HeYk8FoKWmhKRm9MMnNCV28).
+
+
+### 7. Create Build & Download the App
+
+### 8. QA & Acceptance
+- Make sure you properly QA the app.
+
+### 9. Submission
+
+

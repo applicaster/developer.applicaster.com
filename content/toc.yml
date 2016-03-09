@@ -200,7 +200,7 @@
   description: >
     The following document describes the process and material needed to create an App in a Zapp
   type: Technical
-  owner: g.guy@applicaster.com
+  owner: g.reffreger@applicaster.com
 
 - folder: zapp-manual
   internal: true
@@ -210,6 +210,15 @@
     set up a new app for a new account.
   type: Technical
   owner: g.guy@applicaster.com
+
+- folder: zappifying-layout
+  internal: true
+  title: Zappifying A Layout
+  description: >
+    This document intends to provide a clear guide for the product definition involved
+    in Zappifying a Layout.
+  type: Technical
+  owner: g.reffreger@applicaster.com
 
 "Content Ingestion":
 - folder: epg-ingestion
