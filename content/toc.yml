@@ -331,7 +331,7 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
-"Advertising"
+"Advertising":
 - folder: video-advertising-analytics
   internal: false
   title: Video Advertising Analytics
