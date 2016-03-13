@@ -348,6 +348,14 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
+"Advertising":
+- folder: video-advertising-analytics
+  internal: false
+  title: Video Advertising Analytics
+  description: >
+    This document describes the analytics event "Watch Video Advertisement" and outlines the associated properties
+  type: Technical
+  owner: y.osteen@applicaster.com
 
 "Product Guidelines":
 - folder: product-release-checklist
