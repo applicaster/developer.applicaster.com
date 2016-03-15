@@ -158,3 +158,93 @@ List is taken form: https://github.com/applicaster/achievement-center/blob/f3d44
 
     js2n.Achievement.userAction(options)
 ```
+
+### Morpheus Integration
+
+Morpheus is Applicaster’s internally developed analytics infrastructure tool used to pipe
+data from our products to analytics providers. Click [here][morpheus_release_notes] to
+learn more about it.
+
+#### Morpheus.emit(key, properties)
+
+Emit analytics events. The event will be piped to and handled on native client.
+
+**key** - Category and action of the event in the format of "Category: Action".
+It will appear in the console of our analytics providers as "Category: Action", except
+Google Analytics where "Catgory" will map to category, and "Action" to action.
+For example:
+
+* Most providers, the event will appear as: “Side Menu: Area Switched"
+* For Google Analytics, it will appear as Category is set to “Side Menu” and
+Action is set to “Area Switched".
+
+*best practice* - use the product name as the "Category".
+
+**properties** - The corresponding properties of the event key. The keys of the
+JSON object should be formatted as pascal case (*PascalCase*).
+
+```javascript
+var key = "Questionnaire: Answer Question";
+
+var properties = {
+  QuestionName: "Are you the one?",
+  QuestionID: "1",
+  QuestionnaireName: "blue pill or red pill?",
+  QuestionnaireID: "1",
+  AnswerText: "Yes",
+  AnswerCorrect: true,
+  TimeTaken: 1,
+  FeedName: "nebuchadnezzar",
+  FeedID: "1",
+  FeedEpisodeName: "reloaded",
+  FeedEpisodeID: "1",
+  TVShowName: "zion underground",
+  TVShowID: "1",
+}
+
+js2n.Morpheus.emit(key, properties);
+```
+
+#### Morpheus.updateUserProfile()
+
+Update user profile information. The old properties will be overwritten by the new ones.
+
+**userProperties** - The user properties information. The keys of the
+JSON object should be formatted as pascal case (*PascalCase*). Morevoer,
+properties which are not *custom properties* are called *special properties*.
+They are not required, but if delivered, should be written as follows:
+
+* Name
+* FirstName
+* LastName
+* UserName
+* Email
+* Phone
+
+```javascript
+var userProperties = {
+  "Name":"Neo",
+  "FirstName":"Thomas",
+  "LastName":"Anderson",
+  "Email":"t.anderson@metacortex.com",
+  "Phone":"1",
+  "Custom1": "1",
+  "Custom2": "2",
+  "custom3": "3",
+  "SocialIDs":{
+    "Facebook":{
+      "ID": "123",
+    },
+    "twitter":{
+      "ID": "123",
+    },
+    "google":{
+      "ID": "123",
+    }
+  }
+}
+
+js2n.Morpheus.updateUserProfile(userProperties);
+```
+
+[morpheus_release_notes]: http://developer.applicaster.com/docs/internal/morpheus_release_notes
