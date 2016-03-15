@@ -1,4 +1,18 @@
 # Zapp Release Notes
+## 1.11.0 Build Process Indicator - (March 15, 2016)
+
+## New Features
+* Better indicator for the build process. Once pressed on build version button, you will now have a more detailed indication which phase of the process the build is currently executing. It will allow you to go to a specific build on CircleCi to have more details.
+* Adding Attributes missing notice - When pressing on the build version button, you now have a notice that indicates if you are missing some attributes for the version, that might affect parts of the versions functionality. 
+* Allowing uploading multiple non-image assets for the same key for different screen sizes.
+* Adding `Media Type` option for asset to choose between Image and Non-Image asset type.
+* Adding versioning functionality - allowing the client to differentiate changes in Zapp remote configurations (localizations, styles, assets). This API allows the client to check if there were changes in the configurations of a version.
+* Analytics - Added `People` option to Mixpanel provider.
+
+## Bug Fixes
+* Bug Fix - Fix bug that failed Android build sending `drawable-universal` folder.
+* Bug Fix - Validation failed notice when creating version based on another version.
+* Some other backend and minor ui fixes.
 
 ## 1.10.0 Apple TV - (Feb 23, 2016)
 
