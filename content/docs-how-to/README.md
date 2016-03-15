@@ -34,11 +34,11 @@ Make sure your code is up to date by - run `git pull`
 Run `git checkout -b YOUR_BRANCH_NAME`
 
 ### Run the developer's documentation app locally
-Once the repo is cloned and your branch is created, run the following to install dependencies, and run the app localy. Node.js v4+ is required
+Once the repo is cloned and your branch is created, run the following to install dependencies, and run the app locally. Node.js v4+ is required
 ```bash
 $ npm install && PORT=4001 npm start
 ```
-you can then access the developer's documentation by opening http://localhost:4001 in a browser.
+You can then access the developer's documentation by opening http://localhost:4001 in a browser.
 
 ## How to create a new document
 
@@ -90,3 +90,22 @@ name can be anything you need but its file extension should be `.md`.
 
 You can add assets like images inside the folder you created and link to them
 relatively form your Markdown File.
+
+### preview the documentation locally
+To preview the documentation page you created, you need to run the following command in the terminal :
+```bash
+$ gulp
+```
+Then refresh the page at http://localhost:4001 and you will see the content you created.
+
+### submit your content
+Before doing this, make sure you are on the git branch you created earlier and not on the developer2 branch.
+Once you're satisfied with the documentation you've created, run the following command :
+
+```bash
+$ git add --all
+$ git commit -m 'my awesome documentation' // type any commit message you want here
+$ git push origin YOUR_BRANCH_NAME
+```
+
+Then [go to the github page here](https://github.com/applicaster/developer.applicaster.com), and submit a new pull request with YOUR_BRANCH_NAME.
