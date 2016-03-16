@@ -38,10 +38,10 @@ To obtain those variables values please refer to the applications section on the
 To run the app locally:
 
 ```bash
-$ npm start
+$ PORT=4001 npm start
 ```
 
-This will run the app on a local server at port 4000 - http://localhost:4001
+This will run the app on a local server at port 4001 - http://localhost:4001
 
 ### React development
 
