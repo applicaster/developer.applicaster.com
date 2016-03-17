@@ -10,9 +10,9 @@ Zappification of a layout should:
    - iOS
      - iPhone
      - iPad
-    - Android
-      - Smartphone
-      - Tablet
+   - Android
+     - Smartphone
+     - Tablet
 2. Have support for the following orientation:
     - LTR
     - RTL
