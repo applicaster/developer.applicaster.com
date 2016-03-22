@@ -12,8 +12,8 @@ const hasInternalPermissions = (request) => {
   let {data, globalRoles} = request.auth.credentials;
   return _.includes(globalRoles, INTERNAL_ROLE) || data.admin;
 }
-
-server.connection({ port: process.env.PORT });
+const port = process.env.PORT || 4001
+server.connection({port});
 
 server.register([require('vision'), require('inert'), { register: applicasterAccounts, options: {} }], () => {
 
