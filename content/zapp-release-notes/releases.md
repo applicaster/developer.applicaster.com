@@ -1,4 +1,18 @@
 # Zapp Release Notes
+## 1.12.0 Apple TV Subscription - (March 29, 2016)
+
+## New Features
+* We added the `Settings` section to Apple TV configuration screen. You can now set subscription for the app. Also allowing other sections in the Settings Menu.
+* Some UI changes to the home screen App Dashboard. Once you will upload an n iOS app launcher asset, it will appear in as the app icon.
+* Added private API end points - App Families and App Versions.
+* Add Mixpanel Engagement configuration to app analytics.
+* Lazy loading images on SDK assets and Version assets.
+
+## Bug Fixes
+* Bug Fix - Fixed the issue that did not allow to delete images that are not obligatory for the Apple TV app.
+* Bug Fix - There was a strange issue that was not copying the release versions files when creating a new version from existing, now it is solved.
+
+
 ## 1.11.0 Build Process Indicator - (March 15, 2016)
 
 ## New Features
