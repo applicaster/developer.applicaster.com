@@ -1,7 +1,7 @@
 # Collection ingestion
 
 ## Overview
-Collections are a way of group different type of items such as category, VOD item, channel, program.
+Collections are a way of group different VOD items.
 In order to make the collection creation process much faster applicaster allows for this process to
 happen in an automatic way from a remote URL. This URL must be inserted within the collection creation
 form and should point to an XML document with the correct structure.
@@ -44,9 +44,12 @@ These are the same for all resource types:
 | Element     | Description                                                          | Required | Types |
 |-------------|----------------------------------------------------------------------|----------|-------|
 | external_id | The item’s external ID that was sent in the content ingestion process| Yes      | all   |
-| position    | The item’s desired position in the collection                        | Yes      | all   |
 
 # Example
+
+The expected XML file could be defined in the same way the episode feed is defined today[^1]. The main
+difference is that the collection ingestion process ignores all attributes but the `type` &
+`external_id`. (in case you have this API implemented)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -54,22 +57,48 @@ These are the same for all resource types:
   <resource>
     <type>video</type>
     <attributes>
-      <external_id>video_1_id</external_id>
-      <position>2</position>
+      <title>Some episode 1</title>
+      <description>Description for this item</description>
+      <external_id>episode1</external_id>
+      <enabled>true</enabled>
+      <source>http://example.com/path/to/episode1.mp4</source>
+      <image_assets>
+        <image_asset>
+          <key>icon</key>
+          <url>http://example.com/path/to/episode1/icon.jpg</url>
+        </image_asset>
+        <image_asset>
+          <key>large_thumbnail</key>
+          <url>http://example.com/path/to/episode1/large_thumbnail.jpg</url>
+        </image_asset>
+      </image_assets>
     </attributes>
   </resource>
   <resource>
-    <type>category</type>
+    <type>video</type>
     <attributes>
-      <external_id>category_1_id</external_id>
-      <position>1</position>
+      <title>Some episode 2</title>
+      <description>Description for this item</description>
+      <external_id>episode2</external_id>
+      <enabled>true</enabled>
+      <source>http://example.com/path/to/episode2.mp4</source>
+      <image_assets>
+        <image_asset>
+          <key>icon</key>
+          <url>http://example.com/path/to/episode2/icon.jpg</url>
+        </image_asset>
+        <image_asset>
+          <key>large_thumbnail</key>
+          <url>http://example.com/path/to/episode2/large_thumbnail.jpg</url>
+        </image_asset>
+      </image_assets>
     </attributes>
   </resource>
-</resources>
-```
+</resources>```
 
-When the collection ingestion doesn't find a resource with the requested external ID it will simply
-be ignored i.e not added to the collection
+When the collection ingestion doesn't find a resource with the requested `external_id` it will simply
+be ignored i.e not added to the collection.
 
 
-© 2016 Applicaster LTD. All rights reserved.
+[^1]: In case you have already implemented the episode feed XML then the it can be used for the collection
+ingestion without any changes needed to be done.
