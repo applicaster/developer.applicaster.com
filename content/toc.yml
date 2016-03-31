@@ -211,7 +211,7 @@
 "Stitcher":
 - folder: questionnaire-release-notes
   internal: false
-  title: Questionnaire Release Notes
+  title: Stitcher Release Notes
   description: >
     Release notes of the Stitcher product ordered by release date.
   type: Release Notes
