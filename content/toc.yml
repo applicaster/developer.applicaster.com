@@ -64,6 +64,55 @@
   type: Technical
   owner: l.deutsch@applicaster.com
 
+"Live+":
+- folder: liveplus_release
+  internal: false
+  title: Live+ release notes
+  description: >
+    Release notes for Live+
+  type: Release Notes
+  owner: f.roland@applicaster.com
+
+- folder: liveplus_api
+  internal: true
+  title: Live+ API documentation
+  description: >
+    This document describes how the Live+ display back end works
+  type: Technical
+  owner: f.roland@applicaster.com
+
+- folder: liveplus_architecture
+  internal: true
+  title: Live+ - App architecture
+  description: >
+    This document describes the Live+ app architecture and database structure
+  type: Technical
+  owner: f.roland@applicaster.com
+
+- folder: liveplus_web_integration
+  internal: false
+  title: Live+ - web integration
+  description: >
+    This document describes how to integrate on the web
+  type: Technical
+  owner: f.roland@applicaster.com
+
+- folder: liveplus_ios_integration
+  internal: false
+  title: Live+ - iOS integration
+  description: >
+    This document describes how to integrate Live+ on an iOS app.
+  type: Technical
+  owner: f.roland@applicaster.com
+
+- folder: liveplus_zapp_integration
+  internal: false
+  title: Live+ - integration in Zapp app
+  description: >
+    This document describes how to integrate Live+ on Zapp apps
+  type: Technical
+  owner: f.roland@applicaster.com
+
 "Crossmates":
 - folder: ios-crossmates-integration
   internal: false
@@ -159,22 +208,22 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
-"Questionnaire":
+"Stitcher":
 - folder: questionnaire-release-notes
-  internal: true
-  title: Questionnaire Release Notes
+  internal: false
+  title: Stitcher Release Notes
   description: >
-    Release notes of the questionnaire product ordered by release date.
+    Release notes of the Stitcher product ordered by release date.
   type: Release Notes
-  owner: l.deutsch@applicaster.com
+  owner: a.levy@applicaster.com
 
 - folder: questionnaire-analytics
-  internal: true
-  title: Questionnaire Analytics Document
+  internal: false
+  title: Stitcher Analytics Document
   description: >
-    An internal document describing the different analytics measured on the questionnaire product.
+    An internal document describing the different analytics measured on the Stitcher product.
   type: Technical
-  owner: l.deutsch@applicaster.com
+  owner: a.levy@applicaster.com
 
 "Modular":
 - folder: modular-release-notes

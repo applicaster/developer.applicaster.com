@@ -1,19 +1,22 @@
-# Questionnaire Release Notes
+# Stitcher Release Notes
 
 ## Product Description
 
-The “questionnaire” product allows customers to create a flow including introduction/instruction pages, optional login, and a flow of one or several interactive questions, one after the other. 
-This product is especially good for sponsored activities or campaigns with prizes, since there is great real estate before the interactions.Content Manager can easily define and make changes - visibility of the start page and registration form and the list of questions. 
+The “Stitcher” product allows customers to create a flow including introduction/instruction pages, optional login, and a flow of one or several interactive questions, one after the other. 
+
+This product is especially good for sponsored activities or campaigns with prizes, since there is great real estate before the interactions.
+
+Content Manager can easily define and make changes - visibility of the start page and registration form and the list of questions. 
 
 
 ## Alpha Release (December, 2015)
 
-The Alpha release is only released to one customer.
-Once we receive feedback from customer and examine product analytics, we will be able to make the necessary changes (if any) and continue to a beta release for more customers.
+The Alpha release is only released to a few customers upon request.
+Once we receive feedback from customers and examine product analytics, we will be able to make the necessary changes (if any) and continue to a beta release for more customers.
 
 * Ability to add intro images
 * Ability to log-in with custom fields of name/phone/email 
-* Ability to have a questionnaire *without* login
+* Ability to have a Stitcher *without* login
 * Ability to select which login fields you want (out of name/phone/email only)
 * Ability to connect ultimate questions one after another
 * RTL support
