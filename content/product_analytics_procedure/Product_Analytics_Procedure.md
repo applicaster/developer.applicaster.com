@@ -6,9 +6,15 @@ Consumer products (like the Feed) and customer products (like Starlight) involve
 
 This section outlines the process for ensuring we get to take advantage of the benefits of product analytics. When you kick off the planning of a new product or feature, reach out to me (Yoni O) and we’ll go through this procedure together for as long as you’d like.
 
-Just like our products, our processes at Applicaster should be agile and iterative, so I am happy to receive feedback for how to improve this procedure and associated documentation. Later iterations of this documentation will include more visual elements.
+Just like our products, our processes at Applicaster should be agile and iterative, so I am happy to receive feedback for how to improve this procedure and associated documentation. 
 
-### Steps of Procedure
+The diagram below illustrates a summary-level explanation of the procedure:
+
+![my image](https://github.com/applicaster/developer.applicaster.com/tree/{YOUR_BRANCH_NAME}/content/product_analytics_procedure/PAP-infographic.png)
+
+The following manual provides more detailed explanations and resources for each step of the procedure.
+
+### Procedure Manual
 
 I recommend going through this process when you are brainstorming and planning your product/feature. Defining your goals, and how to measure them, usually leads a sharper connection between your requirements and your business goals, and often even leads to new requirements. 
 
@@ -48,27 +54,26 @@ I've created a [template product analytics worksheet](https://docs.google.com/a/
             * Understand the product itself better
         * In many cases, it is better not to assume. You may want to actually ask the customers themselves.
     * If you have any goals that do not arise in response to these questions, make sure to include them in the worksheet.
-    * We will work through together the first few times you do this, and afterwards as often as you'd like. For reference, you can see an example of this first step in the example file for Segmented Push found [here](https://docs.google.com/a/applicaster.com/spreadsheets/d/1uco0_oEBIU2SklnjtibaD--yTt2fjF10XpYbzM9hXI8/edit?usp=sharing)
+    * We will work through this together the first few times you do it, and afterwards as often as you'd like. For reference, you can see an example of this first step in the example file for Segmented Push found [here](https://docs.google.com/a/applicaster.com/spreadsheets/d/1uco0_oEBIU2SklnjtibaD--yTt2fjF10XpYbzM9hXI8/edit?usp=sharing)
 
-2. Map Goals to Solutions
+2. Find Solutions
     * Go through your list of goals, mapping each to a solution for how to address each goal. 
     * Often, the solution will require that you have events and event properties in place to track related behavior
     * You can use [this template](https://docs.google.com/a/applicaster.com/spreadsheets/d/1lFJC3-LLSrdQTW1rv0uN6C0KzdiAMy5mOr2jirNQPQg/edit?usp=sharing) to document the events.
         *  We will go through this process together and you can see an example how the file can be filled out [here](https://docs.google.com/a/applicaster.com/spreadsheets/d/18spieHHZYJDEN9LCxXlBiHCmd4SzpqhQ3ZIJNvwzJAA/edit?usp=sharing)
     *  Other goals might need solutions which are not standard events and event properties. 
         *  For example, if you want to examine behavior of subscribed users vs trial users, you will need to make sure there is a user level property describing the type of user.
-    *  Like all skills, mapping goals to measurement solutions will get easier with practice, and you may have to rely on me when you're not sure how to measure your goal, but with time you will find that identifying goals, and making sure there are solutions in place to measure those goals, will help you to build better products and our clients to use them more effectively. 
+    *  Like all skills, mapping goals to measurement solutions will get easier with practice, and you may have to rely on me when you're not sure how to measure your goal, but with time you will find that identifying goals, and making sure there are solutions in place to measure those goals, will help you to build better products and will help our clients to use them more effectively. 
     *  For reference, you can find an example of how goals are mapped to solutions within the worksheet in the second section of the example file [here](https://docs.google.com/a/applicaster.com/spreadsheets/d/1btYTCuFJz-X9uj4Gsqbk4f0hu4l4SUVGL2_1S8gg10I/edit?usp=sharing)
-3. Map Solutions to User Stories
+3. Place in Your Kanban
     * In order to ensure your solutions are put into place, you will need to incorporate them into your development requirements.
     * As such, once you've fully identified your solutions, make a list of them. You will find in practice that there are overlaps in your solution column, so it isn't a matter of copying the solutions column from your worksheet.
     * To illustrate, in the Segmented Push example, the list of solutions was:
         * [Segmented Push Events and Event Properties](https://docs.google.com/a/applicaster.com/spreadsheets/d/18spieHHZYJDEN9LCxXlBiHCmd4SzpqhQ3ZIJNvwzJAA/edit?usp=sharing)
         * Once JS-2-Morpheus API is built, send events and properties through Morpheus
         * Once User Properties are supported, send user property of "Segmented Push User" with possible values of "Yes" or "No"
-    * Many events will be associated with relevant user stories for your product. Make sure to go through all of your events and include them in your relevant user stories, linking to the file you created.
+    * Many events will be associated with relevant user stories for your product. Make sure to go through the events and event properties document and include your events in your relevant user stories, linking to the file you created.
     * For the remaining solutions, either copy and paste those into relevant tickets, or when more appropriate, create a separate ticket just for them.
-4. Integrate into development
     * By putting the requirements directly into your tickets, you will be able to help ensure that the developers are tracking everything you need, and that your QA processes consider the necessary measurement.
     * Whether you test via unit-testing, QA, or some other model, make sure your testing process takes these requirements into consideration. If you have questions on how to do so, Assaf Sagee and myself are available to provide guidance.
 4.  Document upon release for stakeholders
