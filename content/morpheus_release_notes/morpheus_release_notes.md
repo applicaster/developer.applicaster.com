@@ -4,6 +4,11 @@
 
 Morpheus enables Applicaster to remotely configure which analytics providers to send data to. Providers can be added and configuration fields can be changed without a new release, providing more flexibility and scalability around analytics.
 
+The infrastructure works as illustrated in the diagram below:
+
+![my image](https://github.com/applicaster/developer.applicaster.com/tree/developer2/content/morpheus_release_notes/morpheus-diagram.png)
+
+
 ### Release 1.0.1
 
 Support for:
