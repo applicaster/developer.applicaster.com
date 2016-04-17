@@ -6,7 +6,7 @@ Morpheus enables Applicaster to remotely configure which analytics providers to 
 
 The infrastructure works as illustrated in the diagram below:
 
-![my image](https://github.com/applicaster/developer.applicaster.com/tree/developer2/content/morpheus_release_notes/morpheus-diagram.png)
+![morpheus-diagram](./morpheus-diagram.png)
 
 
 ### Release 1.0.1
