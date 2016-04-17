@@ -406,6 +406,14 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
+- folder: midrolls
+  internal: false
+  title: Midrolls Release Notes
+  description: >
+    Release Notes for the midrolls product
+  type: Release Notes
+  owner: y.osteen@applicaster.com
+
 "Product Guidelines":
 - folder: product-release-checklist
   internal: true
