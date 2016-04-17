@@ -10,7 +10,7 @@ Just like our products, our processes at Applicaster should be agile and iterati
 
 The diagram below illustrates a summary-level explanation of the procedure:
 
-![my image](https://github.com/applicaster/developer.applicaster.com/tree/{YOUR_BRANCH_NAME}/content/product_analytics_procedure/PAP-infographic.png)
+![PAP-infographic](./PAP-infographic.png)
 
 The following manual provides more detailed explanations and resources for each step of the procedure.
 
