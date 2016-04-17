@@ -1,4 +1,4 @@
-# CrossMates -Analytics Events
+# CrossMates - Analytics Events
 
 Event Name | Insight
 --------------- | ---------------
