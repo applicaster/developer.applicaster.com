@@ -132,6 +132,14 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
+- folder: crossmates
+  internal: false
+  title: Crossmates Analytics
+  description: >
+    This is a documentation of the Crossmates analytics events.
+  type: Technical
+  owner: a.klein@applicaster.com
+
 "GroupChat":
 - folder: group-chat-setup
   internal: true
