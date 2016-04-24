@@ -15,12 +15,20 @@ This document links to the analytics documentation for Applicaster's consumer pr
 
 #### CrossMates
 
-[CrossMates - Analytics Events](https://docs.google.com/a/applicaster.com/document/d/1q9vJfGTruIRXPnIw0A9tr1_aMf0dq1ADXwPeNLvPb8U/edit?usp=sharing)
+[CrossMates - Analytics Events](http://developer.applicaster.com/docs/public/crossmates)
+
 
 #### GroupChat
 
 [GroupChat - Analytics Events](http://developer.applicaster.com/docs/public/group-chat-analytics)
 
+
 #### Questionnaire
 
 [Questionnaire - Analytics Events](http://developer.applicaster.com/docs/internal/questionnaire-analytics)
+
+
+#### Video Advertising
+
+[Video Advertising - Analytics Events](http://developer.applicaster.com/docs/public/video-advertising-analytics)
+
