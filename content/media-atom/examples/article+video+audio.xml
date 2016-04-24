@@ -33,7 +33,35 @@ Content in HTML , including images and everything
 </applicaster:mediaGroup>
 <applicaster:mediaGroup type="video">
 <applicaster:mediaItem src="http://techslides.com/demos/sample-videos/video.mp4" type="video"/>
-  <applicaster:mediaItem src="http://i.imgur.com/large.png" scale="large" type="image"/>
+<applicaster:mediaItem src="http://i.imgur.com/large.png" scale="large" type="image"/>
+<applicaster:mediaItem src="http://i.imgur.com/small.png" scale="small" type="image"/>
+</applicaster:mediaGroup>
+</entry>
+<!-- -
+Article with audio example
+<!- -->
+<entry>
+<applicaster:type value="article"/>
+<title>News Article title 1</title>
+<summary>Some Summery</summary>
+<id>http://www.example.com/article1</id>
+<published>2006-04-06T13:00:00-08:00</published>
+<updated>2006-04-06T20:25:05-08:00</updated>
+<author><name>Some Name</name></author>
+<link rel="alternate"
+type="text/html"
+href="http://www.example.com/article1.html">
+</link>
+<content type="html">
+Content in HTML , including images and everything
+</content>
+<applicaster:mediaGroup type="thumbnail">
+<applicaster:mediaItem src="http://example.org/thumbnail-image-large.png" scale="large"/>
+<applicaster:mediaItem src="http://example.org/thumbnail-image-small.png" scale="small"/>
+</applicaster:mediaGroup>
+<applicaster:mediaGroup type="audio">
+<applicaster:mediaItem src="http://www.sample-videos.com/audio/mp3/wave.mp3" type="audio"/>
+<applicaster:mediaItem src="http://i.imgur.com/large.png" scale="large" type="image"/>
 <applicaster:mediaItem src="http://i.imgur.com/small.png" scale="small" type="image"/>
 </applicaster:mediaGroup>
 </entry>
