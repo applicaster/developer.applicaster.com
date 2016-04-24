@@ -6,7 +6,8 @@
 | 1.1.0 | Support for image galleries. |
 | 1.2.0 | Notations about "updated", "summery", "author name" and "alternate link" elements. |
 | 1.2.1 | Support of inline images in article. |
-| 1.3.0 | Support of video resource type |
+| 1.3.0 | Support of video resource type. |
+| 1.4.0 | Articles support audio mediaGroup. |
 
 
 # Overview
@@ -21,11 +22,11 @@ Applicaster with the links to the Atom feeds
 according to the specifications
 below.
 
-* Video - HLS video content, uppon tapping the content will be preseted on a standard video player.
-* Article - Uppon tapping, the article will be presented in the following layout:
+* Article - Upon tapping, the article will be presented in the following layout:
 ![image](./images/article_inline_images2.png)
-* Gallery - Uppon tapping, the gallery will be presented in the following layout:
+* Gallery - Upon tapping, the gallery will be presented in the following layout:
 ![image](./images/photoGallery4.png)
+* Video - HLS video content, upon tapping the content will be presented on a video player.
 
 ### Setup
 
@@ -71,9 +72,8 @@ client. HTTP\`s `Cache-Control` header with a
 
   ##### Feed Examples
 
-  * Feed that holds mix of video and article entries.
-	[Link](https://gist.githubusercontent.com/PhilipKram/46117bb42124caac6640/raw/d52b1d7475d105374fef7773336657befdd45e1c/atom-article+video.xml)
-
+  * Feed that holds mix of video, audio and article entries.
+	[Link](https://gist.githubusercontent.com/PhilipKram/0f02c9018f44cf105289a2142fd92ecd/raw/3e802734809fe411a07c8d9537ba7a3c165bca5a/atom-article+video+audio.xml)
   * Feed that holds image gallery entries.
 	[Link](https://gist.githubusercontent.com/PhilipKram/e572ba6cfe96a2b2cc59/raw/b7e60ad4a90056decc264b11af597bea1b75d91c/atom-gallery.xml)
 
@@ -98,8 +98,6 @@ The `<feed>` element MUST contain the
 The `<entry>` element block represents a single
 item in the Feed list. There SHOULD NOT be more
 than 30 entries on a single feed.
-
-
 
 
 ### applicaster type
@@ -208,13 +206,16 @@ used to show the item in a collection view. It
 will normally be relatively small in size. It
 SHOULD have 16:9 aspect ratio.
 * <kbd>detailed-view</kbd>: Relevant only for
-articles - hold the articles item image in full
+articles - holds the article's item image in full
 view mode.
 * <kbd>video</kbd>: Relevant only for
-articles - hold the articles item video.
-Please note:
-	* The play button will present from the app and should not be include in the video image.
-	* In case the entry include "detailed-view" and "video" types the app will ignore the "detailed-view" and will show only the "video".
+articles - holds the article's item video.
+* <kbd>audio</kbd>: Relevant only for
+articles - holds the article's item audio.  
+>Please note:
+	* The play button image will present from the app and should not be include in the video image.
+	* In case the entry include "detailed-view" and "audio" types the app will ignore the "detailed-view" and will show only the "audio".
+	* In case the entry include "audio" and "video" types the app will ignore the "audio" and will show only the "video".
 
 
 ### applicaster media item
