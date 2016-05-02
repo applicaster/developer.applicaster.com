@@ -1,7 +1,7 @@
 # Collection ingestion
 
 ## Overview
-Collections are sets of items which can be videos, categories (shows or seasons) or programs. These items can be groupped independently of their type.
+Collections are sets of items which can be videos, categories (shows, seasons, genres, links) or programs. These items can be groupped independently of their type.
 In order to make the collection creation process faster applicaster allows this to happen in an automatic way from a remote URL. This URL must be inserted within the collection form (`external_sync_url`) and should point to an XML document with the correct structure.
 
 ## XML structure
@@ -29,7 +29,7 @@ The resource element defines a single resource.
 
 | Element    | Description                                    | Required |
 |------------|------------------------------------------------|----------|
-| type       | Resource type. One of `category`,`video`, `program`    | Yes      |
+| type       | Resource type. One of `show`, `season`, `genre`, `link`, `video`, `program`    | Yes      |
 | attributes | Resource attributes (see `<attributes>` below) | Yes      |
 
 ## The `<attributes>` element
@@ -45,22 +45,45 @@ These are the same for all resource types:
 
 # Example
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
   <resource>
-    <type>category</type>
+    <type>show</type>
     <attributes>
-      <external_id>category_id</external_id>
+      <external_id>show_external_id</external_id>
+    </attributes>
+  </resource>
+  <resource>
+    <type>season</type>
+    <attributes>
+      <external_id>season_external_id</external_id>
+    </attributes>
+  </resource>
+  <resource>
+    <type>genre</type>
+    <attributes>
+      <external_id>genre_external_id</external_id>
+    </attributes>
+  </resource>
+  <resource>
+    <type>link</type>
+    <attributes>
+      <external_id>link_external_id</external_id>
     </attributes>
   </resource>
   <resource>
     <type>video</type>
     <attributes>
-      <external_id>video_id</external_id>
+      <external_id>video_external_id</external_id>
+    </attributes>
+  </resource>
+  <resource>
+    <type>program</type>
+    <attributes>
+      <external_id>program_external_id</external_id>
     </attributes>
   </resource>
 </resources>```
 
-When the collection ingestion doesn't find a resource with the requested `external_id` it will simply
-be ignored i.e not added to the collection.
+If a given `external_id` doesn't match any item, the corresponding resource is ignored (not added to the collection).
 
