@@ -45,6 +45,7 @@ These are the same for all resource types:
 
 # Example
 ```xml
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <resource>
@@ -86,4 +87,3 @@ These are the same for all resource types:
 </resources>```
 
 If a given `external_id` doesn't match any item, the corresponding resource is ignored (not added to the collection).
-
