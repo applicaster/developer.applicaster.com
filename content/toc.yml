@@ -321,6 +321,15 @@
   type: Technical
   owner: n.friedman@applicaster.com
 
+- folder: "collection-ingestion-xml"
+  internal: false
+  title: "Collection ingestion via XML"
+  description: >
+    The collection XML ingestion process creates items within a specific collection which has to be
+    created apriori.
+  type: Technical
+  owner: d.garcia@applicaster.com
+
 "Developer Documentation":
 - folder: docs-how-to
   internal: true
