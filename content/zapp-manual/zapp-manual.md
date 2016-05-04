@@ -35,34 +35,6 @@ Click on Accounts → New
 
 ![](./accounts_create_new_account.png)
 
-## Enable all relevant account features (Applicaster2 Tab)
-
-* Click on the Management tab - it will open up in the Accounts section. Click on the account link you just created.
-
-> Note: It might take a few minutes to have the account link available.
-
-![](./mgmnt-accounts.png)
-
-Check all relevant features in the Feature management section:
-
-> Note: Make sure you do not mark the “Allow New Content System” as this will disable the option to use content ingestion.
-
-![](./acount-features.png)
-
-
-## Creating the main Content Category (Applicaster2 Tab)
-Go to the VOD section (make sure you selected the account you just created)
-
-Create the first Content Category (make it of type generic) - it’s name should be “Content”
-
-![](./create-content.png)
-
-Go back to the Broadcaster section under Management - and choose the Content Category you just created as the content category.
-
-![](./broadcaster.png)
-
-![](./broadcaster2.png)
-
 ## Create a New App phase 1 (Zapp Tab)
 Click on the ’New App’ button
 Choose the account you created and give your app a name - **name should not contain spaces or special characters**.
