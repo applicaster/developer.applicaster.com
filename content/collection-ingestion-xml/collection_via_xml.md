@@ -1,9 +1,20 @@
 # Collection ingestion
 
 ## Overview
-Collections are sets of items which can be videos, categories (shows, seasons, genres, links) or programs. These items can be groupped independently of their type.
-In order to make the collection creation process faster applicaster allows this to happen in an automatic way from a remote URL. This URL must be inserted within the collection form (`external_sync_url`) and should point to an XML document with the correct structure.
+Collections are sets of items which can be
+* videos
+* categories
+	* generic,
+	* shows,
+	* seasons,
+	* genres,
+	* links
+* programs
 
+These items can be groupped independently of their type.
+In order to make the collection creation process faster applicaster allows this to happen in an automatic way from a remote URL. This URL should be inserted within the collection form into the (`external_sync_url`) input in the *Automatic Content ingestion* section and should point to an XML document with the correct structure.
+
+![image](./assets/external_sync_url.png)
 ## XML structure
 
 ## Identifying the XML document
@@ -29,7 +40,7 @@ The resource element defines a single resource.
 
 | Element    | Description                                    | Required |
 |------------|------------------------------------------------|----------|
-| type       | Resource type. One of `show`, `season`, `genre`, `link`, `video`, `program`    | Yes      |
+| type       | Resource type. One of `category`, `show`, `season`, `genre`, `link`, `video`, `program`    | Yes      |
 | attributes | Resource attributes (see `<attributes>` below) | Yes      |
 
 ## The `<attributes>` element
@@ -81,6 +92,12 @@ These are the same for all resource types:
     <type>program</type>
     <attributes>
       <external_id>program_external_id</external_id>
+    </attributes>
+  </resource>
+  <resource>
+    <type>category</type>
+    <attributes>
+      <external_id>category_external_id</external_id>
     </attributes>
   </resource>
 </resources>
