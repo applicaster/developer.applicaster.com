@@ -1,4 +1,21 @@
 # Zapp Release Notes
+## 1.13.0 Plugins - (May 5, 2016)
+
+## New Features
+* We added the Plugins section.
+![](./plugins_screenshot.png)
+
+Now we can add add-ons to the modular app. The plugins section will be a marketplace of add-ons. When creating a version you will be able to choose which plugins you want to add. Enjoy the new era!
+
+* Zapp is now filtering only relvant layout styles when customizing an app. You will no longer see the irrelevant keys for a specific layout (there are still many keys to customize...)
+* We added some api features related to versioning of the localization, styles and assets to help the modular decide if it needs to reload this files or to use cached ones. This should make our app load a little bit faster.
+* Added an assets json file that can be in use to remptely load assets (upon client side decision)
+
+## Bug Fixes
+* Some ui fixing related to image lazy loading.
+* Changes assets tags ui.
+* Sending `google_api_project_number` to android build.
+
 ## 1.12.0 Apple TV Subscription - (March 29, 2016)
 
 ## New Features
