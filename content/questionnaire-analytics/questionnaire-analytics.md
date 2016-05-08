@@ -10,12 +10,12 @@ Note: In the Alpha version (and until further notice), these analytics are being
 
 Event Name | Insight
 --------------- | ---------------
-Start questionnaire | Understand how many users start a Stitcher, in order to determine completion rate
-Complete questionnaire | Understand how many users complete a Stitcher, in order to determine completion rate
+Start Stitcher | Understand how many users start a Stitcher, in order to determine completion rate
+Complete Stitcher | Understand how many users complete a Stitcher, in order to determine completion rate
 Start Login | Measure how many users start the Login process, in order to see the volume login screen exposures (which together with other events, will give further login insights)
 Login Success | Measure how many users successfuly the Login process, in order to see the volume of successful logins
 Login Denied | Measure how many login attempts fail and why they fail, in order to see % of errors and fix them or change the login UX accordingly.
-Close questionnaire | Determine at which point users close the Stitcher in order to realize the optimized number of screens that provide end user satisfaction
+Close Stitcher | Determine at which point users close the Stitcher in order to realize the optimized number of screens that provide end user satisfaction
 View Screen | See which screens are viewed most, in order to optimize Stitcher building and screen order 
 
 
