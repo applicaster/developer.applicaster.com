@@ -1,10 +1,24 @@
 # Modular Analytics
-###Video Events (iOS v2.7 Android v2.6)
+###Video Events (iOS v2.7 and above, Android v2.6 and above)
 
 Event  | Insight
 --------------- | ---------------
 **Play VOD Item** | Measures that a video item is played, and for how long. The item played holds the following parameter: The video type (Applicaster model, or ATOM type), Item Name and the parameters that are related to each type, i.e.: Season Name, Show Name, Show ID, Free/Paid, Item ID for Applicaster video model, and ATOM feed name for ATOM video type. Note that if a user leaves during the pre-roll, this event will not be counted. 
 **VOD Item: Play Was Triggered** | Measures that a video cell was tapped. All parameters of the Play VOD event are included, except the length.
+**Program: Play Live Was Triggered from Cell** | Measures when tapping on a 'Live Program' item in order to play it. This Live Program event refers to promotion from componentized cells and not from the EPG and Live Drawer). 
+**Program: Play Icon Clicked on Generic Screen** | Measures when tapping on the 'Play' Icon from EPG or Live Drawer, in order to play the program. Note that combined with “Program: Play Live Was Triggered from Cell”, both address all possibilities of playing live programs. 
+**VOD Item: Intermediate Button Clicked** | Measures when tapping on the 'Info' button on a VOD Item. All parameters of the Play VOD event are included, except the length. On Android. 
+**VOD Item: Info Button Clicked** | Measures when tapping on the 'Info' button on a VOD Item. All parameters of the Play VOD event are included, except the length. On iOS. 
+**Intermediate: Share Button Clicked** | Measures when tapping on one of the 'Share' buttons within the intermediate screen of a VOD Item. 
+**VOD Item: Marked/Unmarked As Favorite** | Measures when tapping on Mark/Unmark-as-Favorite button on a VOD Item. All parameters of the Play VOD event are included, except the length. 
+
+
+
+
+###Player Events (iOS v2.7 and above, Android v2.6 and above)
+
+Event  | Insight
+--------------- | ---------------
 **Capture a moment played** | Measures User playing a video moment that was received from the shared 'Capture a moment' feature. All parameters of the Play VOD event are included, except the length. 
 **VOD Moment Share: Record Button Clicks** | Measures when a user taps on the 'Record' button of Capture a Moment feature. 
 **Facebook Dialog Opened** | Measures when the 'Facebook' button was tapped in the dock of the video player. All parameters of the Play VOD event are included, except the length. 
@@ -13,18 +27,10 @@ Event  | Insight
 **Overlay Email Sent** | Measures when the Email was sent from the video player overlay. 
 **Overlay Twitter Opened** | Measures when the 'Twitter' icon tapped from video player overlay. 
 **Overlay Twitter Sent** | Measures when a Tweet was sent from the video player overlay. 
-**VOD Item: Intermediate Button Clicked** | Measures when tapping on the 'Info' button on a VOD Item. All parameters of the Play VOD event are included, except the length. On Android. 
-**VOD Item: Info Button Clicked** | Measures when tapping on the 'Info' button on a VOD Item. All parameters of the Play VOD event are included, except the length. On iOS. 
-**Intermediate: Share Button Clicked** | Measures when tapping on one of the 'Share' buttons within the intermediate screen of a VOD Item. 
-**VOD Item: Marked/Unmarked As Favorite** | Measures when tapping on Mark/Unmark-as-Favorite button on a VOD Item. All parameters of the Play VOD event are included, except the length. 
-**Program: Play Live Was Triggered from Cell** | Measures when tapping on a 'Live Program' item in order to play it. This Live Program event refers to promotion from componentized cells and not from the EPG and Live Drawer). 
-**Program: Play Icon Clicked on Generic Screen** | Measures when tapping on the 'Play' Icon from EPG or Live Drawer, in order to play the program. Note that combined with “Program: Play Live Was Triggered from Cell”, both address all possibilities of playing live programs. 
 
 
 
-
-
-###Navigation Events (iOS v2.7 Android v2.6)
+###Navigation Events (iOS v2.7 and above, Android v2.6 and above)
 
 Event  | Insight
 --------------- | ---------------
