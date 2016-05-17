@@ -3,6 +3,7 @@
 ## Overview
 Collections are sets of items which can be videos, categories (shows, seasons, genres, links) or programs. These items can be groupped independently of their type.
 In order to make the collection creation process faster applicaster allows this to happen in an automatic way from a remote URL. This URL must be inserted within the collection form (`external_sync_url`) and should point to an XML document with the correct structure.
+When a collection is ingested, existing collection items are removed. For example, if the XML file changes the collection should reflect the **new** XML file.
 
 ## XML structure
 
