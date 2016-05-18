@@ -7,8 +7,7 @@ export default class ProductFilter extends Component {
 
   render() {
     const {products} = this.props || [];
-    console.log('products',products);
-    const docTypes = [ 'Release Notes', 'Technical' ];
+    const docTypes = [ 'Release Notes', 'Technical', 'Analytics' ];
     return (
       <div className="ProductFilter">
         <h3 className="ProductFilter-h3">Filter By Proudct</h3>

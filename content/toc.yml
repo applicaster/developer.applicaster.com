@@ -239,7 +239,7 @@
   title: Stitcher Analytics Document
   description: >
     An internal document describing the different analytics measured on the Stitcher product.
-  type: Technical
+  type: Analytics
   owner: a.levy@applicaster.com
 
 "Modular":
