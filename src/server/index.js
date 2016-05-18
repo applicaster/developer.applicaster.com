@@ -1,21 +1,14 @@
 import Hapi from 'hapi';
-import _ from 'lodash';
-import { applicasterAccounts } from './applicasterStrategy';
-import { DOCS_FOLDER, TOC_JSON, INTERNAL_ROLE } from '../shared/settings';
+import { DOCS_FOLDER, TOC_JSON } from '../shared/settings';
 import dotenv from 'dotenv';
 
 dotenv.load();
 
 const server = new Hapi.Server();
 
-const hasInternalPermissions = (request) => {
-  let {data, globalRoles} = request.auth.credentials;
-  return _.includes(globalRoles, INTERNAL_ROLE) || data.admin;
-}
-
 server.connection({ port: process.env.PORT });
 
-server.register([require('vision'), require('inert'), { register: applicasterAccounts, options: {} }], () => {
+server.register([require('vision'), require('inert')], () => {
 
   server.views({
     engines: {
@@ -28,58 +21,38 @@ server.register([require('vision'), require('inert'), { register: applicasterAcc
     method: 'GET',
     path: '/',
     config: {
-      auth: 'applicaster',
       handler: (request, reply) => {
-        const data = {
-          email: request.auth.credentials.data.email,
-          mixpanelEnabled: process.env.MIXPANEL_ENABLED ? true : false,
-        };
-        reply.view('index', data);
+        reply.view('index');
       },
     },
   });
 
-   server.route({
+  server.route({
     method: 'GET',
     path: `/${DOCS_FOLDER}/{param*}`,
     config: {
-      auth: 'applicaster',
       handler: (request, reply) => {
-        const data = {
-          email: request.auth.credentials.data.email,
-          mixpanelEnabled: process.env.MIXPANEL_ENABLED ? true : false,
-        };
-        reply.view('index', data);
+        reply.view('index');
       },
     },
   });
 
-   server.route({
+  server.route({
     method: 'GET',
     path: '/home',
     config: {
-      auth: 'applicaster',
       handler: (request, reply) => {
-        const data = {
-          email: request.auth.credentials.data.email,
-          mixpanelEnabled: process.env.MIXPANEL_ENABLED ? true : false,
-        };
-        reply.view('index', data);
+        reply.view('index');
       },
     },
   });
 
-   server.route({
+  server.route({
     method: 'GET',
     path: '/products-list',
     config: {
-      auth: 'applicaster',
       handler: (request, reply) => {
-        const data = {
-          email: request.auth.credentials.data.email,
-          mixpanelEnabled: process.env.MIXPANEL_ENABLED ? true : false,
-        };
-        reply.view('index', data);
+        reply.view('index');
       },
     },
   });
@@ -123,7 +96,6 @@ server.register([require('vision'), require('inert'), { register: applicasterAcc
     method: 'GET',
     path: '/public/{param*}',
     config: {
-      auth: 'applicaster',
       handler: {
         directory: {
           path: 'public',
@@ -134,35 +106,14 @@ server.register([require('vision'), require('inert'), { register: applicasterAcc
 
   server.route({
     method: 'GET',
-    path: '/internal/{param*}',
-    config: {
-      auth: 'applicaster',
-      plugins: {applicasterAccounts: {internal: true}},
-      handler: {
-        directory: {
-          path: 'internal',
-        },
-      },
-    },
-  });
-  server.route({
-    method: 'GET',
     path: `/${TOC_JSON}`,
     config: {
-      auth: 'applicaster',
       handler: (request, reply) => {
-        let tocFile;
-        if (hasInternalPermissions(request)) {
-          tocFile = './internal-toc.json';
-        } else {
-          tocFile = './public-toc.json';
-        }
-        reply.file(tocFile);
+        reply.file('./public-toc.json');
       },
     },
   });
 
-  server.start(() => {
-  });
+  server.start(() => {});
 
 });
