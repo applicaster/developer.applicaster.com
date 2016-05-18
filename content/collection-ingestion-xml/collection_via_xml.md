@@ -15,6 +15,9 @@ These items can be groupped independently of their type.
 In order to make the collection creation process faster applicaster allows this to happen in an automatic way from a remote URL. This URL should be inserted within the collection form into the (`external_sync_url`) input in the *Automatic Content ingestion* section and should point to an XML document with the correct structure.
 
 ![image](./assets/external_sync_url.png)
+
+When a collection is ingested, existing collection items are removed. For example, upon changing the XML file, the collection content should reflect the **new** file.
+
 ## XML structure
 
 ## Identifying the XML document
