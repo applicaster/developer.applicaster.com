@@ -21,6 +21,10 @@ const store = createStoreWithMiddleware(productsApp);
 const actions = bindActionCreators(ProductsActions, store.dispatch);
 actions.getProducts();
 
+function trackRoute() {
+  window.mixpanel.track('Route Change', { route: window.location.href});
+}
+
 const App = React.createClass({
 
   render(){
@@ -36,9 +40,9 @@ const App = React.createClass({
 render((
   <div>
     <Provider store={store}>
-      <Router history={createBrowserHistory()}>
-        <Route path="/" component={App}>
-          <Route component={MainHandler}>
+      <Router history={createBrowserHistory()} onUpdate={ trackRoute }>
+        <Route path="/" component={App} >
+          <Route component={MainHandler} >
             <IndexRoute component={Home} />
             <Route path="/home" component={Home}/>
             <Route path="/products-list" component={ProductListHandler}/>
