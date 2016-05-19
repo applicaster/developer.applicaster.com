@@ -381,6 +381,14 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
+- folder: apple-tv-analytics
+  internal: false
+  title: Apple TV Analytics Events
+  description: >
+    This document a summery of the analytics events for Apple TV app.
+  type: Technical
+  owner: u.lumnitz@applicaster.com
+
 "Measurement & Analytics":
 - folder: product_analytics_procedure
   internal: true
