@@ -20,6 +20,7 @@ You can use whatever tool you are most comfortable with to check logs, but if yo
 
 
 ***Event Logs:***
+
 The following log illustrates that your webview sent your event command:
 
 ![ios-eventlog-1](./ios-eventlog-1.png)
@@ -31,6 +32,7 @@ After some time, you should see another log which confirms the listener received
 If you see a log which states "event came from JS with wrong data", your JSON should be fixed.
 
 ***User Profile Logs:***
+
 The following log illustrates that your webview sent your user profile command:
 
 ![ios-userlog-1](./ios-userlog-1.png)
@@ -49,8 +51,10 @@ To test your work on Android:
 3. Set the test url (the url for your web product) in the url section
 4. Press "GO" 
 ![android-ss1](./android-ss1.png)
+
 5. You should then be able to see your webpage in a webview within the app in the section below the words "input is"
 ![android-ss2](./android-ss2.png) 
+
 6. Trigger the events and/or user profiles that you intend to send
 7. Check results. The JSON the device receives will appear in the ‘handle command inputs’ section:
 ![android-ss3](./android-ss3.png)
