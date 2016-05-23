@@ -216,6 +216,15 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
+- folder: JS-2-Morpheus
+  internal: false
+  title: JS-2-Morpheus Integration
+  description: >
+    This document describes how to send analytics events and user profiles to 
+    Morpheus, Applicaster's internal product for handling and delivering analytics
+  type: Technical
+  owner: y.osteen@applicaster.com
+
 "Stitcher":
 - folder: questionnaire-release-notes
   internal: false
