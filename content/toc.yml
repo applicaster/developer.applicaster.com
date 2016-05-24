@@ -422,6 +422,15 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
+"Login":
+- folder: login-release-notes
+  internal: false
+  title: Login Release Notes
+  description: >
+    Release notes list of the Login product.
+  type: Release Notes
+  owner: y.osteen@applicaster.com
+
 "Advertising":
 - folder: video-advertising-analytics
   internal: false
