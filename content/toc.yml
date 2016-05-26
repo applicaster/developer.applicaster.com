@@ -137,7 +137,7 @@
   title: Crossmates Analytics
   description: >
     This is a documentation of the Crossmates analytics events.
-  type: Technical
+  type: Analytics
   owner: a.klein@applicaster.com
 
 "GroupChat":
