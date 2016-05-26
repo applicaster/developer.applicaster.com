@@ -247,7 +247,7 @@
   title: Modular Analytics
   description: >
     Analytics Events of the Modular SDK, including video and UI events.
-  type: Technical
+  type: Analytics
   owner: s.miasnik@applicaster.com
 
 "Zapp":
