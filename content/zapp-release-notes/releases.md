@@ -1,4 +1,16 @@
 # Zapp Release Notes
+## 1.14.0 Plugins with manifest - (May 25, 2016)
+
+## New Features
+* Plugin Section improvements - Now using the new Plugins system. Upload a manifest a plugin manifest and you are ready to use the plugin. [Use this link for more documentation](https://github.com/applicaster/zapp/wiki/Plugins).
+
+* Added plugins API that will be in use by the by [Zappifest](https://github.com/applicaster/zappifest), the manifest uploader.
+
+* We added SDK API, to create a new SDK version.
+
+## Bug Fixes
+* Changing wrong usage of the BUCKET_NAME env variable instead of ASSET_HOST for the S3 url for version files.
+
 ## 1.13.0 Plugins - (May 5, 2016)
 
 ## New Features
