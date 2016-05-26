@@ -19,7 +19,7 @@ export default class ProductFilter extends Component {
           </li>
           {products.map(product =>
             <li key={product.label}>
-            <Link to="products-list"
+            <Link to="/products-list"
                   query={{product: product.label}}
                   className="ProductFilter-li u-unstyledLink">
               {product.label}
@@ -30,13 +30,13 @@ export default class ProductFilter extends Component {
         <h3 className="ProductFilter-h3">Filter By Document Type</h3>
         <ul>
           <li>
-          <Link to="products-list" className="ProductFilter-li u-unstyledLink">
+          <Link to="/products-list" className="ProductFilter-li u-unstyledLink">
             All Types
           </Link>
           </li>
           {docTypes.map(docType =>
             <li key={docType}>
-            <Link to="products-list"
+            <Link to="/products-list"
                   query={{docType: docType}}
                   className="ProductFilter-li u-unstyledLink">
               {docType}
