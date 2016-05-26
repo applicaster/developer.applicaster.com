@@ -53,7 +53,7 @@
   title: Feed Analytics
   description: >
     This is a documentation of the Feed analytics events.
-  type: Technical
+  type: Analytics
   owner: u.lumnitz@applicaster.com
 
 - folder: web-feed-config
@@ -164,7 +164,7 @@
   title: GroupChat Analytics
   description: >
     Documentation of GroupChat analytics.
-  type: Technical
+  type: Analytics
   owner: l.deutsch@applicaster.com
 
 "Messenger":
@@ -220,7 +220,7 @@
   internal: false
   title: JS-2-Morpheus Integration
   description: >
-    This document describes how to send analytics events and user profiles to 
+    This document describes how to send analytics events and user profiles to
     Morpheus, Applicaster's internal product for handling and delivering analytics
   type: Technical
   owner: y.osteen@applicaster.com
@@ -446,7 +446,7 @@
   title: Video Advertising Analytics
   description: >
     This document describes the analytics event "Watch Video Advertisement" and outlines the associated properties
-  type: Technical
+  type: Analytics
   owner: y.osteen@applicaster.com
 
 - folder: midrolls
