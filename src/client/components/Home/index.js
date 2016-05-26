@@ -20,7 +20,7 @@ export default class Home extends Component {
       <div>
       <SectionHeader title="Welcome To Applicaster's Developer Portal" />
       <p style={{paddingBottom: '10px'}}>Find out about Applicaster's SDKs, release notes and other product related technical documentation.</p>
-      <Link to="products-list">
+      <Link to="/products-list">
       <RaisedButton label="Browse our docs" primary={true} />
       </Link>
       <img className="Typography--img" src={officeImage} />

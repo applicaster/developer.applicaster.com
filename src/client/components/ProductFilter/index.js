@@ -13,7 +13,7 @@ export default class ProductFilter extends Component {
         <h3 className="ProductFilter-h3">Filter By Proudct</h3>
         <ul>
           <li>
-          <Link to="products-list" className="ProductFilter-li u-unstyledLink">
+          <Link to="/products-list" className="ProductFilter-li u-unstyledLink">
             All Products
           </Link>
           </li>
