@@ -395,7 +395,7 @@
   title: Apple TV Analytics Events
   description: >
     This document a summery of the analytics events for Apple TV app.
-  type: Technical
+  type: Analytics
   owner: u.lumnitz@applicaster.com
 
 "Measurement & Analytics":
