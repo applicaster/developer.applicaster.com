@@ -476,7 +476,7 @@
 
 "Morpheus":
 - folder: morpheus
-  internal: false
+  internal: true
   title: Morpheus Events API
   description: >
       How to send event to Morpheus.
