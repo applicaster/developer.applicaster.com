@@ -473,3 +473,12 @@
     A checklist to follow before releasing a new product/feature
   type: Technical
   owner: l.deutsch@applicaster.com
+
+"Morpheus":
+- folder: morpheus
+  internal: false
+  title: Morpheus Events API
+  description: >
+      How to send event to Morpheus.
+  type: Technical
+  owner: e.bendavid@applicaster.com
