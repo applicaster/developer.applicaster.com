@@ -1,4 +1,43 @@
 # Zapp Release Notes
+
+## 2.0.0 Zapp Versions lock - (July 8, 2016)
+
+Now Modular app SDK version has 2 modes: in development or released.
+An SDK in development allows the user to modify everything in the version - Texts, Assets, Styles, General configuration, etc. When  a new version is deployed no changes could be made to the SDK.
+
+Apps that are using `in development` SDK cannot be published to the store, and can only be used for debug purposes. Once a version is deployed you will be able to create a new version and release it to the store.
+
+Each platform SDK now has a CHANGELOG, allowing to see changes between versions (Click on the SDK version will reveal it).
+
+***For devs:***
+* After you deploy a new version, you will need to choose in the system to which SDK in development you connect it.
+
+## Other Features
+* We changed the *Templates* section to *Layouts* section. We also added some fields to fill when you create a new layout. Soon this section will be the place to check your Layouts screenshots, demos, and documentation. And you can now filter the Layouts by different parameters. More to come.. 
+* Adding *Dimension* type to style. When you create a new style you can choose also dimension. This is currently in use for Apple TV, but can be used broadly.
+* Related to the previous feature, you can customize **Apple TV** layouts using the layout section with these above mention dimension. 
+* In the App version asset info screen, an indication of size restriction was added. Now you will finally know ... 😄 
+* Notify to **zapp-product-updates** channel in Slack every time a new SDK version is created.
+
+**Developers:** You can now build the SDK using custom branches from the production environment. This could only be done for in development SDK's.
+Go to SDKs --> edit the SDK and choose your git branch.
+
+## Improvements
+
+* Adding indicative error (adding the file name to our background job monitoring system, when assets was failed to be copied or upload in a zip file).
+* Updating Apple Tv remote configurations when saving a version.
+* Added a check to the Zip file uploading process checking the REAL image asset format. For cases when users were sending wrong types of images (PSDs for example) only changing the file name suffix. Now you will be notified by mail. 
+
+## Bug Fixes
+
+* Fixing the strange scenario that when version build was failing due to timeout, it was marked as success. Now it is marked as failed.
+* Fix the issue that did not allow you to create a new *Apple TV* SDK when basing it on another version. We were trying to create SDK defaults, but the defaults were already there 😓 .
+* Fixing an internal annoying error related to Analytics when creating a new version.
+* Fixing the issue with Mixpanel Analytics provider that was accidentally showing wrong titles.
+* Fix the issue that was not allowing to delete the last plugin for an app version.
+* Some other internal bug fixing and improvement related styles, database indexing
+
+
 ## 1.14.0 Plugins with manifest - (May 25, 2016)
 
 ## New Features
