@@ -142,7 +142,7 @@
 
 "GroupChat":
 - folder: group-chat-setup
-  internal: true
+  internal: false
   title: GroupChat Setup
   description: >
     This internal document is intended for Applicaster employees to understand what is the Web GroupChat product,
