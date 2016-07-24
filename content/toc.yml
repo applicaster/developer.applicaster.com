@@ -1,4 +1,46 @@
 ---
+"App":
+- folder: modular-release-notes
+  internal: true
+  title: Modular Release Notes
+  description: >
+    Release notes list of the Modular product ordered by release date.
+  type: Release Notes
+  owner: p.kramarov@applicaster.com
+
+- folder: app-analytics
+  internal: false
+  title: App Analytics
+  description: >
+    Analytics Events of the Core of the Zapp SDK, including video and UI events.
+  type: Analytics
+  owner: s.miasnik@applicaster.com
+
+"Apple TV":
+- folder: Apple-TV-Admin-Settings-Guide
+  internal: true
+  title: Admin Settings for Apple TV
+  description: >
+    This document will guide you how to set the data and style for Apple TV app.
+  type: Technical
+  owner: u.lumnitz@applicaster.com
+
+- folder: Apple-TV-Icons-Images-Guide
+  internal: false
+  title: Apple TV Icones and Images Guide
+  description: >
+    This document will guide you how to create the best icons and images for Apple TV app.
+  type: Technical
+  owner: u.lumnitz@applicaster.com
+
+- folder: apple-tv-analytics
+  internal: false
+  title: Apple TV Analytics Events
+  description: >
+    This document a summery of the analytics events for Apple TV app.
+  type: Analytics
+  owner: u.lumnitz@applicaster.com
+
 "Access & Authorization Solutions":
 - folder: authorization-provider
   internal: false
@@ -11,6 +53,23 @@
   type: Technical
   tags: JWT
   owner: l.deutsch@applicaster.com
+
+"Advertising":
+- folder: video-advertising-analytics
+  internal: false
+  title: Video Advertising Analytics
+  description: >
+    This document describes the analytics event "Watch Video Advertisement" and outlines the associated properties
+  type: Analytics
+  owner: y.osteen@applicaster.com
+
+- folder: midrolls
+  internal: false
+  title: Midrolls Release Notes
+  description: >
+    Release Notes for the midrolls product
+  type: Release Notes
+  owner: y.osteen@applicaster.com
 
 "Feed":
 - folder: feed-release-notes
@@ -64,6 +123,76 @@
   type: Technical
   owner: l.deutsch@applicaster.com
 
+"Stitcher":
+- folder: questionnaire-release-notes
+  internal: false
+  title: Stitcher Release Notes
+  description: >
+    Release notes of the Stitcher product ordered by release date.
+  type: Release Notes
+  owner: a.levy@applicaster.com
+
+- folder: questionnaire-analytics
+  internal: false
+  title: Stitcher Analytics Document
+  description: >
+    An internal document describing the different analytics measured on the Stitcher product.
+  type: Analytics
+  owner: a.levy@applicaster.com
+
+"Crossmates":
+- folder: ios-crossmates-integration
+  internal: false
+  title: iOS Crossmates Integration
+  description: >
+    This document describes how to integrate Applicaster iOS Crossmates SDK to an external
+    iOS App.
+  type: Technical
+  owner: u.lumnitz@applicaster.com
+
+- folder: android-crossmates-integration
+  internal: false
+  title: Android Crossmates Integration
+  description: >
+    This document describes how to integrate Applicaster Android Crossmates SDK to an external
+    Android App.
+  type: Technical
+  owner: u.lumnitz@applicaster.com
+
+- folder: crossmates
+  internal: false
+  title: Crossmates Analytics
+  description: >
+    This is a documentation of the Crossmates analytics events.
+  type: Analytics
+  owner: a.klein@applicaster.com
+
+"GroupChat":
+- folder: group-chat-setup
+  internal: false
+  title: GroupChat Setup
+  description: >
+    This internal document is intended for Applicaster employees to understand what is the Web GroupChat product,
+    how to configure the link for it per customer, and how to customize it.
+  type: Technical
+  owner: l.deutsch@applicaster.com
+
+- folder: group-chat-release-notes
+  internal: false
+  title: GroupChat Release Notes
+  description: >
+    Release notes of the GroupChat product ordered by release date.
+  type: Release Notes
+  owner: l.deutsch@applicaster.com
+
+- folder: group-chat-analytics
+  internal: false
+  title: GroupChat Analytics
+  description: >
+    Documentation of GroupChat analytics.
+  type: Analytics
+  owner: l.deutsch@applicaster.com
+
 "Live+":
 - folder: liveplus_release
   internal: false
@@ -112,60 +241,6 @@
     This document describes how to integrate Live+ on Zapp apps
   type: Technical
   owner: f.roland@applicaster.com
-
-"Crossmates":
-- folder: ios-crossmates-integration
-  internal: false
-  title: iOS Crossmates Integration
-  description: >
-    This document describes how to integrate Applicaster iOS Crossmates SDK to an external
-    iOS App.
-  type: Technical
-  owner: u.lumnitz@applicaster.com
-
-- folder: android-crossmates-integration
-  internal: false
-  title: Android Crossmates Integration
-  description: >
-    This document describes how to integrate Applicaster Android Crossmates SDK to an external
-    Android App.
-  type: Technical
-  owner: u.lumnitz@applicaster.com
-
-- folder: crossmates
-  internal: false
-  title: Crossmates Analytics
-  description: >
-    This is a documentation of the Crossmates analytics events.
-  type: Analytics
-  owner: a.klein@applicaster.com
-
-"GroupChat":
-- folder: group-chat-setup
-  internal: false
-  title: GroupChat Setup
-  description: >
-    This internal document is intended for Applicaster employees to understand what is the Web GroupChat product,
-    how to configure the link for it per customer, and how to customize it.
-  type: Technical
-  owner: l.deutsch@applicaster.com
-
-- folder: group-chat-release-notes
-  internal: false
-  title: GroupChat Release Notes
-  description: >
-    Release notes of the GroupChat product ordered by release date.
-  type: Release Notes
-  owner: l.deutsch@applicaster.com
-
-
-- folder: group-chat-analytics
-  internal: false
-  title: GroupChat Analytics
-  description: >
-    Documentation of GroupChat analytics.
-  type: Analytics
-  owner: l.deutsch@applicaster.com
 
 "Messenger":
 - folder: messenger-release-notes
@@ -224,40 +299,6 @@
     Morpheus, Applicaster's internal product for handling and delivering analytics
   type: Technical
   owner: y.osteen@applicaster.com
-
-"Stitcher":
-- folder: questionnaire-release-notes
-  internal: false
-  title: Stitcher Release Notes
-  description: >
-    Release notes of the Stitcher product ordered by release date.
-  type: Release Notes
-  owner: a.levy@applicaster.com
-
-- folder: questionnaire-analytics
-  internal: false
-  title: Stitcher Analytics Document
-  description: >
-    An internal document describing the different analytics measured on the Stitcher product.
-  type: Analytics
-  owner: a.levy@applicaster.com
-
-"Modular":
-- folder: modular-release-notes
-  internal: true
-  title: Modular Release Notes
-  description: >
-    Release notes list of the Modular product ordered by release date.
-  type: Release Notes
-  owner: p.kramarov@applicaster.com
-
-- folder: modular-analytics
-  internal: false
-  title: Modular Analytics
-  description: >
-    Analytics Events of the Modular SDK, including video and UI events.
-  type: Analytics
-  owner: s.miasnik@applicaster.com
 
 "Zapp":
 - folder: zapp-release-notes
@@ -373,31 +414,6 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
-"Apple TV":
-- folder: Apple-TV-Admin-Settings-Guide
-  internal: true
-  title: Admin Settings for Apple TV
-  description: >
-    This document will guide you how to set the data and style for Apple TV app.
-  type: Technical
-  owner: u.lumnitz@applicaster.com
-
-- folder: Apple-TV-Icons-Images-Guide
-  internal: false
-  title: Apple TV Icones and Images Guide
-  description: >
-    This document will guide you how to create the best icons and images for Apple TV app.
-  type: Technical
-  owner: u.lumnitz@applicaster.com
-
-- folder: apple-tv-analytics
-  internal: false
-  title: Apple TV Analytics Events
-  description: >
-    This document a summery of the analytics events for Apple TV app.
-  type: Analytics
-  owner: u.lumnitz@applicaster.com
-
 "Measurement & Analytics":
 - folder: product_analytics_procedure
   internal: true
@@ -445,23 +461,6 @@
   title: Login Release Notes
   description: >
     Release notes list of the Login product.
-  type: Release Notes
-  owner: y.osteen@applicaster.com
-
-"Advertising":
-- folder: video-advertising-analytics
-  internal: false
-  title: Video Advertising Analytics
-  description: >
-    This document describes the analytics event "Watch Video Advertisement" and outlines the associated properties
-  type: Analytics
-  owner: y.osteen@applicaster.com
-
-- folder: midrolls
-  internal: false
-  title: Midrolls Release Notes
-  description: >
-    Release Notes for the midrolls product
   type: Release Notes
   owner: y.osteen@applicaster.com
 
