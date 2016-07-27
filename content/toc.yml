@@ -481,3 +481,36 @@
     How to send event to Morpheus.
   type: Technical
   owner: e.bendavid@applicaster.com
+
+"Plugabble Menu":
+- folder: plugabble-menu-ios
+  internal: false
+  title: Zapp iOS Plugabble Menu API
+  description: >
+    How to create a pluggable menu for Zapp-iOS app.
+  type: Plugins
+  owner: u.lumnitz@applicaster.com
+
+- folder: android-pluggable-menu-intro
+  internal: false
+  title: Zapp Android Plugabble Menu Intro
+  description: >
+    How to create a pluggable menu for Zapp-Android app.
+  type: Plugins
+  owner: u.lumnitz@applicaster.com
+
+- folder: android-pluggable-menu-basic
+  internal: false
+  title: Zapp Android Plugabble Menu, The Basic
+  description: >
+    How to create a pluggable menu for Zapp-Android app.
+  type: Plugins
+  owner: u.lumnitz@applicaster.com
+
+- folder: android-pluggable-menu-steps
+  internal: false
+  title: Zapp Android Plugabble Menu Step By Step
+  description: >
+    How to create a pluggable menu for Zapp-Android app step by step.
+  type: Plugins
+  owner: u.lumnitz@applicaster.com
