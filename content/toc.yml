@@ -481,3 +481,12 @@
     How to send event to Morpheus.
   type: Technical
   owner: e.bendavid@applicaster.com
+
+"Zapp Application Plugins":
+- folder: root-menu-api
+  internal: false
+  title: Zapp Menu Plugins
+  description: >
+    Your starting point for creating new menus as plugins in Applicaster Zapp Apps.
+  type: Plugins
+  owner: u.lumnitz@applicaster.com
