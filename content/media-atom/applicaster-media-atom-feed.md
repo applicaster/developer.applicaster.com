@@ -64,18 +64,18 @@ broadcaster's servers will be reflected on the
 client. HTTP\`s `Cache-Control` header with a
 `max-age` directive. [Section 14.9 of RFC
 2616](http://www.w3.org/Protocols/rfc2616/rfc2616-
-  sec14.html#sec14.9)
-  Conditional GET using `If-Modified-Since`,
-  `If-None-Match` (sections 14.25 & 14.26)
+sec14.html#sec14.9)
+Conditional GET using `If-Modified-Since`,
+`If-None-Match` (sections 14.25 & 14.26)
 
-  <div class="page-break"></div>
+<div class="page-break"></div>
 
-  ##### Feed Examples
+##### Feed Examples
 
-  * Feed that holds mix of video, audio and article entries.
-	[Link](https://gist.githubusercontent.com/PhilipKram/0f02c9018f44cf105289a2142fd92ecd/raw/3e802734809fe411a07c8d9537ba7a3c165bca5a/atom-article+video+audio.xml)
-  * Feed that holds image gallery entries.
-	[Link](https://gist.githubusercontent.com/PhilipKram/e572ba6cfe96a2b2cc59/raw/b7e60ad4a90056decc264b11af597bea1b75d91c/atom-gallery.xml)
+* Feed that holds mix of video, audio and article entries.
+[Link](https://gist.githubusercontent.com/PhilipKram/0f02c9018f44cf105289a2142fd92ecd/raw/3e802734809fe411a07c8d9537ba7a3c165bca5a/atom-article+video+audio.xml)
+* Feed that holds image gallery entries.
+[Link](https://gist.githubusercontent.com/PhilipKram/e572ba6cfe96a2b2cc59/raw/b7e60ad4a90056decc264b11af597bea1b75d91c/atom-gallery.xml)
 
 
 ## Elements and Attributes Description
@@ -213,9 +213,9 @@ articles - holds the article's item video.
 * <kbd>audio</kbd>: Relevant only for
 articles - holds the article's item audio.  
 >Please note:
-	* The play button image will present from the app and should not be include in the video image.
-	* In case the entry include "detailed-view" and "audio" types the app will ignore the "detailed-view" and will show only the "audio".
-	* In case the entry include "audio" and "video" types the app will ignore the "audio" and will show only the "video".
+* The play button image will present from the app and should not be include in the video image.
+* In case the entry include "detailed-view" and "audio" types the app will ignore the "detailed-view" and will show only the "audio".
+* In case the entry include "audio" and "video" types the app will ignore the "audio" and will show only the "video".
 
 
 ### applicaster media item
@@ -244,3 +244,35 @@ image isn't provided all devices will use the
 provided small image. Only devices that
 have a large screen will show large
 images.
+
+### advertisement
+`<advertisement>` <span class=“badge”> XPath:/feed/entry/advertisement</span>
+
+This section may include two tags:
+### interstitial
+`<interstitial ios_iphone_adUnit = "" ios_ipad_adUnit = "" ios_smartPhone_adUnit = "" ios_tablet_adUnit = "">`  
+This tag should represent where interstitial content comes from.  
+When this tag is added it MUST includes properties any device types.
+
+All options are described here:  
+`ios_iphone_adUnit`  - adUnit for iphones.  
+`ios_ipad_adUnit`  - adUnit for ipads.  
+`ios_smartPhone_adUnit`  - adUnit for smartphones (android OS).  
+`ios_iphone_adUnit`  - adUnit for tablets devices  (android OS).  
+
+
+### banner
+`<banner ios_iphone_adUnit = "" ios_ipad_adUnit = "" ios_smartPhone_adUnit = "" ios_tablet_adUnit = "">`  
+This tag should represent where banner content comes from.  
+When this tag is added it MUST includes properties any device types.
+
+All options are described here:  
+`ios_iphone_adUnit`  - adUnit for iphones.  
+`ios_ipad_adUnit`  - adUnit for ipads.  
+`ios_smartPhone_adUnit`  - adUnit for smartphones (android OS).  
+`ios_iphone_adUnit`  - adUnit for tablets devices  (android OS).  
+
+
+
+
+
