@@ -157,6 +157,25 @@ If `<link>` element exists and its set rel attribute is "alternate"
 and its set type attribute is "text/html". The
 href value of the link will be used as the shared link URL of the entry.
 
+### advertisement
+`<advertisement>` <span class=“badge”> XPath:/feed/entry/advertisement</span>  
+This tag may include two tags:  
+
+* ### interstitial
+`<interstitial ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = "">`  
+This tag should represent where interstitial content comes from.  
+When this tag is added it MUST includes properties any device types.
+* ### banner 
+`<banner ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = "">`  
+This tag should represent where banner content comes from.  
+When this tag is added it MUST includes properties any device types.
+
+All options are described here:  
+`ios_iphone_adUnit`  - adUnit for iphones.  
+`ios_ipad_adUnit`  - adUnit for ipads.  
+`android_smartPhone_adUnit`  - adUnit for smartphones.  
+`android_tablet_adUnit`  - adUnit for tablets.  
+
 ### content
 `<content>` <span class="badge">XPath:
 /feed/entry/content</span>
@@ -246,33 +265,20 @@ have a large screen will show large
 images.
 
 ### advertisement
-`<advertisement>` <span class=“badge”> XPath:/feed/entry/advertisement</span>
+`<advertisement>` <span class=“badge”> XPath:/feed/entry/advertisement</span>  
+This tag may include two tags:  
 
-This section may include two tags:
-### interstitial
-`<interstitial ios_iphone_adUnit = "" ios_ipad_adUnit = "" ios_smartPhone_adUnit = "" ios_tablet_adUnit = "">`  
+* ### interstitial
+`<interstitial ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = "">`  
 This tag should represent where interstitial content comes from.  
 When this tag is added it MUST includes properties any device types.
-
-All options are described here:  
-`ios_iphone_adUnit`  - adUnit for iphones.  
-`ios_ipad_adUnit`  - adUnit for ipads.  
-`ios_smartPhone_adUnit`  - adUnit for smartphones (android OS).  
-`ios_iphone_adUnit`  - adUnit for tablets devices  (android OS).  
-
-
-### banner
-`<banner ios_iphone_adUnit = "" ios_ipad_adUnit = "" ios_smartPhone_adUnit = "" ios_tablet_adUnit = "">`  
+* ### banner 
+`<banner ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = "">`  
 This tag should represent where banner content comes from.  
 When this tag is added it MUST includes properties any device types.
 
 All options are described here:  
 `ios_iphone_adUnit`  - adUnit for iphones.  
 `ios_ipad_adUnit`  - adUnit for ipads.  
-`ios_smartPhone_adUnit`  - adUnit for smartphones (android OS).  
-`ios_iphone_adUnit`  - adUnit for tablets devices  (android OS).  
-
-
-
-
-
+`android_smartPhone_adUnit`  - adUnit for smartphones.  
+`android_tablet_adUnit`  - adUnit for tablets.  
