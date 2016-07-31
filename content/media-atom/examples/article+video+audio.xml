@@ -1,112 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"
-xmlns:applicaster="http://schemas.applicaster.com/atom/1"
-xml:lang="en-us">
-<title>News Feed Title</title>
-<subtitle>News Feed Subtitle</subtitle>
-<link rel="self" type="application/atom+xml"
-href="http://www.example.com/news_feed.atom"/>
-<updated>2006-04-06T13:00:00-08:00</updated>
-<id>http://www.example.com/article_feed.atom</id>
-<author><name>Some Name</name></author>
-<!-- -
-Article with video example
-<!- -->
-<entry>
-<applicaster:type value="article"/>
-<title>News Article title 1</title>
-<summary>Some Summery</summary>
-<id>http://www.example.com/article1</id>
-<published>2006-04-06T13:00:00-08:00</published>
-<updated>2006-04-06T20:25:05-08:00</updated>
-<author><name>Some Name</name></author>
-<link rel="alternate"
-type="text/html"
-href="http://www.example.com/article1.html">
-</link>
-<content type="html">
-Content in HTML , including images and everything
-</content>
-<applicaster:mediaGroup type="thumbnail">
-<applicaster:mediaItem src="http://example.org/thumbnail-image-large.png" scale="large"/>
-<applicaster:mediaItem src="http://example.org/thumbnail-image-small.png" scale="small"/>
-</applicaster:mediaGroup>
-<applicaster:mediaGroup type="video">
-<applicaster:mediaItem src="http://techslides.com/demos/sample-videos/video.mp4" type="video"/>
-<applicaster:mediaItem src="http://i.imgur.com/large.png" scale="large" type="image"/>
-<applicaster:mediaItem src="http://i.imgur.com/small.png" scale="small" type="image"/>
-</applicaster:mediaGroup>
-</entry>
-<!-- -
-Article with audio example
-<!- -->
-<entry>
-<applicaster:type value="article"/>
-<title>News Article title 1</title>
-<summary>Some Summery</summary>
-<id>http://www.example.com/article1</id>
-<published>2006-04-06T13:00:00-08:00</published>
-<updated>2006-04-06T20:25:05-08:00</updated>
-<author><name>Some Name</name></author>
-<link rel="alternate"
-type="text/html"
-href="http://www.example.com/article1.html">
-</link>
-<content type="html">
-Content in HTML , including images and everything
-</content>
-<applicaster:mediaGroup type="thumbnail">
-<applicaster:mediaItem src="http://example.org/thumbnail-image-large.png" scale="large"/>
-<applicaster:mediaItem src="http://example.org/thumbnail-image-small.png" scale="small"/>
-</applicaster:mediaGroup>
-<applicaster:mediaGroup type="audio">
-<applicaster:mediaItem src="http://www.sample-videos.com/audio/mp3/wave.mp3" type="audio"/>
-<applicaster:mediaItem src="http://i.imgur.com/large.png" scale="large" type="image"/>
-<applicaster:mediaItem src="http://i.imgur.com/small.png" scale="small" type="image"/>
-</applicaster:mediaGroup>
-</entry>
-<!-- -
-Article with image example
-<!- -->
-<entry>
-<applicaster:type value="article"/>
-<title>News Article title 2</title>
-<summary>Some Summery</summary>
-<id>http://www.example.com/article1</id>
-<published>2006-04-06T13:00:00-08:00</published>
-<updated>2006-04-06T20:25:05-08:00</updated>
-<author><name>Some Name</name></author>
-<link rel="alternate"
-type="text/html"
-href="http://www.example.com/article1.html">
-</link>
-<content type="html">
-Content in HTML , including images and everything
-</content>
-<applicaster:mediaGroup type="thumbnail">
-<applicaster:mediaItem src="http://example.org/thumbnail-image-large.png" scale="large"/>
-<applicaster:mediaItem src="http://example.org/thumbnail-image-small.png" scale="small"/>
-</applicaster:mediaGroup>
-<applicaster:mediaGroup type="detailed-view">
-<applicaster:mediaItem src="http://example.org/image-large.png" scale="large"/>
-<applicaster:mediaItem src="http://example.org/image-small.png" scale="small"/>
-</applicaster:mediaGroup>
-</entry>
-<!-- -
-Video example
-<!- -->
-<entry>
-<applicaster:type value="video"/>
-<title>Example Video Title #1</title>
-<summary>Example Summery</summary>
-<id>http://www.example.com/video1</id>
-<published>2005-04-06T13:00:00-08:00</published>
-<updated>2005-04-06T20:25:05-08:00</updated>
-<content type="video/hls"
-src="http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"/>
-<applicaster:mediaGroup type="thumbnail">
-<applicaster:mediaItem src="http://example.org/image-large.png" scale="large"/>
-<applicaster:mediaItem src="http://example.org/image-small.png" scale="small"/>
-</applicaster:mediaGroup>
-</entry>
+    xmlns:applicaster="http://schemas.applicaster.com/atom/1"
+    xml:lang="en-us">
+    <title>News Feed Title</title>
+    <subtitle>News Feed Subtitle</subtitle>
+    <link rel="self" type="application/atom+xml"
+    href="http://www.example.com/news_feed.atom"/>
+    <updated>2006-04-06T13:00:00-08:00</updated>
+    <id>http://www.example.com/article_feed.atom</id>
+    <author><name>Some Name</name></author>
+    <advertisement>
+        <interstitial ios_iphone_adUnit="aaaaa" ios_ipad_adUnit= "bbbb" android_smartPhone_adUnit="cccc" android_tablet_adUnit="dddd"/>
+        <banner ios_iphone_adUnit = "eee" ios_ipad_adUnit = "fff" android_smartPhone_adUnit = "ggg" android_tablet_adUnit = "hhh"/>
+    </advertisement>
+    <!-- -
+     Article with video example
+     <!- -->
+    <entry>
+        <applicaster:type value="article"/>
+        <title>News Article title 1</title>
+        <summary>Some Summery</summary>
+        <id>http://www.example.com/article1</id>
+        <published>2006-04-06T13:00:00-08:00</published>
+        <updated>2006-04-06T20:25:05-08:00</updated>
+        <author><name>Some Name</name></author>
+        <link rel="alternate"
+            type="text/html"
+            href="http://www.example.com/article1.html">
+        </link>
+        <advertisement>
+            <interstitial ios_iphone_adUnit="aaaaa" ios_ipad_adUnit= "bbbb" android_smartPhone_adUnit="cccc" android_tablet_adUnit="dddd"/>
+            <banner ios_iphone_adUnit = "eee" ios_ipad_adUnit = "fff" android_smartPhone_adUnit = "ggg" android_tablet_adUnit = "hhh"/>
+        </advertisement>
+        <content type="html">
+            Content in HTML , including images and everything
+        </content>
+        <applicaster:mediaGroup type="thumbnail">
+            <applicaster:mediaItem src="http://example.org/thumbnail-image-large.png" scale="large"/>
+            <applicaster:mediaItem src="http://example.org/thumbnail-image-small.png" scale="small"/>
+        </applicaster:mediaGroup>
+        <applicaster:mediaGroup type="video">
+            <applicaster:mediaItem src="http://techslides.com/demos/sample-videos/video.mp4" type="video"/>
+            <applicaster:mediaItem src="http://i.imgur.com/large.png" scale="large" type="image"/>
+            <applicaster:mediaItem src="http://i.imgur.com/small.png" scale="small" type="image"/>
+        </applicaster:mediaGroup>
+    </entry>
+    <!-- -
+     Article with audio example
+     <!- -->
+    <entry>
+        <applicaster:type value="article"/>
+        <title>News Article title 1</title>
+        <summary>Some Summery</summary>
+        <id>http://www.example.com/article1</id>
+        <published>2006-04-06T13:00:00-08:00</published>
+        <updated>2006-04-06T20:25:05-08:00</updated>
+        <author><name>Some Name</name></author>
+        <link rel="alternate"
+            type="text/html"
+            href="http://www.example.com/article1.html">
+        </link>
+        <content type="html">
+            Content in HTML , including images and everything
+        </content>
+        <applicaster:mediaGroup type="thumbnail">
+            <applicaster:mediaItem src="http://example.org/thumbnail-image-large.png" scale="large"/>
+            <applicaster:mediaItem src="http://example.org/thumbnail-image-small.png" scale="small"/>
+        </applicaster:mediaGroup>
+        <applicaster:mediaGroup type="audio">
+            <applicaster:mediaItem src="http://www.sample-videos.com/audio/mp3/wave.mp3" type="audio"/>
+            <applicaster:mediaItem src="http://i.imgur.com/large.png" scale="large" type="image"/>
+            <applicaster:mediaItem src="http://i.imgur.com/small.png" scale="small" type="image"/>
+        </applicaster:mediaGroup>
+    </entry>
+    <!-- -
+     Article with image example
+     <!- -->
+    <entry>
+        <applicaster:type value="article"/>
+        <title>News Article title 2</title>
+        <summary>Some Summery</summary>
+        <id>http://www.example.com/article1</id>
+        <published>2006-04-06T13:00:00-08:00</published>
+        <updated>2006-04-06T20:25:05-08:00</updated>
+        <author><name>Some Name</name></author>
+        <link rel="alternate"
+            type="text/html"
+            href="http://www.example.com/article1.html">
+        </link>
+        <content type="html">
+            Content in HTML , including images and everything
+        </content>
+        <applicaster:mediaGroup type="thumbnail">
+            <applicaster:mediaItem src="http://example.org/thumbnail-image-large.png" scale="large"/>
+            <applicaster:mediaItem src="http://example.org/thumbnail-image-small.png" scale="small"/>
+        </applicaster:mediaGroup>
+        <applicaster:mediaGroup type="detailed-view">
+            <applicaster:mediaItem src="http://example.org/image-large.png" scale="large"/>
+            <applicaster:mediaItem src="http://example.org/image-small.png" scale="small"/>
+        </applicaster:mediaGroup>
+    </entry>
+    <!-- -
+     Video example
+     <!- -->
+    <entry>
+        <applicaster:type value="video"/>
+        <title>Example Video Title #1</title>
+        <summary>Example Summery</summary>
+        <id>http://www.example.com/video1</id>
+        <published>2005-04-06T13:00:00-08:00</published>
+        <updated>2005-04-06T20:25:05-08:00</updated>
+        <advertisement>
+            <interstitial ios_iphone_adUnit="aaaaa" ios_ipad_adUnit= "bbbb" android_smartPhone_adUnit="cccc" android_tablet_adUnit="dddd"/>
+            <banner ios_iphone_adUnit = "eee" ios_ipad_adUnit = "fff" android_smartPhone_adUnit = "ggg" android_tablet_adUnit = "hhh"/>
+        </advertisement>
+        <content type="video/hls"
+        src="http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"/>
+        <applicaster:mediaGroup type="thumbnail">
+            <applicaster:mediaItem src="http://example.org/image-large.png" scale="large"/>
+            <applicaster:mediaItem src="http://example.org/image-small.png" scale="small"/>
+        </applicaster:mediaGroup>
+    </entry>
 </feed>
+
+

@@ -8,6 +8,8 @@
 | 1.2.1 | Support of inline images in article. |
 | 1.3.0 | Support of video resource type. |
 | 1.4.0 | Articles support audio mediaGroup. |
+| 1.5.0 | ATOM with advertisement tags. |
+
 
 
 # Overview
