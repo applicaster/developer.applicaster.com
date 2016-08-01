@@ -415,6 +415,23 @@
   owner: y.osteen@applicaster.com
 
 "Measurement & Analytics":
+
+- folder: morpheus
+  internal: false
+  title: Analytics
+  description: >
+    A brief description of the Applicaster analytics offering
+  type: Technical
+  owner: y.osteen@applicaster.com
+
+- folder: morpheus
+  internal: false
+  title: Morpheus
+  description: >
+    This document describes the Morpheus product
+  type: Technical
+  owner: y.osteen@applicaster.com
+
 - folder: product_analytics_procedure
   internal: true
   title: Product Analytics Procedure
