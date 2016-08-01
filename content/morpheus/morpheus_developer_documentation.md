@@ -102,8 +102,8 @@ etc.
 }
 
 ##### Dependencies
-#import <ApplicasterSDK/APAnalyticsStorage.h>  
-#import <ApplicasterSDK/APAnalytics.h>
+&#35;import &lt;ApplicasterSDK/APAnalyticsStorage.h&gt;  
+&#35;import &lt;ApplicasterSDK/APAnalytics.h&gt;
 
 ##### Methods List
 
