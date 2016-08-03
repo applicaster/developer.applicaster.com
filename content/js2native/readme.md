@@ -9,7 +9,7 @@ To use the SDK you need to include the following in your HTML:
 
 ```markup
 <script
-  src="http://assets-production.applicaster.com/js2native/v1/js2native.js">
+src="http://assets-production.applicaster.com/js2native/v1/js2native.js">
 </script>
 ```
 
@@ -28,9 +28,9 @@ Version added: 1.0.0
 Login to Facebook using the Native facebook application
 
 ```javascript
-    Applicaster.JS2Native.FB.login(function (response) {
-      console.log("login response: " + JSON.stringify(response))
-    });
+Applicaster.JS2Native.FB.login(function (response) {
+console.log("login response: " + JSON.stringify(response))
+});
 ```
 
 #### FB.getLoginStatus(callback)
@@ -40,9 +40,9 @@ Version added: 1.0.0
 Check if user is logged in to Facebook
 
 ```javascript
-    Applicaster.JS2Native.FB.getLoginStatus(function (response) {
-      console.log("login status response: " + JSON.stringify(response))
-    });
+Applicaster.JS2Native.FB.getLoginStatus(function (response) {
+console.log("login status response: " + JSON.stringify(response))
+});
 ```
 
 #### FB.ui(options)
@@ -52,16 +52,16 @@ Version added: 1.0.0
 Open Native Facebook dialogs.
 
 ```javascript
-    var options = {
-      method: 'feed',
-      link: 'http://google.com',
-      caption: "Search at Google",
-      name: 'Google Inc.',
-      description: 'The search engine',
-      picture: 'http://google.com/logo.png'
-    };
+var options = {
+method: 'feed',
+link: 'http://google.com',
+caption: "Search at Google",
+name: 'Google Inc.',
+description: 'The search engine',
+picture: 'http://google.com/logo.png'
+};
 
-    js2n.FB.ui(options);
+js2n.FB.ui(options);
 ```
 
 ### SMS Integration
@@ -73,12 +73,12 @@ Version added: 1.0.0
 Open SMS Native view with pre-filled recipients (comma separated) and body text.
 
 ```javascript
-    var options = {
-      recipients: '*123',
-      body: 'Body text'
-    };
+var options = {
+recipients: '*123',
+body: 'Body text'
+};
 
-    js2n.SMS.showMessageComposer(options);
+js2n.SMS.showMessageComposer(options);
 ```
 
 ### WebView control
@@ -90,7 +90,7 @@ Version added: 1.0.0
 Closes the current WebView.
 
 ```javascript
-    js2n.WebView.close();
+js2n.WebView.close();
 ```
 
 #### WebView.keepScreenOn(flag)
@@ -101,13 +101,13 @@ Toggles the device screen behaviour, so the screen won't close
 after the default device idle time.
 
 ```javascript
-    // Keep the screen on even after idle time has passed.
-    js2n.WebView.keepScreenOn(true);
+// Keep the screen on even after idle time has passed.
+js2n.WebView.keepScreenOn(true);
 ```
 
 ```javascript
-    // disable screenOn - back to default device settings.
-    js2n.WebView.keepScreenOn(false);
+// disable screenOn - back to default device settings.
+js2n.WebView.keepScreenOn(false);
 ```
 
 
@@ -149,14 +149,14 @@ List is taken form: https://github.com/applicaster/achievement-center/blob/f3d44
 
 ```javascript
 
-    var options = {
-      callback: callback,
-      actionName: 'trivia_answer_correct',
-      points: null,
-      arn: null
-    };
+var options = {
+callback: callback,
+actionName: 'trivia_answer_correct',
+points: null,
+arn: null
+};
 
-    js2n.Achievement.userAction(options)
+js2n.Achievement.userAction(options)
 ```
 
 ### Morpheus Integration
@@ -187,19 +187,19 @@ JSON object should be formatted as pascal case (*PascalCase*).
 var key = "Questionnaire: Answer Question";
 
 var properties = {
-  QuestionName: "Are you the one?",
-  QuestionID: "1",
-  QuestionnaireName: "blue pill or red pill?",
-  QuestionnaireID: "1",
-  AnswerText: "Yes",
-  AnswerCorrect: true,
-  TimeTaken: 1,
-  FeedName: "nebuchadnezzar",
-  FeedID: "1",
-  FeedEpisodeName: "reloaded",
-  FeedEpisodeID: "1",
-  TVShowName: "zion underground",
-  TVShowID: "1",
+QuestionName: "Are you the one?",
+QuestionID: "1",
+QuestionnaireName: "blue pill or red pill?",
+QuestionnaireID: "1",
+AnswerText: "Yes",
+AnswerCorrect: true,
+TimeTaken: 1,
+FeedName: "nebuchadnezzar",
+FeedID: "1",
+FeedEpisodeName: "reloaded",
+FeedEpisodeID: "1",
+TVShowName: "zion underground",
+TVShowID: "1",
 }
 
 js2n.Morpheus.emit(key, properties);
@@ -223,28 +223,30 @@ They are not required, but if delivered, should be written as follows:
 
 ```javascript
 var userProperties = {
-  "Name":"Neo",
-  "FirstName":"Thomas",
-  "LastName":"Anderson",
-  "Email":"t.anderson@metacortex.com",
-  "Phone":"1",
-  "Custom1": "1",
-  "Custom2": "2",
-  "custom3": "3",
-  "SocialIDs":{
-    "Facebook":{
-      "ID": "123",
-    },
-    "twitter":{
-      "ID": "123",
-    },
-    "google":{
-      "ID": "123",
-    }
-  }
+"Name":"Neo",
+"FirstName":"Thomas",
+"LastName":"Anderson",
+"Email":"t.anderson@metacortex.com",
+"Phone":"1",
+"Custom1": "1",
+"Custom2": "2",
+"custom3": "3",
+"SocialIDs":{
+"Facebook":{
+"ID": "123",
+},
+"twitter":{
+"ID": "123",
+},
+"google":{
+"ID": "123",
+}
+}
 }
 
 js2n.Morpheus.updateUserProfile(userProperties);
 ```
+### Note
+The current iOS webview SDK prevents the native iOS device from being able to receive multiple commands simultaneously. If you need to send more than one command at the same time, maintain the timestamp for when the event/user profile creation was triggered, but create a 5 second delay in the actual delivery of each command to iOS
 
 [morpheus_release_notes]: http://developer.applicaster.com/docs/internal/morpheus_release_notes
