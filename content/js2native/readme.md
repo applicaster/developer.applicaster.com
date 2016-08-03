@@ -247,6 +247,6 @@ var userProperties = {
 js2n.Morpheus.updateUserProfile(userProperties);
 ```
 ### Note
-if you want to send two "js2n.Morpheus" commands please make sure you add delay of 5 second between them.
+The current iOS webview SDK prevents the native iOS device from being able to receive multiple commands simultaneously. If you need to send more than one command at the same time, maintain the timestamp for when the event/user profile creation was triggered, but create a 5 second delay in the actual delivery of each command to iOS
 
 [morpheus_release_notes]: http://developer.applicaster.com/docs/internal/morpheus_release_notes
