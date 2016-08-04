@@ -415,6 +415,23 @@
   owner: y.osteen@applicaster.com
 
 "Measurement & Analytics":
+
+- folder: analytics
+  internal: false
+  title: Analytics
+  description: >
+    A brief description of the Applicaster analytics offering
+  type: Technical
+  owner: y.osteen@applicaster.com
+
+- folder: morpheus
+  internal: false
+  title: Morpheus
+  description: >
+    This document describes the Morpheus product
+  type: Technical
+  owner: y.osteen@applicaster.com
+
 - folder: product_analytics_procedure
   internal: true
   title: Product Analytics Procedure
@@ -474,9 +491,9 @@
   owner: l.deutsch@applicaster.com
 
 "Morpheus":
-- folder: morpheus
+- folder: morpheus_developer_documentation
   internal: true
-  title: Morpheus Events API
+  title: Morpheus Developer Documentation
   description: >
     How to send event to Morpheus.
   type: Technical
