@@ -416,7 +416,7 @@
 
 "Measurement & Analytics":
 
-- folder: morpheus
+- folder: analytics
   internal: false
   title: Analytics
   description: >
@@ -491,9 +491,9 @@
   owner: l.deutsch@applicaster.com
 
 "Morpheus":
-- folder: morpheus
+- folder: morpheus_developer_documentation
   internal: true
-  title: Morpheus Events API
+  title: Morpheus Developer Documentation
   description: >
     How to send event to Morpheus.
   type: Technical
