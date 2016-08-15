@@ -246,6 +246,35 @@ var userProperties = {
 
 js2n.Morpheus.updateUserProfile(userProperties);
 ```
+
+### Native player
+
+###Video.playNative(options)
+
+Launches native player with specific URL.
+
+```javascript
+ var options = {
+   video_url: "http://demo.unified-streaming.com/video/tears-of-steel/tears-of-steel.ism/.m3u8"
+ };
+
+ js2n.Video.playNative(options);
+```
+### Native sharing
+
+###NativeShare.show(options)
+
+Launches native sharing menu. Options will be passed into the choosen sharing functionality.
+
+```javascript
+ var options = {
+   link_url: "http://www.bbc.com/weather",
+   title: "Wheater"
+ };
+
+ js2n.NativeShare.show(options);
+```
+
 ### Note
 The current iOS webview SDK prevents the native iOS device from being able to receive multiple commands simultaneously. If you need to send more than one command at the same time, maintain the timestamp for when the event/user profile creation was triggered, but create a 5 second delay in the actual delivery of each command to iOS
 
