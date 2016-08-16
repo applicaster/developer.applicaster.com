@@ -1,4 +1,4 @@
-# Applicaster.JS2Native (v1.2.0)
+# Applicaster.JS2Native (v2)
 
 The Applicaster.JS2Native SDK provides access to native capabilities in
 WebViews running inside applicaster's native apps.
@@ -9,13 +9,13 @@ To use the SDK you need to include the following in your HTML:
 
 ```markup
 <script
-src="http://assets-production.applicaster.com/js2native/v1/js2native.js">
+src="http://assets-production.applicaster.com/js2native/v2/js2native.js">
 </script>
 ```
 
 ## Examples
 
-A simple example is available [here](http://assets-production.applicaster.com/js2native/v1/docs/examples.html)
+A simple example is available [here](http://assets-production.applicaster.com/js2native/v2/docs/examples.html)
 
 ## Reference
 
@@ -249,7 +249,7 @@ js2n.Morpheus.updateUserProfile(userProperties);
 
 ### Native player
 
-###Video.playNative(options)
+### Video.playNative(options)
 
 Launches native player with specific URL.
 
@@ -262,7 +262,7 @@ Launches native player with specific URL.
 ```
 ### Native sharing
 
-###NativeShare.show(options)
+### NativeShare.show(options)
 
 Launches native sharing menu. Options will be passed into the choosen sharing functionality.
 
