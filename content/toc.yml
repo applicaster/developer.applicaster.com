@@ -415,6 +415,14 @@
   owner: y.osteen@applicaster.com
 
 "Measurement & Analytics":
+  
+  - folder: analytics-plugins
+    internal: true
+    title: Analytics provider plugin on Android
+    description: >
+      This doc describes how to create an analytics provider plugin on Android
+  type: Technical
+  owner: e.bendavid@applicaster.com
 
 - folder: analytics
   internal: false
