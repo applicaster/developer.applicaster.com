@@ -416,13 +416,13 @@
 
 "Measurement & Analytics":
   
-  - folder: analytics-plugins
-    internal: true
-    title: Analytics provider plugin on Android
-    description: >
-      This doc describes how to create an analytics provider plugin on Android
-  type: Technical
+- folder: analytics-plugins
+  internal: true
   owner: e.bendavid@applicaster.com
+  title: "Analytics provider plugin on Android"
+  description: >
+    This doc describes how to create an analytics provider plugin on Android
+  type: Technical
 
 - folder: analytics
   internal: false
