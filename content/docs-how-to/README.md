@@ -82,6 +82,9 @@ documents)
 | `type` | The type of the document. can be "Technical" or "Release Notes" for now | - | Yes
 | `owner` | The owner of the document - the goto person when someone have questions or comments about the code | - | Yes
 
+
+For verfiy your changes on **toc.yml** [please visit yamllint](http://www.yamllint.com).
+
 ### Adding the documentation Markdown file
 
 Create a folder inside the `content` folder named with the same name that was
