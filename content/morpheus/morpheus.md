@@ -13,3 +13,5 @@ The aim of Morpheus is to provide greater flexibility and scalability around ana
 The infrastructure works as illustrated in the diagram below:
 
 ![morpheus_diagram](./morpheus_diagram.png)
+
+To learn how to configure analytics in Zapp, click [here](https://applicaster.zendesk.com/hc/en-us/articles/206419186-Configuring-Analytics-at-Applicaster)

@@ -82,7 +82,46 @@ The procedure is outlined step-by-step below:
 
 Measurement is critical for our customers to get the most out of our products, and for us to make responsible, informed decisions about how to continuously improve upon our products and features. I'm always happy to provide guidance on how to get the most out of your data.
 
-### Additional Reference
+## Best Practices:
+Here are a few additional best practices when implementing Events:
+* Outline your business goals and the questions you want to answer, then map Events to track each action you need to measure. For more details, check out the [Product Analytics Procedure](https://github.com/applicaster/developer.applicaster.com/blob/2e2ebea5e0f5ddc3f73c9fe6cbb58bf8e70d5e62/content/product_analytics_procedure/Product_Analytics_Procedure.md). 
+    * Make sure the product or business lead of your team follows this procedure.
+* Organize your Events for easy identification and categorization. If you have more than one product/feature which has similar functionality, name the Events the same way across features so you can more easily compare performance. 
+* Put descriptive information (location triggered, states, names, IDs, etc.) in properties rather than creating separate events to capture this information.
+    * For example, if you have a reminder function for live programs which can be triggered from multiple places in the app, rather than have the events:
+        * Live Drawer: Set Reminder
+        * EPG: Set Reminder
+        * Set Reminder from Cell
+    * Have one event:
+        * Set Reminder
+    * With a property for “Location” with values of “Live Drawer, EPG, Cell”
+    * In this case, don’t forget about the need for an event “Remove Reminder”
+* Add Event properties on every Event wherever applicable.
+* Use timed Events wherever applicable.
+* Whenever possible, keep property values under 100 characters
+    * Facebook App Analytics will not accept larger values and we will cut off such values at 100 characters
+* Default properties should only be for qualities that are important to answering questions about the data across all levels of behavior.
+    * Please get approval from the M&M team before putting in the time and effort to create a default property. 
+*  For characteristics about a user which are depedent on state, time, or actions, make sure to stores these as event properties as well as user profile properties.
+    *   For example, if an analyst wants to understand the user flow for users registering via the SSO, being able to filter the data on the event level for whether or not the user was registered at any given point in time will help them break the behavior into 'before' and 'after' stages of the conversion point.
+    *   If this state is only stored in the analytic properties storage as a user property according to last status, such analysis would not be possible. 
+
+
+### Best Practices for Naming:
+* When possible, use active voice for Event names (start with a verb)
+    * For example, “Read Article” instead of “Article Read” or "Reading Article"
+* Avoid special characters other than ‘-’, or ‘_’
+    * FB Analytics does not accept any other special characters in event or property names. If used, they will be replaced as such:
+    * ‘:’ will be replaced with ‘ -’  
+    * ‘/’, ‘\’ and ‘  \ \’ will be replaced with ‘_’
+    * All else will be replaced with a space
+* When creating a series of events for a product, it is recommended to start with the “X - ” where X = the name of the Product
+    * For example, all the events for the Feed begin with “Feed - ”
+* Use [Proper Case](http://www.computerhope.com/jargon/p/proper-case.htm), unless you have a valid reason not to (i.e. using the acronym VOD)
+
+## Additional Reference
+
+You can refer developers to the Morpheus Developer Documentation [here](https://github.com/applicaster/developer.applicaster.com/blob/8c4e6a6949c51cfcefd7c3812c15a8ee0020089b/content/morpheus_developer_documentation/morpheus_developer_documentation.md)
 
 Google's HEART categories can be a useful guideline for identifying goals.
   *   HEART stands for:
