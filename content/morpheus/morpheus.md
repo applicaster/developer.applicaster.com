@@ -16,9 +16,9 @@ The infrastructure works as illustrated in the diagram below:
 
 Morpheus supports a "Plugin" system, where third party analytics providers can be "plugged in" to the system and automatically start receiving all of the events referenced above. Every analytics provider has their own set of "out-of-the-box" functionality and events (i.e. retention reporting, session tracking) as part of their SDK, which Applicaster also supports. 
 
-There are two types of Plugins: 1) Default Plugins, and 2) Standard Plugins. 
+There are two types of Plugins: 1) Default Plugins, and 2) Optional Plugins. 
 
-Default Plugins are switched on automatically in the core Applicaster architecture. This means you don't need to do anything prior to compiling to include them in your build, and after launch, you can still turn them on and change any configuration fields (i.e. API Key). Standard Plugins require that you add and configure them to the app before compiling.
+Default Plugins are switched on automatically in the core Applicaster architecture. This means you don't need to do anything prior to compiling to include them in your build, and after launch, you can still turn them on and change any configuration fields (i.e. API Key). Optional Plugins require that you add and configure them to the app before compiling.
 
 Applicaster currently supports the following behavioral analytics providers:
 
@@ -32,22 +32,22 @@ Applicaster also supports the following video analytics providers:
 * comScore Stream Sense
 * Akamai Media Analytics
 
-The plugin architecture is complete, but the transition of providers to plugins is still under development. This means that while all of these providers can be supported currently, whether or not they need to be pre-configured as a standard plugin is subject to change as per the development status outlined below:
+The plugin architecture is complete, but the transition of providers to plugins is still under development. This means that while all of these providers can be supported currently, whether or not they need to be pre-configured as an optional plugin is subject to change as per the development status outlined below:
 
 #### Default Plugins
  
 * Google Analytics
 * Mixpanel
 
-#### Future Standard Plugins
+#### Future Optional Plugins
 
-The following providers are currently set up as Default Plugins and will be moved to Standard Plugins
+The following providers are currently set up as Default Plugins and will be moved to Optional Plugins
 
 * comScore DAX
 * comScore Stream Sense
 * Akamai Media Analytics
 * Flurry
-	* Already moved to a Standard Plugin on Android 	
+	* Already moved to a Optional Plugin on Android 	
 
 Again, please note that providers under open development are still currently supported. Simply, the status of the type of plugin they are is subject to change.
 
