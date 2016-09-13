@@ -300,6 +300,14 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
+- folder: modular-analytics
+  internal: false
+  title: Modular Analytics
+  description: >
+    Analytics Events of the Modular SDK, including video and UI events.
+  type: Technical
+  owner: s.miasnik@applicaster.com
+
 "Zapp":
 - folder: zapp-release-notes
   internal: true
