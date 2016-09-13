@@ -36,10 +36,9 @@ The plugin architecture is complete, but the transition of providers to plugins 
 
 #### Future Default Plugins
  
-* Completed on both platforms:
-	* Mixpanel
 * Open development to move from Standard to Default Plugin on iOS:
 	* Google Analytics
+	* Mixpanel
 
 Firebase Analytics is on the roadmap to be added as a Default Plugin for both platforms as well.
 
