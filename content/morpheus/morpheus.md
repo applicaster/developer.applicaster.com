@@ -34,22 +34,20 @@ Applicaster also supports the following video analytics providers:
 
 The plugin architecture is complete, but the transition of providers to plugins is still under development. This means that while all of these providers can be supported currently, whether or not they need to be pre-configured as a standard plugin is subject to change as per the development status outlined below:
 
-#### Future Default Plugins
+#### Default Plugins
  
-* Open development to move from Standard to Default Plugin on iOS:
-	* Google Analytics
-	* Mixpanel
-
-Firebase Analytics is on the roadmap to be added as a Default Plugin for both platforms as well.
+* Google Analytics
+* Mixpanel
 
 #### Future Standard Plugins
 
-* Open development to move from Default Plugin to Standard Plugin on iOS:
-	* Flurry
-* Open development to move from Default Plugin to Standard Plugin on Android:
-	* comScore DAX
-	* comScore Stream Sense
-	* Akamai Media Analytics
+The following providers are currently set up as Default Plugins and will be moved to Standard Plugins
+
+* comScore DAX
+* comScore Stream Sense
+* Akamai Media Analytics
+* Flurry
+	* Already moved to a Standard Plugin on Android 	
 
 Again, please note that providers under open development are still currently supported. Simply, the status of the type of plugin they are is subject to change.
 
