@@ -424,6 +424,14 @@
     This doc describes how to create an analytics provider plugin on Android
   type: Technical
 
+- folder: analytics-plugins-ios
+  internal: true
+  owner: e.bendavid@applicaster.com
+  title: "Analytics provider plugin on iOS"
+  description: >
+    This doc describes how to create an analytics provider plugin on iOS
+  type: Technical
+
 - folder: analytics
   internal: false
   title: Analytics
@@ -432,11 +440,27 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
+- folder: link-to-custom-analytics-events
+  internal: false
+  title: Custom Analytics Events
+  description: >
+    A link within this folder to the documentation on JS-2-Morpheus (analytics coverage for HTML/JS)
+  type: Technical
+  owner: y.osteen@applicaster.com
+
 - folder: morpheus
   internal: false
   title: Morpheus
   description: >
     This document describes the Morpheus product
+  type: Technical
+  owner: y.osteen@applicaster.com
+
+- folder: js2morpheus-link
+  internal: false
+  title: HTML/JS Coverage
+  description: >
+    A link within this folder to the documentation on JS-2-Morpheus (analytics coverage for HTML/JS)
   type: Technical
   owner: y.osteen@applicaster.com
 
