@@ -444,7 +444,7 @@
   internal: false
   title: Custom Analytics Events
   description: >
-    A link within this folder to the documentation on JS-2-Morpheus (analytics coverage for HTML/JS)
+    Documentation on Applicaster's custom analytics events
   type: Technical
   owner: y.osteen@applicaster.com
 
@@ -460,7 +460,7 @@
   internal: false
   title: HTML/JS Coverage
   description: >
-    A link within this folder to the documentation on JS-2-Morpheus (analytics coverage for HTML/JS)
+    Documentation on JS-2-Morpheus (analytics coverage for in-app mobile web products)
   type: Technical
   owner: y.osteen@applicaster.com
 
