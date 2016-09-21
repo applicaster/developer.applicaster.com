@@ -30,7 +30,7 @@ Event  | Insight
 
 
 
-###Navigation Events (iOS v2.7 and above, Android v2.6 and above)
+###Navigation Events (iOS v3.1 and above, Android v3.2.24 and above)
 
 Event  | Insight
 --------------- | ---------------
@@ -64,7 +64,7 @@ Event  | Insight
 **Sync Button Exposure** | Measures when the the User is exposed to sync button. 
 **Sync Button Clicked** | Measures tapping on the sync button. 
 **Sync Button Closed** | Measures tapping on the 'close' button of the sync button. iOS only - Android has back functionality instead of close button 
-**Receive Push Notification** | Measures when a user receives a push notification. There's a property that measures whether or not the user tapped the push notification and launched the app. iOS only, Android does not report if 3rd party push messages are received if the user does not click on them. 
+**Tap Notification** | Measures when a user taps on a push notification or reminder notification. Identify which particular push messages bring in the most users and how that fits within the greater flow of user behavior.
 **Tap Atom Feed** | Measures when a user taps on an Atom Feed, excluding Photo Gallery type. 
 **Photo Album Clicked** | Measures user taps on an ATOM Photo Album (also known as a Photo Gallery). 
 **Article Clicked** | Measures user taps on an ATOM article. 
