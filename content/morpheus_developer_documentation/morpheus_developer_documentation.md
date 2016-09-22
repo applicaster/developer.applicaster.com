@@ -179,3 +179,52 @@ Here are a few additional best practices when implementing Events:
 * When creating a series of events for a product, it is recommended to start with the “X - ” where X = the name of the Product
     * For example, all the events for the Feed begin with “Feed - ”
 * Use [Proper Case](http://www.computerhope.com/jargon/p/proper-case.htm), unless you have a valid reason not to (i.e. using the acronym VOD)
+
+## Screen views API
+
+**Business Value:** Measuring screen views allows us to see which screens are viewed most by end-users, and how they are navigating through the app. Customers who are more familiar with screen-view analysis models can track navigation more easily, enabling deeper and more flexible analysis. For example, some content is often accessible on different screens (such as the home screen and a specific show screen). Seeing which screen is driving users to content will help customers identify how to place content as well as how to evaluate ad placements on different screens.  
+Additionally, some analytics providers (like comScore, AGOF, or Nielsen), create consumption scores based on screen views, which affect advertising dollars more broadly for our customers.
+
+**Best Practice:** The best practice for naming a screen should be X - Y, where X = The name of the type of screen and Y = the value of the screen as rendered within the app (and set in the CMS), such as “Show - The Voice.” You can always look to the existing implementation and reach out to the M&M team for guidance or help.
+
+**Note:** If a screen has several tabs, and when a user changes the tab the content of the screen re-populates, this should be considered a separate screen view, with a format of X - Y - Z, building on the best practice above but where Z = the name of the tab as set in the CMS. For example, if a user is in “The Voice” with Tabs by season. Loading the screen would cause a screen view to be sent with a screen name like “Season - The Voice - Season 1”. When the user switches tabs, it would repopulate to something like “Season - The Voice - Season 2”.  
+For example:  
+IOS:  
+```bash
+	APAnalyticsManager trackScreenView:@"Splash - App Loading Screen"];
+```  
+Android:  
+```bash
+	AnalyticsAgentUtil.setScreenView(AnalyticsAgentUtil.SETTING_SCREEN + " - " + "Login");
+```
+For the dynamic screens like ‘home’, ‘season’, Etc. you need to add screen name in the app screens configuration.  
+For example:  
+Android:  
+```bash
+componentsMetaData.properties
+"mDataSourceType": "CATEGORY",
+      "mComponentType": "LIST",
+      "mHeader": {
+        "mShowTitle": true,
+            },
+      "analytics_screen_name": "Home - Highlights Section",
+```
+IOS: 
+```bash
+AppDefine.json:{
+              "class": [   "screen"],
+              "rel": ["screens:ipad" ],
+              "title": "Highlights Section",
+              "properties": {
+                "analytics_screen_name": "Home - Highlights Section"
+```
+Android screen view tracking example:
+```bash
+AnalyticsAgentUtil.setScreenView(“screen naming”);
+```
+```bash
+IOS screen view tracking example:
+[APAnalyticsManager trackScreenView:@"screen name"];
+```
+
+
