@@ -178,7 +178,9 @@ Here are a few additional best practices when implementing Events:
     * All else will be replaced with a space
 * When creating a series of events for a product, it is recommended to start with the “X - ” where X = the name of the Product
     * For example, all the events for the Feed begin with “Feed - ”
-* Use [Proper Case](http://www.computerhope.com/jargon/p/proper-case.htm), unless you have a valid reason not to (i.e. using the acronym VOD)* Use [Proper Case](http://www.computerhope.com/jargon/p/proper-case.htm), unless you have a valid reason not to (i.e. using the acronym VOD)* Use [Proper Case](http://www.computerhope.com/jargon/p/proper-case.htm), unless you have a valid reason not to (i.e. using the acronym VOD)## Screen views API
+* Use [Proper Case](http://www.computerhope.com/jargon/p/proper-case.htm), unless you have a valid reason not to (i.e. using the acronym VOD)
+
+## Screen views API
 
 **Business Value:** Measuring screen views allows us to see which screens are viewed most by end-users, and how they are navigating through the app. Customers who are more familiar with screen-view analysis models can track navigation more easily, enabling deeper and more flexible analysis. For example, some content is often accessible on different screens (such as the home screen and a specific show screen). Seeing which screen is driving users to content will help customers identify how to place content as well as how to evaluate ad placements on different screens.  
 Additionally, some analytics providers (like comScore, AGOF, or Nielsen), create consumption scores based on screen views, which affect advertising dollars more broadly for our customers.
