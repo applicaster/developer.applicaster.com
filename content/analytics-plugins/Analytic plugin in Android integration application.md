@@ -1,5 +1,8 @@
 ## How to add analytic plugin in Android integration application:
-**Steps:**   
+Applicaster supports a variety of analytics providers to which you can send your analytics data. On Android, some Analytics providers are handled via a “plugin” system, and others are not plugins and sit directly on the Applicaster SDK. For the non-plugin providers (Google Analytics and Mixpanel), speak with your Applicaster Account Manager and ask them to configure it on Zapp (Applicaster’s configuration system). Note: On iOS, all providers are set up as plugins.
+
+The directions below outline how to add an analytic plugin to an Applicaster product or features integrated into a non-Applicaster app:
+  
 1. Get plugin manifest json(Plugin section in Zapp).
 2. Concatenate the dependency_name and the dependency_version with ‘:’ between.  
     for example:  
