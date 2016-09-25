@@ -34,4 +34,4 @@ The directions below outline how to add an analytic plugin to an Applicaster pro
     
     For example:  
 You can see from the left the plugin_configurations.json’ file and from the right the plugin manifest.  
-    (./ios_analytics_plugins_example.png)
+    ![Difference](./ios_analytics_plugins_example.png)

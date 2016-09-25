@@ -37,4 +37,4 @@ For example:
     
     For example:  
 You can see from the left the plugin_configurations.json’ file and from the right the plugin manifest.  
-    (./android_analytics_plugins_example.png)
+   ![Difference](./android_analytics_plugins_example.png)
