@@ -31,7 +31,8 @@ For example:
         }
       ]
     ```
-    *   In the ‘plugin’ property past the content of the plugin manifest.
+    *   In the ‘plugin’ property past the content of the plugin manifest.  
+    Remove proguard_rules and dependency_repository_url properties.
     * In the ‘Configuration_json’ you need to configure the json variable, you can find the json variable list in custom_configuration_fields property in plugin manifest.  
     
     For example:  
