@@ -187,7 +187,6 @@ Additionally, some analytics providers (like comScore, AGOF, or Nielsen), create
 
 **Best Practice:** The best practice for naming a screen should be X - Y, where X = The name of the type of screen and Y = the value of the screen as rendered within the app (and set in the CMS), such as “Show - The Voice.” You can always look to the existing implementation and reach out to the M&M team for guidance or help.
 
-**Note:** If a screen has several tabs, and when a user changes the tab the content of the screen re-populates, this should be considered a separate screen view, with a format of X - Y - Z, building on the best practice above but where Z = the name of the tab as set in the CMS. For example, if a user is in “The Voice” with Tabs by season. Loading the screen would cause a screen view to be sent with a screen name like “Season - The Voice - Season 1”. When the user switches tabs, it would repopulate to something like “Season - The Voice - Season 2”.  
 For example:  
 IOS:  
 ```bash
@@ -226,5 +225,8 @@ AnalyticsAgentUtil.setScreenView(“screen naming”);
 IOS screen view tracking example:
 [APAnalyticsManager trackScreenView:@"screen name"];
 ```
+
+
+**Note:** If a screen has several tabs, and when a user changes the tab the content of the screen re-populates, this should be considered a separate screen view, with a format of X - Y - Z, building on the best practice above but where Z = the name of the tab as set in the CMS. For example, if a user is in “The Voice” with Tabs by season. Loading the screen would cause a screen view to be sent with a screen name like “Season - The Voice - Season 1”. When the user switches tabs, it would repopulate to something like “Season - The Voice - Season 2”.  
 
 
