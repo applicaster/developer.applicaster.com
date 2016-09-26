@@ -18,7 +18,7 @@ Note: The data is sent to the analytics provider you selected of Applicaster’s
 | **Comment a Facebook Post** | Identify which and how many Facebook posts are generating the most discussion.
 
 
-
+# For integrate analytics plugin providers in IOS go to [here]( ../analytics-plugins/Analytic_plugin_in_IOS_integration_application.md) and for Android [here]( ../analytics-plugins/Analytic_plugin_in_Android_integration_application.md)
 
 
 
