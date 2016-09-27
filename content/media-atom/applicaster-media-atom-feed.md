@@ -9,12 +9,13 @@
 | 1.3.0 | Support of video resource type. |
 | 1.4.0 | Articles support audio mediaGroup. |
 | 1.5.0 | ATOM with advertisement tags. |
+| 1.6.0 | Support of YouTube video resource type. |
 
 
 
 # Overview
 Applicaster *Media Atom Feed* is a feature that
-allows the broadcaster to integrate list 
+allows the broadcaster to integrate list
 
 | Version | Description |
 | - | - |
@@ -25,7 +26,7 @@ allows the broadcaster to integrate list
 | 1.3.0 | Support of video resource type. |
 | 1.4.0 | Articles support audio mediaGroup. |
 | 1.5.0 | ATOM with advertisement tags. |
-
+| 1.6.0 | Support of YouTube video resource type. |
 
 
 # Overview
@@ -33,8 +34,8 @@ Applicaster *Media Atom Feed* is a feature that
 allows the broadcaster to integrate list of
 External resources and present them in the app.
 Currently Applicaster supports the following
-resource types: **Article**, **Gallery**
-and **Video**. The broadcaster should host the
+resource types: **Article**, **Gallery**, **Video**
+and **YouTube Video**. The broadcaster should host the
 resources in its own servers and provide
 Applicaster with the links to the Atom feeds
 according to the specifications
@@ -45,6 +46,7 @@ below.
 * Gallery - Upon tapping, the gallery will be presented in the following layout:
 ![image](./images/photoGallery4.png)
 * Video - HLS video content, upon tapping the content will be presented on a video player.
+* YouTube Video - YouTube video content, upon tapping the content will be presented using a YouTube player.
 
 ### Setup
 
@@ -94,7 +96,8 @@ Conditional GET using `If-Modified-Since`,
 [Link](https://github.com/applicaster/developer.applicaster.com/blob/developer2/content/media-atom/examples/article%2Bvideo%2Baudio.xml)
 * Feed that holds image gallery entries.
 [Link](https://github.com/applicaster/developer.applicaster.com/blob/developer2/content/media-atom/examples/galleries.xml)
-
+* Feed that holds a YouTube video.
+[Link](https://github.com/applicaster/developer.applicaster.com/blob/developer2/content/media-atom/examples/youtube.xml)
 
 ## Elements and Attributes Description
 Described below are all the custom extensions
@@ -129,7 +132,7 @@ to one of the following:
 * For Article use: `<applicaster:type
 value="article"/>`
 
-* For Video use: `<applicaster:type
+* For Video (HLS or YouTube) use: `<applicaster:type
 value="video"/>`
 
 * For Image-Gallery: `<applicaster:type
@@ -183,7 +186,7 @@ This tag may include two tags:
 `<interstitial ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`  
 This tag should represent where interstitial content comes from.  
 When this tag is added it MUST includes properties any device types.
-* ### banner 
+* ### banner
 `<banner ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`  
 This tag should represent where banner content comes from.  
 When this tag is added it MUST includes properties any device types.
@@ -205,6 +208,7 @@ depends on the Entry type:
 <kbd>image/png</kbd>, <kbd>image/gif</kbd>,
 <kbd>image/jpg</kbd>, <kbd>image/jpeg</kbd>
 * For Video use <kbd>video/hls</kbd>
+* for YouTube Video use <kbd>youtube-id</kbd>
 * For Image-gallery use
 <kbd>application/atom+xml</kbd>
 
@@ -229,6 +233,8 @@ value="image"/>`. Entries without
 the `<applicaster:type
 value="image"/>` element will be discarded.
 
+* YouTube Video type MUST have a `src` attribute
+with the YouTube video ID.
 
 ### applicaster media group
 `<applicaster:mediaGroup>` <span
@@ -303,8 +309,8 @@ All options are described here:
 
 External resources and present them in the app.
 Currently Applicaster supports the following
-resource types: **Article**, **Gallery**
-and **Video**. The broadcaster should host the
+resource types: **Article**, **Gallery**, **Video**
+and **YouTube Video**. The broadcaster should host the
 resources in its own servers and provide
 Applicaster with the links to the Atom feeds
 according to the specifications
@@ -315,6 +321,7 @@ below.
 * Gallery - Upon tapping, the gallery will be presented in the following layout:
 ![image](./images/photoGallery4.png)
 * Video - HLS video content, upon tapping the content will be presented on a video player.
+* YouTube Video - YouTube video content, upon tapping the content will be presented using a YouTube player.
 
 ### Setup
 
@@ -364,6 +371,8 @@ Conditional GET using `If-Modified-Since`,
 [Link](https://github.com/applicaster/developer.applicaster.com/blob/developer2/content/media-atom/examples/article%2Bvideo%2Baudio.xml)
 * Feed that holds image gallery entries.
 [Link](https://github.com/applicaster/developer.applicaster.com/blob/developer2/content/media-atom/examples/galleries.xml)
+* Feed that holds a YouTube video.
+[Link](https://github.com/applicaster/developer.applicaster.com/blob/developer2/content/media-atom/examples/youtube.xml)
 
 
 ## Elements and Attributes Description
@@ -399,7 +408,7 @@ to one of the following:
 * For Article use: `<applicaster:type
 value="article"/>`
 
-* For Video use: `<applicaster:type
+* For Video (HLS or YouTube) use: `<applicaster:type
 value="video"/>`
 
 * For Image-Gallery: `<applicaster:type
@@ -453,7 +462,7 @@ This tag may include two tags:
 `<interstitial ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`  
 This tag should represent where interstitial content comes from.  
 When this tag is added it MUST includes properties any device types.
-* ### banner 
+* ### banner
 `<banner ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`  
 This tag should represent where banner content comes from.  
 When this tag is added it MUST includes properties any device types.
@@ -475,6 +484,7 @@ depends on the Entry type:
 <kbd>image/png</kbd>, <kbd>image/gif</kbd>,
 <kbd>image/jpg</kbd>, <kbd>image/jpeg</kbd>
 * For Video use <kbd>video/hls</kbd>
+* for YouTube Video use <kbd>youtube-id</kbd>
 * For Image-gallery use
 <kbd>application/atom+xml</kbd>
 
@@ -499,6 +509,8 @@ value="image"/>`. Entries without
 the `<applicaster:type
 value="image"/>` element will be discarded.
 
+* YouTube Video type MUST have a `src` attribute
+with the YouTube video ID.
 
 ### applicaster media group
 `<applicaster:mediaGroup>` <span
@@ -560,7 +572,7 @@ This tag may include two tags:
 `<interstitial ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`  
 This tag should represent where interstitial content comes from.  
 When this tag is added it MUST includes properties any device types.
-* ### banner 
+* ### banner
 `<banner ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`  
 This tag should represent where banner content comes from.  
 When this tag is added it MUST includes properties any device types.

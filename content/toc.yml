@@ -353,9 +353,9 @@
     Applicaster Media Atom Feed is a feature that
     allows the broadcaster to integrate list of
     External resources and present them in the app.
-    Currently Applicaster supports three kinds of
-    resource types: article, image and
-    imageGallery.
+    Currently Applicaster supports five kinds of
+    resource types: article, image, imageGallery
+    and video (for both HLS and YouTube videos).
   type: Technical
   owner: p.kramarov@applicaster.com
 
@@ -415,7 +415,7 @@
   owner: y.osteen@applicaster.com
 
 "Measurement & Analytics":
-  
+
 - folder: analytics-plugins
   internal: true
   owner: e.bendavid@applicaster.com
