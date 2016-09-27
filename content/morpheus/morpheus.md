@@ -30,9 +30,9 @@ Applicaster also supports the following video analytics providers:
 
 For default analytics providers (those automatically included) and plugins included prior to compiling the version build, the configuration fields can be changed remotely in production without requiring a new release on iOS. On Android, this can only be done for Google Analytics and Mixpanel, though we aim to change the general plugin architecture to recognize post-build changes to configuration settings.
 
-The ability to build an analytics plugin is complete, but the transition of providers to plugins is still under development. This means that while all of these providers can be supported currently, whether or not they are configured via the analytics screen in Zapp as outlined [here](https://applicaster.zendesk.com/hc/en-us/articles/206419186-Configuring-Analytics-at-Applicaster) or as a plugin as outlined [here](https://docs.google.com/a/applicaster.com/document/d/1md3Hmc-gg9NuEyIpQ43iDky_THc_5upcRMq8-QvkXHY/edit?usp=sharing) is subject to change. 
+The ability to build an analytics plugin is complete, but the transition of providers to plugins is still under development. This means that while all of these providers can be supported currently, whether or not they are configured via the analytics screen in Zapp as outlined [here](https://applicaster.zendesk.com/hc/en-us/articles/206419186-Configuring-Analytics-at-Applicaster) or as a non-default plugin as outlined [here](https://docs.google.com/a/applicaster.com/document/d/1md3Hmc-gg9NuEyIpQ43iDky_THc_5upcRMq8-QvkXHY/edit?usp=sharing) is subject to change. 
 
-As providers are transitioned to plugins, the status will be updated here:
+As providers are transitioned to non-default plugins, the status will be updated here:
 
 * Flurry
-	* Moved to a Plugin on Android for version 2.7.10 and up
+	* Moved to a Plugin on Android for version 2.7.10 and up and on iOS for version 3.2.1 and up
