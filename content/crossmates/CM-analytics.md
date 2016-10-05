@@ -13,7 +13,4 @@ Character Change | Track frequency of users changing character, and identify whi
 Save to Gallery | Track what content users choose to save to their galleries, and at what volume iOS only - feature only exists on iOS
 Detailed View Opened | See how often users utilize the detailed (full-screen) view
 		
-
-
-
-
+# For integrate analytics plugin providers in IOS go to [here]( ../analytics-plugins/Analytic_plugin_in_IOS_integration_application.md) and for Android [here]( ../analytics-plugins/Analytic_plugin_in_Android_integration_application.md)
