@@ -275,6 +275,49 @@ Launches native sharing menu. Options will be passed into the choosen sharing fu
  js2n.NativeShare.show(options);
 ```
 
+
+### Question Integration
+Version added: 2.1.0
+
+<i>This feature is experimental and currently in beta testing.</i>
+### Question.AnswerQuestion
+
+Sends notification to native that a question has been answered with specific question id.
+
+```
+var options = {
+    question_id: "some_id",
+    asnwer_value: "some_value",
+    callback: function(response) { 
+        if (response.success) {
+            console.log("do something on success");
+        }
+    }
+};
+
+js2n.Question.answerQuestion(options);
+```
+
+### Question.isQuestionAnswered
+
+Ask native if a question with a given question_id has been previously answered on the current device.
+Returns the answer value if question had been answered.
+
+```
+var options = {
+    question_id: "some_id",
+    callback: function(response) { 
+        if (response.success) {
+            console.log("question was answered in the past.");
+            console.log("answer_value = ", response.answer_value);
+        }
+    }
+};
+
+js2n.Question.isQuestionAnswered(options);
+```
+
+
 ### Note
 The current iOS webview SDK prevents the native iOS device from being able to receive multiple commands simultaneously. If you need to send more than one command at the same time, maintain the timestamp for when the event/user profile creation was triggered, but create a 5 second delay in the actual delivery of each command to iOS
 
