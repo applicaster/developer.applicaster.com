@@ -279,6 +279,7 @@ Launches native sharing menu. Options will be passed into the choosen sharing fu
 ### Question Integration
 Version added: 2.1.0
 
+<i>This feature is experimental and currently in beta testing.</i>
 ### Question.AnswerQuestion
 
 Sends notification to native that a question has been answered with specific question id.
