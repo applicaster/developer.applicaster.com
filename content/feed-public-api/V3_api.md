@@ -285,7 +285,7 @@ response example below);
 ### Request bounded (by amount, and moment in time) events
 **Request:**
 ```
-<Base URL>/v4/zones/<zone_id>/events.json?feed_ids[]=<feed_id1>&feed_ids[]=<feed_id2>&feed_ids[]=<feed_id_n>&since=:unix_timestamp_utc&direction=-1&amount=13
+<Base URL>/v3/zones/<zone_id>/events.json?feed_ids[]=<feed_id1>&feed_ids[]=<feed_id2>&feed_ids[]=<feed_id_n>&since=:unix_timestamp_utc&direction=-1&amount=13
 ```
 
 **Response:**
