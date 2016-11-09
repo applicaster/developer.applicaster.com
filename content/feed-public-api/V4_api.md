@@ -28,4 +28,4 @@ In order to get a specific amount of events the client can send a parameter name
 
 **Response:**
 
-The response looks identical to the v3 responses in terms of attributes being returned.
+The response looks identical to the v3 responses in terms of attributes being returned. The response in this case will include only **13** events that belong to the event sources in the query string and this events will all have in common that they all were launched before the specified `since` timestamp.
