@@ -286,7 +286,7 @@ response example below);
 
 This new entrypoint adds a new _mandatory_ `amount` parameter. This parameter allows the server to
 know the amount and direction in time for event to fecth. So a value of `3` (positive 3) means to
-fecth 3 events triggered immediatly after the sent `since` parameter. A value of `-8` (negative 9)
+fecth 3 events triggered immediatly after the sent `since` parameter. A value of `-8` (negative 8)
 means to fetch 9 events triggered immediatly before the `since` parameter.
 
 **Request:**
