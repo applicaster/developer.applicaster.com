@@ -291,7 +291,7 @@ means to fetch 9 events triggered immediatly before the `since` parameter.
 
 **Request:**
 ```
-<Base URL>/v3/zones/<zone_id>/bounded_events.json?event_source_ids[]=<feed_id1>&event_source_ids[]=<feed_id2>&event_source_ids[]=<feed_id_n>&since=:unix_timestamp_utc&amount=-13
+<Base URL>/v3/zones/<zone_id>/bounded_events.json?event_source_ids[]=<event_source_id1>&event_source_ids[]=<event_source_id2>&event_source_ids[]=<event_source_id_n>&since=:unix_timestamp_utc&amount=-13
 ```
 
 **Response:**
