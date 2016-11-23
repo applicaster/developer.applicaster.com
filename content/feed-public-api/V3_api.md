@@ -283,16 +283,22 @@ response example below);
 ```
 
 ### Request bounded (by amount, and moment in time) events
+
+This new entrypoint adds a new _mandatory_ `amount` parameter. This parameter allows the server to
+know the amount and direction in time for event to fecth. So a value of `3` (positive 3) means to
+fecth 3 events triggered immediatly after the sent `since` parameter. A value of `-8` (negative 8)
+means to fetch 9 events triggered immediatly before the `since` parameter.
+
 **Request:**
 ```
-<Base URL>/v3/zones/<zone_id>/bounded_events.json?event_source_ids[]=<event_source_id1>&event_source_ids[]=<event_source_id2>&event_source_ids[]=<event_source_id_n>&since=:unix_timestamp_utc&direction=-1&amount=13
+<Base URL>/v3/zones/<zone_id>/bounded_events.json?event_source_ids[]=<event_source_id1>&event_source_ids[]=<event_source_id2>&event_source_ids[]=<event_source_id_n>&since=:unix_timestamp_utc&amount=-13
 ```
 
 **Response:**
 
 The response looks exactly the same (in terms od attributes) as the one in the previous entry point example.
 
-> Note: If any of the attributes `event_source_ids`, `direction`, `since` is missing in the request then the
+> Note: If any of the attributes `event_source_ids`, `amount`, `since` is missing in the request then the
 response will have a `403` (forbidden) status.
 
 ### Request timeline customizations (Feed Only)
