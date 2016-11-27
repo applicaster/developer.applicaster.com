@@ -29,4 +29,6 @@ Midrolls 1.0 does not support video analytics providers like Akamai Media Analyt
 
 Additionally, Midrolls 1.0 requires that a valid ad unit must be configured in the CMS. If the ad unit has a date expiry, be sure to remove the ad unit from the Applicaster CMS before that date hits. If an expired ad unit or one that is otherwise limited (i.e. geotargetted) is configured, and this causes the ad unit to be invalid for a user, then the video content will pause and temporarily load the advertising video player during the middle of video play.
 
-If you cannot provide ad units that will ensure universal validity or use a video analytics provider plugin, we recommend you wait for the release of Midrolls 1.1, as outlined [here](https://roadmap.applicaster.com/#feature_172)
+To avoid this, you can set up a "waterfall" configuration in DFP so that you have fallback ad units in case the original ad unit is not valid.
+
+If you do not want to use a waterfall configuration on DFP or you use a video analytics provider plugin, we recommend you wait for the release of Midrolls 1.1, which is currently in development.
