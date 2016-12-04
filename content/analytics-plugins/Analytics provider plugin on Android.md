@@ -10,9 +10,9 @@ If you find any issue please contact e.bendavid@applicaster.com
   **d.** update your .gitignore file like [here](https://gist.github.com/vtanathip/9414323).<br />
  
   </ol>
-**2. Prepare you project:**<br />
+**2. Prepare your project:**<br />
  <ol>
-  **b.** update build.gradle, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/build.gradle).<br />
+  **a.** update build.gradle, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/build.gradle).<br />
   **b.** update circle.yml, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/circle.yml).<br />
     **c.** update gradle.properties, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/gradle.properties).<br />
      **d.** update proguard-rules.pro, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
