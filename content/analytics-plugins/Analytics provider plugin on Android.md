@@ -43,6 +43,6 @@ If you find any issue please contact e.bendavid@applicaster.com
 </ol>
 **6. Create Plugin on Zapp:**<br />
   <ol>
-  **a.** Read in [Zappifest](https://github.com/applicaster/zappifest) repository. Follow the instructions.<br />
+  **a.** Go to [Zappifest](https://github.com/applicaster/zappifest) repository and Follow the instructions.<br />
   **b.** Make sure your plugin is working well by testing it on Zapp application.<br />
 </ol>
