@@ -6,16 +6,16 @@ If you find any issue please contact e.bendavid@applicaster.com
   <ol>
   **a.** Create new repository in [Github](https://github.com/applicaster). the repository should be in naming convention 'xxxxAnalyticsPlugin-Android', where xxx is the provider name<br/>
   **b.** Create a new branch from master.<br />
-   **c.** Create a new project base on the repository name.<br />
-  **d.** update your .gitignore file like [here](https://gist.github.com/vtanathip/9414323).<br />
+   **c.** Create a new project based on the repository name.<br />
+  **d.** Update your .gitignore file like [here](https://gist.github.com/vtanathip/9414323).<br />
  
   </ol>
 **2. Prepare your project:**<br />
  <ol>
-  **a.** update build.gradle, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/build.gradle).<br />
-  **b.** update circle.yml, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/circle.yml).<br />
-    **c.** update gradle.properties, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/gradle.properties).<br />
-     **d.** update proguard-rules.pro, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
+  **a.** Update build.gradle, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/build.gradle).<br />
+  **b.** Update circle.yml, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/circle.yml).<br />
+    **c.** Update gradle.properties, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/gradle.properties).<br />
+     **d.** Update proguard-rules.pro, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
      </ol>
      **3. Create your Agent:**<br />
      <ol>
@@ -26,7 +26,6 @@ If you find any issue please contact e.bendavid@applicaster.com
   **e.** Add integration tests for any inherited function.<br />
   **f.** Commit and push your changes.<br />
   **g.** Make sure the build on CircleCi success. <br />
- 
   </ol>
   
   **4. Update the README and marge you branch:**<br />
@@ -34,15 +33,15 @@ If you find any issue please contact e.bendavid@applicaster.com
    **a.** Specify which function you ovveride.<br />
    **b.** Describe the tests you covered.<br />
    **c.** Add relese note for any meaningful change including the plugin vertion.<br />
-    **d.** Marge you code after you get approve PR form other android developer.<br />
+    **d.** Marge your code after you get approved PR form other android developer.<br />
     </ol>
     
 **5. Create dependency from your Agent:**<br />
   <ol>
   **a.** Add ascending tag. start with 0.1.+ <br />
-  **b.** verfiy you have build in Bintray .<br />
+  **b.** Verfiy you have build in Bintray .<br />
 </ol>
 **6. Create Plugin on Zapp:**<br />
   <ol>
-  **a.** read in [Zappifest](https://github.com/applicaster/zappifest) repository. Follow the instructions and make sure your plugin is working well by testing it.<br />
+  **a.** Read in [Zappifest](https://github.com/applicaster/zappifest) repository. Follow the instructions and make sure your plugin is working well by testing it.<br />
 </ol>
