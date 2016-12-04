@@ -4,9 +4,9 @@ If you find any issue please contact e.bendavid@applicaster.com
 
 **1. Set Local Environment:**<br />
   <ol>
-  **a.** Create new repository in [Github](https://github.com/applicaster). the repository should be in naming convention 'xxxxAnalyticsPlugin-Android', where xxx is the provider name<br/>
+  **a.** Create new repository in [Github](https://github.com/applicaster). the repository should be in naming convention 'xxxAnalyticsPlugin-Android', where xxx is the provider name<br/>
   **b.** Create a new branch from master.<br />
-   **c.** Create a new project based on the repository name.<br />
+   **c.** Create a new android project with name based on the repository name.<br />
   **d.** Update your .gitignore file like [here](https://gist.github.com/vtanathip/9414323).<br />
  
   </ol>
@@ -19,7 +19,7 @@ If you find any issue please contact e.bendavid@applicaster.com
      </ol>
      **3. Create your Agent:**<br />
      <ol>
-      **a.** Add your Agent in the new project, The Agent must inherit from BaseAnalyticsAgent.<br />
+      **a.** Add your agent in the new project, The agent must inherit from BaseAnalyticsAgent.<br />
   **b.** Make sure all your private methods and parameters are well documented.<br />
   **c.** Add documentation for the class, and set link to the provider manual.<br />
   **d.** Add Unit tests for any logic.<br />
@@ -36,12 +36,13 @@ If you find any issue please contact e.bendavid@applicaster.com
     **d.** Marge your code by following our [working agreements](https://github.com/applicaster/zapp-awesome/blob/master/working_agreements.md).<br />
     </ol>
     
-**5. Create dependency from your Agent:**<br />
+**5. Create dependency to your Agent:**<br />
   <ol>
-  **a.** Add ascending tag. start with 0.1.+ <br />
+  **a.** Add ascending tag. start with 0.1.x <br />
   **b.** Verfiy you have build in Bintray .<br />
 </ol>
 **6. Create Plugin on Zapp:**<br />
   <ol>
-  **a.** Read in [Zappifest](https://github.com/applicaster/zappifest) repository. Follow the instructions and make sure your plugin is working well by testing it.<br />
+  **a.** Read in [Zappifest](https://github.com/applicaster/zappifest) repository. Follow the instructions.<br />
+  **b.** Make sure your plugin is working well by testing it on Zapp application.<br />
 </ol>
