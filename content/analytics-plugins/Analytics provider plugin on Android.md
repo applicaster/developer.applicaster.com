@@ -4,35 +4,45 @@ If you find any issue please contact e.bendavid@applicaster.com
 
 **1. Set Local Environment:**<br />
   <ol>
-  **a.** Clone the [Analytics Provides Plugin repository](https://github.com/applicaster/analytic-providers-android). <br />
+  **a.** Create new repository in [Github](https://github.com/applicaster). the repository should be in naming convention 'xxxxAnalyticsPlugin-Android', where xxx is the provider name<br/>
   **b.** Create a new branch from master.<br />
-  **c.** Create a new directory under com.applicaster.analytic.plugins.<br />
-  **d.** In gradle.properties change GROUP propery to the name of your directory.<br />
+   **c.** Create a new project base on the repository name.<br />
+  **d.** update your .gitignore file like [here](https://gist.github.com/vtanathip/9414323).<br />
+ 
   </ol>
-**2. Create your Agent:**<br />
+**2. Prepare you project:**<br />
  <ol>
-  **a.** Add your Agent under the new directory, The Agent must inherit from BaseAnalyticsAgent.<br />
-  **b.** Add dependency in build.gradle and in ci.build.gradle. If you need to use jars you can add it as usual in libs folder.<br />
-  **c.** Add new proguard txt file under proguards folder, please rename your proguard file as the agent name.<br />
-  **d.** Include all the public part of your class in the proguard file, you can see an [example here](https://github.com/applicaster/analytic-providers-android/blob/master/proguards/flurry.txt).<br />
-  **e.** In build.gradle  and in ci.build.gradle change proguardFile parameter with your file name.<br />
-  **f.** Make sure all your private methods and parameters are well documented. Add documentation for the class, and set link to the provider manual.<br />
-  **g.** Add Unit tests for any logic.<br />
-  **h.** Commit your changes.<br />
+  **b.** update build.gradle, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/build.gradle).<br />
+  **b.** update circle.yml, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/circle.yml).<br />
+    **c.** update gradle.properties, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/gradle.properties).<br />
+     **d.** update proguard-rules.pro, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
+     </ol>
+     **3. Create your Agent:**<br />
+     <ol>
+      **a.** Add your Agent in the new project, The Agent must inherit from BaseAnalyticsAgent.<br />
+  **b.** Make sure all your private methods and parameters are well documented.<br />
+  **c.** Add documentation for the class, and set link to the provider manual.<br />
+  **d.** Add Unit tests for any logic.<br />
+  **e.** Add integration tests for any inherited function.<br />
+  **f.** Commit and push your changes.<br />
+  **g.** Make sure the build on CircleCi success. <br />
+ 
   </ol>
-**3. Create dependency from your Agent:**<br />
+  
+  **4. Update the README and marge you branch:**<br />
+   <ol>
+   **a.** Specify which function you ovveride.<br />
+   **b.** Describe the tests you covered.<br />
+   **c.** Add relese note for any meaningful change including the plugin vertion.<br />
+    **d.** Marge you code after you get approve PR form other android developer.<br />
+    </ol>
+    
+**5. Create dependency from your Agent:**<br />
   <ol>
-  **a.**Add ascending tag. <br />
-  **b.** Push your branch. Make sure that the build on CircleCi is successful, and that you have a Maven build in Bintray.<br />
+  **a.** Add ascending tag. start with 0.1.+ <br />
+  **b.** verfiy you have build in Bintray .<br />
 </ol>
-**4. Create Plugin on Zapp:**<br />
+**6. Create Plugin on Zapp:**<br />
   <ol>
-  **a.** Clone [Zappifest](https://github.com/applicaster/zappifest) repository. Follow the instructions and make sure your plugin is working well by testing it.<br />
+  **a.** read in [Zappifest](https://github.com/applicaster/zappifest) repository. Follow the instructions and make sure your plugin is working well by testing it.<br />
 </ol>
-**5. Add your agent into the Master branch:**<br />
-  <ol>
-  **a.** Move all your dependencies to be provider instead of compile and move all your Jars from libs to optlibs.<br />
-  **b.** Set proguard file to be dummy.txt.<br />
-  **c.** Set in GROUP property value com.applicaster.analytic.plugins.<br />
-  **d.** Commit your changes, add dummy tag, push and create pull request.<br />
-  </ol>
