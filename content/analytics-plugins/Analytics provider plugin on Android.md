@@ -33,7 +33,7 @@ If you find any issue please contact e.bendavid@applicaster.com
    **a.** Specify which function you ovveride.<br />
    **b.** Describe the tests you covered.<br />
    **c.** Add relese note for any meaningful change including the plugin version.<br />
-    **d.** Marge your code after by following our [working agreements](https://github.com/applicaster/zapp-awesome/blob/master/working_agreements.md).<br />
+    **d.** Marge your code by following our [working agreements](https://github.com/applicaster/zapp-awesome/blob/master/working_agreements.md).<br />
     </ol>
     
 **5. Create dependency from your Agent:**<br />
