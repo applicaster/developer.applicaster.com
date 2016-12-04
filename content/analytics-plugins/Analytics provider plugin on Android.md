@@ -2,7 +2,7 @@
 
 If you find any issue please contact e.bendavid@applicaster.com
 
-**For update exist again please jump section 3**
+**For update exist agent please jump section 3**
 
 **1. Set Local Environment:**<br />
   <ol>
