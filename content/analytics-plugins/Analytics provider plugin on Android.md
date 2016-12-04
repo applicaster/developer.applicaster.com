@@ -2,6 +2,8 @@
 
 If you find any issue please contact e.bendavid@applicaster.com
 
+**For update exist again please jump section 3**
+
 **1. Set Local Environment:**<br />
   <ol>
   **a.** Create new repository in [Github](https://github.com/applicaster). the repository should be in naming convention 'xxxAnalyticsPlugin-Android', where xxx is the provider name<br/>
@@ -17,9 +19,9 @@ If you find any issue please contact e.bendavid@applicaster.com
     **c.** Update gradle.properties, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/gradle.properties).<br />
      **d.** Update proguard-rules.pro, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
      </ol>
-     **3. Create your Agent:**<br />
+     **3. Create/Update Analytic Agent:**<br />
      <ol>
-      **a.** Add your agent in the new project, The agent must inherit from BaseAnalyticsAgent.<br />
+      **a.** Add/edite the agent in the project, The agent must inherit from BaseAnalyticsAgent.<br />
   **b.** Make sure all your private methods and parameters are well documented.<br />
   **c.** Add documentation for the class, and set link to the provider manual.<br />
   **d.** Add Unit tests for any logic.<br />
