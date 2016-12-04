@@ -32,7 +32,7 @@ If you find any issue please contact e.bendavid@applicaster.com
    <ol>
    **a.** Specify which function you ovveride.<br />
    **b.** Describe the tests you covered.<br />
-   **c.** Add relese note for any meaningful change including the plugin vertion.<br />
+   **c.** Add relese note for any meaningful change including the plugin version.<br />
     **d.** Marge your code after you get approved PR form other android developer.<br />
     </ol>
     
