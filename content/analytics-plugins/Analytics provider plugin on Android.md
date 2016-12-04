@@ -1,4 +1,4 @@
-**How to create an analytics provider plugin on Android**
+**How to create/edit an analytics provider plugin on Android**
 
 If you find any issue please contact e.bendavid@applicaster.com
 
