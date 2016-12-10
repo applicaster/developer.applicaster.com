@@ -1,22 +1,22 @@
 **How to create a new analytics provider plug-in on Android or update an existing one**
 
-Note: If you would like to improve this documentation, please submit a Pull Request with your proposed changes and submit it for review to Elad Ben David. You could send your questions or suggestions to e.bendavid@applicaster.com or raise the issue in the analytics channel on Slack.
+Note: If you would like to improve this documentation, please submit a Pull Request with your proposed changes and submit it for review to Elad Ben David. You could send your questions or suggestions to e.bendavid@applicaster.com.
 
 **Follow the steps below to create a new analytics provider plug-in on the Android platform, Skip sections 1 and 2 if you want to update an existing analytics agent:**
 
 **1. Set Your Local Environment:**<br />
   <ol>
-    **a.** Ask somebody with admin rights on Github to create a new repository of you. If you don't know who has admin rights, ask on Slack.. the repository should be in naming convention 'xxxAnalyticsPlugin-Android', where xxx is the provider name<br/>
-    **b.** Create a new branch from master and start adding your code there. Even though the repository was created for you, it belongs to your team. Your code can be merged to the master branch only after it was approved by another developer.<br />
-    **c.** Create a new android project with name based on the repository name.<br />
+    **a.** Ask somebody with admin rights on Github to create a new repository of you. If you don't know who has admin rights, ask on Slack. The repository should be in naming convention 'xxxAnalyticsPlugin-Android', where xxx is the provider name<br/>
+    **b.** Create a new branch from master and start adding your code there. Even though the repository was created for you, it belongs to your team.<br />
+    **c.** Create a new android library in android studio with name based on the repository name.<br />
     **d.** Update your .gitignore file like [here](https://gist.github.com/vtanathip/9414323).<br />
   </ol>
 **2. Prepare your project:**<br />
  <ol>
     **a.** Update build.gradle, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/build.gradle).<br />
-    **b.** Update circle.yml, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/circle.yml).<br />
+    **b.** Create circle.yml so as to set up your project on the Circle CI continuous integration system., you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/circle.yml).<br />
     **c.** Update gradle.properties, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/gradle.properties).<br />
-    **d.** Expose the public fields and methods of your class in proguard-rules.pro. You can find an example  [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
+    **d.** mention the public fields and methods of your class in proguard-rules.pro. You can find an example  [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
   </ol>
 **3. Create a New Analytics Agent Or Update an Existing One:**<br />
   <ol>
