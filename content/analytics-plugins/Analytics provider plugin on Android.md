@@ -14,9 +14,9 @@ Note: If you would like to improve this documentation, please submit a Pull Requ
 **2. Prepare your project:**<br />
  <ol>
     **a.** Update build.gradle, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/build.gradle).<br />
-    **b.** Create circle.yml so as to set up your project on the Circle CI continuous integration system., you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/circle.yml).<br />
+    **b.** Create circle.yml so as to set up your project on the Circle CI continuous integration system, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/circle.yml).<br />
     **c.** Update gradle.properties, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/gradle.properties).<br />
-    **d.** mention the public fields and methods of your class in proguard-rules.pro. You can find an example  [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
+    **d.** Mention the public fields and methods of your class in proguard-rules.pro. You can find an example  [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
   </ol>
 **3. Create a New Analytics Agent Or Update an Existing One:**<br />
   <ol>
@@ -24,31 +24,27 @@ Note: If you would like to improve this documentation, please submit a Pull Requ
     **b.** Use meaningful names for your private members and methods. Add documentation in Javadoc format. In general, your code should be well documented.<br />
     **c.** Add documentation for the class, and set link to the provider manual.<br />
     **d.** Add Unit tests for any non-trivial logic.<br />
-    **e.** Add unit tests in BaseAnalyticsAgentTests for any inherited function<br />
-    **f.** try to have small, incremental commits that are documented.
-    **g.** make sure you didn't forget to commit and push your changes.<br />
-    **h.** Make sure the build on CircleCi success. <br />
+    **e.** Add unit tests in BaseAnalyticsAgentTests for any inherited function.<br />
+    **f.** make sure you didn't forget to commit and push your changes.<br />
+    **g.** Make sure the build on CircleCi success. <br />
   </ol>
   **4. Update the README file and merge your branch to master:**<br />
    <ol>
-    **a.** Add release not for any meaningful changes, including the plug-in version..<br />
+    **a.** Add release not for any meaningful changes, including the plug-in version.<br />
     **b.** Create a Pull Request and ask another developer to review your code. After your Pull Request is approved, merge your code to the master branch. You should follow our [working agreements](https://github.com/applicaster/zapp-awesome/blob/master/working_agreements.md).<br />
   </ol>
-  
-  **4. Update the README and merge you branch:**<br />
+  **5. Update the README and merge you branch:** <br />
    <ol>
-   **a.** Specify which function you override.<br />
-   **b.** Describe the tests you covered.<br />
-   **c.** Add relese note for any meaningful changes, including the plugin version.<br />
-    **d.** Merge your code by following our [working agreements](https://github.com/applicaster/zapp-awesome/blob/master/working_agreements.md).<br />
+   **a.** Add relese note for any meaningful changes, including the plugin version.<br />
+    **b.** Merge your code by following our [working agreements](https://github.com/applicaster/zapp-awesome/blob/master/working_agreements.md).<br />
     </ol>
     
-**5. Create dependency to your Agent:**<br />
+**6. Create dependency to your Agent:**<br />
   <ol>
   **a.** Add an ascending tag beginning with 0.1.x. Use [semantic versioning](http://semver.org). Push your tag to the remote repository. <br />
   **b.** Verify that your plug-in binary was created successfully on Bintray. If you don't have a Bintray account, ask for one to be created for you.<br />
  </ol>
-**6. Create a Plugin in Zapp:**<br />
+**7. Create a Plugin in Zapp:**<br />
   <ol>
   **a.** Go to [Zappifest](https://github.com/applicaster/zappifest) repository and follow the instructions there.<br />
   **b.** Make sure your plugin is working well by testing it on a Zapp application.<br />
