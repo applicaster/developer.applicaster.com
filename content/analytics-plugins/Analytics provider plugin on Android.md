@@ -24,18 +24,15 @@ Note: If you would like to improve this documentation, please submit a Pull Requ
     **b.** Use meaningful names for your private members and methods. Add documentation in Javadoc format. In general, your code should be well documented.<br />
     **c.** Add documentation for the class, and set link to the provider manual.<br />
     **d.** Add Unit tests for any non-trivial logic.<br />
-    **e.** make sure you didn't forget to commit and push your changes.<br />
-    **f.** Make sure the build on CircleCi success. <br />
+    **e.** Add unit tests in BaseAnalyticsAgentTests for any inherited function<br />
+    **f.** try to have small, incremental commits that are documented.
+    **g.** make sure you didn't forget to commit and push your changes.<br />
+    **h.** Make sure the build on CircleCi success. <br />
   </ol>
   **4. Update the README file and merge your branch to master:**<br />
    <ol>
-   **a.** Specify which function you ovveride.<br />
-   **b.** Add release not for any meaningful changes, including the plug-in version..<br />
-    **c.** Create a Pull Request and ask another developer to review your code. After your Pull Request is approved, merge your code to the master branch. You should follow our [working agreements](https://github.com/applicaster/zapp-awesome/blob/master/working_agreements.md).<br />
-  **d.** Add Unit tests for any logic.<br />
-  **e.** Add integration tests for any inherited function.<br />
-  **f.** Commit and push your changes.<br />
-  **g.** Make sure the build on CircleCi is a success. <br />
+    **a.** Add release not for any meaningful changes, including the plug-in version..<br />
+    **b.** Create a Pull Request and ask another developer to review your code. After your Pull Request is approved, merge your code to the master branch. You should follow our [working agreements](https://github.com/applicaster/zapp-awesome/blob/master/working_agreements.md).<br />
   </ol>
   
   **4. Update the README and merge you branch:**<br />
