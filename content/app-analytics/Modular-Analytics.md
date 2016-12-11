@@ -1,10 +1,10 @@
 # Modular Analytics
-###Video Events (iOS v2.7 and above, Android v2.6 and above)
+### Video Events (iOS v2.7 and above, Android v2.6 and above)
 
 Event  | Insight
 --------------- | ---------------
 **Play VOD Item** | Measures that a video item is played, and for how long. The item played holds the following parameter: The video type (Applicaster model, or ATOM type), Item Name and the parameters that are related to each type, i.e.: Season Name, Show Name, Show ID, Free/Paid, Item ID for Applicaster video model, and ATOM feed name for ATOM video type. Note that if a user leaves during the pre-roll, this event will not be counted. 
-**VOD Item: Play Was Triggered** | Measures that a video cell was tapped. All parameters of the Play VOD event are included, except the length.
+**VOD Item: Play Was Triggered** | Measures that a video cell was tapped, triggering play. The event is measured whether not the user stays through a pre-roll and the actual video loads.
 **Program: Play Live Was Triggered from Cell** | Measures when tapping on a 'Live Program' item in order to play it. This Live Program event refers to promotion from componentized cells and not from the EPG and Live Drawer). 
 **Program: Play Icon Clicked on Generic Screen** | Measures when tapping on the 'Play' Icon from EPG or Live Drawer, in order to play the program. Note that combined with “Program: Play Live Was Triggered from Cell”, both address all possibilities of playing live programs. 
 **VOD Item: Intermediate Button Clicked** | Measures when tapping on the 'Info' button on a VOD Item. All parameters of the Play VOD event are included, except the length. On Android. 
@@ -15,7 +15,7 @@ Event  | Insight
 
 
 
-###Player Events (iOS v2.7 and above, Android v2.6 and above)
+### Player Events (iOS v2.7 and above, Android v2.6 and above)
 
 Event  | Insight
 --------------- | ---------------
@@ -30,7 +30,7 @@ Event  | Insight
 
 
 
-###Navigation Events (iOS v3.1 and above, Android v3.2.24 and above)
+### Navigation Events (iOS v3.1 and above, Android v3.2.24 and above)
 
 Event  | Insight
 --------------- | ---------------
@@ -48,10 +48,10 @@ Event  | Insight
 **Channel Schedule: Program Clicked** | Measures tapping on a Program in the Full EPG screen. 
 **EPG: Now Button Clicked** | Measures tapping on the ‘Now’ button in EPG screens, which locates the list on the present program.
 **Program: Personal Reminder Turned On/Off** | Measures tapping on an 'on/off Reminder' button, to turn on/off a personal reminder notification when a program is live from within the 'live program' componentized cells. 
-**Live Drawer: Show All Channels Clicked** | Measures tapping on the 'live drawer' button, in order to display the channel list. 
 **Channel List: Channel Clicked** | Measures tapping on a Channel in the Channel List screen, reached from the 'Live Drawer' screen. 
-**Live Drawer: Live Program Clicked** | Measures tapping on a live program from the live drawer. 
+**Live Drawer: Live Program Clicked** | Measures tapping on a live program from the live drawer.
 **Live Drawer: Personal Reminder Turned Off/On** | Measures tapping on an 'on/off Reminder’ button, to turn on/off a personal reminder notification from within the 'live drawer'. 
+**Live Drawer: Show All Channels Clicked** | Measures tapping on the 'Show All Channels' link within the live drawer, a link which will display a selection of live channels. *Note: This link only appears in the UI if more than one channel is configured* 
 **Settings: Facebook Area Clicked** | Measures tapping on the ‘Facebook’ section in the Settings screen. 
 **Settings: Facebook Login Button Switched** | Measures toggeling the 'Facebook toggle' in order to log in or out, in the Settings screen. 
 **Settings: Twitter Area Clicked** | Measures tapping on the ‘Twitter’ section in the Settings screen. 
