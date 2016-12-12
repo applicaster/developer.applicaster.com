@@ -6,9 +6,9 @@ Note: If you would like to improve this documentation, please submit a Pull Requ
 
 **1. Set Your Local Environment:**<br />
   <ol>
-    **a.** Ask somebody with admin rights on Github to create a new repository of you. If you don't know who has admin rights, ask on Slack. The repository should be in naming convention 'xxxAnalyticsPlugin-Android', where xxx is the provider name<br/>
+    **a.** Ask somebody with admin rights on Github to create a new repository of you. If you don't know who has admin rights, ask on Slack. The repository should be using the naming convention 'xxxAnalyticsPlugin-Android', where xxx is the provider name<br/>
     **b.** Create a new branch from master and start adding your code there. Even though the repository was created for you, it belongs to your team.<br />
-    **c.** Create a new android library in android studio with name based on the repository name.<br />
+    **c.** Create a new Android library in Android Studio with a name that is based on your repository name.<br />
     **d.** Update your .gitignore file like [here](https://gist.github.com/vtanathip/9414323).<br />
   </ol>
 **2. Prepare your project:**<br />
@@ -25,19 +25,14 @@ Note: If you would like to improve this documentation, please submit a Pull Requ
     **c.** Add documentation for the class, and set link to the provider manual.<br />
     **d.** Add Unit tests for any non-trivial logic.<br />
     **e.** Add unit tests in BaseAnalyticsAgentTests for any inherited function.<br />
-    **f.** make sure you didn't forget to commit and push your changes.<br />
-    **g.** Make sure the build on CircleCi success. <br />
+    **f.** Commit and push your changes<br />
+    **g.** Make sure that the build was successful on CircleCI.<br />
   </ol>
   **4. Update the README file and merge your branch to master:**<br />
    <ol>
-    **a.** Add release not for any meaningful changes, including the plug-in version.<br />
+    **a.** Add release notes for any meaningful changes, including the plug-in version.<br />
     **b.** Create a Pull Request and ask another developer to review your code. After your Pull Request is approved, merge your code to the master branch. You should follow our [working agreements](https://github.com/applicaster/zapp-awesome/blob/master/working_agreements.md).<br />
   </ol>
-  **5. Update the README and merge you branch:** <br />
-   <ol>
-   **a.** Add relese note for any meaningful changes, including the plugin version.<br />
-    **b.** Merge your code by following our [working agreements](https://github.com/applicaster/zapp-awesome/blob/master/working_agreements.md).<br />
-    </ol>
     
 **6. Create dependency to your Agent:**<br />
   <ol>
