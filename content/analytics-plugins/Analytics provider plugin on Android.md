@@ -16,7 +16,7 @@ Note: If you would like to improve this documentation, please submit a Pull Requ
     **a.** Update build.gradle, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/build.gradle).<br />
     **b.** Create circle.yml so as to set up your project on the Circle CI continuous integration system, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/circle.yml).<br />
     **c.** Update gradle.properties, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/gradle.properties).<br />
-    **d.** Specified the public fields and methods of your class in proguard-rules.pro. You can find an example  [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
+    **d.** Specify the public fields and methods of your class that you want to keep in proguard-rules.pro. You can find an example  [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
   </ol>
 **3. Create a New Analytics Agent Or Update an Existing One:**<br />
   <ol>
