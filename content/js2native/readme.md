@@ -221,27 +221,54 @@ They are not required, but if delivered, should be written as follows:
 * Email
 * Phone
 
+We splite the user properties for two set, the PII and the Genaric(non PII Properies).
+Personally identifiable Information (PII) - information which can be used to distinguish or trace an individual's identity, such as their name, social security number, biometric records, etc. alone, or when combined with other personal or identifying information which is linked or linkable to a specific individual, such as date and place of birth, mother’s maiden name, etc." 
+
+* We aware to the duplication of the propeties, we doing that becouse of backwards compatibility. and contiues doing that until it will be no relevent.
+
 ```javascript
 var userProperties = {
-"Name":"Neo",
-"FirstName":"Thomas",
-"LastName":"Anderson",
-"Email":"t.anderson@metacortex.com",
-"Phone":"1",
-"Custom1": "1",
-"Custom2": "2",
-"custom3": "3",
-"SocialIDs":{
-"Facebook":{
-"ID": "123",
-},
-"twitter":{
-"ID": "123",
-},
-"google":{
-"ID": "123",
-}
-}
+    "genaric" : {
+        "favorite team sport" : "FC Barcelona",
+        "customer type" : "paid"
+        "Custom1": "1",
+        "Custom2": "2",
+    },
+    "pii" : {
+        "Name":"Neo",
+        "FirstName":"Thomas",
+        "LastName":"Anderson",
+        "Email":"t.anderson@metacortex.com",
+        "Phone":"1",
+        "custom3": "3",
+        "Facebook":{
+            "ID": "123",
+        },
+        "twitter":{
+            "ID": "123",
+        },
+        "google":{
+            "ID": "123",
+        }
+    },
+    "Name":"Neo",
+    "FirstName":"Thomas",
+    "LastName":"Anderson",
+    "Email":"t.anderson@metacortex.com",
+    "Phone":"1",
+    "Custom1": "1",
+    "Custom2": "2",
+    "custom3": "3",
+    "SocialIDs":{
+    "Facebook":{
+        "ID": "123",
+    },
+    "twitter":{
+        "ID": "123",
+    },
+    "google":{
+        "ID": "123",
+    }
 }
 
 js2n.Morpheus.updateUserProfile(userProperties);
