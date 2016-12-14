@@ -228,7 +228,7 @@ Personally identifiable Information (PII) - information which can be used to dis
 
 ```javascript
 var userProperties = {
-    "genaric" : {
+    "generic" : {
         "favorite team sport" : "FC Barcelona",
         "customer type" : "paid"
         "Custom1": "1",
