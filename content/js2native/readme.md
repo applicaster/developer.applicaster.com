@@ -221,7 +221,7 @@ They are not required, but if delivered, should be written as follows:
 * Email
 * Phone
 
-We splite the user properties for two set, the PII and the Genaric(non PII Properies).
+We split the user properties for two set, the PII and the Generic(non PII Properies).
 Personally identifiable Information (PII) - information which can be used to distinguish or trace an individual's identity, such as their name, social security number, biometric records, etc. alone, or when combined with other personal or identifying information which is linked or linkable to a specific individual, such as date and place of birth, mother’s maiden name, etc." 
 
 * We aware to the duplication of the propeties, we doing that becouse of backwards compatibility. and contiues doing that until it will be no relevent.
