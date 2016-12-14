@@ -232,7 +232,7 @@ var userProperties = {
         "favorite team sport" : "FC Barcelona",
         "customer type" : "paid"
         "Custom1": "1",
-        "Custom2": "2",
+        "Custom2": "2"
     },
     "pii" : {
         "Name":"Neo",
@@ -242,13 +242,13 @@ var userProperties = {
         "Phone":"1",
         "custom3": "3",
         "Facebook":{
-            "ID": "123",
+            "ID": "123"
         },
         "twitter":{
-            "ID": "123",
+            "ID": "123"
         },
         "google":{
-            "ID": "123",
+            "ID": "123"
         }
     },
     "Name":"Neo",
@@ -261,13 +261,13 @@ var userProperties = {
     "custom3": "3",
     "SocialIDs":{
     "Facebook":{
-        "ID": "123",
+        "ID": "123"
     },
     "twitter":{
-        "ID": "123",
+        "ID": "123"
     },
     "google":{
-        "ID": "123",
+        "ID": "123"
     }
 }
 
