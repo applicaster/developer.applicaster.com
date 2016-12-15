@@ -13,7 +13,7 @@ src="http://assets-production.applicaster.com/js2native/v2/js2native.js">
 </script>
 ```
 
-## Examples
+## Example
 
 A simple example is available [here](http://assets-production.applicaster.com/js2native/v2/docs/examples.html)
 
@@ -162,23 +162,23 @@ js2n.Achievement.userAction(options)
 ### Morpheus Integration
 
 Morpheus is Applicaster’s internally developed analytics infrastructure tool used to pipe
-data from our products to analytics providers. Click [here][morpheus_release_notes] to
+data from our products to analytics providers. Click [here][http://developer.applicaster.com/docs/public/morpheus] to
 learn more about it.
 
 #### Morpheus.emit(key, properties)
 
-Emit analytics events. The event will be piped to and handled on native client.
+Emit an analytics event. The event will be piped to and handled on the native client.
 
 **key** - Category and action of the event in the format of "Category: Action".
 It will appear in the console of our analytics providers as "Category: Action", except
 Google Analytics where "Catgory" will map to category, and "Action" to action.
-For example:
+For example, if sending the event "Side Menu: Area Switched" :
 
-* Most providers, the event will appear as: “Side Menu: Area Switched"
-* For Google Analytics, it will appear as Category is set to “Side Menu” and
-Action is set to “Area Switched".
+* For most providers, the event will appear as: “Side Menu: Area Switched"
+* For Google Analytics, it will appear as a Category which is set to “Side Menu” and an
+Action which is set to “Area Switched".
 
-*best practice* - use the product name as the "Category".
+*best practice* - use the product name as the "Category". (i.e. "Feed", or "Stitcher")
 
 **properties** - The corresponding properties of the event key. The keys of the
 JSON object should be formatted as pascal case (*PascalCase*).
@@ -221,27 +221,54 @@ They are not required, but if delivered, should be written as follows:
 * Email
 * Phone
 
+We split the user properties for two set, the PII and the Generic(non PII Properies).
+Personally identifiable Information (PII) is information which can be used to distinguish or trace an individual's identity alone, such as their name, social security number, biometric records, etc., or can be used to identify an individual when combined with other personal or identifying information which is linked or linkable to the specific individual, such as date and place of birth, mother’s maiden name, etc." 
+
+* Note in the example sections for "generic" and "pii" properties, as well as a broader set of all user properties combined. We are aware that this leads to the duplication of the propeties; we are doing that to support backwards compatibility, and will contiue doing so until the SDKs which require the combined set of user properties are no longer supported, at which point we will update the documentation.
+
 ```javascript
 var userProperties = {
-"Name":"Neo",
-"FirstName":"Thomas",
-"LastName":"Anderson",
-"Email":"t.anderson@metacortex.com",
-"Phone":"1",
-"Custom1": "1",
-"Custom2": "2",
-"custom3": "3",
-"SocialIDs":{
-"Facebook":{
-"ID": "123",
-},
-"twitter":{
-"ID": "123",
-},
-"google":{
-"ID": "123",
-}
-}
+    "generic" : {
+        "favorite team sport" : "FC Barcelona",
+        "customer type" : "paid"
+        "Custom1": "1",
+        "Custom2": "2"
+    },
+    "pii" : {
+        "Name":"Neo",
+        "FirstName":"Thomas",
+        "LastName":"Anderson",
+        "Email":"t.anderson@metacortex.com",
+        "Phone":"1",
+        "custom3": "3",
+        "Facebook":{
+            "ID": "123"
+        },
+        "twitter":{
+            "ID": "123"
+        },
+        "google":{
+            "ID": "123"
+        }
+    },
+    "Name":"Neo",
+    "FirstName":"Thomas",
+    "LastName":"Anderson",
+    "Email":"t.anderson@metacortex.com",
+    "Phone":"1",
+    "Custom1": "1",
+    "Custom2": "2",
+    "custom3": "3",
+    "SocialIDs":{
+    "Facebook":{
+        "ID": "123"
+    },
+    "twitter":{
+        "ID": "123"
+    },
+    "google":{
+        "ID": "123"
+    }
 }
 
 js2n.Morpheus.updateUserProfile(userProperties);
