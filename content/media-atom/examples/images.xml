@@ -12,7 +12,7 @@ href="http://www.example.com/news_feed.atom"/>
 <entry>
 <applicaster:type value="image"/>
 <title>Example Image Title #1</title>
-<summary>Example Summery</summary>
+<summary>Example Summary</summary>
 <id>http://media.example.org/example-image.png</id>
 <published>2005-04-06T13:00:00-08:00</published>
 <updated>2005-04-06T20:25:05-08:00</updated>
@@ -26,7 +26,7 @@ src="http://media.example.org/example-image.png"/>
 <entry>
 <applicaster:type value="image"/>
 <title>Example Image Title #1</title>
-<summary>Example Summery</summary>
+<summary>Example Summary</summary>
 <id>http://media.example.org/example-image.png</id>
 <published>2005-04-06T13:00:00-08:00</published>
 <updated>2005-04-06T20:25:05-08:00</updated>
