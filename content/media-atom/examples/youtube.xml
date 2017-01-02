@@ -19,7 +19,7 @@
     <entry>
         <applicaster:type value="video"/>
         <title>Example YouTube Video Title #1</title>
-        <summary>Example Summery</summary>
+        <summary>Example Summary</summary>
         <id>http://www.example.com/video1</id>
         <published>2005-04-06T13:00:00-08:00</published>
         <updated>2005-04-06T20:25:05-08:00</updated>
