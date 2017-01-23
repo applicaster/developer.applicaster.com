@@ -270,22 +270,3 @@ image isn't provided all devices will use the
 provided small image. Only devices that
 have a large screen will show large
 images.
-
-### advertisement
-`<advertisement>` <span class=“badge”> XPath:/feed/entry/advertisement</span>  
-This tag may include two tags:  
-
-* ### interstitial
-`<interstitial ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`  
-This tag should represent where interstitial content comes from.  
-When this tag is added it MUST includes properties any device types.
-* ### banner 
-`<banner ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`  
-This tag should represent where banner content comes from.  
-When this tag is added it MUST includes properties any device types.
-
-All options are described here:  
-`ios_iphone_adUnit`  - adUnit for iphones.  
-`ios_ipad_adUnit`  - adUnit for ipads.  
-`android_smartPhone_adUnit`  - adUnit for smartphones.  
-`android_tablet_adUnit`  - adUnit for tablets.
