@@ -12,23 +12,6 @@
 | 1.6.0 | Support of YouTube video resource type. |
 
 
-
-# Overview
-Applicaster *Media Atom Feed* is a feature that
-allows the broadcaster to integrate list
-
-| Version | Description |
-| - | - |
-| 1.0.0 | First Release. |
-| 1.1.0 | Support for image galleries. |
-| 1.2.0 | Notations about "updated", "summary", "author name" and "alternate link" elements. |
-| 1.2.1 | Support of inline images in article. |
-| 1.3.0 | Support of video resource type. |
-| 1.4.0 | Articles support audio mediaGroup. |
-| 1.5.0 | ATOM with advertisement tags. |
-| 1.6.0 | Support of YouTube video resource type. |
-
-
 # Overview
 Applicaster *Media Atom Feed* is a feature that
 allows the broadcaster to integrate list of
