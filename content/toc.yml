@@ -94,7 +94,7 @@
   title: Android Feed Integration
   description: >
     This document describes how to integrate Applicaster Android Feed SDK to an external
-    iOS App.
+    Android App.
   type: Technical
   owner: u.lumnitz@applicaster.com
 
@@ -287,7 +287,7 @@
   title: Android Applicaster SDK Integration
   description: >
     This document describes how to integrate Applicaster Android SDK to your
-    iOS App.
+    Android App.
   type: Technical
   owner: u.lumnitz@applicaster.com
 
