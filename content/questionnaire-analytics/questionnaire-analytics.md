@@ -1,32 +1,19 @@
 # Stitcher Analytics 
 
-The analytics description of this product is separated into two:
+A description of the Stitcher product, often referred to as the Questionnaire product, can be found [here](http://developer.applicaster.com/docs/public/questionnaire-release-notes). The analytics description of this produt Stitcher is separated into two sections:
 
 1. **Feature Analytics** - these are analytics that are set to examine the feature's performance, how it is contributing to end user satisfaction, and other questions that should lead us to releasing better and more beneficial future iterations of this product. We integrated these analytics to empower our customers to conduct their own product and content analysis.
-1. **User Profile Analytics** - these are analytics that are the core of the value this product brings. In the case of a logged in user, this product provides user profiles within MixPanel, which allows the customer to determine the winner/s of a specific Stitcher activity.
+
+2. **User Profile Analytics** - these are analytics that are the core of the value this product brings. In the case of a logged in user, this product provides user profiles within MixPanel, which allows the customer to determine the winner/s of a specific Stitcher activity.
 
 ## Feature Analytics
-Note: In the Alpha version (and until further notice), these analytics are being sent to one specific Google Analytics account only, so that we can examine the way the feature works.
 
-Event Name | Insight
---------------- | ---------------
-Start Stitcher | Understand how many users start a Stitcher, in order to determine completion rate
-Complete Stitcher | Understand how many users complete a Stitcher, in order to determine completion rate
-Start Login | Measure how many users start the Login process, in order to see the volume login screen exposures (which together with other events, will give further login insights)
-Login Success | Measure how many users successfuly the Login process, in order to see the volume of successful logins
-Login Denied | Measure how many login attempts fail and why they fail, in order to see % of errors and fix them or change the login UX accordingly.
-Close Stitcher | Determine at which point users close the Stitcher in order to realize the optimized number of screens that provide end user satisfaction
-View Screen | See which screens are viewed most, in order to optimize Stitcher building and screen order 
+For detailed documentation on the events tracked for Stitcher, including which properties they contain and examples, click the link [here](https://docs.google.com/spreadsheets/d/1jwh62T1tcokJwPMHEW9-gLMYr73EitCf0BwRU4XiF4I/edit?usp=sharing)
 
 
-## User Data Analytics
-Note: All this data is currently being sent to Mixpanel only, given that MixPanel token is configured as outlined in the [Questionnaire Zendesk Article](https://applicaster.zendesk.com/hc/en-us/articles/206949946-Storyline)
+## User Profile Analytics
 
-Event Name | Insight
---------------- | ---------------
-Answer Question | Understand which questions are answered, how much time is taken to answer them, and what percentage of responses were correct
-
-When applicable, the following user properties are tracked on the user level upon login:
+If received upon login (or from the Facebook Public Profile when using FB Login), the following user properties are tracked:
 
 * First Name
 * Last Name
@@ -38,13 +25,13 @@ When applicable, the following user properties are tracked on the user level upo
 * FB ID
 * Email
 * Phone
+
+If the user answers Stitchers in which the questions have correct and incorrect answers (as opposed to polls), the following user properties are tracked:
+
 * X - Answers Correct *(incremental value)*
 * X - Time Taken *(incremental value)*
 * Y - Answers Correct *(incremental value)*
 * Y - Time Taken *(incremental value)*
-* Account ID 
 
-X = Name of Stitcher
-
-Y = The date 
+Where X = Name of Stitcher/Questionnaire, and Y = The Date 
 
