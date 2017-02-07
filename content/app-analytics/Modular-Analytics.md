@@ -48,6 +48,7 @@ Event  | Insight
 **Channel Schedule: Program Clicked** | Measures tapping on a Program in the Full EPG screen. 
 **EPG: Now Button Clicked** | Measures tapping on the ‘Now’ button in EPG screens, which locates the list on the present program.
 **Program: Personal Reminder Turned On/Off** | Measures tapping on an 'on/off Reminder' button, to turn on/off a personal reminder notification when a program is live from within the 'live program' componentized cells. 
+**Live Drawer: Show All Channels Clicked** | Measures tapping on the 'live drawer' button, in order to display the channel list. 
 **Channel List: Channel Clicked** | Measures tapping on a Channel in the Channel List screen, reached from the 'Live Drawer' screen. 
 **Live Drawer: Live Program Clicked** | Measures tapping on a live program from the live drawer.
 **Live Drawer: Personal Reminder Turned Off/On** | Measures tapping on an 'on/off Reminder’ button, to turn on/off a personal reminder notification from within the 'live drawer'. 
@@ -68,10 +69,8 @@ Event  | Insight
 **Tap Atom Feed** | Measures when a user taps on an Atom Feed, excluding Photo Gallery type. 
 **Photo Album Clicked** | Measures user taps on an ATOM Photo Album (also known as a Photo Gallery). 
 **Article Clicked** | Measures user taps on an ATOM article. 
-**Article Item: Info Button Clicked** | Measures user taps on the 'info' button of an articlen. 
+**Article Item: Info Button Clicked** | Measures user taps on the 'info' button of an article. 
 
+## More
 
-
-
-
-
+For detailed documentation on these events, including which properties they contain and examples, click the link [here](https://docs.google.com/spreadsheets/d/1Hlp2sAm9lsKR3x__pk-dD-oCVBO3vJItjnQlrNwB_NM/edit?usp=sharing)
