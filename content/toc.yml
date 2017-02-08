@@ -417,7 +417,7 @@
 "Measurement & Analytics":
 
 - folder: analytics-plugins
-  internal: true
+  internal: false
   owner: e.bendavid@applicaster.com
   title: "Analytics provider plugin on Android"
   description: >
