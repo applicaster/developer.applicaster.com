@@ -416,20 +416,35 @@
 
 "Measurement & Analytics":
 
-- folder: analytics-plugins
+- folder: analytics-plugins-android
   internal: false
   owner: e.bendavid@applicaster.com
   title: "Analytics provider plugin on Android"
   description: >
-    This doc describes how to create an analytics provider plugin on Android
+    This doc describes how to integrate an analytics provider plugin on Android
+  type: Technical
+- folder: analytics-plugins-ios
+  internal: false
+  owner: e.bendavid@applicaster.com
+  title: "Analytics provider plugin on Android"
+  description: >
+    This doc describes how to integrate an analytics provider plugin on Android
   type: Technical
 
-- folder: analytics-plugins-ios
+
+- folder: how-to-create-analytics-plugins-ios
   internal: true
   owner: e.bendavid@applicaster.com
-  title: "Analytics provider plugin on iOS"
+  title: "How to create analytics provider plugin on iOS"
   description: >
     This doc describes how to create an analytics provider plugin on iOS
+  type: Technical
+- folder: how-to-create-analytics-plugins-android
+  internal: true
+  owner: e.bendavid@applicaster.com
+  title: "How to create analytics provider plugin on Android"
+  description: >
+    This doc describes how to create an analytics provider plugin on Android
   type: Technical
 
 - folder: analytics
