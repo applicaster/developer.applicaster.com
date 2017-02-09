@@ -165,6 +165,8 @@ Morpheus is Applicaster’s internally developed analytics infrastructure tool u
 data from our products to analytics providers. Click [here][http://developer.applicaster.com/docs/public/morpheus] to
 learn more about it.
 
+*Note:* the iOS JS-2-Native SDK cannot receive two message simultaneously. As such, make sure to send a separate message for each event or user profile, and not to send two or more such messages separately.
+
 #### Morpheus.emit(key, properties)
 
 Emit an analytics event. The event will be piped to and handled on the native client.
