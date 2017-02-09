@@ -93,6 +93,7 @@ These are the same for all resource types:
 | `show_navigation`     | Should the application show back/forward buttons. Either `true` or `false`. default: `true`                                                                                                                                                                                      | No                                       |  link          |
 | `show_close_button`   | Should the application show a close button. Either `true` or `false`. default: `true`                                                                                                                                                                                            | No                                       |  link          |
 | `enable_zoom`         | Can the user change scale of the webview. Either `true` or `false`. default: `false`                                                                                                                                                                                             | No                                       | link          |
+| `external_policy`     | Includes a nested XML that contains values that are relevant for any client that needs to process this attribute                                                                                                                      | No                                         | video      |
 &#8224; *Only use this tag if you are sure the provided URLs are HLS streams that comply to Apple’s AppStore submission guidelines. using non compliant streams can result in the app being rejected by Apple.*
 ## The `<alternative_streams>` tag
 
@@ -303,6 +304,10 @@ This XML contains 2 videos that will be encoded and served by Applicaster.
           <url>http://example.com/path/to/episode1/large_thumbnail.jpg</url>
         </image_asset>
       </image_assets>
+      <external_policy>
+        <free>true</free>
+        <product_identifiers></product_identifiers>
+      </external_policy>
     </attributes>
   </resource>
   <resource>
@@ -323,6 +328,13 @@ This XML contains 2 videos that will be encoded and served by Applicaster.
           <url>http://example.com/path/to/episode2/large_thumbnail.jpg</url>
         </image_asset>
       </image_assets>
+      <external_policy>
+        <free>true</free>
+        <product_identifiers>
+          <id>1</id>
+          <id>34</id>
+        </product_identifiers>
+      </external_policy>
     </attributes>
   </resource>
 </resources>
