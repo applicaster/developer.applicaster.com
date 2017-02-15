@@ -124,6 +124,9 @@ value="imageGallery"/>`
 * For Image use: `<applicaster:type
 value="image"/>`
 
+* For Playlist use: `<applicaster:type
+value="playlist"/>`
+
 ### updated
 `<updated>` <span class="badge">XPath:
 /feed/entry/updated</span>
