@@ -1,4 +1,4 @@
-# Modular Analytics
+# App Analytics
 ### Video Events (iOS v2.7 and above, Android v2.6 and above)
 
 Event  | Insight
