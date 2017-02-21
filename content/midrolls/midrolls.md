@@ -10,6 +10,15 @@ For information on how to configure midrolls as a customer, see this video-tutor
 
 As a support agent or PM, for information how to enable the fields for midrolls configuration, see this documentation [here](https://applicaster.zendesk.com/hc/en-us/articles/207983116-How-to-setup-midroll-fields-in-extensions).
 
+### Release 1.1.0
+
+Midrolls 1.1 addresses the limitations described for Release 1.0.0 below. It is supported on Zapp SDKs 2.6.2 and above (on Android) and 4.1.0 and above (on iOS).
+
+It works together with video analytics providers. 
+
+Additionally, if an ad unit is not valid, it will not appear in the UI of the seeker and the main content will not be interrupted or paused to search for the ad. Rather, we've added logic such that upon loading the video we check to validate if the ad units are valid, and if they are not, they are removed from the UI. Additionally, in case the ad unit becomes invalid during video play, we run a second check prior to loading the video ad with enough time buffer that if the ad has become invalid, it will not disrupt the UX of the video viewing experience and will simply continue the main stream through the ad break. 
+
+This also means that "waterfall" configuration is not required, as outlined above. This enables you to ensure that you only use midrolls when you are below your quota and within your targeting params of higher priced ad sales and do not interrupt the video experience with lower quality and lower price ads typically associated with the back-fill of "waterfall" advertisements.
 
 ### Release 1.0.0
 
@@ -32,3 +41,5 @@ Additionally, Midrolls 1.0 requires that a valid ad unit must be configured in t
 To avoid this, you can set up a "waterfall" configuration in DFP so that you have fallback ad units in case the original ad unit is not valid.
 
 If you do not want to use a waterfall configuration on DFP or you use a video analytics provider plugin, we recommend you wait for the release of Midrolls 1.1, which is currently in development.
+
+
