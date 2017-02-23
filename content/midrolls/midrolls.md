@@ -16,9 +16,9 @@ Midrolls 1.1 addresses the limitations described for Release 1.0.0 below. It is 
 
 It works together with video analytics providers. 
 
-Additionally, if an ad unit is not valid, it will not appear in the UI of the seeker and the main content will not be interrupted or paused to search for the ad. Rather, we've added logic such that upon loading the video we check to validate if the ad units are valid, and if they are not, they are removed from the UI. Additionally, in case the ad unit becomes invalid during video play, we run a second check prior to loading the video ad with enough time buffer that if the ad has become invalid, it will not disrupt the UX of the video viewing experience and will simply continue the main stream through the ad break. 
+Additionally, we now run a validation check on ad units before requesting the ad unit itself for play. If an ad unit is not valid or has it's quota, the UI for it will disappear from the seeker and the main content will not be interrupted or paused to search for the ad. It will simply continue the main stream through the ad break. 
 
-This also means that "waterfall" configuration is not required, as outlined above. This enables you to ensure that you only use midrolls when you are below your quota and within your targeting params of higher priced ad sales and do not interrupt the video experience with lower quality and lower price ads typically associated with the back-fill of "waterfall" advertisements.
+This also means that "waterfall" configuration is not required, as outlined in the limitations section below. This enables you to ensure that you only use midrolls when you are below your quota and within your targeting params of higher priced ad sales and do not interrupt the video experience with lower quality and lower price ads typically associated with the back-fill of "waterfall" advertisements.
 
 ### Release 1.0.0
 
