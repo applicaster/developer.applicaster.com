@@ -1,6 +1,7 @@
 ## How to add analytic plugin in IOS integration application:
-Applicaster supports a variety of analytics providers to which you can send your analytics data. On iOS, all the analytics providers are handled via a “plugin” system.  
-The directions below outline how to add an analytic plugin to an Applicaster product or features integrated into a non-Applicaster app:  
+Applicaster supports a variety of analytics providers to which you can send your analytics data. On iOS, all the analytics providers are handled via a “plugin” system.
+
+The directions below outline how to add an analytic plugin to an Applicaster product or feature integrated into a non-Applicaster app:  
 
 1. Get json plugin manifest (from Zapp plugin section). 
 2. Concatenate the dependency_name and the dependency_version and past the result dependency in shared_pods.  
