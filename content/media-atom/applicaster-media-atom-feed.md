@@ -124,6 +124,9 @@ value="imageGallery"/>`
 * For Image use: `<applicaster:type
 value="image"/>`
 
+* For Link use: `<applicaster:type
+value="link"/>`
+
 * For Playlist use: `<applicaster:type
 value="playlist"/>`
 
