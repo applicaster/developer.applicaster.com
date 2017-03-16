@@ -34,7 +34,7 @@ Event  | Insight
 
 Event  | Insight
 --------------- | ---------------
-**Launch App** | Measures when a user launches the app, referring to initial launches, not back-from-background re-launches. 
+**Launch App** | Measures when a user launches the app, referring to initial launches, not back-from-background re-launches.
 **Home Screen: Viewed** | Measures when a user views the home screen. 
 **Toolbar: Side Menu Button Clicked** | Measures tapping on the Hamburger button, which opens the side menu. 
 **Toolbar: Live Icon Clicked** | Measures tapping on the Live button on the navbar / titlebar.
@@ -44,7 +44,9 @@ Event  | Insight
 **Side Menu: Search Results Clicked** | Measures tapping on a search result. 
 **Show Was Clicked** | Measures tapping on an item from type Show, which opens the Show screen. 
 **Link Category Was Clicked** | Measures tapping on an item of type Link Category, in order to open the Link Category. 
-**Category Was Clicked** | Measures tapping on an item of type Category which is not a Show, in order to open the category. This event excludes tapping on categories from the side menu). 
+**Category Was Clicked** | Measures tapping on an item of type Category which is not a Show, in order to open the category. This event excludes tapping on categories from the side menu).
+**Podcast Category Session** | Measures the duration of time spent in the audio category.
+**Play Audio Episode** | Measures plays of the Podcast/audio category.
 **Channel Schedule: Program Clicked** | Measures tapping on a Program in the Full EPG screen. 
 **EPG: Now Button Clicked** | Measures tapping on the ‘Now’ button in EPG screens, which locates the list on the present program.
 **Program: Personal Reminder Turned On/Off** | Measures tapping on an 'on/off Reminder' button, to turn on/off a personal reminder notification when a program is live from within the 'live program' componentized cells. 
@@ -53,7 +55,7 @@ Event  | Insight
 **Live Drawer: Live Program Clicked** | Measures tapping on a live program from the live drawer.
 **Live Drawer: Personal Reminder Turned Off/On** | Measures tapping on an 'on/off Reminder’ button, to turn on/off a personal reminder notification from within the 'live drawer'. 
 **Live Drawer: Show All Channels Clicked** | Measures tapping on the 'Show All Channels' link within the live drawer, a link which will display a selection of live channels. *Note: This link only appears in the UI if more than one channel is configured* 
-**Settings: Facebook Area Clicked** | Measures tapping on the ‘Facebook’ section in the Settings screen. 
+**Settings: Facebook Area Clicked** | Measures tapping on the ‘Facebook’ section in the Settings screen.
 **Settings: Facebook Login Button Switched** | Measures toggeling the 'Facebook toggle' in order to log in or out, in the Settings screen. 
 **Settings: Twitter Area Clicked** | Measures tapping on the ‘Twitter’ section in the Settings screen. 
 **Settings: Connect To Twitter Clicked** | Measures tapping on the 'Connect to Twitter' button in order to connect to the twitter account, in the Settings screen. 
@@ -66,7 +68,7 @@ Event  | Insight
 **Sync Button Clicked** | Measures tapping on the sync button. 
 **Sync Button Closed** | Measures tapping on the 'close' button of the sync button. iOS only - Android has back functionality instead of close button 
 **Tap Notification** | Measures when a user taps on a push notification or reminder notification. Identify which particular push messages bring in the most users and how that fits within the greater flow of user behavior.
-**Tap Atom Feed** | Measures when a user taps on an Atom Feed, excluding Photo Gallery type. 
+**Tap Atom Feed** | Measures when a user taps on an Atom Feed, including Audio type excluding Photo Gallery type. 
 **Photo Album Clicked** | Measures user taps on an ATOM Photo Album (also known as a Photo Gallery). 
 **Article Clicked** | Measures user taps on an ATOM article. 
 **Article Item: Info Button Clicked** | Measures user taps on the 'info' button of an article. 
