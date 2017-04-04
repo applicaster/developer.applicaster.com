@@ -1,5 +1,5 @@
 ## How to add analytic plugin in Android integration application:
-Applicaster supports a variety of analytics providers to which you can send your analytics data. On Android allour Analytics providers are handled via a “plugin” system.
+Applicaster supports a variety of analytics providers to which you can send your analytics data. All our analytics providers are handled via a “plugin” system.
 
 The directions below outline how to add an analytic plugin to an Applicaster product or feature integrated into a non-Applicaster app:
   
