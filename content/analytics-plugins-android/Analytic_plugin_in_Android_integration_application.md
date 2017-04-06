@@ -45,6 +45,7 @@ You can see from the left the plugin_configurations.json’ file and from the ri
 
 
    You can found below more examples of our analytics plugins:
+   ```bash
 [
   {
     "plugin": {
@@ -154,3 +155,4 @@ You can see from the left the plugin_configurations.json’ file and from the ri
     }
   }
 ]
+```
