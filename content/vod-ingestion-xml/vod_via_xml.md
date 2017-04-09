@@ -125,7 +125,7 @@ The  `<image_asset>` tag contains the following tags:
 | Tag   | Description                                                                                                                                                           | Required |
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | `key` | The image asset name (ex. `icon`, `thumbnail`, ...)                                                                                                                   | Yes      |
-| `url` | A URL to fetch the image from. notice that this URL will not be accessed by devices, it will be cached by assplicaster’s system and served through there to the apps. | Yes      |
+| `url` | A unique URL to fetch the image from. Different images should use different URLs (e.g. a change in an icon will only be picked up if accompanied by a change in the URL). Notice that this URL is cached and served to apps by Applicaster’s system and not directly acccessed by devices. | Yes      |
 
 # Examples
 
