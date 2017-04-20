@@ -1,5 +1,5 @@
 ## How to add analytic plugin in Android integration application:
-Applicaster supports a variety of analytics providers to which you can send your analytics data. All our analytics providers are handled via a “plugin” system.
+Applicaster supports a variety of analytics providers to which you can send your analytics data. All our analytics providers are handled via a plugins system.
 
 The directions below outline how to add an analytic plugin to an Applicaster product or feature integrated into a non-Applicaster app:
   
@@ -14,8 +14,8 @@ For example:
 
     ```bash
     dependencies {   
-        compile ‘flurry:analytic-providers-android:0.1.+’
-        compile 'akamai:akamai-analytic-providers-android:1.1.+'
+        compile 'com.applicaster:FlurryAnalyticsProvider:0.2.0'
+        compile 'akamai:akamai-analytic-providers-android:1.1.0+'
         compile 'comscore:comscore-analytic-providers-android:1.1.+'
         compile 'mixpanel:mixpanel-analytic-providers-android:1.0.+'
         compile 'google_analytics:google-analytic-providers-android:1.0.+'
