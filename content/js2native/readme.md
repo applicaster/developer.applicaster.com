@@ -349,9 +349,12 @@ js2n.Question.isQuestionAnswered(options);
 ### Push Notifications Tags
 Version added: 2.2.0
 
+<i>Note: The `provider` key values for Push Notification Provider(s) are defined in the App plugin implementation itself and should be uniform per both platforms.</i>
+
 ### Push.getAppTagsList
 
 Gets a list of push notification tags for the app.
+On success, the list of tags is returned in `response.tags`
 
 ```
 var options = {
@@ -359,6 +362,7 @@ var options = {
     callback: function(response) { 
         if (response.isSuccess) {
             console.log("do something on success");
+            console.log(response.tags);
         }
     }
 };
@@ -369,6 +373,7 @@ js2n.Push.getAppTagList(options);
 ### Push.getDeviceTagList
 
 Gets a list of push notification tags for the device.
+On success, the list of tags is returned in `response.tags`
 
 ```
 var options = {
@@ -376,6 +381,7 @@ var options = {
     callback: function(response) { 
         if (response.isSuccess) {
             console.log("do something on success");
+            console.log(response.tags);
         }
     }
 };
