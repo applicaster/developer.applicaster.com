@@ -308,7 +308,6 @@ Launches native sharing menu. Options will be passed into the choosen sharing fu
 ### Question Integration
 Version added: 2.1.0
 
-<i>This feature is experimental and currently in beta testing.</i>
 ### Question.AnswerQuestion
 
 Sends notification to native that a question has been answered with specific question id.
@@ -346,6 +345,79 @@ var options = {
 js2n.Question.isQuestionAnswered(options);
 ```
 
+
+### Push Notifications Tags
+Version added: 2.2.0
+
+### Push.getAppTagsList
+
+Gets a list of push notification tags for the app.
+
+```
+var options = {
+    provider: 'urbanairship', // or appoxee
+    callback: function(response) { 
+        if (response.isSuccess) {
+            console.log("do something on success");
+        }
+    }
+};
+
+js2n.Push.getAppTagList(options);
+```
+
+### Push.getDeviceTagList
+
+Gets a list of push notification tags for the device.
+
+```
+var options = {
+    provider: 'appoxee',
+    callback: function(response) { 
+        if (response.isSuccess) {
+            console.log("do something on success");
+        }
+    }
+};
+
+js2n.Push.getDeviceTagList(options);
+```
+
+### Push.registerTags
+
+Register tags to receive notifications for.
+
+```
+var options = {
+    provider: 'urbanairship',
+    tags: 'sports,news'
+    callback: function(response) { 
+        if (response.isSuccess == 'true')  {
+            console.log("do something on success");
+        }
+    }
+};
+
+js2n.Push.registerTags(options);
+```
+
+### Push.unregisterTags
+
+Register tags to receive notifications for.
+
+```
+var options = {
+    provider: 'appoxee',
+    tags: 'sports,news'
+    callback: function(response) { 
+        if (response.isSuccess == 'true') {
+            console.log("do something on success");
+        }
+    }
+};
+
+js2n.Push.unregisterTags(options);
+```
 
 ### Note
 The current iOS webview SDK prevents the native iOS device from being able to receive multiple commands simultaneously. If you need to send more than one command at the same time, maintain the timestamp for when the event/user profile creation was triggered, but create a 5 second delay in the actual delivery of each command to iOS
