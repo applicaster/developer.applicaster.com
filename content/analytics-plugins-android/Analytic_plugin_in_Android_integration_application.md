@@ -45,7 +45,7 @@ You can see from the left the plugin_configurations.json’ file and from the ri
    ![Difference](./android_analytics_plugins_example.png)
 
 
-   You can found below more examples of our analytics plugins:
+   You can find below more examples of our analytics plugins:
    
     ```bash
       [
