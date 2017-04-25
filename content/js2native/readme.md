@@ -360,7 +360,7 @@ On success, the list of tags is returned in `response.tags`
 
 ```
 var options = {
-    providers: 'urbanairship' // or 'appoxee,urbanairship' or 'appoxee'
+    providers: 'appoxee'
 }
 
 var callback = function(response) { 
@@ -374,7 +374,7 @@ var callback = function(response) {
 js2n.Push.getAppTagList(options, callback);
 ```
 
-### Push.getDeviceTagList
+### Push.getDeviceTagsList
 
 Gets a list of push notification tags for the device that the user has registered/subscribed to.
 On success, the list of tags is returned in `response.tags`
@@ -390,7 +390,7 @@ var callback = function(response) {
     }
 }
 
-js2n.Push.getDeviceTagList(options, callback);
+js2n.Push.getDeviceTagsList(options, callback);
 ```
 
 ### Push.registerTags
