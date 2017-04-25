@@ -426,9 +426,9 @@
 - folder: analytics-plugins-ios
   internal: false
   owner: e.bendavid@applicaster.com
-  title: "Analytics provider plugin on Android"
+  title: "Analytics provider plugin on iOS"
   description: >
-    This doc describes how to integrate an analytics provider plugin on Android
+    This doc describes how to integrate an analytics provider plugin on iOS
   type: Technical
 
 
