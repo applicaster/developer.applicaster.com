@@ -356,10 +356,14 @@ Version added: 2.2.0
 Gets a list of push notification tags for the app that the user can subscribe/register to.
 On success, the list of tags is returned in `response.tags`
 
+<i>Note: This method is only available for provider: 'appoxee'
+
 ```
 var options = {
-    providers: 'urbanairship', // or 'appoxee,urbanairship' or 'appoxee'
-    callback: function(response) { 
+    providers: 'appoxee'
+}
+
+var callback = function(response) { 
         if (response.isSuccess) {
             console.log("do something on success");
             console.log(response.tags);
@@ -367,26 +371,26 @@ var options = {
     }
 };
 
-js2n.Push.getAppTagList(options);
+js2n.Push.getAppTagList(options, callback);
 ```
 
-### Push.getDeviceTagList
+### Push.getDeviceTagsList
 
 Gets a list of push notification tags for the device that the user has registered/subscribed to.
 On success, the list of tags is returned in `response.tags`
 
 ```
 var options = {
-    providers: 'appoxee', // or 'appoxee,urbanairship' or 'urbanairship'
-    callback: function(response) { 
-        if (response.isSuccess) {
-            console.log("do something on success");
-            console.log(response.tags);
-        }
-    }
+    providers: 'appoxee' // or 'appoxee,urbanairship' or 'urbanairship'
 };
+var callback = function(response) { 
+    if (response.isSuccess) {
+        console.log("do something on success");
+        console.log(response.tags);
+    }
+}
 
-js2n.Push.getDeviceTagList(options);
+js2n.Push.getDeviceTagsList(options, callback);
 ```
 
 ### Push.registerTags
@@ -397,14 +401,15 @@ Register/subscribe to tags to receive notifications from.
 var options = {
     providers: 'urbanairship', // or 'appoxee,urbanairship' or 'appoxee'
     tags: 'sports,news'
-    callback: function(response) { 
-        if (response.isSuccess == 'true')  {
-            console.log("do something on success");
-        }
-    }
 };
 
-js2n.Push.registerTags(options);
+var callback = function(response) { 
+    if (response.isSuccess == 'true')  {
+        console.log("do something on success");
+    }
+}
+
+js2n.Push.registerTags(options, callback);
 ```
 
 ### Push.unregisterTags
@@ -415,14 +420,15 @@ Unregister/unsubscribe to tags to stop receiving notifications from.
 var options = {
     providers: 'urbanairship', // or 'appoxee,urbanairship' or 'appoxee'
     tags: 'sports,news'
-    callback: function(response) { 
-        if (response.isSuccess == 'true') {
-            console.log("do something on success");
-        }
-    }
 };
 
-js2n.Push.unregisterTags(options);
+var callback = function(response) { 
+    if (response.isSuccess == 'true') {
+        console.log("do something on success");
+    }
+}
+
+js2n.Push.unregisterTags(options, callback);
 ```
 
 ### Note
