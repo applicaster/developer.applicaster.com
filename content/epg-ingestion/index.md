@@ -42,7 +42,7 @@ servers. If the mobile application has more than one channel, each supported
 channel should have it’s own separate JSON file.
 
 ## Overlapping program
-An overlapping program is a program that its `stat_time` to `end_time` range
+An overlapping program is a program that its `start_time` to `end_time` range
 overlaps an already existing program on the same EPG. Any found overlapping
 programs will be overriden on the ingestion cycle.
 
