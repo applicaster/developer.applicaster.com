@@ -130,6 +130,12 @@ value="link"/>`
 * For Playlist use: `<applicaster:type
 value="playlist"/>`
 
+* For Atom Feed use: `<applicaster:type
+value="atom"/>`
+
+* For Program use: `<applicaster:type
+value="program"/>`
+
 ### updated
 `<updated>` <span class="badge">XPath:
 /feed/entry/updated</span>
@@ -158,6 +164,17 @@ If added the field will be visible for the end user.
 
 If added the field will be visible for the end user.
 
+### ui tag
+`<ui_tag>` <span class="badge">XPath:
+/feed/entry/ui_tag
+
+Applicaster's unique identifier
+
+### screen type
+`<screen_type>` <span class="badge">XPath:
+/feed/entry/screen_type
+
+Applicaster's screen identifier as defined in screen settings of Zapp ux builder
 
 ### link [rel="alternate", type="text/html"]
 `<link>` <span class="badge">XPath:
@@ -168,23 +185,23 @@ and its set type attribute is "text/html". The
 href value of the link will be used as the shared link URL of the entry.
 
 ### advertisement
-`<advertisement>` <span class=“badge”> XPath:/feed/entry/advertisement</span>  
-This tag may include two tags:  
+`<advertisement>` <span class=“badge”> XPath:/feed/entry/advertisement</span>
+This tag may include two tags:
 
 * ### interstitial
-`<interstitial ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`  
-This tag should represent where interstitial content comes from.  
+`<interstitial ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`
+This tag should represent where interstitial content comes from.
 When this tag is added it MUST includes properties any device types.
 * ### banner
-`<banner ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`  
-This tag should represent where banner content comes from.  
+`<banner ios_iphone_adUnit = "" ios_ipad_adUnit = "" android_smartPhone_adUnit = "" android_tablet_adUnit = ""/>`
+This tag should represent where banner content comes from.
 When this tag is added it MUST includes properties any device types.
 
-All options are described here:  
-`ios_iphone_adUnit`  - adUnit for iphones.  
-`ios_ipad_adUnit`  - adUnit for ipads.  
-`android_smartPhone_adUnit`  - adUnit for smartphones.  
-`android_tablet_adUnit`  - adUnit for tablets.  
+All options are described here:
+`ios_iphone_adUnit`  - adUnit for iphones.
+`ios_ipad_adUnit`  - adUnit for ipads.
+`android_smartPhone_adUnit`  - adUnit for smartphones.
+`android_tablet_adUnit`  - adUnit for tablets.
 
 ### content
 `<content>` <span class="badge">XPath:
@@ -193,7 +210,7 @@ All options are described here:
 The `<content>` element `type` attribute
 depends on the Entry type:
 * For Article use <kbd>html</kbd>
-* For Image use one of the following types:  
+* For Image use one of the following types:
 <kbd>image/png</kbd>, <kbd>image/gif</kbd>,
 <kbd>image/jpg</kbd>, <kbd>image/jpeg</kbd>
 * For Video use <kbd>video/hls</kbd>
@@ -225,6 +242,27 @@ value="image"/>` element will be discarded.
 * YouTube Video type MUST have a `src` attribute
 with the YouTube video ID.
 
+### applicaster Extensions
+`<applicaster:extensions>` <span
+class="badge">XPath:
+/feed/entry/applicaster:extensions</span>
+
+The `<applicaster:extensions>` element groups
+extended features of feed entry.
+
+### applicaster Extension
+`<applicaster:extension>` <span
+class="badge">XPath:
+/feed/entry/applicaster:extension</span>
+
+Following are the
+supported extension types:
+* <kbd>start_time</kbd>: Should be used on a `Program` type to indicate the start time of the program.
+* <kbd>end_time</kbd>: Should be used on a `Program` type to indicate the end time of the program.
+* <kbd>active</kbd>: Should be used on a `Program` type to indicate if the program should be presented in the app or hidden.
+* <kbd>exteranl_id</kbd>: Should be used on in order to connect the `Entry` to an external id.
+Can be used in Program to connect it to an existing channel id in Applicaster system.
+
 ### applicaster media group
 `<applicaster:mediaGroup>` <span
 class="badge">XPath:
@@ -233,17 +271,12 @@ class="badge">XPath:
 The `<applicaster:mediaGroup>` element groups
 media assets from the same type. Following are the
 supported group types:
-* <kbd>thumbnail</kbd>: Is an image that will be
-used to show the item in a collection view. It
-will normally be relatively small in size. It
-SHOULD have 16:9 aspect ratio.
-* <kbd>detailed-view</kbd>: Relevant only for
-articles - holds the article's item image in full
-view mode.
+* <kbd>image_base</kbd>: Is an image that will be
+used to show the item in a collection view. The base ratio SHOULD be 16:9.
 * <kbd>video</kbd>: Relevant only for
 articles - holds the article's item video.
 * <kbd>audio</kbd>: Relevant only for
-articles - holds the article's item audio.  
+articles - holds the article's item audio.
 >Please note:
 * The play button image will present from the app and should not be include in the video image.
 * In case the entry include "detailed-view" and "audio" types the app will ignore the "detailed-view" and will show only the "audio".
@@ -259,20 +292,10 @@ The `<applicaster:mediaItem>` element MUST be
 contained inside a `<applicaster:mediaGroup>`
 element.
 
-The `scale` attribute MUST be set to
-<kbd>small</kbd> or <kbd>large</kbd>. Large device
-screens will use the image with the
-<kbd>large</kbd> attribute, while devices with
-small screens will use the image with the
-<kbd>small</kbd> attribute.
-* When set to <kbd>large</kbd> scale - maximum
-image size SHOULD NOT be bigger than 800x800px.
-* When set to <kbd>small</kbd> scale - maximum
-image size SHOULD NOT be bigger than 400x400px.
+The `key` attribute MUST be set to a predefined key. It differentiates the media items in the media group
+Use <kbd>image_base</kbd> as a default value.
 
+The `type` attribute MUST be one of the following:
+<kbd>image<kbd>, <kbd>audio<kbd>, <kbd>video<kbd>
 
->  **Note:** In the case that the large
-image isn't provided all devices will use the
-provided small image. Only devices that
-have a large screen will show large
-images.
+The `src` attribute should contain the url of the media item.
