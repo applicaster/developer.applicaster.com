@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build": "./node_modules/applicaster-book-creator/node_modules/.bin/gitbook build ./book ./_book",
+    "start": "node ./node_modules/applicaster-book-creator/server/index.js",
+    "postinstall": "yarn build",
+    "serve": "./node_modules/applicaster-book-creator/node_modules/.bin/gitbook serve"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "applicaster-book-creator": "https://github.com/applicaster/applicaster-book-creator",
+    "gitbook-plugin-toggle-chapters": "^0.0.3"
+  }
+}
