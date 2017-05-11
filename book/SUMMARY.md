@@ -3,7 +3,7 @@
 ## Getting Started With Zapp
 
 ## Zapp Pipes (Data Source)
-* [Intro to Zapp Pipes](Zapp-Pipes/home.md)
+* [Intro to Zapp Pipes](Zapp-Pipes/Home.md)
     * [Concepts](Zapp-Pipes/1.-Concepts.md)
     * [Architecture](Zapp-Pipes/2.-Architecture.md)
     * [Native bridge](Zapp-Pipes/3.-Native-bridge.md)
