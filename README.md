@@ -22,6 +22,7 @@ Adding a new document can be easily done by the following steps:
 1. clone the repo.
 2. create a new branch.
 3. add the new `.md` file under the relevant folder.
-4. add the file to the right please in the `/book/SUMMARY.md` according to the [Pages and Summary](https://toolchain.gitbook.com/pages.html) guide.
-5. push the code. 
-6. create the pull request.
+4. add the file to the right place in the `/book/SUMMARY.md` according to the [Pages and Summary](https://toolchain.gitbook.com/pages.html) guide.
+5. test your code locally by running the gitbook with `yarn start` or `yarn run start:dev` for automatic reloading
+6. push the code. 
+7. create the pull request.
