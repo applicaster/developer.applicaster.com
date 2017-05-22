@@ -3,15 +3,16 @@
 ## Getting Started With Zapp
 
 ## Zapp Pipes (Data Source)
-* [Intro to Zapp Pipes](Zapp-Pipes/Home.md)
-    * [Concepts](Zapp-Pipes/1.-Concepts.md)
-    * [Architecture](Zapp-Pipes/2.-Architecture.md)
-    * [Native bridge](Zapp-Pipes/3.-Native-bridge.md)
-    * [Environments](Zapp-Pipes/4.-Environments.md)
-* [Create A Data Source Provider](Zapp-Pipes/7.-Create-a-provider.md)
-    * [Build a package](Zapp-Pipes/5.-Build-a-package.md)
-    * [Zapp setup](Zapp-Pipes/6.-Zapp-setup.md)
-    * [How to update a provider ?](Zapp-Pipes/How-to-update-a-provider.md)
+* [Intro to Zapp Pipes](/Zapp-Pipes/Home.md)
+    * [Prerequisites](/Zapp-pipes/0.-Prerequisites.md)
+    * [Setting up the environment](/Zapp-Pipes/1.-Set-up.md)
+    * [Structure of a provider](/Zapp-Pipes/2.-Provider-structure.md)
+    * [Native Bridge API](/Zapp-Pipes/3.-Native-bridge-API.md)
+    * [How to test locally](/Zapp-Pipes/4.-Local-testing.md)
+    * [Feed API](/Zapp-Pipes/5.-Feed-API.md)
+    * [How to connect the provider to the app](/Zapp-Pipes/6.-Connect-to-Zapp.md)
+    * [Examples](/Zapp-Pipes/7.-Examples.md)
+    * [F.A.Q.](/Zapp-Pipes/8.-FAQ.md)
 
 ## Zapp React Native
 * [Intro]()
