@@ -1,17 +1,11 @@
 {
   "scripts": {
-    "build": "./node_modules/applicaster-book-creator/node_modules/.bin/gitbook build ./book ./_book",
-    "start": "node ./node_modules/applicaster-book-creator/server/index.js",
-    "restart": "yarn run build && PORT=8000 yarn start",
-    "start:dev": "./node_modules/.bin/nodemon -e md --ignore _book --exec \"yarn run restart\"",
+    "build": "./node_modules/applibook/node_modules/.bin/gitbook install && ./node_modules/applibook/node_modules/.bin/gitbook build",
+    "start": "node ./node_modules/applibook/_server/index.js",
     "postinstall": "yarn build",
-    "serve": "./node_modules/applicaster-book-creator/node_modules/.bin/gitbook serve"
-  },
-  "devDependencies": {
-    "nodemon": "^1.11.0"
+    "serve": "./node_modules/.bin/gitbook serve book"
   },
   "dependencies": {
-    "applicaster-book-creator": "https://github.com/applicaster/applicaster-book-creator",
-    "gitbook-plugin-toggle-chapters": "^0.0.3"
+    "applibook": "1.3.0"
   }
 }
