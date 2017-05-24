@@ -4,7 +4,7 @@
 
 ## Zapp Pipes (Data Source)
 * [Intro to Zapp Pipes](/Zapp-Pipes/Home.md)
-    * [Prerequisites](/Zapp-pipes/0.-Prerequisites.md)
+    * [Prerequisites](/Zapp-Pipes/0.-Prerequisites.md)
     * [Setting up the environment](/Zapp-Pipes/1.-Set-up.md)
     * [Structure of a provider](/Zapp-Pipes/2.-Provider-structure.md)
     * [Native Bridge API](/Zapp-Pipes/3.-Native-bridge-API.md)
