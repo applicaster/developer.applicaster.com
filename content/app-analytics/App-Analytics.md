@@ -5,6 +5,7 @@ Event  | Insight
 --------------- | ---------------
 **Play VOD Item** | Measures that a video item is played, and for how long. The item played holds the following parameter: The video type (Applicaster model, or ATOM type), Item Name and the parameters that are related to each type, i.e.: Season Name, Show Name, Show ID, Free/Paid, Item ID for Applicaster video model, and ATOM feed name for ATOM video type. Note that if a user leaves during the pre-roll, this event will not be counted. 
 **VOD Item: Play Was Triggered** | Measures that a video cell was tapped, triggering play. The event is measured whether not the user stays through a pre-roll and the actual video loads.
+**Play Channel** | Measures when the a live stream plays on the video player.
 **Program: Play Live Was Triggered from Cell** | Measures when tapping on a 'Live Program' item in order to play it. This Live Program event refers to promotion from componentized cells and not from the EPG and Live Drawer). 
 **Program: Play Icon Clicked on Generic Screen** | Measures when tapping on the 'Play' Icon from EPG or Live Drawer, in order to play the program. Note that combined with “Program: Play Live Was Triggered from Cell”, both address all possibilities of playing live programs. 
 **VOD Item: Intermediate Button Clicked** | Measures when tapping on the 'Info' button on a VOD Item. All parameters of the Play VOD event are included, except the length. On Android. 
