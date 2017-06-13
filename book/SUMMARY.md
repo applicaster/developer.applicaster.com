@@ -13,24 +13,3 @@
     * [How to connect the provider to the app](/Zapp-Pipes/6.-Connect-to-Zapp.md)
     * [Examples](/Zapp-Pipes/7.-Examples.md)
     * [F.A.Q.](/Zapp-Pipes/8.-FAQ.md)
-
-## Zapp React Native
-* [Intro](comingsoon.md)
-
-## Zapp iOS
-* [Intro to Zapp iOS](comingsoon.md)
-* [UI Components](comingsoon.md)
-* [Navigation](comingsoon.md)
-* [Player](comingsoon.md)
-* [Login & SSO](comingsoon.md)
-* [Analytics](comingsoon.md)
-* [Push Service](comingsoon.md)
-
-## Zapp Android
-* [Intro to Zapp Android](comingsoon.md)
-* [UI Components](comingsoon.md)
-* [Navigation](comingsoon.md)
-* [Player](comingsoon.md)
-* [Login & SSO](comingsoon.md)
-* [Analytics](comingsoon.md)
-* [Push Service](comingsoon.md)
