@@ -224,56 +224,56 @@ They are not required, but if delivered, should be written as follows:
 * Phone
 
 We split the user properties for two set, the PII and the Generic(non PII Properies).
-Personally identifiable Information (PII) is information which can be used to distinguish or trace an individual's identity alone, such as their name, social security number, biometric records, etc., or can be used to identify an individual when combined with other personal or identifying information which is linked or linkable to the specific individual, such as date and place of birth, mother’s maiden name, etc." 
+Personally identifiable Information (PII) is information which can be used to distinguish or trace an individual's identity alone, such as their name, social security number, biometric records, etc., or can be used to identify an individual when combined with other personal or identifying information which is linked or linkable to the specific individual, such as date and place of birth, mother’s maiden name, etc."
 
 * Note in the example sections for "generic" and "pii" properties, as well as a broader set of all user properties combined. We are aware that this leads to the duplication of the propeties; we are doing that to support backwards compatibility, and will contiue doing so until the SDKs which require the combined set of user properties are no longer supported, at which point we will update the documentation.
 
 ```javascript
 var userProperties = {
-"generic": {
-"favorite team sport": "FC Barcelona",
-"customer type": "paid",
-"Custom1": "1",
-"Custom2": "2"
-},
-"pii": {
-"Name": "Neo",
-"FirstName": "Thomas",
-"LastName": "Anderson",
-"Email": "t.anderson@metacortex.com",
-"Phone": "1",
-"custom3": "3",
-"SocialIDs": {
-"Facebook": {
-"ID": "123"
-},
-"twitter": {
-"ID": "123"
-},
-"google": {
-"ID": "123"
-}
-}
-},
-"Name": "Neo",
-"FirstName": "Thomas",
-"LastName": "Anderson",
-"Email": "t.anderson@metacortex.com",
-"Phone": "1",
-"Custom1": "1",
-"Custom2": "2",
-"custom3": "3",
-"SocialIDs": {
-"Facebook": {
-"ID": "123"
-},
-"twitter": {
-"ID": "123"
-},
-"google": {
-"ID": "123"
-}
-}
+  "generic": {
+    "favorite team sport": "FC Barcelona",
+    "customer type": "paid",
+    "Custom1": "1",
+    "Custom2": "2"
+  },
+  "pii": {
+    "Name": "Neo",
+    "FirstName": "Thomas",
+    "LastName": "Anderson",
+    "Email": "t.anderson@metacortex.com",
+    "Phone": "1",
+    "custom3": "3",
+    "SocialIDs": {
+      "Facebook": {
+        "ID": "123"
+      },
+      "twitter": {
+        "ID": "123"
+      },
+      "google": {
+        "ID": "123"
+      }
+    }
+  },
+  "Name": "Neo",
+  "FirstName": "Thomas",
+  "LastName": "Anderson",
+  "Email": "t.anderson@metacortex.com",
+  "Phone": "1",
+  "Custom1": "1",
+  "Custom2": "2",
+  "custom3": "3",
+  "SocialIDs": {
+    "Facebook": {
+      "ID": "123"
+    },
+    "twitter": {
+      "ID": "123"
+    },
+    "google": {
+      "ID": "123"
+    }
+  }
 }
 
 js2n.Morpheus.updateUserProfile(userProperties);
@@ -286,11 +286,11 @@ js2n.Morpheus.updateUserProfile(userProperties);
 Launches native player with specific URL.
 
 ```javascript
-var options = {
-video_url: "http://demo.unified-streaming.com/video/tears-of-steel/tears-of-steel.ism/.m3u8"
-};
+ var options = {
+   video_url: "http://demo.unified-streaming.com/video/tears-of-steel/tears-of-steel.ism/.m3u8"
+ };
 
-js2n.Video.playNative(options);
+ js2n.Video.playNative(options);
 ```
 ### Native sharing
 
@@ -299,12 +299,12 @@ js2n.Video.playNative(options);
 Launches native sharing menu. Options will be passed into the choosen sharing functionality.
 
 ```javascript
-var options = {
-link_url: "http://www.bbc.com/weather",
-title: "Wheater"
-};
+ var options = {
+   link_url: "http://www.bbc.com/weather",
+   title: "Wheater"
+ };
 
-js2n.NativeShare.show(options);
+ js2n.NativeShare.show(options);
 ```
 
 
@@ -317,13 +317,13 @@ Sends notification to native that a question has been answered with specific que
 
 ```
 var options = {
-question_id: "some_id",
-asnwer_value: "some_value",
-callback: function(response) { 
-if (response.success) {
-console.log("do something on success");
-}
-}
+    question_id: "some_id",
+    asnwer_value: "some_value",
+    callback: function(response) {
+        if (response.success) {
+            console.log("do something on success");
+        }
+    }
 };
 
 js2n.Question.answerQuestion(options);
@@ -336,13 +336,13 @@ Returns the answer value if question had been answered.
 
 ```
 var options = {
-question_id: "some_id",
-callback: function(response) { 
-if (response.success) {
-console.log("question was answered in the past.");
-console.log("answer_value = ", response.answer_value);
-}
-}
+    question_id: "some_id",
+    callback: function(response) {
+        if (response.success) {
+            console.log("question was answered in the past.");
+            console.log("answer_value = ", response.answer_value);
+        }
+    }
 };
 
 js2n.Question.isQuestionAnswered(options);
@@ -363,15 +363,15 @@ On success, the list of tags is returned in `response.tags`
 
 ```
 var options = {
-providers: 'appoxee'
+    providers: 'appoxee'
 }
 
-var callback = function(response) { 
-if (response.isSuccess) {
-console.log("do something on success");
-console.log(response.tags);
-}
-}
+var callback = function(response) {
+        if (response.isSuccess) {
+            console.log("do something on success");
+            console.log(response.tags);
+        }
+    }
 };
 
 js2n.Push.getAppTagList(options, callback);
@@ -384,13 +384,13 @@ On success, the list of tags is returned in `response.tags`
 
 ```
 var options = {
-providers: 'appoxee' // or 'appoxee,urbanairship' or 'urbanairship'
+    providers: 'appoxee' // or 'appoxee,urbanairship' or 'urbanairship'
 };
-var callback = function(response) { 
-if (response.isSuccess) {
-console.log("do something on success");
-console.log(response.tags);
-}
+var callback = function(response) {
+    if (response.isSuccess) {
+        console.log("do something on success");
+        console.log(response.tags);
+    }
 }
 
 js2n.Push.getDeviceTagsList(options, callback);
@@ -402,14 +402,14 @@ Register/subscribe to tags to receive notifications from.
 
 ```
 var options = {
-providers: 'urbanairship', // or 'appoxee,urbanairship' or 'appoxee'
-tags: 'sports,news'
+    providers: 'urbanairship', // or 'appoxee,urbanairship' or 'appoxee'
+    tags: 'sports,news'
 };
 
-var callback = function(response) { 
-if (response.isSuccess == 'true')  {
-console.log("do something on success");
-}
+var callback = function(response) {
+    if (response.isSuccess == 'true')  {
+        console.log("do something on success");
+    }
 }
 
 js2n.Push.registerTags(options, callback);
@@ -421,14 +421,14 @@ Unregister/unsubscribe to tags to stop receiving notifications from.
 
 ```
 var options = {
-providers: 'urbanairship', // or 'appoxee,urbanairship' or 'appoxee'
-tags: 'sports,news'
+    providers: 'urbanairship', // or 'appoxee,urbanairship' or 'appoxee'
+    tags: 'sports,news'
 };
 
-var callback = function(response) { 
-if (response.isSuccess == 'true') {
-console.log("do something on success");
-}
+var callback = function(response) {
+    if (response.isSuccess == 'true') {
+        console.log("do something on success");
+    }
 }
 
 js2n.Push.unregisterTags(options, callback);
