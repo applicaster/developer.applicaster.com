@@ -228,6 +228,8 @@ Personally identifiable Information (PII) is information which can be used to di
 
 * Note in the example sections for "generic" and "pii" properties, as well as a broader set of all user properties combined. We are aware that this leads to the duplication of the propeties; we are doing that to support backwards compatibility, and will contiue doing so until the SDKs which require the combined set of user properties are no longer supported, at which point we will update the documentation.
 
+* Note that within "pii" properties, we have a Section for SocialIDs. If you have any sort of social network login, please make sure to follow the structure there, rather then send the IDs as a separate custom values. This enables us to search for Social IDs properly and for you to easily add new social providers without a change to the structure.
+
 ```javascript
 var userProperties = {
   "generic": {
