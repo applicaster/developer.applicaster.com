@@ -184,6 +184,17 @@ If `<link>` element exists and its set rel attribute is "alternate"
 and its set type attribute is "text/html". The
 href value of the link will be used as the shared link URL of the entry.
 
+If using entry type `feed|imageGallery` the `<link>` element href value of the link will be used for loading the nested feed.
+
+**Note:** If the nested feed should be using a custom data source provider, the url should be constructed as follows:
+`<custom_provider_scheme>://fetchData?type=<provider_data_type>&url=<original_feed_url>`
+
+### id
+`<id>` <span class="badge">XPath:
+/feed/entry/id
+
+A unique identifier for an entry
+
 ### advertisement
 `<advertisement>` <span class=“badge”> XPath:/feed/entry/advertisement</span>
 This tag may include two tags:
@@ -257,10 +268,9 @@ class="badge">XPath:
 
 Following are the
 supported extension types:
-* <kbd>start_time</kbd>: Should be used on a `Program` type to indicate the start time of the program.
-* <kbd>end_time</kbd>: Should be used on a `Program` type to indicate the end time of the program.
-* <kbd>active</kbd>: Should be used on a `Program` type to indicate if the program should be presented in the app or hidden.
-* <kbd>exteranl_id</kbd>: Should be used on in order to connect the `Entry` to an external id.
+* <kbd>start_time</kbd>: Should be used on a `Program` type to indicate the start time of the program. Format: YYYY/MM/DD HH:MM:SS UTC, e.g. 2017/06/15 18:00:00 -0600
+* <kbd>end_time</kbd>: Should be used on a `Program` type to indicate the end time of the program. Format: YYYY/MM/DD HH:MM:SS UTC, e.g. 2017/06/15 18:00:00 -0600
+* <kbd>applicaster_channel_id</kbd>: Should be used on in order to connect the `Entry` to an external id.
 Can be used in Program to connect it to an existing channel id in Applicaster system.
 
 ### applicaster media group
