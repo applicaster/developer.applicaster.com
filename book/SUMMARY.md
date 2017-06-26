@@ -1,6 +1,8 @@
 # Zapp Developer Center
 
 ## Getting Started With Zapp
+* [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
+		* [Zappifest Tool](/zappifest/zappifest.md)
 
 ## Zapp Pipes (Data Source)
 * [Intro to Zapp Pipes](/Zapp-Pipes/Home.md)

@@ -11,7 +11,7 @@ Zapp apps are built from the [Zapp CMS](http://zapp.applicaster.com) and the cli
 Zapp Plugins enables adding native / react native features and integrations.
 
 Plugins high level design:
-![](/assets/plugins.png)
+![](/assets/process.png)
 
 Zapp is supporting plugins for:
 1. Data-Source (Zapp-Pipes)
