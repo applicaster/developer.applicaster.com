@@ -184,7 +184,7 @@ If `<link>` element exists and its set rel attribute is "alternate"
 and its set type attribute is "text/html". The
 href value of the link will be used as the shared link URL of the entry.
 
-If using entry type `feed|imageGallery` the `<link>` element href value hold nested feed.
+If using entry type `feed|imageGallery` the `<link>` element href value will hold the nested feed.
 
 **Note:** If the nested feed is using a custom data source provider, the url should be constructed as follows:
 `<custom_provider_scheme>://fetchData?type=<provider_data_type>&url=<original_feed_url>`
