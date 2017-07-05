@@ -2,7 +2,7 @@
 
 The Zapp platform is applicaster "app service" ecosystem.
 
-Zapp enable users to configure and build media apps with **remote configuration** (assets, styles, fonts and localized strings), **layout** (templates or UI Builder), and **client-side plugins**.
+Zapp enable users to configure and build media apps with **remote configuration** (assets, styles, fonts and localized strings), **layout** (templates or [**UI Builder**](/ui-builder/intro.md)), and **client-side plugins**.
 
 Zapp apps are built from the [Zapp CMS](http://zapp.applicaster.com) and the client-side SDKs -  Android, iOS, tvOS, AndroidTV, Roku.
 
@@ -14,7 +14,7 @@ Plugins high level design:
 ![](/assets/process.png)
 
 Zapp is supporting plugins for:
-1. Data-Source (Zapp-Pipes)
+1. [Data-Source (Zapp-Pipes)](/Zapp-Pipes/Home.md)
 2. Full features by React Native
 3. App navigation and root
 4. Player
