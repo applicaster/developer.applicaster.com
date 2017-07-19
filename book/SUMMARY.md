@@ -4,8 +4,8 @@
 * [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
 	* [Zappifest Tool](/zappifest/zappifest.md)
 
-## Zapp Pipes (Data Source)
-* [Intro to Zapp Pipes](/Zapp-Pipes/Home.md)
+## Feeds (Data Source Plugins)
+* [Zapp Pipes](/Zapp-Pipes/Home.md)
     * [Prerequisites](/Zapp-Pipes/0.-Prerequisites.md)
     * [Setting up the environment](/Zapp-Pipes/1.-Set-up.md)
     * [Structure of a provider](/Zapp-Pipes/2.-Provider-structure.md)
@@ -16,11 +16,11 @@
     * [Examples](/Zapp-Pipes/7.-Examples.md)
     * [F.A.Q.](/Zapp-Pipes/8.-FAQ.md)
 
-## UI Builder
-* [Intro to Zapp UI Builder](/ui-builder/intro.md)
+## Screens (UI Builder)
+* [Zapp UI Builder](/ui-builder/intro.md)
+    * [API](/ui-builder/ios/API.md)
 * [Designer Guide](/ui-builder/designer/designer.md)
 * [iOS UI Builder](/ui-builder/ios/Home.md)
 	* [Classes and Plists](/ui-builder/ios/Classes-and-Plists.md)
 	* [Create new component](/ui-builder/ios/Creation-New-Component.md)
-	* [API](/ui-builder/ios/API.md)
 * [Android UI Builder](/ui-builder/android/android.md)
