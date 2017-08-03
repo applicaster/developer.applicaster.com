@@ -26,11 +26,12 @@ There are two types of ZappScreens:
 ## Cell styles & Layout families
 In the new implementation instead of the templates we have layout families.
 A component can have several cell styles and a layout family is a set of cell styles.
-
 <b>Creation of a new cell style:</b>
 - Copy an existing layout xml of a similar cell style so the same IDs will be kept,
 make the needed changes for the new style.
-- Add the new style to the ComponentStyles enum with the name that was defined on the ui builder (LIST_3,GRID_4 etc).
+- Add the new style to the CellLayout enum in `ComponentStyle.java` with the name that was defined on the ui builder (LIST_3, GRID_4 etc).
+- Add the correct IconSetter for your new cell in `CellLayoutIconSetterMapper.java` (Create a new IconSetter if applicable)
+- Add the correct AspectRatioSetter for your new cell in `AspectRatioManager.java` (Create a new AspectRatioSetter if applicable) 
 - Add specific handling if needed for the new style in the components in the ComponentsUtil class.
 
 ## UI Components
