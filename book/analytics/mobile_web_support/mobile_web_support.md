@@ -2,7 +2,7 @@
 
 ### Service Description
 
-JS-2-Morpheus is a service which enables web-products to send analytics events and user profiles to [Morpheus](/analytics/morpheus.md), the Applicaster product which handles the delivery of analytics data. This enables web products to gain the same coverage as native analytics events, providing the ability to deliver analytics data to all the providers Morpheus supports as opposed to creating several different integrations directly from each web product. 
+JS-2-Morpheus is a service which enables web-products to send analytics events and user profiles to [Morpheus](/analytics/morpheus/morpheus.md), the Applicaster product which handles the delivery of analytics data. This enables web products to gain the same coverage as native analytics events, providing the ability to deliver analytics data to all the providers Morpheus supports as opposed to creating several different integrations directly from each web product. 
 
 Additionally, the outcome enables analysts to connect the information gathered from the mobile web product with information gathered from the native app and analyze it all in the same place.
 
@@ -25,11 +25,11 @@ You can use whatever tool you are most comfortable with to check logs, but if yo
 
 The following log illustrates that your webview sent your event command:
 
-![ios-eventlog-1](./ios-eventlog-1.png)
+![ios-eventlog-1](/ios-eventlog-1.png)
 
 After some time, you should see another log which confirms the listener received your event command. This log should look like the following:
 
-![ios-eventlog-2](./ios-eventlog-2.png)
+![ios-eventlog-2](/ios-eventlog-2.png)
 
 If you see a log which states "event came from JS with wrong data", your JSON should be fixed.
 
@@ -37,11 +37,11 @@ If you see a log which states "event came from JS with wrong data", your JSON sh
 
 The following log illustrates that your webview sent your user profile command:
 
-![ios-userlog-1](./ios-userlog-1.png)
+![ios-userlog-1](/ios-userlog-1.png)
 
 After some time, you should see another log which confirms the listener received your user profile command. This log should look like the following:
 
-![ios-userlog-2](./ios-userlog-2.png)
+![ios-userlog-2](/ios-userlog-2.png)
 
 If you see a log which states "event came from JS with wrong data", your JSON should be fixed.
 
@@ -52,14 +52,14 @@ To test your work on Android:
 2. Launch the app
 3. Set the test url (the url for your web product) in the url section
 4. Press "GO" 
-![android-ss1](./android-ss1.png)
+![android-ss1](/android-ss1.png)
 
 5. You should then be able to see your webpage in a webview within the app in the section below the words "input is"
-![android-ss2](./android-ss2.png) 
+![android-ss2](/android-ss2.png) 
 
 6. Trigger the events and/or user profiles that you intend to send
 7. Check results. The JSON the device receives will appear in the ‘handle command inputs’ section:
-![android-ss3](./android-ss3.png)
+![android-ss3](/android-ss3.png)
 
 
 #### End-to-End Testing
@@ -69,6 +69,3 @@ To test your work on Android:
     * Most analytics providers (Flurry, Google Analytics, Facebook Analytics, etc.) do not enable you to send PII (Personally Identifiable Information) or profile-level user data. Applicaster will still send events to these providers. However, for user profiles, Applicaster supports [Mixpanel](https://mixpanel.com/), an analytics tool which both supports the delivery of PII data and provides engagement and remarketing tools based on this data. If you want to test the delivery of user profiles, make sure to configure a test project for Mixpanel in Zapp. 
 3. Trigger the delivery of events or user profiles from your web-product within the test app
 4. Verify the data is appearing in the analytics providers that you configured in Zapp as desired
-
-
-
