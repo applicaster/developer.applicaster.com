@@ -2,7 +2,7 @@
 
 ## Overview
 
-Applicaster provides utilities for the development and testing of analytics functionality. All data handled by [Morpheus](/analytics/morpheus.md), the analytics manager, can be viewed in the logs of the console for whatever platform you are working on. Additionally, data that is delivered to analytics providers will appear in an alert when using Applicaster Debug Mode. 
+Applicaster provides utilities for the development and testing of analytics functionality. All data handled by [Morpheus](/analytics/morpheus/morpheus.md), the analytics manager, can be viewed in the logs of the console for whatever platform you are working on. Additionally, data that is delivered to analytics providers will appear in an alert when using Applicaster Debug Mode. 
 
 This feature is supported from Zapp SDKs 4.15.9 (Android) and 4.3.8 (iOS), and above.
 
@@ -31,7 +31,7 @@ Once you do, if you do anything which should trigger sending one of the data typ
 
 For example, when I click on the Side Menu, I’ll see:
 
-	![alert_android](/alert_android.png)
+	[alert_android](/alert_android.png)
 
 You may notice that the Data Property field does not have values. That suggests that this particular event does not include any custom properties.
 
@@ -39,10 +39,10 @@ You may notice that the Data Property field does not have values. That suggests 
 
 1. Download your app in debug mode
 2. Go to your app in Settings and turn on “Are you Applicaster Member":
-	![alert_ios_2](/alert_ios_2.png)
+	[alert_ios_2](/alert_ios_2.png)
 3. Now launch the app
 4. When the following Alert appears, tap "Yes":
-	![alert_ios_4](/alert_ios_4.png)
+	[alert_ios_4](/alert_ios_4.png)
 5. You should now be able to see the alerts:
 	![alert_ios_5](/alert_ios_5.png)
 
@@ -56,11 +56,11 @@ If you do not have Android Studio, you’ll need to download it. You can do so [
 1. Create a new project
 2. Be Patient… this may take a while
 3. Open AVD Manager:
-	![logs_android_3](./logs_android_3.png)
+	![logs_android_3](/logs_android_3.png)
 4. Create a virtual device:
-	![logs_android_4](./logs_android_4.png)
+	![logs_android_4](/logs_android_4.png)
 5. Select hardware:
-	![logs_android_5](.logs_android_5.png)
+	![logs_android_5](/logs_android_5.png)
 6. Download a version that you want to test with (typically the latest Android OS, unless that was just released):
 	![logs_android_6](/logs_android_6.png)
 7. Accept the license agreement
