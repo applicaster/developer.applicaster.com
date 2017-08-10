@@ -79,6 +79,7 @@ If you do not have Android Studio, you’ll need to download it. You can do so [
 14. Drag and drop the apk you downloaded into your emulator:
 	![logs_android_14](./logs_android_14.png)
 15. Open the app in the emulator:
+
 	![logs_android_15](./logs_android_15.png)
 16. Type “APDebugUtil” into the Search field and hit enter:
 	![logs_android_16](./logs_android_16.png)
