@@ -31,6 +31,6 @@ For older versions of your app, please follow the directions outlined [here](htt
 
 
 ### Table of Contents:
-* [Morpheus](/analytics.morpheus.md)
-* [HTML-JS Support](/analytics/htmljs_support.md)
-* [Analytics Testing Utility](/analytics/analytics_testing_utility.md)
+* [Morpheus](/analytics/morpheus/morpheus.md)
+* [Mobile Web Support](/analytics/mobile_web_support/mobile_web_support.md)
+* [Analytics Utility](/analytics/analytics_utility/analytics_utility.md)
