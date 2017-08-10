@@ -27,6 +27,6 @@
 
 ## Analytics
 * [Overview](/analytics/overview.md)
-* [Morpheus](/analytics/morpheus.md)
-* [Mobile Web Support](/analytics/mobile_web_support.md)
-* [Analytics Utility](/analytics/analytics_utility.md)
+* [Morpheus](/analytics/morpheus/morpheus.md)
+* [Mobile Web Support](/analytics/mobile_web_support/mobile_web_support.md)
+* [Analytics Utility](/analytics/analytics_utility/analytics_utility.md)
