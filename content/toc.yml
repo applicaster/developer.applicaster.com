@@ -488,7 +488,7 @@
   type: Technical
   owner: y.osteen@applicaster.com
 
-  - folder: analytics-plugins-android
+- folder: analytics-plugins-android
   internal: false
   owner: e.bendavid@applicaster.com
   title: "Analytics provider plugin on Android"
