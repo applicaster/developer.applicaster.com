@@ -224,53 +224,58 @@ They are not required, but if delivered, should be written as follows:
 * Phone
 
 We split the user properties for two set, the PII and the Generic(non PII Properies).
-Personally identifiable Information (PII) is information which can be used to distinguish or trace an individual's identity alone, such as their name, social security number, biometric records, etc., or can be used to identify an individual when combined with other personal or identifying information which is linked or linkable to the specific individual, such as date and place of birth, mother’s maiden name, etc." 
+Personally identifiable Information (PII) is information which can be used to distinguish or trace an individual's identity alone, such as their name, social security number, biometric records, etc., or can be used to identify an individual when combined with other personal or identifying information which is linked or linkable to the specific individual, such as date and place of birth, mother’s maiden name, etc."
 
 * Note in the example sections for "generic" and "pii" properties, as well as a broader set of all user properties combined. We are aware that this leads to the duplication of the propeties; we are doing that to support backwards compatibility, and will contiue doing so until the SDKs which require the combined set of user properties are no longer supported, at which point we will update the documentation.
 
+* Note that within "pii" properties, we have a Section for SocialIDs. If you have any sort of social network login, please make sure to follow the structure there, rather then send the IDs as a separate custom values. This enables us to search for Social IDs properly and for you to easily add new social providers without a change to the structure.
+
 ```javascript
 var userProperties = {
-    "generic" : {
-        "favorite team sport" : "FC Barcelona",
-        "customer type" : "paid"
-        "Custom1": "1",
-        "Custom2": "2"
-    },
-    "pii" : {
-        "Name":"Neo",
-        "FirstName":"Thomas",
-        "LastName":"Anderson",
-        "Email":"t.anderson@metacortex.com",
-        "Phone":"1",
-        "custom3": "3",
-        "Facebook":{
-            "ID": "123"
-        },
-        "twitter":{
-            "ID": "123"
-        },
-        "google":{
-            "ID": "123"
-        }
-    },
-    "Name":"Neo",
-    "FirstName":"Thomas",
-    "LastName":"Anderson",
-    "Email":"t.anderson@metacortex.com",
-    "Phone":"1",
+  "generic": {
+    "favorite team sport": "FC Barcelona",
+    "customer type": "paid",
     "Custom1": "1",
-    "Custom2": "2",
+    "Custom2": "2"
+  },
+  "pii": {
+    "Name": "Neo",
+    "FirstName": "Thomas",
+    "LastName": "Anderson",
+    "Email": "t.anderson@metacortex.com",
+    "Phone": "1",
     "custom3": "3",
-    "SocialIDs":{
-    "Facebook":{
+    "SocialIDs": {
+      "Facebook": {
         "ID": "123"
-    },
-    "twitter":{
+      },
+      "twitter": {
         "ID": "123"
-    },
-    "google":{
+      },
+      "google": {
         "ID": "123"
+      }
     }
+  },
+  "Name": "Neo",
+  "FirstName": "Thomas",
+  "LastName": "Anderson",
+  "Email": "t.anderson@metacortex.com",
+  "Phone": "1",
+  "Custom1": "1",
+  "Custom2": "2",
+  "custom3": "3",
+  "SocialIDs": {
+    "Facebook": {
+      "ID": "123"
+    },
+    "twitter": {
+      "ID": "123"
+    },
+    "google": {
+      "ID": "123"
+    }
+  }
 }
 
 js2n.Morpheus.updateUserProfile(userProperties);
@@ -316,7 +321,7 @@ Sends notification to native that a question has been answered with specific que
 var options = {
     question_id: "some_id",
     asnwer_value: "some_value",
-    callback: function(response) { 
+    callback: function(response) {
         if (response.success) {
             console.log("do something on success");
         }
@@ -334,7 +339,7 @@ Returns the answer value if question had been answered.
 ```
 var options = {
     question_id: "some_id",
-    callback: function(response) { 
+    callback: function(response) {
         if (response.success) {
             console.log("question was answered in the past.");
             console.log("answer_value = ", response.answer_value);
@@ -363,7 +368,7 @@ var options = {
     providers: 'appoxee'
 }
 
-var callback = function(response) { 
+var callback = function(response) {
         if (response.isSuccess) {
             console.log("do something on success");
             console.log(response.tags);
@@ -383,7 +388,7 @@ On success, the list of tags is returned in `response.tags`
 var options = {
     providers: 'appoxee' // or 'appoxee,urbanairship' or 'urbanairship'
 };
-var callback = function(response) { 
+var callback = function(response) {
     if (response.isSuccess) {
         console.log("do something on success");
         console.log(response.tags);
@@ -403,7 +408,7 @@ var options = {
     tags: 'sports,news'
 };
 
-var callback = function(response) { 
+var callback = function(response) {
     if (response.isSuccess == 'true')  {
         console.log("do something on success");
     }
@@ -422,7 +427,7 @@ var options = {
     tags: 'sports,news'
 };
 
-var callback = function(response) { 
+var callback = function(response) {
     if (response.isSuccess == 'true') {
         console.log("do something on success");
     }
