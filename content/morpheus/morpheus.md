@@ -38,6 +38,6 @@ Lastly, Applicaster also supports the following video analytics providers:
 * comScore Stream Sense
 * Akamai Media Analytics
 
-Flurry can be set up as a Plugin on versions 2.7.10 (Android) and 3.2.1 (iOS) and up. All other providers can be set up as plugins on versions 4.5.4 (Android) and 4.2.7 (iOS) and up. In order to set up a plugin, reference the documentation [here](https://docs.google.com/a/applicaster.com/document/d/1md3Hmc-gg9NuEyIpQ43iDky_THc_5upcRMq8-QvkXHY/edit?usp=sharing).
+All analytic providers can be set up as plugins on versions 4.5.4 (Android) and 4.2.7 (iOS) and up. In order to set up a plugin, reference the documentation [here](https://docs.google.com/a/applicaster.com/document/d/1md3Hmc-gg9NuEyIpQ43iDky_THc_5upcRMq8-QvkXHY/edit?usp=sharing).
 
 For older versions of your app, please follow the directions outlined [here](https://applicaster.zendesk.com/hc/en-us/articles/206419186-Configuring-Analytics-at-Applicaster).
