@@ -501,7 +501,7 @@
   owner: e.bendavid@applicaster.com
   title: "Analytics provider plugin on iOS"
   description: >
-    This doc describes how to integrate an analytics provider plugin on Android
+    This doc describes how to integrate an analytics provider plugin on iOS
   type: Technical
 
 - folder: how-to-create-analytics-plugins-ios
