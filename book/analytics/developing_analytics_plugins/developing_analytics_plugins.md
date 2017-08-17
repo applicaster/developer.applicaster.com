@@ -17,7 +17,7 @@ Note: If you would like to improve this documentation, please submit a Pull Requ
     **a.** Ask somebody with admin rights on Github to create a new repository of you. If you don't know who has admin rights, ask on Slack. The repository should be using the naming convention 'xxxAnalyticsPlugin-Android', where xxx is the provider name<br/>
     **b.** Create a new branch from master and start adding your code there. Even though the repository was created for you, it belongs to your team.<br />
     **c.** Create a new Android library in Android Studio with a name that is based on your repository name.<br />
-    **d.** Update your .gitignore file like [here](https://gist.github.com/vtanathip/9414323).<br />
+    **d.** Make sure your repo contains the relevant .gitigonre file, like the example [here](https://gist.github.com/vtanathip/9414323).<br />
   </ol>
 **2. Prepare your project:**<br />
  <ol>
