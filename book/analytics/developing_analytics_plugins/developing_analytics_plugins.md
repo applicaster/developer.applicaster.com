@@ -22,7 +22,7 @@ Note: If you would like to improve this documentation, please submit a Pull Requ
 **2. Prepare your project:**<br />
  <ol>
     **a.** Update build.gradle, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/build.gradle).<br />
-    **b.** Create circle.yml so as to set up your project on the Circle CI continuous integration system, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/circle.yml).<br />
+    **b.** *Optional* - If you are using Circle CI, create circle.yml so as to set up your project on the Circle CI continuous integration system, you can find an example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/circle.yml).<br />
     **c.** Update gradle.properties, you can find example [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/gradle.properties).<br />
     **d.** Specify the public fields and methods of your class that you want to keep in proguard-rules.pro. You can find an example  [here](https://github.com/applicaster/NeonKitPlayerAdapter-Android/blob/master/proguard-rules.pro).<br />
   </ol>
@@ -45,7 +45,7 @@ Note: If you would like to improve this documentation, please submit a Pull Requ
 **6. Create dependency to your Agent:**<br />
   <ol>
   **a.** Add an ascending tag beginning with 0.1.x. Use [semantic versioning](http://semver.org). Push your tag to the remote repository. <br />
-  **b.** Verify that your plug-in binary was created successfully on Bintray. If you don't have a Bintray account, ask for one to be created for you.<br />
+  **b.** Verify that your plug-in binary was created successfully on a Maven repo.<br />
  </ol>
 **7. Create a Plugin in Zapp:**<br />
   <ol>
@@ -98,15 +98,19 @@ And “Custom_configuration_fields” contains the specific parameters that shou
 **Step 2 - iOS Side:**
 
 ❏ Create a new provider for the analytics plugin under https://github.com/applicaster/ZappAnalyticsPlugins-iOS in a new folder.
-❏ Create a new provider on swift or on Objective C language and implement all the relevant methods.
+❏ Create a new provider on Swift and implement all the relevant methods.
 
 Look at [Flurry](https://github.com/applicaster/ZappAnalyticsPlugins-iOS/blob/master/Flurry/APAnalyticsProviderFlurry/Classes/APAnalyticsProviderFlurry.swift) to see how swift provider is implemented.
 Look at [Mixpanel](https://github.com/applicaster/ZappAnalyticsPlugins-iOS/tree/master/Mixpanel/APAnalyticsProviderMixpanel/Classes) in order to see how Objective C provider is implemented.
 
 **Step 3 - Podspec and Basic Providers:**
 
-In this [file](https://github.com/applicaster/ZappAnalyticsPlugins-iOS/blob/master/ZappAnalyticsPlugins.podspec), we need to add a section which contains the new provider structure as illustrated below:
+Each provider must be added as new subspec in ```ZappAnalyticsPlugins.podspec``` file [here](https://github.com/applicaster/ZappAnalyticsPlugins-iOS/blob/master/ZappAnalyticsPlugins.podspec). The purpose of this is to enable us to use the same pod but different subspecs. For example:
 
+```pod 'ZappAnalyticsPlugins/Flurry'```
+```pod 'ZappAnalyticsPlugins/GoogleAnalytics'```
+
+You must add a section which contains the new provider structure as illustrated below:
 ```
 s.subspec 'GoogleAnalytics' do |ga|
     ga.public_header_files = 'GoogleAnalytics/**/*.h'
@@ -131,7 +135,9 @@ s.subspec 'GoogleAnalytics' do |ga|
 
   end
 ```
-If you want to add it as a default provider (one that is included by default in new builds across customers), make sure to check with Yoni Osteen before you do so. If you get that approved, you need to add it here:
+If you want to add it as a default provider (one that is included by default in new builds across customers), include Yoni Osteen in the PR for approval. It is worth checking before you start your work if that will be fine. 
+
+If you get that approved, you need to add it here:
 
 ```
 s.subspec 'Basic' do |basic|
