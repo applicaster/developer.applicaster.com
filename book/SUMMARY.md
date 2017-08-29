@@ -30,6 +30,6 @@
 * [Morpheus](/analytics/morpheus/morpheus.md)
 * [Client Side API](analytics/client_side_api/client_side_api.md)
 * [Mobile Web Support](/analytics/mobile_web_support/mobile_web_support.md)
-* [Developing Analytics Plugins](/analytics/developing_analytics_plugins.md)
+* [Developing Analytics Plugins](/analytics/developing_analytics_plugins/developing_analytics_plugins.md)
 * [Using Analytics Plugins for Integration Apps](/analytics/plugins_integration_apps/plugins_integration_apps.md)
 * [Analytics Utility](/analytics/analytics_utility/analytics_utility.md)
