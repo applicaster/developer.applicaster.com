@@ -32,11 +32,11 @@ Check the plugin id on [Zapp](https://zapp.applicaster.com/admin/plugins) (under
 
 Run `zappifest publish --plugin-id <plugin-id> --manifest <path-to-manifest-json-file> --access-token <zapp-access-token>`
 
-#### Custom Field Tool Tips
+#### Custom Field Tooltips
 
-When you are creating a custom field via the 'zappifest init' instructions, you will be required to create a tool tip describing the custom field so that Zapp users can understand the purpose of the field and how they should handle it.
+When you are creating a custom field via the 'zappifest init' instructions, you will be required to create a tooltip describing the custom field so that Zapp users can understand the purpose of the field and how they should handle it.
 
-There are three types of tool tips.
+There are three types of tooltips.
 
 1. Plain Text
     * This will appear like the example below:
