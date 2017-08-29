@@ -3,9 +3,9 @@
     "build": "./node_modules/applibook/node_modules/.bin/gitbook install && ./node_modules/applibook/node_modules/.bin/gitbook build",
     "start": "node ./node_modules/applibook/_server/index.js",
     "postinstall": "yarn build",
-    "serve": "./node_modules/.bin/gitbook serve book"
+    "serve": "./node_modules/applibook/node_modules/.bin/gitbook serve book"
   },
   "dependencies": {
-    "applibook": "1.3.0"
+    "applibook": "1.4.0"
   }
 }
