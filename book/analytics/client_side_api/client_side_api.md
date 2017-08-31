@@ -5,8 +5,16 @@ Web-developers can use [JS-2-Morpheus](/analytics/mobile_web_support/mobile_web_
 
 Native client developers can use the Morpheus client-side API to deliver custom events, event properties, user properties, and default properties, as outlined in the documentation below.
 
-Custom events and event properties are handled via the Morpheus Analytic Events Manager[a] and user and default properties are handled via the Morpheus Analytic Properties Storage[b].
+Custom events and event properties are handled via the Morpheus Analytic Events Manager and user and default properties are handled via the Morpheus Analytic Properties Storage.
 
+## Table of Contents
+* <a href="terminology">Terminology</a>
+* <a href="eventManager">Morpheus Analytic Event Manager</a>
+* <a href="propertyStorage">Morpheus Analytic Property Storage</a>
+* <a href="screenViews">Morpheus Screen Views API</a>
+* <a href="bestPractices">General Best Practices</a>
+
+<a name="terminology" />
 ## Terminology
 
 **Custom Events** - Many analytics providers include their own events which come out of the box (i.e. App Launched, Session). Custom Events are events that are specific to our products and not to the analytics provider. Our supported analytics events can be found [here](http://developer.applicaster.com/products-list?docType=Analytics). "Play VOD Item" is an example of an event.
@@ -17,8 +25,8 @@ Custom events and event properties are handled via the Morpheus Analytic Events 
 
 **User Properties** - User Properties are properties specific about a user, such as "Name" or "Gender". They will always be stored in the analytics provider as the last value that was populated for them.
 
-
-# Morpheus Analytic Events Manager:
+<a name="eventManager" />
+## Morpheus Analytic Events Manager:
 ##### Business Value:
 
 
@@ -30,6 +38,7 @@ This helps us and our customers understand how users interact with our app, empo
 
 
 The example in this documentation will show you how to easily capture this information from a developer's standpoint.
+
 ## Events with Two-Level Structures:
 Events have a two-level structure. The highest level is the specific action. For our example, the action will be when a user reads of an article. We will name this Event “Read Article.”
 By tracking this event, you will be able to measure how many users are reading articles, how often, and so on.
@@ -37,6 +46,7 @@ By tracking this event, you will be able to measure how many users are reading a
 AnalyticsAgentUtil.logEvent(“Read Article”);
 ### iOS:
 [APAnalyticsManager trackEvent:@"Read Article"];
+
 ## Capture Event Properties:
 The second level in the Event structure is the Event properties. These are characteristics of the Event itself or the user performing it. For instance, a characteristic of the Read Article event is the author of the article. A characteristic of the user is their status (i.e. registered or anonymous). 
 
@@ -71,6 +81,7 @@ AnalyticsAgentUtil.logTimedEvent("Article Read", articleParams);
 // ...  
 // End the timed event, when the user navigates away from article  
 AnalyticsAgentUtil.endTimedEvent("Article Read");
+
 ### iOS:
 NSDictionary *analyticsDictionary = @{@”Author” : @”"John Q", @User Status": @"Registered" };  
 //setting Timed param to true creates a timed event  
@@ -82,7 +93,8 @@ NSDictionary *analyticsDictionary = @{@”Author” : @”"John Q", @User Status
 [APAnalyticsManager endTimedEvent:@”Article Read”  withParameters:nil];  
 [APAnalyticsManager endTimedEvent:@”Article Read” withParameters:analyticsDictionary];
 
-# Morpheus Analytic Properties Storage
+<a name="propertyStorage" />
+## Morpheus Analytic Properties Storage
 Analytic storage contains all the default properties and user profile properties.
 
 #### Business Value
@@ -140,45 +152,8 @@ void setDefaultProperties(JSONObject inProperties) |
 void setDefaultProperty(String key, String value) |
 String getID() |
 
-
-# Best Practices:
-Here are a few additional best practices when implementing Events:
-* Outline your business goals and the questions you want to answer, then map Events to track each action you need to measure. For more details, check out the [Product Analytics Procedure](https://github.com/applicaster/developer.applicaster.com/blob/2e2ebea5e0f5ddc3f73c9fe6cbb58bf8e70d5e62/content/product_analytics_procedure/Product_Analytics_Procedure.md). 
-    * Make sure the product or business lead of your team follows this procedure.
-* Organize your Events for easy identification and categorization. If you have more than one product/feature which has similar functionality, name the Events the same way across features so you can more easily compare performance. 
-* Put descriptive information (location triggered, states, names, IDs, etc.) in properties rather than creating separate events to capture this information.
-    * For example, if you have a reminder function for live programs which can be triggered from multiple places in the app, rather than have the events:
-        * Live Drawer: Set Reminder
-        * EPG: Set Reminder
-        * Set Reminder from Cell
-    * Have one event:
-        * Set Reminder
-    * With a property for “Location” with values of “Live Drawer, EPG, Cell”
-    * In this case, don’t forget about the need for an event “Remove Reminder”
-* Add Event properties on every Event wherever applicable.
-* Use timed Events wherever applicable.
-* Whenever possible, keep property values under 100 characters
-    * Facebook App Analytics will not accept larger values and we will cut off such values at 100 characters
-* Default properties should only be for qualities that are important to answering questions about the data across all levels of behavior.
-    * Please get approval from the M&M team before putting in the time and effort to create a default property. 
-*  For characteristics about a user which are depedent on state, time, or actions, make sure to stores these as event properties as well as user profile properties.
-    *   For example, if an analyst wants to understand the user flow for users registering via the SSO, being able to filter the data on the event level for whether or not the user was registered at any given point in time will help them break the behavior into 'before' and 'after' stages of the conversion point.
-    *   If this state is only stored in the analytic properties storage as a user property according to last status, such analysis would not be possible. 
-
-
-## Best Practices for Naming:
-* When possible, use active voice for Event names (start with a verb)
-    * For example, “Read Article” instead of “Article Read” or "Reading Article"
-* Avoid special characters other than ‘-’, or ‘_’
-    * FB Analytics does not accept any other special characters in event or property names. If used, they will be replaced as such:
-    * ‘:’ will be replaced with ‘ -’  
-    * ‘/’, ‘\’ and ‘  \ \’ will be replaced with ‘_’
-    * All else will be replaced with a space
-* When creating a series of events for a product, it is recommended to start with the “X - ” where X = the name of the Product
-    * For example, all the events for the Feed begin with “Feed - ”
-* Use [Proper Case](http://www.computerhope.com/jargon/p/proper-case.htm), unless you have a valid reason not to (i.e. using the acronym VOD)
-
-## Screen views API
+<a name="screenViews" />
+## Morpheus Screen Views API
 
 **Business Value:** Measuring screen views allows us to see which screens are viewed most by end-users, and how they are navigating through the app. Customers who are more familiar with screen-view analysis models can track navigation more easily, enabling deeper and more flexible analysis. For example, some content is often accessible on different screens (such as the home screen and a specific show screen). Seeing which screen is driving users to content will help customers identify how to place content as well as how to evaluate ad placements on different screens.  
 Additionally, some analytics providers (like comScore, AGOF, or Nielsen), create consumption scores based on screen views, which affect advertising dollars more broadly for our customers.
@@ -188,11 +163,11 @@ Additionally, some analytics providers (like comScore, AGOF, or Nielsen), create
 For example:  
 IOS:  
 ```bash
-	APAnalyticsManager trackScreenView:@"Splash - App Loading Screen"];
+  APAnalyticsManager trackScreenView:@"Splash - App Loading Screen"];
 ```  
 Android:  
 ```bash
-	AnalyticsAgentUtil.setScreenView(AnalyticsAgentUtil.SETTING_SCREEN + " - " + "Login");
+  AnalyticsAgentUtil.setScreenView(AnalyticsAgentUtil.SETTING_SCREEN + " - " + "Login");
 ```
 For the dynamic screens like ‘home’, ‘season’, Etc. you need to add screen name in the app screens configuration.  
 For example:  
@@ -227,4 +202,39 @@ IOS screen view tracking example:
 
 **Note:** If a screen has several tabs, and when a user changes the tab the content of the screen re-populates, this should be considered a separate screen view, with a format of X - Y - Z, building on the best practice above but where Z = the name of the tab as set in the CMS. For example, if a user is in “The Voice” with Tabs by season. Loading the screen would cause a screen view to be sent with a screen name like “Season - The Voice - Season 1”. When the user switches tabs, it would repopulate to something like “Season - The Voice - Season 2”.  
 
+<a name="bestPractices" />
+## Best Practices:
+Here are a few additional best practices when implementing Events:
+* Outline your business goals and the questions you want to answer, then map Events to track each action you need to measure. For more details, check out the [Product Analytics Procedure](https://github.com/applicaster/developer.applicaster.com/blob/2e2ebea5e0f5ddc3f73c9fe6cbb58bf8e70d5e62/content/product_analytics_procedure/Product_Analytics_Procedure.md). 
+    * Make sure the product or business lead of your team follows this procedure.
+* Organize your Events for easy identification and categorization. If you have more than one product/feature which has similar functionality, name the Events the same way across features so you can more easily compare performance. 
+* Put descriptive information (location triggered, states, names, IDs, etc.) in properties rather than creating separate events to capture this information.
+    * For example, if you have a reminder function for live programs which can be triggered from multiple places in the app, rather than have the events:
+        * Live Drawer: Set Reminder
+        * EPG: Set Reminder
+        * Set Reminder from Cell
+    * Have one event:
+        * Set Reminder
+    * With a property for “Location” with values of “Live Drawer, EPG, Cell”
+    * In this case, don’t forget about the need for an event “Remove Reminder”
+* Add Event properties on every Event wherever applicable.
+* Use timed Events wherever applicable.
+* Whenever possible, keep property values under 100 characters
+    * Facebook App Analytics will not accept larger values and we will cut off such values at 100 characters
+* Default properties should only be for qualities that are important to answering questions about the data across all levels of behavior.
+    * Please get approval from the M&M team before putting in the time and effort to create a default property. 
+*  For characteristics about a user which are depedent on state, time, or actions, make sure to stores these as event properties as well as user profile properties.
+    *   For example, if an analyst wants to understand the user flow for users registering via the SSO, being able to filter the data on the event level for whether or not the user was registered at any given point in time will help them break the behavior into 'before' and 'after' stages of the conversion point.
+    *   If this state is only stored in the analytic properties storage as a user property according to last status, such analysis would not be possible. 
 
+##### Best Practices for Naming:
+* When possible, use active voice for Event names (start with a verb)
+    * For example, “Read Article” instead of “Article Read” or "Reading Article"
+* Avoid special characters other than ‘-’, or ‘_’
+    * FB Analytics does not accept any other special characters in event or property names. If used, they will be replaced as such:
+    * ‘:’ will be replaced with ‘ -’  
+    * ‘/’, ‘\’ and ‘  \ \’ will be replaced with ‘_’
+    * All else will be replaced with a space
+* When creating a series of events for a product, it is recommended to start with the “X - ” where X = the name of the Product
+    * For example, all the events for the Feed begin with “Feed - ”
+* Use [Proper Case](http://www.computerhope.com/jargon/p/proper-case.htm), unless you have a valid reason not to (i.e. using the acronym VOD)

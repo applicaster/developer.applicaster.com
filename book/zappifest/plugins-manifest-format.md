@@ -27,15 +27,16 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
   "dependency_version": "1.1",
   "type": "player",
   "api": {
-  	"class_name": "AP360Player",
+    "class_name": "AP360Player",
     "proguard_rules": "-keep class com.applicaster.ap360player.activities.KolorEyePlayer360Activity {*;}",
   },
   "react_native": false,
   "custom_configuration_fields": [
-  	{
-    	"section": "player_configuration",
-    	"type": "text",
+    {
+      "section": "player_configuration",
+      "type": "text",
         "key": "player_secret_key"
+        "tooltip_text": "This secret key is used for security to connect to the proper 360Player account. \nTo learn more about it, click <a href=http://developer.applicaster.com target=_blank>here</a>."
       },
   ]
 }
