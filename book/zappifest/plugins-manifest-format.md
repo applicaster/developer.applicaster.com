@@ -35,7 +35,7 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
     {
       "section": "player_configuration",
       "type": "text",
-        "key": "player_secret_key"
+        "key": "player_secret_key",
         "tooltip_text": "This secret key is used for security to connect to the proper 360Player account. \nTo learn more about it, click <a href=http://developer.applicaster.com target=_blank>here</a>."
       },
   ]
