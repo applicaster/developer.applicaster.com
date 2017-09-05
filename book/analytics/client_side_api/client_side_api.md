@@ -8,13 +8,13 @@ Native client developers can use the Morpheus client-side API to deliver custom 
 Custom events and event properties are handled via the Morpheus Analytic Events Manager and user and default properties are handled via the Morpheus Analytic Properties Storage.
 
 ## Table of Contents
-* [Terminology](#Terminology:)
-* [Morpheus Analytic Events Manager](#Morpheus-Analytic-Events-Manager:)
-* [Morpheus Analytic Property Storage](#Morpheus-Analytic-Properties-Storage:)
-* [Morpheus Screen Views API](#Morpheus-Screen-Views-API:)
-* [General Best Practices](#Best-Practices:)
+* [Terminology](client_side_api.md#Terminology)
+* [Morpheus Analytic Events Manager](client_side_api.md#Morpheus-Analytic-Events-Manager)
+* [Morpheus Analytic Property Storage](client_side_api.md#Morpheus-Analytic-Properties-Storage)
+* [Morpheus Screen Views API](client_side_api.md#Morpheus-Screen-Views-API)
+* [General Best Practices](client_side_api.md#Best-Practices)
 
-## Terminology:
+## Terminology
 
 **Custom Events** - Many analytics providers include their own events which come out of the box (i.e. App Launched, Session). Custom Events are events that are specific to our products and not to the analytics provider. Our supported analytics events can be found [here](http://developer.applicaster.com/products-list?docType=Analytics). "Play VOD Item" is an example of an event.
 
@@ -24,7 +24,7 @@ Custom events and event properties are handled via the Morpheus Analytic Events 
 
 **User Properties** - User Properties are properties specific about a user, such as "Name" or "Gender". They will always be stored in the analytics provider as the last value that was populated for them.
 
-## Morpheus Analytic Events Manager:
+## Morpheus Analytic Events Manager
 ##### Business Value:
 
 
@@ -91,7 +91,7 @@ NSDictionary *analyticsDictionary = @{@”Author” : @”"John Q", @User Status
 [APAnalyticsManager endTimedEvent:@”Article Read”  withParameters:nil];  
 [APAnalyticsManager endTimedEvent:@”Article Read” withParameters:analyticsDictionary];
 
-## Morpheus Analytic Properties Storage:
+## Morpheus Analytic Properties Storage
 Analytic storage contains all the default properties and user profile properties.
 
 #### Business Value
@@ -150,7 +150,7 @@ void setDefaultProperty(String key, String value) |
 String getID() |
 
 
-## Morpheus Screen Views API:
+## Morpheus Screen Views API
 
 **Business Value:** Measuring screen views allows us to see which screens are viewed most by end-users, and how they are navigating through the app. Customers who are more familiar with screen-view analysis models can track navigation more easily, enabling deeper and more flexible analysis. For example, some content is often accessible on different screens (such as the home screen and a specific show screen). Seeing which screen is driving users to content will help customers identify how to place content as well as how to evaluate ad placements on different screens.  
 Additionally, some analytics providers (like comScore, AGOF, or Nielsen), create consumption scores based on screen views, which affect advertising dollars more broadly for our customers.
@@ -200,7 +200,7 @@ IOS screen view tracking example:
 **Note:** If a screen has several tabs, and when a user changes the tab the content of the screen re-populates, this should be considered a separate screen view, with a format of X - Y - Z, building on the best practice above but where Z = the name of the tab as set in the CMS. For example, if a user is in “The Voice” with Tabs by season. Loading the screen would cause a screen view to be sent with a screen name like “Season - The Voice - Season 1”. When the user switches tabs, it would repopulate to something like “Season - The Voice - Season 2”.  
 
 
-## Best Practices:
+## Best Practices
 Here are a few additional best practices when implementing Events:
 * Outline your business goals and the questions you want to answer, then map Events to track each action you need to measure. For more details, check out the [Product Analytics Procedure](https://github.com/applicaster/developer.applicaster.com/blob/2e2ebea5e0f5ddc3f73c9fe6cbb58bf8e70d5e62/content/product_analytics_procedure/Product_Analytics_Procedure.md). 
     * Make sure the product or business lead of your team follows this procedure.
