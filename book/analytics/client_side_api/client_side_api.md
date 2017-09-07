@@ -8,11 +8,11 @@ Native client developers can use the Morpheus client-side API to deliver custom 
 Custom events and event properties are handled via the Morpheus Analytic Events Manager and user and default properties are handled via the Morpheus Analytic Properties Storage.
 
 ## Table of Contents
-* [Terminology](client_side_api.md#Terminology)
-* [Morpheus Analytic Events Manager](client_side_api.md#Morpheus-Analytic-Events-Manager)
-* [Morpheus Analytic Property Storage](client_side_api.md#Morpheus-Analytic-Properties-Storage)
-* [Morpheus Screen Views API](client_side_api.md#Morpheus-Screen-Views-API)
-* [General Best Practices](client_side_api.md#Best-Practices)
+* [Terminology](client_side_api.md#terminology)
+* [Morpheus Analytic Events Manager](client_side_api.md#morpheus-analytic-events-manager)
+* [Morpheus Analytic Property Storage](client_side_api.md#morpheus-analytic-properties-storage)
+* [Morpheus Screen Views API](client_side_api.md#morpheus-screen-views-api)
+* [General Best Practices](client_side_api.md#best-practices)
 
 ## Terminology
 
