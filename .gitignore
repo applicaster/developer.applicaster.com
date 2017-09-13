@@ -1,4 +1,5 @@
 .env
 /_book
+book/_book
 /node_modules
 .DS_Store

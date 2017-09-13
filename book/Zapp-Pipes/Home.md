@@ -72,8 +72,10 @@ Browse the following content to know more about Zapp-pipes :
 * [Native Bridge API](/Zapp-Pipes/3.-Native-bridge-API.md) : this section describes the specific features available in the native JavaScript bridge
 * [How to test locally](/Zapp-Pipes/5.-Local-testing.md) : this section describes the procedure to test a bundle locally
 * [Feed API](/Zapp-Pipes/5.-Feed-API.md) : this section describes the expected output format for feeds returned by a provider
-* [How configure the app](/Zapp-Pipes/6.-Connect-to-Zapp.md) : this section explains how to set up your app to use Zapp-pipes
-* [Examples](/Zapp-Pipes/7.-Examples.md)
-* [F.A.Q.](/Zapp-Pipes/8.-FAQ.md)
+* [How to publish a provider in Zapp](/Zapp-Pipes/6.-How-to-publish.md) : this section explains how to publish a provider in zapp, so it 
+* [How configure the app](/Zapp-Pipes/7.-Connect-to-Zapp.md) : this section explains how to set up your app to use Zapp-pipes
+* [Examples](/Zapp-Pipes/8.-Examples.md)
+can be used in the Feed manager
+* [F.A.Q.](/Zapp-Pipes/9.-FAQ.md)
 
 

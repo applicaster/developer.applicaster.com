@@ -12,9 +12,10 @@
     * [Native Bridge API](/Zapp-Pipes/3.-Native-bridge-API.md)
     * [How to test locally](/Zapp-Pipes/4.-Local-testing.md)
     * [Feed API](/Zapp-Pipes/5.-Feed-API.md)
-    * [How to connect the provider to the app](/Zapp-Pipes/6.-Connect-to-Zapp.md)
-    * [Examples](/Zapp-Pipes/7.-Examples.md)
-    * [F.A.Q.](/Zapp-Pipes/8.-FAQ.md)
+    * [How to publish a provider](/Zapp-Pipes/6.-How-to-publish.md)
+    * [How to connect the provider to the app](/Zapp-Pipes/7.-Connect-to-Zapp.md)
+    * [Examples](/Zapp-Pipes/8.-Examples.md)
+    * [F.A.Q.](/Zapp-Pipes/9.-FAQ.md)
 
 ## Screens (UI Builder)
 * [Zapp UI Builder](/ui-builder/intro.md)
