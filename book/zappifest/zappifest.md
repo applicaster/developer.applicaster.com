@@ -31,3 +31,19 @@ Run `zappifest publish --manifest <path-to-manifest-json-file> --access-token <z
 Check the plugin id on [Zapp](https://zapp.applicaster.com/admin/plugins) (under the relevant plugin versions).
 
 Run `zappifest publish --plugin-id <plugin-id> --manifest <path-to-manifest-json-file> --access-token <zapp-access-token>`
+
+#### Custom Field Tooltips
+
+When you are creating a custom field via the 'zappifest init' instructions, you will be required to create a tooltip describing the custom field so that Zapp users can understand the purpose of the field and how they should handle it.
+
+There are three types of tooltips.
+
+1. Plain Text
+    * This will appear like the example below:
+        * ![plain_text_example](./plain_text.png)  
+2. Link to an external resource
+    * This will appear like the example below:
+        * ![link_example](./link.png)  
+3. Text with link to an external resource
+    * This will appear like the example below:
+        * ![text_with_link_example](./text_with_link.png)  
