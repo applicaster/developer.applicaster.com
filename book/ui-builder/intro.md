@@ -12,4 +12,5 @@ Table of contents:
 	* [Classes and Plists](/ui-builder/ios/Classes-and-Plists.md)
 	* [Create new component](/ui-builder/ios/Creation-New-Component.md)
 	* [API](/ui-builder/ios/API.md)
+	* [Testing locally](/ui-builder/ios/Testing-Locally.md)
 * [Android UI Builder](/ui-builder/android/android.md)
