@@ -11,10 +11,11 @@ In order to test changes to UI builder:
 3. In the root folder from which you are running `ws`, create a folder called `ui_builder`.
 4. Download the latest version of the UI builder's [AppDefine.json](http://components.applicaster.com.s3.amazonaws.com/ui_builder/v1.0/AppDefine.json) file into that folder.
 5. Download your app's `rivers.json` file:
-  1. In [Zapp](https://zapp.applicaster.com), find your app and open the its Info screen, as shown below.
+  1. In [Zapp](https://zapp.applicaster.com), find your app and open its Info screen, as shown below.
     ![App info](/assets/App-Info.png)
 
-  2. Find the "rivers" JSON URL at the bottom, which represents the layouts defined in UI builder.
+  2. Press the `Reveal Build Parameters` button in the top-right.
+  3. Find the "rivers" JSON URL at the bottom, which represents the layouts defined in UI builder.
     ![Rivers JSON URL](/assets/rivers_url.png)
     Download the JSON and save it to your `ui_bulider` folder (created in step 3).
 6. Your `ui_builder` folder should now look like this:
