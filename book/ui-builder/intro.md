@@ -7,9 +7,10 @@ The Screens section of the Builder defines the UI of an app by enabling creation
 In the following chapters, the process of creating components and cell styles families is described per platform.
 
 Table of contents:
+* [API](/ui-builder/API.md)
 * [Designer Guide](/ui-builder/designer/designer.md)
 * [iOS UI Builder](/ui-builder/ios/Home.md)
 	* [Classes and Plists](/ui-builder/ios/Classes-and-Plists.md)
 	* [Create new component](/ui-builder/ios/Creation-New-Component.md)
-	* [API](/ui-builder/ios/API.md)
+	* [Testing locally](/ui-builder/ios/Testing-Locally.md)
 * [Android UI Builder](/ui-builder/android/android.md)
