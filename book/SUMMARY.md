@@ -2,7 +2,7 @@
 
 ## Getting Started With Zapp
 * [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
-	* [Zappifest Tool](/zappifest/zappifest.md)
+    * [Zappifest Tool](/zappifest/zappifest.md)
 
 ## Feeds (Data Source Plugins)
 * [Zapp Pipes](/Zapp-Pipes/Home.md)
@@ -19,13 +19,13 @@
 
 ## Screens (UI Builder)
 * [Zapp UI Builder](/ui-builder/intro.md)
-* [Designer Guide](/ui-builder/designer/designer.md)
-* [iOS UI Builder](/ui-builder/ios/Home.md)
-	* [Classes and Plists](/ui-builder/ios/Classes-and-Plists.md)
-	* [Create new component](/ui-builder/ios/Creation-New-Component.md)
-    * [API](/ui-builder/ios/API.md)
-    * [Testing locally](/ui-builder/ios/Testing-Locally.md)
-* [Android UI Builder](/ui-builder/android/android.md)
+    * [API](/ui-builder/API.md)
+    * [Designer Guide](/ui-builder/designer/designer.md)
+    * [iOS UI Builder](/ui-builder/ios/Home.md)
+       * [Classes and Plists](/ui-builder/ios/Classes-and-Plists.md)
+       * [Create new component](/ui-builder/ios/Creation-New-Component.md)
+        * [Testing locally](/ui-builder/ios/Testing-Locally.md)
+    * [Android UI Builder](/ui-builder/android/android.md)
 
 ## Analytics
 * [Overview](/analytics/overview.md)
