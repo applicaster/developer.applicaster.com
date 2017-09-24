@@ -94,7 +94,7 @@ These are the same for all resource types:
 | `show_close_button`   | Should the application show a close button. Either `true` or `false`. default: `true`                                                                                                                                                                                            | No                                       |  link          |
 | `enable_zoom`         | Can the user change scale of the webview. Either `true` or `false`. default: `false`                                                                                                                                                                                             | No                                       | link          |
 | `external_policy`     | Includes a nested XML that contains values that are relevant for any client that needs to process this attribute                                                                                                                      | No                                         | video      |
-| `free`     | Indicates whether the video is free for viewing attribute                                                                                                                      | No                                         | video      |
+| `free`     | Indicates whether the video is free for viewing  | No | video  |
 &#8224; *Only use this tag if you are sure the provided URLs are HLS streams that comply to Apple’s AppStore submission guidelines. using non compliant streams can result in the app being rejected by Apple.*
 ## The `<alternative_streams>` tag
 
