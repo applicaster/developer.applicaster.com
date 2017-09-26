@@ -3,33 +3,9 @@
 <a name="Integrate Applicaster SDK"/>
 ## Integrate Applicaster SDK
 
-### 1. Preparing your Application class:
+### 1. Preparing your Intro/Splash Activity:
 
-* The following behaviour should be included in the Application class or simply extend *com.applicaster.app.CustomApplication* class.
-
-
-```java
-public class YourApplication extends Application{
-	
-	@Override
-	public void onCreate() {
-		super.onCreate();
-		CustomApplication.onCreateBehaviour(this);
-	}
-	
-	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
-		CustomApplication.onConfigurationChangedBehaviour(this, newConfig);
-		super.onConfigurationChanged(newConfig);
-	}
-
-}
-
-```
-
-### 2. Intro/splash Activity:
-
-* The following behaviour should be included in the **Intro/splash** Activity class or simply extend *com.applicaster.activities.base.AppIntroActivity* class.
+* Extend the *com.applicaster.activities.base.AppIntroActivity* class and add the following behaviour in your **Intro/splash** Activity of your application.
 
 ```java
  @Override
@@ -109,39 +85,38 @@ public class YourApplication extends Application{
 
 ```xml
 <activity
-            android:name="com.applicaster.activities.APFacebookAuthoriziation"
+            android:name="com.applicaster.activities.APFacebookAuthoriziationActivity"
             android:configChanges="orientation|screenSize"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >              </activity>
-<activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:theme"/>
+        <activity
             android:name="com.applicaster.activities.SyncButtonActivity"
             android:configChanges="orientation"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-</activity>
-<activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:configChanges, android:theme" />
+        <activity
             android:name="com.applicaster.activities.URLLauncherActivity"
             android:configChanges="orientation"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
-</activity>
-<activity
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            tools:replace="android:theme" />
+        <activity
             android:name="com.applicaster.activities.OrientedWebView"
             android:configChanges="orientation"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
-</activity>
-<activity
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            tools:replace="android:theme" />
+        <activity
             android:name="com.applicaster.activities.TakeoverEventActivity"
             android:configChanges="orientation"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
-</activity>
-
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            tools:replace="android:configChanges, android:theme" />
 ```
 
 #### add the following facebook activity:
 ```xml
-<activity
-            android:name="com.facebook.LoginActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-</activity>
+<activity android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            />
 ```
 
 
@@ -168,18 +143,13 @@ public class YourApplication extends Application{
 
 ```
 
-### 3. Dependencies
-
-* *facebook sdk 3.20*
-
-
-### 4. *applicaster.properties* 
+### 3. *applicaster.properties* 
 
  Add *applicaster.properties* file to the **/assets** folder.
  
  Please consult Applicaster's developers for more information.
 
-### 5. Strings
+### 4. Strings
 
 add to your *strings.xml*
 
