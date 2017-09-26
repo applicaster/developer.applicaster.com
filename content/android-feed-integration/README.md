@@ -1,12 +1,11 @@
 Feed-Demo-Android
 ==================
 
-Feed integration pack + demo app - Android
-
-**This is a sample project demonstrating how to integrate Feed in your project.**
+**This document will guide you on the steps to integrate the feed into your app**
 
 
-Now you can use this sample as a reference for your integration.
+Use this sample as a reference for your integration:
+[Feed Integration Sample](https://github.com/applicaster/FeedIntegrationSample_Android)
 
 
 <a name="Prerequisite"/>
@@ -14,25 +13,27 @@ Now you can use this sample as a reference for your integration.
 
 ### Preparing your workspace:
 
-1. Add the Feed dependencies to your project.
+#### 1. Add the Feed dependency to your project.
 
 ```
-   compile ('com.applicaster:feed_android:3.7.0')
+   compile ('com.applicaster:feed_android:3.11.1')
 ```
 
-2.
-Adding 3rd party dependencies:
+
+#### 2. Add the following packaging options to your project:
 
 ```
-    compile 'com.nhaarman.listviewanimations:library:2.5.2@aar'
-    compile 'com.daimajia.androidanimations:library:1.0.6@aar'
-    compile 'com.daimajia.easing:library:1.0.0@aar'
+    packagingOptions {
+        pickFirst 'META-INF/LICENSE.txt'
+        pickFirst 'META-INF/LICENSE'
+    }
 ```
+This is due to a know [issue](https://github.com/FasterXML/jackson-core/issues/240) with the Jackson libraries utilized by the feed. 
 
-3.
-Add to the build.gradle in the Project level, maven (Bintray) authentication.
+#### 3. Add the following repositories to the project level build.gradle
+
 If you already have a Bintray user, please send us a request to "applicaster-ltd" organization.
-Otherwise, we can provide you with a Reader user and  password.
+Otherwise, we can provide you with a Read-Only user and  password.
 
 ```
 allprojects {
