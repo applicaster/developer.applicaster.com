@@ -14,8 +14,8 @@
     * [Feed API](/Zapp-Pipes/5.-Feed-API.md)
     * [How to publish a provider](/Zapp-Pipes/6.-How-to-publish.md)
     * [How to connect the provider to the app](/Zapp-Pipes/7.-Connect-to-Zapp.md)
+    * [Step by step tutorial](/Zapp-Pipes/provider-stepbystep.md)
     * [Examples](/Zapp-Pipes/8.-Examples.md)
-    * [F.A.Q.](/Zapp-Pipes/9.-FAQ.md)
 
 ## Screens (UI Builder)
 * [Zapp UI Builder](/ui-builder/intro.md)
