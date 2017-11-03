@@ -1,5 +1,5 @@
 # React Native Introduction
-React Native lets you build mobile apps using only JavaScript. It uses the same design as React, letting you compose a rich mobile UI from declarative components.
+React Native lets you build mobile apps using JavaScript. It uses the same design as React, letting you compose a rich mobile UI from declarative components.
 
 If you want to learn more about React Native, don't hesitate to visit the official documentation [here](https://facebook.github.io/react-native/)
 
