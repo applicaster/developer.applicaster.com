@@ -79,6 +79,17 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
 - **api/react_packages**: Optional for react plugins. An array of
 - **custom_configuration_fields**: An optional section the defines an App Version specific fields to be customized via Zapp CMS.
 - **react_native**: Boolean field to indicate if the plugin is a React Native plugin.
+- **react_bundle_url**: Url to the react native bundle.
+- **project_dependencies**: (Android only) Project level counterpart dependencies of RN npm dependencies, Zappifest will ask to optionally add one for each npm dependency detected. Example:
+```"project_dependencies": [
+    {
+      "react-native-linear-gradient": "node_modules/react-native-linear-gradient/android"
+    },
+    {
+      "react-native-video": "node_modules/react-native-video/android"
+    }
+  ]
+``` 
 
 The current input options for `custom_configurations_fields`:
 * Text
