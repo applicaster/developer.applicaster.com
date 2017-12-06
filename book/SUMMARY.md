@@ -1,6 +1,7 @@
 # Zapp Developer Center
 
 ## Getting Started With Zapp
+* [Code Of Conduct](/Code-Of-Conduct.md)
 * [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
     * [Zappifest Tool](/zappifest/zappifest.md)
 
