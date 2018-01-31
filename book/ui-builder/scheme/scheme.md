@@ -12,7 +12,12 @@
     * ```<scheme-prefix>://present?screen_id=<screen_id>&data_source=<data_source>&source_type=<source_type>```
 * Open a `white label` screen, with `Atom Entry` data source:
     * ```<scheme-prefix>://present?&data_source=<data_source>&entry_id=<entry_id>```
-        * The relveant screen will be opened, according to the `atom entry` type.
+        * The relevant screen will be opened, according to the `atom entry` type:
+          * `article` will open the article screen
+          * `imageGallery` will open the image gallery screen
+          * `video` will open the player
+          * `link` will open a web view
+          * `audio` will open the audio player
 ---
 ## Place holders explanations:
 - `<scheme-prefix>` - The scheme prefix as defined in Zapp
