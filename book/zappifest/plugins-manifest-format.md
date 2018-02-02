@@ -53,7 +53,7 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
 - **name**: The name of the plugin. This is the name that will be in use when choosing plugin to App Version.
 - **description**: Describes the plugin.
 - **type**: Plugin type out of predefined types.
-- **whitelisted_account_ids**: Optional. An array of Applicaster's account_ids. If empty, plugin will be available across all accounts.
+- **whitelisted_account_ids**: Optional. Array of Applicaster's account_ids as individual strings. To find the relevent account_ids go to `accounts.applicaster.com`. If empty, plugin will be available across all accounts.
 - **platform**: The platform of the plugin - should be either `ios/android/tvos`
 - **dependency_repository_url**: A list of repo urls the plugin uses.
  _NOTE: for ANDROID use it as an object consists out of url and credentials. For any other platform provide a list of url's_
