@@ -4,7 +4,7 @@ Explanation about how to use family interface to create new families and corresp
 
 ## Family XML file
 
-The previous implementation indicated to create multiple setters per Component per CellStyle. This new implementation aims to simplify the creation and maintenance of the families with preservation of the current ComponentMetaData class. We achieved that by introducing an XML which defines families that contain all of the necessary parameters to create a ComponentMetaData.
+We are introducing an XML which defines families that contain all of the necessary parameters to create a ComponentMetaData.
 
 <details><summary>Example of XML file</summary>
 <p>
@@ -75,7 +75,6 @@ The previous implementation indicated to create multiple setters per Component p
 <details><summary>Example of previous logic</summary>
 <p>
 
-Previously, this logic was in per Family PaddingSetter, e.g `Family1PaddingSetter`, corresponding to cases where `isChild = false`
 ```java
 public ComponentMetaData apply(ComponentMetaData inputMetaData, boolean isTablet, boolean isChild) {
   if (isChild) {
