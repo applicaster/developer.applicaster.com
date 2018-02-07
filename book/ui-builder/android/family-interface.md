@@ -1,10 +1,10 @@
 ## Android Family Interface
 
-Explanation about how to use family interface to create new families and corresponding ComponentMetaData. This interface will replace UI builder's approach that rely on numerous IconSetter, PaddingSetter and AspectRatioSetter.
+Explanation about how to use family interface to create new families and corresponding ComponentMetaData.
 
 ## Family XML file
 
-Previous implementation dictated to create multiple setters per Component per CellStyle, thus main idea behind this task was to simplify the creation and maintenance of the families with preservation of the current ComponentMetaData class. We achieved that by introducing an XML defined families that contain all of the necessary parameters to create a ComponentMetaData.  
+The previous implementation indicated to create multiple setters per Component per CellStyle. This new implementation aims to simplify the creation and maintenance of the families with preservation of the current ComponentMetaData class. We achieved that by introducing an XML which defines families that contain all of the necessary parameters to create a ComponentMetaData.
 
 <details><summary>Example of XML file</summary>
 <p>
@@ -57,7 +57,7 @@ Previous implementation dictated to create multiple setters per Component per Ce
 
 </details>
 
-`<Family>` is top level tag that contains family name and all attributes that apply to top level of ComponentMetaData.  
+`<Family>` is a top level tag that contains family name and all attributes that apply to the top level of ComponentMetaData.  
 `<Components>` is a list of UI Builder components.  
 `<Cell>` describes properties of a components' CellStyle, e.g "LIST_1".  
 
@@ -70,7 +70,7 @@ Previous implementation dictated to create multiple setters per Component per Ce
     <Screen divider="12" innerSpacing="0" padding="10" paddingTopBottom="10" type="sw600" />
   </Screens>
 ```
-`<Screens>` defines collection of attributes per Screen type; where "default" is phone and "sw600" is tablet. It also applies to the top level ComponentMetaData.
+`<Screens>` defines a collection of attributes per Screen type, where "default" corresponds to phone and "sw600" to tablet. This also applies to the top level ComponentMetaData.
 
 <details><summary>Example of previous logic</summary>
 <p>
@@ -111,7 +111,7 @@ Component level attributes and `<Screens>`. Component's attribute `columns` is a
           <Screen type ="sw600" cellHeight = "330" cellWidth="400" innerSpacing="12" columns = "3"/>
         </Screens>
 ```
-Alternative way to define aspectCellRatio is to provide cellHeight, cellWidth and columns; and let `ComponentDataMapper` calculate the rest.
+lternate way to define aspectCellRatio is to provide cellHeight, cellWidth, and columns, and let `ComponentDataMapper` calculate the rest.
 
 #### DisplayRules
 
@@ -126,7 +126,7 @@ Alternative way to define aspectCellRatio is to provide cellHeight, cellWidth an
                      visibility="VISIBLE" />
              </DisplayRule>
 ```
-`<DisplayRules>` is used to build an IconSetter and contains per CellType list of `<DisplayRule>`. "GENERIC" is not a Zapp's CellType, but rather a collection of most repeated elements that we can reuse setting `isGeneric = "true"`
+`<DisplayRules>` is used to build an IconSetter. It contains per CellType a list of `<DisplayRule>` items. NOTE: "GENERIC" is not a Zapp's CellType, but rather a collection of most repeated elements that we can reuse setting `isGeneric = "true"`
 ```
              <DisplayRule type="ATOM_ARTICLE" isGeneric = "true">
                  <View
@@ -152,7 +152,7 @@ We added Dagger 2 to inject `ComponentRepository`, that also providing us with e
 At the moment, only FAMILY_1 is supported with this new implementation.
 
 #### FamilyEntity
-Java class that is used by simpleXML to parse XML file. simpleXML uses annotations and pretty straight forward to use. One thing to notice is that we use a simpleXNL's `Dictionary` that acts like a Map<String, Object> and let's us to get it's members by String name. In order to support that, every member of the `Dictionary` should implement `Entry` interface.
+Java class that is used by simpleXML to parse XML file. simpleXML uses annotations and pretty straight forward to use. One thing to notice is that we use a simpleXML's `Dictionary` that acts like a Map<String, Object> and let's us to get it's members by String name. In order to support that, every member of the `Dictionary` should implement `Entry` interface.
 
 #### ComponentRepository
 Main interface for `ComponentMetadataRepository`. Has two methods to get `ComponentMetaData` and `IconSetter`.
@@ -166,10 +166,10 @@ Our main repository that implements `ComponentRepository` and has two dependenci
 ![High overview](./family-interface-cache.jpeg)
 
 #### FamilyDataStoreFactory
-One of the dependencies of `ComponentMetadataRepository`. We utilize factory pattern to provide proper `FamilyDataStore` depending whether we have necessary family cached or we need to parse it from XML.
+One of the dependencies of `ComponentMetadataRepository`. We utilize a factory pattern to provide the proper `FamilyDataStore` depending whether we have necessary family cached or we need to parse it from XML.
 
 #### FamilyCache
-it is the an interface which represents the minimum methods a caching mechanism `FamilyMemoryCache` needed to be implemented.
+The interface that represents the minimum methods a caching mechanism `FamilyMemoryCache` needed to be implemented.
 
 #### FamilyMemoryCache
 It is an implementation of `FamilyCache` contract to store in memory a collection of the families already loaded
