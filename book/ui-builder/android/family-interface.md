@@ -2,118 +2,93 @@
 
 Explanation about how to use family interface to create new families and corresponding ComponentMetaData.
 
-## Family XML file
+## Creating New Family
 
-We are introducing an XML which defines families that contain all of the necessary parameters to create a ComponentMetaData.
-
-<details><summary>Example of XML file</summary>
-<p>
-
-```
-<Family name="FAMILY_1" showBottomPadding="true" version="1.0">
-
-    <Screens>
-        <Screen divider="12" innerSpacing="0" padding="12" paddingTopBottom="12" type="default" />
-        <Screen divider="12" innerSpacing="0" padding="10" paddingTopBottom="10" type="sw600" />
-    </Screens>
-
-    <Components>
-        <ListComponent name="LIST" columns="2">
-            <Cell name="LIST_1" layoutId="layout_01_list_01">
-                <Screens>
-                    <Screen type ="default" padding = "12" aspectCellRatio = "0.9" paddingSide = "12"/>
-                    <Screen type ="sw600"  padding = "10" aspectCellRatio = "0.9"  paddingSide = "10" columns="3"/>
-                </Screens>
-
-                <DisplayRules>
-                    <DisplayRule type="GENERIC">
-                        <View
-                            name="nativeShareButton"
-                            visibility="VISIBLE" />
-                        <View
-                            name="broadcastDateTextView"
-                            visibility="VISIBLE" />
-                    </DisplayRule>
-                    <DisplayRule type="ATOM_ARTICLE" isGeneric = "true">
-                        <View
-                            name="programPlayButton"
-                            drawable="cell_article_button_selector" />
-                    </DisplayRule>
-                    <DisplayRule type="ATOM_PLAYLIST">
-                        <View
-                            name="programPlayButton"
-                            drawable="cell_play_button_selector"
-                            visibility="VISIBLE" />
-                    </DisplayRule>
-                    <DisplayRule type="ATOM_VIDEO" copyOf="ATOM_PLAYLIST">
-                    </DisplayRule>
-                  </DisplayRules>
-                </Cell>
-        </ListComponent>
-    </Components>
-```
-
-</p>
-
-</details>
-
-`<Family>` is a top level tag that contains family name and all attributes that apply to the top level of ComponentMetaData.  
-`<Components>` is a list of UI Builder components.  
-`<Cell>` describes properties of a components' CellStyle, e.g "LIST_1".  
-
-#### Screens
-
+Creating new family starts with `<Family>` tag.
 ```
 <Family name="FAMILY_1" showBottomPadding="true">
-  <Screens>
-    <Screen divider="12" innerSpacing="0" padding="12" paddingTopBottom="12" type="default" />
-    <Screen divider="12" innerSpacing="0" padding="10" paddingTopBottom="10" type="sw600" />
-  </Screens>
 ```
-`<Screens>` defines a collection of attributes per Screen type, where "default" corresponds to phone and "sw600" to tablet. This also applies to the top level ComponentMetaData.
+`name` attribute is a family name and on parsing it should match with `ZappScreen.styles.family`  
+`showBottomPadding` adds a padding to the very end of the screen.
 
-<details><summary>Example of previous logic</summary>
-<p>
+Then we define `<Screens>` for `<Family>`
+```
+<Screens>
+    <Screen type="default" divider="12" padding="12" paddingTopBottom="12" />
+    <Screen type="sw600" divider="12" padding="10" paddingTopBottom="10" />
+</Screens>
+```
+![Family attriutes](./family-interface-family.png)  
 
-```java
-public ComponentMetaData apply(ComponentMetaData inputMetaData, boolean isTablet, boolean isChild) {
-  if (isChild) {
-      inputMetaData.setSidePadding(12);
-  } else {
-      inputMetaData.setSidePadding(0);
-      inputMetaData.setTopBottomPadding(12);
-      inputMetaData.getComponentStyle().setDividerHeight(12);
-      inputMetaData.getComponentStyle().setShowBottomPadding(true);
-  }
-  return inputMetaData;
-}
+`type` defines the screen type by dimensions. Default is phone, sw600 is tablet.   
+`divider` set a horizontal separation between the elements of the component.  
+`padding` sets padding unless `paddingSide` is defined, then `paddingSide` overwrites it.  
+`paddingTopBottom` adds padding to the very top and bottom of the screen.
+
+#### Component
+Next step is to add XML for components. We define all of the components under `<Components>` tag, e.g.
+```
+<Components>
+  <ListComponent name="LIST" columns="2">
+    ...
+  </ListComponent>
+  <GridComponent/>
+  <HeroComponent/>
+</Components>
+```
+Component's `name` is a component type and matched to `ZappScreen.ZappUiComponent.type`   
+`columns` defines the number of columns in the component.  
+
+#### CellStyle
+Each component consists of `<Cell>` that are component's CellStyle.  
+
+```
+<ListComponent name="LIST" columns="2">
+  <Cell name="LIST_1" layoutId="layout_01_list_01">
+    ...
+  </Cell>
+  <Cell/>
+  <Cell/>
+</ListComponent>
 ```
 
-</p>
+Cell's `name` CellStyles name that is represented by `ZappScreen.ZappUiComponent.styles.cellStyles`.  
+`layoutId` is an xml layout's name.  
+<b>NOTE:</b> Also it should match CellLayout enum, in our case it indeed matches `LAYOUT_01_LIST_01`. In case enum doesn't match the xml layout, e.g. `TAB_01("component_tab_cell_01")` - we need to add extra attribute `layout` and specify the proper enum name `layout = "TAB_01"`.    
 
-</details>   
-
-
+Each `<Cell>` has it's own `<Screens>`:
 ```
-    <ListComponent name="LIST" columns="2">
-      <Cell name="LIST_1" layoutId="layout_01_list_01">
-         <Screens>
-             <Screen type ="default" padding = "12" aspectCellRatio = "0.9" paddingSide = "12"/>
-             <Screen type ="sw600"  padding = "10" aspectCellRatio = "0.9"  paddingSide = "10" columns="3"/>
-         </Screens>
+<Cell name="LIST_1" layoutId="layout_01_list_01">
+    <Screens>
+        <Screen type ="default" aspectCellRatio = "0.9" paddingSide = "12"/>
+        <Screen type ="sw600" aspectCellRatio = "0.9"  paddingSide = "10" columns="3"/>
+    </Screens>
+</Cell>
 ```
-Component level attributes and `<Screens>`. Component's attribute `columns` is a default value and can be overwritten on Cell level.
+![Family attriutes](./family-interface-cell.png)  
 
+`paddingSide` adds padding on component level.  
+`aspectCellRatio` is an aspect ratio of the CellStyle.  
+`columns` here overwrite the `<ListComponent>`'s padding.  
+<b>NOTE:</b> Alternative way to define aspectCellRatio is to provide cellHeight, cellWidth, and columns, and let `ComponentDataMapper` calculate the rest.
 ```
         <Screens>
           <Screen type ="default" cellHeight = "309" cellWidth="360" innerSpacing="12" columns = "1"/>
           <Screen type ="sw600" cellHeight = "330" cellWidth="400" innerSpacing="12" columns = "3"/>
         </Screens>
 ```
-lternate way to define aspectCellRatio is to provide cellHeight, cellWidth, and columns, and let `ComponentDataMapper` calculate the rest.
+
 
 #### DisplayRules
-
+```
+<Cell name="LIST_1" layoutId="layout_01_list_01">
+    <Screens/>
+    <DisplayRules>
+      ...
+    </DisplayRules>
+</Cell>
+```
+`<DisplayRules>` is used to build an IconSetter. It of a list of `<DisplayRule>` items.
 ```
          <DisplayRules>
              <DisplayRule type="GENERIC">
@@ -124,8 +99,19 @@ lternate way to define aspectCellRatio is to provide cellHeight, cellWidth, and 
                      name="broadcastDateTextView"
                      visibility="VISIBLE" />
              </DisplayRule>
+             <DisplayRule type="ATOM_FEED/>
+          </DisplayRules>   
 ```
-`<DisplayRules>` is used to build an IconSetter. It contains per CellType a list of `<DisplayRule>` items. NOTE: "GENERIC" is not a Zapp's CellType, but rather a collection of most repeated elements that we can reuse setting `isGeneric = "true"`
+`type` is CellItemType.  
+`<View>` is a CellViewHolder's element, e.g "nativeShareButton". We can set these attributes in it:  
+`visibility` sets visibility, e.g VISIBLE, GONE, INVISIBLE  
+`isNull` sets CellViewHolder to NULL.  
+`drawable` specifies CellViewHolder's image resource.  
+`isTransparent` sets CellViewHolder's image resource to `android.R.color.transparent`.   
+Multiple attributes can be specified per one `<View>`  
+
+In order to optimize XML we can use `isGeneric` and `copyOf` attributes on `<DisplayRule>`   
+<b>NOTE:</b> "GENERIC" is not a Zapp's CellType, but rather a collection of most repeated elements that we can reuse setting `isGeneric = "true"`
 ```
              <DisplayRule type="ATOM_ARTICLE" isGeneric = "true">
                  <View
@@ -162,7 +148,7 @@ Our main repository that implements `ComponentRepository` and has two dependenci
 `ScreenDataMapper` contains the logic to map `FamilyEntity` to `ComponentMetaData`
 
 ## Family Caching
-![High overview](./family-interface-cache.jpeg)
+![Family cache](./family-interface-cache.jpeg)
 
 #### FamilyDataStoreFactory
 One of the dependencies of `ComponentMetadataRepository`. We utilize a factory pattern to provide the proper `FamilyDataStore` depending whether we have necessary family cached or we need to parse it from XML.
@@ -210,6 +196,6 @@ Utility class that helps us to differentiate between phone and tablet screens.
 Class containing logic to map `<DisplayRule>` to `cellViewHolder`.
 
 ## Family Integration
-![High overview](./family-interface-dagger.jpeg)
+![Dagger](./family-interface-dagger.jpeg)
 
 In order to glue everything together and inject `ComponentRepository` we use Dagger 2. `GenericApplicationModule` provides Context and `UIBuilderModule` provides all the dependencies we need for `ComponentRepository`.  
