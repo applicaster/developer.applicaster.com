@@ -8,7 +8,7 @@ Creating new family starts with `<Family>` tag.
 ```
 <Family name="FAMILY_1" showBottomPadding="true">
 ```
-`name` attribute is a family name and on parsing it should match with `ZappScreen.styles.family`  
+`name` attribute is a family name and when parsing it should match with `ZappScreen.styles.family`  
 `showBottomPadding` adds a padding to the very end of the screen.
 
 Then we define `<Screens>` for `<Family>`
@@ -137,7 +137,7 @@ We added Dagger 2 to inject `ComponentRepository`, that also providing us with e
 At the moment, only FAMILY_1 is supported with this new implementation.
 
 #### FamilyEntity
-Java class that is used by simpleXML to parse XML file. simpleXML uses annotations and pretty straight forward to use. One thing to notice is that we use a simpleXML's `Dictionary` that acts like a Map<String, Object> and let's us to get it's members by String name. In order to support that, every member of the `Dictionary` should implement `Entry` interface.
+Java class that is used by simpleXML to parse XML file. simpleXML uses annotations and is pretty straight forward to use. One thing to notice is that we use a simpleXML's `Dictionary` that acts like a Map<String, Object> and let's us to get it's members by String name. In order to support that, every member of the `Dictionary` should implement `Entry` interface.
 
 #### ComponentRepository
 Main interface for `ComponentMetadataRepository`. Has two methods to get `ComponentMetaData` and `IconSetter`.
