@@ -27,6 +27,7 @@
         * [Create new component](/ui-builder/ios/Creation-New-Component.md)
         * [Testing locally](/ui-builder/ios/Testing-Locally.md)
     * [Android UI Builder](/ui-builder/android/android.md)
+    * [Components and Cell Styles](/ui-builder/components-and-cell-styles/intro.md)
     * [Url Scheme](/ui-builder/scheme/scheme.md)
 
 ## Analytics
