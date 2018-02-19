@@ -4,7 +4,7 @@ The Zapp Builder defines the visual language of an app by using Supported Compon
 
 A Cell Style Family includes all the cell styles per component the Builder supports. Each Cell Style can hold different types of data, such as video, article, gallery, web page and others.
 
-The following guideline is an ongoing document that will be updated as we continue to develop the builder apps’ visual language. [**Please refer to the Sketch File**](https://drive.google.com/drive/folders/0Bz0Gkizw3hGxRk5PZ2hHYmVPRGM?usp=sharing) when creating a new Cell Style Family.
+The following guideline is an ongoing document that will be updated as we continue to develop the builder apps’ visual language. [**Please refer to the Sketch File**](https://assets-production.applicaster.com/zapp/docs/colorado.zip) when creating a new Cell Style Family.
 
 ### Creating New Family
 
