@@ -4,4 +4,4 @@ UI Builder offers many components and cell styles apart from the standard ones (
 This section will include documentation for these components and cell styles.
 
 ### Table of content:
-* [Video Background Cell](/components-and-cell-styles/video-background-cell.md)
+* [Video Background Cell](/ui-builder/components-and-cell-styles/cell-styles/video-background-cell.md)
