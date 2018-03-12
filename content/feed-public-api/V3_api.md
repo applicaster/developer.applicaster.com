@@ -1,7 +1,7 @@
 # Stars Public API v3 (Feed & Crossmates)
 
 This document describes the Stars Public API and it is used to read events
-form both the Feed & Crossmates Applicaster products.
+form both the Feed & Crossmates Applicaster products. Before implementing this API in your app please make sure you contact the code owner in order to know that it matches your needs.
 
 
 # Terminology
