@@ -1,40 +1,100 @@
 ##Rivers.json
-Rivers this file defines main structure of the __UI_Builder__ project.
-Litarelly it is array of __Screen Models__ that will be presented inside application/
+This file defines Zapp rivers JSON API.
+The API represents the layout composition of the app, including navigations, screens and components
 
 __Link template:__ https://assets-secure.applicaster.com/zapp/accounts/ `account_id`/apps/`bundle_identifier`/apple_store/`app_version`/rivers/rivers.json
 
 Example:
 
 ```
-[{
-		"data": {},
-		"id": "02eaecd3-d241-410b-81fb-c320c5d90661",
-		"name": "Category",
-		"styles": {},
-		"type": "general_content",
-		"ui_components": [{
-			"component_type": "list",
-			"data": {
-            "
-            	"target" : "c320c5d90661-d241-410b-81fb-c320c5d90661"
-				"connected": true,
-				"source": "URL",
-				"type": "APPLICASTER_ATOM_FEED"
-			},
-			"position": 1,
-			"rules": {
-               "datasource_limit" : 10
+[
+    {
+        "id": "f99b28fb-f472-403b-832d-9731287a3639",
+        "name": "Show Screen",
+        "type": "general_content",
+        "data": {
+            "connected": true,
+            "parent": "9bd8db4b-dc8e-4133-aedd-63135e02c31d"
+        },
+        "styles": {
+            "family": "FAMILY_1"
+        },
+        "home": false,
+        "ui_components": [
+            {
+                "component_type": "hero",
+                "data": {
+                    "source": "source_url",
+                    "type": ""
+                },
+                "position": 1,
+                "rules": {
+                    "item_limit": "10"
+                },
+                "styles": {
+                    "family": "FAMILY_1",
+                    "layout": "",
+                    "header": {
+                        "visible": false,
+                        "style": ""
+                    },
+                    "cell_styles": [
+                        "HERO_CELL_1"
+                    ]
+                }
             },
-			"styles": {
-				"header": {
-					"style": null,
-					"visible": false
-				}
-			}
-		}]
-	}
+            {
+                "component_type": "tab_bar",
+                "data": {
+                    "source": "",
+                    "type": ""
+                },
+                "position": 3,
+                "rules": {
+                    "item_limit": "6"
+                },
+                "styles": {
+                    "family": "FAMILY_1",
+                    "layout": "TABS_1",
+                    "cell_body_component_type": "list",
+                    "cell_styles": [
+                        "TABS_CELL_1"
+                    ],
+                    "cell_body_styles": [
+                        "LIST_2"
+                    ],
+                    "header": {
+                        "visible": false,
+                        "style": null
+                    }
+                }
+            }
+        ],
+        "navigations": [
+           {
+                "id": "4603c9ee-ef43-4415-b2b0-a970e3e41103",
+                "name": null,
+                "navigation_type": "navigation_bar",
+                "category": "nav_bar",
+                "styles": {},
+                "rules": {},
+                "assets": {},
+                "nav_items": []
+            },
+            {
+                "id": "2fefe732-d7bc-4323-b1a1-0b590255b287",
+                "name": null,
+                "navigation_type": "TwoLevelRNMenu",
+                "category": "menu",
+                "styles": {},
+                "rules": {},
+                "assets": {},
+                "nav_items": []
+            }
+        ]
+    },
 ]
+
 ```
 
 __Screen model schema__
@@ -42,12 +102,12 @@ __Screen model schema__
 | key            | Type         | Description                                      |
 |--------------- |--------------| ------------------------------------------------ |
 |  data          |  Dictionary  | Stores data source of the screen                 |
-|  id            |  String      | Unique id of the Screen model                    |
+|  id            |  String      | Unique id of screen                              |
 |  name          |  String      | Screen title                                     |
 |  styles        |  Dictionary  | Screen styles                                    |
-|  ui_components |  Array       | Component model, that will be presented in screen|
-|  navigations   |  Array       | Navigation model, defines application navigation |
-|  home          |  Bool        | Representation if screen is Home screen          |
+|  ui_components |  Array       | UI Components array, that wil be presented in screen|
+|  navigations   |  Array       | Navigation, defines application navigation |
+|  home          |  Bool        | Representing if screen is Home screen          |
 |  type          |  String      | Type of the screen. Example: 'general_content'   |
 
 __Screen model schema: data__
@@ -57,13 +117,13 @@ __Screen model schema: data__
 |  source        |  String      | URL of the data source item                      |
 |  type          |  String      | Type id of the data source. Example: 'televisa_collection' |
 |  connected     |  Bool        | Define if screen connected                       |
-|  parent        |String        | Parent screen id                                 |
+|  parent        |  String      | Indicating the screen that is targeting the current screen |
 
 __Screen model schema: styles__
 
 | key            | Type         | Description                                      |
 |--------------- |--------------| ------------------------------------------------ |
-|  family        |  String      | Name of the Family                               |
+|  family        |  String      | External Identifier of the family                |
 
 ######Component model defines representation of single component
 __Screen model schema: ui_components - ComponentModel__
@@ -79,10 +139,10 @@ __ComponentModel schema: data__
 
 | key            | Type         | Description                                      |
 |--------------- |--------------| ------------------------------------------------ |
-|  source        |  String      | URL of the data source item                      |
+|  source        |  String      | URL of the data source item . URL base 64 encoded |
 |  type          |  String      | type id of the data source. Example: 'televisa_collection' |
 |  connected     |  Bool        | Define if component connected to another screen  |
-|  target        |String        | Screen id of the target model                    |
+|  target        |  String      | Indicating the screen that is targeting the current screen |
 
 __ComponentModel schema: styles__
 
@@ -98,6 +158,8 @@ __ComponentModel schema: header__
 |--------------- |--------------| ------------------------------------------------ |
 |  style         |  String      | Cell style of the header                         |
 |  visible       |  Bool        | Define if header should be presented             |
+|  target        |  String      | indicating the screen that is targeting the current screen |
+
 
 ######Navigation model defines representation of general navigation item that can be presented per screen.Example: Navigation Bar
 __ComponentModel schema: navigations - NavigationModel__
@@ -131,11 +193,35 @@ __NavigationModel schema: nav_items - NavigationItem__
 |  rules         |  Dictionary  | Specific rules releavant for navigation type     |
 |  styles        |  Dictionary  | Navigation styles								   |
 
+__NavigationItem schema: type Navigation Bar__
+
+__Note:__ All this types used to define navigation button inside navigation bar plugin
+
+| value          | Description                                                       |
+|--------------- | ----------------------------------------------------------------- |
+|  button        | Represenatation of generic screen or URL									 |
+|  live_drawe    | Live Drawer component 										     |
+|  chromecast    | Chromecast presentation										     |
+|  applicaster_feed | Applicaster Feed presentation 								 |
+|  applicaster_chromecast | Applicaster Cromecast presentation 					     |
+
+__NavigationItem schema: type Root Menu Plugin__
+
+__Note:__ All this types used to define structure of the Root Menu plugin
+
+| value          | Description                                                       |
+|--------------- | ----------------------------------------------------------------- |
+|  label         | Define a selectable cell in the root menu,  Represenatation of generic screen or URL|
+|  header        | Define a header section in the root menu,  Represenatation of generic screen or URL|
+|  collapsed     | Define container category in the root menu that have navigation items as childrens,  Represenatation of screen or URL|
+|  Setting       | Define item to open white label Settings Screen |
+|  EPG           | Define item to open white label EPG Screen |
+
 __NavigationItem schema: data__
 
 | key            | Type         | Description                                      |
 |--------------- |--------------| ------------------------------------------------ |
 |  source        |  String      | URL of the data source item                      |
-|  type          |  String      | type id of the data source. Example: 'televisa_collection' |
+|  type          |  String      | Type of source as defined by the datasource provider |
 |  connected     |  Bool        | Define if component connected to another screen  |
 |  target        |String        | Screen id of the target model                    |
