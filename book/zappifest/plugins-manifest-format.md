@@ -90,7 +90,17 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
       "react-native-video": "node_modules/react-native-video/android"
     }
   ]
-``` 
+```
+- **zapp_configuration**: this key allows to collect options for zapp configuration. Currently, the only available option is to hide specific sections in the UiBuilder configuration
+Example:
+```
+"zapp_configuration": {
+  "disable_section": {
+    "target_screen": true
+  }
+}
+```
+This works as a blacklist system - only sections appearing here will be skipped.
 
 The current input options for `custom_configurations_fields`:
 * Text
