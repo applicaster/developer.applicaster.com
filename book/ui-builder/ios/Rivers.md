@@ -200,7 +200,7 @@ __Note:__ All this types used to define navigation button inside navigation bar 
 | value          | Description                                                       |
 |--------------- | ----------------------------------------------------------------- |
 |  button        | Represenatation of generic screen or URL									 |
-|  live_drawe    | Live Drawer component 										     |
+|  live_drawer    | Live Drawer component 										     |
 |  chromecast    | Chromecast presentation										     |
 |  applicaster_feed | Applicaster Feed presentation 								 |
 |  applicaster_chromecast | Applicaster Cromecast presentation 					     |
