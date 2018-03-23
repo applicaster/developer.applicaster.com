@@ -78,6 +78,7 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
 - **api/android_proguard_rules**: Optional field for `Android` plugins to be added to the `proguard-rules` file.
 - **api/require_startup_execution**: Optional field. This will allow the plugin to be opt in to the application startup flow. The plugin must implement the relevant `ios/android` protocol.
 - **api/react_packages**: Optional for react plugins. An array of
+- **supported_nav_items**: For navigation types plugins (Menu and Navigation Bar). Array of allowd Navigation items for the plugin.
 - **custom_configuration_fields**: An optional section the defines an App Version specific fields to be customized via Zapp CMS.
 - **react_native**: Boolean field to indicate if the plugin is a React Native plugin.
 - **react_bundle_url**: Url to the react native bundle.
