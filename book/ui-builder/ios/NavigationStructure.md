@@ -50,7 +50,7 @@ init(innerNavController:ZPNavigationController)
 `innerNavController` - instance of the `ZPNavigationController` controller with generic screen as root
 
 This state is used to present screens from `navigation bar`, when user push one of the `navigation buttons`.
-__Note__: Each instance of the `presentation state` will use own instance of the `navigation bar adapter` plugin
+__Note__: Each instance of Presentation View Controller will hold an instance of navigation bar
 
 #####ZPRootViewContainerControllerDelegate
 Protocol of root view container that helps to define presentation logic of the `navigation bar` plugin.
