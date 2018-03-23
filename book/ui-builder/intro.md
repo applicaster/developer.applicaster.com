@@ -11,7 +11,7 @@ Table of contents:
 * [Designer Guide](/ui-builder/designer/designer.md)
 * [iOS UI Builder](/ui-builder/ios/Home.md)
 	* [Navigation Structure](/ui-builder/ios/NavigationStructure.md)
-	* [Navigatio Bar Plugins](/ui-builder/ios/NavigatioBarPlugins.md)
+	* [Navigation Bar Plugins](/ui-builder/ios/NavigatioBarPlugins.md)
 	* [Rivers](/ui-builder/ios/NavigationStructure.md)
 	* [Classes and Plists](/ui-builder/ios/Classes-and-Plists.md)
 	* [Create new component](/ui-builder/ios/Creation-New-Component.md)
