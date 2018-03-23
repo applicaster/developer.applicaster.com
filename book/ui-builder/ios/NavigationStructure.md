@@ -1,3 +1,7 @@
+### Motivation
+This document is explaining general structure of the workflow that Zapp-iOS is using during initialization proccess.
+It helps to understand how Root container view controller cooperate with navigation bar plugin and root menu plugin.
+
 ### Zapp-iOS Root Navigation Flow
 
 1. ZAZappAppManager when called On `didFinishLaunchingWithOptions` GARooHelper create an instance of `GARootViewContainerController` with `root` state, about <a href="#states">states</a> read below.
@@ -7,10 +11,6 @@
 5. GANavigationBarManager will create navigation bar instance of NavigationBarBaseAdapter (Plugin adapter instance). In case application is using the ui_builder, Navigation Bar must use data source of the root from rivers.json API. Otherwise it will expect Applicaster 2 Collection with ui_tag: `navbar_collection`.
 6. RootContainer ready for use.
 7. In end of initialization of the Application instance of `GARootViewContainerController` will be added to App
-
-#### Motivation
-This document is explaining general structure of the workflow that Zapp-iOS is using during initialization proccess.
-It helps to understand how Root container view controller cooperate with navigation bar plugin and root menu plugin.
 
 <a name="rootViewContainer" />
 #####GARootViewContainerController
