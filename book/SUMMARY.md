@@ -35,7 +35,7 @@
     * [Url Scheme](/ui-builder/scheme/scheme.md)
     
 ## Navigation Bar Plugins
-    * [iOS Navigation Bar](/ui-builder/ios/NavigatioBarPlugins.md)
+* [iOS Navigation Bar](/ui-builder/ios/NavigatioBarPlugins.md)
            
 ## Analytics
 * [Overview](/analytics/overview.md)
