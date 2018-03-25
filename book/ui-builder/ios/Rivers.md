@@ -125,7 +125,7 @@ __Screen model schema: styles__
 |--------------- |--------------| ------------------------------------------------ |
 |  family        |  String      | External Identifier of the family                |
 
-######Component model defines representation of single component
+#####Component model defines representation of single component
 
 __Screen model schema: ui_components - ComponentModel__
 
@@ -162,7 +162,7 @@ __ComponentModel schema: header__
 |  target        |  String      | indicating the screen that is targeting the current screen |
 
 
-######Navigation model defines representation of general navigation item that can be presented per screen.Example: Navigation Bar
+#####Navigation model defines representation of general navigation item that can be presented per screen.Example: Navigation Bar
 
 __ComponentModel schema: navigations - NavigationModel__
 
@@ -181,7 +181,7 @@ __NavigationModel schema: styles__
 |--------------- |--------------| ------------------------------------------------ |
 |  style         |  String      | Style of the naviagtion model                    |
 
-######Navigation item defines representation of single entity in navigation model. Like navigation button in nav bar or cell inside root menu
+#####Navigation item defines representation of single entity in navigation model. Like navigation button in nav bar or cell inside root menu
 
 __NavigationModel schema: nav_items - NavigationItem__
 
