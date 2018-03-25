@@ -181,7 +181,7 @@ __NavigationModel schema: styles__
 |--------------- |--------------| ------------------------------------------------ |
 |  style         |  String      | Style of the naviagtion model                    |
 
-#####Navigation item defines representation of single entity in navigation model. Like navigation button in nav bar or cell inside root menu
+###### Navigation item defines representation of single entity in navigation model. Like navigation button in nav bar or cell inside root menu
 
 __NavigationModel schema: nav_items - NavigationItem__
 
