@@ -23,15 +23,20 @@
     * [API](/ui-builder/API.md)
     * [Designer Guide](/ui-builder/designer/designer.md)
     * [iOS UI Builder](/ui-builder/ios/Home.md)
+        * [Navigation Structure](/ui-builder/ios/NavigationStructure.md)
+        * [Rivers](/ui-builder/ios/Rivers.md)
         * [Classes and Plists](/ui-builder/ios/Classes-and-Plists.md)
         * [Create new component](/ui-builder/ios/Creation-New-Component.md)
         * [Testing locally](/ui-builder/ios/Testing-Locally.md)
     * [Android UI Builder](/ui-builder/android/android.md)
-    	* [Family Interface](/ui-builder/android/family-interface/family-interface.md)
+    	  * [Family Interface](/ui-builder/android/family-interface/family-interface.md)
     * [Components and Cell Styles](/ui-builder/components-and-cell-styles/intro.md)
         * [Video Background Cell](/ui-builder/components-and-cell-styles/cell-styles/video-background-cell.md)
     * [Url Scheme](/ui-builder/scheme/scheme.md)
-
+    
+## Navigation Bar Plugins
+    * [iOS Navigation Bar](/ui-builder/ios/NavigatioBarPlugins.md)
+           
 ## Analytics
 * [Overview](/analytics/overview.md)
 * [Morpheus](/analytics/morpheus/morpheus.md)
