@@ -440,3 +440,41 @@ js2n.Push.unregisterTags(options, callback);
 The current iOS webview SDK prevents the native iOS device from being able to receive multiple commands simultaneously. If you need to send more than one command at the same time, maintain the timestamp for when the event/user profile creation was triggered, but create a 5 second delay in the actual delivery of each command to iOS
 
 [morpheus_release_notes]: http://developer.applicaster.com/docs/internal/morpheus_release_notes
+
+# Native to Javascript Events
+## Motivation:
+Clients want to be notified when a certain native event occurs. For example, a client wants to play music via. Javascript. In addition, he'll want to get notified when the WebView goes to the background / comes to the foreground in order to pause and play the sound.
+
+## Events List:
+
+### WebView Resume:
+#####  Description
+The event will be called when a WebView will appear on the screen. It can happen when the view will return to the foreground or when the view will first initialize into the screen.
+
+#####  SDK Availability:
+* Android - 5.10.2
+* iOS: 4.5.8
+
+#####  Implementation:
+Add the following to your javascript file:
+```
+function onAPWebViewResume() {
+	<some code>
+}
+```
+
+### WebView Pause:
+#####  Description
+The event will be called when a WebView will disappear from the screen. It can happen when the view will go to the background or when the view will be dismissed from the screen.
+
+#####  SDK Availability:
+* Android - 5.10.2
+* iOS: 4.5.8
+
+#####  Implementation:
+Add the following to your javascript file:
+```
+function onAPWebViewPause() {
+	<some code>
+}
+```
