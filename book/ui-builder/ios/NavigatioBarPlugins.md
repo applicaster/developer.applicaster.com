@@ -1,5 +1,5 @@
 ##Navigation Bar Plugin
-This document describes general logic of the Navigation Bar Plugin structure
+This plugin provides a navigation structure and UI at the top of the application. It is placed on top of the `root plugin` and directs navigation behavior.
 
 1. <a href="#description">Description</a>
 2. <a href="#general">General behaviours</a>
@@ -22,8 +22,7 @@ This document describes general logic of the Navigation Bar Plugin structure
 This is a plugin that provides top navigation strucrure of the application and placed on top of the `Root plugin` and provides navigation behaviour.
 ![NavigationBarGeneral.png](./Files/NavigationBarGeneral.png)
 
-Navigation bar can be customized in the UI builder in Navigation section.
-Customized navigatio navigation bar will be availible in `river.json` on each screen.
+The navigation bar can be customized in the UI Builder via the Navigation section, illustrated below. The customized navigation bar will be available on each screen via the `river.json`.
 
 ![NavBarCustomization.png](./Files/NavBarCustomization.png)
 ***
@@ -32,26 +31,23 @@ Customized navigatio navigation bar will be availible in `river.json` on each sc
 
 ##### General behaviours
 
-Navigation bar plugin provides general features that will be implemented in any plugin of this type
+The navigation bar plugin provides general features which will be implemented in any plugin of this type.
 
 ######Customization per screen
-Navigation bar can be customized per screen. It will give ability to use different settings for each screen regarding customer needs.
-Behind the scenes when user select new screen, application will send notification to update navigation bar title and navigation bar model.
+The nagivation bar can be customized per screen. This gives the ability to use different settings for each screen as it relates to the customer’s needs. Behind the scenes, when the end-user selects a new screen, the application will send a notification to update the navigation bar title and navigation bar model.
 
-__Note__ Screens that has not navigation model like white label screen kind of `Settings` and `Epg`. Will use navigation model from the `Home` screen.
+Note: Screens which do not have the navigation model (like white label screens including `Settings` and `Epg`. Will use navigation model from the `Home` screen.
 
-`Home` screen can be defined in UI Builder in Screen secttion
+The `Home` screen can be defined in the UI Build in the Screen section, as illustrated below.
 ![Home.png](./Files/Home.png)
 
 ######Navigation bar view style.
-Navigation bar can have diffenrent styles. It means it can have different layout for that user can select.
-
+The navigation bar can have different styles. The Zapp user can select the layout for the style they’d like.
 
 ######Presentation state
-This feature defines placements of the `Navigation Bar View` according `Root Plugin`.
-More details in <a href="#api">UIBuilder Api</a> and  <a href="#generalNavBarPlugin">UI Builder general navigation bar</a> section.
+This feature defines placements of the Navigation Bar View according to the Root Plugin. More details can be found in the documentation on  <a href="#api">UIBuilder Api</a> and  <a href="#generalNavBarPlugin">UI Builder general navigation bar</a> section.
 
-__Note:__  All white label screen kind of `Settings` and `Epg`. Will use `state`: `OnTop` to avoid possible support issues.
+__Note__: All white label screens (such as `Settings` and `EPG` will use the state: OnTop to avoid possible support issues.
 
 Example:
 1. __On top__
@@ -61,8 +57,7 @@ Example:
 ![NavigationBarStates.png](./Files/NavigationBarStates.png)
 
 ######Presentation style
-This feture allow to navigation bar present Logo or title per screen
-More details in <a href="#api">UIBuilder Api</a> and <a href="#generalNavBarPlugin">UI Builder general navigation bar</a> section.
+This feature allows the navigation bar to present Logo or Title differently on the screen level. More details can be found in the documentation on <a href="#api">UIBuilder Api</a> and <a href="#generalNavBarPlugin">UI Builder general navigation bar</a>.
 
 Examples:
 
@@ -76,27 +71,24 @@ __Hidden__
 ![NavigationBarNoLogoTitle.png](./Files/NavigationBarNoLogoTitle.png)
 
 ######Backgound view
-Navigation bar plugin provides to add customization of the background.
-Currently availible 2 types of background view presentation. `Color` and `Image`
+The Navigation bar plugin also enables customization of the background. Currently, there are two types of background view presentations available: `Color` and `Image`.
 
-__Note:__ In the __UI Builder__ will be availible selection only one of this item `Color` or `Image`
-but developer will get both keys if was defined. In this case items must be used in prority.
-`Image` has bigger priority from `Color`. During implamentation new plugins important to use same scenario.
+__Note__: In the UI Builder, the Zapp user will only have one of these options available, but the plugin developer will get both keys if it was defined in the development of the plugin. In this case, items must be used according to their priority. Image has a higher priority than Color. During implamentation new plugins important to use same behaviour.
 
 ######Context buttons
-Context buttons - buttons that contorol screen or root natvigation. Context button is not controlling by user but in implamentation of new plugins all this buttons must be implemented.
+Context buttons are buttons which control the screen or root navigation. Context buttons are not controlled by the user, but all these buttons must be implemented in the development of new plugins.
 
-1. `Menu button` or `Special button` This button if enabled send's to `Root` plugin action that root must call some specific `Root` behaviour.  __Please Note:__ This button will be visible only if `Root` plugin implemented protocol of this button other wise it will be hidden. Please note it during developer of the new `nav bar` plugins.
+1. `Menu button` or `Special button`. This button, if enabled, sends to Root plugin the action that root must call some specific Root behaviour. Please Note: This button will be visible only if Root plugin implemented protocol of this button, otherwise it will be hidden. Please be aware of this when developing new nav bar plugins.
 
 2. `Back button` This button becames visible when user `push` ViewController to current nav bar stack view and direct user to previous ViewController.
 
-3. `Close button` This button become visible when user present screen from `nav bar`. Push on this button will allow to close presented view controller and come back to previous stack. For more details please read about `Navigation Buttons`
+3. `Close button` this button becomes visible when user presents a screen from the nav bar. Pushing on this button will close the presented view controller and come back to the previous stack. For more details please read about `Navigation Buttons`
 
-__Please Note:__ Context buttons can be visible only one type on screen.
+__Please Note__: Only one type of context button can be visible per screen.
 ######Navigation Buttons
-This buttons responsible for navigation items that make presentation - present generic screen, open url, open whitelabel screen and etc
+This button is responsible for navigation items tat make presentation - present generic screen, open url, open white label screen, etc.
 
-Number of the `navigation buttons` defined in the UI Builder but style of the navigation bar may have limitation not to allow to show more button that can be suitable inside view.
+The number of `navigation button` is defined in the UI Builder, but the style of the navigation bar may create a limitation which would not allow to show more than one button within the suitable view.
 
 ![NavigationItemsAdd.png](./Files/NavigationItemsAdd.png)
 
@@ -111,7 +103,7 @@ Availible Navigation Buttons:
 | Feed        | Opens Feed component        | applicaster_feed       | FeedNavigationButton       |
 | Chromecast  | Opens Cromecast player      | chromecast             | ChromecastNavigationButton |
 
-__Please Note__ Different buttons are using different classes and logic of it can be different
+__Please Note__: Different buttons use different classes, so the logic of each can be different.
 ***
 
 <a name="protocol" />
@@ -126,11 +118,11 @@ __Please Note__ Different buttons are using different classes and logic of it ca
 
 ##### Navigation Bar Manager
 
-Navigation bar manager is class that controlling work of the `Navigation Bar` plugin adapters.
+The navigation bar manager is a class which controls the work of the `Navigation Bar` plugin adapaters
 
-Navigation bar manager will resieve calls from nav bar adapter to make action form navagtion button and etc. Developing new nav bar plugin no need to implement all this calls just send information to the `GANavigationBarManager`.
+The navigation bar manager will receive calls from the nav bar adapter to take an action from a navigation button. There is no need to implement all of these calls when developing a new nav bar plugin; simply send the information to the `GANavigationBarManager`
 
-NavigationBarManager has mechanizm creation of the screens that was created from navbar, when user push on Navigation Button.
+NavigationBarManager has a mechanism for creating the screens that were generated when an end-user pushed on a Navigation Button from the navbar.
 
 ######ZPNavigationBarManagerDelegate
 

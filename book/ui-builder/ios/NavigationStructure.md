@@ -1,6 +1,5 @@
 ### Motivation
-This document is explaining general structure of the workflow that Zapp-iOS is using during initialization proccess.
-It helps to understand how Root container view controller cooperate with navigation bar plugin and root menu plugin.
+This document explains the general structure of the workflow that Zapp-iOS is using during the initialization process. It aims to help understand how the Root container view controller cooperates with navigation bar plugins and root menu plugins.
 
 ### Zapp-iOS Root Navigation Flow
 
@@ -38,7 +37,7 @@ This state is used to present `Root adapter` and `Navigation Bar` plugins inside
 
 __Note__:
 1. Since GARootViewContainerController is first item for the application, if you need present any View Controller. Please add VC that you need to add on top of GARootViewContainerController not `Root adapter` plugin.
-2. This component controls the background color of status bar. Do not implement status bar background on root adapter side. This behavior could be implemented in app connector delegate.
+2. This component controls the background color of the status bar. Do not implement the status bar background on the side of the root adapter. This behavior should be implemented in the app connector delegate.
 
 ######Presentation State:
 
