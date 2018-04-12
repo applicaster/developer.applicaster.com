@@ -1,6 +1,6 @@
 ##Rivers.json
-This file defines Zapp rivers JSON API.
-The API represents the layout composition of the app, including navigations, screens and components
+This file describes the Rivers JSON API used by Zapp.
+This is used to define the layout composition of the app (including navigations, screens, and components)
 
 __Link template:__ https://assets-secure.applicaster.com/zapp/accounts/ `account_id`/apps/`bundle_identifier`/apple_store/`app_version`/rivers/rivers.json
 
