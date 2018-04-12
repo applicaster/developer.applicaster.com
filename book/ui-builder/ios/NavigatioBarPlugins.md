@@ -36,7 +36,7 @@ The navigation bar plugin provides general features which will be implemented in
 ######Customization per screen
 The nagivation bar can be customized per screen. This gives the ability to use different settings for each screen as it relates to the customer’s needs. Behind the scenes, when the end-user selects a new screen, the application will send a notification to update the navigation bar title and navigation bar model.
 
-Note: Screens which do not have the navigation model (like white label screens including `Settings` and `Epg`. Will use navigation model from the `Home` screen.
+__Note:__ Screens which do not have the navigation model (like white label screens including `Settings` and `Epg`) will use the navigation model from the Home screen.
 
 The `Home` screen can be defined in the UI Build in the Screen section, as illustrated below.
 ![Home.png](./Files/Home.png)
@@ -47,7 +47,7 @@ The navigation bar can have different styles. The Zapp user can select the layou
 ######Presentation state
 This feature defines placements of the Navigation Bar View according to the Root Plugin. More details can be found in the documentation on  <a href="#api">UIBuilder Api</a> and  <a href="#generalNavBarPlugin">UI Builder general navigation bar</a> section.
 
-__Note__: All white label screens (such as `Settings` and `EPG` will use the state: OnTop to avoid possible support issues.
+__Note__: All white label screens (such as `Settings` and `EPG`) will use the state: OnTop to avoid possible support issues.
 
 Example:
 1. __On top__
