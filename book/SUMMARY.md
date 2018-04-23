@@ -6,7 +6,7 @@
     * [Zappifest Tool](/zappifest/zappifest.md)
 
 ## Feeds (Data Source Plugins)
-* [DataSource  API] (/Zapp-DataSource/Home.md)
+* [DataSource  API](/Zapp-DataSource/Home.md)
     * [DataSource Schema](/Zapp-DataSource/0.-Schema.md)
     * [How to Validate](/Zapp-DataSource/1.-Validate.md)
     * [Debugging DataSource ](/Zapp-DataSource/Debugging/Home.md)
