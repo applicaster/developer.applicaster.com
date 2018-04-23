@@ -1,0 +1,288 @@
+{
+    "someid": "http://schema.applicaster.com/datasource/v1",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+        "Id": {
+            "anyOf": [
+                { "type":"string"},
+                { "type":"number"}
+            ]
+        },
+        "MediaItem": {
+            "additionalProperties": false,
+            "properties": {
+                "type":     { "type": "string", "enum": ["image", "audio","video", "detailed-view", "thumbnail"] },
+                "src":      { "$ref": "#/definitions/Uri" },
+                "key":      { "type": "string" },
+                "scale":    { "type": "string", "enum": ["small", "large"] }
+            },
+            "required": ["key", "type"]
+        },
+        "MediaGroup": {
+            "additionalProperties": false,
+            "properties": {
+                "type": { "type": "string", "enum": ["image", "audio","video", "detailed-view", "thumbnail"] },
+                "media_item": { 
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MediaItem"
+                    }
+                }
+            }
+        },
+        "Author": {
+            "properties": {
+                "name": { "type": "string" }
+            },
+            "required": ["name"]
+        },
+        "Uri": {
+            "type": "string",
+            "format": "uri"
+        },
+        "DateRFC": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T(\\d{2}:{0,1})+([+/-]\\d\\d):?(\\d\\d)$"
+        },
+        "Extensions" : {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "Link": {
+            "anyOf": [
+              {
+                "properties": {
+                    "type": { "type": "string", "enum": ["text/html"] },
+                    "rel": { "type": "string", "enum": ["alternate"]  },
+                    "href": { "$ref": "#/definitions/Uri" }    
+                  }
+              },
+              {
+                "properties": {
+                  "type": { "type": "string", "enum": ["atom"] },
+                  "rel": { "type": "string", "enum": ["self"]  },
+                  "href": { "$ref": "#/definitions/Uri" }    
+                }
+              },
+              {
+                "properties": {
+                  "href": { "$ref": "#/definitions/Uri"},
+                  "type": {"type": "string", "enum": ["link"]}
+                }
+              }
+            ]
+        },
+        "ArticleContent": {
+            "additionalProperties": false,
+            "properties": {
+                "type": { "type": "string", "enum": ["html"] },
+                "content": { "type": "string" }
+            },
+            "required": [ "type", "content" ]
+        },
+        "ArticleEntry" : {
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "properties": {
+                        "value": { "type": "string", "enum": ["article"] }
+                    },
+                    "required": ["value"]
+                },
+                "id": { "$ref": "#/definitions/Id" },
+                "author": { "$ref": "#/definitions/Author" },
+                "title": { "type": "string" },
+                "summary": { "type": "string" },
+                "published": { "$ref": "#/definitions/DateRFC" },
+                "updated": { "$ref": "#/definitions/DateRFC" },
+                "media_group": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MediaGroup"
+                    }
+                },
+                "link": { "$ref": "#/definitions/Link" },
+                "content": { "$ref": "#/definitions/ArticleContent" },
+                "extensions": { "$ref": "#/definitions/Extensions" }
+            },
+            "required": ["type", "id", "author", "title", "summary", "content", "published"]
+        },
+        "ArticleElement" : { "additionalProperties": false, "$ref": "#/definitions/ArticleEntry" },
+        "VideoContent": {
+            "additionalProperties": false,
+            "properties": {
+                "type": { "type": "string", "enum": ["video/hls", "youtube-id"] },
+                "src": { "$ref": "#/definitions/Uri" }    
+            },
+            "required": [ "type", "src" ]
+        },
+        "ChannelContent": {
+            "additionalProperties": false,
+            "properties": {
+                "type": { "type": "string", "enum": ["video/hls"] },
+                "src": { "$ref": "#/definitions/Uri" }
+            },
+            "required": [ "type", "src" ]
+        },
+        "ProgramContent": {
+            "additionalProperties": false,
+            "properties": {
+                "type": { "type": "string", "enum": ["program"] }
+            },
+            "required": [ "type" ]
+        },
+        "VideoEntry" : {
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "properties": {
+                        "value": { "type": "string", "enum": ["video"]}
+                    },
+                    "required": ["value"]
+                },
+                "id": { "$ref": "#/definitions/Id" },
+                "author": { "$ref": "#/definitions/Author" },
+                "title": { "type": "string" },
+                "summary": { "type": "string" },
+                "published": { "$ref": "#/definitions/DateRFC" },
+                "updated": { "$ref": "#/definitions/DateRFC" },
+                "media_group": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MediaGroup"
+                    }
+                },
+                "content": { "$ref": "#/definitions/VideoContent" },
+                "extensions": { "$ref": "#/definitions/Extensions" }
+            },
+            "required": ["type", "id", "title", "content"]
+        },
+        "ChannelEntry" : {
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "properties": {
+                        "value": { "type": "string", "enum": ["channel"]}
+                    },
+                    "required": ["value"]
+                },
+                "id": { "$ref": "#/definitions/Id" },
+                "author": { "$ref": "#/definitions/Author" },
+                "title": { "type": "string" },
+                "summary": { "type": "string" },
+                "published": { "$ref": "#/definitions/DateRFC" },
+                "updated": { "$ref": "#/definitions/DateRFC" },
+                "media_group": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MediaGroup"
+                    }
+                },
+                "content": { "$ref": "#/definitions/ChannelContent" },
+                "extensions": { "$ref": "#/definitions/Extensions" }
+            },
+            "required": ["type", "id", "title", "content"]
+        },
+        "VideoElement" : { "additionalProperties": false, "$ref": "#/definitions/VideoEntry" },
+        "ProgramEntry" : {
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "properties": {
+                        "value": { "type": "string", "enum": ["program"]}
+                    },
+                    "required": ["value"]
+                },
+                "id": { "$ref": "#/definitions/Id" },
+                "author": { "$ref": "#/definitions/Author" },
+                "title": { "type": "string" },
+                "summary": { "type": "string" },
+                "published": { "$ref": "#/definitions/DateRFC" },
+                "updated": { "$ref": "#/definitions/DateRFC" },
+                "media_group": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MediaGroup"
+                    }
+                },
+                "content": { "$ref": "#/definitions/ProgramContent" },
+                "extensions": { "$ref": "#/definitions/Extensions" }
+            },
+            "required": ["type", "id", "title", "content"]
+        },
+        "ProgramElement" : { "additionalProperties": false, "$ref": "#/definitions/ProgramEntry" },
+        "ChannelElement" : { "additionalProperties": false, "$ref": "#/definitions/ChannelEntry" },
+        "LinkEntry" : {
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "value": { "type": "string", "enum": ["link"]}
+                    },
+                    "required": ["value"]
+                },
+                "id": { "$ref": "#/definitions/Id" },
+                "title": { "type": "string" },
+                "link": { "$ref": "#/definitions/Link" },
+                "extensions": { "$ref": "#/definitions/Extensions" }
+            },
+            "required": ["type", "id", "title", "link"]
+        },
+        "LinkElement" : { "additionalProperties": false, "$ref": "#/definitions/LinkEntry" },
+        "FeedContent": {
+            "additionalProperties": false,
+            "properties": {
+                "src": { "$ref": "#/definitions/Uri" }    
+            },
+            "required": [ "src" ]
+        },
+        "FeedElement": {
+            "allOf": [
+                {
+                    "additionalProperties": true,
+                    "properties": {
+                        "id": { "$ref": "#/definitions/Id" },
+                        "title": { "type": "string" },
+                        "type": {
+                            "properties": {
+                                "value": { "type": "string", "enum": ["feed"]}
+                            },
+                            "required": ["value"]
+                        }
+                    },
+                    "required": ["type"]
+                }    
+            ],
+            "oneOf":[
+                {
+                    "properties": {
+                        "entry": {
+                            "type": "array",
+                            "items": {
+                                "anyOf": [
+                                    { "$ref": "#/definitions/FeedElement" },
+                                    { "$ref": "#/definitions/ArticleElement" },
+                                    { "$ref": "#/definitions/VideoElement" },
+                                    { "$ref": "#/definitions/LinkElement" },
+                                    { "$ref": "#/definitions/ProgramElement" },
+                                    { "$ref": "#/definitions/ChannelElement" }
+                                ]
+                            }
+                        }
+                    },
+                    "required": ["entry"]
+                },
+                {
+                    "properties": {
+                        "content": { "$ref": "#/definitions/FeedContent" }
+                    },
+                    "required": ["content"]
+                }
+            ]
+        }
+    },
+    "anyOf": [
+        { "$ref": "#/definitions/FeedElement" }
+    ]
+}
