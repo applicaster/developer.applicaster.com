@@ -1,5 +1,5 @@
 {
-    "someid": "http://schema.applicaster.com/datasource/v1",
+    "someid": "http://schema.applicaster.com/zapp-pipes-feed/v1",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "definitions": {
         "Id": {
