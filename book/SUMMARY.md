@@ -6,10 +6,9 @@
     * [Zappifest Tool](/zappifest/zappifest.md)
 
 ## Feeds (Data Source Plugins)
-* [DataSource  API](/Zapp-DataSource/Home.md)
-    * [DataSource Schema](/Zapp-DataSource/0.-Schema.md)
-    * [How to Validate](/Zapp-DataSource/1.-Validate.md)
-    * [Debugging DataSource ](/Zapp-DataSource/Debugging/Home.md)
+* [Feed Schema](/Zapp-Feed/Home.md)
+    * [Schema](/Zapp-Feed/0.-Schema.md)
+    * [Validation](/Zapp-Feed/1.-Validate.md)
 * [Zapp Pipes](/Zapp-Pipes/Home.md)
     * [Prerequisites](/Zapp-Pipes/0.-Prerequisites.md)
     * [Setting up the environment](/Zapp-Pipes/1.-Set-up.md)
@@ -21,6 +20,7 @@
     * [How to connect the provider to the app](/Zapp-Pipes/7.-Connect-to-Zapp.md)
     * [Step by step tutorial](/Zapp-Pipes/provider-stepbystep.md)
     * [Examples](/Zapp-Pipes/8.-Examples.md)
+    * [Debugging](/Zapp-Pipes/10.-Debugging.md)
 
 ## Screens (UI Builder)
 * [Zapp UI Builder](/ui-builder/intro.md)
