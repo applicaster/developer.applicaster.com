@@ -23,8 +23,9 @@ Structure example below:
 <a name="states" />
 
 
-Note: When`UI Builder Navigation Bar` on Zapp app version general settings enabled, Navigation bar will take status bar container space and status bar container will be removed. In this case there is no need to configure the status bar separately.
+Note: Use`UI Builder Navigation Bar` on Zapp app version general settings enabled, Navigation bar will take status bar container space and status bar container will be removed. In this case there is no need to configure the status bar separately.
 If Use UI Builder Navigation Bar is disabled, status bar container will be shown, status bar container and navigation bar should be configured separately in the Zapp app version general settings. I would add a screenshot
+![EnableCustomRootBehaviour.png](./Files/EnableCustomRootBehaviour.png)
 
 ![RootViewContainerStructure.png](./Files/StatusBarChanges.png)
 
