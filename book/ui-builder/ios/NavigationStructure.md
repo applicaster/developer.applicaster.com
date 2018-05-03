@@ -14,7 +14,7 @@ This document explains the general structure of the workflow that Zapp-iOS is us
 <a name="rootViewContainer" />
 #####GARootViewContainerController
 Zapp-iOS is using main component View Controller `GARootViewContainerController`.
-This Component is used to present `Navigation Bar` plugin and `Root` plugin and `Status bar background` container.
+This Component is used to present Navigation Bar plugin, Root plugin and Status bar background container.
 
 Structure example below:
 
@@ -23,13 +23,10 @@ Structure example below:
 <a name="states" />
 
 
-Note: If in general setting of application version in zapp back end will be selected key `Use UI Builder Navigation Bar` = `true`.
-Navigation bar will take status bar container space and status bar container will be removed. In this case no need to configure status bar seperatly.
-
-In case if this key will be disabled, status bar container will be shown and navigation bar will use old logic, meaning status bar container and navigation barr need to configuered seperatly in the Zapp website.
+Note: When`UI Builder Navigation Bar` on Zapp app version general settings enabled, Navigation bar will take status bar container space and status bar container will be removed. In this case there is no need to configure the status bar separately.
+If Use UI Builder Navigation Bar is disabled, status bar container will be shown, status bar container and navigation bar should be configured separately in the Zapp app version general settings. I would add a screenshot
 
 ![RootViewContainerStructure.png](./Files/StatusBarChanges.png)
-
 
 ##### Availible states:
 

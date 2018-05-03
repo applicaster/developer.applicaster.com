@@ -33,9 +33,8 @@ The navigation bar can be customized in the UI Builder via the Navigation sectio
 
 The navigation bar plugin provides general features which will be implemented in any plugin of this type.
 
-######Status bar container part of the navigation bar
-Old logic of the status bar container was removed. Navigation bar takes part of status bar container, this approach will help to reduce customization of the status bar color.
-Such way navigation bar background or navigation bar background image will be part of status bar, that will give ability for organical customization.
+#####Status bar
+The Status Bar is part of the Navigation Bar container, and will use the same styling (background color or image) as the navigation bar.
 ![StatusBarChanges.png](./Files/StatusBarChanges.png)
 
 
