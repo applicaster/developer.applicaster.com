@@ -1,4 +1,4 @@
-##Root Menu Plugin
+##Root Menu Plugin infrastructure
 This plugin provides a main navigation structure for the application.
 
 1. <a href="#description">Description</a>
@@ -7,7 +7,7 @@ This plugin provides a main navigation structure for the application.
 4. <a href="#helperClasses">Helper classes</a>
 4. <a href="#protocol">Protocols</a>
 5. <a href="#api">UIBuilder Api</a>
-6. <a href="#createMenuPlugin">Creation new Root Menu plugin</a>
+6. <a href="#createMenuPlugin">How to create a new Root menu plugin</a>
 	* <a href="#devEnv">How to prepare development environment</a>
 	* <a href="#howToTest">How to test</a>
 
@@ -16,11 +16,9 @@ This plugin provides a main navigation structure for the application.
 <a name="description" />
 
 ##### Description
-This plugin provides a main navigation structure for the application. It provides main ui to present screen screen it takes whole availible space of application container + it can control navigation bar view if implemented specific protocol that will be explained below.
-Root plugin provides navigation behaviour to present prepared screens.
+Root navigation plugins are the main navigation of the app. It provides a UI present different screens. Each screen will fill the provided application container, and can control navigation bar view.
 
-
-The Root menu can be customized in the UI Builder via the Navigation section, illustrated below. The customized navigation bar will be available on each screen via the `river.json`.
+The Root menu can be customized in the UI Builder via the Navigation section, illustrated below. The customized navigation bar will be available on each screen as part of zapp rivers api.
 
 ![menuUIBuilder.png](./Files/menuUIBuilder.png)
 ***
@@ -29,40 +27,97 @@ The Root menu can be customized in the UI Builder via the Navigation section, il
 
 ##### General behaviours
 
-The root menu plugin provides general features which will be implemented in any plugin of this type.
+The Root menu plugin infrastructure  provides general features which will be implemented in any plugin of this type.
 
 ######Plugin creation
 By default logic during creation of root menu. `ZPRootPluginFactory` will try to create first `menu` plugin from `plugins.json` that availible.
 
-Note: This behaviour will be default in future
-If enabled in general setting of the app key `Use UI Builder Root API`.
-Application will get first `menu` plugin from the `home` screen navigations and take it identifier. Next phase `ZPRootPluginFactory` will try to find `menu` plugin with specific identifier in `plugins.json`. If it will not find it will try to use current default logic
+When enabling Use `UI Builder Root API` flag on App version general settings, the application will try to populate the first occurrence of Navigation in the home river as defined in Zapp rivers api.
+Application will get first `menu` plugin from the `home` screen navigations and take it identifier. After doing so `ZPRootPluginFactory` will try to find `menu` type plugin within Zapp plugin configurations API with the identifier specified on rivers API. If it will not find it will try to use current default logic
 ![EnableCustomRootBehaviour.png](./Files/EnableCustomRootBehaviour.png)
 
+Example:
+__Note:__ Some unnecessary items was removed from example
+__Plugin json:__ Field, we need `identifier`
+```
+[
+    {
+        "plugin": {
+            "api": {
+                "class_name": "ZappRootPlugins.ZPTwoLevelRNViewController",
+            },
+
+            "dependency_name": "ZappRootPlugins/TwoLevelRNMenu",
+            "dependency_version": "3.2.0",
+            "identifier": "side_menu",
+            "manifest_version": "0.4.0",
+            "name": "2-Level Menu",
+            "type": "menu",
+        }
+    },
+    {
+	"plugin": {
+		"api": {
+			"class_name": "ZappRootPlugins.ZPTwoLevelRNViewController",
+		},
+
+		"dependency_name": "ZappRootPlugins/TwoLevelRNMenu",
+		"dependency_version": "3.2.0",
+		"identifier": "two_level_rn_menu",
+		"manifest_version": "0.4.0",
+		"name": "2-Level Menu",
+		"type": "menu",
+	}
+]
+```
+
+__Rivers json:__ Field, we need `navigation_type`
+```
+[
+    {
+        "home": true,
+        "id": "87706774-8436-4273-87bd-9a5cfa9f37ff",
+        "name": "Home",
+        "navigations": [{
+                "category": "menu",
+                "id": "736c94c4-f5ca-4edf-83fe-969591f688b8",
+                "name": "2-Level Menu",
+                "nav_items": [...navigation items],
+                "navigation_type": "two_level_rn_menu"
+            }],
+        "styles": {
+            "family": "FAMILY_1"
+        },
+        "type": "general_content",
+        "ui_components": [...ui components]
+    }
+]
+```
+
+__Result:__ In this example, plugin with identifier `side_menu` will be ignored. Application will take plugin with identifier `two_level_rn_menu`.
+
 ######Home screen
-Each application have a `home screen`. This screen means main screen of the application and will use custom rules regarding other plugins.
+Each app has home screen defined in rivers API (Please add example). The home screen is the main screen of the application and will use custom rules regarding other plugins.
 In `menu` plugin this screen must be presented as first screen of the application.
-Can be founded in `ZLScreenModel` in `isHomeScreen` property in `river.json` a key for it `"home": false`. Please check [Rivers.json](Rivers.md) documentation for more details and <a href="#datasource">Data Source</a> section for understanding data source creation.
+The home key appears as a boolean in the api and in used in `ZLScreenModelas` in `isHomeScreen` property in `river.json` a key for it `"home": false`. Please check [Rivers.json](Rivers.md) documentation for more details and <a href="#datasource">Data Source</a> section for understanding data source creation.
 
 ######Controlling of the navigation bar view
 By default navigation bar container is controlling by `GARootViewContainerController`.
-If new navigation bar has simple structure, developer can use default behaviour.
 
-But in some cases with complicated UI or other problems. Root menu need to control `navigationBarView`. In this case developer should implement protocol `ZPRootViewContainerControllerDelegate`. If root menu conforming this protocol  `GARootViewContainerController` will delegate all logic configure navigation bar view on the root menu.
+In some cases (complicated UI or other specifications where the root menu needs to controlnavigationBarView, `ZPRootViewContainerControllerDelegate` protocol should be implemented. When doing so, `GARootViewContainerController` will delegate all configuration logic of navigation bar view to the root menu.
 In this case developer __must__ implement all cases to support default behavoiurs of the nav bar, like `presentation_type` (on_top or overlay).
 For more deatails please check documentation of the nav bar plugin
 
 ![NavigationBarStates.png](./Files/NavigationBarStates.png)
 
 ######Menu button or special button
-Some menu plugins need to support cooperation with navigation bar.
-Example: Menu button on nav bar will send action to `root menu` to present side menu
+Some menu plugins will require communication with `Navigation Bar`.
+__Example:__ Menu button on nav bar will send action to `root menu` to present side menu
 
-This optional behavoir, if menu plugin need this connection with navigation bar plugin,
-menu button must be implemented on plugin level method `performSpecialAction:` part of protocol `ZPAdapterRootProtocol`.
-If this method will be implemented nav bar will present menu button in place where in was defined in style of the navigation bar
+This behavior is optional. When a plugin wants to communicate with the `Navigation Bar` plugin, the menu button must implement `performSpecialAction:` (part of `ZPAdapterRootProtocol`).
+If the method was implemented, `Navigation Bar` will present the menu button in the place that was defined in the Navigation Bar Style
 
-__Please Note__: At that moment Api supports only one button of this type.
+__Please Note__: Api supports only one button of this type.
 
 ######Customization per screen
 The root menu can be customized per screen. This gives the ability to use different settings for each screen as it relates to the customer’s needs. Behind the scenes, when the end-user selects a new screen, the application will send a notification to update the navigation bar title and navigation bar model.
@@ -97,9 +152,9 @@ __Please Note__: `Menu` developer responsibility to add supportted navigation it
 
 <a name="protocol" />
 ##### Protocols
-`ZPAdapterRootProtocol` - This protocol defines main interface for Root Menu, each menu plugin must conform this protocol.
+`ZPAdapterRootProtocol` - This protocol defines main interface for Root Menu, each menu plugin should implement the protocol.
 
-`ZPRootViewContainerControllerDelegate` - This protocol defines interface to use presentation for nav bar view. If this procol will be implemented, `GARootViewContainerController` will not implement navigation bar logic, and menu plugin will responsible to control it, itself.
+`ZPRootViewContainerControllerDelegate` - This protocol defines interface to use presentation for nav bar view. If this protocol will be implemented, `GARootViewContainerController` will not implement navigation bar logic, and menu plugin will responsible to control it.
 
 ***
 
@@ -107,26 +162,26 @@ __Please Note__: `Menu` developer responsibility to add supportted navigation it
 
 ##### Helper Classes
 
-Root menu plugin can use helper classes that hellps to use generic behaviour for all menu plugins. Such classes will be described bellow
+Root menu plugin can use helper classes that helps to use generic behaviour for all menu plugins. Such classes will be described bellow
 
 ######ZappAppConnector
-This framework provide bridge between application and plugin. It can be used to get any information from plugin.
+This library provide bridge between application and plugin. It can be used to get any information from plugin.
 To use it call `ZAAppConnector.sharedInstance()` and select protocol type what you want to use.
 __Note:__ Each plugin and each native framework visible `ZAAppConnector` so it can be called almost from any place of the application.
 
 ######GARootHelper
-This class is bridge between `menu` plugin and rest of application. Each action that application need send to `menu` plugin will be send to `GARootHelper` and then `GARootHelper` will send action to `root menu` plugin
+This class is bridge between `menu` plugin and rest of application. Each action that the application needs to send to `menu` plugin will be send to `GARootHelper` and then `GARootHelper` will send action to `root menu` plugin
 
 ######GAViewControllerFactory
-This class is using to create view controller from ZLNavigationItems that will crate screen.
+This is class is responsible to create create view controller from ZLNavigationItems that will create each screen.
 ` class open func viewController(fromNavigationItem navigationItem:Any) -> UIViewController?` - Call this method to retrive ViewController from ZLNavigationItem.
 
 <a name="api" />
 
-To make more understanding of this section please review: [Rivers.json API](Rivers.md)
+To make more understanding of this section Please read: [Rivers.json API](Rivers.md) for more details
 
 Navigation Bar api placed in `navigations` array inside `screen model`
-`category` - of the navigation model is define navigation model type. Navigation model has type `nav_bar`
+The `category` - of the navigation model is defined in navigation model. Navigation model type is `nav_bar`
 
 Example:
 ```
@@ -192,24 +247,24 @@ Example:
 ***
 
 <a name="createMenuPlugin" />
-##### Creation new Root Menu plugin
+##### How to create a new Root menu plugin
 
 #### ZappRootPlugins
 1. Create target for your new plugin `MyAwesomeRootPluginPlugin`
-2. Inside your tartget folder add files that you will want to use.
-3. Add your target as `dependency` to `BuildAll` target. It will be needed to create crosed sdk.
+2. Inside your target folder add files that you will want to use.
+3. Add your target as `dependency` to `BuildAll` target. A closed SDK should be created.
 ![navBarPluginDependency.png](./Files/navBarPluginDependency.png)
-4. Add in `pofile` new target for building with all relevant dependencies. Please look example of `Base` target in podfile
+4. Add in `pofile` new target for building with all relevant dependencies. Please look for `Base` target as an example.
 5. Add in `ZappRootPlugins.podspec` and `ZappRootPlugins-Dev.podspec` subspec of your new plugin.
-6. Implement navigation root menu plugin, according remars provided in this document.
-7. Make sure that menu adapter will conform protocol `ZPAdapterRootProtocol` that you can use.
-8. If you menu plugin wants to control navigation bar view behaviour, make sure that you will implement `ZPRootViewContainerControllerDelegate`
-9. If you need to suppor `menu button` make sure that method of `ZPAdapterRootProtocol` is implemented `performSpecialAction:`
-10. When code will be ready. Write unit-tests.
+6. Implement your plugin according to the above mentioned guide.
+7. Make sure `menu` adapter implements `ZPAdapterRootProtocol`.
+8. If you menu plugin wants to control navigation bar view behaviour, make sure that you will implement your `ZPRootViewContainerControllerDelegate`
+9. If you need to support `menu button` make sure that method of `ZPAdapterRootProtocol` is implemented `performSpecialAction:`
+10. Write unit tests - if someone wants to use TDD than the test could be written before the code.
 
 ##### UIBuilder
-1. Create manifest for new navigation plugin with plugin type `nav bar`. How to create manifest please check zappifest documentation.
-2. Add supported navigation items for menu, Navigation items types described in this document.
+1. Create manifest for new navigation plugin with plugin type `menu`. How to create manifest please check zappifest documentation.
+2. Add supported navigation items for menu, more detail in <a href="#datasource">Data Source</a> section
 2. Upload manifest to the zapp.
 
 <a name="devEnv" />
@@ -228,9 +283,7 @@ Example:
 ###### How to test
 
 1. Open UI Builder and add your navigation plugin in `navigation` section.
-2. Customize your navigation menu plugin accourding your setting and add navigation buttons.
+2. Customize the menu as desired and add Navigation items.
 3. Copy ID of the application version of your tesing application
-4. Use ZappTool to prepare application environment. (How to work with Zapptool please read zapptool documentation)
-5. If your plugin has dependencies and you are using dev env for navigation plugin. Find in podfile of Zapp-iOS pod with your plugin dependency under `# Zaptool pods - Do not remove or change.` section. It will look something like `pod 'ZappRootPlugins/MyAwesomePlugin', '~> 0.4.1'` and change it to `pod 'ZappRootPlugins/MyAwesomePlugin', :path => 'folderPath/ZappRoot-iOS/ZappRootPlugins-Dev.podspec`. This will remove issue with dependecy conflicts
-
-
+4. Use ZappTool to prepare application environment. (Read Zapptool docs for further information)
+5. If your plugin has dependencies and you are using development environment for navigation plugin, find Zapp-iOS pod in `podfile` with your plugin dependency under `# Zaptool pods - Do not remove or change.` section. It will look something like `pod 'ZappRootPlugins/MyAwesomePlugin', '~> 0.4.1'` and It should be and change it to `pod 'ZappRootPlugins/MyAwesomePlugin', :path => 'folderPath/ZappRoot-iOS/ZappRootPlugins-Dev.podspec`. This will remove issue with dependecy conflicts

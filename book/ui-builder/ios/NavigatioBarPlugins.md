@@ -33,6 +33,11 @@ The navigation bar can be customized in the UI Builder via the Navigation sectio
 
 The navigation bar plugin provides general features which will be implemented in any plugin of this type.
 
+#####Status bar
+The Status Bar is part of the Navigation Bar container, and will use the same styling (background color or image) as the navigation bar.
+![StatusBarChanges.png](./Files/StatusBarChanges.png)
+
+
 ######Customization per screen
 The nagivation bar can be customized per screen. This gives the ability to use different settings for each screen as it relates to the customer’s needs. Behind the scenes, when the end-user selects a new screen, the application will send a notification to update the navigation bar title and navigation bar model.
 
