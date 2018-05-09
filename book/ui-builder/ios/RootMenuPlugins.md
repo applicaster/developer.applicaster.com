@@ -30,8 +30,6 @@ The Root menu can be customized in the UI Builder via the Navigation section, as
 The Root menu plugin infrastructure  provides general features which will be implemented in any plugin of this type.
 
 ######Plugin creation
-By default logic during creation of root menu. `ZPRootPluginFactory` will try to create first `menu` plugin from `plugins.json` that availible.
-
 When enabling Use `UI Builder Root API` flag on App version general settings, the application will try to populate the first occurrence of Navigation in the home river as defined in Zapp rivers api.
 Application will get first `menu` plugin from the `home` screen navigations and take it identifier. After doing so `ZPRootPluginFactory` will try to find `menu` type plugin within Zapp plugin configurations API with the identifier specified on rivers API. If no plugin will be found the current logic will be used.
 ![EnableCustomRootBehaviour.png](./Files/EnableCustomRootBehaviour.png)
