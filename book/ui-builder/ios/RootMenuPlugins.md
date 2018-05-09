@@ -128,7 +128,7 @@ Developer must take `ZLNavigationModel` of the `menu plugin` from `ZLScreenModel
 Plugin `ZLNavigationModel` consist `children` with `ZLNavigationItem` array, that must be parsed and used as data source for `menu` plugin.
 
 ######ZLNavagationItem Types
-In `menu` plugin must be defined types of the navigation items that can be supported by current plugin.
+The `menu` plugin must define the supported navigation items types that could be used by the plugin.
 
 __Please note:__ Each plugin can have different supported naviagation items. As example, Tab bar plugin does not supports `nested_menu` since it does not have ability to present children of the children
 
