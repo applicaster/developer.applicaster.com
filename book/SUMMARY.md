@@ -37,10 +37,13 @@
     * [Components and Cell Styles](/ui-builder/components-and-cell-styles/intro.md)
         * [Video Background Cell](/ui-builder/components-and-cell-styles/cell-styles/video-background-cell.md)
     * [Url Scheme](/ui-builder/scheme/scheme.md)
-    
+
 ## Navigation Bar Plugins
 * [iOS Navigation Bar](/ui-builder/ios/NavigatioBarPlugins.md)
-           
+
+## Root Menu Plugins
+* [iOS Root Menu](/ui-builder/ios/RootMenuPlugins.md)
+
 ## Analytics
 * [Overview](/analytics/overview.md)
 * [Morpheus](/analytics/morpheus/morpheus.md)
