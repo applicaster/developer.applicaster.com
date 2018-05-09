@@ -16,7 +16,7 @@ These plugins provide a main navigation structure for the application.
 <a name="description" />
 
 ##### Description
-Root navigation plugins are the main navigation of the app. They provide a UI present different screens. Each screen will fill the provided application container, and can control navigation bar view.
+Root navigation plugins are the main navigation of the app. They provide a UI to present different screens. Each screen will fill the provided application container, and can control navigation bar view.
 
 The Root menu can be customized in the UI Builder via the Navigation section, as illustrated below. The customized navigation bar will be available on each screen as part of zapp rivers api.
 
@@ -36,7 +36,7 @@ Application will get first `menu` plugin from the `home` screen navigations and 
 
 Example:
 __Note:__ Some unnecessary items were removed from example
-__Plugin json:__ Field, we need `identifier`
+__Plugin json:__ key -`identifier` representation of the `menu` plugin unique id
 ```
 [
     {
@@ -69,7 +69,7 @@ __Plugin json:__ Field, we need `identifier`
 ]
 ```
 
-__Rivers json:__ Field, we need `navigation_type`
+__Rivers json:__ key -`navigation_type` representation of the `menu` plugin unique id
 ```
 [
     {
@@ -102,7 +102,7 @@ The home key appears as a boolean in the api and in used in `ZLScreenModelas` in
 ######Controlling of the navigation bar view
 By default navigation bar container is controlled by `GARootViewContainerController`.
 
-In some cases complicated UI or other specifications where the root menu needs to controlnavigationBarView, `ZPRootViewContainerControllerDelegate` protocol should be implemented. When doing so, `GARootViewContainerController` will delegate all configuration logic of navigation bar view to the root menu.
+In some cases complicated UI or other specifications where the root menu needs to control navigation bar view, `ZPRootViewContainerControllerDelegate` protocol should be implemented. When doing so, `GARootViewContainerController` will delegate all configuration logic of navigation bar view to the root menu.
 In this case developer __must__ implement all cases to support default behavoiurs of the nav bar, like `presentation_type` (on_top or overlay).
 For more deatails please check documentation of the [Nav bar plugin](http://zapp-tech-book.herokuapp.com/ui-builder/ios/NavigatioBarPlugins.html)
 
@@ -130,7 +130,7 @@ Plugin `ZLNavigationModel` consist `children` with `ZLNavigationItem` array, tha
 ######ZLNavagationItem Types
 In `menu` plugin must be defined types of the navigation items that can be supported by current plugin.
 
-__Please note:__ That from each plugin can have different supported naviagation items. As example, Tab bar plugin does not supports `nested_menu` since it does not have ability to present children of the children
+__Please note:__ Each plugin can have different supported naviagation items. As example, Tab bar plugin does not supports `nested_menu` since it does not have ability to present children of the children
 
 ![NavigationItemsAdd.png](./Files/NavigationItemsAdd.png)
 
@@ -145,7 +145,7 @@ Availible Navigation Items for menu:
 | Settings    | Respresentation Settings screen     | applicaster_settings   |
 | Nested Menu | Model that consist nested nav items | nested_menu            |
 
-__Please Note__: `Menu` developer responsibility to add supportted navigation items to plugin manifest
+__Please Note__: It is the `Menu` developer responsibility to add supportted navigation items to plugin manifest
 ***
 
 <a name="protocol" />
@@ -160,7 +160,7 @@ __Please Note__: `Menu` developer responsibility to add supportted navigation it
 
 ##### Helper Classes
 
-Root menu plugin can use helper classes that helps to use generic behaviour for all menu plugins. Such classes will be described bellow
+Root menu plugin can use helper classes that help to use generic behaviour for all menu plugins. Such classes will be described bellow
 
 ######ZappAppConnector
 This library provide bridge between application and plugin. It can be used to get any information from plugin.
