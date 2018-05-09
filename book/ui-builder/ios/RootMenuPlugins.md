@@ -269,12 +269,12 @@ Example:
 
 <a name="devEnv" />
 ###### How to use dev environment
-1. Clone in `youFolderPath` `https://github.com/applicaster/ZappRoot-iOS.git`
+1. Clone in `yourFolderPath` `https://github.com/applicaster/ZappRoot-iOS.git`
 2. In Podfile of Zapp-iOS project remove  line `pod 'ZappRootPlugins', '~> *`
 3. Add in podfile
 ```
-    pod 'ZappRootPluginBase', :path => 'youFolderPath/ZappRoot-iOS/ZappRootPluginBase-Dev.podspec
-    pod 'ZappRootPlugins', :path => 'youFolderPath/ZappRoot-iOS/ZappRootPlugins-Dev.podspec'
+    pod 'ZappRootPluginBase', :path => 'yourFolderPath/ZappRoot-iOS/ZappRootPluginBase-Dev.podspec
+    pod 'ZappRootPlugins', :path => 'yourFolderPath/ZappRoot-iOS/ZappRootPlugins-Dev.podspec'
 ```
 4. This will give ability to create develompent pod of the RootMenuPlugin
 5. Make sure that this test changes will not be merged to Zapp-iOS __This is only for your testing__
@@ -286,4 +286,4 @@ Example:
 2. Customize the menu as desired and add Navigation items.
 3. Copy ID of the application version of your tesing application
 4. Use ZappTool to prepare application environment. (Read Zapptool docs for further information)
-5. If your plugin has dependencies and you are using development environment for navigation plugin, find Zapp-iOS pod in `podfile` with your plugin dependency under `# Zaptool pods - Do not remove or change.` section. It will look something like `pod 'ZappRootPlugins/MyAwesomePlugin', '~> 0.4.1'` and It should be and change it to `pod 'ZappRootPlugins/MyAwesomePlugin', :path => 'youFolderPath/ZappRoot-iOS/ZappRootPlugins-Dev.podspec`. This will remove issue with dependecy conflicts
+5. If your plugin has dependencies and you are using development environment for navigation plugin, find Zapp-iOS pod in `podfile` with your plugin dependency under `# Zaptool pods - Do not remove or change.` section. It will look something like `pod 'ZappRootPlugins/MyAwesomePlugin', '~> 0.4.1'` and It should be and change it to `pod 'ZappRootPlugins/MyAwesomePlugin', :path => 'yourFolderPath/ZappRoot-iOS/ZappRootPlugins-Dev.podspec`. This will remove issue with dependecy conflicts
