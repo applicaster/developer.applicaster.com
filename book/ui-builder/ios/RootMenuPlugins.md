@@ -1,5 +1,5 @@
 ##Root Menu Plugin infrastructure
-This plugin provides a main navigation structure for the application.
+These plugins provide a main navigation structure for the application.
 
 1. <a href="#description">Description</a>
 2. <a href="#general">General behaviours</a>
@@ -16,9 +16,9 @@ This plugin provides a main navigation structure for the application.
 <a name="description" />
 
 ##### Description
-Root navigation plugins are the main navigation of the app. It provides a UI present different screens. Each screen will fill the provided application container, and can control navigation bar view.
+Root navigation plugins are the main navigation of the app. They provide a UI present different screens. Each screen will fill the provided application container, and can control navigation bar view.
 
-The Root menu can be customized in the UI Builder via the Navigation section, illustrated below. The customized navigation bar will be available on each screen as part of zapp rivers api.
+The Root menu can be customized in the UI Builder via the Navigation section, as illustrated below. The customized navigation bar will be available on each screen as part of zapp rivers api.
 
 ![menuUIBuilder.png](./Files/menuUIBuilder.png)
 ***
@@ -33,11 +33,11 @@ The Root menu plugin infrastructure  provides general features which will be imp
 By default logic during creation of root menu. `ZPRootPluginFactory` will try to create first `menu` plugin from `plugins.json` that availible.
 
 When enabling Use `UI Builder Root API` flag on App version general settings, the application will try to populate the first occurrence of Navigation in the home river as defined in Zapp rivers api.
-Application will get first `menu` plugin from the `home` screen navigations and take it identifier. After doing so `ZPRootPluginFactory` will try to find `menu` type plugin within Zapp plugin configurations API with the identifier specified on rivers API. If it will not find it will try to use current default logic
+Application will get first `menu` plugin from the `home` screen navigations and take it identifier. After doing so `ZPRootPluginFactory` will try to find `menu` type plugin within Zapp plugin configurations API with the identifier specified on rivers API. If no plugin will be found the current logic will be used.
 ![EnableCustomRootBehaviour.png](./Files/EnableCustomRootBehaviour.png)
 
 Example:
-__Note:__ Some unnecessary items was removed from example
+__Note:__ Some unnecessary items were removed from example
 __Plugin json:__ Field, we need `identifier`
 ```
 [
@@ -102,11 +102,11 @@ In `menu` plugin this screen must be presented as first screen of the applicatio
 The home key appears as a boolean in the api and in used in `ZLScreenModelas` in `isHomeScreen` property in `river.json` a key for it `"home": false`. Please check [Rivers.json](Rivers.md) documentation for more details and <a href="#datasource">Data Source</a> section for understanding data source creation.
 
 ######Controlling of the navigation bar view
-By default navigation bar container is controlling by `GARootViewContainerController`.
+By default navigation bar container is controlled by `GARootViewContainerController`.
 
-In some cases (complicated UI or other specifications where the root menu needs to controlnavigationBarView, `ZPRootViewContainerControllerDelegate` protocol should be implemented. When doing so, `GARootViewContainerController` will delegate all configuration logic of navigation bar view to the root menu.
+In some cases complicated UI or other specifications where the root menu needs to controlnavigationBarView, `ZPRootViewContainerControllerDelegate` protocol should be implemented. When doing so, `GARootViewContainerController` will delegate all configuration logic of navigation bar view to the root menu.
 In this case developer __must__ implement all cases to support default behavoiurs of the nav bar, like `presentation_type` (on_top or overlay).
-For more deatails please check documentation of the nav bar plugin
+For more deatails please check documentation of the [Nav bar plugin](http://zapp-tech-book.herokuapp.com/ui-builder/ios/NavigatioBarPlugins.html)
 
 ![NavigationBarStates.png](./Files/NavigationBarStates.png)
 
@@ -269,12 +269,12 @@ Example:
 
 <a name="devEnv" />
 ###### How to use dev environment
-1. Clone in `folderPath` `https://github.com/applicaster/ZappRoot-iOS.git`
+1. Clone in `youFolderPath` `https://github.com/applicaster/ZappRoot-iOS.git`
 2. In Podfile of Zapp-iOS project remove  line `pod 'ZappRootPlugins', '~> *`
 3. Add in podfile
 ```
-    pod 'ZappRootPluginBase', :path => 'folderPath/ZappRoot-iOS/ZappRootPluginBase-Dev.podspec
-    pod 'ZappRootPlugins', :path => 'folderPath/ZappRoot-iOS/ZappRootPlugins-Dev.podspec'
+    pod 'ZappRootPluginBase', :path => 'youFolderPath/ZappRoot-iOS/ZappRootPluginBase-Dev.podspec
+    pod 'ZappRootPlugins', :path => 'youFolderPath/ZappRoot-iOS/ZappRootPlugins-Dev.podspec'
 ```
 4. This will give ability to create develompent pod of the RootMenuPlugin
 5. Make sure that this test changes will not be merged to Zapp-iOS __This is only for your testing__
@@ -286,4 +286,4 @@ Example:
 2. Customize the menu as desired and add Navigation items.
 3. Copy ID of the application version of your tesing application
 4. Use ZappTool to prepare application environment. (Read Zapptool docs for further information)
-5. If your plugin has dependencies and you are using development environment for navigation plugin, find Zapp-iOS pod in `podfile` with your plugin dependency under `# Zaptool pods - Do not remove or change.` section. It will look something like `pod 'ZappRootPlugins/MyAwesomePlugin', '~> 0.4.1'` and It should be and change it to `pod 'ZappRootPlugins/MyAwesomePlugin', :path => 'folderPath/ZappRoot-iOS/ZappRootPlugins-Dev.podspec`. This will remove issue with dependecy conflicts
+5. If your plugin has dependencies and you are using development environment for navigation plugin, find Zapp-iOS pod in `podfile` with your plugin dependency under `# Zaptool pods - Do not remove or change.` section. It will look something like `pod 'ZappRootPlugins/MyAwesomePlugin', '~> 0.4.1'` and It should be and change it to `pod 'ZappRootPlugins/MyAwesomePlugin', :path => 'youFolderPath/ZappRoot-iOS/ZappRootPlugins-Dev.podspec`. This will remove issue with dependecy conflicts
