@@ -31,7 +31,7 @@ A component can have several cell styles and a layout family is a set of cell st
 make the needed changes for the new style.
 - Add the new style to the CellLayout enum in `ComponentStyle.java` with the name that was defined on the ui builder (LIST_3, GRID_4 etc).
 - Add the correct IconSetter for your new cell in `CellLayoutIconSetterMapper.java` (Create a new IconSetter if applicable)
-- Add the correct AspectRatioSetter for your new cell in `AspectRatioManager.java` (Create a new AspectRatioSetter if applicable) 
+- Add the correct AspectRatioSetter for your new cell in `AspectRatioManager.java` (Create a new AspectRatioSetter if applicable)
 - Add specific handling if needed for the new style in the components in the ComponentsUtil class.
 
 ## UI Components
@@ -48,6 +48,9 @@ Then we need to add the component handling to the CompositeComponentListLayout.c
 1. create a new class that extends from the ComponentLayout.
 2. in the List<CompositeRowHolder> setAdapter() we need to add handling for the new component.
 3. in the getView() we need to return pass the component metadata and return the new component view.
+
+## Creation of a new Family:
+Please check [**Family Interface**](/ui-builder/android/family-interface/family-interface.md) for more details.
 
 ## UI Builder app flow vs regular app flow:
 The ui builder based app uses a template named 'ui_builder' which has a flag isUiBuilder.

@@ -3,10 +3,19 @@
 
 Zapp Pipes is the data loader mechanism for Applicaster Zapp apps, which enables data source plugins.
 
-You can use Zapp-pipes if you need multiple pluggable datasources for your app. This documentation covers the key concepts behind the Zapp-pipes module, and explains how to use its data source plugin system.
+You can use Zapp-pipes if you need multiple pluggable data sources for your app. This documentation covers the key concepts behind the Zapp-pipes module and explains how to use its data source plugin system.
 
 ##Overview
-This section provides an overview of Zapp-pipes, and the key concepts used in the rest of this documentation
+This section provides an overview of Zapp-pipes, and the key concepts used in the rest of this documentation.
+
+If you are not familiar with the `Feed Manager` section in Zapp, here is a short (3 min) introduction. After creating a new data source provider, Zapp users will be able to use it in the `Feed Manager` section.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j6irAyDhe9Y?rel=0" frameborder="0" allowfullscreen></iframe>
+
+### Getting Started
+We recommend going over the documentation in order to understand how the zapp-pipes works.
+
+The [Prerequisites](/Zapp-Pipes/0.-Prerequisites.md) and [Setting up the environment](/Zapp-Pipes/1.-Set-up.md) are a good place to start with. Don't forget to do our [step by step tutorial](/Zapp-Pipes/provider-stepbystep.md), it will guide you in all the required steps when creating a new provider.
 
 ### Feeds
 
@@ -66,16 +75,13 @@ The bridge also contains features that enable data source plugins to get data fr
 
 ## Table of content
 Browse the following content to know more about Zapp-pipes :
-* [Prerequisites](/Zapp-pipes/0.-Prerequisites.md) : this section will highlight some key development tools which are required to create a new provider
+* [Prerequisites](/Zapp-Pipes/0.-Prerequisites.md) : this section will highlight some key development tools which are required to create a new provider
 * [Setting up the environment](/Zapp-Pipes/1.-Set-up.md) : this section will help you set up your environment to start development
 * [Structure of a provider](/Zapp-Pipes/2.-Provider-structure.md) : this section explains the structure of a provider
 * [Native Bridge API](/Zapp-Pipes/3.-Native-bridge-API.md) : this section describes the specific features available in the native JavaScript bridge
 * [How to test locally](/Zapp-Pipes/5.-Local-testing.md) : this section describes the procedure to test a bundle locally
 * [Feed API](/Zapp-Pipes/5.-Feed-API.md) : this section describes the expected output format for feeds returned by a provider
-* [How to publish a provider in Zapp](/Zapp-Pipes/6.-How-to-publish.md) : this section explains how to publish a provider in zapp, so it 
+* [How to publish a provider in Zapp](/Zapp-Pipes/6.-How-to-publish.md) : this section explains how to publish a provider in zapp
 * [How configure the app](/Zapp-Pipes/7.-Connect-to-Zapp.md) : this section explains how to set up your app to use Zapp-pipes
-* [Examples](/Zapp-Pipes/8.-Examples.md)
-can be used in the Feed manager
-* [F.A.Q.](/Zapp-Pipes/9.-FAQ.md)
-
-
+* [Step by step tutorial](/Zapp-Pipes/provider-stepbystep.md) : this section will guide throw the steps of creating a new data source provider, in this tutorial we will create a Wordpress provider.
+* [Examples](/Zapp-Pipes/8.-Examples.md) : can be used in the Feed manager
