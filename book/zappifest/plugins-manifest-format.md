@@ -54,6 +54,7 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
 - **description**: Describes the plugin.
 - **type**: Plugin type out of predefined types.
 - **whitelisted_account_ids**: Optional. Array of Applicaster's account_ids as individual strings. To find the relevent account_ids go to `accounts.applicaster.com`. If empty, plugin will be available across all accounts.
+- **tooltip_text**: For any custom configuration fields, a text describing the tooltip is required. More about that can be found in the "Custom Field Tooltips" section of the document [here](http://zapp-tech-book.herokuapp.com/zappifest/zappifest.html).
 - **platform**: The platform of the plugin - should be either `ios/android/tvos`
 - **dependency_repository_url**: A list of repo urls the plugin uses.
  _NOTE: for ANDROID use it as an object consists out of url and credentials. For any other platform provide a list of url's_
