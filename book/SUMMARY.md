@@ -42,7 +42,7 @@
 * [iOS Navigation Bar](/ui-builder/ios/NavigatioBarPlugins.md)
 
 ## Root Menu Plugins
-* [iOS Root Menu](/ui-builder/ios/RootMenuPlugin.md)
+* [iOS Root Menu](/ui-builder/ios/RootMenuPlugins.md)
 
 ## Analytics
 * [Overview](/analytics/overview.md)
