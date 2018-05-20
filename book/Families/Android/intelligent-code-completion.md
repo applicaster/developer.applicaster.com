@@ -1,13 +1,8 @@
 # Family syntax intelligent code completion
 
-### Creating new Family XML:
+### Adding Schema to Family XML:
 
-Add new XML file to android\_generic\_app. Name of file should fit pattern **FAMILY_** + FAMILY_NUMBER + **.xml**. Please do not use any marketing names of the families in the code just number associetad with the Family. Current Family numbers are:
-
-* **Colorado** - FAMILY 1
-* **Rhine** - FAMILY 4
-
-Start your document with **Family** xml tag and add inteligent code completion as follows:
+Start your document with **Family** xml element and add schema location as follows:
 ```
 <Family xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="family_schema.xsd">
@@ -37,4 +32,4 @@ Intelligent code completion should start work at that point
 
 ### Notes:
 
-Please bare in mind whenever you change Family Entity you should've update family_schema.xsd file as well.
+Please bear in mind whenever you change Family Entity you should’ve to update family_schema.xsd file as well.
