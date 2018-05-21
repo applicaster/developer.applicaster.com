@@ -32,6 +32,11 @@ Check the plugin id on [Zapp](https://zapp.applicaster.com/admin/plugins) (under
 
 Run `zappifest publish --plugin-id <plugin-id> --manifest <path-to-manifest-json-file> --access-token <zapp-access-token>`
 
+```
+Note: It is recommended to set the access-token as environment variable `ZAPP_TOKEN`.
+By doing so, `access_token` param for publishing will not be required.
+```
+
 #### Custom Field Tooltips
 
 When you are creating a custom field via the 'zappifest init' instructions, you will be required to create a tooltip describing the custom field so that Zapp users can understand the purpose of the field and how they should handle it.
