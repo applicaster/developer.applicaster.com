@@ -6,6 +6,7 @@
     "serve": "./node_modules/applibook/node_modules/.bin/gitbook serve book"
   },
   "dependencies": {
-    "applibook": "1.4.0"
+    "applibook": "1.4.0",
+    "gitbook-plugin-highlight": "^2.0.3"
   }
 }
