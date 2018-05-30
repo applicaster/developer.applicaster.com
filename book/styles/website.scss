@@ -1,0 +1,49 @@
+@import "../../node_modules/gitbook-plugin-theme-gestalt/src/scss/variables";
+
+$applicaster-black: #010613;
+$applicaster-white: #ffffff;
+$applicaster-green: #44dd95;
+
+// Put your variable overrides here
+$book-background: $applicaster-white;
+$page-background: $applicaster-white;
+$sidebar-background: $applicaster-black;
+$sidebar-font-size: 1.0em;
+$color-border: $applicaster-white;
+
+$color-primary: $applicaster-green;
+$color-text: $applicaster-black;
+
+$heading-map: (
+  color: $applicaster-green,
+  border-bottom: 1px solid $applicaster-green,
+  font-family: $font-family-sans
+);
+
+$sidebar-logo-map: (
+  background: $applicaster-black,
+  border-bottom: 0px solid $color-border
+);
+
+$sidebar-header-map: (
+  color: $applicaster-green,
+  text-transform: uppercase,
+  font-family: $font-family-sans
+);
+
+$sidebar-link-map: (
+  color: $applicaster-white,
+  font-family: $font-family-sans
+);
+
+$sidebar-link-hover-map: (
+  color: $applicaster-green,
+  text-decoration: none
+);
+
+$search-input-wrapper-map: (
+  background: $applicaster-white,
+  border-bottom: 0px solid $color-border
+);
+
+@import "../../node_modules/gitbook-plugin-theme-gestalt/src/scss/all";

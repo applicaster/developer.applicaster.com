@@ -1,6 +1,22 @@
 {
   "root": "book",
   "plugins": [
-    "toggle-chapters"
-  ]
+    "toggle-chapters",
+    "theme-gestalt",
+    "-theme-default",
+    "styles-sass-fix",
+    "collapsible-menu"
+  ],
+  "pluginsConfig": {
+    "theme-gestalt": {
+      "logo": "/icons/applicaster.png",
+      "favicon": "/icons/favicon.png",
+      "baseUrl": null,
+      "excludeDefaultStyles": true,
+      "doNotHideChildrenChapters": false
+    }
+  },
+  "styles": {
+    "website": "./styles/website.scss"
+  }
 }
