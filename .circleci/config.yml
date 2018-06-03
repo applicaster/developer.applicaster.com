@@ -45,7 +45,10 @@ jobs:
       
       - run:
           name: deploy github pages
-          command: npx gh-pages -d _book
+          command: 
+            - git config --global user.email $GH_EMAIL
+            - git config --global user.name $GH_NAME
+            - npx gh-pages -d _book
 
 workflows:
   version: 2
