@@ -43,12 +43,16 @@ jobs:
           name: gitbook build
           command: npx gitbook build
       
+      - run: 
+          name: setup github email
+          command: git config --global user.email $GH_EMAIL
+      
+      - run: 
+          name: setup github name
+          command: git config --global user.name $GH_NAME
       - run:
           name: deploy github pages
-          command: 
-            - git config --global user.email $GH_EMAIL
-            - git config --global user.name $GH_NAME
-            - npx gh-pages -d _book
+          command: npx gh-pages -d _book
 
 workflows:
   version: 2
