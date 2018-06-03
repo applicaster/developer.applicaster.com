@@ -4,11 +4,12 @@
   "description": "zapp gitbook",
   "main": "index.js",
   "dependencies": {
-    "gitbook-plugin-styles-sass": "^1.1.0",
+    "gh-pages": "^1.2.0",
     "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-styles-sass": "^1.1.0",
     "gitbook-plugin-styles-sass-fix": "^1.1.2",
-    "gitbook-plugin-toggle-chapters": "^0.0.3",
-    "gitbook-plugin-theme-gestalt": "^1.0.7"
+    "gitbook-plugin-theme-gestalt": "^1.0.7",
+    "gitbook-plugin-toggle-chapters": "^0.0.3"
   },
   "devDependencies": {},
   "scripts": {

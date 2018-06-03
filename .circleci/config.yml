@@ -45,7 +45,7 @@ jobs:
       
       - run:
           name: deploy github pages
-          command: npx ghpages -p _book
+          command: npx gh-pages -d _book
 
 workflows:
   version: 2
@@ -54,7 +54,9 @@ workflows:
       - build:
           filters:
             branches:
-              ignore: gh-pages
+              ignore: 
+                - gh-pages
+                - master
       - build_and_deploy:
           filters:
             branches:
