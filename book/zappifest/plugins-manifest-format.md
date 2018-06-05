@@ -94,6 +94,7 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
     }
   ]
 ```
+- **configuration_panel_disabled**: set as true if the plugin configuration should not appear in the plugin gallery. It is recommended to do so when the plugin has a dedicated section in Zapp (Screens, Navigations, etc.)
 - **zapp_configuration**: this key allows to collect options for zapp configuration. Currently, the only available option is to hide specific sections in the UiBuilder configuration
 Example:
 ```
