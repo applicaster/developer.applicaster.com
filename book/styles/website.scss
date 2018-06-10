@@ -3,6 +3,7 @@
 $applicaster-black: #010613;
 $applicaster-white: #ffffff;
 $applicaster-green: #44dd95;
+$applicaster-offwhite: #e5dace;
 
 // Put your variable overrides here
 $book-background: $applicaster-white;
@@ -26,13 +27,14 @@ $sidebar-logo-map: (
 );
 
 $sidebar-header-map: (
-  color: $applicaster-green,
+  color: $applicaster-white,
   text-transform: uppercase,
-  font-family: $font-family-sans
+  font-family: $font-family-sans,
+  font-weight: 900
 );
 
 $sidebar-link-map: (
-  color: $applicaster-white,
+  color: $applicaster-offwhite,
   font-family: $font-family-sans
 );
 
