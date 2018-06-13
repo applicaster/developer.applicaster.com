@@ -50,7 +50,7 @@ Internally, the Zapp-pipes bundle does the following :
 - calls the requested provider, and inject a toolbelt object that handles responses and errors, and provide all the available features of the [js bridge](#js-bridge)
 - invokes the native app's callback with the returned data so the data can be loaded inside the app.
 
-The bundle is automatically created and built when you configure the data source feeds in Zapp. [See here](Zapp-Pipes/6.-Connect-to-Zapp.md) for more details 
+The bundle is automatically created and built when you configure the data source feeds in Zapp. [See here](/Zapp-Pipes/7.-Connect-to-Zapp.md) for more details 
 
 ### Datasource url
 
