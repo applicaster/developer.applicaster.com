@@ -27,6 +27,11 @@ The tool allow you to publish the plugin to Zapp.
 
 Run `zappifest publish --manifest <path-to-manifest-json-file> --access-token <zapp-access-token>`
 
+You can optionaly use markdown files for the "About" and "Guide" fields of the manifest. This way, you can control more precisely the layout of what will appear in the "About" and "Guide" tabs of the Plugin Gallery in Zapp. In order to use a markdown file instead of a plain string, remove the `about` or `guide` key in the manifest, and use the following command options :
+```
+$ zappifest publish --manifest <path-to-manifest-json-file> --access-token <zapp-access-token> --guide <path-to-guide.md> --about <path-to-about.md>
+```
+
 #### Updating existing plugin
 Check the plugin id on [Zapp](https://zapp.applicaster.com/admin/plugins) (under the relevant plugin versions).
 
