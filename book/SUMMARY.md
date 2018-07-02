@@ -2,6 +2,7 @@
 
 ## Getting Started With Zapp
 * [Code Of Conduct](/Code-Of-Conduct.md)
+* [Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
 * [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
     * [Zappifest Tool](/zappifest/zappifest.md)
 
