@@ -5,6 +5,7 @@
 * [Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
 * [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
     * [Zappifest Tool](/zappifest/zappifest.md)
+* [Bintray and CircleCI configuration](/getting-started/set-up-bintray-and-circle-ci.md)
 
 # Zapp Plugins
 ## Feeds (Data Source Plugins)
