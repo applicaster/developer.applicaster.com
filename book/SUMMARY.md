@@ -2,10 +2,11 @@
 
 ## Getting Started With Zapp
 * [Code Of Conduct](/Code-Of-Conduct.md)
-* [Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
-* [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
-    * [Zappifest Tool](/zappifest/zappifest.md)
-* [Bintray and CircleCI configuration](/getting-started/set-up-bintray-and-circle-ci.md)
+* [Getting Started with Zapp Plugin](/getting-started/zapp-plugins.md)
+    * [Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
+    * [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
+        * [Zappifest Tool](/zappifest/zappifest.md)
+    * [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
 
 # Zapp Plugins
 ## Feeds (Data Source Plugins)
