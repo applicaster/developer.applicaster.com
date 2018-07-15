@@ -29,10 +29,12 @@
 ## Navigation Bar Plugins
 * [iOS Navigation Bar](/ui-builder/ios/NavigatioBarPlugins.md)
 * [Android Navigation Bar](/ui-builder/android/NavigationBarPlugin.md)
+* [Designer Guide](/navigations/designer/Desgining_NavigationBar.md)
 
 ## Root Menu Plugins
 * [iOS Root Menu](/ui-builder/ios/RootMenuPlugins.md)
 * [Android Root Menu](/ui-builder/android/RootMenuPlugins.md)
+* [Designer Guide](/navigations/designer/Desgining_Menu.md)
 
 ## Analytics Plugins
 * [Analytics Overview](/analytics/overview.md)
