@@ -5,7 +5,8 @@
     "theme-gestalt",
     "-theme-default",
     "styles-sass-fix",
-    "collapsible-menu"
+    "collapsible-menu",
+    "highlight"
   ],
   "pluginsConfig": {
     "theme-gestalt": {
