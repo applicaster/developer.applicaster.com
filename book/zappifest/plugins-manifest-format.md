@@ -201,7 +201,6 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
 - **api/android_proguard_rules**: Optional field for `Android` plugins to be added to the `proguard-rules` file.
 - **api/require_startup_execution**: Optional field. This will allow the plugin to be opt in to the application startup flow. The plugin must implement the relevant `ios/android` protocol.
 - **api/react_packages**: Optional for react plugins. An array of
-- **ui_builder_support**: Optional. If the plugin should be supported to be used in Zapp's UI Builder apps, set to true.
 - **tooltip_text**: For any custom configuration fields, a text describing the tooltip is required. More about that can be found in the "Custom Field Tooltips" section of the document [here](http://zapp-tech-book.herokuapp.com/zappifest/zappifest.html).
 - **platform**: The platform of the plugin - should be either `ios/android/tvos`
 - **dependency_name**: The name of the dependency as it defined in the repository
@@ -209,6 +208,7 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
 - **dependency_repository_url**: A list of repo urls the plugin uses.
 _NOTE: for ANDROID use it as an object consists out of url and credentials. For any other platform provide a list of url's_
 - **extra_dependencies**: Relevant for iOS/tvOS only. An array of extra dependencies. Each element in the array is a map of the name of the dependencies and the relevant pod specs. For example:
+* **ui_builder_support**: Required. If the plugin should be supported to be used in Zapp's UI Builder apps, set to true.
 ```
 "extra_dependencies": [
     {
