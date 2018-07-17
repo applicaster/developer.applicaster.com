@@ -193,7 +193,13 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
 - **name**: The name of the plugin. This is the name that will be in use when choosing plugin to App Version.
 - **description**: Describes the plugin.
 - **type**: Plugin type out of predefined types.
-- **min_zapp_sdk**: minimum zapp version required for the plugin
+- **min_zapp_sdk**: minimum zapp version required for the plugin, when the plugin is a multi platform, please specify the the platform in the following format:
+```
+"min_zapp_sdk": {
+    "ios": "1.0.0",
+    "android": "1.0.0"
+}
+```
 - **whitelisted_account_ids**: Optional. Array of Applicaster's account_ids as individual strings. To find the relevent account_ids go to `accounts.applicaster.com`. If empty, plugin will be available across all accounts.
 
 ### Optional fields:
@@ -263,6 +269,7 @@ The current input options for `custom_configurations_fields`:
 * Text Area
 * Checkbox
 * Dropdown
+* Tag Select - same as Multi select but with a single value
 * Multi select dropdown (Array)
 * Tags (Comma separated text field)
 * Color Picker
@@ -307,6 +314,7 @@ In the placeholder of the uploader, please use the following format "XXXpx W x H
     - `number_input`
     - `inline_input`
     - `multi_select`
+    - `tag_select`
     - `react_select`
     - `color_picker`
     - `uploader`
@@ -315,7 +323,7 @@ In the placeholder of the uploader, please use the following format "XXXpx W x H
     - `BUTTON`
     - `hidden`
   - initial_value
-  - options: for `multi_select` and `react_select` types
+  - options: for `tag_select`, `multi_select` and `react_select` types
   - conditional_fields: if a certain field is depending in another for display or for option values,  see in example above. Conditional field is an array of conditions, with the following structure:
     - key: contains in a string with the section and the key of the depending field, separated by `/`, for example "styles/background_type"
     - condition_value: the value of conditional field, that needs to be fulfilled, it can be a string or an array of a few valid values.
