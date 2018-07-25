@@ -34,6 +34,7 @@
   - [How to publish a provider](/Zapp-Pipes/6.-How-to-publish.md)
   - [How to connect the provider to the app](/Zapp-Pipes/7.-Connect-to-Zapp.md)
   - [Debugging](/Zapp-Pipes/10.-Debugging.md)
+  - [Feeds Made Easy](/Zapp-Feed/2.-Create-Functional-Demo-Feeds.md)
 
 ## Navigation Bar Plugins
 
