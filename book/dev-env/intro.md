@@ -1,6 +1,8 @@
 # Get ready to work
 
-In order to start working on your Zapp feature, you will need to prepare your environment. This section highlights the tools you will need, and how to get you up and running.
+In order to start working on your Zapp feature, you will need to prepare your environment. 
+
+This section highlights the tools you will need, and how to get you up and running.
 
 ## Zapp
 
