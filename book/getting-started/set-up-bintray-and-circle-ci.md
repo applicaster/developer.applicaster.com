@@ -157,15 +157,26 @@ buildscript {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4'
     }
 }
-```
-Then, in the `repositories` section make sure you have the following:
-```
+
+repositories {
+    maven {
+        credentials {
+            username System.getenv("MAVEN_USERNAME")
+            password System.getenv("MAVEN_PASSWORD")
+        }
+        url 'https://dl.bintray.com/applicaster-ltd/maven'
+    }
     jcenter()
     mavenCentral()
-    maven { url 'https://maven.google.com' }
+    maven {
+        url 'https://maven.google.com'
+    }
     maven { url 'https://jitpack.io' }
+}
 ```
-Then, in the `build.gradle` located in the root project paste at the bottom of the file
+Contact an Applicaster developer to get the `MAVEN_USERNAME` and `MAVEN_PASSWORD`.
+
+Then, in the `build.gradle`, add at the bottom
 ```
 apply from: 'gradle/gradle-bintray-push.gradle'
 ```
@@ -178,8 +189,8 @@ ARTIFACT_ID={NAME_OF_YOUR_PROJECT}
 POM_DESCRIPTION={PROJECT_DESCRIPTION}
 POM_URL={GITHUB_REPOSITORY_URL}
 POM_SCM_URL={GITHUB_REPOSITORY_URL}
-POM_SCM_CONNECTION={scm:GITHUB_REPOSITORY_URL}
-POM_SCM_DEV_CONNECTION={scm:GITHUB_REPOSITORY_URL}
+POM_SCM_CONNECTION=scm:{GITHUB_REPOSITORY_URL}
+POM_SCM_DEV_CONNECTION=scm:{GITHUB_REPOSITORY_URL}
 POM_LICENCE_NAME=The Apache Software License, Version 2.0
 POM_LICENCE_URL=http://www.apache.org/licenses/LICENSE-2.0.txt
 POM_LICENCE_DIST=repo
@@ -216,17 +227,95 @@ You have to give Gradle reading and writing permissions. For that, copy and past
 ```
 chmod +x ./gradlew
 ```
-
+*Note: You have to make sure you have gradle wrapper set up in your project.*
 ### Set up project
-Go to https://circleci.com/gh/applicaster. If you don't have access request it.
+Go to https://circleci.com/gh/applicaster. If you don't have access, request it.
 
-Then, Go to `ADD PROJECTS` and look for yours (has to be in the applicaster github repository) and click `Set up project`.
+Then, go to `ADD PROJECTS` and look for yours (your project has to be in the Applicaster github repository) and click `Set up project`.
 
 ![Set up project](../assets/set-up-project.png)
 
 Select `Linux` as Operating System and `Gradle (Java)` as Language.
 
 Then follow the steps described in the `Next Steps` section.
+**Important**: The second step, where you have to populate the `config.yml`, instead of the one that CircleCI provides, use the following:
+```
+# Java Gradle Circle CI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-java/ for more details
+#
+defaults: &defaults
+  working_directory: ~/APPlugin
+  docker:
+    - image: circleci/android:api-26-alpha
+
+version: 2
+jobs:
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
+
+      - run:
+          name: Download Dependencies
+          command: ./gradlew androidDependencies || true
+
+      - save_cache:
+          paths:
+            - .gradle
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
+
+      - run:
+          name: Run Tests
+          command: ./gradlew test
+
+      - store_artifacts:
+          path: ./build/reports
+          destination: reports
+
+      - store_test_results:
+          path: ./build/test-results
+
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
+
+      - run:
+          name: Build release package
+          command: ./gradlew assembleRelease
+
+      - run:
+          name: Deploy to Bintray
+          command: ./gradlew bintrayUpload
+
+workflows:
+  version: 2
+  test-n-deploy:
+    jobs:
+      # Execute job for all branches, and all tags.
+      - test:
+          filters:
+            tags:
+              only: /.*/
+
+      # Execute job for no branches, and all tags
+      - deploy:
+          requires:
+            - test
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
+
+```
 
 *Note: The `.circleci` folder has to be created in the root directory of the project.*
 
@@ -235,12 +324,12 @@ Before `Start building` you have to set the environment variables in the CircleC
 ![Environment variables](../assets/environment-variables.png)
 
 You have to add four variables
-- MAVEN_USERNAMER
-- MAVEN_PASSWORD
-- BINTRAY_API_KEY
-- BINTRAY_USER
+- `MAVEN_USERNAME`
+- `MAVEN_PASSWORD`
+- `BINTRAY_API_KEY`
+- `BINTRAY_USER`
 
-Contact a developer to get the values of the variables.
+For `MAVEN_USERNAME` and `BINTRAY_USER`, use the same value of `MAVEN_USERNAME` you got in the first step. For `MAVEN_PASSWORD` and `BINTRAY_API_KEY` use the same of `MAVEN_PASSWORD` you got in the first step.
 
 ## The end
 Now you are ready to build with CircleCI and publish in Bintray when tagging. If you have any question please don't hesitate to contact a co-worker.
