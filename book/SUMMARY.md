@@ -50,7 +50,7 @@
 - [Android Root Menu](/ui-builder/android/RootMenuPlugins.md)
 - [Designer Guide](/navigations/designer/Desgining_Menu.md)
 
-## Analytics Plugins
+## Analytics Development
 
 - [Analytics Overview](/analytics/overview.md)
   - [Morpheus](/analytics/morpheus/morpheus.md)
