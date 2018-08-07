@@ -8,14 +8,6 @@
   type: Release Notes
   owner: p.kramarov@applicaster.com
 
-- folder: app-analytics
-  internal: false
-  title: App Analytics
-  description: >
-    Analytics Events of the Core of the Zapp SDK, including video and UI events.
-  type: Analytics
-  owner: s.miasnik@applicaster.com
-
 "Apple TV":
 - folder: Apple-TV-Admin-Settings-Guide
   internal: true
@@ -33,14 +25,6 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
-- folder: apple-tv-analytics
-  internal: false
-  title: Apple TV Analytics Events
-  description: >
-    This document a summary of the analytics events for Apple TV app.
-  type: Analytics
-  owner: u.lumnitz@applicaster.com
-
 "Access & Authorization Solutions":
 - folder: authorization-provider
   internal: false
@@ -55,13 +39,6 @@
   owner: l.deutsch@applicaster.com
 
 "Advertising":
-- folder: video-advertising-analytics
-  internal: false
-  title: Video Advertising Analytics
-  description: >
-    This document describes the analytics event "Watch Video Advertisement" and outlines the associated properties
-  type: Analytics
-  owner: y.osteen@applicaster.com
 
 - folder: midrolls
   internal: false
@@ -107,14 +84,6 @@
   type: Technical
   owner: u.lumnitz@applicaster.com
 
-- folder: feed-analytics
-  internal: false
-  title: Feed Analytics
-  description: >
-    This is a documentation of the Feed analytics events.
-  type: Analytics
-  owner: u.lumnitz@applicaster.com
-
 - folder: web-feed-config
   internal: true
   title: Web Feed Configuration
@@ -130,14 +99,6 @@
   description: >
     Release notes of the Stitcher product ordered by release date.
   type: Release Notes
-  owner: a.levy@applicaster.com
-
-- folder: questionnaire-analytics
-  internal: false
-  title: Stitcher Analytics Document
-  description: >
-    An internal document describing the different analytics measured on the Stitcher product.
-  type: Analytics
   owner: a.levy@applicaster.com
 
 "Crossmates":
@@ -183,14 +144,6 @@
   description: >
     Release notes of the GroupChat product ordered by release date.
   type: Release Notes
-  owner: l.deutsch@applicaster.com
-
-- folder: group-chat-analytics
-  internal: false
-  title: GroupChat Analytics
-  description: >
-    Documentation of GroupChat analytics.
-  type: Analytics
   owner: l.deutsch@applicaster.com
 
 "Live+":
@@ -290,15 +243,6 @@
     Android App.
   type: Technical
   owner: u.lumnitz@applicaster.com
-
-- folder: JS-2-Morpheus
-  internal: false
-  title: JS-2-Morpheus Integration
-  description: >
-    This document describes how to send analytics events and user profiles to
-    Morpheus, Applicaster's internal product for handling and delivering analytics
-  type: Technical
-  owner: y.osteen@applicaster.com
 
 "Zapp":
 - folder: zapp-release-notes
@@ -416,59 +360,11 @@
 
 "Measurement & Analytics":
 
-- folder: analytics
-  internal: false
-  title: Analytics
-  description: >
-    A brief description of the Applicaster analytics offering
-  type: Technical
-  owner: y.osteen@applicaster.com
-
-- folder: link-to-custom-analytics-events
-  internal: false
-  title: Custom Analytics Events
-  description: >
-    Documentation on Applicaster's custom analytics events
-  type: Technical
-  owner: y.osteen@applicaster.com
-
-- folder: morpheus
-  internal: false
-  title: Morpheus
-  description: >
-    This document describes the Morpheus product
-  type: Technical
-  owner: y.osteen@applicaster.com
-
-- folder: js2morpheus-link
-  internal: false
-  title: HTML/JS Coverage
-  description: >
-    Documentation on JS-2-Morpheus (analytics coverage for in-app mobile web products)
-  type: Technical
-  owner: y.osteen@applicaster.com
-
 - folder: product_analytics_procedure
   internal: true
   title: Product Analytics Procedure
   description: >
     This document outlines the procedure for how to manage product analytics and benefit from its implementation
-  type: Technical
-  owner: y.osteen@applicaster.com
-
-- folder: morpheus_release_notes
-  internal: true
-  title: Morpheus Release Notes
-  description: >
-    Release notes of Morpheus, Applicaster's technology for analytics delivery
-  type: Release Notes
-  owner: y.osteen@applicaster.com
-
-- folder: analytics-events-catalogue
-  internal: true
-  title: Analytics Events Catalogue
-  description: >
-    A file linking to all the product-level analytics documentation
   type: Technical
   owner: y.osteen@applicaster.com
 
@@ -479,46 +375,6 @@
     This document describes how to incorporate success measurement into your agile development processes
   type: Technical
   owner: y.osteen@applicaster.com
-
-- folder: applicaster-analytics-service
-  internal: true
-  title: Applicaster Analytics Service
-  description: >
-    This technical document is intended to explain the role and architecture of Applicaster Analytics Service
-  type: Technical
-  owner: y.osteen@applicaster.com
-
-- folder: analytics-plugins-android
-  internal: false
-  owner: e.bendavid@applicaster.com
-  title: "Analytics provider plugin on Android"
-  description: >
-    This doc describes how to integrate an analytics provider plugin on Android
-  type: Technical
-
-- folder: analytics-plugins-ios
-  internal: false
-  owner: e.bendavid@applicaster.com
-  title: "Analytics provider plugin on iOS"
-  description: >
-    This doc describes how to integrate an analytics provider plugin on iOS
-  type: Technical
-
-- folder: how-to-create-analytics-plugins-ios
-  internal: true
-  owner: e.bendavid@applicaster.com
-  title: "How to create analytics provider plugin on iOS"
-  description: >
-    This doc describes how to create an analytics provider plugin on iOS
-  type: Technical
-- folder: how-to-create-analytics-plugins-android
-  internal: true
-  owner: e.bendavid@applicaster.com
-  title: "How to create analytics provider plugin on Android"
-  description: >
-    This doc describes how to create an analytics provider plugin on Android
-  type: Technical
-
 
 "Login":
 - folder: login-release-notes
@@ -537,15 +393,6 @@
     A checklist to follow before releasing a new product/feature
   type: Technical
   owner: l.deutsch@applicaster.com
-
-"Morpheus":
-- folder: morpheus_developer_documentation
-  internal: true
-  title: Morpheus Developer Documentation
-  description: >
-    How to send event to Morpheus.
-  type: Technical
-  owner: e.bendavid@applicaster.com
 
 "Zapp Application Plugins":
 - folder: root-menu-api
