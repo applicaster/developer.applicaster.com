@@ -25,25 +25,25 @@ When testing events, you can check against the catalogue of events documented [h
 
 #### Android
 
+**Note:** There currently is a bug with using in-app alerts for Android. There is a ticket for the Zapp on-call team to address it and this document will be updated once resolved. 
+
 Download the app in debug mode. When you launch the app an alert will appear, asking if you want to receive notifications on analytics data delivered. If you hit yes, you'll be able to use the utility within the app directly.
 
 Once you do, if you do anything which should trigger sending one of the data types, an alert describing the data that was delivered (and to where) should appear.
 
-For example, when I click on the Side Menu, I’ll see:
+For example, when you click on the Side Menu, you’ll see:
 
-	![alert_android](./alert_android.png)
+	![alert_android_1](./alert_android_1.png)
 
 You may notice that the Data Property field does not have values. That suggests that this particular event does not include any custom properties.
 
 #### iOS
 
 1. Download your app in debug mode
-2. Go to your app in Settings and turn on “Are you Applicaster Member":
+2. Go to your app in Settings and turn on “Show Analytic Utility Alerts" within the *Applicaster Member Mode* section:
 	![alert_ios_2](./alert_ios_2.png)
 3. Now launch the app
-4. When the following Alert appears, tap "Yes":
-	![alert_ios_4](./alert_ios_4.png)
-5. You should now be able to see the alerts:
+4. You should now be able to see the alerts:
 	![alert_ios_5](./alert_ios_5.png)
 
 
