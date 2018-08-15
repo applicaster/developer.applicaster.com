@@ -25,8 +25,6 @@ When testing events, you can check against the catalogue of events documented [h
 
 #### Android
 
-**Note:** There currently is a bug with using in-app alerts for Android. There is a ticket for the Zapp on-call team to address it and this document will be updated once resolved. 
-
 Download the app in debug mode. When you launch the app an alert will appear, asking if you want to receive notifications on analytics data delivered. If you hit yes, you'll be able to use the utility within the app directly.
 
 Once you do, if you do anything which should trigger sending one of the data types, an alert describing the data that was delivered (and to where) should appear.
