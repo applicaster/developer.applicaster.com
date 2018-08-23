@@ -1,4 +1,4 @@
-# Plugin Manifest Format
+# Plugin Manifest
 
 The plugin manifest is a JSON document which describes the interface between Zapp system and the plugin. Zapp only needs the plugin manifest file and you are ready to use it!
 
@@ -15,6 +15,7 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
   "description": "360 player",
   "platform": "android",
   "min_zapp_sdk": "4.7.0",
+  "screen": true,
   "dependency_repository_url": [
     {
       "url": "http://maven.com",
@@ -70,10 +71,6 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
           {
             "text":"Overlay",
             "value":"overlay"
-          },
-          {
-            "text":"Hidden",
-            "value":"hidden"
           }
         ],
         "rules":"none",
@@ -134,7 +131,7 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
                    "url": "http://some-asset-url"
                  }
                }
-             },    
+             },
            ]
          },
          {
@@ -150,21 +147,12 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
                  }
                }
              },
-             {
-               "text": "cell 4",
-               "value": "cell_4",
-               "tooltip": {
-                 "thumbnail": {
-                   "url": "http://some-asset-url"
-                 }
-               }
-             }  
            ]
          }
          ],
          "key": "cell_styles",
          "rules": "conditional",
-         "type": "multi_select"
+         "type": "tag_select"
        }
     ]
   },
@@ -183,38 +171,64 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
 ```
 
 ## Fields :
-(please note that some of the fields are relevant to only one platform or only one type of a plugin)
+*Please note that some of the fields are relevant to only one platform or only one type of a plugin*
 
-### Mandatory fields :
-- **author_name**
-- **author_email**
-- **manifest_version**: defines the version of the manifest.
-- **identifier**: An identifier for your plugin. A unique field to identify your plugin.
-- **name**: The name of the plugin. This is the name that will be in use when choosing plugin to App Version.
-- **description**: Describes the plugin.
-- **type**: Plugin type out of predefined types.
-- **min_zapp_sdk**: minimum zapp version required for the plugin, when the plugin is a multi platform, please specify the the platform in the following format:
-```
-"min_zapp_sdk": {
-    "ios": "1.0.0",
-    "android": "1.0.0"
-}
-```
-- **whitelisted_account_ids**: Optional. Array of Applicaster's account_ids as individual strings. To find the relevent account_ids go to `accounts.applicaster.com`. If empty, plugin will be available across all accounts.
+#### Mandatory:
+- - -
+Field Key                   | Description
+----------------------------| -----------
+**author_name**         	| Author full name
+**author_email**      	    | Author's email address
+**manifest_version**:		| defines the version of the manifest.
+**identifier**        	    | An identifier for your plugin. A unique field to identify your plugin.
+**name**              	    | The name of the plugin. This is the name that will be in use when choosing plugin to App Version.
+**description**             | Describes the plugin.
+**type**                    | Plugin type out of predefined types.
+**min_zapp_sdk**            | minimum zapp version required for the field, when the plugin is a multi platform, please specify the the platform in the following format: `"min_zapp_sdk": { "ios": "1.0.0", "android": "1.0.0" }`
+**whitelisted_account_ids** | Optional. Array of Applicaster's account_ids as individual strings. To find the relevent account_ids go to `accounts.applicaster.com`. If empty, plugin will be available across all accounts.
+**ui_builder_support**      | Indicates if the plugin should be used in Zapp's UI Builder apps.
 
-### Optional fields:
-- **api/class_name**: Optional field for the class name to be use when launching the plugin.
-- **api/android_proguard_rules**: Optional field for `Android` plugins to be added to the `proguard-rules` file.
-- **api/require_startup_execution**: Optional field. This will allow the plugin to be opt in to the application startup flow. The plugin must implement the relevant `ios/android` protocol.
-- **api/react_packages**: Optional for react plugins. An array of
-- **tooltip_text**: For any custom configuration fields, a text describing the tooltip is required. More about that can be found in the "Custom Field Tooltips" section of the document [here](http://zapp-tech-book.herokuapp.com/zappifest/zappifest.html).
-- **platform**: The platform of the plugin - should be either `ios/android/tvos`
-- **dependency_name**: The name of the dependency as it defined in the repository
-- **dependency_version**: The version to be use for this dependency.
-- **dependency_repository_url**: A list of repo urls the plugin uses.
-_NOTE: for ANDROID use it as an object consists out of url and credentials. For any other platform provide a list of url's_
-- **extra_dependencies**: Relevant for iOS/tvOS only. An array of extra dependencies. Each element in the array is a map of the name of the dependencies and the relevant pod specs. For example:
-* **ui_builder_support**: Required. If the plugin should be supported to be used in Zapp's UI Builder apps, set to true.
+#### Optional:
+- - -
+Field Key                         | Description
+----------------------------------| -----------
+**api/class_name**                | Optional field for the class name to be use when launching the plugin.
+**api/android_proguard_rules**    | Optional field for `Android` plugins to be added to the `proguard-rules` file.
+**api/require_startup_execution** | Optional field. This will allow the plugin to be opt in to the application startup flow. The plugin must implement the relevant `ios/android` protocol.
+**api/react_packages**            | Optional for react plugins. An array of
+**tooltip_text**                  | For any custom configuration fields, a text describing the tooltip is required. More about that can be found in the "Custom Field Tooltips" section of the document [here](https://developer-zapp.applicaster.com/zappifest/zappifest.html).
+**platform**                      | The platform of the plugin - should be either `ios/android/tvos`
+**screen**                        | Indicates if the plugin should be presented as a full screen (setting this to `true` will allow selecting this plugin under the screens section in Zapp)
+**dependency_name**               | The name of the dependency as it defined in the repository
+**dependency_version**            | The version to be use for this dependency.
+**dependency_repository_url**     | A list of repo urls the plugin uses. _NOTE: for ANDROID use it as an object consists out of url and credentials. For any other platform provide a list of url's_
+**extra_dependencies**            | iOS/tvOS only. An array of extra dependencies. Each element in the array is a map of the name of the dependencies and the relevant pod specs. See [example](#extra-dependencies)
+**project_dependencies**          | Android only. Project level counterpart dependencies of RN npm dependencies, Zappifest will ask to optionally add one for each npm dependency detected. See [example](#project-dependencies)
+**configuration_panel_disabled**  | set as true if the plugin configuration should not appear in the plugin gallery. It is recommended to do so when the plugin has a dedicated section in Zapp (Screens, Navigations, etc.)
+**zapp_configuration**            | This key allows to collect options for zapp configuration. Currently, the only available option is to hide specific sections in the UiBuilder configuration See [example](#zapp-configuration)
+**npm_dependencies**              | An array of npm packages to be installed. Mainly in use for RN plugins.
+**react_native**                  | Boolean field to indicate if the plugin is a React Native plugin.
+**react_bundle_url**              | Url to the react native bundle.
+**deprecated_since_zapp_sdk**     | Will indicate deprecation of the plugin starting from the given sdk version
+**unsupported_since_zapp_sdk**    | Indicates that the plugin will not work starting from the given sdk version
+**scheme**                        | Data source plugins. Scheme to be used for the plugin
+**data_types**                    | Data source plugins only). Array of data_types handled by the plugin
+**screenshots**                   | array of screenshot urls
+**cover_image**                   | Illustration of the plugin in the Plugin Gallery 278px W x H 146px ![Alt text](../assets/cover_image.png?raw=true "Cover Image")
+**about**                         | In depth description of the plugin which will populate the "About" tab of the Plugin Gallery.
+**guide**                         | Description of how the plugin should be used and configured. The `about` and `guide` properties could both either be a string or markdown. If using a markdown file, do not add these keys to the manifest, as it would take precedence over the markdown file indicated in the publish command
+**thumbnail**                     | Plugin screenshot, see example above.  268px W x H 150px ![Alt text](../assets/thumbnail.png?raw=true "Thumbnail")
+**custom_configuration_fields**   | Read more [here](#custom-configuration-fields)
+**preview**                       | Plugin screenshots, preview is holding a general array of objects, each object has a `url` string of the asset. This assets can appear in the Ui-Builder preview section. 640px W x H 976px ![Alt text](../assets/preview.png?raw=true "Preview")
+**assets**						  | An optional section the defines plugin assets configuration. See below for the structure. In the placeholder of the uploader, please use the following format "XXXpx W x H XXXpx". Read more [here](#custom-configuration-sections)
+**styles**						  | An optional section the defines plugin styles configuration. Read more [here](#custom-configuration-sections)
+**rules**                         | An optional section the defines plugin rules configuration. Read more [here](#custom-configuration-sections).
+**data**                          | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
+**advertising**                   | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
+
+<a name="extra-dependencies"></a>
+##### Extra Dependencies Example
+
 ```
 "extra_dependencies": [
     {
@@ -228,8 +242,11 @@ _NOTE: for ANDROID use it as an object consists out of url and credentials. For 
     }
   ]
 ```
-- **project_dependencies**: (Android only) Project level counterpart dependencies of RN npm dependencies, Zappifest will ask to optionally add one for each npm dependency detected. Example:
-```"project_dependencies": [
+<a name="project-dependencies"></a>
+##### Project Dependencies Example
+
+```
+"project_dependencies": [
     {
       "react-native-linear-gradient": "node_modules/react-native-linear-gradient/android"
     },
@@ -238,9 +255,10 @@ _NOTE: for ANDROID use it as an object consists out of url and credentials. For 
     }
   ]
 ```
-- **configuration_panel_disabled**: set as true if the plugin configuration should not appear in the plugin gallery. It is recommended to do so when the plugin has a dedicated section in Zapp (Screens, Navigations, etc.)
-- **zapp_configuration**: this key allows to collect options for zapp configuration. Currently, the only available option is to hide specific sections in the UiBuilder configuration
-Example:
+<a name="zapp-configuration"></a>
+##### Zapp Configuration Example
+
+Allowing the plugin creator to disable sections in the configuration panel.
 ```
 "zapp_configuration": {
   "disable_section": {
@@ -248,88 +266,110 @@ Example:
   }
 }
 ```
-- **npm_dependencies**: An array of npm packages to be installed. Mainly in use for RN plugins.
-- **react_native**: Boolean field to indicate if the plugin is a React Native plugin.
-- **react_bundle_url**: Url to the react native bundle.
-- **deprecated_since_zapp_sdk**: Will indicate deprecation of the plugin starting from the given sdk version
-- **unsupported_since_zapp_sdk**: indicates that the plugin will not work starting from the given sdk version
-- **scheme**: (data source plugins only): scheme to be used for the plugin
-- **data_types**: (data source providers only): array of data_types handled by the plugin
-- **screenshots**: array of screenshot urls
-- **cover_image**: Illustration of the plugin in the Plugin Gallery 278px W x H 146px
-![Alt text](../assets/cover_image.png?raw=true "Cover Image")
-- **about**: In depth description of the plugin which will populate the "About" tab of the Plugin Gallery.
-- **guide**: Description of how the plugin should be used and configured.
-The `about` and `guide` properties can both either be a string or markdown. If using a markdown file, do not add these keys to the manifest, as it would take precedence over the markdown file indicated in the publish command
-- **custom_configuration_fields**: An optional section the defines an App Version specific fields to be customized via Zapp CMS.
-This works as a blacklist system - only sections appearing here will be skipped.
-
-The current input options for `custom_configurations_fields`:
-* Text
-* Text Area
-* Checkbox
-* Dropdown
-* Tag Select - same as Multi select but with a single value
-* Multi select dropdown (Array)
-* Tags (Comma separated text field)
-* Color Picker
-
-- **thumbnail**: plugin screenshot, see example above.  268px W x H 150px
-![Alt text](../assets/thumbnail.png?raw=true "Thumbnail")
-- **preview**: plugin screenshots, preview is holding a general array of objects, each object has a `url` string of the
-asset. This assets can appear in the Ui-Builder preview section. 640px W x H 976px
-![Alt text](../assets/preview.png?raw=true "Preview")
-- **assets**: An optional section the defines plugin assets configuration. See below for the structure.
-In the placeholder of the uploader, please use the following format "XXXpx W x H XXXpx"
-- **styles**: An optional section the defines plugin styles configuration. See below for the structure.
-- **rules**: An optional section the defines plugin rules configuration. See below for the structure.
-- **data**: An optional section the defines plugin data source configuration. See below for the structure.
-
 ###### **Navigation plugin fields:**
-- **max_nav_items**: the amount of navigation items that plugin can accept.
-1. **supported_nav_items**: For navigation types plugins (Menu and Navigation Bar). Array of allowd Navigation items for the plugin.
 
-  - List of available navigation items:
-    - `nav_chromecast`
-    - `nav_live`
-    - `nav_screen`
-    - `nav_url`
-    - `nav_header`
-    - `nav_nested_menu`
-    - `nav_epg`
-    - `nav_settings`
+Field Key               | Description
+------------------------| -----------
+**max_nav_items**       | The maximum number of navigation items that the user will be allowed to add.
+**supported_nav_items** | For navigation types plugins (Menu and Navigation Bar). Array of allowd Navigation items for the plugin. Supported types: `nav_chromecast`, `nav_live` (Live drawer screen), `nav_screen`, `nav_url`, `nav_header` (Header - non clickable label), `nav_nested_menu`, `nav_epg`(EPG screen), `nav_settings` (Settings screen)
 
-#### Configuration sections in UiBuilder structure:
-##### for **assets**, **styles**, **rules** & **data**
 
-* each section will contain `fields` array, as you can see in example above, each object will be representation of a configurable plugin form field.
+- - -
 
-1. **form field attributes**:
-  - key: mandatory, name of the field
-  - label: the label next to the field, if not set, will be using normalized key value
-  - placeholder
-  - label_tooltip: i icon, that will display the content of the given string value, support html tags
-  - type: mandatory, field type, existing types are:
-    - `text_input`
-    - `number_input`
-    - `inline_input`
-    - `multi_select`
-    - `tag_select`
-    - `react_select`
-    - `color_picker`
-    - `uploader`
-    - `switch`
-    - `link`
-    - `BUTTON`
-    - `hidden`
-  - initial_value
-  - options: for `tag_select`, `multi_select` and `react_select` types
-  - conditional_fields: if a certain field is depending in another for display or for option values,  see in example above. Conditional field is an array of conditions, with the following structure:
-    - key: contains in a string with the section and the key of the depending field, separated by `/`, for example "styles/background_type"
-    - condition_value: the value of conditional field, that needs to be fulfilled, it can be a string or an array of a few valid values.
-    - options: if the options of the field is changing, depending of conditional field
 
-  - rules: valid values is:
-    - `none`
-    - `conditional`: if a field is conditional
-    - `all_conditions`: all conditional_fields must be fulfilled
+### Form Builder
+Zapp's manifest allows you to provide custom configuration fields to the users. These fields are input fields that should be specific for the use of the plugin dependent on the app the plugin was added (API keys, project id, speicifc colors, etc.)
+
+These fields will be populated in the plugin configuration panel and plugin configuration modal of a version
+
+#### Custom Fields
+<a name="custom-configuration-fields"></a>
+**custom_configuration_fields**: An optional section in the manifest the defines an App Version specific fields to be customized via Zapp CMS. Supported types: `text`, `textarea`, `checkbox`, `dropdown` , `tags`, `colorpicker`, `uploader`
+
+#### Configuration sections in Zapp's App Builder structure:
+<a name="custom-configuration-sections"></a>
+Can be used for **assets**, **styles**, **rules**, **data**, **advertising** sections
+
+* Each section will contain `fields` array, as you can see in example above, each object will be representation of a configurable plugin form field.
+
+* **Form field attributes**:
+
+Field Key         | Description
+------------------| -----------
+**type**          | Required, Field type. Supported types: `text_input`, `number_input`, `inline_input`, `multi_select` , `tag_select`, `color_picker`, `uploader`, `switch`, `link`, `hidden`, `BUTTON` or [special types](#special-field-types)
+**key**           | Required, name of the field
+**label**         | The label next to the field, if not set, will be using normalized key value
+**placeholder**   | Placeholder attribute of the input field
+**min_zapp_sdk**  | minimum zapp version required for the field, when the plugin is a multi platform, please specify the the platform in the following format: `"min_zapp_sdk": { "ios": "1.0.0", "android": "1.0.0" }`
+**label_tooltip** | Optional, Will add an info icon that will display the content of the given string value, supports html tags
+**initial_value** | This value if the user will not change the field. *Use `true/false` for switch*
+**options**       | for `tag_select`, `multi_select` types - an array of objects in the format of `{ "text": "Text Option", "value": "option" }`
+**mandatory**     | Optional key for select field. If set to `true` the select box will not present an x button to clear the selected option.
+
+<a name="special-field-types"></a>
+##### Special Field Types
+###### General Fields:
+- **ios_font_selector**: Will populate fonts dropdown with iOS system fonts and Zapp app custom uploaded fonts
+- **android_font_selector**: Will populate fonts dropdown with Android system fonts and Zapp app custom uploaded fonts
+
+###### Data section Fields:
+If you would like to use data provided by the user to Zapp `Feeds` section you can define:
+```
+ "data": {
+    "fields": [{
+      "key": "source",
+      "type": "select"
+    },
+    {
+      "key": "type",
+      "type": "select"
+    }]
+  }
+```
+This will create the `source` and `type` dropdown fields populated with feeds from Zapp's `Feeds` section.
+
+* **conditional_fields** If a certain field is dependent on another field for display or for option values, see in example above. Conditional fields are array of conditions, with the following structure:
+
+Field Key           | Description
+------------------- | -----------
+**key**             |  A string with the section and the key of the depending field, separated by `/`, for example "styles/background_type"
+**condition_value** | the value of conditional field, that needs to be fulfilled, it can be a string or an array of a few valid values.
+**options**         | if the options of the field is changing, depending of conditional field
+**rules**           | valid values are: `none`/`conditional`(if a field is conditional) / `all_conditions` (all conditional_fields must be fulfilled)
+
+* **Grouping attributes**:
+
+For UI purposes you can choose to group multiple fields under sub section. The subsection is collapsable In order to do so build the field as follows:
+
+Field Key   | Description
+----------- |------------
+**group**   | Set true if you want to group fields
+**label**   | Group label
+**tooltip** | Group tooltip
+**folded**  | true/false - If set to true the section will be folded when the configuration panel is presented)
+**fields**  | Array of fields as mentioned above (All field keys and types are supported)
+Example:
+```
+advertising: {
+    fields: [
+    {
+      group: true, 
+      label: 'My Section',
+      tooltip: 'some tooltip',
+      folded: true,
+      fields: [
+        {
+          key: 'name',
+          type: 'text_input',
+        }, {
+          key: 'type',
+          type: 'text_input',
+        }
+      ]
+    },
+    {
+      key: 'some_other_field',
+      type: 'text_input',
+    }],
+  },
+```
