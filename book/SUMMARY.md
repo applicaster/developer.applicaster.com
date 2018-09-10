@@ -75,6 +75,7 @@
   - [API](/ui-builder/API.md)
   - [Designer Guide](/ui-builder/designer/designer.md)
   - [iOS UI Builder](/ui-builder/ios/Home.md)
+  	- [Screen Plugins](/ui-builder/ios/ScreenPlugin.md)
     - [Navigation Structure](/ui-builder/ios/NavigationStructure.md)
     - [Rivers](/ui-builder/ios/Rivers.md)
     - [Classes and Plists](/ui-builder/ios/Classes-and-Plists.md)
