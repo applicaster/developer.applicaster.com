@@ -35,22 +35,22 @@ The interface provides 3 parameters to the plugin:
           dataSourceModel:NSObject?)
 ```
 2. In the manifest of the plugin the `screen`: `true` key must be added. This key is needed to explain UI Builder that this plugin can be added in the screen section.
-3. A default presentation should be provided, red more below. <a href="#clientExplanation">Client side explanation</a>
+3. A default presentation should be provided, read more below. <a href="#clientExplanation">Client side explanation</a>
 
 <a name="connection" />
 
 ##### Connect Plugin with Rivers API
 
-After adding screen: true flag on Zapp manifest, you will able to see your plugin in the available screens list when adding a screen in the UI Builder.
+After adding `screen: true` flag on Zapp manifest, you will able to see your plugin in the available screens list when adding a screen in the UI Builder.
 
 __Example:__ ContactUS or Settings Twitter Login
 ![ScreenPluginsCreateScreen.png](./Files/ScreenPluginsCreateScreen.png)
 
-When user will select `Screen Plugins` behind a scenes `UIBuilder` will add plugin that connected to your screen in `plugins.json` that will be sent to app during application creation proccess.
+When user will select `Screen Plugins`, behind a scenes the `UI Builder` will add plugin the relevant plugin to `plugins.json` that will be sent to app during application creation process.
 
 ###### River.json screen plugin example
 This is an example of screen plugin that will be passed with `river.json`
-Field `type` is representation of your plugin id `settings_contact_us_legacy`. Using this ID, the client will locate the plugin and will try to create it with `ZPPluggableScreenProtocol` initialization method.
+`type` field is representation of your plugin id `settings_contact_us_legacy`. Using this ID, the client will locate the plugin and will try to create it with `ZPPluggableScreenProtocol` initialization method.
 
 ```
     {
@@ -74,7 +74,7 @@ Field `type` is representation of your plugin id `settings_contact_us_legacy`. U
 ##### Client side explanation
 ###### GAScreenPluginGenericViewController
 
-All screen plugins will be created in GAScreenPluginGenericViewController. This is view controller that has analog of `GAGenericViewController` to create container that will use same rules for same type of the plugins screens.
+All screen plugins will be created in `GAScreenPluginGenericViewController`. `GAScreenPluginGenericViewController` works in a similar way to `GAGenericViewController`. It creates a container that will use same rules for same type of the plugins screens.
 
 Screen Plugin Container will be used to add your screen plugin inside. This container will be used for native and react native screens.
 
@@ -82,9 +82,7 @@ Screen Plugin Container will be used to add your screen plugin inside. This cont
 
 Since `GAGenericViewController` is working properly with same navigation structure as navigation bar plugin and root plugin, you can use the same customization that supports generic screens.
 
-Since this your screen will take affect all global customization, if you expect that you want to present your plugin you have to difine proper navigation bar presentation and presentation of a plugins.
-
-###### Presentation type of the plugin.
+###### Presentation type of the plugin
 There are 2 states that a screen can be presented:
 1. `Push`
 2. `Present`
