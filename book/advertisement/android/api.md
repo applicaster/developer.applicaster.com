@@ -1,8 +1,31 @@
-# DFP Advertisement Plugin - Android
+# Advertisement Plugin - Android
 ## OVERVIEW
-Default Applicaster plugin for showing DFP (A.K.A. Google AdMob) advertising. At the moment it support only inline banners.
+
+The following document describes Applicaster API for pluggable advertisement
+### BANNER FLOW
+
+Bellow diagrams show Banner and interstitial loading flow. Blue part is called by `SDK` green by `plugin`.
+
+#### Success
+
+![banner-success.png](./img/banner-success.png)
+
+#### Failure
+
+![ad-failed.png](./img/ad-failed.png)
+
+### INTERSTITIAL FLOW
+
+#### Success
+
+![interstitial-success.png](./img/interstitial-success.png)
+
+#### Failure
+
+![ad-failed.png](./img/ad-failed.png)
+
 ## INTERFACE IMPLEMENTATION
-### Ad View
+### Ad View - implemented on Applicaster SDK
 `BannerComponent` on generic app level implements `AdView` interface. It contains 3 callback methods:
 
     fun adLoaded(sender: AdViewPresenter, view: View)
@@ -37,7 +60,7 @@ Method `stateChanged` is called every time the state is changing. For this plugi
 
 ###### adLoadFailed
 
-Method `adLoadFailed` is called whenever presenter (for this plugin `DfpViewPresenter`) failed to load an Ad. As a parameter it has instance of`Exception`.
+Method `adLoadFailed` is called whenever presenter failed to load an Ad. As a parameter it has instance of`Exception`.
 
 
 |Parameters|Type           | Description                                                  |
@@ -46,7 +69,7 @@ Method `adLoadFailed` is called whenever presenter (for this plugin `DfpViewPres
 |exc       |Exception      |  Reason of advertisement failure                             |
 
 ### Ad View Presenter
-`DfpViewPresenter` implements `AdViewPresenter` on plugin level. Interface should implement 3 methods:
+`AdViewPresenter` should be implemented on plugin level. Interface should implement following methods:
 
     fun init(component: AdView)
     fun loadAd(adConfig: AdConfig)
@@ -57,7 +80,7 @@ Method `adLoadFailed` is called whenever presenter (for this plugin `DfpViewPres
     fun getConfig() : AdConfig
 
 ###### init
-Method `init` is called whenever presenter is initialised. it creates an intance of PublisherAdView.
+Method `init` is called whenever presenter is initialised. it creates an intance of Ad Provider views.
 ```
 fun init(component: AdView)
 ```
@@ -67,7 +90,7 @@ fun init(component: AdView)
 
 
 ###### loadAd
-Method `loadAd` is called whenever ad configuration need to be setup and add suppose to start loading its content. As a parameter it takes `AdConfig` which defines everything what Ad view needs to present content.
+Method `loadAd` is called whenever ad configuration need to be setup and ad suppose to start loading its content. As a parameter it takes `AdConfig` which defines everything what Ad view needs to present content.
 
 |Parameters|Type           | Description                                                  |
 |----------|---------------|--------------------------------------------------------------|
@@ -123,7 +146,7 @@ class AdConfig (var adUnitId : String,
 
 
 ### Ad Plugin
-`DfpPlugin` impements `AdPlugin` interface on plugin level to provide single layer of** Model-View-Presenter**. So for every single **Model**(`AdConfig`) and View(`BannerComponent`) there should exist only one **Presenter**(`DfpViewPresenter`). Class implemets 2 methods:
+`AdPlugin` interface should be implemented on plugin level to provide single layer of ** Model-View-Presenter**. So for every single **Model**(`AdConfig`) and View there should exist **Presenter**. Class implemets 2 methods:
 
     fun createAd(context: Context, component: AdView): AdViewPresenter
     fun setPluginModel(Plugin plugin)
