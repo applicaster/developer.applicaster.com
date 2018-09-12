@@ -1,4 +1,4 @@
-##Zapp Screen Plugins infrastructure
+## Zapp Screen Plugins infrastructure
 Infrastructure that enables development of standalone screen (views) plugins.
 
 1. <a href="#description">Description</a>
@@ -13,7 +13,7 @@ Infrastructure that enables development of standalone screen (views) plugins.
 <a name="description" />
 
 ##### Description
-`Screen Plugins` are plugins that are presented as standalone screens, A user can trigger the launch of a screen from navigation bar, root (menu) or click on any cell inside application. These plugins can be native or react native. In this document you can find a guide that explains how to configure such a plugin. In addition, screen plugins provide an API that gives developers to ability to customize their plugin via Zapp's UI-Builder.
+`Screen Plugins` are plugins that are presented as standalone screens, A user can trigger the launch of a screen from navigation bar, root (menu) or click on any cell inside application. These plugins can be native or react native. In this document you can find a guide that explains how to configure such a plugin. In addition, a screen plugins provide an API that gives developers to ability to customize their plugin via Zapp's UI-Builder.
 
 ![ScreenPluginsGeneral.png](./Files/ScreenPluginsGeneral.png)
 ***
@@ -26,7 +26,7 @@ Any plugin can be defined as Screen Plugin. In order to do so, please follow the
 1. Implement `ZPPluggableScreenProtocol`. This protocol provides a simple initialization for your plugin. This is a simple initialization for your plugin.`
 The interface provides 3 parameters to the plugin:
 `pluginModel` - Plugin Model itself will be passed in any case.
-`screenModel` - ScreenModel that connected to your plugin, it not optional will be passed too
+`screenModel` - ScreenModel that connected to your plugin
 `dataSourceModel` - Data source of your screen plugin (optional). In some cases, your screen will require dynamic data source configured by the user. If you want to allow users to launch the screen from a tap on a cell the data source of the cell (as defined in the data source entry) will be passed automatically.
 
 ```
@@ -34,7 +34,7 @@ The interface provides 3 parameters to the plugin:
           screenModel:ZLScreenModel,
           dataSourceModel:NSObject?)
 ```
-2. In the manifest of the plugin the `screen`: `true` key must be added. This key is needed to explain UI Builder that this plugin can be added in the screen section.
+2. In the manifest of the plugin the `screen`: `true` key must be added. This key is needed to explain UI Builder that this plugin can be added in the screen section. [Plugins manifest format](https://developer-zapp.applicaster.com/zappifest/plugins-manifest-format.html)
 3. A default presentation should be provided, read more below. <a href="#clientExplanation">Client side explanation</a>
 
 <a name="connection" />
@@ -43,7 +43,7 @@ The interface provides 3 parameters to the plugin:
 
 After adding `screen: true` flag on Zapp manifest, you will able to see your plugin in the available screens list when adding a screen in the UI Builder.
 
-__Example:__ ContactUS or Settings Twitter Login
+__Example:__ Contact Us or Settings Twitter Login
 ![ScreenPluginsCreateScreen.png](./Files/ScreenPluginsCreateScreen.png)
 
 When user will select `Screen Plugins`, behind a scenes the `UI Builder` will add plugin the relevant plugin to `plugins.json` that will be sent to app during application creation process.
@@ -94,8 +94,6 @@ The default behaviors are:
 * `Present` for Navigation Bar
 
 If you select in presentation type present and you do not want to have navigation bar, you have to set in manifest key `force_nav_bar_hidden`:`true`. If you will use this key make sure you add a functionality to close screen, since nav bar will be hidden and close button will not be available.
-
-__Note:__ If use will open screen plugin pushing on cell and presentation type is `present`. `GAScreenPluginGenericViewController` will be presented from navgation bar and will use same rules as item was presented from navigation bar
 
 <a name="keys" />
 
