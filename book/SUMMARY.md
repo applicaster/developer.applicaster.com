@@ -67,6 +67,13 @@
     - [Running on device](/react-native/android/running-on-device.md)
     - [Debugging](/react-native/android/debugging.md)
 
+## Advertisement Plugins
+
+- [Introduction]
+  - [Android]
+    - [Tutorial](/advertisement/android/tutorial.md)
+    - [API](/advertisement/android/api.md)
+
 # Screens (UI Builder)
 
 ## Screens (UI Builder)
