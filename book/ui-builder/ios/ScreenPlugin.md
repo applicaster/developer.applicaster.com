@@ -80,7 +80,7 @@ Screen Plugin Container will be used to add your screen plugin inside. This cont
 
 ![ScreenPluginContainer.png](./Files/ScreenPluginContainer.png)
 
-Since `GAGenericViewController` is working properly with same navigation structure as navigation bar plugin and root plugin, you can use the same customization that supports generic screens.
+The `screen plugins` can be used from the root menu or the app navigation like any other Zapp screen.
 
 ###### Presentation type of the plugin
 There are 2 states that a screen can be presented:
