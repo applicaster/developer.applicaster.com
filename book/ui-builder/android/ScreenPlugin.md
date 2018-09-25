@@ -3,7 +3,7 @@ Infrastructure that enables development of standalone screen (views) plugins.
 
 1. <a href="#description">Description</a>
 2. <a href="#general">General</a>
-3. <a href="#connection">Connection PlugnsScreen with River.json</a>
+3. <a href="#connection">Connection Plugins Screen with River.json</a>
 4. <a href="#clientExplanation">Client side explanation</a>
 4. <a href="#keys">Styles, keys and data source</a>
 5. <a href="#screens">React Native screen and Native screens</a>
@@ -13,7 +13,7 @@ Infrastructure that enables development of standalone screen (views) plugins.
 <a name="description" />
 
 ##### Description
-`Screen Plugins` are plugins that are presented as standalone screens, A user can trigger the launch of a screen from navigation bar, root (menu) or click on any cell inside application. These plugins can be native or react native. In this document you can find a guide that explains how to configure such a plugin. In addition, a screen plugins provide an API that gives developers to ability to customize their plugin via Zapp's UI-Builder.
+`Screen Plugins` are plugins that are presented as standalone screens. A user can trigger the launch of a screen from navigation bar, root (menu) or click on any cell inside application. Screen plugins can be native or react native. In this document you'll find a guide that explains how to configure such a plugin. In addition, a screen plugin provides an API that gives developers to ability to customize their plugin via Zapp's UI-Builder.
 
 ![ScreenPluginsGeneral.png](./Files/ScreenPluginsGeneral.png)
 ***
@@ -22,7 +22,7 @@ Infrastructure that enables development of standalone screen (views) plugins.
 
 ##### General
 
-Any plugin can be defined as Screen Plugin. In order to do so, please follow these:
+Any plugin can be defined as Screen Plugin. In order to do so please follow the steps below:
 1. Implement `ScreenPlugin`. This interface provides a simple initialization for your plugin. This is a simple initialization for your plugin.`
 The interface provides 4 parameters to the plugin:
 `Context context` - Current context.
