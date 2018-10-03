@@ -23,12 +23,12 @@ Infrastructure that enables development of standalone screen (views) plugins.
 ##### General
 
 Any plugin can be defined as Screen Plugin. In order to do so please follow the steps below:
-1. Implement `ScreenPlugin`. This interface provides a simple initialization for your plugin. This is a simple initialization for your plugin.`
-The interface provides 4 parameters to the plugin:
-`Context context` - Current context.
-`HashMap<String, Object> screenMap` - Map of properties.
-`APAtomEntry dataSource` - Data source of your screen plugin (optional). In some cases, your screen will require dynamic data source configured by the user. If you want to allow users to launch the screen from a tap on a cell the data source of the cell (as defined in the data source entry) will be passed automatically.
-`boolean isActivity` - Present as fragment or activity.
+1. Implement `ScreenPlugin`. This interface provides a simple initialization for your plugin. This is a simple initialization for your plugin.`\
+The interface provides 4 parameters to the plugin:\
+`Context context` - Current context.\
+`HashMap<String, Object> screenMap` - Map of properties.\
+`APAtomEntry dataSource` - Data source of your screen plugin (optional). In some cases, your screen will require dynamic data source configured by the user. If you want to allow users to launch the screen from a tap on a cell the data source of the cell (as defined in the data source entry) will be passed automatically.\
+`boolean isActivity` - Present as fragment or activity.\
 
 ```
     void present(Context context, HashMap<String, Object> screenMap, APAtomEntry dataSource, boolean isActivity);
