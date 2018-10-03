@@ -81,7 +81,7 @@ This is an example of screen plugin that will be passed with `river.json`
 ##### Styles, keys and data source
 Screen plugin allows you to pass additional customization that are set in the UI Builder.
 
-Here manifest example:
+Here manifest example:  
 __Note:__
 1. Key `background_color` will allow user to select background color with a color picker.
 2. You can use the special data keys to leverage the feeds that are set in the Feeds section in the UI Builder, allowing the users to set data feeds on the screen plugin, more info could be found in Zappifest documentation. [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
