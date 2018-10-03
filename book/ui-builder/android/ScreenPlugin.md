@@ -186,7 +186,7 @@ public void present(Context context, HashMap<String, Object> screenMap, APAtomEn
 
 Example of receiving props:
 1. `ZappScreen` is passed as `uibuilder_screen_model` props
-2. If we have DS we will pass map of the data source with key `data_source_model`
+2. If we have data source we will pass map of the data source, regardless if it's an single entry or list of entries, with key `data_source_model`.  
 3. For backward compatibility reasons, we will flat map of `ZappScreen` dictionary to give ability to retrieve keys without additional migration. Note This is a temporary solution and plugin should be migrated to use `ZappScreen` props.
 At the end you will get something like this
 ```
