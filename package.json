@@ -5,16 +5,19 @@
   "main": "index.js",
   "dependencies": {
     "gh-pages": "^1.2.0",
-    "gitbook-cli": "^2.3.2",
+    "gitbook": "^3.2.3",
+    "gitbook-plugin-collapsible-menu": "^1.0.3",
+    "gitbook-plugin-highlight": "^2.0.3",
     "gitbook-plugin-styles-sass": "^1.1.0",
     "gitbook-plugin-styles-sass-fix": "^1.1.2",
     "gitbook-plugin-theme-gestalt": "^1.0.7",
     "gitbook-plugin-toggle-chapters": "^0.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "node_modules/.bin/gitbook serve"
+    "start": "node ./node_modules/gitbook-cli/bin/gitbook.js serve"
   },
   "repository": {
     "type": "git",
