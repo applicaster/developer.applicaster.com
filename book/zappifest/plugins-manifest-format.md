@@ -353,7 +353,7 @@ Example:
 advertising: {
     fields: [
     {
-      group: true, 
+      group: true,
       label: 'My Section',
       tooltip: 'some tooltip',
       folded: true,
@@ -372,4 +372,51 @@ advertising: {
       type: 'text_input',
     }],
   },
+```
+
+
+* **Exporting attributes**:
+Export feature gives you the ability to export fields in the manifest to other plugins.
+In order to do so build the field as follows:
+
+Field Key   | Description
+----------- |------------
+**export**   | The hash that holds the exporting data
+**allowed_list**| Array in witch each object represents the plugin where the fields will be exported
+**identifier** | Identifier of the other plugin, in witch the fields from the manifest will be exported
+**section**  | Secion in the other plugin where the fields will be exported
+**group**   | If you want to group multiple fields under sub section
+group => **label**   | Group label
+group => **tooltip** | Group tooltip
+group => **folded**  | true/false - If set to true the section will be folded when the configuration panel is presented)
+**allowed_fields**  | Array of fields as that the plugin wants to export, if empty, all the fields from the mentioned section will be exported
+allowed_fields => **section**   | the section where the field is located
+allowed_fields => **key**   | The field key
+allowed_fields => **min_zapp_sdk** | minimum zapp version required for the field, when the plugin is a multi platform, please specify the the platform in the following format: `"min_zapp_sdk": { "ios": "1.0.0", "android": "1.0.0" }`
+
+Example:
+```
+"export": {
+  "allowed_list": [
+    {
+      "identifier": "general_content",
+      "group": {
+        "label": "refresh",
+        "tooltip": "some tooltip",
+        "folded": true
+      },
+      "section": "rules",
+      "allowed_fields": [
+        {
+          "section": "rules",
+          "key": "refresh",
+          "min_zapp_sdk": {
+            "ios": "6.0.0",
+            "android": "7.0.0"
+          }
+        }
+      ]
+    }
+  ]
+}
 ```
