@@ -13,7 +13,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "node_modules/.bin/gitbook serve"
   },
   "repository": {
     "type": "git",
