@@ -17,10 +17,7 @@
     "gitbook-cli": "^2.3.2"
   },
   "scripts": {
-    "docs:prepare": "gitbook install",
-    "docs:watch": "npm run docs:prepare && gitbook serve",
-    "start": "node ./node_modules/gitbook-cli/bin/gitbook.js serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./node_modules/gitbook-cli/bin/gitbook.js serve"
   },
   "repository": {
     "type": "git",

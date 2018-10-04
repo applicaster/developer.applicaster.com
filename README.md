@@ -19,11 +19,11 @@ Updating existing document is a very easy task, just clone the repo, create a ne
 ## How to add a new document
 Adding a new document can be easily done by the following steps:
 
-1. clone the repo.
-2. install gitbook CLI by `$ npm install -g gitbook-cli`
-3. create a new branch.
-4. add the new `.md` file under the relevant folder.
-5. add the file to the right place in the `/book/SUMMARY.md` according to the [Pages and Summary](https://toolchain.gitbook.com/pages.html) guide.
-6. test your code locally by running the gitbook with `$ gitbook serve`.
-7. push the code.
-8. create the pull request.
+1. Clone the repo.
+2. Run `$ npm install`.
+3. Create a new branch.
+4. Add the new `.md` file under the relevant folder.
+5. Add the file to the right place in the `/book/SUMMARY.md` according to the [Pages and Summary](https://toolchain.gitbook.com/pages.html) guide.
+6. Test your code locally by running the gitbook with `$ npm start` and checking the result in `http://localhost:4000/`.
+7. Push the code.
+8. Create the pull request.
