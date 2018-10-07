@@ -85,7 +85,7 @@
   - [API](/ui-builder/API.md)
   - [Designer Guide](/ui-builder/designer/designer.md)
   - [iOS UI Builder](/ui-builder/ios/Home.md)
-  	- [Screen Plugins](/ui-builder/ios/ScreenPlugin.md)
+    - [Screen Plugins](/ui-builder/ios/ScreenPlugin.md)
     - [Navigation Structure](/ui-builder/ios/NavigationStructure.md)
     - [Rivers](/ui-builder/ios/Rivers.md)
     - [Classes and Plists](/ui-builder/ios/Classes-and-Plists.md)
@@ -95,6 +95,24 @@
     - [Family Interface](/ui-builder/android/family-interface/family-interface.md)
       - [Intelligent code completion](/Families/Android/intelligent-code-completion.md)
       - [Navigation Overview](/ui-builder/android/NavigationOverView.md)
+    - [Screen Plugins](/ui-builder/android/ScreenPlugin.md)
   - [Components and Cell Styles](/ui-builder/components-and-cell-styles/intro.md)
     - [Video Background Cell](/ui-builder/components-and-cell-styles/cell-styles/video-background-cell.md)
   - [Url Scheme](/ui-builder/scheme/scheme.md)
+
+# QuickBrick
+
+## QuickBrick
+
+- [Introduction](/quick-brick/intro.md)
+- [Beta Guidelines & information](/quick-brick/Beta-guidelines.md)
+- [Setup your project](/quick-brick/Setup.md)
+- [Inside QuickBrick](/quick-brick/Inside-QuickBrick.md)
+- [API documentation](/quick-brick/Api-documentation.md)
+  - [CLI](/quick-brick/Api/Cli.md)
+  - [App](/quick-brick/Api/App.md)
+  - [Bridge](/quick-brick/Api/Bridge.md)
+  - [Redux](/quick-brick/Api/Redux.md)
+  - [Components](/quick-brick/Api/Ui-components.md)
+  - [Utilities](/quick-brick/Api/Utils.md)
+- [Plugin migration guide](/quick-brick/migration-guide.md)
