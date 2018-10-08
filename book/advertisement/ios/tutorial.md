@@ -1,6 +1,6 @@
 # Advertisement Tutorial: ZappAdvertisementPluginExample-iOS
 
-The ZappAdvertisementPluginExample is an example project for creating an advertisement plugin for the Applicaster Zapp Platform. You can use this example project as a reference for how to build your own login plugin.
+The [ZappAdvertisementPluginExample](https://github.com/applicaster/zapp-plugins-examples/tree/master/Advertisement/iOS) is an example project for creating an advertisement plugin for the Applicaster Zapp Platform. You can use this example project as a reference for how to build your own login plugin.
 
 If you are not familiar with Zapp please visit [our website](http://applicaster.com/?page=product) for more details.
 

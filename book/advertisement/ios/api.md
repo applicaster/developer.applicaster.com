@@ -30,7 +30,7 @@ The diagrams below show banner and interstitial loading flow. The blue part is c
 
 ### Ad View (ZPAdViewProtocol) - implemented on Applicaster SDK
 
-On generic app level there are 3 classes that implement `ZPAdViewProtocol` protocol: `CABannerCellViewController` for inline banners, `GABannerController` for screen banners, and `GAInterstitialManager` for interstitials. It contains 3 callback methods:
+Inside the ApplicasterSDK there are 3 classes that implement `ZPAdViewProtocol` protocol: `CABannerCellViewController` for inline banners, `GABannerController` for screen banners, and `GAInterstitialManager` for interstitials. It contains 3 callback methods:
 
 ``` swift
 func adLoaded(view: UIView?)
@@ -49,12 +49,19 @@ Method `adLoaded` is called whenever presenter loads an Ad.
 ###### stateChanged
 
 Method `stateChanged` is called every time the state changes. We have defined the following states:
+
 `Uninitialized` - whenever the ad hasn't been initialized yet
+
 `Loading` - whenever ad is loading
+
 `Loaded` - whenever ad has been loaded
+
 `Impressed` - whenever ad has been shown on screen with atleast 50% visibility
+
 `Failed` - whenever ad view has failed to load
+
 `Clicked` - whenever user open the ad
+
 `Closed` - whenever ad view has been loaded
 
 |Parameters |Type           | Description                                                  |
@@ -111,7 +118,7 @@ Show an interstitial ad. Only call this method when the ad has being loaded.
 
 ### Ad Plugin (ZPAdPluginProtocol)
 
-`ZPAdPluginProtocol` protocol should be implemented on plugin level to provide single layer of ** Model-View-Presenter**. So for every single **Model**(`AdConfig`) and View there should exist **Presenter**. Class implemets 3 methods:
+`ZPAdPluginProtocol` protocol should be implemented on plugin level to provide single layer of **Model-View-Presenter**. So for every single **Model**(`AdConfig`) and View there should exist **Presenter**. Class implemets 3 methods:
 
 ``` swift
 func createAdPresenter(adView:ZPAdViewProtocol, parentVC:UIViewController) -> ZPAdPresenterProtocol
