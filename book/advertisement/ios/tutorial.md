@@ -1,6 +1,6 @@
 # Advertisement Tutorial: ZappAdvertisementPluginExample-iOS
 
-The [ZappAdvertisementPluginExample](https://github.com/applicaster/zapp-plugins-examples/tree/master/Advertisement/iOS) is an example project for creating an advertisement plugin for the Applicaster Zapp Platform. You can use this example project as a reference for how to build your own login plugin.
+The [ZappAdvertisementPluginExample](https://github.com/applicaster/zapp-plugins-examples/tree/master/Advertisement/iOS) is an example project for creating an advertisement plugin for the Applicaster Zapp Platform. You can use this example project as a reference for how to build your own advertisement plugin.
 
 If you are not familiar with Zapp please visit [our website](http://applicaster.com/?page=product) for more details.
 
@@ -54,7 +54,7 @@ First of all we need to implement a variable and 2 constructors that are common 
 ###### NOTE: Using the Zapp Plugin Configuration JSON
 
 ```
-When creating a plugin in Zapp we can create custom configuration fields. This enable the Zapp user to fill relevant details for the specific plugin. More details can found in the [Zapp Plugin Manifest Format](http://developer-zapp.applicaster.com/zappifest/plugins-manifest-format.html).
+When creating a plugin in Zapp we can create custom configuration fields. This enables the Zapp user to fill in relevant details for the specific plugin. More details can found in the [Zapp Plugin Manifest Format](http://developer-zapp.applicaster.com/zappifest/plugins-manifest-format.html).
 You can use that on the plugin level like this:
 ```
 
