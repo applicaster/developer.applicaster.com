@@ -311,7 +311,8 @@ Field Key         | Description
 ###### General Fields:
 - **ios_font_selector**: Will populate fonts dropdown with iOS system fonts and Zapp app custom uploaded fonts
 - **android_font_selector**: Will populate fonts dropdown with Android system fonts and Zapp app custom uploaded fonts
-- **nav_bar_selector**: Screen plugin fields, if the screen want to use "nav_bar per screen" feature, needs to add in the manifest field with `nav_bar_selector` type and `nav_bar_id` key, that will populate all the nav_bars that available for the current layout.
+- **nav_bar_selector**: Is related to the "Per screen Navigation Bar" feature, that will allow to have more than one navigation bar in the app and assign it to different screens/plugin screens.
+if the screen want to use the feature, add in the manifest field with `nav_bar_selector` type and `nav_bar_id` key, that will populate all the nav_bars that available for the current layout.
 Here is the example:
 ```
 "fields": [
