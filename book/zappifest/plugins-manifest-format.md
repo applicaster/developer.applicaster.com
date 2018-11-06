@@ -399,14 +399,14 @@ In order to do so build the field as follows:
 Field Key   | Description
 ----------- |------------
 **export**   | The hash that holds the exporting data
-**allowed_list**| Array in witch each object represents the plugin where the fields will be exported
-**identifier** | Identifier of the other plugin, in witch the fields from the manifest will be exported
-**section**  | Secion in the other plugin where the fields will be exported
-**group**   | If you want to group multiple fields under sub section
+**allowed_list**| Array in which each object represents the plugin where the fields will be exported
+**identifier** | Identifier of the other plugin, in which the fields from the manifest will be exported
+**section**  | Section in the other plugin where the fields will be exported
+**group**   | Use this field to group multiple fields under sub section
 group => **label**   | Group label
 group => **tooltip** | Group tooltip
 group => **folded**  | true/false - If set to true the section will be folded when the configuration panel is presented)
-**allowed_fields**  | Array of fields as that the plugin wants to export, if empty, all the fields from the mentioned section will be exported
+**allowed_fields**  | Array of fields that the plugin wants to export. If empty, all the fields from the mentioned section will be exported (section must exist in the exporting manifest)
 allowed_fields => **section**   | the section where the field is located
 allowed_fields => **key**   | The field key
 allowed_fields => **min_zapp_sdk** | minimum zapp version required for the field, when the plugin is a multi platform, please specify the the platform in the following format: `"min_zapp_sdk": { "ios": "1.0.0", "android": "1.0.0" }`
