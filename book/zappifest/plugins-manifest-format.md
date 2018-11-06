@@ -411,6 +411,9 @@ allowed_fields => **section**   | the section where the field is located
 allowed_fields => **key**   | The field key
 allowed_fields => **min_zapp_sdk** | minimum zapp version required for the field, when the plugin is a multi platform, please specify the the platform in the following format: `"min_zapp_sdk": { "ios": "1.0.0", "android": "1.0.0" }`
 
+
+** Please note: the exporting plugin should be installed in the app or to be a core plugin (`"core_plugin": true`)
+
 Example:
 ```
 "export": {
