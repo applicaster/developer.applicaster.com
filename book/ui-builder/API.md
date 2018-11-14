@@ -18,6 +18,43 @@
 	* `preload_plugins` -  An array of the screens/plugins to be loaded them before the screen
 	* `postload_plugins` -  An array of the screens/plugins to be loaded after the screen load
 
+Here is the example:
+```
+hooks: {
+    "preload_plugins": [
+        {
+            label: "DFP Advertisement Plugin",
+            position: 1,
+            value: 311, // when the plugin is not screen this holds the plugin id
+            plugin_type: "advertisement",
+            identifier: "DFP",
+            screen: false,
+            connected: false
+        },
+        {
+            label: "Login",
+            position: 2,
+            value: "123213123213", // when the plugin screen this holds the river id
+            plugin_type: "login",
+            identifier: "DFP",
+            screen: true,
+            connected: false
+        },
+    ],
+    "postload_plugins": [
+        {
+            label: "Ran DFP Advertisement Plugin",
+            position: 0,
+            value: 310,
+            plugin_type: "advertisement",
+            identifier: "ran_dfp",
+            screen: false,
+            connected: false
+        }
+    ]
+}
+```
+
 `ui_components` - An array of the `Component` model items
 
 ***
