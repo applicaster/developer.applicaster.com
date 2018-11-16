@@ -13,7 +13,7 @@ Infrastructure that enables development of standalone screen (views) plugins.
 <a name="description" />
 
 ##### Description
-`Screen Plugins` are plugins that are presented as standalone screens. A user can trigger the launch of a screen from navigation bar, root (menu) or click on any cell inside application. Screen plugins can be native or react native. In this document you'll find a guide that explains how to configure such a plugin. In addition, a screen plugin provides an API that gives developers to ability to customize their plugin via Zapp's UI-Builder.
+`PluginScreen` are plugins that are presented as standalone screens. A user can trigger the launch of a screen from navigation bar, root (menu) or click on any cell inside application. Screen plugins can be native or react native. In this document you'll find a guide that explains how to configure such a plugin. In addition, a screen plugin provides an API that gives developers to ability to customize their plugin via Zapp's UI-Builder.
 
 ![ScreenPluginsGeneral.png](./Files/ScreenPluginsGeneral.png)
 ***
@@ -23,7 +23,7 @@ Infrastructure that enables development of standalone screen (views) plugins.
 ##### General
 
 Any plugin can be defined as Screen Plugin. In order to do so please follow the steps below:
-1. Implement `ScreenPlugin`. This interface provides a simple initialization for your plugin. This is a simple initialization for your plugin.  
+1. Implement `PluginScreen`. This interface provides a simple initialization for your plugin. This is a simple initialization for your plugin.  
 The interface provides 4 parameters to the plugin:  
 `Context context` - Current context.  
 `HashMap<String, Object> screenMap` - Map of properties.  
@@ -51,7 +51,7 @@ The `Screen Plugins` can be used from the root menu or the app navigation like a
 
 ###### River.json screen plugin example
 This is an example of screen plugin that will be passed with `river.json`
-`type` field is representation of your plugin id `settings_contact_us_legacy`. Using this ID, the client will locate the plugin and will try to create it with `ScreenPlugin` initialization method.
+`type` field is representation of your plugin id `settings_contact_us_legacy`. Using this ID, the client will locate the plugin and will try to create it with `PluginScreen` initialization method.
 
 ```
     {
@@ -74,7 +74,7 @@ This is an example of screen plugin that will be passed with `river.json`
 ##### Client side explanation
 ###### ScreenPluginUtils
 
-`ScreenPluginUtils` is a helper class with default methods to present RN and Native screens and helper methods.
+`PluginScreenUtils` is a helper class with default methods to present RN and Native screens and helper methods.
 
 <a name="keys" />
 
@@ -159,7 +159,7 @@ This section describes the difference between React Native and native screen plu
 
 ###### Native
 
-Native Screen plugins must implement `ScreenPlugin` and override `present` method. `ScreenPluginUtil` has a default method to present a Native fragment `presentNativeFragment`. If your plugin will have data source it will be passed as `APAtomEntry`.
+Native Screen plugins must implement `PluginScreen` and override `present` method. `PluginScreenUtil` has a default method to present a Native fragment `presentNativeFragment`. If your plugin will have data source it will be passed as `APAtomEntry`.
 
 ###### React Native
 
@@ -213,3 +213,7 @@ At the end you will get something like this
         }
 
 ```
+
+###### Screen Picker with RN plugin screens
+
+In order to support multiple React Native context in Screen Picker we had to deviate from regular flow and use `RNPluginScreenFragment` with inflated `ReactNativeContent` layout.
