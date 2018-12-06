@@ -420,6 +420,6 @@ We do that by running `npm publish` in our terminal.
     * `Input info screenshot URL` - Optional, Screenshot URL that provides further info for the requested input
 
 5. The `zappifest` tool should, at this point, to create a `plugin-manifest.json` file.
-  Now run `zappifest publish --manifest plugin-manifest.json --access-token $ZAPP_TOKEN` and your data source provider is published on the Zapp platform and ready to use in Zapp apps.
+  Now run `zappifest publish --manifest plugin-manifest.json --access-token $ZAPP_TOKEN --new` and your data source provider is published on the Zapp platform and ready to use in Zapp apps.
   
 The full source code of this tutorial can be found [here at GitHub](https://github.com/applicaster/zapp-pipes-provider-wordpress/).
