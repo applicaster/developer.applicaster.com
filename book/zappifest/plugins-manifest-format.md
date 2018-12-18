@@ -225,6 +225,8 @@ Field Key                         | Description
 **rules**                         | An optional section the defines plugin rules configuration. Read more [here](#custom-configuration-sections).
 **data**                          | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
 **advertising**                   | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
+**preload**                   | An optional boolean key, that defines if plugin can be hooked (loaded), before the screen loads
+**postload**                   | An optional boolean key, that defines if plugin can be hooked (loaded), after the screen loads
 
 <a name="extra-dependencies"></a>
 ##### Extra Dependencies Example

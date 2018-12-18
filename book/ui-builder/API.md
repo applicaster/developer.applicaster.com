@@ -14,7 +14,7 @@
 
 `styles` - An optional section in the screen configuraiton with Dictionary of the component styles, it includes mandatory fields per component, if exist.
 
-`hooks`: An optional section in the screen configuraiton with two attributes: `preload_plugins` and `postload_plugins`
+`hooks`: An optional section in the screen configuraiton with two array attributes: `preload_plugins` and `postload_plugins`:
 	* `preload_plugins` -  An array of the screens/plugins to be loaded them before the screen
 	* `postload_plugins` -  An array of the screens/plugins to be loaded after the screen load
 
@@ -23,33 +23,24 @@ Here is the example:
 hooks: {
     "preload_plugins": [
         {
-            label: "DFP Advertisement Plugin",
-            position: 1,
-            value: 311, // when the plugin is not screen this holds the plugin id
-            plugin_type: "advertisement",
-            identifier: "DFP",
-            screen: false,
-            connected: false
+            screen_id: "123123123", // String, will be passed only if the hook is a screen
+            identifier: "some_hook_screen", // String, plugin identifier
+            type: "general", // String, passing the plugin type
+            weight: 1 // Plugins order, the array will be sorted by weight
         },
         {
-            label: "Login",
-            position: 2,
-            value: "123213123213", // when the plugin screen this holds the river id
-            plugin_type: "login",
-            identifier: "DFP",
-            screen: true,
-            connected: false
+            screen_id: "546456546", // String, will be passed only if the hook is a screen
+            identifier: "some_hook_screen", // String, plugin identifier
+            type: "general", // String, passing the plugin type
+            weight: 2 // Plugins order, the array will be sorted by weight
         },
     ],
     "postload_plugins": [
         {
-            label: "Ran DFP Advertisement Plugin",
-            position: 0,
-            value: 310,
-            plugin_type: "advertisement",
-            identifier: "ran_dfp",
-            screen: false,
-            connected: false
+            screen_id: , // Value of the screen will not be passed if the plugin is not implemented by the screen
+            identifier: "some_hook_plugin", // String, plugin identifier
+            type: "logout", // String, passing the plugin type
+            weight: 1 // Plugins order, the array will be sorted by weight
         }
     ]
 }
