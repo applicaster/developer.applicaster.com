@@ -226,7 +226,6 @@ Field Key                         | Description
 **data**                          | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
 **advertising**                   | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
 **preload**                   | An optional boolean key, that defines if plugin can be hooked (loaded), before the screen loads
-**postload**                   | An optional boolean key, that defines if plugin can be hooked (loaded), after the screen loads
 
 <a name="extra-dependencies"></a>
 ##### Extra Dependencies Example
@@ -332,10 +331,10 @@ Here is the example:
 ]
 ```
 
-- **postload_plugins_selector** / **postload_plugins_selector** (Screen feature):
- --  This selector is allowing to choose additional screens/plugins in order to load them before/after your configured screen.
-If the screen needs to present or load some additional feature before or after screen presentation, use this selector.
-** Important to mention that in order to populate the field and for it to work `postload_plugins_selector` / `postload_plugins_selector` type and `postload_plugins`/`preload_plugins` key is mandatory.
+- **preload_plugins_selector** (Screen feature):
+ --  This selector is allowing to choose additional screens/plugins in order to load them before your configured screen.
+If the screen needs to present or load some additional feature before the screen presentation, use this selector.
+** Important to mention that in order to populate the field and for it to work `preload_plugins_selector` type and `preload_plugins` key is mandatory within the selector.
 
 Here is the example:
 
@@ -346,11 +345,6 @@ Here is the example:
         "key": "preload_plugins",
         "type": "preload_plugins_selector",
         "label": "Select Preload Plugins"
-      },
-      {
-        "key": "postload_plugins",
-        "type": "postload_plugins_selector",
-        "label": "Select Postload Plugins"
       }
     ]
   },

@@ -14,9 +14,8 @@
 
 `styles` - An optional section in the screen configuraiton with Dictionary of the component styles, it includes mandatory fields per component, if exist.
 
-`hooks`: An optional section in the screen configuraiton with two array attributes: `preload_plugins` and `postload_plugins`:
+`hooks`: An optional section in the screen configuraiton with one array attributes: `preload_plugins`:
 	* `preload_plugins` -  An array of the screens/plugins to be loaded them before the screen
-	* `postload_plugins` -  An array of the screens/plugins to be loaded after the screen load
 
 Here is the example:
 ```
@@ -34,14 +33,6 @@ hooks: {
             type: "general", // String, passing the plugin type
             weight: 2 // Plugins order, the array will be sorted by weight
         },
-    ],
-    "postload_plugins": [
-        {
-            screen_id: , // Value of the screen will not be passed if the plugin is not implemented by the screen
-            identifier: "some_hook_plugin", // String, plugin identifier
-            type: "logout", // String, passing the plugin type
-            weight: 1 // Plugins order, the array will be sorted by weight
-        }
     ]
 }
 ```
