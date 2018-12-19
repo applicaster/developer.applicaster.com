@@ -329,6 +329,32 @@ Here is the example:
 ]
 ```
 
+###### Bundled Assets
+If there is a need to add image assets that should be compiled in the app (not remotely configured) you can use the following fields:
+
+For iOS:
+```
+{
+	"key": "ios_assets_bundle",
+    "type": "uploader"
+    "default": "www.some-url/ios_assets.zip"
+}
+```
+
+*Please note*: The required file should be a zip file, contains a flat list of files following [these](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/) guidelines. When creating the file the user needs to make sure the Zip file was created by compressing the **flat list of files** and not adding extra folders.
+
+For Android:
+```
+{
+	"key": "android_assets_bundle",
+    "type": "uploader"
+    "default": "www.some-url/android_assets.zip"
+
+}
+```
+
+*Please note*: The required file should be a zip file, contains the required folder structure following [these](https://developer.android.com/training/multiscreen/screendensities/) guidelines. When creating the file the user needs to make sure the Zip file was created by compressing the **drawables folders list** and not adding extra folders.
+
 ###### Data section Fields:
 If you would like to use data provided by the user to Zapp `Feeds` section you can define:
 ```
