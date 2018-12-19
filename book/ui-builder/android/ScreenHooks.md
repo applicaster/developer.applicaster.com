@@ -9,7 +9,7 @@ Infrastructure that enables development of pre- and post-loading hooks for UIBui
 6. <a href="#connection">Screen Hooks Rivers API</a>
 7. <a href="#example">Example Of Implementation</a>
 
-* * *
+***
 
 <a name="description" />
 
@@ -101,14 +101,14 @@ For an example we will set up a `Player` plugin to use `Screen Hooks`.
 1. Set up `Player` plugin:
     - Implement `PluginScreen` interface for the `Player`.
     <LINK TO PLUGIN SCREENS>   
-    - Disable storefront, adding to manifest's `custom_configuration_fields`:   
-    ```
+    - Disable storefront, adding to manifest's `custom_configuration_fields`:     
+    ```   
     {
       "type": "checkbox",
       "key": "ignore_default_subscription",
       "default": 0
-    }
-    ```
+    }   
+    ```   
 2. Set up plugins we want to use as `Screen Hook`:
     - Add this to manifest to enable hooks:   
     ```
