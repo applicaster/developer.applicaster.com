@@ -98,10 +98,9 @@ Rivers' API will add to every screen that needs hooks.
 
 For an example we will set up a `Player` plugin to use `Screen Hooks`.  
 
-1. Set up `Player` plugin:
-    - Implement `PluginScreen` interface for the `Player`.
-    <LINK TO PLUGIN SCREENS>   
-    - Disable storefront, adding to manifest's `custom_configuration_fields`:     
+1. Set up `Player` plugin:   
+    - Implement `PluginScreen` interface for the `Player`.<LINK TO PLUGIN SCREENS>   
+    - Disable storefront, adding to manifest's `custom_configuration_fields`:   
     ```   
     {
       "type": "checkbox",
