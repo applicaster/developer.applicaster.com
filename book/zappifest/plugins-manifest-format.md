@@ -333,6 +333,7 @@ Here is the example:
 
 - **preload_plugins_selector** (Screen feature):
  --  This selector is allowing to choose additional screens/plugins in order to load them before your configured screen.
+Only works for screen plugins (screen param must be set to true, otherwise this field is ignored).
 If the screen needs to present or load some additional feature before the screen presentation, use this selector.
 ** Important to mention that in order to populate the field and for it to work `preload_plugins_selector` type and `preload_plugins` key is mandatory within the selector.
 
