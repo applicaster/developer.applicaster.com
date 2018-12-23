@@ -225,6 +225,7 @@ Field Key                         | Description
 **rules**                         | An optional section the defines plugin rules configuration. Read more [here](#custom-configuration-sections).
 **data**                          | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
 **advertising**                   | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
+**preload**                   | An optional boolean key, that defines if plugin can be hooked (loaded), before the screen loads
 
 <a name="extra-dependencies"></a>
 ##### Extra Dependencies Example
@@ -318,6 +319,7 @@ If the screen want to use this feature, add in the manifest field with `nav_bar_
 ** Important to mention that in order to populate the field and for it to work `nav_bar_selector` type and `nav_bar_id` key is mandatory.
 
 Here is the example:
+
 ```
 "fields": [
   {
@@ -329,15 +331,35 @@ Here is the example:
 ]
 ```
 
+- **preload_plugins_selector** (Screen feature):
+ --  This selector is allowing to choose additional screens/plugins in order to load them before your configured screen.
+Only works for screen plugins (screen param must be set to true, otherwise this field is ignored).
+If the screen needs to present or load some additional feature before the screen presentation, use this selector.
+** Important to mention that in order to populate the field and for it to work `preload_plugins_selector` type and `preload_plugins` key is mandatory within the selector.
+
+Here is the example:
+
+```
+"hooks": {
+    "fields": [
+       {
+        "key": "preload_plugins",
+        "type": "preload_plugins_selector",
+        "label": "Select Preload Plugins"
+      }
+    ]
+  },
+```
+
 ###### Bundled Assets
 If there is a need to add image assets that should be compiled in the app (not remotely configured) you can use the following fields:
 
 For iOS:
 ```
 {
-	"key": "ios_assets_bundle",
-    "type": "uploader"
-    "default": "www.some-url/ios_assets.zip"
+"key": "ios_assets_bundle",
+"type": "uploader"
+"default": "www.some-url/ios_assets.zip"
 }
 ```
 
@@ -346,14 +368,15 @@ For iOS:
 For Android:
 ```
 {
-	"key": "android_assets_bundle",
-    "type": "uploader"
-    "default": "www.some-url/android_assets.zip"
+"key": "android_assets_bundle",
+"type": "uploader"
+"default": "www.some-url/android_assets.zip"
 
 }
 ```
 
 *Please note*: The required file should be a zip file, contains the required folder structure following [these](https://developer.android.com/training/multiscreen/screendensities/) guidelines. When creating the file the user needs to make sure the Zip file was created by compressing the **drawables folders list** and not adding extra folders.
+
 
 ###### Data section Fields:
 If you would like to use data provided by the user to Zapp `Feeds` section you can define:
