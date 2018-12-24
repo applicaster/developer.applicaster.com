@@ -8,9 +8,34 @@
 
 `type` - The Type of a specific screen. For example: `general_content` - This screen will be created from GAGenericViewController. Other types are mapped on some custom ViewControllers that are inherited from GAGenericViewController.
 
-`data` - unused
+`nav_bar_id` - Navigation bar id to be used for the screen, if not set, will be use default
 
-`styles` - unused
+`data` - An optional section in the screen configuration with data source dictionary
+
+`styles` - An optional section in the screen configuration with Dictionary of the component styles, it includes mandatory fields per component, if exist.
+
+`hooks`: An optional section in the screen configuration with one array attributes: `preload_plugins`:
+	* `preload_plugins` -  An array of the screens/plugins to be loaded them before the screen
+
+Here is the example:
+```
+hooks: {
+    "preload_plugins": [
+        {
+            screen_id: "123123123", // String, will be passed only if the hook is a screen
+            identifier: "some_hook_screen", // String, plugin identifier
+            type: "general", // String, passing the plugin type
+            weight: 1 // Plugins order, the array will be sorted by weight
+        },
+        {
+            screen_id: "546456546", // String, will be passed only if the hook is a screen
+            identifier: "some_hook_screen", // String, plugin identifier
+            type: "general", // String, passing the plugin type
+            weight: 2 // Plugins order, the array will be sorted by weight
+        },
+    ]
+}
+```
 
 `ui_components` - An array of the `Component` model items
 
