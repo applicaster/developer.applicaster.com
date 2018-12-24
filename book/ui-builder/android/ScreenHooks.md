@@ -68,12 +68,12 @@ General idea is that we initialize `HookScreenManager` with list of `HookScreen`
 ##### Screen Hooks Interface
 
 Any screen plugin can be defined as Screen Hook. In order to do so please implement `HookScreen`. The interface provides those methods to the plugin:  
-`isFlowBlocker()` - Determines if failed hook will abort.  
-`shouldPresent()` - Determines if hook screen will be presenting to UI.  
-`isRecurringHook()` - Determines if hook can me presented every time specific screen loads.  
-`hookDismissed()` - Specifies the logic for cases when user dismissed the hook.
-`executeHook(context: Context, hookListener: HookScreenListener, hookProps: Map<String, Any>?)` - execute hook
-`getListener()` - Android specific method to return the `hookListener` from Screen Hook   
+  - `isFlowBlocker()` - Determines if failed hook will abort.  
+  - `shouldPresent()` - Determines if hook screen will be presenting to UI.  
+  - `isRecurringHook()` - Determines if hook can me presented every time specific screen loads.  
+  - `hookDismissed()` - Specifies the logic for cases when user dismissed the hook.
+  - `executeHook(context: Context, hookListener: HookScreenListener, hookProps: Map<String, Any>?)` - execute hook
+  - `getListener()` - Android specific method to return the `hookListener` from Screen Hook   
 
 
 ##### Screen Hooks Rivers API
