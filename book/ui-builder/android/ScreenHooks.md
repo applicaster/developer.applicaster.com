@@ -2,50 +2,30 @@
 Infrastructure that enables development of pre- and post-loading hooks for UIBuilder's screens.
 
 1. <a href="#description">Description</a>
-2. <a href="#general">General Hooks</a>
-3. <a href="#interface">Screen Hooks Interface</a>
-4. <a href="#rn">RN Hooks</a>
-5. <a href="#player&article">Player and Articles hook support</a>
-6. <a href="#connection">Screen Hooks Rivers API</a>
-7. <a href="#example">Example Of Implementation</a>
+2. <a href="#general">General</a>
+3. <a href="#rn">RN Hooks</a>
+4. <a href="#player&article">Player and Articles hook support</a>
+5. <a href="#interface">Screen Hooks Interface</a>
+6. <a href="#manager">Screen Hook manager</a>
+7. <a href="#connection">Screen Hooks Rivers API</a>
+8. <a href="#example">Example Of Implementation</a>
 
-***
+* * *
 
 <a name="description" />
-
 ##### Description
-`Screen Hooks` are hooks that are presented before or after loading the screens. They can be attached to a screens launched from navigation bar, root (menu) or on cell click inside application. Screen hooks can be native or react native. In this document you'll find a guide that explains how to configure such a plugin.
+`Screen Hooks` are hooks that are presented before or after loading the screens. They can be attached to a screens launched from navigation bar, root (menu) or on cell click inside application. Screen hooks can be native or react native. In this document you'll find a guide that explains how to configure such a plugin.   
 
 ***
 
 <a name="general" />
+##### General   
 
-##### General Hooks   
-
-To oversee the flow of Hook Screens we introduced `HookScreenManager` class. It decides
-if hooks should be executed and caches executed hooks.   
-`HookScreenManager` public methods:
-  - `init(context: Context, screenId: String, hookManagerListener: HookScreenMangerListener, hookMap: List<Any>?)` - initializes the Hook Screen flow
-  - `failCurrentHook(hookProps: Map<String, Any>?)` - fails current Hook and passes `hookProps` to it.
-  - `completeCurrentHook(hookProps: Map<String, Any>?)` - completes current Hook and passes `hookProps` to it.
-  Main private methods:
-  - `processHook(context: Context, hook: HookScreen, hookCacheName:String, hookProps: Map<String, Any>?)` - executes `hook` and passed `HookScreenListener` and `hookProps` to it.   
-General idea is that we initialize `HookScreenManager` with list of `HookScreen` and `HookScreenMangerListener`. `HookScreenManager` will traverse through every hook, one at a time, through calling a coroutine method `processHook(context: Context, hook: HookScreen, hookCacheName:String, hookProps: Map<String, Any>?)` as soon as `HookScreen` completes, it will trigger `HookScreenListener` with `hookCompleted` or `hookFailed`. This should be the only way to exit `HookScreen`. `hookCompleted` will trigger `HookScreenManager` to resume coroutine and process next hook, when `hookFailed` will trigger `hookManagerFailed`. Once all hooks are completed we will call `hookManagerCompleted`.   
-
-<a name="interface" />
-
-##### Screen Hooks Interface
-
-Any screen plugin can be defined as Screen Hook. In order to do so please implement `HookScreen`. The interface provides those methods to the plugin:  
-`isFlowBlocker()` - Determines if failed hook will abort.  
-`shouldPresent()` - Determines if hook screen will be presenting to UI.  
-`isRecurringHook()` - Determines if hook can me presented every time specific screen loads.  
-`hookDismissed()` - Specifies the logic for cases when user dismissed the hook.
-`executeHook(context: Context, hookListener: HookScreenListener, hookProps: Map<String, Any>?)` - execute hook
-`getListener()` - Android specific method to return the `hookListener` from Screen Hook   
+`Hooks Plugins` can be two types.
+1. `Screen Plugin Hooks` - This types of hooks are `Screen Plugins` that can defined and customized from UIBuilder and conform all of the rules of [Screen Plugins](https://developer-zapp.applicaster.com/ui-builder/android/ScreenPlugin.html) for navigation structure, navigation bar etc. As example `Login` and `Storefront` screens.
+2. `Hooks Plugin` - This types of plugin not screens. If they have `UI` It must fully controlled by the developer. Prefered usage of this type of plugin as example: `Analytics` and `Advertisment`. That do not need presentation of UI or use of the 3rd party frameworks that API we can not fully control.
 
 <a name="rn" />
-
 ##### RN Hooks
 
 RN side of screen hook will call `hookFinishedWork(hookFinishedWork: Boolean, errorMessage: String?, hookProps: ReadableMap, isFlowBlocker: Boolean)` of `ReactNativeHookScreenBridge`.
@@ -55,7 +35,6 @@ RN side of screen hook will call `hookFinishedWork(hookFinishedWork: Boolean, er
   - isFlowBlocker: Boolean - defines if flow should be interrupted
 
 <a name="player&article" />
-
 ##### Player and Articles hook support  
 
 For `Player` and `Article` plugins: Plugin should be converted to `Plugin Screen` and make sure to disable default storefront in plugin manifest by adding to `custom_configuration_fields` for `Player` plugins:  
@@ -66,9 +45,32 @@ For `Player` and `Article` plugins: Plugin should be converted to `Plugin Screen
     "default": 0
   }
 ```   
+<a name="manager" />
+##### Screen Hook manager
+
+To oversee the flow of Hook Screens we introduced `HookScreenManager` class. It decides
+if hooks should be executed and caches executed hooks.   
+`HookScreenManager` public methods:
+  - `init(context: Context, screenId: String, hookManagerListener: HookScreenMangerListener, hookMap: List<Any>?)` - initializes the Hook Screen flow
+  - `failCurrentHook(hookProps: Map<String, Any>?)` - fails current Hook and passes `hookProps` to it.
+  - `completeCurrentHook(hookProps: Map<String, Any>?)` - completes current Hook and passes `hookProps` to it.
+  Main private methods:
+  - `processHook(context: Context, hook: HookScreen, hookCacheName:String, hookProps: Map<String, Any>?)` - executes `hook` and passed `HookScreenListener` and `hookProps` to it.   
+
+General idea is that we initialize `HookScreenManager` with list of `HookScreen` and `HookScreenMangerListener`. `HookScreenManager` will traverse through every hook, one at a time, through calling a coroutine method `processHook(context: Context, hook: HookScreen, hookCacheName:String, hookProps: Map<String, Any>?)` as soon as `HookScreen` completes, it will trigger `HookScreenListener` with `hookCompleted` or `hookFailed`. This should be the only way to exit `HookScreen`. `hookCompleted` will trigger `HookScreenManager` to resume coroutine and process next hook, when `hookFailed` will trigger `hookManagerFailed`. Once all hooks are completed we will call `hookManagerCompleted`.   
+
+<a name="interface" />
+##### Screen Hooks Interface
+
+Any screen plugin can be defined as Screen Hook. In order to do so please implement `HookScreen`. The interface provides those methods to the plugin:  
+`isFlowBlocker()` - Determines if failed hook will abort.  
+`shouldPresent()` - Determines if hook screen will be presenting to UI.  
+`isRecurringHook()` - Determines if hook can me presented every time specific screen loads.  
+`hookDismissed()` - Specifies the logic for cases when user dismissed the hook.
+`executeHook(context: Context, hookListener: HookScreenListener, hookProps: Map<String, Any>?)` - execute hook
+`getListener()` - Android specific method to return the `hookListener` from Screen Hook   
 
 <a name="connection" />
-
 ##### Screen Hooks Rivers API
 
 Rivers' API will add to every screen that needs hooks.
@@ -93,7 +95,6 @@ Rivers' API will add to every screen that needs hooks.
 ```
 
 <a name="example" />
-
 ##### Example Of Implementation   
 
 For an example we will set up a `Player` plugin to use `Screen Hooks`.  
