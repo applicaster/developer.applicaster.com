@@ -1,4 +1,5 @@
-## Zapp Screens Hook infrastructure
+## Zapp Screens Hook
+
 Infrastructure that enables development of pre- and post-loading hooks for UIBuilder's screens.
 
 1. <a href="#description">Description</a>
@@ -13,12 +14,14 @@ Infrastructure that enables development of pre- and post-loading hooks for UIBui
 * * *
 
 <a name="description" />
+
 ##### Description
 `Screen Hooks` are hooks that are presented before or after loading the screens. They can be attached to a screens launched from navigation bar, root (menu) or on cell click inside application. Screen hooks can be native or react native. In this document you'll find a guide that explains how to configure such a plugin.   
 
 ***
 
 <a name="general" />
+
 ##### General   
 
 `Hooks Plugins` can be two types.
@@ -26,15 +29,17 @@ Infrastructure that enables development of pre- and post-loading hooks for UIBui
 2. `Hooks Plugin` - This types of plugin not screens. If they have `UI` It must fully controlled by the developer. Prefered usage of this type of plugin as example: `Analytics` and `Advertisment`. That do not need presentation of UI or use of the 3rd party frameworks that API we can not fully control.
 
 <a name="rn" />
+
 ##### RN Hooks
 
 RN side of screen hook will call `hookFinishedWork(hookFinishedWork: Boolean, errorMessage: String?, hookProps: ReadableMap, isFlowBlocker: Boolean)` of `ReactNativeHookScreenBridge`.
-  - hookFinishedWork: Boolean - defines if hook is failed/completed
-  - errorMessage: String - custom error message
-  - hookProps: ReadableMap - map of properties we pass between hooks
-  - isFlowBlocker: Boolean - defines if flow should be interrupted
+  - `hookFinishedWork: Boolean` - defines if hook is failed/completed
+  - `errorMessage: String` - custom error message
+  - `hookProps: ReadableMap` - map of properties we pass between hooks
+  - `isFlowBlocker: Boolean` - defines if flow should be interrupted
 
 <a name="player&article" />
+
 ##### Player and Articles hook support  
 
 For `Player` and `Article` plugins: Plugin should be converted to `Plugin Screen` and make sure to disable default storefront in plugin manifest by adding to `custom_configuration_fields` for `Player` plugins:  
@@ -45,7 +50,9 @@ For `Player` and `Article` plugins: Plugin should be converted to `Plugin Screen
     "default": 0
   }
 ```   
+***
 <a name="manager" />
+
 ##### Screen Hook manager
 
 To oversee the flow of Hook Screens we introduced `HookScreenManager` class. It decides
@@ -60,6 +67,7 @@ if hooks should be executed and caches executed hooks.
 General idea is that we initialize `HookScreenManager` with list of `HookScreen` and `HookScreenMangerListener`. `HookScreenManager` will traverse through every hook, one at a time, through calling a coroutine method `processHook(context: Context, hook: HookScreen, hookCacheName:String, hookProps: Map<String, Any>?)` as soon as `HookScreen` completes, it will trigger `HookScreenListener` with `hookCompleted` or `hookFailed`. This should be the only way to exit `HookScreen`. `hookCompleted` will trigger `HookScreenManager` to resume coroutine and process next hook, when `hookFailed` will trigger `hookManagerFailed`. Once all hooks are completed we will call `hookManagerCompleted`.   
 
 <a name="interface" />
+
 ##### Screen Hooks Interface
 
 Any screen plugin can be defined as Screen Hook. In order to do so please implement `HookScreen`. The interface provides those methods to the plugin:  
@@ -71,6 +79,7 @@ Any screen plugin can be defined as Screen Hook. In order to do so please implem
 `getListener()` - Android specific method to return the `hookListener` from Screen Hook   
 
 <a name="connection" />
+
 ##### Screen Hooks Rivers API
 
 Rivers' API will add to every screen that needs hooks.
@@ -93,8 +102,9 @@ Rivers' API will add to every screen that needs hooks.
    ]
 }
 ```
-
+***
 <a name="example" />
+
 ##### Example Of Implementation   
 
 For an example we will set up a `Player` plugin to use `Screen Hooks`.  
