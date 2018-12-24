@@ -1,4 +1,4 @@
-## Zapp Screens Hook
+## Zapp Screen Hooks
 
 Infrastructure that enables development of pre- and post-loading hooks for UIBuilder's screens.
 
@@ -14,6 +14,7 @@ Infrastructure that enables development of pre- and post-loading hooks for UIBui
 #### Description
 `Screen Hooks` are hooks that are presented before or after loading the screens. They can be attached to a screens launched from navigation bar, root (menu) or on cell click inside application. Screen hooks can be native or react native. In this document you'll find a guide that explains how to configure such a plugin.   
 
+![ScreenPluginsGeneral.png](./Files/hook-screen-uibuilder.png)
 ***
 
 <a name="general" />
@@ -62,6 +63,7 @@ if hooks should be executed and caches executed hooks.
 
 General idea is that we initialize `HookScreenManager` with list of `HookScreen` and `HookScreenMangerListener`. `HookScreenManager` will traverse through every hook, one at a time, through calling a coroutine method `processHook(context: Context, hook: HookScreen, hookCacheName:String, hookProps: Map<String, Any>?)` as soon as `HookScreen` completes, it will trigger `HookScreenListener` with `hookCompleted` or `hookFailed`. This should be the only way to exit `HookScreen`. `hookCompleted` will trigger `HookScreenManager` to resume coroutine and process next hook, when `hookFailed` will trigger `hookManagerFailed`. Once all hooks are completed we will call `hookManagerCompleted`.   
 
+![ScreenPluginsGeneral.png](./Files/hook-screen-manager-flow.png)
 
 ##### Screen Hooks Interface
 
