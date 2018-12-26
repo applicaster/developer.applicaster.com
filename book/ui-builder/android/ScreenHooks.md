@@ -13,6 +13,7 @@ Infrastructure that enables development of pre- and post-loading hooks for UIBui
 
 #### Description
 `Screen Hooks` are hooks that are presented before or after loading the screens. They can be attached to a screens launched from navigation bar, root (menu) or on cell click inside application. Screen hooks can be native or react native. In this document you'll find a guide that explains how to configure such a plugin.   
+This feature is available since `2.32.46` SDK.   
 
 ![ScreenPluginsGeneral.png](./Files/hook-screen-uibuilder.png)
 ***
@@ -23,28 +24,8 @@ Infrastructure that enables development of pre- and post-loading hooks for UIBui
 
 `Hooks Plugins` can be two types.
 1. `Screen Plugin Hooks` - This types of hooks are `Screen Plugins` that can defined and customized from UIBuilder and conform all of the rules of [Screen Plugins](https://developer-zapp.applicaster.com/ui-builder/android/ScreenPlugin.html) for navigation structure, navigation bar etc. As example `Login` and `Storefront` screens.
-2. `Hooks Plugin` - This types of plugin not screens. If they have `UI` It must fully controlled by the developer. Prefered usage of this type of plugin as example: `Analytics` and `Advertisment`. That do not need presentation of UI or use of the 3rd party frameworks that API we can not fully control.
+2. `Hooks Plugin` - This types of plugin not screens. If they have `UI` It must fully controlled by the developer. Prefered usage of this type of plugin as example: `Analytics` and `Advertisment`. That do not need presentation of UI or use of the 3rd party frameworks that API we can not fully control.   
 
-
-##### RN Hooks
-
-RN side of screen hook will call `hookFinishedWork(hookFinishedWork: Boolean, errorMessage: String?, hookProps: ReadableMap, isFlowBlocker: Boolean)` of `ReactNativeHookScreenBridge`.
-  - `hookFinishedWork: Boolean` - defines if hook is failed/completed
-  - `errorMessage: String` - custom error message
-  - `hookProps: ReadableMap` - map of properties we pass between hooks
-  - `isFlowBlocker: Boolean` - defines if flow should be interrupted
-
-
-##### Player and Articles hook support  
-
-For `Player` and `Article` plugins: Plugin should be converted to `Plugin Screen` and make sure to disable default storefront in plugin manifest by adding to `custom_configuration_fields` for `Player` plugins:  
-```
-  {
-    "type": "checkbox",
-    "key": "ignore_default_subscription",
-    "default": 0
-  }
-```   
 ***
 <a name="client" />
 
@@ -61,7 +42,7 @@ if hooks should be executed and caches executed hooks.
   Main private methods:
   - `processHook(context: Context, hook: HookScreen, hookCacheName:String, hookProps: Map<String, Any>?)` - executes `hook` and passed `HookScreenListener` and `hookProps` to it.   
 
-General idea is that we initialize `HookScreenManager` with list of `HookScreen` and `HookScreenMangerListener`. `HookScreenManager` will traverse through every hook, one at a time, through calling a coroutine method `processHook(context: Context, hook: HookScreen, hookCacheName:String, hookProps: Map<String, Any>?)` as soon as `HookScreen` completes, it will trigger `HookScreenListener` with `hookCompleted` or `hookFailed`. This should be the only way to exit `HookScreen`. `hookCompleted` will trigger `HookScreenManager` to resume coroutine and process next hook, when `hookFailed` will trigger `hookManagerFailed`. Once all hooks are completed we will call `hookManagerCompleted`.   
+The general idea is that we initialize `HookScreenManager` with list of `HookScreen` and `HookScreenMangerListener`. `HookScreenManager` will traverse through each hook, one at a time, through calling a coroutine method `processHook(context: Context, hook: HookScreen, hookCacheName:String, hookProps: Map<String, Any>?)` as soon as `HookScreen` completes, it will trigger `HookScreenListener` with `hookCompleted` or `hookFailed`. This should be the only way to exit `HookScreen`. `hookCompleted` will trigger `HookScreenManager` to resume coroutine and process next hook, when `hookFailed` will trigger `hookManagerFailed`. Once all hooks are completed we will call `hookManagerCompleted`.   
 
 ![ScreenPluginsGeneral.png](./Files/hook-screen-manager-flow.png)
 
@@ -75,6 +56,25 @@ Any screen plugin can be defined as Screen Hook. In order to do so please implem
   - `executeHook(context: Context, hookListener: HookScreenListener, hookProps: Map<String, Any>?)` - execute hook
   - `getListener()` - Android specific method to return the `hookListener` from Screen Hook   
 
+  ##### RN Hooks
+
+  RN side of screen hook will call `hookFinishedWork(hookFinishedWork: Boolean, errorMessage: String?, hookProps: ReadableMap, isFlowBlocker: Boolean)` of `ReactNativeHookScreenBridge`.
+    - `hookFinishedWork: Boolean` - defines if hook is failed/completed
+    - `errorMessage: String` - custom error message
+    - `hookProps: ReadableMap` - map of properties we pass between hooks
+    - `isFlowBlocker: Boolean` - defines if flow should be interrupted
+
+
+  ##### Player and Articles hook support  
+
+  For `Player` and `Article` plugins: Plugin should be converted to `Plugin Screen` and make sure to disable default storefront in plugin manifest by adding to `custom_configuration_fields` for `Player` plugins:  
+  ```
+    {
+      "type": "checkbox",
+      "key": "ignore_default_subscription",
+      "default": 0
+    }
+  ```
 
 ##### Screen Hooks Rivers API
 
