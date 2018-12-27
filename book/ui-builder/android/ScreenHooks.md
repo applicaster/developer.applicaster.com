@@ -6,6 +6,8 @@ Infrastructure that enables development of pre- and post-loading hooks for UIBui
 2. <a href="#general">General</a>
 3. <a href="#client">Client Side</a>
 4. <a href="#example">Example Of Implementation</a>
+5. [Native Hook Example](https://github.com/applicaster/Android-HookDemoScreen)
+6. [RN Hook Example](https://github.com/applicaster/PreHookExample-RN)
 
 ***
 
