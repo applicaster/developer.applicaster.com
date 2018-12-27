@@ -56,18 +56,27 @@ Any screen plugin can be defined as Screen Hook. In order to do so please implem
   - `executeHook(context: Context, hookListener: HookScreenListener, hookProps: Map<String, Any>?)` - execute hook
   - `getListener()` - Android specific method to return the `hookListener` from Screen Hook   
 
-  ##### RN Hooks
+##### Native Hooks
 
-  RN side of screen hook will call `hookFinishedWork(hookFinishedWork: Boolean, errorMessage: String?, hookProps: ReadableMap, isFlowBlocker: Boolean)` of `ReactNativeHookScreenBridge`.
+[Native Hook Example](https://github.com/applicaster/Android-HookDemoScreen)   
+
+Any native hooks needs to implement `HookScreen` interface.
+
+##### RN Hooks
+
+[React Native Hook Example](https://github.com/applicaster/PreHookExample-RN)   
+
+
+RN side of screen hook will call `hookFinishedWork(hookFinishedWork: Boolean, errorMessage: String?, hookProps: ReadableMap, isFlowBlocker: Boolean)` of `ReactNativeHookScreenBridge`.
     - `hookFinishedWork: Boolean` - defines if hook is failed/completed
     - `errorMessage: String` - custom error message
     - `hookProps: ReadableMap` - map of properties we pass between hooks
     - `isFlowBlocker: Boolean` - defines if flow should be interrupted
 
 
-  ##### Player and Articles hook support  
+##### Player and Articles hook support  
 
-  For `Player` and `Article` plugins: Plugin should be converted to `Plugin Screen` and make sure to disable default storefront in plugin manifest by adding to `custom_configuration_fields` for `Player` plugins:  
+For `Player` and `Article` plugins: Plugin should be converted to `Plugin Screen` and make sure to disable default storefront in plugin manifest by adding to `custom_configuration_fields` for `Player` plugins:  
   ```
     {
       "type": "checkbox",
@@ -106,7 +115,7 @@ Rivers' API will add to every screen that needs hooks.
 For an example we will set up a `Player` plugin to use `Screen Hooks`.  
 
 1. Set up `Player` plugin:   
-    - Implement `PluginScreen` interface for the `Player`.<LINK TO PLUGIN SCREENS>   
+    - Implement `PluginScreen` interface for the `Player`. [Screen Plugins](https://developer-zapp.applicaster.com/ui-builder/android/ScreenPlugin.html)   
     - Disable storefront, adding to manifest's `custom_configuration_fields`:   
     ```   
     {
@@ -114,9 +123,8 @@ For an example we will set up a `Player` plugin to use `Screen Hooks`.
       "key": "ignore_default_subscription",
       "default": 0
     }   
-    ```   
-2. Set up plugins we want to use as `Screen Hook`:
-    - Add this to manifest to enable hooks:   
+    ```
+    - Add screen hook configuration support for UiBuilder: by adding to manifest:   
     ```
       "hooks": {
           "fields": [
@@ -136,7 +144,6 @@ For an example we will set up a `Player` plugin to use `Screen Hooks`.
         }
      ```   
 
-3. Set up screen hooks in `UIBuilder` for the `Player` plugin screen.
-<SCREEN PICTURE>   
+2. Set up screen hooks in `UIBuilder` for the `Player` plugin screen.
 
-4. Each plugin that we use as a `Screen Hook` should implement a `HookScreen` interface.  
+3. Configure each plugin that we use as a `Screen Hook` to implement a `HookScreen` interface.  
