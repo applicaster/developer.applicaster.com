@@ -97,6 +97,7 @@
       - [Intelligent code completion](/Families/Android/intelligent-code-completion.md)
       - [Navigation Overview](/ui-builder/android/NavigationOverView.md)
     - [Screen Plugins](/ui-builder/android/ScreenPlugin.md)
+    - [Hook Screens](/ui-builder/android/ScreenHooks.md)
   - [Components and Cell Styles](/ui-builder/components-and-cell-styles/intro.md)
     - [Video Background Cell](/ui-builder/components-and-cell-styles/cell-styles/video-background-cell.md)
   - [Url Scheme](/ui-builder/scheme/scheme.md)
