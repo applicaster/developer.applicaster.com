@@ -13,7 +13,7 @@ Infrastructure that enables development of pre- and post-loading hooks for UIBui
 
 #### Description
 `Screen Hooks` are hooks that are presented before or after loading the screens. They can be attached to a screens launched from navigation bar, root (menu) or on cell click inside application. Screen hooks can be native or react native. In this document you'll find a guide that explains how to configure such a plugin.   
-This feature is available since `2.32.46` SDK.   
+This feature is available since `7.4.0-preview28` and will be a part of `7.4.0` future release.   
 
 ![ScreenPluginsGeneral.png](./Files/hook-screen-uibuilder.png)
 ***
