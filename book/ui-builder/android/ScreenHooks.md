@@ -60,14 +60,13 @@ Any screen plugin can be defined as Screen Hook. In order to do so please implem
 
 [Native Hook Example](https://github.com/applicaster/Android-HookDemoScreen)   
 
-Any native hooks needs to implement `HookScreen` interface.
+Any native hook needs to implement `HookScreen` interface.
 
 ##### RN Hooks
 
 [React Native Hook Example](https://github.com/applicaster/PreHookExample-RN)   
 
-
-RN side of screen hook will call `hookFinishedWork(hookFinishedWork: Boolean, errorMessage: String?, hookProps: ReadableMap, isFlowBlocker: Boolean)` of `ReactNativeHookScreenBridge`.
+On top of native hook requirements, RN side of screen hook will call `hookFinishedWork(hookFinishedWork: Boolean, errorMessage: String?, hookProps: ReadableMap, isFlowBlocker: Boolean)` of `ReactNativeHookScreenBridge`.
     - `hookFinishedWork: Boolean` - defines if hook is failed/completed
     - `errorMessage: String` - custom error message
     - `hookProps: ReadableMap` - map of properties we pass between hooks
