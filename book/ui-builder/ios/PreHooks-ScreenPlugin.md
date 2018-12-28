@@ -1,10 +1,12 @@
 ## Zapp Hooks Plugins
+### Availible from SDK: 10.0.3
 
 1. <a href="#description">Description</a>
 2. <a href="#general">General</a>
 3. <a href="#creation">Hook Plugin creation</a>
 4. <a href="#clientExplanation">Client side explanation</a>
 5. [Native Hook Example](https://github.com/applicaster/PreHookExample-iOS)
+6. [React Native Hook Example](https://github.com/applicaster/PreHookExample-RN)
 * * *
 
 <a name="description" />
@@ -12,7 +14,7 @@
 ##### Description
 `Screen Hooks` are hooks that are presented before or after loading the screens. They can be attached to a screens launched from navigation bar, root (menu) or on cell click inside application. Screen hooks can be native or react native. In this document you'll find a guide that explains how to configure such a plugin.
 
-![ScreenPluginsGeneral.png](./Files/Prehooks/preHookGeneral.png)
+![ScreenPluginsGeneral.png](./Files/PreHooks/preHookGeneral.png)
 ***
 
 <a name="general" />
@@ -194,6 +196,18 @@ __Manifest Example__
   }
 }
 
+```
+
+__React Native native module__
+
+RN screen hook should pass an interface to ReactNativeContext
+```
+@interface RCT_EXTERN_MODULE(HookManager, Object)
+RCT_EXTERN_METHOD(hookListener(): Boolean
+                 errorMessage: String
+                 dataMap: HashMap<String, Any>
+                 isFlowBlocker: Boolean
+@end
 ```
 
 ***
