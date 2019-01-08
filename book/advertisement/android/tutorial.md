@@ -98,7 +98,7 @@ object SizeMapper {
         val width = Resources.getSystem().displayMetrics.widthPixels.px2dp()
         val height = Resources.getSystem().displayMetrics.heightPixels.px2dp()
         return when (adviewSize) {
-            "STANDARD_BANNER" -> Size(AdSize.BANNER.width, AdSize.BANNER.height)
+            "BANNER" -> Size(AdSize.BANNER.width, AdSize.BANNER.height)
             "SMART_BANNER" -> Size(width, SMART_BANNER)
             "BOX_BANNER" -> Size(300, 250)
             else -> when(adType) {
@@ -402,4 +402,119 @@ Ones you have implemented your plugin it is ready to publish. You can read more 
 
 You can read more about how to use plugin in your app here
 
+## Custom sizes
 
+As we mentioned earlier when implementing the **Size Mapper**, inline banners can have different sizes and each different size is represented by a string.
+
+This string can have any value and your plugin must define those values, but usually there are 3 that are common to any kind of plugin provider, these are: **BANNER** (standar size banners), **BOX_BANNER** (squared size banners) and **SMART_BANNER** (usually occupying the full width of the device and a fixed height).
+
+If your plugin wants different sizes that the standard defined, you need to declared them in the manifest using the **exporting attributes functionality** to override these 3 values with your desired ones. Here is the documentation:
+https://developer-zapp.applicaster.com/zappifest/plugins-manifest-format.html
+
+This is an example of what you should add to the manifest (here we add 2 new sizes, apart of the 3 standard ones):
+```
+"export": {
+		"allowed_list": [{
+			"identifier": "banner",
+			"group": {
+				"label": "Ads",
+				"folded": false
+			},
+			"section": "styles",
+			"allowed_fields": [{
+				"section": "styles",
+				"key": "banner_type",
+				"min_zapp_sdk": {
+					"ios": "6.0.0",
+					"android": "7.0.0"
+				}
+			}]
+		}, {
+			"identifier": "list",
+			"group": {
+				"label": "Ads",
+				"folded": false
+			},
+			"section": "advertising",
+			"allowed_fields": [{
+				"section": "advertising",
+				"key": "banner_type",
+				"min_zapp_sdk": {
+					"ios": "6.0.0",
+					"android": "7.0.0"
+				}
+			}]
+		}, {
+			"identifier": "grid",
+			"group": {
+				"label": "Ads",
+				"folded": false
+			},
+			"section": "advertising",
+			"allowed_fields": [{
+				"section": "advertising",
+				"key": "banner_type",
+				"min_zapp_sdk": {
+					"ios": "6.0.0",
+					"android": "7.0.0"
+				}
+			}]
+		}]
+	},
+	"styles": {
+		"fields": [{
+			"key": "banner_type",
+			"label_tooltip": "SOM supports Smart Banners, Standard Banners (320x50 for smartphone and 728x90 for tablet), Box Banners (300x250, often referred to as \"medium rectangles\"), Billboard banners (320x150) and Sponsor banners (320x51). Please select the size banner you'd like to use",
+			"type": "select",
+			"options": [{
+					"label": "STANDARD BANNER",
+					"value": "BANNER"
+				},
+				{
+					"label": "SMART BANNER",
+					"value": "SMART_BANNER"
+				},
+				{
+					"label": "BOX BANNER",
+					"value": "BOX_BANNER"
+				},
+				{
+					"label": "BILLBOARD BANNER",
+					"value": "BILLBOARD_BANNER"
+				},
+				{
+					"label": "SPONSOR",
+					"value": "SPONSOR"
+				}
+			]
+		}]
+	},
+	"advertising": {
+		"fields": [{
+			"key": "banner_type",
+			"label_tooltip": "SOM supports Smart Banners, Standard Banners (320x50 for smartphone and 728x90 for tablet), Box Banners (300x250, often referred to as \"medium rectangles\") Billboard banners (320x150) and Sponsor banners (320x51). Please select the size banner you'd like to use",
+			"type": "select",
+			"options": [{
+					"label": "STANDARD BANNER",
+					"value": "BANNER"
+				},
+				{
+					"label": "SMART BANNER",
+					"value": "SMART_BANNER"
+				},
+				{
+					"label": "BOX BANNER",
+					"value": "BOX_BANNER"
+				},
+				{
+					"label": "BILLBOARD BANNER",
+					"value": "BILLBOARD_BANNER"
+				},
+				{
+					"label": "SPONSOR",
+					"value": "SPONSOR"
+				}
+			]
+		}]
+	}
+```
