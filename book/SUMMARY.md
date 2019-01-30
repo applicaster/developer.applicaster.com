@@ -107,7 +107,8 @@
 ## QuickBrick
 
 - [Introduction](/quick-brick/intro.md)
-- [Apple TV](/quick-brick/tvOS/DebugBuildIntegration.md)
+- [Apple TV Debug](/quick-brick/tvOS/DebugBuildIntegration.md)
+- [Apple TV Release](/quick-brick/tvOS/ReleaseBuildIntegration.md)
 - [Beta Guidelines & information](/quick-brick/Beta-guidelines.md)
 - [Setup your project](/quick-brick/Setup.md)
 - [Inside QuickBrick](/quick-brick/Inside-QuickBrick.md)
