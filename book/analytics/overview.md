@@ -4,31 +4,11 @@ Applicaster provides a broad set of custom analytics events to help customers un
 
 Applicaster handles and delivers analytics data through an internal tool called Morpheus, described further below.
 
-Morpheus, like all of Zapp, supports a "Plugin" system, where third party analytics providers can be "plugged in" to the system and automatically start receiving all of the events referenced above. Additionally, most analytics provider have their own set of "out-of-the-box" functionality and events (i.e. retention reporting, session tracking) as part of their SDK, which Applicaster also supports. 
+Morpheus supports a plugin system, where third party analytics providers can be "plugged in" to the system and automatically start receiving all of the events referenced above. Additionally, most analytics provider have their own set of "out-of-the-box" functionality and events (i.e. retention reporting, session tracking) as part of their SDK, which Applicaster also supports. 
 
-Applicaster supports the following analytics providers:
+Check the plugin gallery for the most up-to-date list of supported analytics providers.
 
-* Google Analytics
-* Mixpanel
-* Flurry
-* comScore DAX
-* Net Metrix
-* CoolaData
-* Liftoff
-* AGOF
-* OWA
-
-Additionally, Applicaster also supports the following video analytics providers:
-
-* comScore Stream Sense
-* Akamai Media Analytics
-
-If you have needs which are not addressed by the providers above, you can speak with your Territory Manager about using the Plugin architecture to build an integration with a new analytics provider. Doing so will support the native SDK functionality of that provider and the custom events referenced above.
-
-All supported providers can be set up as plugins on versions 4.5.4 (Android) and 4.2.7 (iOS) and up. In order to set up a plugin, reference the documentation [here](https://docs.google.com/a/applicaster.com/document/d/1md3Hmc-gg9NuEyIpQ43iDky_THc_5upcRMq8-QvkXHY/edit?usp=sharing).
-
-For older versions of your app, please follow the directions outlined [here](https://applicaster.zendesk.com/hc/en-us/articles/206419186-Configuring-Analytics-at-Applicaster).
-
+The links below outline different aspects of our analytics infrastructure in more detail.
 
 ### Table of Contents:
 * [Morpheus](/analytics/morpheus/morpheus.md)
