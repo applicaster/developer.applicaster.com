@@ -202,6 +202,7 @@ Example of receiving props:
 2. If we have DS we wil pass dictionary of the data source with key `reactProps[data_source_model]`
 3. For backward compatibility reasons, we will flat map of `ZLScreenModel` dictionary to give ability to retrieve keys without additional migration. Note This is a temporary solution and plugin should be migrated to use `ZLScreenModel`.
 At the end you will get something like this
+
 ```
         {
         "uibuilder_screen_model": {
@@ -229,3 +230,40 @@ At the end you will get something like this
         }
 
 ```
+##### Lifecycle Events
+This section describes the lifecycle events provided to RN Plugins
+
+###### ZPReactNativeScreenPluginBridge
+
+The `ZPReactNativeScreenPluginBridge` will emit the following lifecycle events:
+
+```
+private struct Events {
+        static let viewWillAppear = "ViewWillAppear"
+        static let viewDidAppear = "ViewDidAppear"
+        static let viewWillDisappear = "ViewWillDisappear"
+        static let viewDidDisappear = "ViewDidDisappear"
+    }
+```
+
+In your plugin you can register to the desired events by doing the following:
+
+```
+// Import the NativeEventEmitter & NativeModules
+import { NativeEventEmitter, NativeModules } from 'react-native';
+
+// Get instance of ScreenPlugin module
+const { ScreenPlugin } = NativeModules;
+
+// Create emitter and subscribe to event (in this case "ViewDidAppear")
+const screenPluginManagerEmitter = new NativeEventEmitter(ScreenPlugin);
+const subscription = screenPluginManagerEmitter.addListener (
+      'ViewDidAppear',
+      (event) =>{ 
+      console.log(event, 'TEST EVENT')
+      }
+    );
+```
+With these events you can control many aspects of your plugin such as when to start playback and end playback on your video player for example. 
+
+
