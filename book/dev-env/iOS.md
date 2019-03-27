@@ -19,3 +19,25 @@ After downloading the Development Project please make sure to add your local plu
 1. Updating the `Podfile` to include your `podspec` local path.
 2. Run `pod install --no-repo-update` on your terminal to add your plugin pod.
 3. Run `pod update YourPlugin --no-repo-update` to update your changes.
+
+## Creating a new iOS Plugin
+
+Each plugin is comprised from a git repository including the following:
+* Xcode project generating a dynamic library and optionally a demo project
+* Cocoapods podspec for the latest version (optionally have a spec directory containing previous versions) generating
+* [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
+
+(Add here an example of expected file structure)
+
+## Starting a new project
+There are a couple of options of starting a new plugin project:
+* Use one of the [Applicaster examples](https://github.com/applicaster/zapp-plugins-examples/tree/master/VideoPlayer/iOS)
+* Start a new Cocopod from scratch
+* Use a template (Add instructions here)
+
+## Guides per plugin type
+* [Screen Plugins](/ui-builder/ios/ScreenPlugin.md)
+* [Pre Hook Plugin](/ui-builder/ios/PreHooks-ScreenPlugin.md)
+* [Root Menu](/ui-builder/ios/RootMenuPlugins.md)
+* [Navigation Bar](/ui-builder/ios/NavigatioBarPlugins.md)
+* [Advertisement](/advertisement/ios/ios.md)
