@@ -11,8 +11,8 @@ This section highlights the tools you will need, and how to get you up and runni
 
 ## Requirements
 
+- [iOS](iOS.md)
+- [React-Native](react-native.md)
+- [Android](android.md)
 - [Node.js](node.md)
 - [Ruby](ruby.md)
-- [React-Native](react-native.md)
-- [iOS](iOS.md)
-- [Android](android.md)
