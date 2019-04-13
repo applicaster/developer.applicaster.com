@@ -4,8 +4,8 @@ iOS plugins can be written with Swift or Objective C.
 
 To be able to write iOS native plugins, you will need to make sure you are setting your iOS environment to:
 
-* [Xcode version 10.0.0](https://download.developer.apple.com/Developer_Tools/Xcode_10/Xcode_10.xip)
-* Swift version `4.1`
+* Xcode version 10.1
+* Swift version `4.2`
 * Make sure that your plugin is `bitcode enable`
 * Install [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) version `1.5.3`
 
@@ -33,7 +33,7 @@ Each plugin is comprised from a git repository including the following:
 There are a couple of options of starting a new plugin project:
 * Use one of the [Applicaster examples](https://github.com/applicaster/zapp-plugins-examples/tree/master/VideoPlayer/iOS)
 * Start a new Cocopod from scratch
-* Use a template (Add instructions here)
+* Use an Applicaster [Zapp Plugin template](https://github.com/applicaster/zapp-plugins-ios-templates) to create a new project.
 
 ## Guides per plugin type
 * [Screen Plugins](/ui-builder/ios/ScreenPlugin.md)
