@@ -1,6 +1,6 @@
 ## Welcome to Zapp documentation book
 
-Zapp service is Applicaster's platform for all of our app buildings.
+Zapp is app management and development platform, made by Applicaster.
 Zapp enable users to configure and build media apps with **remote configuration** (assets, styles, fonts and localized strings), **layout** (templates or [**UI Builder**](/ui-builder/intro.md)), and **client-side plugins**.
 
 This portal will help you create new products that would integrate into the Zapp platform to further expand your mobile and connected tv apps.

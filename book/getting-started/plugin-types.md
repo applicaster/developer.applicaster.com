@@ -18,7 +18,7 @@ This would be also a great place to implement custom dimentions, user properties
 ### Article
 Article types plugins are used to display item metadata in the form of an article screen.
 
-While classically the Applicaster SDK would launch a video player per item - sometimes an article is a more appropriate type of screen for the user to encounter.
+While classically the Zapp SDK would launch a video player per item - sometimes an article is a more appropriate type of screen for the user to encounter.
 
 ### Authorization provider
 Authorization provider plugins can be implementations of various simple authorization systems.
@@ -31,7 +31,7 @@ Broadcaster selector plugins are used when a single app uses the [Applicaster's 
 These plugins can be used at app startup or during the app runtime to switch the content library that is currently used.
 
 ### Cell Style Family
-Cell style family plugins enable developer to introduce different cell styles and components to be used in Applicaster App Builder screens.
+Cell style family plugins enable developer to introduce different cell styles and components to be used in Zapp App Builder screens.
 This will enable developers to create their own tables, collections and various cells to be used in screens.
 
 More than one cell style can be used inside an application.
@@ -40,7 +40,7 @@ More than one cell style can be used inside an application.
 Datasource providers are used in order to fetch and parse data from 3rd party management systems or content feed and translate them to Applicaster Atom feeds.
 Applicaster Atom feeds are the data form that Zapp apps consume in order to display content inside the app.
 
-*Note:* Datasource providers are implemented in Javascript and published to both platforms. Currently supported in iOS and Android. Coming soon for TV platforms.
+*Note:* Datasource providers are implemented in Javascript and published to both platforms. Currently supported in iOS and Android, Android TV and Fire TV. Coming soon for TV AppleTV and Roku.
 
 ### General
 General type plugins that don't fit one of the other groups.
