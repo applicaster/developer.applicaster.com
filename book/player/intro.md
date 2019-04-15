@@ -11,5 +11,5 @@ There are 2 playback modes supported that can be implemented in a Player Plugin:
 Note: When no player plugin is selected for an app - the default Applicaster player will be launched.
 The applicaster player is a full fledged player implementing all of the optional capabilities available for a plugin.
 
-* [iOS](/ui-player/iOS.md)
+* [iOS](/player/iOS.md)
 * [Android](/player/Android.md)
