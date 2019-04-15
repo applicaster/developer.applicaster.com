@@ -3,7 +3,7 @@
 The iOS Player plugin for Zapp is based on implementing the `ZPPlayerProtocol`.
 The protocol goes through all the functions for initializing the player with either a single item or a playlist, presenting a player (in either full screen or inline modes) and controlling playback (Play, pause seek etc).
 
-In order to see a basic implementation of a player - we suggest reviewing the [Player demo project](https://github.com/applicaster/ZappPluginPlayerExample-iOS) - as it's a good starting point regarding implementing a player.
+In order to see a basic implementation of a player - we suggest reviewing the [Player demo project](https://github.com/applicaster/zapp-plugins-examples/tree/master/VideoPlayer/iOS) - as it's a good starting point regarding implementing a player.
 Another good example to see of a current - open source implementation of an iOS and Android player plugin is [Brightcove player](https://github.com/applicaster/zapp-player-plugin-brightcove)
 
 This guide will go through the basic terms and functions that need to be implemented in order to create a player plugin.
@@ -127,7 +127,3 @@ extern NSString *const APPlayerControllerPlayerFinishedPlaybackNotification;    
 ```
 
 A more detailed guide is provided in the [Analytics plugins](/analytics/overview.md) documentation.
-
-## Chromecast support
-
-Upcoming.
