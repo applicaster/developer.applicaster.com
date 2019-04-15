@@ -18,9 +18,6 @@
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
     - [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
       - [Zappifest Tool](/zappifest/zappifest.md)
-- [Testing and debugging your plugin inside an app](/test-and-debug/intro.md)
-  - [iOS](/test-and-debug/iOS.md)
-  - [Android](/test-and-debug/Android.md)
 
 # Zapp Plugins
 
