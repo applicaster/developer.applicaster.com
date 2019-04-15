@@ -6,14 +6,17 @@ Before going into the technical parts of how a plugin is created and submitted l
 
 ### Advertisement
 Advertisement type plugins are plugins wrapping ad SDKs.
+These plugins can be used for serving banners and interstitial ads.
 
-These plugins can be used for serving banners, interstitial ads and video ads.
+Read more about [Advertisement plugins](/advertisement/intro.md).
 
 ### Analytics
 Analytics type plugins are plugins created to report analytics events from within the applications.
 
 These types of plugins can report different kind of events such as events with only a title, events with a dictionary of parameters and timed events.
 This would be also a great place to implement custom dimentions, user properties etc.
+
+Read more about [Analytics plugins](/analytics/overview.md).
 
 ### Article
 Article types plugins are used to display item metadata in the form of an article screen.
@@ -26,6 +29,8 @@ Authorization provider plugins can be implementations of various simple authoriz
 Please note: This implementation is limited to using authorization providers in case videos are stored and served by [Applicaster's video backend](https://admin.applicaster.com).
 For most usecases - please consider using a full fledged *login plugin*.
 
+Read more about [Authrization flow](http://developer.applicaster.com/docs/public/authorization-provider).
+
 ### Broadcaster selector
 Broadcaster selector plugins are used when a single app uses the [Applicaster's video backend](https://admin.applicaster.com) and has multiple content libraries (for example multiple languages).
 These plugins can be used at app startup or during the app runtime to switch the content library that is currently used.
@@ -36,11 +41,15 @@ This will enable developers to create their own tables, collections and various 
 
 More than one cell style can be used inside an application.
 
+Read more about [Components and Cell Styles](/ui-builder/components-and-cell-styles/intro.md).
+
 ### Data Source Provider
 Datasource providers are used in order to fetch and parse data from 3rd party management systems or content feed and translate them to Applicaster Atom feeds.
 Applicaster Atom feeds are the data form that Zapp apps consume in order to display content inside the app.
 
 *Note:* Datasource providers are implemented in Javascript and published to both platforms. Currently supported in iOS and Android, Android TV and Fire TV. Coming soon for TV AppleTV and Roku.
+
+Read more about [Datasource providers](/Zapp-Pipes/Home.md).
 
 ### General
 General type plugins that don't fit one of the other groups.
@@ -55,17 +64,16 @@ These type of plugins can be extended for user management, give per item handlin
 ### Menu
 Menu plugins are used to customize the presentation of base navigation such as side menu, Tab bar etc.
 
-### Nav Item
-
-### Payments
+Read more about [Root Menu Plugins](/ui-builder/RootMenuPluginsIntro.md)
+Read more about [Navigation Plugins](/ui-builder/NavigationBarPluginsIntro.md)
 
 ### Player
 Player plugins are used to integrate third party plugins or change the default player plugin flow.
 Once a player plugin is selected for an app - it will replace the Applicaster default player as the player launched for all VOD and live items.
 
+Read more about [Player plugins](/player/intro.md).
+
 ### Push providers
 Push provider plugins are implementations of push notifications services.
-
-### Ui Component
 
 [Plugin abilities](/getting-started/plugin-abilities.md)
