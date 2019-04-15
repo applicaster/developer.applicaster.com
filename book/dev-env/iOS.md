@@ -37,7 +37,8 @@ There are a couple of options of starting a new plugin project:
 
 ## Guides per plugin type
 * [Screen Plugins](/ui-builder/ios/ScreenPlugin.md)
-* [Pre Hook Plugin](/ui-builder/ios/PreHooks-ScreenPlugin.md)
-* [Root Menu](/ui-builder/ios/RootMenuPlugins.md)
-* [Navigation Bar](/ui-builder/ios/NavigatioBarPlugins.md)
-* [Advertisement](/advertisement/ios/ios.md)
+* [Pre Hook Plugins](/ui-builder/ios/PreHooks-ScreenPlugin.md)
+* [Root Menu Plugins](/ui-builder/ios/RootMenuPlugins.md)
+* [Navigation Bar Plugins](/ui-builder/ios/NavigatioBarPlugins.md)
+* [Advertisement Plugins](/advertisement/ios/ios.md)
+* [Player Plugins](/player/iOS.md)
