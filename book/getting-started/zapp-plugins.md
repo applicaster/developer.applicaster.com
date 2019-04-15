@@ -26,7 +26,7 @@ New plugins are always submitted as a whitelist plugins and can be upgrade to a 
 
 ## Next steps
 * [Different types of plugins in details](/getting-started/plugin-types.md)
-* Getting started with an iOS Plugin
-* Getting started with an Android plugin
-* Getting started with a React native plugin
-* Getting started with a Datasource provider plugin
+* [Getting started with an iOS Plugin](/dev-env/iOS.md)
+* [Getting started with an Android plugin](/dev-env/android.md)
+* [Getting started with a React native plugin](/dev-env/react-native.md)
+* [Getting started with a Datasource provider plugin](/dev-env/node.md)
