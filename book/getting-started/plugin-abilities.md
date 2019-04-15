@@ -7,8 +7,7 @@ Here are a couple of the abilities that can be added to each plugin:
 ## Screen
 
 Screen protocols enable plugins to provide screens to be integrated in the UI builder and create custom flows.
-For more info about screens -------
-
+For more info about screens please refer to the [Screen Plugins](/ui-builder/intro.md) section.
 
 ## Hooks
 There are 2 type of hooks capabilities:
