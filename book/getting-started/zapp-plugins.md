@@ -1,6 +1,6 @@
 # Getting Started with Zapp Plugin
 
-New plugins for the Zapp platform can be created as a native iOS (swift, objective c), native Android (Java, Kotlin) or as React Native (JS) projects.
+New plugins for the Zapp platform can be created as native iOS (swift, objective c), native Android (Java, Kotlin) or as React Native (JS) projects.
 
 ## What is a plugin?
 
