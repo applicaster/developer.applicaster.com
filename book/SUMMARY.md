@@ -3,10 +3,10 @@
 ## Getting Started With Zapp
 
 - [Code Of Conduct](/Code-Of-Conduct.md)
-- [Getting Started with Zapp Plugin](/getting-started/zapp-plugins.md)
+- [Getting Started with Zapp Plugins](/getting-started/zapp-plugins.md)
   - [Plugin types](/getting-started/plugin-types.md)
   - [Plugin abilities](/getting-started/plugin-abilities.md)
-  - [Get ready to work](/dev-env/intro.md)
+  - [Get Ready to Work](/dev-env/intro.md)
     - [iOS](/dev-env/iOS.md)
     - [Android](/dev-env/android.md)
     - [React-Native](/dev-env/react-native.md)

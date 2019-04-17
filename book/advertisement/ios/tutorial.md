@@ -86,7 +86,7 @@ After we need to implement a method that is used by our analytics system to know
 
 Lastly we need a method to know the size for inline banners.
 
-There are 3 types of banners: **screen banners** (fixed banners that always appear at the bottom of the screen), **interstitial** (banners that pop up, usually full screen, when you open a new screen) and **inline banners** (banners that mix with the content of a screen, usually between cells).
+There are 3 types of banners: **screen banners** (fixed banners that always appear at the bottom of the screen), **interstitial** (banners that pop up, usually fullscreen, when you open a new screen) and **inline banners** (banners that mix with the content of a screen, usually between cells).
 Inline banners can have different sizes, each different size is represented by a string. This string can have any value and your plugin must define those values, but usually there are 3 that are common to any kind of plugin provider, these are: **BANNER** (standar size banners), **BOX_BANNER** (squared size banners) and **SMART_BANNER** (usually occupying the full width of the device and a fixed height).
 
 Here is our implementation (as we will need to use as well in the presenter we extracted the code to its own class).

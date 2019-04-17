@@ -5,10 +5,10 @@ The player itself will be generated and called by the SDK whenever a media item 
 
 ## Playback modes
 There are 2 playback modes supported that can be implemented in a Player Plugin:
-* Full screen playback - Full screen playback will allow a player plugin to present a full screen player on top of the entire app. This mode is used out of the box and is the default entry point to call a player plugin
-* Inline Playback - Optionally a player can implement inline playback - in this case the player can be integrated to any other screen (both native and react native based) in order to provide an inline playback mode. Please note - the player must gracefully handle a case in which the video ends but the player is not yet dismissed.
+* Fullscreen Playback - Fullscreen playback will allow a player plugin to present a fullscreen player on top of the entire app. This mode is used out of the box and is the default entry point to call a player plugin
+* Inline Playback - A player can implement inline playback (optionally). In this case, the player can be integrated to any other screen (both native and react native based) in order to provide an inline playback mode. Please note - the player must gracefully handle a case in which the video ends but the player is not yet dismissed.
 
-Note: When no player plugin is selected for an app - the default Applicaster player will be launched.
+Note: When no player plugin is selected for an app, the default Applicaster player will be launched.
 The applicaster player is a full fledged player implementing all of the optional capabilities available for a plugin.
 
 * [iOS](/player/iOS.md)

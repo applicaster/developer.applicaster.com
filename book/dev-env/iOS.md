@@ -15,7 +15,7 @@ To be able to write iOS native plugins, you will need to make sure you are setti
 
 Enable developers to develop and debug their plugins on a real env/project.
 
-After downloading the Development Project please make sure to add your local plugin pod by:
+After downloading the Development Project please make sure to add your local plugin. To do so:
 1. Updating the `Podfile` to include your `podspec` local path.
 2. Run `pod install --no-repo-update` on your terminal to add your plugin pod.
 3. Run `pod update YourPlugin --no-repo-update` to update your changes.

@@ -15,7 +15,7 @@ If you want to contribute to the main QuickBrick repository, simply create a pul
 
 ### Plugins
 
-You can easily and freely create plugins for ui components or full screen experiences. The only pre-requisite is for these plugins to be whitelisted.
+You can easily and freely create plugins for ui components or fullscreen experiences. The only pre-requisite is for these plugins to be whitelisted.
 QuickBrick plugins can leverage the following data :
 
 - app data (same props currently passed to all RN components)
@@ -83,7 +83,7 @@ No official support is offered at this stage.
 | Advertising[^3]          | partially     |
 | Login[^4]                | partially     |
 | Payments                 | no            |
-| Full screen Video player | yes           |
+| Fullscreen Video player  | yes           |
 | Inline Video player[^5]  | yes           |
 
 [^1]: Favorites have been re-implemented at the react-native layer. For most scenarios, this should not make any difference, but be aware that purely native elements of the app will not be aware of the favorite state of a given piece of content.

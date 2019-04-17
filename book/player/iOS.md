@@ -1,17 +1,17 @@
 # Player Plugin - iOS
 
 The iOS Player plugin for Zapp is based on implementing the `ZPPlayerProtocol`.
-The protocol goes through all the functions for initializing the player with either a single item or a playlist, presenting a player (in either full screen or inline modes) and controlling playback (Play, pause seek etc).
+The protocol goes through all of the functions for initializing the player with either a single item or a playlist, presenting a player (in either fullscreen or inline mode) and controlling playback (play, pause, seek, etc).
 
-In order to see a basic implementation of a player - we suggest reviewing the [Player demo project](https://github.com/applicaster/zapp-plugins-examples/tree/master/VideoPlayer/iOS) - as it's a good starting point regarding implementing a player.
-Another good example to see of a current - open source implementation of an iOS and Android player plugin is [Brightcove player](https://github.com/applicaster/zapp-player-plugin-brightcove)
+In order to see a basic implementation of a player, we suggest reviewing the [Player demo project](https://github.com/applicaster/zapp-plugins-examples/tree/master/VideoPlayer/iOS) as it's a good starting point for implementing a player.
+Another good example to see of a current open source implementation of an iOS and Android player plugin is [Brightcove player](https://github.com/applicaster/zapp-player-plugin-brightcove).
 
 This guide will go through the basic terms and functions that need to be implemented in order to create a player plugin.
 
 ## Playable item
 All objects handed to the player conform to the `ZPPlayable` protocol.
 
-The ZPPlayable protocol contains among others the following mandatory fields:
+The ZPPlayable protocol contains, among others, the following mandatory properties:
 * Name
 * Description
 * Content video URL (Might return only after loading the object when an entitlement exists - In case of an `APVODItem` or `APChannel`)
@@ -28,14 +28,15 @@ The following properties are optional and available on some of the items:
 ## Player Configuration
 Player configuration object - `ZPPlayerConfiguration` - is handed in the player playback setup stage and contains some info for the player to be used at launch such as:
 * Start time - Set player starting time
-* End time - Set player end time - if wanting to display a "clip" - optional.
-* Animated - control player display - if animated or not.
+* End time - Set player end time (optional - it is used if wanting to display a "clip").
+* Animated - control player display (if animated or not).
 * Player should start muted - This should be used for inline playback only and should offer a unmute button or other unmuting functionality.
 * Custom configurations - Dictionary that allows further custom configurations to be passed for the player configuration
 
 
 ## Key functions for implementation
 Here are most of the key functions to be implemented for a player with some details.
+
 Note: Please refer to the `ZPPlayerProtocol` in the current stable SDK in order to determine the exact methods you'll need to implement.
 
 ### Initialization methods
@@ -44,15 +45,15 @@ The player protocol includes 2 optional initialization methods:
   @objc optional static func pluggablePlayerInit(playableItem item: ZPPlayable?) -> ZPPlayerProtocol?
   @objc optional static func pluggablePlayerInit(playableItems items: [ZPPlayable]?, configurationJSON: NSDictionary?) -> ZPPlayerProtocol?
 ```
-The methods differ with the option to pass either one item or multiple item and a configuration dictionary.
+The methods differ with the option to pass either one item or multiple items and a configuration dictionary.
 
-### Full screen player presentation
-The following functions will trigger full screen player playback:
+### Fullscreen player presentation
+The following functions will trigger fullscreen player playback:
 ``` swift
   func presentPlayerFullScreen(_ rootViewController: UIViewController, configuration: ZPPlayerConfiguration?)
   @objc optional func presentPlayerFullScreen(_ rootViewController: UIViewController, configuration: ZPPlayerConfiguration?, completion: (() -> Void)?)
 ```
-It is preferable to implement the second function with completion where relevant.
+It is preferable to implement the second function with completion, where relevant.
 
 ### Inline playback methods
 The following functions should be use to display and remove inline players.
@@ -62,9 +63,9 @@ The following functions should be use to display and remove inline players.
   func pluggablePlayerRemoveInline()
 ```
 
-Inline players differ from full screen players by the fact that the view controller should be added as a child view controller to the provided controller.
+Inline players differ from fullscreen players by the fact that the view controller should be added as a child view controller to the provided controller.
 Both the controller and container view are provided in order to add both - this way the player will get both the lifecycle of the view controller and will present in the correct view designated for it.
-Please also make sure to completly clean up the player when the remove inline function is called.
+Please also make sure to completely clean up the player when the remove inline function is called.
 
 ### Playback controls
 The following player methods should be implemented for playback controls:
@@ -81,10 +82,10 @@ The following player methods should be implemented for playback controls:
   @objc optional func pluggablePlayerMoveForward()
 ```
 
-Note - these playback controls do not replace the need for the player to display its own custom or out of the box controls
+Note: these playback controls do not replace the need for the player to display its own custom or out of the box controls
 
 ### Player state
-The following functions help updating different states for the player and normalize the responses.
+The following functions help update different states for the player and normalize the responses.
 
 ``` swift
   @objc optional func playerState() -> ZPPlayerState
@@ -92,13 +93,13 @@ The following functions help updating different states for the player and normal
   @objc optional func playbackDuration() -> TimeInterval
   func pluggablePlayerIsPlaying() -> Bool
 ```
-## Supporting login and other hooks with Screen plugin implementation
-In order for a player to support various code hooks before playback - the player should implement screen plugins protocol - by defining a screen that is presented in a modal way.
+## Supporting login and other hooks with Screen plugin implementations
+In order for a player to support various code hooks before playback, the player should implement screen plugins protocol by defining a screen that is presented in a modal way.
 Please refer to the [Screen Plugins](/ui-builder/intro.md) guide for more info about screens and pre-hooks.
 
 ## Supporting ads from datasources
 Some of the Applicaster datasources provide ad information in a uniform structure.
-While this is optional - if the integrated player supports this feature - it should be implemented.
+While this is optional, it should be implemented if the integrated player supports this feature.
 
 ## Player Analytics
 In general we offer 2 approaches for implementing video analytics:
