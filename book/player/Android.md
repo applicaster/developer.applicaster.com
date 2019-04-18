@@ -13,7 +13,7 @@ All objects handed to the player conform to the Playable contract.
 The Playable contract contains, among others, the following mandatory properties:
 * Name
 * Description
-* Content video URL (Might return only after loading the object when an entitlement exists - In case of an `APVODItem` or `APChannel`)
+* Content video URL (Might return only after loading the object when an entitlement exists - In case of an Applicaster VOD item or Channel)
 * Is the item a Live channel (`isLive`)
 * Public page URL (Web page with deep linking supporting app store installation)
 * Analytics parameters
