@@ -26,7 +26,7 @@ The following properties are optional and available on some of the items:
 
 ## Key functions for implementation
 Here are most of the key functions to be implemented for a player with some details.
-Where relevant consider inheriting the Applicaster `BasePlayer` by importing `com.applicaster.player.defaultplayer.BasePlayer`.
+Where relevant, consider inheriting the Applicaster `BasePlayer` by importing `com.applicaster.player.defaultplayer.BasePlayer`.
 
 Note: Please refer to the `PlayerContract` in the current stable SDK in order to determine the exact methods you'll need to implement.
 
