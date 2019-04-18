@@ -15,7 +15,6 @@ Analytics type plugins are plugins created to report analytics events from withi
 
 These types of plugins can report different kinds of data such as events with only a title, events with a dictionary of properties, timed events, user profiles with both standard and PII user properties, and screen views.
 Additionally, many analytics providers include their own data tracking functionality automatically via their SDKs.
-This would be also a great place to implement custom dimentions, user properties etc.
 
 For more info about Analytics Plugins [Click Here](/analytics/overview.md).
 
