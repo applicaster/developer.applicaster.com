@@ -44,7 +44,7 @@ The player should implement the following method in order to recieve the plugin 
   public void setPluginConfigurationParams(Map params)
 ```
 
-Player configuration object is a map handed in the player playback setup stage and contains some info for the player to be used at launch such as:
+Player configuration object is a map handled in the player playback setup stage and contains some info for the player to be used at launch such as:
 * Start time - Set player starting time
 * End time - Set player end time (optional - it is used if wanting to display a "clip").
 * Animated - control player display (if animated or not).
