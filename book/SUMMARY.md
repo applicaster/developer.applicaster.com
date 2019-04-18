@@ -95,8 +95,17 @@
 ## QuickBrick
 
 - [Introduction](/quick-brick/intro.md)
-- [Apple TV Debug](/quick-brick/tvOS/DebugBuildIntegration.md)
-- [Apple TV Release](/quick-brick/tvOS/ReleaseBuildIntegration.md)
+- Apple TV
+	- Plugins
+        - [Ananlytics](/quick-brick/tvOS/Plugins/Analytics/GeneralAnalytics.md)
+        - [How To Create New Plugin?](/quick-brick/tvOS/Plugins/Video/GeneralAnalyticsHowCreate.md)
+            - [Google Analytics](/quick-brick/tvOS/Plugins/Analytics/GoogleAnalytics/GoogleAnalytics.md)
+        - [Player](/quick-brick/tvOS/Plugins/Video/VideoPlugins.md)
+        - [How To Create New Plugin?](/quick-brick/tvOS/Plugins/Video/VideoPluginsHowCreate.md)
+        	- [Default Player](/quick-brick/tvOS/Plugins/Video/DefaultPlayer/DefaultPlayer.md)
+	- Environment
+        - [Apple TV Debug](/quick-brick/tvOS/Environment/DebugBuildIntegration.md)
+        - [Apple TV Release](/quick-brick/tvOS/Environment/ReleaseBuildIntegration.md)
 - [Beta Guidelines & information](/quick-brick/Beta-guidelines.md)
 - [Setup your project](/quick-brick/Setup.md)
 - [Inside QuickBrick](/quick-brick/Inside-QuickBrick.md)
