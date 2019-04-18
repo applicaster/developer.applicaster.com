@@ -48,7 +48,7 @@ Player configuration object is a map handled in the player playback setup stage 
 * Start time - Set player starting time
 * End time - Set player end time (optional - it is used if wanting to display a "clip")
 * Animated - control player display (if animated or not)
-* Player should start muted - This should be used for inline playback only and should offer a unmute button or other unmuting functionality.
+* Player should start muted - This should be used for inline playback only and should offer a unmute button or other unmuting functionality
 * Custom configurations - Dictionary that allows further custom configurations to be passed for the player configuration
 
 ### Fullscreen player presentation
