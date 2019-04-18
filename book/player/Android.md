@@ -83,3 +83,5 @@ Please refer to the [Screen Plugins](/ui-builder/intro.md) guide for more info a
 ## Supporting ads from datasources
 Some of the Applicaster datasources provide ad information in a uniform structure.
 While this is optional, it should be implemented if the integrated player supports this feature.
+
+For more info about supporting ads from datasources [Click Here](/player/ads-in-datasource.md).
