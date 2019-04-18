@@ -26,7 +26,7 @@ The following properties are optional and available on some of the items:
 
 ## Key functions for implementation
 Here are most of the key functions to be implemented for a player with some details.
-Where relevant consider inheriting the Applicaster `BasePlayer` by importing `com.applicaster.player.defaultplayer.BasePlayer`.
+Where relevant, consider inheriting the Applicaster `BasePlayer` by importing `com.applicaster.player.defaultplayer.BasePlayer`.
 
 Note: Please refer to the `PlayerContract` in the current stable SDK in order to determine the exact methods you'll need to implement.
 
@@ -83,3 +83,5 @@ Please refer to the [Screen Plugins](/ui-builder/intro.md) guide for more info a
 ## Supporting ads from datasources
 Some of the Applicaster datasources provide ad information in a uniform structure.
 While this is optional, it should be implemented if the integrated player supports this feature.
+
+For more info about supporting ads from datasources [Click Here](/player/ads-in-datasource.md).

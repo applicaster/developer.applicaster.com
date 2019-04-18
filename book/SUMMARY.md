@@ -88,7 +88,7 @@
 - [Player plugins](/player/intro.md)
   - [iOS](/player/iOS.md)
   - [Android](/player/Android.md)
-  - [Ads in datasources](/player/ads-in-datasource.md)
+  - [Supporting Ads in Datasources](/player/ads-in-datasource.md)
 
 # QuickBrick
 

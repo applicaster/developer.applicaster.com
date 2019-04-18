@@ -1,4 +1,4 @@
-# Configuring video ads in datasources
+# Supporting video ads in datasources
 Some of the Applicaster datasources provide some info about video ads display.
 Optionally those can be handled at the video player level.
 This document describes the structure expected for those video ads.

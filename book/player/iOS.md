@@ -101,6 +101,8 @@ Please refer to the [Screen Plugins](/ui-builder/intro.md) guide for more info a
 Some of the Applicaster datasources provide ad information in a uniform structure.
 While this is optional, it should be implemented if the integrated player supports this feature.
 
+For more info about supporting ads from datasources [Click Here](/player/ads-in-datasource.md).
+
 ## Player Analytics
 In general we offer 2 approaches for implementing video analytics:
 1. Having the player instance (AVPlayer) exposed in the player implementation
