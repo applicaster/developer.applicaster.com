@@ -44,11 +44,11 @@ The player should implement the following method in order to recieve the plugin 
   public void setPluginConfigurationParams(Map params)
 ```
 
-Player configuration object is a map handed in the player playback setup stage and contains some info for the player to be used at launch such as:
+Player configuration object is a map handled in the player playback setup stage and contains some info for the player to be used at launch such as:
 * Start time - Set player starting time
-* End time - Set player end time (optional - it is used if wanting to display a "clip").
-* Animated - control player display (if animated or not).
-* Player should start muted - This should be used for inline playback only and should offer a unmute button or other unmuting functionality.
+* End time - Set player end time (optional - it is used if wanting to display a "clip")
+* Animated - control player display (if animated or not)
+* Player should start muted - This should be used for inline playback only and should offer a unmute button or other unmuting functionality
 * Custom configurations - Dictionary that allows further custom configurations to be passed for the player configuration
 
 ### Fullscreen player presentation
@@ -83,5 +83,3 @@ Please refer to the [Screen Plugins](/ui-builder/intro.md) guide for more info a
 ## Supporting ads from datasources
 Some of the Applicaster datasources provide ad information in a uniform structure.
 While this is optional, it should be implemented if the integrated player supports this feature.
-
-For more info about supporting ads from datasources [Click Here](/player/ads-in-datasource.md).
