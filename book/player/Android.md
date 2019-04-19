@@ -85,3 +85,8 @@ Some of the Applicaster datasources provide ad information in a uniform structur
 While this is optional, it should be implemented if the integrated player supports this feature.
 
 For more info about supporting ads from datasources [Click Here](/player/ads-in-datasource.md).
+
+## Player Analytics
+Player analytics events are a list of events every player should implement as fully as possible.
+
+For more info about player analytics events [Click Here](/player/player-analytics.md).

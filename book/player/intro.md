@@ -13,4 +13,5 @@ The applicaster player is a full fledged player implementing all of the optional
 
 * [iOS](/player/iOS.md)
 * [Android](/player/Android.md)
-* [Supporting video ads in datasources](/player/ads-in-datasource.md)
+* [Supporting Video Ads in Datasources](/player/ads-in-datasource.md)
+* [Player Analytics](/player/player-analytics.md)
