@@ -104,11 +104,21 @@ While this is optional, it should be implemented if the integrated player suppor
 For more info about supporting ads from datasources [Click Here](/player/ads-in-datasource.md).
 
 ## Player Analytics
-In general we offer 2 approaches for implementing video analytics:
-1. Having the player instance (AVPlayer) exposed in the player implementation
+
+Player analytics is divided to 2 types of analytics:
+1. Player analytics events
+2. Player analytics plugins
+
+Player analytics events are a list of events every player should implement as fully as possible.
+For more info about player analytics events [Click Here](/player/player-analytics.md).
+
+### Player Analytics Plugins
+
+In general we offer 2 approaches for implementing player analytics:
+1. Having the player instance (Usually AVPlayer or the wrapped player) exposed in the player implementation
 2. Implement a set of pre-defined notifications in order to provide a video analytics plugin the relevant state changes.
 
-### Player notifications
+#### Player notifications
 
 Player notifications are a set of notifications a player can optionally provide - designated specifically for implementation of video analytics.
 These notifications are used to track state changes in the player.
@@ -128,5 +138,3 @@ extern NSString *const APPlayerControllerDidStopNotification;                   
 extern NSString *const APPlayerControllerPlayerWasCreatedNotification;          // Posted when the AVPlayer instance is created.
 extern NSString *const APPlayerControllerPlayerFinishedPlaybackNotification;    // Posted when the AVPlayer finished playing playback.
 ```
-
-A more detailed guide is provided in the [Analytics plugins](/analytics/overview.md) documentation.
