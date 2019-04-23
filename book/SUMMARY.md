@@ -91,6 +91,19 @@
   - [Supporting Ads in Datasources](/player/ads-in-datasource.md)
   - [Player Analytics](/player/player-analytics.md)
 
+# Applicaster Video Platform
+
+## Applicaster Video Platform
+- [Applicaster Video Platform](/applicaster-video-platform/intro.md)
+  - [VOD Ingestion VIA XML](/applicaster-video-platform/content-ingestion/vod-ingestion-xml/vod_via_xml.md)
+  - [VOD Ingestion VIA RSS](/applicaster-video-platform/content-ingestion/vod-ingestion-rss/RSSVODIngestion.md)
+  - [Media Atom](/applicaster-video-platform/content-ingestion/media-atom/applicaster-media-atom-feed.md)
+    - [Examples](/applicaster-video-platform/content-ingestion/media-atom/examples/examples.md)
+  - [EPG Ingestion](/applicaster-video-platform/content-ingestion/epg-ingestion/index.md)
+  - [Collection Ingestion](/applicaster-video-platform/content-ingestion/collection-ingestion-xml/collection_via_xml.md)
+  - [Authorization Providers](/applicaster-video-platform/authorization-provider/authorization_provider.md)
+  - [JS2Native](/applicaster-video-platform/js2native/readme.md)
+
 # QuickBrick
 
 ## QuickBrick
