@@ -3,21 +3,30 @@
 $applicaster-black: #010613;
 $applicaster-white: #ffffff;
 $applicaster-green: #44dd95;
+$applicaster-dark-green: #3bac77;
 $applicaster-offwhite: #e5dace;
 
 // Put your variable overrides here
+$font-size-base: 13px;
 $book-background: $applicaster-white;
 $page-background: $applicaster-white;
 $sidebar-background: $applicaster-black;
 $sidebar-font-size: 1.0em;
 $color-border: $applicaster-white;
 
-$color-primary: $applicaster-green;
+$font-size-h1						: 2rem;
+$font-size-h2						: 1.6rem;
+$font-size-h3						: 1.3rem;
+$font-size-h4						: 1.2rem;
+$font-size-h5						: 1.1rem;
+$font-size-h6						: 1rem;
+
+$color-primary: $applicaster-dark-green;
 $color-text: $applicaster-black;
 
 $heading-map: (
-  color: $applicaster-green,
-  border-bottom: 1px solid $applicaster-green,
+  color: $applicaster-black,
+  border-bottom: 1px solid $applicaster-black,
   font-family: $font-family-sans
 );
 
