@@ -90,6 +90,9 @@
   - [Android](/player/Android.md)
   - [Supporting Ads in Datasources](/player/ads-in-datasource.md)
   - [Player Analytics](/player/player-analytics.md)
+- [Login Plugins](/login/intro.md)
+  - [iOS](/login/iOS.md)
+  - [Android](/login/Android.md)
 
 # Applicaster Video Platform
 

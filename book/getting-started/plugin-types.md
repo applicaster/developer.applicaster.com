@@ -61,6 +61,8 @@ For more info about plugin abilities [Click Here](/getting-started/plugin-abilit
 Login plugins are used to implement authentication and authorization logic.
 These type of plugins can be extended for user management, give per item handling with different policies and entitlements and offer in app purchases.
 
+For more info about login plugins [Click Here](/login/intro.md)
+
 ### Menu
 Menu plugins are used to customize the presentation of base navigation such as side menu, tab bar, etc.
 
