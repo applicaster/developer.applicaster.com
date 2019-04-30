@@ -1,15 +1,15 @@
 # Login Plugin - iOS
 
 The iOS Login plugin for Zapp is based on implementing the `ZPLoginProviderProtocol`.
-The protocol goes through all of the functions for initializing, checking complience and presenting a login.
+This protocol goes through all of the functions for initializing, checking complience and presenting a login screen.
 
 In order to see a basic implementation of a login plugin, we suggest reviewing the [Login Plugin Demo Project](https://github.com/applicaster/zapp-plugins-examples/tree/master/LoginPlugin/iOS) as it's a good starting point for implementing a login plugin.
 
-This guide will go through the basic terms and functions that need to be implemented in order to create a login plugin and extend on some additional protocols that provide additional functionality such as users, startup processing and login and screen hooks.
+This guide will go through the basic terms and functions that need to be implemented in order to create a login plugin and extend on some additional protocols that provide additional functionality such as users, startup processing, and login and screen hooks.
 
 ## The Login Provider protocol
 The main protocol used for login plugins is `ZPLoginProviderProtocol`.
-All login plugins must implement this protocol as it's part of how the Zapp apps are expecting when initializing a login plugin.
+All login plugins must implement this protocol as it's part of what Zapp apps are expecting when initializing a login plugin.
 
 ### Initialization and general properties
 The `ZPLoginProviderProtocol` protocol inherits from the `ZPAdapterProtocol` in order to initialize the plugin and save the configuration object.
@@ -91,18 +91,18 @@ Here are the functions included in this protocol:
 
 ## Screen Hooks
 A common way to involve the login plugin as a part of the flow of the app is setting it up as a hook between screens.
-This means the plugin will be called before screen presentation and can choose to check complience, show login or deny access.
+This means the plugin will be called before screen presentation and can choose to check complience, present login, or deny access.
 
 For more about Hook Plugins [Click Here](/ui-builder/ios/PreHooks-ScreenPlugin.md).
 
 ## Startup Hooks
 
-Some login plugins need an initial startup for either:
-* Present a login gate at the beginning of the app
-* Do an initial setup and try to sliently login, update entitlements etc.
+Some login plugins need an initial startup to either:
+* Present a login gateway at app launch
+* Do an initial setup and try to silently login, update entitlements, etc.
 
-In order to implement this - a login plugin needs to implement some functions to run at the app launch and set the proper configuration in the manifest.
-Those functions can be found in the `ZPAppLoadingHookProtocol` which contains the following functions:
+In order to implement this, a login plugin needs to implement some functions to run at the app launch and set the proper configuration in the manifest.
+Those functions can be found in the `ZPAppLoadingHookProtocol`, which contains the following functions:
 ``` swift
   /*
     This method called after Plugins loaded locally, but the account load failed
@@ -132,6 +132,6 @@ Those functions can be found in the `ZPAppLoadingHookProtocol` which contains th
 Please note - the completion will basically delay any further progress in the place the hook is applied to - so be thoughtfull if a completion is needed.
 
 Some best practices regarding this:
-* If the completion can continue in the background - Please call the completion immediatly
-* If the completion does some processing but doesnt display a UI - consider adding a loading view controller and managing it untill you can dismiss it and call the completion. (For example after the App Root Presentation happened)
-* If completion requires presenting a UI and a certain flow (Like a login gate to the app) - Call the complition after finishing dismissing the view controller.
+* If the completion can continue in the background, Please call the completion immediately
+* If the completion does some processing but doesn't display any UI, consider adding a loading view controller and managing it until you can dismiss it and call the completion. (For example, after the App Root Presentation happened)
+* If completion requires presenting any UI and a certain flow (like a login gateway to the app), call the completion after finishing dismissing the view controller.

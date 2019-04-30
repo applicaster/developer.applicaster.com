@@ -101,7 +101,7 @@ Please refer to the [Screen Plugins](/ui-builder/intro.md) guide for more info a
 Some of the Applicaster datasources provide ad information in a uniform structure.
 While this is optional, it should be implemented if the integrated player supports this feature.
 
-For more info about supporting ads from datasources [Click Here](/player/ads-in-datasource.md).
+For more info about Supporting Ads from Datasources, [Click Here](/player/ads-in-datasource.md).
 
 ## Player Analytics
 
@@ -110,7 +110,7 @@ Player analytics is divided to 2 types of analytics:
 2. Player analytics plugins
 
 Player analytics events are a list of events every player should implement as fully as possible.
-For more info about player analytics events [Click Here](/player/player-analytics.md).
+For more info about Player Analytics Events, [Click Here](/player/player-analytics.md).
 
 ### Player Analytics Plugins
 

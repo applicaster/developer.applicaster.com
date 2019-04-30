@@ -1,13 +1,13 @@
 # Login Plugin - Android
 
-The iOS Login plugin for Zapp is based on implementing the `LoginContract` contract.
-The contract goes through all of the functions for initializing, checking complience and presenting a login.
+The Android Login plugin for Zapp is based on implementing the `LoginContract` contract.
+This contract goes through all of the functions for initializing, checking complience and presenting a login screen.
 
-This guide will go through the basic terms and functions that need to be implemented in order to create a login plugin and extends on some additional topics that provide additional functionality such as users, startup processing and login and screen hooks.
+This guide will go through the basic terms and functions that need to be implemented in order to create a login plugin and extends on some additional topics that provide additional functionality such as users, startup processing, and login and screen hooks.
 
 ## The Login Provider Contract
 The contract used for login plugins is `LoginContract`.
-All login plugins must implement this contract as it's part of how the Zapp apps are expecting when initializing a login plugin.
+All login plugins must implement this contract as it's part of what Zapp apps are expecting when initializing a login plugin.
 
 ### Login and Logout
 The following methods are used for logging in:
@@ -15,9 +15,9 @@ The following methods are used for logging in:
   void login(Context context, Map additionalParams, Callback callback);
   void login(Context context, Playable playable, Map additionalParams, Callback callback);
 ```
-The difference between the two is the first one is generic while the second one is more specific to Playable items - thus usually ran in context of a playback or a specific video item.
+The difference between the two is the first one is generic while the second one is more specific to Playable items, thus usually ran in the context of a playback or a specific video item.
 
-For more info about `Playable` [Click Here](/player/Android.md)
+For more info about `Playable`, [Click Here](/player/Android.md)
 
 The following method is used for logging out:
 ``` java
@@ -58,22 +58,22 @@ Please implement the appropriate one according to the usage.
 
 ## Screen Hooks
 A common way to involve the login plugin as a part of the flow of the app is setting it up as a hook between screens.
-This means the plugin will be called before screen presentation and can choose to check complience, show login or deny access.
+This means the plugin will be called before screen presentation and can choose to check complience, present login, or deny access.
 
 For more about Hook Plugins [Click Here](/ui-builder/android/ScreenHooks.md).
 
 ## Startup Hooks
 
-Some login plugins need an initial startup for either:
-* Present a login gate at the beginning of the app
-* Do an initial setup and try to sliently login, update entitlements etc.
+Some login plugins need an initial startup to either:
+* Present a login gateway at app launch
+* Do an initial setup and try to silently login, update entitlements, etc.
 
-In order to implement this - a login plugin needs to implement some functions to run at the app launch and set the proper configuration in the manifest.
+In order to implement this, a login plugin needs to implement some functions to run at the app launch and set the proper configuration in the manifest.
 
-Those functions can be found in the `ApplicationLoaderHookUpI` which contains the following functions:
+Those functions can be found in the `ApplicationLoaderHookUpI`, which contains the following functions:
 ``` java
   /***
-     * this function called after all the data loaded and before main activity opened.
+     * this function is called after all the data loaded and before main activity opened.
      * @param context generic intro activity
      * @param listener listener to continue the application flow after execution finished.
      */
@@ -81,7 +81,7 @@ Those functions can be found in the `ApplicationLoaderHookUpI` which contains th
 
 
     /***
-     * this function called after Plugins loaded, you can add logic that not related to the application data
+     * this function is called after Plugins loaded, you can add logic that not related to the application data
      * as Zapp strings or applicaster models.
      * @param context APIntroActivity
      * @param listener listener to continue the application flow after execution finished.

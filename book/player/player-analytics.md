@@ -3,7 +3,7 @@
 The following table represents the expected analytics events and parameters players should implement.
 This covers event analytics only - not video analytics plugins at this point.
 
-For more info about sending analytics events [Click Here](/analytics/client_side_api/client_side_api.md).
+For more info about Sending Analytics Events, [Click Here](/analytics/client_side_api/client_side_api.md).
 
 ## Play VOD Item
 
