@@ -9,10 +9,6 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-     
-      - run:
-          name: workaround for node-gyp
-          command: rm -rf ~/.node-gyp
 
       - run:
           name: install gitbook CLI
@@ -34,10 +30,6 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "6c:17:37:96:90:a8:37:2c:3f:69:95:7e:1e:a6:92:04"
-     
-      - run:
-          name: workaround for node-gyp
-          command: rm -rf ~/.node-gyp
 
       - run:
           name: install gitbook CLI
