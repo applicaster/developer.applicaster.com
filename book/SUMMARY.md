@@ -1,6 +1,6 @@
-# Zapp Developer Center
+# Applicaster Developer's Center
 
-## Getting Started With Zapp
+## Getting Started
 
 - [Code Of Conduct](/Code-Of-Conduct.md)
 - [Getting Started with Zapp Plugins](/getting-started/zapp-plugins.md)
@@ -34,6 +34,7 @@
   - [Android](/react-native/android/android.md)
     - [Running on device](/react-native/android/running-on-device.md)
     - [Debugging](/react-native/android/debugging.md)
+- [JS2Native](/applicaster-video-platform/js2native/readme.md)
 - [Screen Plugins](/ui-builder/intro.md)
   - [API](/ui-builder/API.md)
   - [Designer Guide](/ui-builder/designer/designer.md)
@@ -105,7 +106,6 @@
   - [EPG Ingestion](/applicaster-video-platform/content-ingestion/epg-ingestion/index.md)
   - [Collection Ingestion](/applicaster-video-platform/content-ingestion/collection-ingestion-xml/collection_via_xml.md)
   - [Authorization Providers](/applicaster-video-platform/authorization-provider/authorization_provider.md)
-  - [JS2Native](/applicaster-video-platform/js2native/readme.md)
 
 # QuickBrick
 
