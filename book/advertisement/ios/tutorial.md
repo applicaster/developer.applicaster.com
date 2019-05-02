@@ -8,6 +8,8 @@ The full [Zapp](http://zapp.applicaster.com) plugins documentation is available 
 
 When you are starting a new iOS plugin our recommendation is to install our [Xcode templates for Applicaster plugins](https://github.com/applicaster/zapp-plugins-ios-templates). The templates will enable you to chose the plugin type in the Xcode "new project" screen. After selecting the plugin type, you will need to provide few general details on the plugin. Then, it will generate a new plugin project that includes the deployment files, like podspec and the plugin_manifest.json, and the plugin class itself including the relevant Zapp protocol.
 
+For more info about Initial iOS Plugin Setup, [Click Here](/dev-env/iOS.md).
+
 ## Getting Started
 Clone this project `$ git clone https://github.com/applicaster/zapp-plugins-examples.git`.
 and navigate to Advertisement -> iOS

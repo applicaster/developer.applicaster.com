@@ -7,6 +7,8 @@ In order to see a basic implementation of a login plugin, we suggest reviewing t
 
 This guide will go through the basic terms and functions that need to be implemented in order to create a login plugin and extend on some additional protocols that provide additional functionality such as users, startup processing, and login and screen hooks.
 
+For more info about Initial iOS Plugin Setup, [Click Here](/dev-env/iOS.md)
+
 ## The Login Provider protocol
 The main protocol used for login plugins is `ZPLoginProviderProtocol`.
 All login plugins must implement this protocol as it's part of what Zapp apps are expecting when initializing a login plugin.

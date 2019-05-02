@@ -6,6 +6,8 @@ The protocol goes through all of the functions for initializing the player with 
 In order to see a basic implementation of a player, we suggest reviewing the [Player demo project](https://github.com/applicaster/zapp-plugins-examples/tree/master/VideoPlayer/iOS) as it's a good starting point for implementing a player.
 Another good example to see of a current open source implementation of an iOS and Android player plugin is [Brightcove player](https://github.com/applicaster/zapp-player-plugin-brightcove).
 
+For more info about Initial iOS Plugin Setup, [Click Here](/dev-env/iOS.md)
+
 This guide will go through the basic terms and functions that need to be implemented in order to create a player plugin.
 
 ## Playable item
