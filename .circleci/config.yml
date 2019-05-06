@@ -63,4 +63,3 @@ workflows:
             branches:
               only: 
                 - master
-                - migrate_to_heroku
