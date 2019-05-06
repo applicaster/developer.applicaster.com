@@ -43,16 +43,9 @@ jobs:
           name: gitbook build
           command: npx gitbook build
       
-      - run: 
-          name: setup github email
-          command: git config --global user.email $GH_EMAIL
-      
-      - run: 
-          name: setup github name
-          command: git config --global user.name $GH_NAME
       - run:
-          name: deploy github pages
-          command: npx gh-pages -d _book
+          name: deploy heroku
+          command: git push https://heroku:${HEROKU_API_KEY}@git.heroku.com/social-media-aggregator-dev.git ${CIRCLE_BRANCH}:master
 
 workflows:
   version: 2
@@ -63,8 +56,11 @@ workflows:
             branches:
               ignore: 
                 - gh-pages
+                - migrate_to_heroku
                 - master
       - build_and_deploy:
           filters:
             branches:
-              only: master
+              only: 
+                - master
+                - migrate_to_heroku
