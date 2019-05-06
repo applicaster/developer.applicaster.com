@@ -24,6 +24,6 @@ Adding a new document can be easily done by the following steps:
 3. Create a new branch.
 4. Add the new `.md` file under the relevant folder.
 5. Add the file to the right place in the `/book/SUMMARY.md` according to the [Pages and Summary](https://toolchain.gitbook.com/pages.html) guide.
-6. Test your code locally by running the gitbook with `$ npm start` and checking the result in `http://localhost:4000/`.
+6. Test your code locally by running the gitbook with `./debug_locally.sh` and checking the result in `http://localhost:4000/`.
 7. Push the code.
 8. Create the pull request.
