@@ -28,7 +28,7 @@ Each plugin is comprised from a git repository including the following:
 * [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
 
 ### Example Podfile
-Here is an example of a basic podfile to include the dependancies and configurations used by our plugins:
+Here is an example of a basic podfile to include the dependencies and configurations used by our plugins:
 
 ```
 platform :ios, '10.0'
@@ -57,7 +57,7 @@ post_install do |installer|
 end
 ```
 
-This Podfile refrences the podspec and will create a structure where the plugin code is imported like a real project as a development pod.
+This Podfile references the podspec and will create a structure where the plugin code is imported like a real project as a development pod.
 
 ### Podspec example
 Here is a simple example for a podspec for a sample plugin:
@@ -100,12 +100,12 @@ end
 ```
 
 This podspec will also generate a bundle for the dynamic framework.
-If this is not needed - feel free to remove the resources section.
+If this is not needed, feel free to remove the resources section.
 
 Please refer to [Cocoapod's Guides](https://guides.cocoapods.org) for more info about advanced uses of cocoapods.
-This pod spec can be either hosted on one of Applicaster's repository, official Cocoapods specs repository or any other open git repository.
+This pod spec can be either hosted on one of Applicaster's repositories, official Cocoapods specs repository or any other open git repository.
 
-Note: While possible to host the podspecs specs directory inside the code library - please try to avoid this.
+Note: While possible to host the podspecs specs directory inside the code library, please try to avoid this.
 This method is not efficient.
 
 ## Starting a new project
