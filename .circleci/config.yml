@@ -56,7 +56,6 @@ workflows:
             branches:
               ignore: 
                 - gh-pages
-                - migrate_to_heroku
                 - master
       - build_and_deploy:
           filters:
