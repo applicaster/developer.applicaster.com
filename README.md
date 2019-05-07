@@ -1,7 +1,7 @@
-# Zapp Tech Book
+# Applicaster Developer Portal
 
 ## About
-The Zapp Tech Book goal is to be the home for all the Zapp Plugins technical documentation and guides.
+The Applicaster Developer Portal goal is to be the home for all the Zapp Plugins technical documentation and guides and legacy applicaster.developer.com content.
 The main sections in the book are Zapp-pipes, Zapp React Native Plugins, Zapp-iOS & Zapp-Android.
 
 Any change or adding new doc is done by creating a [Pull Request](https://help.github.com/articles/about-pull-requests/) and having it [reviewed by GitHub "review" process](https://help.github.com/articles/about-pull-request-reviews/). 
@@ -27,3 +27,7 @@ Adding a new document can be easily done by the following steps:
 6. Test your code locally by running the gitbook with `./debug_locally.sh` and checking the result in `http://localhost:4000/`.
 7. Push the code.
 8. Create the pull request.
+
+## If NPM Install fails
+There is a known issue with the gitbook stack that `npm install` might fail.
+In this please delete your modules directory (`rm -rf node_modules/`)
