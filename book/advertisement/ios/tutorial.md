@@ -4,7 +4,7 @@ The [ZappAdvertisementPluginExample](https://github.com/applicaster/zapp-plugins
 
 If you are not familiar with Zapp please visit [our website](http://applicaster.com/?page=product) for more details.
 
-The full [Zapp](http://zapp.applicaster.com) plugins documentation is available [here](https://developer-zapp.applicaster.com).
+The full [Zapp](http://zapp.applicaster.com) plugins documentation is available [here](/getting-started/zapp-plugins.md).
 
 When you are starting a new iOS plugin our recommendation is to install our [Xcode templates for Applicaster plugins](https://github.com/applicaster/zapp-plugins-ios-templates). The templates will enable you to chose the plugin type in the Xcode "new project" screen. After selecting the plugin type, you will need to provide few general details on the plugin. Then, it will generate a new plugin project that includes the deployment files, like podspec and the plugin_manifest.json, and the plugin class itself including the relevant Zapp protocol.
 
@@ -55,10 +55,10 @@ First of all we need to implement a variable and 2 constructors that are common 
 
 ###### NOTE: Using the Zapp Plugin Configuration JSON
 
-```
-When creating a plugin in Zapp we can create custom configuration fields. This enables the Zapp user to fill in relevant details for the specific plugin. More details can found in the [Zapp Plugin Manifest Format](http://developer-zapp.applicaster.com/zappifest/plugins-manifest-format.html).
+When creating a plugin in Zapp we can create custom configuration fields. 
+This enables the Zapp user to fill in relevant details for the specific plugin. More details can found in the [Zapp Plugin Manifest Format](/zappifest/plugins-manifest-format.md).
+
 You can use that on the plugin level like this:
-```
 
 ``` swift
     guard let customParam = configurationJSON?["customParam"] as? String else {
@@ -210,7 +210,8 @@ public func showInterstitial() {
 
 ## How to publish your plugin
 
-Once you have implemented your plugin, you are ready to publish it. You can read more about publishing [here](https://developer-zapp.applicaster.com/getting-started/deploy-and-submit.html)
+Once you have implemented your plugin, you are ready to publish it.
+You can read more about publishing [here](/getting-started/deploy-and-submit.md).
 
 
 ## Custom sizes
@@ -219,8 +220,9 @@ As we mentioned earlier:
 ```
 Inline banners can have different sizes, each different size is represented by a string. This string can have any value and your plugin must define those values, but usually there are 3 that are common to any kind of plugin provider, these are: **BANNER** (standar size banners), **BOX_BANNER** (squared size banners) and **SMART_BANNER** (usually occupying the full width of the device and a fixed height).
 ```
-If your plugin wants different sizes that the standard defined, you need to declared them in the manifest using the **exporting attributes functionality** to override these 3 values with your desired ones. Here is the documentation:
-https://developer-zapp.applicaster.com/zappifest/plugins-manifest-format.html
+If your plugin wants different sizes that the standard defined, you need to declared them in the manifest using the **exporting attributes functionality** to override these 3 values with your desired ones. 
+
+For the full documentation, [Click Here](/zappifest/plugins-manifest-format.md)
 
 This is an example of what you should add to the manifest (here we add 2 new sizes, apart of the 3 standard ones):
 ```

@@ -22,8 +22,10 @@
 ##### General
 
 `Hooks Plugins` can be two types.
-1. `Screen Plugin Hooks` - This types of hooks are [Screen Plugins](https://developer-zapp.applicaster.com/ui-builder/ios/ScreenPlugin.html) that can defined and customized from Zapp's App Builder.
-	__Note:__ These plugins must conform to [Screen Plugins](https://developer-zapp.applicaster.com/ui-builder/ios/ScreenPlugin.html) protocol, for example Login and Storefront screens..
+1. `Screen Plugin Hooks` - This types of hooks are [Screen Plugins](/ui-builder/ios/ScreenPlugin.md) that can defined and customized from Zapp's App Builder.
+	
+  __Note:__ These plugins must conform to [Screen Plugins](/ui-builder/ios/ScreenPlugin.md) protocol, for example Login and Storefront screens.
+  
 2. `Hooks Plugin` - Plugin that does not require UI, or that the UI is controlled by the plugin itself, and should not act as screen. For example, Analytics or Advertisement plugin.
 
 ***
@@ -82,7 +84,7 @@ __Note:__ `pluginModel` and `dataSourceModel` params will be passed from the riv
 
 ___Hooks Screen Plugin___
 
-Make sure that your `hook screen` plugin manifest indicates that it is a screen plugin - [Screen Plugin](https://developer-zapp.applicaster.com/ui-builder/ios/ScreenPlugin.html)
+Make sure that your `hook screen` plugin manifest indicates that it is a screen plugin - [Screen Plugin](/ui-builder/ios/ScreenPlugin.md)
 
 Implement Initializer func.
 
@@ -123,7 +125,7 @@ This methods will be called as notification of `screen hook` plugin in case scre
 
 ___General React Native___
 ###### [React Native Hook Example](https://github.com/applicaster/PreHookExample-RN)
-###### [Plugins manifest format](https://developer-zapp.applicaster.com/zappifest/plugins-manifest-format.html)
+###### [Plugins manifest format](/zappifest/plugins-manifest-format.md)
 If your screen plugin is using `ZPReactNativeDefaultProvider` you do not need to implement anything. Hooks logic was already implemented in `ZPReactNativeDefaultProvider` class. If you will not use this class, make sure plugin will conform to `ZPScreenHookAdapterProtocol` as described in native side. - <a name="Native hook creation" />.
 
 ###### Manifest
@@ -138,7 +140,7 @@ More inforamtion about [Pre hook manifest](https://github.com/applicaster/PreHoo
     ```
 	  "screen": true,
     ```
-    More details about [Screen Plugin](https://developer-zapp.applicaster.com/ui-builder/ios/ScreenPlugin.html)
+    More details about [Screen Plugin](/ui-builder/ios/ScreenPlugin.md)
 4. Upload manifest of your plugin.
 
 __Manifest Example__

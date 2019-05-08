@@ -33,7 +33,7 @@ The interface provides 4 parameters to the plugin:
 ```
     void present(Context context, HashMap<String, Object> screenMap, APAtomEntry dataSource, boolean isActivity);
 ```
-2. In the manifest of the plugin the `screen`: `true` key must be added. This key is needed to explain UI Builder that this plugin can be added in the screen section. [Plugins manifest format](https://developer-zapp.applicaster.com/zappifest/plugins-manifest-format.html)
+2. In the manifest of the plugin the `screen`: `true` key must be added. This key is needed to explain UI Builder that this plugin can be added in the screen section. [Plugins manifest format](/zappifest/plugins-manifest-format.md)
 3. A default presentation should be provided, read more below. <a href="#clientExplanation">Client side explanation</a>
 
 <a name="connection" />

@@ -196,7 +196,7 @@ Field Key                         | Description
 **api/android_proguard_rules**    | Optional field for `Android` plugins to be added to the `proguard-rules` file.
 **api/require_startup_execution** | Optional field. This will allow the plugin to be opt in to the application startup flow. The plugin must implement the relevant `ios/android` protocol.
 **api/react_packages**            | Optional for react plugins. An array of
-**tooltip_text**                  | For any custom configuration fields, a text describing the tooltip is required. More about that can be found in the "Custom Field Tooltips" section of the document [here](https://developer-zapp.applicaster.com/zappifest/zappifest.html).
+**tooltip_text**                  | For any custom configuration fields, a text describing the tooltip is required. More about that can be found in the "Custom Field Tooltips" section of the document [here](/zappifest/zappifest.md).
 **platform**                      | The platform of the plugin - should be either `ios/android/tvos`
 **screen**                        | Indicates if the plugin should be presented as a fullscreen (setting this to `true` will allow selecting this plugin under the screens section in Zapp)
 **dependency_name**               | The name of the dependency as it defined in the repository

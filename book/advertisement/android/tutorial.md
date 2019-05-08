@@ -408,8 +408,9 @@ As we mentioned earlier when implementing the **Size Mapper**, inline banners ca
 
 This string can have any value and your plugin must define those values, but usually there are 3 that are common to any kind of plugin provider, these are: **BANNER** (standar size banners), **BOX_BANNER** (squared size banners) and **SMART_BANNER** (usually occupying the full width of the device and a fixed height).
 
-If your plugin wants different sizes that the standard defined, you need to declared them in the manifest using the **exporting attributes functionality** to override these 3 values with your desired ones. Here is the documentation:
-https://developer-zapp.applicaster.com/zappifest/plugins-manifest-format.html
+If your plugin wants different sizes that the standard defined, you need to declared them in the manifest using the **exporting attributes functionality** to override these 3 values with your desired ones. 
+
+For the full documentation, [Click Here](/zappifest/plugins-manifest-format.md)
 
 This is an example of what you should add to the manifest (here we add 2 new sizes, apart of the 3 standard ones):
 ```
