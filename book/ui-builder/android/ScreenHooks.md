@@ -25,7 +25,7 @@ This feature is available as of `7.4.0`.
 #### General   
 
 `Hooks Plugins` can be two types.
-1. `Screen Plugin Hooks` - This types of hooks are `Screen Plugins` that can defined and customized from UIBuilder and conform all of the rules of [Screen Plugins](https://developer-zapp.applicaster.com/ui-builder/android/ScreenPlugin.html) for navigation structure, navigation bar etc. As example `Login` and `Storefront` screens.
+1. `Screen Plugin Hooks` - This types of hooks are `Screen Plugins` that can defined and customized from UIBuilder and conform all of the rules of [Screen Plugins](/ui-builder/android/ScreenPlugin.md) for navigation structure, navigation bar etc. As example `Login` and `Storefront` screens.
 2. `Hooks Plugin` - This types of plugin not screens. If they have `UI` It must fully controlled by the developer. Prefered usage of this type of plugin as example: `Analytics` and `Advertisment`. That do not need presentation of UI or use of the 3rd party frameworks that API we can not fully control.   
 
 ***
@@ -116,7 +116,7 @@ Rivers' API will add to every screen that needs hooks.
 For an example we will set up a `Player` plugin to use `Screen Hooks`.  
 
 1. Set up `Player` plugin:   
-    - Implement `PluginScreen` interface for the `Player`. [Screen Plugins](https://developer-zapp.applicaster.com/ui-builder/android/ScreenPlugin.html)   
+    - Implement `PluginScreen` interface for the `Player`, [Screen Plugins](/ui-builder/android/ScreenPlugin.md)   
     - Disable storefront, adding to manifest's `custom_configuration_fields`:   
     ```   
     {

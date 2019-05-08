@@ -2,7 +2,7 @@
 June 2018
 
 ## Purpose
-In order for **zapp users and applicaster sales force to be aware of the available plugins**, and all their valuable information, each plugin requires metadata. The following guidelines are aimed at product people, designers and plugin developers, to provide the above information and submit it in the plugin manifest. Please refer to the [Manifest documentation](http://developer-zapp.applicaster.com/zappifest/plugins-manifest-format.html) as well.
+In order for **zapp users and applicaster sales force to be aware of the available plugins**, and all their valuable information, each plugin requires metadata. The following guidelines are aimed at product people, designers and plugin developers, to provide the above information and submit it in the plugin manifest. Please refer to the [Manifest documentation](/zappifest/plugins-manifest-format.md) as well.
 
 ## Plugins Section in Zapp
 
