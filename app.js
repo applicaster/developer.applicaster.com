@@ -1,6 +1,5 @@
 var express = require('express'); 
 var app = express();
-app.use(express.static(__dirname + '/_book'));
 
 if(process.env.NODE_ENV === 'production') {
   app.use((req, res, next) => {
