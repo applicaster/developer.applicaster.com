@@ -1,11 +1,22 @@
 var express = require('express'); 
 var app = express();
 
-if(process.env.NODE_ENV === 'production') {
+const { NODE_ENV } = process.env
+if(NODE_ENV === 'production') {
   app.use((req, res, next) => {
-    if (req.header('x-forwarded-proto') !== 'https' ||
-      req.header('host') !== "developer.applicaster.com") {
-      res.redirect(`https://developer.applicaster.com${req.url}`)
+    if (req.header('x-forwarded-proto') !== 'https') {
+      res.redirect(`https://${req.header('host')}${req.url}`)
+    } else {
+      next()
+    }
+  })
+}
+
+const { CANONICAL_HOST } = process.env
+if (CANONICAL_HOST) {
+  app.use((req, res, next) => {
+    if (req.header('host') !== CANONICAL_HOST) {
+      res.redirect(`https://${CANONICAL_HOST}${req.url}`)
     } else {
       next()
     }
