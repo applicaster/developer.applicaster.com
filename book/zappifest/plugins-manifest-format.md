@@ -199,6 +199,7 @@ Field Key                         | Description
 **tooltip_text**                  | For any custom configuration fields, a text describing the tooltip is required. More about that can be found in the "Custom Field Tooltips" section of the document [here](/zappifest/zappifest.md).
 **platform**                      | The platform of the plugin - should be either `ios/android/tvos`
 **screen**                        | Indicates if the plugin should be presented as a fullscreen (setting this to `true` will allow selecting this plugin under the screens section in Zapp)
+**supports_offline**              | Boolean, valid option only for the screen plugins, indicates if this screen is supports offline mode in the app.
 **dependency_name**               | The name of the dependency as it defined in the repository
 **dependency_version**            | The version to be use for this dependency.
 **dependency_repository_url**     | A list of repo urls the plugin uses. _NOTE: for ANDROID use it as an object consists out of url and credentials. For any other platform provide a list of url's_
