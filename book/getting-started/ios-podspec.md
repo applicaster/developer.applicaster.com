@@ -76,7 +76,7 @@ Similarly to creating a public podspec repository in terms of setup.
 The main difference would be adding the Applicaster CI git user and Dev relations contact user to the repository with read permissions.
 Please contact your Dev Relations partner to get the updated github users to set this up.
 
-In order to do this - simply create a new public git repository with the following structure:
+In order to do this, simply create a new public git repository with the following structure:
 ```
 /Specs
   /<Dependancy name>
