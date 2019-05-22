@@ -25,7 +25,7 @@ Unfortunately, at the moment, a public pod isn't an option due to the fact that 
 While the code is opensourced - the nature of the needs to update versions derived by CI doesn't allow for a good workflow.
 
 ### Create a public podspec repository
-The first option is simply creating an in house public podspec repository.
+The first option is simply creating an in-house public podspec repository.
 In order to do this - simply create a new public git repository with the following structure:
 ```
 /Specs
