@@ -86,7 +86,7 @@ This Delegate helps presenting sticky views (Such as mini players) throughout th
 Calling the delegate: `ZAAppConnector.sharedInstance().stickyViewDelegate`
 Implemented protocol: `ZAAppDelegateConnectorStickyViewProtocol`
 
-### HQME (High Quality Media Expirience)
+### HQME (High Quality Media Experience)
 The HQME delegate is a helper wrapper around the Applicaster VOD download system; it enables downloading eligible VOD items, getting progress updates, and deleting them.
 
 Calling the delegate: `ZAAppConnector.sharedInstance().hqmeDelegate`
