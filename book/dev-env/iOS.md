@@ -102,7 +102,7 @@ end
 This podspec will also generate a bundle for the dynamic framework.
 If this is not needed, feel free to remove the resources section.
 
-Please refer to our [Guide for deploying plugin to cocoapods](/getting-started/ios-podspec.md) for instructions regarding the different options of hosting and serving the different podspec files and correctly versioning them.
+Please refer to our [Guide for deploying a plugin to cocoapods](/getting-started/ios-podspec.md) for instructions regarding the different options of hosting and serving the different podspec files and correctly versioning them.
 
 ## Starting a new project
 There are a couple of options of starting a new plugin project:
