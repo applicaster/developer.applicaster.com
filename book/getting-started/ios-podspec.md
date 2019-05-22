@@ -1,7 +1,7 @@
 # Deploy your iOS plugin to CocoaPods
 
 In order to distribute the plugin - part of the necessary steps is publishing a podspec.
-The following guide will go through the versioning logics we use, pod publishing options and best practices.
+The following guide will review the logic we use for versioning, pod publishing options, and best practices.
 
 For a sample podspec please refer to our [iOS getting started guide](/dev-env/iOS.md)
 
