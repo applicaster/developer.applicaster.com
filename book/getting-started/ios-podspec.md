@@ -12,7 +12,7 @@ We try to stick to [Semantic versioning](https://semver.org) structure meaning -
 * Minor version is used for adding functionality in a backwards-compatible manner.
 * Patch version is used when making a bug fix while not changing any compatibility or existing features.
 
-To further simplify working with Zapp - dependancy version set in a plugin manifest would allow Zapp to build with the latest patch version without resubmitting a new plugin manifest - just performing a new build.
+To further simplify working with Zapp, setting dependency version in a plugin manifest allows Zapp to build with the latest patch version without requiring a new plugin manifest be resubmitted - just perform a new build.
 
 ## Publishing a pod strategies
 There are 4 pod publishing strategies that a developer can use to create a version based on a podspec:
