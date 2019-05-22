@@ -48,7 +48,7 @@ If you do not have access to the private repository, please use our [Public Coco
 You can do this either by pushing a branch and opening a PR or by forking and creating a PR to the repository.
 
 In this case - there is no need to add the repository in the plugin manifest.
-Zapp by default uses this repository to look for dependancies.
+Zapp uses this repository to look for dependancies by default.
 
 ### Host the pod inside the plugin repository
 This method should be mainly used to get off the ground and is not recommended.
