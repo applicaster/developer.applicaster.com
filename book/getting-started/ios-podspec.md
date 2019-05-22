@@ -51,7 +51,7 @@ In this case - there is no need to add the repository in the plugin manifest.
 Zapp uses this repository to look for dependancies by default.
 
 ### Host the pod inside the plugin repository
-This method should be mainly used to get off the ground and is not recommended.
+This method should be used mainly to get off the ground and is not recommended.
 The main issue with this method is the repository is pulled on any `pod update` run and is stored in the local pods cache.
 
 While the repository might start as being light weight (especially if it contains no assets) - this gets graduatly heavier. Especially if the plugin contains assets or compiled binaries.
