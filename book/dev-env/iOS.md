@@ -9,17 +9,6 @@ To be able to write iOS native plugins, you will need to make sure you are setti
 * Make sure that your plugin is `bitcode enable`
 * Install [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) version `1.5.3`
 
-## Download iOS development project
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRBD1LkNz5SoSH8XM1DkSrFlL5k5wyLtK2uWxoqkC4Mr7aGnL3UWx1mbVhdAXj9m64ptDiB9gp-JaBX/embed?start=false&loop=false&delayms=5000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-Enable developers to develop and debug their plugins on a real env/project.
-
-After downloading the Development Project please make sure to add your local plugin. To do so:
-1. Updating the `Podfile` to include your `podspec` local path.
-2. Run `pod install --no-repo-update` on your terminal to add your plugin pod.
-3. Run `pod update YourPlugin --no-repo-update` to update your changes.
-
 ## Creating a new iOS Plugin
 
 Each plugin is comprised from a git repository including the following:
@@ -109,6 +98,10 @@ There are a couple of options of starting a new plugin project:
 * Use one of the [Applicaster examples](https://github.com/applicaster/zapp-plugins-examples/tree/master/VideoPlayer/iOS)
 * Start a new Cocopod from scratch
 * Use an Applicaster [Zapp Plugin template](https://github.com/applicaster/zapp-plugins-ios-templates) to create a new project.
+
+## Next Steps
+* [Applicaster Zapp App Connector utilities for iOS plugins](/dev-env/iOS/utils.md)
+* [Download iOS development project](/dev-env/iOS/download-development-project.md)
 
 ## Guides per plugin type
 * [Screen Plugins](/ui-builder/ios/ScreenPlugin.md)
