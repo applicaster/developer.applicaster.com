@@ -102,11 +102,7 @@ end
 This podspec will also generate a bundle for the dynamic framework.
 If this is not needed, feel free to remove the resources section.
 
-Please refer to [Cocoapod's Guides](https://guides.cocoapods.org) for more info about advanced uses of cocoapods.
-This pod spec can be either hosted on one of Applicaster's repositories, official Cocoapods specs repository or any other open git repository.
-
-Note: While possible to host the podspecs specs directory inside the code library, please try to avoid this.
-This method is not efficient.
+Please refer to our [Guide for deploying a plugin to cocoapods](/getting-started/ios-podspec.md) for instructions regarding the different options of hosting and serving the different podspec files and correctly versioning them.
 
 ## Starting a new project
 There are a couple of options of starting a new plugin project:
