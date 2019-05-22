@@ -1,6 +1,6 @@
 # Download iOS development project
 
-In order to help developers iterate on plugins, after submiting an initial version or making code fixes to an existing version, Zapp gives the option to prepare a downloadable project.
+In order to help developers iterate on plugins, after submitting an initial version or making code fixes to an existing version, Zapp gives the option to prepare a downloadable project.
 
 This project enables developers to debug and add features using their development repository and to run the project in the full context of an existing app.
 
