@@ -22,7 +22,7 @@ There are 4 pod publishing strategies that a developer can use to create a versi
 4. Create a private podspec repository containing the podspecs
 
 Unfortunately, at the moment, a public pod isn't an option due to the fact that `ZappPlugins` dependency isn't published in Cocoapods public podspec repository.
-While the code is opensourced - the nature of the needs to update versions derived by CI doesnt allow a good workflow.
+While the code is opensourced - the nature of the needs to update versions derived by CI doesn't allow for a good workflow.
 
 ### Create a public podspec repository
 The first option is simply creating an in house public podspec repository.
