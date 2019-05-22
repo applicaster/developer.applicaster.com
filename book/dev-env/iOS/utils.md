@@ -14,7 +14,7 @@ To access the Zapp App connector instance simply use:
 The following is a partial list documenting the main delegates and their functionalites.
 
 ### Localization
-The Localization delegate used to fetch localized texts.
+The Localization delegate is used to fetch localized texts.
 
 Calling the delegate: `ZAAppConnector.sharedInstance().localizationDelegate`
 Implemented protocol: `ZAAppDelegateConnectorLocalizationProtocol`
