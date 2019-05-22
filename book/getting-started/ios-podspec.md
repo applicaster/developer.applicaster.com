@@ -54,7 +54,7 @@ Zapp uses this repository to look for dependancies by default.
 This method should be used mainly to get off the ground and is not recommended.
 The main issue with this method is the repository is pulled on any `pod update` run and is stored in the local pods cache.
 
-While the repository might start as being light weight (especially if it contains no assets) - this gets graduatly heavier. Especially if the plugin contains assets or compiled binaries.
+While the repository might start out lightweight (especially if it contains no assets) - this gets gradually heavier, especially if the plugin contains assets or compiled binaries.
 
 Just like creating a public podspec repository, you will need to create the following structure:
 ```
