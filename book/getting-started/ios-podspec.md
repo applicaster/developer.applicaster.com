@@ -56,7 +56,7 @@ The main issue with this method is the repository is pulled on any `pod update` 
 
 While the repository might start as being light weight (especially if it contains no assets) - this gets graduatly heavier. Especially if the plugin contains assets or compiled binaries.
 
-Just like creating a public podspec repository - you will need to create the following structure:
+Just like creating a public podspec repository, you will need to create the following structure:
 ```
 /Specs
   /<Dependancy name>
