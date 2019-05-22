@@ -45,7 +45,7 @@ In the plugin manifest, please add the following:
 If you have access to the Applicaster [Cocoapods Private Repository](https://github.com/applicaster/CocoaPods-Private), please create a pull request to this repository.
 
 If you do not have access to the private repository, please use our [Public Cocoapods Repository](https://github.com/applicaster/CocoaPods).
-Either by pushing a branch and opening a PR or forking and creating a PR to the repository.
+You can do this either by pushing a branch and opening a PR or by forking and creating a PR to the repository.
 
 In this case - there is no need to add the repository in the plugin manifest.
 Zapp by default uses this repository to look for dependancies.
