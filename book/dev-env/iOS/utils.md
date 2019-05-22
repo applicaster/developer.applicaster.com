@@ -1,5 +1,5 @@
 # Applicaster Zapp App Connector utilities for iOS plugins
-One of the key tools to help plugins communicate with the Zapp Apps is using the Zapp App Connector.
+The Zapp App Connector is one of the key tools to help plugins communicate with Zapp Apps.
 
 The Zapp App Connector is a shared instance with multiple delegates set up at the app launch with helper methods that should be utilized by all apps.
 Before importing various pices of the Applicaster SDK - please look for an App Connector delegate that might provide the desired functionality.
