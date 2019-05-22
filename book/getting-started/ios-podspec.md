@@ -72,7 +72,7 @@ In the plugin manifest please add the following:
 ```
 
 ### Create a private podspec repository
-Similarly to creating a public podspec repository in terms of setup.
+This approach is similar to creating a public podspec repository in terms of setup.
 The main difference would be adding the Applicaster CI git user and Dev relations contact user to the repository with read permissions.
 Please contact your Dev Relations partner to get the updated github users to set this up.
 
