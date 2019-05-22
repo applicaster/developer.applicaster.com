@@ -59,7 +59,7 @@ Calling the delegate: `ZAAppConnector.sharedInstance().connectivityDelegate`
 Implemented protocol: `ZAAppDelegateConnectorConnectivityProtocol`
 
 ### Identity
-The Identity delegat is used for getting the device ID and login tokens from current plugins.
+The Identity delegate is used for getting the device ID and login tokens from current plugins.
 
 Note: Currently the login plugin supports getting authentication status from plugins without a completion.
 
