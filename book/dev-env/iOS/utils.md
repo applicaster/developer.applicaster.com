@@ -81,7 +81,7 @@ Calling the delegate: `ZAAppConnector.sharedInstance().audioSessionDelegate`
 Implemented protocol: `ZAAppDelegateConnectorAudioSessionProtocol`
 
 ### Sticky view
-This Delegate helps presenting sticky views (Such as mini players) throughout the application.
+This Delegate helps present sticky views (such as mini players) throughout the application.
 
 Calling the delegate: `ZAAppConnector.sharedInstance().stickyViewDelegate`
 Implemented protocol: `ZAAppDelegateConnectorStickyViewProtocol`
