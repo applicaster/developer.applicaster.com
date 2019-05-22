@@ -64,7 +64,7 @@ Just like creating a public podspec repository - you will need to create the fol
       /<Dependancy name.podspec>
 ```
 
-In the plugin manifest please add the following:
+In the plugin manifest, please add the following:
 ```
   "dependency_repository_url": [
       "git@github.com:<git account name - containing the repository>/<Plugin repository name>.git"
