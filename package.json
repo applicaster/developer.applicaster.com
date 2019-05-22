@@ -15,7 +15,10 @@
     "gitbook-plugin-styles-sass": "^1.1.0",
     "gitbook-plugin-styles-sass-fix": "^1.1.2",
     "gitbook-plugin-theme-gestalt": "^1.0.7",
-    "gitbook-plugin-toggle-chapters": "^0.0.3"
+    "gitbook-plugin-toggle-chapters": "^0.0.3",
+    "tar": "^4.4.2",
+    "cryptiles": "^4.1.2",
+    "hoek": "^4.2.1"
   },
   "devDependencies": {
     "gitbook-cli": "^2.3.2"
