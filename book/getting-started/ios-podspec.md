@@ -8,7 +8,7 @@ For a sample podspec, please refer to our [iOS getting started guide](/dev-env/i
 ## Versioning
 The best practice for versioning is to use a 3 number structure versioning scheme.
 We try to stick to [Semantic versioning](https://semver.org) structure meaning - MAJOR.MINOR.PATCH
-* Major version is used for incompatible API changes - so all breaking changes should have a major version number difference.
+* Major version is used for incompatible API changes - so all breaking changes should increase the major version number.
 * Minor version is used for adding functionality in a backwards-compatible manner.
 * Patch version is used when making a bug fix while not changing any compatibility or existing features.
 
