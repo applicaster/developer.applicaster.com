@@ -3,7 +3,7 @@
 In order to distribute the plugin - part of the necessary steps is publishing a podspec.
 The following guide will review the logic we use for versioning, pod publishing options, and best practices.
 
-For a sample podspec please refer to our [iOS getting started guide](/dev-env/iOS.md)
+For a sample podspec, please refer to our [iOS getting started guide](/dev-env/iOS.md).
 
 ## Versioning
 The best practice for versioning is using a 3 number structure versioning scheme.
