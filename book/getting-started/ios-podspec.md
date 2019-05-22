@@ -34,7 +34,7 @@ In order to do this, simply create a new public git repository with the followin
       /<Dependancy name.podspec>
 ```
 
-In the plugin manifest please add the following:
+In the plugin manifest, please add the following:
 ```
   "dependency_repository_url": [
       "git@github.com:<git account name - containing the repository>/<Specs repository name>.git"
