@@ -75,7 +75,7 @@ Calling the delegate: `ZAAppConnector.sharedInstance().imageDelegate`
 Implemented protocol: `ZAAppDelegateConnectorImageProtocol`
 
 ### Audio Session
-Helper wrapper to consolidate setting audio sessions, making it simple to set audio playback behavior in the background for example.
+The Audio Session delegate is a helper wrapper to consolidate setting audio sessions. For example, it simplifies setting audio playback behavior in the background.
 
 Calling the delegate: `ZAAppConnector.sharedInstance().audioSessionDelegate`
 Implemented protocol: `ZAAppDelegateConnectorAudioSessionProtocol`
