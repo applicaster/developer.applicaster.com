@@ -33,7 +33,7 @@ Calling the delegate: `ZAAppConnector.sharedInstance().layoutsStylesDelegate`
 Implemented protocol: `ZAAppDelegateConnectorLayoutsStylesProtocol`
 
 ### URL
-The URL delegate is mainly used to fetch the app URL scheme
+The URL delegate is mainly used to fetch the app URL scheme.
 
 Calling the delegate: `ZAAppConnector.sharedInstance().urlDelegate`
 Implemented protocol: `ZAAppDelegateConnectorURLProtocol`
