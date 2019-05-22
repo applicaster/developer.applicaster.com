@@ -26,7 +26,7 @@ While the code is opensourced - the nature of the needs to update versions deriv
 
 ### Create a public podspec repository
 The first option is simply creating an in-house public podspec repository.
-In order to do this - simply create a new public git repository with the following structure:
+In order to do this, simply create a new public git repository with the following structure:
 ```
 /Specs
   /<Dependancy name>
