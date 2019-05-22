@@ -47,7 +47,7 @@ Implemented protocol: `ZAAppDelegateConnectorChromecastProtocol`
 
 ### Facebook AcountKit
 Helper wrapper for communicating with the Facebook SDK and with Facebook AccountKit.
-This allows loging into facebook, performing graph requests and using Facebook Account Kit for authentication.
+This enables logging into Facebook, performing graph requests, and using Facebook Account Kit for authentication.
 
 Calling the delegate: `ZAAppConnector.sharedInstance().facebookAccountKitDelegate`
 Implemented protocol: `ZAAppDelegateConnectorFacebookAccountKitProtocol`
