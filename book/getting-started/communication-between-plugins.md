@@ -1,33 +1,8 @@
 #Communication in-between Plugins and Plugin Communication with DSP's
-Communication in between plugins and communication between plugins and DSP's is accomplished by using the `SessionStorageUtils`
+Communication in between plugins and communication between plugins and DSP's is accomplished by using the `SessionStorage` & `LocalStorage`
 
-If you have a plugin that needs to pass information like contentId's or URL paths for example, you can use `SessionStorageUtils` to save those values for that session, and all the plugins for this specific app and the DSP's it uses can extract those same values to use them accordingly.
+If you have a plugin that needs to pass information like contentId's or User Id's for example, you can use `SessionStorage` to save those values for that session or persist the values with `LocalStorage`, once stored all the plugins for this specific app as well as the DSP's it uses can extract those same values to use them accordingly.
 
-# SessionStorageUtils
-SessionStorageUtils allow communication in between plugins as well as communication between plugins and DSP's. 
-
-
-`JSContext` pulls all the values it needs from SessionStorage rather than from different Managers and objects throughtout the app.
-
-
-***
-**Please Note**:
-
-Both `set` and `get` functions accept a `identifier` parameter. Use this parameter to group your keys using your own plugin identifier and avoid collisions with other plugins.
-***
-
-
-### Change History
-`1.0.0` - May 10, 2019 - Created by LATAM team
-
-
-### Point of contact
-Name  | Email
-------------- | -------------
-Marcos J. Reyes  | m.reyes@applicaster.com
-Javier Casaudoumecq  | j.casaudoumecq@applicaster.com
-
-***
 **Examples**
 
 * [Setting/Saving Values (native-iOS)](#setting-values-ios)
@@ -205,7 +180,7 @@ var bar = NativeModules.SessionStorage.getItem("foo", "myPluginIdentifier.001");
 **Saving a Value**
 
 ```
-TBD;
+nativeBridge.setSessionStoreItem('foo', "bar", 'myPluginIdentifier.001')
 
 ```
 
@@ -215,5 +190,5 @@ TBD;
 **Getting a Value**
 
 ```
-TBD;
+nativeBridge.getSessionStoreItem('foo','myPluginIdentifier.001')
 ```
