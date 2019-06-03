@@ -1,5 +1,5 @@
 ## React Native in Android
-As you would expect, most of the features from React Native will work out of the box for both platforms. Nevertherless,there are certaing differences between platforms which can create development friction.
+As you would expect, most of the features from React Native will work out of the box for both platforms. Nevertherless,there are certain differences between platforms which can create development friction.
 
 If you are planning to use **more then one react native** component in your Android applicastion please consider using [Single Bundle](/plugins/android/single-bundle.md).
 

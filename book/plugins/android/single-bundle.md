@@ -3,11 +3,12 @@
 ![single-bundle.png](./single-bundle.png)
 
 ### OVERVIEW
-This plugin gives ability to change version of react native and react. It also aggregate all react native plugins into one single bundle and upload it to S3. Plugins becomes modules under the names specified as plugin identifiers from plugin configuration."
+Single bundle is a plugin that makes multiple react native components implemenation stable, increase it's perfomance and it is more efficient and easy to handle in a native app. This plugin gives ability to change version of react native and react. It also aggregate all react native plugins into one single bundle and upload it to S3. Plugins becomes modules under the names specified as plugin identifiers from plugin configuration."
+
 ### PLUGINS PREPERATIONS
 
-#### Add Single Bundle Plugin to project configuration
-Add single bundle plugin and select versions of react-native, react and react-native-zapp-bridge you want to use. Save plugin configuration and rebuild. Please note rebuild is necesery every time you change versions or adding/removing other react native plugins.
+#### Add "Single Bundle Plugin" to project configuration
+Add  `"single bundle plugin"`  and select versions of `react-native`, `react` and `react-native-zapp-bridge` *(Applicaster standard bridge for communicating react native with Applicaster SDK)* you want to use. Save plugin configuration and rebuild. Please note rebuild is necesery every time you change versions or adding/removing other react native plugins.
 
 ![Single Bundle Configuration]( https://assets-production.applicaster.com/applicaster-employees/zapp_team/anna_bauza/react_native/single-bundle-config.png  "Single Bundle Configuration")
 
@@ -22,7 +23,7 @@ In order to make Single Bundle aggregator work please make sure all your react n
 
 In Zapp-Android folder execute command :
 `bundle exec rake single_bundle_aggregator:build`.
-Please ignore that rake will abort due to lack of AWS credentials - this is expected for local environment.
+
 
 Rake process will create a folder `single-bundle-aggregator` - this is your local server for single bundle.
 
