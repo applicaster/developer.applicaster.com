@@ -8,7 +8,7 @@ Single bundle is a plugin that makes multiple react native components implemenat
 ### PLUGINS PREPERATIONS
 
 #### Add "Single Bundle Plugin" to project configuration
-Add  `"single bundle plugin"`  and select versions of `react-native`, `react` and `react-native-zapp-bridge` *(Applicaster standard bridge for communicating react native with Applicaster SDK)* you want to use. Save plugin configuration and rebuild. Please note rebuild is necesery every time you change versions or adding/removing other react native plugins.
+Add  `"single bundle plugin"`  and from available list of versions of `react-native`, `react` and `react-native-zapp-bridge` *(Applicaster standard bridge for communicating react native with Applicaster SDK)* please select the one which is supported by your plugins. Save plugin configuration and rebuild. Please note rebuild is necesery every time you change versions or adding/removing other react native plugins.
 
 ![Single Bundle Configuration]( https://assets-production.applicaster.com/applicaster-employees/zapp_team/anna_bauza/react_native/single-bundle-config.png  "Single Bundle Configuration")
 
@@ -31,5 +31,5 @@ If you wish to debug package inside your single-bundle please place the package 
 
 Local single bundle is ready to run.
 
-### PLUGIN MISSING EXPECTED VERSIONS?
-Please contact the Zapp Team.
+### PLUGIN IS MISSING EXPECTED VERSIONS?
+The Zapp Team can add version when territories have tried specific version in development and confirm it is working.
