@@ -3,6 +3,10 @@ Communication in between plugins and communication between plugins and DSP's is 
 
 If you have a plugin that needs to pass information like contentId's or User Id's for example, you can use `SessionStorage` to save those values for that session or persist the values with `LocalStorage`, once stored all the plugins for this specific app as well as the DSP's it uses can extract those same values to use them accordingly.
 
+Available on:
+**Android**: 8.2.1
+| **iOS**: 11.1.0
+
 **Examples**
 
 * [Setting/Saving Values (native-iOS)](#setting-values-ios)
