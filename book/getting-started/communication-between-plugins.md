@@ -99,58 +99,64 @@ if let retVal = sessionStorageUtils.getAll() {
 ```
 
 ## <a name="setting-values-android"></a>Setting/Saving Values (native-Android)
-Description
+SessionStorage has a set function that takes in String values ONLY:
 
 **Saving a String**
 
 ```
-let bar = "bar"
-let valueSaved = SessionStorage.sharedInstance.set(key: "foo", value: bar, objectType: String.self)
+// Using default namespace
+SessionStorage.set("foo", "bar")
 
+// Using custom namespace (optional)
+SessionStorage.set("foo", "bar", "foo.bar")
 ```
 
-**Saving a String Array**
-
+**Saving a String Array or Object**
+ 
 ```
-let bar = ["bar01","bar02","bar03"]
-let valueSaved = SessionStorage.sharedInstance.set(key: "foo", value: bar, objectType: [String].self)
+// Array
+SessionStorage.set("foo", listOf("foo", "bar").toString())
 
-```
-
-**Saving a Dictionary**
-
-```
-typealias dictType = [String: Any]
-let bar: dictType = ["key01":"bar01", "key02":"bar02"]
-let valueSaved = SessionStorage.sharedInstance.set(key: "foo", value: bar, objectType: dictType.self)
+// Object
+SessionStorage.set("foo", mapOf("foo" to "bar").toString())
 
 ```
 
 ## <a name="getting-values-android"></a>Getting Values (native-Android)
-Description
+Since `SessionStorage` saves all values as Strings, you need to parse the string back into the object type you want to work with.
 
 **Getting a String**
 
 ```
-let bar = SessionStorage.sharedInstance.get(key: "foo", returnType: String.self)
+// Using default namespace
+val bar = SessionStorage.get("foo")
 
+// Using custom namespace (optional)
+val bar = SessionStorage.get("foo", "foo.bar")
 ```
 
-**Getting a String Array**
+**Getting a String Array or Object**
 
 ```
-let bar = SessionStorage.sharedInstance.get(key: "foo", returnType: [String].self)
+// Since everything is stored as a String you would need to parse it with tools like GSON
+
+// Array
+val type = object : TypeToken<List<String>>() {}.type
+val retVal: List<String> = gson.fromJson(SessionStorage.get("foo"), type)
+
+// Object
+val type = object : TypeToken<Map<String, String>>() {}.type
+val retVal: Map<String, String> = gson.fromJson(SessionStorage.get("foo"), type)
+
+// Array (with custom namespace)
+val type = object : TypeToken<List<String>>() {}.type
+val retVal: List<String> = gson.fromJson(SessionStorage.get("foo", "foo.bar"), type)
+
+// Object (with custom namespace)
+val type = object : TypeToken<Map<String, String>>() {}.type
+val retVal: Map<String, String> = gson.fromJson(SessionStorage.get("foo", "foo.bar"), type)
 
 ```
-
-**Getting a Dictionary**
-
-```
-typealias dictType = [String: Any]
-let bar = SessionStorage.sharedInstance.get(key: "foo", returnType: dictType.self)
-
-```
-
 
 ## <a name="setting-values-RN"></a>Setting/Saving Values (ReactNative)
 Using `ZPReactNativeSessionStorageBridge`
