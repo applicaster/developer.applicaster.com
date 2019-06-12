@@ -14,6 +14,8 @@
     - [React-Native](/dev-env/react-native.md)
     - [Node.js](/dev-env/node.md)
     - [Ruby](/dev-env/ruby.md)
+  - [Communication Between Plugins](/getting-started/communication-between-plugins.md)
+  - [Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
   - [Deploy and Submit](/getting-started/deploy-and-submit.md)
     - [iOS - CocoaPods](/getting-started/ios-podspec.md)
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
