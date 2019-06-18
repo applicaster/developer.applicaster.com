@@ -156,6 +156,10 @@ For your convenience we created [Zappifest Tool](https://github.com/applicaster/
        }
     ]
   },
+  "targets": [
+    "tv",
+    "mobile"
+  ],
   "data": {
     "fields": [
       {
@@ -187,6 +191,7 @@ Field Key                   | Description
 **min_zapp_sdk**            | minimum zapp version required for the field, when the plugin is a multi platform, please specify the the platform in the following format: `"min_zapp_sdk": { "ios": "1.0.0", "android": "1.0.0" }`
 **whitelisted_account_ids** | Optional. Array of Applicaster's account_ids as individual strings. To find the relevent account_ids go to `accounts.applicaster.com`. If empty, plugin will be available across all accounts.
 **ui_builder_support**      | Indicates if the plugin should be used in Zapp's UI Builder apps.
+**targets**      | Array type, indicates is this plugin should be used on mobile or tv or both devise targets. Currently the valid options is ["mobile"], ["tv"] or ["mobile", "tv"]
 
 #### Optional:
 - - -
@@ -273,9 +278,17 @@ Allowing the plugin creator to disable sections in the configuration panel.
 Field Key               | Description
 ------------------------| -----------
 **max_nav_items**       | The maximum number of navigation items that the user will be allowed to add.
-**supported_nav_items** | For navigation types plugins (Menu and Navigation Bar). Array of allowd Navigation items for the plugin. Supported types: `nav_chromecast`, `nav_live` (Live drawer screen), `nav_screen`, `nav_url`, `nav_header` (Header - non clickable label), `nav_nested_menu`, `nav_epg`(EPG screen), `nav_settings` (Settings screen)
+**supported_nav_items** | For navigation types plugins (Menu and Navigation Bar). Array of allowd Navigation items for the plugin. Supported types: `nav_chromecast`, `nav_live` (Live drawer screen), `nav_screen`, `nav_url`, `nav_header` (Header - non clickable label), `nav_nested_menu`, `nav_epg`(EPG screen), `nav_settings` (Settings screen), `tv_right_button`, `tv_right_image`, `tv_left_image`, `tv_left_button`
+**max_items_per_type**       | Map type. The maximum number of the same navigation item, that the user will be allowed to add to the navigation.
 
+Here is the example:
 
+```
+"max_items_per_type": {
+   "nav_screen": 2,
+   "nav_url": 3,
+ }
+```
 - - -
 
 
