@@ -191,7 +191,8 @@ Field Key                   | Description
 **min_zapp_sdk**            | minimum zapp version required for the field, when the plugin is a multi platform, please specify the the platform in the following format: `"min_zapp_sdk": { "ios": "1.0.0", "android": "1.0.0" }`
 **whitelisted_account_ids** | Optional. Array of Applicaster's account_ids as individual strings. To find the relevent account_ids go to `accounts.applicaster.com`. If empty, plugin will be available across all accounts.
 **ui_builder_support**      | Indicates if the plugin should be used in Zapp's UI Builder apps.
-**targets**      | Array type, indicates is this plugin should be used on mobile or tv or both devise targets. Currently the valid options is ["mobile"], ["tv"] or ["mobile", "tv"]
+**targets**      | Array type. Some platforms (like Android and Android TV) enables to develop the same plugin for mobile and TV. This param indicates if this plugin should be used on mobile or tv or both devise targets.  Currently the valid options is ["mobile"], ["tv"] or ["mobile", "tv"].
+
 
 #### Optional:
 - - -
