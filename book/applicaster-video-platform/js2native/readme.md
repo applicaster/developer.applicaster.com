@@ -146,7 +146,6 @@ TVShowID: "1",
  
  **userProperties** - The user properties information. The keys of the
 JSON object should be formatted as pascal case (*PascalCase*). 
-Moreover, properties which are not *custom properties* are called *special properties*. They are not required, but if delivered, should be written in the following format: "CustomFieldName".
 
 The following is an example of a javascript code to send user data:
 ```javascript
@@ -175,17 +174,17 @@ function sendData(){
 }
  js2n.Morpheus.updateUserProfile(userProperties);
 ```
- * Note that in the example above we have field called SocialIDs. If you have any sort of social network login, please make sure to follow the structure there, rather than send the IDs as a separate custom values. This enables us to search for Social IDs properly and for you to easily add new social providers without a change to the structure.
+ * Note that in the example above we have a field called SocialIDs. If you have any sort of social network login, please make sure to follow the structure there, rather than send the IDs as separate custom values. This enables us to search for Social IDs properly and for you to easily add new social providers without a change to the structure.
 
 #### PII data vs. Non PII data
 
 Personally identifiable Information (PII) is information which can be used to distinguish or trace an individual's identity alone, such as their name, social security number, biometric records, etc., or can be used to identify an individual when combined with other personal or identifying information which is linked or linkable to the specific individual, such as date and place of birth, mother’s maiden name, etc.
 
-The following are the fields that Applicaster currently supports as identifying as PII. Please make sure to map any PII data you send to the naming convention of the fields below and do not send any PII fields which cannot be mapped accordingly:
+Applicaster currently supports several fields which are considered PII. Morpheus, [our infrastructure for handling analytics](https://developer.applicaster.com/analytics/morpheus/morpheus.html), identifies these specific fields as PII so that they will not be sent to providers who do not accept PII. This also enables customers to filter out the delivery of PII because of regional/legal needs even to providers who can receive PII.
+Please make sure to map any PII data you send to the naming convention of the fields below and do not send any PII fields which cannot be mapped accordingly:
 * Name
 * FirstName
 * LastName
-* UserName
 * UserName
 * Email
 * Phone
