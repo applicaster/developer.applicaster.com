@@ -183,7 +183,7 @@ IOS:
 Android:
 
 ```bash
-  AnalyticsAgentUtil.setScreenView(AnalyticsAgentUtil.SETTING_SCREEN + " - " + "Login");
+  AnalyticsAgentUtil.setScreenView(activity, AnalyticsAgentUtil.SETTING_SCREEN + " - " + "Login");
 ```
 
 For the dynamic screens like ‘home’, ‘season’, Etc. you need to add screen name in the app screens configuration.  
@@ -214,7 +214,7 @@ AppDefine.json:{
 Android screen view tracking example:
 
 ```bash
-AnalyticsAgentUtil.setScreenView(“screen naming”);
+AnalyticsAgentUtil.setScreenView(activity, “screen name”);
 ```
 
 ```bash
