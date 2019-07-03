@@ -208,7 +208,7 @@ Field Key                         | Description
 **supports_offline**              | Boolean, valid option only for the screen plugins, indicates if this screen is supports offline mode in the app.
 **dependency_name**               | The name of the dependency as it defined in the repository
 **dependency_version**            | The version to be use for this dependency.
-**dependency_repository_url**     | A list of repo urls the plugin uses. _NOTE: for ANDROID use it as an object consists out of url and credentials. For any other platform provide a list of url's_
+**dependency_repository_url**     | A list of repo urls the plugin uses. _NOTE: for ANDROID use it as an object consists out of url and credentials. For any other platform provide a list of url's_, _NOTE: for iOS if the repository is private - please use ssh `git@github.com/<account>/<repository name>.git`_
 **extra_dependencies**            | iOS/tvOS only. An array of extra dependencies. Each element in the array is a map of the name of the dependencies and the relevant pod specs. See [example](#extra-dependencies)
 **project_dependencies**          | Android only. Project level counterpart dependencies of RN npm dependencies, Zappifest will ask to optionally add one for each npm dependency detected. See [example](#project-dependencies)
 **configuration_panel_disabled**  | set as true if the plugin configuration should not appear in the plugin gallery. It is recommended to do so when the plugin has a dedicated section in Zapp (Screens, Navigations, etc.)

@@ -21,8 +21,10 @@ There are 4 pod publishing strategies that a developer can use to create a versi
 3. Host the pod inside the plugin repository in a `Specs` folder
 4. Create a private podspec repository containing the podspecs
 
-Unfortunately, at the moment, a public pod isn't an option due to the fact that `ZappPlugins` dependency isn't published in Cocoapods public podspec repository.
+Unfortunately, at the moment, a public pod (on Cocoapods main repository) isn't an option due to the fact that `ZappPlugins` dependency isn't published in Cocoapods public podspec repository.
 While the code is opensourced - the nature of the needs to update versions derived by CI doesn't allow for a good workflow.
+
+_NOTE: When using private pods and pod repositories - it is mandatory to use SSH - `git@github.com/<account>/<dependancy>.git` in the `dependency_repository_url` field, and invite the CI github user to have access to the code. Unfortunatly HTTPS is not properly supported for this use._
 
 ### Create a public podspec repository
 The first option is simply creating an in-house public podspec repository.
