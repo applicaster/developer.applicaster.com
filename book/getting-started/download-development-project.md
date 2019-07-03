@@ -37,11 +37,10 @@ The following instructions per platform will assist with changing your local pro
 #### Internal developers with access to Applicaster private repositories:
 1. Update the `Podfile` to include your `podspec` local path.
 2. Run `pod install --no-repo-update` in order to point to your local pod.
-3. Run `pod update YourPlugin --no-repo-update` to update your changes.
+
+If you are adding files or assets in your development pod - run `pod update YourPlugin --no-repo-update` to update your changes in the project.
 
 #### External developers with no access to Applicaster private repositories (EXPERIMENTAL)
-We are currently working on simplifying these steps however the following steps represent a workaround that should work.
-
 1. Update the `Podfile` to include your `podspec` local path.
 2. In the `Podfile` comment out `source 'git@github.com:applicaster/CocoaPods-Private.git'`
 3. Run `pod update YourPlugin --no-repo-update`.
