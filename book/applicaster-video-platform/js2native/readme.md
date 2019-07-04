@@ -143,69 +143,53 @@ TVShowID: "1",
 ```
  #### Morpheus.updateUserProfile()
  Update user profile information. The old properties will be overwritten by the new ones.
+ 
  **userProperties** - The user properties information. The keys of the
-JSON object should be formatted as pascal case (*PascalCase*). Morevoer,
-properties which are not *custom properties* are called *special properties*.
-They are not required, but if delivered, should be written as follows:
- * Name
+JSON object should be formatted as pascal case (*PascalCase*). 
+
+The following is an example of a javascript code to send user data:
+```javascript
+function sendData(){
+	var userProperties = 
+		"timestamp": 1458061391636,
+		"Name": "Neo",
+		"FirstName": "Thomas",
+		"LastName": "Anderson",
+		"Email": "t.anderson@metacortex.com",
+		"Phone": "1",
+		"UserName": "UserName",
+		"AnyCustomField1": "1",
+		"AnyCustomField2": "2",
+		"AnyCustomField3": "3",
+		"SocialIDs": {
+			"facebook": {
+					"ID": "123"
+			},
+			"twitter": {
+				"ID": "123"
+			},
+			"google": {
+				"ID": "123"
+			}
+}
+ js2n.Morpheus.updateUserProfile(userProperties);
+```
+ * Note that in the example above we have a field called SocialIDs. If you have any sort of social network login, please make sure to follow the structure there, rather than send the IDs as separate custom values. This enables us to search for Social IDs properly and for you to easily add new social providers without a change to the structure.
+
+#### PII data vs. Non PII data
+
+Personally identifiable Information (PII) is information which can be used to distinguish or trace an individual's identity alone, such as their name, social security number, biometric records, etc., or can be used to identify an individual when combined with other personal or identifying information which is linked or linkable to the specific individual, such as date and place of birth, mother’s maiden name, etc.
+
+Applicaster currently supports several fields which are considered PII. Morpheus, [our infrastructure for handling analytics](https://developer.applicaster.com/analytics/morpheus/morpheus.html), identifies these specific fields as PII so that they will not be sent to providers who do not accept PII. This also enables customers to filter out the delivery of PII because of regional/legal needs even to providers who can receive PII.
+Please make sure to map any PII data you send to the naming convention of the fields below and do not send any PII fields which cannot be mapped accordingly:
+* Name
 * FirstName
 * LastName
 * UserName
 * Email
 * Phone
- We split the user properties for two set, the PII and the Generic(non PII Properies).
-Personally identifiable Information (PII) is information which can be used to distinguish or trace an individual's identity alone, such as their name, social security number, biometric records, etc., or can be used to identify an individual when combined with other personal or identifying information which is linked or linkable to the specific individual, such as date and place of birth, mother’s maiden name, etc."
- * Note in the example sections for "generic" and "pii" properties, as well as a broader set of all user properties combined. We are aware that this leads to the duplication of the propeties; we are doing that to support backwards compatibility, and will contiue doing so until the SDKs which require the combined set of user properties are no longer supported, at which point we will update the documentation.
- * Note that within "pii" properties, we have a Section for SocialIDs. If you have any sort of social network login, please make sure to follow the structure there, rather then send the IDs as a separate custom values. This enables us to search for Social IDs properly and for you to easily add new social providers without a change to the structure.
- ```javascript
-var userProperties = {
-  "generic": {
-    "favorite team sport": "FC Barcelona",
-    "customer type": "paid",
-    "Custom1": "1",
-    "Custom2": "2"
-  },
-  "pii": {
-    "Name": "Neo",
-    "FirstName": "Thomas",
-    "LastName": "Anderson",
-    "Email": "t.anderson@metacortex.com",
-    "Phone": "1",
-    "custom3": "3",
-    "SocialIDs": {
-      "Facebook": {
-        "ID": "123"
-      },
-      "twitter": {
-        "ID": "123"
-      },
-      "google": {
-        "ID": "123"
-      }
-    }
-  },
-  "Name": "Neo",
-  "FirstName": "Thomas",
-  "LastName": "Anderson",
-  "Email": "t.anderson@metacortex.com",
-  "Phone": "1",
-  "Custom1": "1",
-  "Custom2": "2",
-  "custom3": "3",
-  "SocialIDs": {
-    "Facebook": {
-      "ID": "123"
-    },
-    "twitter": {
-      "ID": "123"
-    },
-    "google": {
-      "ID": "123"
-    }
-  }
-}
- js2n.Morpheus.updateUserProfile(userProperties);
-```
+* SocialIDs
+
  ### Native player
  ### Video.playNative(options)
  Launches native player with specific URL.
