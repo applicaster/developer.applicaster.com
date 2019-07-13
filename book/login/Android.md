@@ -68,23 +68,4 @@ Some login plugins need an initial startup to either:
 * Present a login gateway at app launch
 * Do an initial setup and try to silently login, update entitlements, etc.
 
-In order to implement this, a login plugin needs to implement some functions to run at the app launch and set the proper configuration in the manifest.
-
-Those functions can be found in the `ApplicationLoaderHookUpI`, which contains the following functions:
-``` java
-  /***
-     * this function is called after all the data loaded and before main activity opened.
-     * @param context generic intro activity
-     * @param listener listener to continue the application flow after execution finished.
-     */
-    void executeOnApplicationReady(Context context, HookListener listener);
-
-
-    /***
-     * this function is called after Plugins loaded, you can add logic that not related to the application data
-     * as Zapp strings or applicaster models.
-     * @param context APIntroActivity
-     * @param listener listener to continue the application flow after execution finished.
-     */
-    void executeOnStartup(Context context, HookListener listener);
-```
+For more information check the following [guide](/plugins/general-abilities/startup-hooks/android/startup-hooks-android.md).
