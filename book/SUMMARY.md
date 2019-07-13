@@ -43,7 +43,6 @@
     - [Running on device](/react-native/android/running-on-device.md)
     - [Debugging](/react-native/android/debugging.md)
     - [Single Bundle](/plugins/android/single-bundle.md)
-  - [JS2Native](/applicaster-video-platform/js2native/readme.md)
 - [Screen Plugins](/ui-builder/intro.md)
   - [API](/ui-builder/API.md)
   - [Designer Guide](/ui-builder/designer/designer.md)
