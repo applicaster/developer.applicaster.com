@@ -9,6 +9,7 @@
     - [Startup Hooks](/plugins/general-abilities/startup-hooks/startup-hooks.md)
       - [Android](/plugins/general-abilities/startup-hooks/android/startup-hooks-android.md)
       - [iOS](/plugins/general-abilities/startup-hooks/ios/startup-hooks-ios.md)
+    - [JS2Native and Events](/plugins/general-abilities/js2native/readme.md)
   - [Get Ready to Work](/dev-env/intro.md)
     - [iOS](/dev-env/iOS.md)
       - [Applicaster Zapp App Connector utilities for plugins](/dev-env/iOS/utils.md)

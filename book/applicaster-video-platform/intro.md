@@ -21,4 +21,4 @@ For more info about Authorization providers, [Click Here](/applicaster-video-pla
 
 JS2Native is a basic layer of communication all Applicaster Webviews and RN instances implement in order to bridge some basic functionality between web / RN and native.
 
-For more info about JS2Native, [Click Here](/applicaster-video-platform/js2native/readme.md).
+For more info about JS2Native, [Click Here](/plugins/general-abilities/js2native/readme.md).
