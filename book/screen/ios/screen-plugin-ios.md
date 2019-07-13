@@ -15,7 +15,7 @@ Infrastructure that enables development of standalone screen (views) plugins.
 ##### Description
 `Screen Plugins` are plugins that are presented as standalone screens, A user can trigger the launch of a screen from navigation bar, root (menu) or click on any cell inside application. These plugins can be native or react native. In this document you can find a guide that explains how to configure such a plugin. In addition, a screen plugins provide an API that gives developers to ability to customize their plugin via Zapp's UI-Builder.
 
-![ScreenPluginsGeneral.png](./Files/ScreenPluginsGeneral.png)
+![ScreenPluginsGeneral.png](/ui-builder/ios/Files/ScreenPluginsGeneral.png)
 ***
 
 <a name="general" />

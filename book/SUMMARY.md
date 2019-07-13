@@ -30,7 +30,9 @@
 # Zapp Plugins
 
 ## Zapp Plugin Types
-
+- [Screen Plugins](/screen/screen-plugin-general.md)
+  - [Android](/screen/android/screen-plugin-android.md)
+  - [iOS](/screen/ios/screen-plugin-ios.md)
 - [Advertisement](/advertisement/intro.md)
   - [iOS](/advertisement/ios/ios.md)
     - [Tutorial](/advertisement/ios/tutorial.md)
@@ -43,11 +45,9 @@
     - [Running on device](/react-native/android/running-on-device.md)
     - [Debugging](/react-native/android/debugging.md)
     - [Single Bundle](/plugins/android/single-bundle.md)
-- [Screen Plugins](/ui-builder/intro.md)
   - [API](/ui-builder/API.md)
   - [Designer Guide](/ui-builder/designer/designer.md)
   - [iOS](/ui-builder/ios/Home.md)
-  	- [Screen Plugins](/ui-builder/ios/ScreenPlugin.md)
   	- [Pre Hook Plugin](/ui-builder/ios/PreHooks-ScreenPlugin.md)
     - [Navigation Structure](/ui-builder/ios/NavigationStructure.md)
     - [Rivers](/ui-builder/ios/Rivers.md)
@@ -58,7 +58,6 @@
     - [Family Interface](/ui-builder/android/family-interface/family-interface.md)
       - [Intelligent code completion](/Families/Android/intelligent-code-completion.md)
       - [Navigation Overview](/ui-builder/android/NavigationOverView.md)
-    - [Screen Plugins](/ui-builder/android/ScreenPlugin.md)
     - [Hook Screens](/ui-builder/android/ScreenHooks.md)
   - [Components and Cell Styles](/ui-builder/components-and-cell-styles/intro.md)
     - [Video Background Cell](/ui-builder/components-and-cell-styles/cell-styles/video-background-cell.md)
