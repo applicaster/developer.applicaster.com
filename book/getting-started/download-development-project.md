@@ -34,6 +34,8 @@ The following instructions per platform will assist with changing your local pro
 
 ### iOS
 
+__Note__: before testing make sure that the project is working for you out of the box. There is no need to run pod update or pod install on this step.
+
 #### Internal developers with access to Applicaster private repositories:
 1. Update the `Podfile` to include your `podspec` local path.
 2. Run `pod install --no-repo-update` in order to point to your local pod.
@@ -49,3 +51,46 @@ If this fails to work - please contact Applicaster Dev relation team for an alte
 
 ### Android
 
+1. Download a development project from Zapp and verfiy its working on a simulator or device.
+2. Go to `app/assets/applicaster.properties` and set or add: `avoidRemotePluginConfigurationsFetching=true`.
+3. Go to `app/res/raw/plugin_configurations.json` and add this JSON object to the bottom on the JSON array: 
+
+    ```javascript
+    { 
+        "plugin": {
+            "api": {
+                "require_startup_execution": true,
+                "class_name": "com.example.exampleAdapter"
+            },
+            "author_name": "developer E-mail",
+            "manifest_version": "0.1.0",
+            "name": "name of your plugin",
+            "description": "short plugin description",
+            "type": "general",
+            "identifier": "string based identifier",
+            "ui_builder_support": false,
+            "whitelisted_account_ids": [],
+            "min_zapp_sdk": "6.5.0",
+            "react_native": true/false,
+            "screen": true/false,
+            "react_bundle_url": {}
+        }
+    }
+    ```
+
+4. Connect your plugin to the development app by adding the module in the project and app level.
+    * Go to the app `setting.gradle` file and append the plugin as new project to the app, for example:
+        ```gradle
+        include <other_values>, ':myPlugin'
+        project(':myPlugin').projectDir = new File('mainPluginFolder')
+        ```
+        __Note__: `myPlugin` is your plugin name, choose something meaningful.
+
+    * Connect the plugin the the app-level gradle file by setting the following following:
+        ```gradle
+        implementation (project(':myPlugin')) {
+            exclude group: 'com.applicaster',
+            module: 'applicaster-android-sdk'
+        }
+        ```
+5. build and test your app on a simulator or device.
