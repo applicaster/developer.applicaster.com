@@ -77,6 +77,14 @@ If this fails to work - please contact Applicaster Dev relation team for an alte
         }
     }
     ```
+    __Note__: the `class_name` has to be a meaningful name, in this example `com.example.exampleAdapter` represents the `<package-name>.<class-adapter-name>`.
+
+    __Note__: If your plugin supports react-native one set `react_native` to true otherwise set it to false.
+
+    __Note__: If your plugin is a screen-plugin set `screen` to true otherwise set it to false.
+
+
+
 
 4. Connect your plugin to the development app by adding the module in the project and app level.
     * Go to the app `setting.gradle` file and append the plugin as new project to the app, for example:
