@@ -17,7 +17,6 @@
   - [Get Ready to Work](/dev-env/intro.md)
     - [iOS](/dev-env/iOS.md)
       - [Applicaster Zapp App Connector utilities for plugins](/dev-env/iOS/utils.md)
-      - [Download iOS development project](/dev-env/iOS/download-development-project.md)
     - [Android](/dev-env/android.md)
     - [React-Native](/dev-env/react-native.md)
     - [Node.js](/dev-env/node.md)
@@ -28,6 +27,7 @@
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
     - [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
       - [Zappifest Tool](/zappifest/zappifest.md)
+  - [Download a development project](/getting-started/download-development-project.md)
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
 
 # Zapp Plugins

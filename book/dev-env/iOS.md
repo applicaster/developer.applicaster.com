@@ -103,7 +103,8 @@ There are a couple of options of starting a new plugin project:
 
 ## Next Steps
 * [Applicaster Zapp App Connector utilities for iOS plugins](/dev-env/iOS/utils.md)
-* [Download iOS development project](/dev-env/iOS/download-development-project.md)
+* [Deploy & Submit](/getting-started/deploy-and-submit.md)
+* [Download a development project](/getting-started/download-development-project.md)
 
 ## Guides per plugin type
 * [Screen Plugins](/ui-builder/ios/ScreenPlugin.md)
