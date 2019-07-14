@@ -315,11 +315,13 @@ var options = {
     providers: 'urbanairship', // or 'appoxee,urbanairship' or 'appoxee'
     tags: 'sports,news'
 };
+
 var callback = function(response) {
     if (response.isSuccess == 'true')  {
         console.log("do something on success");
     }
 }
+
 js2n.Push.registerTags(options, callback);
 ```
  ### Push.unregisterTags
