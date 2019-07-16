@@ -108,21 +108,17 @@ SessionStorage has a set function that takes in String values ONLY:
 **Saving a String**
 
 ```
-// Using default namespace
-SessionStorage.set("foo", "bar")
-
-// Using custom namespace (optional)
-SessionStorage.set("foo", "bar", "foo.bar")
+SessionStorageUtil.set("foo", "bar", "myPluginNamespace.v1")
 ```
 
 **Saving a String Array or Object**
  
 ```
 // Array
-SessionStorage.set("foo", listOf("foo", "bar").toString())
+SessionStorageUtil.set("foo", listOf("foo", "bar").toString(), "myPluginNamespace.v1")
 
 // Object
-SessionStorage.set("foo", mapOf("foo" to "bar").toString())
+SessionStorageUtil.set("foo", mapOf("foo" to "bar").toString(), "myPluginNamespace.v1")
 
 ```
 
@@ -132,11 +128,7 @@ Since `SessionStorage` saves all values as Strings, you need to parse the string
 **Getting a String**
 
 ```
-// Using default namespace
-val bar = SessionStorage.get("foo")
-
-// Using custom namespace (optional)
-val bar = SessionStorage.get("foo", "foo.bar")
+val bar = SessionStorageUtil.get("foo", "myPluginNamespace.v1")
 ```
 
 **Getting a String Array or Object**
@@ -146,19 +138,11 @@ val bar = SessionStorage.get("foo", "foo.bar")
 
 // Array
 val type = object : TypeToken<List<String>>() {}.type
-val retVal: List<String> = gson.fromJson(SessionStorage.get("foo"), type)
+val retVal: List<String> = gson.fromJson(SessionStorageUtil.get("foo", "myPluginNamespace.v1"), type)
 
 // Object
 val type = object : TypeToken<Map<String, String>>() {}.type
-val retVal: Map<String, String> = gson.fromJson(SessionStorage.get("foo"), type)
-
-// Array (with custom namespace)
-val type = object : TypeToken<List<String>>() {}.type
-val retVal: List<String> = gson.fromJson(SessionStorage.get("foo", "foo.bar"), type)
-
-// Object (with custom namespace)
-val type = object : TypeToken<Map<String, String>>() {}.type
-val retVal: Map<String, String> = gson.fromJson(SessionStorage.get("foo", "foo.bar"), type)
+val retVal: Map<String, String> = gson.fromJson(SessionStorageUtil.get("foo", "myPluginNamespace.v1"), type)
 
 ```
 
