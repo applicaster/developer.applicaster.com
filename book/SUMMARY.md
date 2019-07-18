@@ -103,7 +103,9 @@
 - [Login Plugins](/login/intro.md)
   - [iOS](/login/iOS.md)
   - [Android](/login/Android.md)
-
+- [UI component](/ui-components/ui-component-general.md)
+  - [iOS](/ui-components/ios/ui-component-ios.md)
+  - Android (Will be added soon)
 # Applicaster Video Platform
 
 ## Applicaster Video Platform
