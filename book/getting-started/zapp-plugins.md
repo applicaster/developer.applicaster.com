@@ -18,7 +18,11 @@ Open source tools, examples, and live plugins can be found in [GitHub](https://g
 
 The first step in creating a new plugin is to create the plugin project. Our recommendation is first to create the project with the most basic relevant implementation (`hello world`), then make sure it successfully builds inside Zapp before moving to the full implementation. 
 
-In the creation of your project you can use one of our [examples](https://github.com/applicaster/zapp-plugins-examples), [live open source plugins](https://github.com/topics/zapp-plugin), or [Xcode templates](https://github.com/applicaster/zapp-plugins-ios-templates). 
+In the creation of your project you can use one of following tools / code examples:
+
+- [Examples projects](https://github.com/applicaster/zapp-plugins-examples)
+- [Live open source plugins](https://github.com/topics/zapp-plugin)
+- [Xcode templates](https://github.com/applicaster/zapp-plugins-ios-templates). 
 
 **2. Publish to Zapp** 
 
@@ -28,7 +32,7 @@ Then publish the [Zapp plugin manifest](/zappifest/plugins-manifest-format.md) (
 
 **3. Build your app and download the development project**
 
-In order to enable the plugin developer to develop the plugin in the most realistic environment, we have created the *Zapp development project*. Follow [this](/getting-started/download-development-project.md) guide to build your app and generate the development project.
+In order to enable the plugin developer to develop the plugin in the most realistic environment, we have created the *Zapp development project*. Follow the guide to build your app and generate the development project, [for more details](/getting-started/download-development-project.md).
 
 **4. Finalize your plugin, test it, and publish the final version**
 
