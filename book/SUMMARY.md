@@ -14,6 +14,8 @@
     - [Screen Hook](/plugins/general-abilities/screen-hooks/screen-hooks-general.md)
       - [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
       - [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
+    - [Video Content Download](/plugins/general-abilities/video-content-download/download-general.md)
+      - [iOS](/plugins/general-abilities/video-content-download/ios/download-ios.md)
   - [Get Ready to Work](/dev-env/intro.md)
     - [iOS](/dev-env/iOS.md)
       - [Applicaster Zapp App Connector utilities for plugins](/dev-env/iOS/utils.md)
