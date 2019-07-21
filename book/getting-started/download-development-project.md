@@ -79,7 +79,7 @@ If this fails to work - please contact Applicaster Dev relation team for an alte
     ```
     __Note__: the `class_name` has to be a meaningful name, in this example `com.example.exampleAdapter` represents the `<package-name>.<class-adapter-name>`.
 
-    __Note__: If your plugin supports react-native one set `react_native` to true otherwise set it to false.
+    __Note__: If your plugin supports react-native set `react_native` to true otherwise set it to false.
 
     __Note__: If your plugin is a screen-plugin set `screen` to true otherwise set it to false.
 
