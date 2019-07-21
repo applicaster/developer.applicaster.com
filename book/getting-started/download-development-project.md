@@ -53,7 +53,7 @@ If this fails to work - please contact Applicaster Dev relation team for an alte
 
 1. Download a development project from Zapp and verfiy its working on a simulator or device.
 2. Go to `app/assets/applicaster.properties` and set or add: `avoidRemotePluginConfigurationsFetching=true`.
-3. Go to `app/res/raw/plugin_configurations.json` and add this JSON object to the bottom on the JSON array: 
+3. Go to `app/res/raw/plugin_configurations.json` and add this JSON object to the top of the JSON array file: 
 
     ```javascript
     { 
@@ -77,14 +77,13 @@ If this fails to work - please contact Applicaster Dev relation team for an alte
         }
     }
     ```
-    __Note__: the `class_name` has to be a meaningful name, in this example `com.example.exampleAdapter` represents the `<package-name>.<class-adapter-name>`.
+    __Notes__
+    * The `class_name` has to be a meaningful name, in this example `com.example.exampleAdapter` represents the `<package-name>.<class-adapter-name>`.
 
-    __Note__: If your plugin supports react-native set `react_native` to true otherwise set it to false.
+    * If your plugin supports react-native set `react_native` to true otherwise set it to false.
 
-    __Note__: If your plugin is a screen-plugin set `screen` to true otherwise set it to false.
-
-
-
+    * If your plugin is a screen-plugin set `screen` to true otherwise set it to false.
+    *  Since there is more than one startup hook plugin, it’s best to add your plugin to the first location of the plugin configuration JSON array file in order to be called first.
 
 4. Connect your plugin to the development app by adding the module in the project and app level.
     * Go to the app `setting.gradle` file and append the plugin as new project to the app, for example:
@@ -101,4 +100,6 @@ If this fails to work - please contact Applicaster Dev relation team for an alte
             module: 'applicaster-android-sdk'
         }
         ```
-5. build and test your app on a simulator or device.
+5. To be able to debug correctly, please turn off pro-guard from the app level Gradle script.
+
+6. Build and test your app on a simulator or device. Make sure you delete the app or perform a clean cache before installing the app again.
