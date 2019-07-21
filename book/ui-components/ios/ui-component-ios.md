@@ -2,6 +2,10 @@
 
 ## How to create new component
 
+The new component should be added into ComponentsSDK which is a private Applicaster github repoistory. Contact support if you don't have premissions to the repoistory.
+
+In this capter the classes, prtocols, etc. are located inside the ComponentsSDK repoistory.
+
 1. In `ZLDefines.swift` add the new type of the component under `ZLComponentTypes` enum.
 
 2. In all the func in the `ZLComponentTypes` enum add  the following helper methods for the new component:
@@ -24,7 +28,7 @@
 
 7. New component type will be added to the UIBuilder in the manifest. At that moment a Zapp server developer will add it.
 
-Note:
+*Notes*:
   * Since ZappLayoutsSDK is a wrapper, it can wrap components that already exists in the Components SDK. If you are working on an absolutely new component that does no exist in the ComponentsSDK, you should first implement it in ComponentsSDK before creating the component in ZappLayoutsSDK.
   * Each component may have specific parameters and specific rules that are not relevant for other components, like `carousel style` that is needed only for the carousel component to present page control.
   * After parsing UIBuilder API, all relevant keys and values that were added in the UIBuilder to this component will be in ZLComponentModel and can be used in the ComponentBuilder.
