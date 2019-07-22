@@ -24,7 +24,7 @@ Before you start, please do the following important steps:
 
 ### Protocol description
 
-The below table describes the `ZPPushProviderProtocol` protocol methods.
+The below describes the `ZPPushProviderProtocol` protocol methods.
 
 #### Base Parameters
 Add base parameters

@@ -57,7 +57,7 @@ Before you start, please do the following important steps:
 
 ### Interface description
 
-The below table describe the `PushContract` interface methods.
+The below describe the `PushContract` interface methods.
 
 #### Initialization 
 Initialize your push provider
