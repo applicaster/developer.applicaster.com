@@ -1,9 +1,9 @@
 # Push Provider Plugins
 
-An Applicaster push plugin is used to implement a push provider SDK.
-By wrapping the push provider logic inside a Applicaster plugin we give the ability to use it inside an Applicaster app.
+A Zapp push plugin is used to implement a push provider SDK.
+By wrapping the push provider logic inside a Zapp plugin we give the ability to use it inside an Zapp app.
 
-We support the following platforms in terms of documentation and usage: 
+Please use one of the following guides in order to develop a push plugin for the relevant platform: 
 * [iOS](push/push-ios.md)
 * [Android](push/push-android.md)
 

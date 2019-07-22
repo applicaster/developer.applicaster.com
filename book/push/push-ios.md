@@ -11,7 +11,7 @@ This chapter describes how to build a push provider plugin. What kind of prepara
 ### General Implementation
 Before you start, please do the following important steps:
 
-1. In your cocoapods files, add a dependency to `ZappPushPluginsSDK`. This SDK is mandatory dependency for your push provider plugin. The SDK is available from the public repository cocoapods source `git@github.com:applicaster/PluginsBuilderCocoaPods.git`.
+1. In your cocoapods files, add a dependency to `ZappPushPluginsSDK`. This dependency is a mandatory dependency for your push provider plugin. The dependency is available from the public repository cocoapods source `git@github.com:applicaster/PluginsBuilderCocoaPods.git`.
 2. Create a new class for you plugin adapter that inherits from ZPPushProvider.
 3. Import `ZappPushPluginsSDK` and `ZappPlugins` 
 4. Start the plugin development
