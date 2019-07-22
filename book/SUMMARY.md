@@ -105,6 +105,9 @@
 - [UI component](/ui-components/ui-component-general.md)
   - [iOS](/ui-components/ios/ui-component-ios.md)
   - Android (Will be added soon)
+- [Push Plugins](/push/push-general.md)
+  - [iOS](/push/push-ios.md)
+  - [Android](/push/push-android.md)
 # Applicaster Video Platform
 
 ## Applicaster Video Platform
