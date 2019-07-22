@@ -8,7 +8,7 @@ Additionally, the outcome enables analysts to connect the information gathered f
 
 ### How to integrate
 
-Any developer can use the JS-2-Native API to send analytics data to Morpheus, in the manner outlined in the section titled "Morpheus Integration" of the [JS-2-Native API documentation](http://developer.applicaster.com/docs/public/js2native).
+Any developer can use the JS-2-Native API to send analytics data to Morpheus, in the manner outlined in the section titled "Morpheus Integration" of the [JS-2-Native API documentation](/plugins/general-abilities/js2native/readme.md).
 
 ### Testing your integration
 
@@ -66,6 +66,6 @@ To test your work on Android:
 
 1. Integrate your web product in a Zappified Applicaster test app. Contact support at support@applicaster.com if you have questions on how to do this.
 2. Configure analytics for the test app via Zapp. You can find directions for how to configure analytics in Zapp [here](https://applicaster.zendesk.com/hc/en-us/articles/206419186).
-    * Most analytics providers (Flurry, Google Analytics, Facebook Analytics, etc.) do not enable you to send PII (Personally Identifiable Information) or profile-level user data. Applicaster will still send events to these providers. However, for user profiles, Applicaster supports [Mixpanel](https://mixpanel.com/), an analytics tool which both supports the delivery of PII data and provides engagement and remarketing tools based on this data. If you want to test the delivery of user profiles, make sure to configure a test project for Mixpanel in Zapp. 
+    * Most analytics providers (Firebase Analytics, Facebook Analytics, etc.) do not enable you to send PII (Personally Identifiable Information) or profile-level user data. Applicaster will still send events to these providers. However, for user profiles, Applicaster supports [Mixpanel](https://mixpanel.com/), an analytics tool which both supports the delivery of PII data and provides engagement and remarketing tools based on this data. If you want to test the delivery of user profiles, make sure to configure a test project for Mixpanel in Zapp. 
 3. Trigger the delivery of events or user profiles from your web-product within the test app
 4. Verify the data is appearing in the analytics providers that you configured in Zapp as desired
