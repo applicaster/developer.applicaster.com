@@ -8,4 +8,5 @@ Please use one of the following guides in order to develop a push plugin for the
 * [Android](push/push-android.md)
 
 ## Public Examples
-We have created a public Github repository plugin for [firebase](https://github.com/applicaster/zapp-push-plugin-firebase) for both iOS/Android, please refer to it while you develop your own push plugin.
+
+We have created a public Github repository plugin for [firebase](https://github.com/applicaster/zapp-push-plugin-firebase) on both iOS/Android, please refer to it while you develop your own push plugin.
