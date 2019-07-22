@@ -44,12 +44,12 @@ By tracking this event, you will be able to measure how many users are reading a
 
 ### Android:
 
-```
+``` java
   AnalyticsAgentUtil.logEvent(“Read Article”);
 ```
 
 ### iOS:
-```
+``` obj-c
   [APAnalyticsManager trackEvent:@"Read Article"];
 ```
 
@@ -62,7 +62,7 @@ Some characteristics of users should be stored as user properties[c]. This is pa
 Properties let us easily view the distribution of Event characteristics so we can answer questions such as "who is the most read author?" or "what percentage of users reading articles are registered?"
 
 ### Android:
-```
+``` java
   // Capture author info & user status  
   Map<String, String> articleParams = new HashMap<String, String>();  
   //param keys and values have to be of String type  
@@ -73,8 +73,8 @@ Properties let us easily view the distribution of Event characteristics so we ca
 ```
 
 ### iOS:
-```
-  NSDictionary \*analyticsDictionary = @{@”Author” : @”"John Q", @User Status": @"Registered"};  
+``` obj-c
+  NSDictionary *analyticsDictionary = @{@”Author” : @”"John Q", @User Status": @"Registered"};  
   [APAnalyticsManager trackEvent:@"Article Read" withParameters:analyticsDictionary];
 ```
 
@@ -84,7 +84,7 @@ A developer can also add the dimension of time to any Event that s/he tracks. Mo
 You can capture Event duration (along with the Event and its properties) with a single log following this pattern:
 
 ### Android:
-```
+``` java
   // Capture author info & user status
   Map<String, String> articleParams = new HashMap<String, String>();  
   articleParams.put("Author", "John Q");  
@@ -99,15 +99,15 @@ You can capture Event duration (along with the Event and its properties) with a 
 ```
 
 ### iOS:
-```
-  NSDictionary \*analyticsDictionary = @{@”Author” : @”"John Q", @User Status": @"Registered" };  
+``` obj-c
+  NSDictionary *analyticsDictionary = @{@”Author” : @”"John Q", @User Status": @"Registered" };  
   //setting Timed param to true creates a timed event  
   [APAnalyticsManager trackEvent:@”Article Read” Timed:YES];  
   [APAnalyticsManager trackEvent:@”Article Read” withParameters:analyticsDictionary timed:YES];
 
   // End the timed event, when the user navigates away from article  
   [APAnalyticsManager endTimedEvent:@”Article Read” withParameters:nil];  
-[APAnalyticsManager endTimedEvent:@”Article Read” withParameters:analyticsDictionary];
+  [APAnalyticsManager endTimedEvent:@”Article Read” withParameters:analyticsDictionary];
 ```
 
 ## Morpheus Analytic Properties Storage
@@ -131,7 +131,7 @@ The Morpheus Analytic Storage API enables Applicaster client developers to deliv
 ### iOS
 
 Storage is a dictionary that looks like:
-```
+``` json
   "analytics_storage" : {
   "default_event_properties": dictionary 1,
   "user_profile": dictionary 2,
@@ -141,7 +141,7 @@ Storage is a dictionary that looks like:
 ```
 
 ##### Dependencies
-```
+``` obj-c
   #import <ApplicasterSDK/APAnalyticsStorage.h>
   #import <ApplicasterSDK/APAnalytics.h>
 ```
@@ -186,7 +186,7 @@ For example:
 IOS:
 
 ```obj-c
-  APAnalyticsManager trackScreenView:@"Splash - App Loading Screen"];
+  [APAnalyticsManager trackScreenView:@"Splash - App Loading Screen"];
 ```
 
 Android:
@@ -212,23 +212,25 @@ componentsMetaData.properties
 IOS:
 
 ```obj-c
-AppDefine.json:{
-              "class": [   "screen"],
-              "rel": ["screens:ipad" ],
-              "title": "Highlights Section",
-              "properties": {
-                "analytics_screen_name": "Home - Highlights Section"
+  AppDefine.json: {
+    "class": ["screen"],
+    "rel": ["screens:ipad"],
+    "title": "Highlights Section",
+    "properties": {
+      "analytics_screen_name": "Home - Highlights Section"
+    }
+  }
 ```
 
 Android screen view tracking example:
 
 ```java
-AnalyticsAgentUtil.setScreenView(activity, “screen name”);
+  AnalyticsAgentUtil.setScreenView(activity, “screen name”);
 ```
 
 IOS screen view tracking example:
 ```obj-c
-[APAnalyticsManager trackScreenView:@"screen name"];
+  [APAnalyticsManager trackScreenView:@"screen name"];
 ```
 
 **Note:** If a screen has several tabs, and when a user changes the tab the content of the screen re-populates, this should be considered a separate screen view, with a format of X - Y - Z, building on the best practice above but where Z = the name of the tab as set in the CMS. For example, if a user is in “The Voice” with Tabs by season. Loading the screen would cause a screen view to be sent with a screen name like “Season - The Voice - Season 1”. When the user switches tabs, it would repopulate to something like “Season - The Voice - Season 2”.
