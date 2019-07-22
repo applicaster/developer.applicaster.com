@@ -1,13 +1,16 @@
 # Push plugin - Android
 
+The iOS push plugin for Zapp is based on implementing the `PushContract`.
+The protocol goes through all of the functions for initializing a push provider.
+
 ## Create a new push provider
+This chapter describes how to build a push provider plugin. What kind of preparations are necessary, which interface methods should be implemented etc.
 
 ### General Implementation
-
 Before you start, please do the following important steps:
 
 1. Create a `library` project using Android Studio.
-2. In the app level build.gradle go to the repositories section and add the Applicaster private Bintray server as follows: 
+2. At the app level build.gradle go to the repositories section and add the Applicaster private Bintray server as follows: 
 
     ```gradle
     repositories {
@@ -56,27 +59,54 @@ Before you start, please do the following important steps:
 
 The below table describe the `PushContract` interface methods.
 
-| Method | Description |
-| --- | --- |
-| registerPushProvider | Register to your push provider|
-| initPushProvider | Initialize your push provider|
-| setPluginParams | Get the plugin configuration JSON for later usage|
-| addTagToProvider | Subscribe to a push provider tags |
-| removeTagToProvider | Unsubscribe to a push provider tags |
-| getPluginType | Return the plugin type, choose `Applicaster` for now|
-| getTagList | get the push provider tag list |
+#### Initialization 
+Initialize your push provider
 
-*__Notes__:*
+```java
+void initPushProvider(Context context);
+```
 
-* The received Context is a Application Context.
+#### Registration
 
-### Useful related documentation
+Register to your push provider
+
+```java
+void registerPushProvider(Context context, String registerID);
+```
+
+#### Configuration JSON Parameters
+Get the plugin configuration JSON in a map form for later usage
+
+```java
+void setPluginParams(Map params);
+```
+#### UNSubscribe/Subscribe for Tags
+UNSubscribe/Subscribe to a push provider tags
+
+```java
+void addTagToProvider(Context context, List<String> tag, PushTagRegistrationI pushTagRegistrationListener);
+
+void removeTagToProvider(Context context, List<String> tag,PushTagRegistrationI pushTagRegistrationListener);
+```
+
+#### Tag List
+Get the push provider tag list
+
+```java
+void getTagList(Context context, PushTagLoadedI listener);
+```
+
+#### Get Plugin Type
+Return the plugin type, choose `Applicaster` for now
+```java
+PushPluginsType getPluginType();
+```
+
+*__Note__:*
+The received Context is a Application Context.
+
+## Useful related documentation
 
 * [Get ready to work](/dev-env/intro.html)
 * [Deploy and submit and plugin](/getting-started/deploy-and-submit.html)
 * [Download a development project](/getting-started/download-development-project.html)
-
-
-### Public examples
-
-We have created a public Github repository plugin for [firebase](https://github.com/applicaster/zapp-push-plugin-firebase) for both iOS/Android.
