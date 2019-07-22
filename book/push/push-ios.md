@@ -2,7 +2,7 @@
 # Push plugin - iOS
 
 The iOS push plugin for Zapp is based on implementing the `ZPPushProviderProtocol`.
-The protocol goes through all of the functions for initializing a push provider.
+The `ZPPushProviderProtocol` goes through all of the functions for initializing a push provider.
 
 ## Create a new push provider
 

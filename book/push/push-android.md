@@ -1,11 +1,11 @@
 # Push plugin - Android
 
-The iOS push plugin for Zapp is based on implementing the `PushContract`.
-The protocol goes through all of the functions for initializing a push provider.
+The Android push plugin for Zapp is based on implementing the `PushContract` interface.
+The interface goes through all of the functions for initializing a push provider.
 
 ## Create a new push provider
 
-This chapter describes how to build a push provider plugin. What kind of preparations are necessary, which interface methods should be implemented etc.
+This guide describes how to build a push provider plugin, what kind of preparations are necessary, which interface methods should be implemented etc.
 
 ### General Implementation
 
@@ -31,9 +31,9 @@ Before you start, please do the following important steps:
     ```
 
     *__Note__*
-    * You should already have a valid Bintray privileges, if this is not the case go back to [getting-started](/getting-started/zapp-plugins.html) guides and read it in depth.
+    * make sure you already have a valid Bintray privileges, if this is not the case go back to [getting-started](/getting-started/zapp-plugins.html) guides and read it in depth.
 
-3. In the app level build.gradle file add a dependency to `com.applicaster:applicaster-android-sdk` as follows:
+3. At the app level build.gradle file add a dependency to `com.applicaster:applicaster-android-sdk` as follows:
 
     ```gradle
     dependencies {
@@ -58,6 +58,7 @@ Before you start, please do the following important steps:
     import com.applicaster.plugin_manager.push_plugin.listeners.PushTagLoadedI
     import com.applicaster.plugin_manager.push_plugin.listeners.PushTagRegistrationI
     ```
+5. Start the plugin development.
 
 ### Interface description
 
