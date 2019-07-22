@@ -31,7 +31,6 @@ The below table describe the `ZPPushProviderProtocol` protocol methods.
 | getDeviceTags | Get device's tag list |
 | didRegisterForRemoteNotificationsWithDeviceToken | Register Token with push server |
  
-
 ### Useful related documentation
 
 * [Get ready to work](/dev-env/intro.html)

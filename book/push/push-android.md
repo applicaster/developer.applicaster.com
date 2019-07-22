@@ -4,10 +4,10 @@
 
 ### General Implementation
 
-Before you start please do the following important steps:
+Before you start, please do the following important steps:
 
-1. Create a `library` android studio project.
-2. In the app level build.gradle go to the repositories section add the applicaster private bintray server as follows: 
+1. Create a `library` project using Android Studio.
+2. In the app level build.gradle go to the repositories section and add the Applicaster private Bintray server as follows: 
 
     ```gradle
     repositories {
@@ -24,7 +24,11 @@ Before you start please do the following important steps:
         }
     }
     ```
-2. In the app level build.gradle file add a depedentcy to `com.applicaster:applicaster-android-sdk` as follows:
+
+    *__Note__*
+    * You should already have a valid Bintray privileges, if this is not the case go back to [getting-started](/getting-started/zapp-plugins.html) guides and read it in depth.
+    
+2. In the app level build.gradle file add a dependency to `com.applicaster:applicaster-android-sdk` as follows:
     ```gradle
     dependencies {
         // Applicaster SDK
@@ -39,7 +43,7 @@ Before you start please do the following important steps:
         implementation (applicasterSDKPath)
     }
     ```
-3. create a public class for your push provider plugin and implement the `PushContract` interface inside. In terms of class imports, the `PushContract` interface requires the following: 
+3. Create a public class for your push provider plugin and implement the `PushContract` interface inside. In terms of class imports, the `PushContract` interface requires the following:
 
     ```java
     import com.applicaster.plugin_manager.push_plugin.PushContract
@@ -50,7 +54,7 @@ Before you start please do the following important steps:
 
 ### Interface description
 
-The below table describe the `PushContract` interface mehtods.
+The below table describe the `PushContract` interface methods.
 
 | Method | Description |
 | --- | --- |
@@ -64,7 +68,7 @@ The below table describe the `PushContract` interface mehtods.
 
 *__Notes__:*
 
-* The received Context is an application Context.
+* The received Context is a Application Context.
 
 ### Useful related documentation
 
