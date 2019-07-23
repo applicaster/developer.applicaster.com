@@ -4,7 +4,7 @@ Morpheus is Applicaster’s system for collecting analytics data and delivering 
 
 Web-developers can use [JS-2-Morpheus](/analytics/mobile_web_support/mobile_web_support.md) to send analytics data from in-app web-products through Morpheus.
 
-Native client developers can use the Morpheus client-side API to deliver custom events, event properties, user properties, default properties, and screen viewes, as outlined in the documentation below.
+Native client developers can use the Morpheus client-side API to deliver custom events, event properties, user properties, default properties, and screen views, as outlined in the documentation below.
 
 Custom events and event properties are handled via the Morpheus Analytic Events Manager and user and default properties are handled via the Morpheus Analytic Properties Storage.
 
