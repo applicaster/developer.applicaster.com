@@ -128,7 +128,7 @@ Default properties are properties that you want to send along as an event proper
 
 The Morpheus Analytic Storage API enables Applicaster client developers to deliver user profile and default properties to the analytics storage container where this data is held.
 
-Please carefully read the following segment on PII vs Non PII data - and make sure to use the user properties function with the correct distribution of fields between general and personally identifiable information accordingly
+Please carefully read the following segment on PII vs generic (Non-PII data) - and make sure to use the user properties function with the correct distribution of fields between generic and personally identifiable information accordingly
 
 ##### PII data vs. Non PII data
 
