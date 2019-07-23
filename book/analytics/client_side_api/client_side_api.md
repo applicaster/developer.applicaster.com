@@ -134,7 +134,7 @@ Please carefully read the following segment on PII vs generic (Non-PII data) - a
 
 Personally identifiable Information (PII) is information which can be used to distinguish or trace an individual's identity alone, such as their name, social security number, biometric records, etc., or can be used to identify an individual when combined with other personal or identifying information which is linked or linkable to the specific individual, such as date and place of birth, mother’s maiden name, etc.
 
-Applicaster currently supports several fields which are considered PII. Morpheus, our infrastructure allowes seperating these two types of fields to different groups when setting them so that they will not be sent to providers who do not accept PII. This also enables customers to filter out the delivery of PII because of regional/legal needs even to providers who can receive PII. Please make sure to map any PII data and send it only in the PII dictionary / hash accordingly.
+Applicaster currently supports several fields which are considered PII. Morpheus, our infrastructure allows separating these two types of fields to different groups when setting them so that they will not be sent to providers who do not accept PII. This also enables customers to filter out the delivery of PII because of regional/legal needs even to providers who can receive PII. Please make sure to map any PII data and send it only in the PII dictionary / hash accordingly.
 
 A few examples for fields of these type:
 * Name
