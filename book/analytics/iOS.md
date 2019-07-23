@@ -3,11 +3,11 @@
 The iOS Analytics plugin for Zapp is based on implementing the `ZPAnalyticsProviderProtocol`.
 This protocol goes through all of the functions for creating a new provider, initializing it and dispatching events.
 
-For simplicity and uniformaty reasons - it is advised to inherit `ZPAnalyticsProvider` as it implements a lot of the overhead functions such as tracking events with completions, blacklisted events handling, presenting toasts in debug mode for the users etc.
+For simplicity and uniformaty reasons - it is advised to inherit `ZPAnalyticsProvider`, as it implements a lot of the overhead functions such as tracking events with completions, blacklisted events handling, presenting toasts in debug mode for the users, etc.
 
 In order to see a basic implementation of an analytics plugin, we suggest reviewing the [Analytics Plugin Sample Project](https://github.com/applicaster/zapp-plugins-examples/tree/master/AnalyticsPlugin/iOS) as it's a good starting point for implementing an analytics plugin.
 
-This guide will go through the basic terms and functions that need to be implemented in order to create a analytics.
+This guide will go through the basic terms and functions that need to be implemented in order to create an analytics plugin.
 
 For more info about Initial iOS Plugin Setup, [Click Here](/dev-env/iOS.md)
 
@@ -16,14 +16,14 @@ The main protocol used for Analytics plugins is `ZPAnalyticsProviderProtocol`.
 All analytics plugins must implement this protocol as it's part of what Zapp apps are expecting when initializing an analytics plugin.
 
 ### Initialization and general properties
-The following functions are used to create an analytics provider and configuring it.
-Default `ZPAnalyticsProvider` calles the configuration function from the creation function.
+The following functions are used to create a plugin for an analytics provider and to configure it.
+Default `ZPAnalyticsProvider` calls the configuration function from the creation function.
 
 ``` swift
     func createAnalyticsProvider(_ allProvidersSetting: [String:NSObject]) -> Bool
     func configureProvider() -> Bool // Not implemented by ZPAnalyticsProvider
 ```
-The create analytics provider and configure provider functions are used to create the single instances of the provider and configure it.
+The create analytics provider and configure provider functions are used to create the single instances of the provider and to configure it.
 In both cases - a `true` value presents a success and means that events can be dispatched to those providers
 
 #### Default initialization functions

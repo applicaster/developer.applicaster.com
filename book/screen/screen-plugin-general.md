@@ -5,5 +5,5 @@
 
 For more information please check the written guides for the following platforms:
 
-* [Android](/screen/android/screen-plugin-android.md)
 * [iOS](/screen/ios/screen-plugin-ios.md)
+* [Android](/screen/android/screen-plugin-android.md)
