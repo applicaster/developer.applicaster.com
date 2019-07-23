@@ -5,7 +5,7 @@ This class goes through all of the functions for creating a new provider, initia
 
 In order to see a basic implementation of an analytics plugin, we suggest reviewing the [Analytics Plugin Sample Project](https://github.com/applicaster/zapp-plugins-examples/tree/master/AnalyticsPlugin/Android) as it's a good starting point for implementing an analytics plugin.
 
-This guide will go through the basic terms and functions that need to be implemented in order to create an analytics.
+This guide will go through the basic terms and functions that need to be implemented in order to create an analytics plugin.
 
 For more info about Initial Android Plugin Setup, [Click Here](/dev-env/Android.md)
 
