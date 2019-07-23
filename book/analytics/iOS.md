@@ -7,7 +7,7 @@ For simplicity and uniformaty reasons - it is advised to inherit `ZPAnalyticsPro
 
 In order to see a basic implementation of an analytics plugin, we suggest reviewing the [Analytics Plugin Sample Project](https://github.com/applicaster/zapp-plugins-examples/tree/master/AnalyticsPlugin/iOS) as it's a good starting point for implementing an analytics plugin.
 
-This guide will go through the basic terms and functions that need to be implemented in order to create an analytics.
+This guide will go through the basic terms and functions that need to be implemented in order to create an analytics plugin.
 
 For more info about Initial iOS Plugin Setup, [Click Here](/dev-env/iOS.md)
 
