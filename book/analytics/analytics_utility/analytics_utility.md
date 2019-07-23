@@ -61,7 +61,7 @@ Once you do, if you do anything which should trigger sending one of the data typ
 
 For example, when you click on the Side Menu, you’ll see:
 
-	![alert_android_1](./alert_android_1.png)
+![alert_android_1](./alert_android_1.png)
 
 You may notice that the Data Property field does not have values. That suggests that this particular event does not include any custom properties.
 

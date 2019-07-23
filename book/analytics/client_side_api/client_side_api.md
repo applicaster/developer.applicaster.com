@@ -4,7 +4,7 @@ Morpheus is Applicaster’s system for collecting analytics data and delivering 
 
 Web-developers can use [JS-2-Morpheus](/analytics/mobile_web_support/mobile_web_support.md) to send analytics data from in-app web-products through Morpheus.
 
-Native client developers can use the Morpheus client-side API to deliver custom events, event properties, user properties, and default properties, as outlined in the documentation below.
+Native client developers can use the Morpheus client-side API to deliver custom events, event properties, user properties, default properties, and screen viewes, as outlined in the documentation below.
 
 Custom events and event properties are handled via the Morpheus Analytic Events Manager and user and default properties are handled via the Morpheus Analytic Properties Storage.
 
@@ -18,9 +18,11 @@ Custom events and event properties are handled via the Morpheus Analytic Events 
 
 ## Terminology
 
-**Custom Events** - Many analytics providers include their own events which come out of the box (i.e. App Launched, Session). Custom Events are events that are specific to our products and not to the analytics provider. "Play VOD Item" is an example of an event.
+**Custom Events** - Many analytics providers include their own events which come out of the box (i.e. App Launched, Session). Custom Events are events that are specific to our products and not to the analytics provider. "Play VOD Item" is an example of such an event.
 
 **Event Properties** - Properties are qualities or characterstics of an event. For example, the event "Play VOD Item" has a property for "Item Name", whose value might be something like "Episode 1 - A New Dawn".
+
+The terminology here can differ for different analyic providers, often named `parameters` or `dimensions`.
 
 **Default Properties** - Default Properties are qualities or characteristics that we want to send along with every event. For example "Environment" (Production, Development, QA) can be sent as a default property as it is relevant to all events.
 
@@ -126,6 +128,23 @@ Default properties are properties that you want to send along as an event proper
 
 The Morpheus Analytic Storage API enables Applicaster client developers to deliver user profile and default properties to the analytics storage container where this data is held.
 
+Please carefully read the following segment on PII vs Non PII data - and make sure to use the user properties function with the correct distribution of fields between general and personally identifiable information accordingly
+
+##### PII data vs. Non PII data
+
+Personally identifiable Information (PII) is information which can be used to distinguish or trace an individual's identity alone, such as their name, social security number, biometric records, etc., or can be used to identify an individual when combined with other personal or identifying information which is linked or linkable to the specific individual, such as date and place of birth, mother’s maiden name, etc.
+
+Applicaster currently supports several fields which are considered PII. Morpheus, our infrastructure allowes seperating these two types of fields to different groups when setting them so that they will not be sent to providers who do not accept PII. This also enables customers to filter out the delivery of PII because of regional/legal needs even to providers who can receive PII. Please make sure to map any PII data and send it only in the PII dictionary / hash accordingly.
+
+A few examples for fields of these type:
+* Name
+* First Name
+* Last Name
+* User Name
+* Email
+* Phone
+* Social IDs
+
 ## API Details
 
 ### iOS
@@ -155,7 +174,7 @@ Storage is a dictionary that looks like:
 | `- (NSDictionary \*) standardEventProperties;` | Return standard_event_properties dictionary from the storage | `[[APAnalyticsStorage sharedInstance] standardEventProperties];` |
 | `- (NSDictionary \*) userProfile;`             | Return user_profile dictionary from the storage              | `[[APAnalyticsStorage sharedInstance] userProfile];`             |
 
-If developer wants to update all providers with default properties and/or user properties and update the storage:
+If a developer wants to update all providers with default properties and/or user properties and update the storage:
 
 | Method                                                                   | Explanation                                                                                                                          | Usage                                                                        |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
@@ -256,7 +275,7 @@ Here are a few additional best practices when implementing Events:
 - Whenever possible, keep property values under 100 characters
   - Facebook App Analytics will not accept larger values and we will cut off such values at 100 characters
 - Default properties should only be for qualities that are important to answering questions about the data across all levels of behavior.
-  - Please get approval from the M&M team before putting in the time and effort to create a default property.
+  - Please get approval from the Zapp team before putting in the time and effort to create a default property.
 - For characteristics about a user which are depedent on state, time, or actions, make sure to stores these as event properties as well as user profile properties.
   - For example, if an analyst wants to understand the user flow for users registering via the SSO, being able to filter the data on the event level for wether or not the user was registered at any given point in time will help them break the behavior into 'before' and 'after' stages of the conversion point.
   - If this state is only stored in the analytic properties storage as a user property according to last status, such analysis would not be possible.
