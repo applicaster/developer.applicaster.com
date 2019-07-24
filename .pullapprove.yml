@@ -17,6 +17,10 @@ notifications:
 groups:
   code:
     reviewers:
+      users:
+      - lomudi
+      - liviur
+      - snooky23
       teams:
       - applicaster/dev-rel
     reviews:
