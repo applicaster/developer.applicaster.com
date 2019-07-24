@@ -18,21 +18,11 @@
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
     - [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
       - [Zappifest Tool](/zappifest/zappifest.md)
+    - [Using One Code Base for Multiple Plugins](book/plugins/general-abilities/multiple-types-one-repo/multiple-types-one-repo.md)
   - [Download a development project](/getting-started/download-development-project.md)
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
 
 # Zapp Plugins
-
-## Zapp Plugin Abilities
-  - [Startup Hooks](/plugins/general-abilities/startup-hooks/startup-hooks.md)
-    - [iOS](/plugins/general-abilities/startup-hooks/ios/startup-hooks-ios.md)
-    - [Android](/plugins/general-abilities/startup-hooks/android/startup-hooks-android.md)
-  - [JS2Native and Events](/plugins/general-abilities/js2native/readme.md)
-  - [Communication Between Plugins](/plugins/general-abilities/communication-between-plugins/communication-between-plugins.md)
-  - [Screen Hook](/plugins/general-abilities/screen-hooks/screen-hooks-general.md)
-    - [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
-    - [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
-  - [One Code Base for Multiple Plugins](book/plugins/general-abilities/multiple-types-one-repo/multiple-types-one-repo.md)
 
 ## Zapp Plugin Types
 - [Screen Plugins](/screen/screen-plugin-general.md)
@@ -111,6 +101,18 @@
 - [Push Plugins](/push/push-general.md)
   - [iOS](/push/push-ios.md)
   - [Android](/push/push-android.md)
+
+## Zapp Plugin Abilities
+
+- [Startup Hooks](/plugins/general-abilities/startup-hooks/startup-hooks.md)
+  - [iOS](/plugins/general-abilities/startup-hooks/ios/startup-hooks-ios.md)
+  - [Android](/plugins/general-abilities/startup-hooks/android/startup-hooks-android.md)
+- [JS2Native and Events](/plugins/general-abilities/js2native/readme.md)
+- [Communication Between Plugins](/plugins/general-abilities/communication-between-plugins/communication-between-plugins.md)
+- [Screen Hook](/plugins/general-abilities/screen-hooks/screen-hooks-general.md)
+  - [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
+  - [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
+  
 # Applicaster Video Platform
 
 ## Applicaster Video Platform
