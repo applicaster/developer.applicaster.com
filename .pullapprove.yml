@@ -17,7 +17,6 @@ notifications:
 groups:
   code:
     reviewers:
-      users:
       teams:
       - applicaster/dev-rel
     reviews:
