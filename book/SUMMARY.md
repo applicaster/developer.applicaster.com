@@ -6,14 +6,6 @@
 - [Getting Started with Zapp Plugins](/getting-started/zapp-plugins.md)
   - [Plugin types](/getting-started/plugin-types.md)
   - [Plugin abilities](/getting-started/plugin-abilities.md)
-    - [Startup Hooks](/plugins/general-abilities/startup-hooks/startup-hooks.md)
-      - [iOS](/plugins/general-abilities/startup-hooks/ios/startup-hooks-ios.md)
-      - [Android](/plugins/general-abilities/startup-hooks/android/startup-hooks-android.md)
-    - [JS2Native and Events](/plugins/general-abilities/js2native/readme.md)
-    - [Communication Between Plugins](/plugins/general-abilities/communication-between-plugins/communication-between-plugins.md)
-    - [Screen Hook](/plugins/general-abilities/screen-hooks/screen-hooks-general.md)
-      - [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
-      - [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
   - [Get Ready to Work](/dev-env/intro.md)
     - [iOS](/dev-env/iOS.md)
       - [Applicaster Zapp App Connector utilities for plugins](/dev-env/iOS/utils.md)
@@ -30,6 +22,17 @@
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
 
 # Zapp Plugins
+
+## Zapp Plugin Abilities
+  - [Startup Hooks](/plugins/general-abilities/startup-hooks/startup-hooks.md)
+    - [iOS](/plugins/general-abilities/startup-hooks/ios/startup-hooks-ios.md)
+    - [Android](/plugins/general-abilities/startup-hooks/android/startup-hooks-android.md)
+  - [JS2Native and Events](/plugins/general-abilities/js2native/readme.md)
+  - [Communication Between Plugins](/plugins/general-abilities/communication-between-plugins/communication-between-plugins.md)
+  - [Screen Hook](/plugins/general-abilities/screen-hooks/screen-hooks-general.md)
+    - [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
+    - [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
+  - [One Code Base for Multiple Plugins](book/plugins/general-abilities/multiple-types-one-repo/multiple-types-one-repo.md)
 
 ## Zapp Plugin Types
 - [Screen Plugins](/screen/screen-plugin-general.md)
