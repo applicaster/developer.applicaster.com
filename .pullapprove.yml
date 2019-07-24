@@ -19,7 +19,7 @@ groups:
   code:
     reviewers:
       teams:
-      - @applicaster/dev-rel
+      - dev-rel
     reviews:
       required: 1  
       request: 1  
