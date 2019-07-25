@@ -18,7 +18,7 @@
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
     - [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
       - [Zappifest Tool](/zappifest/zappifest.md)
-    - [Using One Code Base for Multiple Plugins](book/plugins/general-abilities/multiple-types-one-repo/multiple-types-one-repo.md)
+    - [Using One Code Base for Multiple Plugins](/plugins/general-abilities/multiple-types-one-repo/multiple-types-one-repo.md)
   - [Download a development project](/getting-started/download-development-project.md)
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
 
