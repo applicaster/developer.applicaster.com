@@ -87,7 +87,7 @@ Register userNotificationSettings with push server
 
 When push notification arrives in an iOS app,  you may want to be able to download content in response to it or edit the content before it’s shown to the user. In iOS 10 and later, Apple allows apps to do that using new Notification Service Extension.
 
-The Following steps will help you setup and add a Notification Service Extension to an app:
+The following steps will help you setup and add a Notification Service Extension to an app:
 
 1. Inside the plugin manifest JSON add an extra dependency for the `Notification Service Extension` which should be published with cocoapods. In the following example, we added support for the `UrbanAirship App Extensions` file.
 
