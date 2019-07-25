@@ -83,8 +83,70 @@ Register userNotificationSettings with push server
 @objc optional func didRegisterUserNotificationSettings(_ notificationSettings: UIUserNotificationSettings)
 ```
 
+## Rich Media Notifications
+
+When push notification arrives in an iOS app,  you may want to be able to download content in response to it or edit the content before it’s shown to the user. In iOS 10 and later, Apple allows apps to do that using new Notification Service Extension.
+
+The following steps will help you setup and add a Notification Service Extension to an app:
+
+1. Inside the plugin manifest JSON add an extra dependency for the `Notification Service Extension` which should be published with cocoapods. In the following example, we added support for the `UrbanAirship App Extensions` file.
+
+    ```javascript
+    "extra_dependencies": [
+        {
+            "NotificationServiceExtension": {
+                "ZappPushPluginUrbanAirship/UrbanAirshipAppExtensions": "'~> 7.0.0'"
+            }
+        }
+    ],
+    ```
+
+2. If the app extension is on different cocoapods dependency source than your push plugin, you will need to add the source (in a SSH format) to the `dependency_repository_url` array inside the manifest JSON.
+
+3. In the manifest `custom configuration fields` JSON array you should include the following parameters in addition to the mandatory provider key/value parameters:
+
+    ```javascript
+    "custom_configuration_fields": [
+        {
+            "type": "checkbox",
+            "key": "allow_enterprise_rich_push_notifications",
+            "default": 1
+        },
+        {
+            "type": "uploader",
+            "key": "notification_extension_provisioning_profile",
+            "tooltip_text": "Upload Notification Extension Provisioning Profile for Store builds only"
+        }
+    ]
+    ```
+
+    *__note__:* We are using the `notification_extension_provisioning_profile` file on the Zapp app relese proccess.  
+
+## Plist Addition
+
+We give that ability to add key-value parameters to app plist file. You can add new values in the plugin manifest `api.plist` section.
+
+In the following example we added three parameters to the plist:
+
+```javascript
+"api": {
+    "require_startup_execution": false,
+    "class_name": "APPushProviderUrbanAirship",
+    "modules": [
+      "ZappPushPluginUrbanAirship"
+    ],
+    "plist": {
+      "NSLocationAlwaysAndWhenInUseUsageDescription": "Your current location will be used to enable location based push notifications.",
+      "NSLocationWhenInUseUsageDescription": "Your current location will be used to enable location based push notifications.",
+      "NSLocationAlwaysUsageDescription": "Your current location will be used to enable location based push notifications."
+    }
+}
+```
+
 ## Useful related documentation
 
 * [Get ready to work](/dev-env/intro.html)
 * [Deploy and submit and plugin](/getting-started/deploy-and-submit.html)
 * [Download a development project](/getting-started/download-development-project.html)
+* [How to Enable Rich Push Notifications for Store Versions on iOS](https://applicaster.zendesk.com/hc/en-us/articles/360021701432-How-to-Enable-Rich-Push-Notifications-for-Store-Versions-on-iOS-Notification-Service-Extension-)
+* [How to Enable Rich Push Notifications for Debug Enterprise Versions on iOS](https://applicaster.zendesk.com/hc/en-us/articles/360024894431-How-to-Enable-Rich-Push-Notifications-for-Debug-Enterprise-Versions-on-iOS)
