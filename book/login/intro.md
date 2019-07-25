@@ -5,7 +5,7 @@ Login plugins are used in order to integrate the following capabilities:
 * User authentication: authenticate existing users with the backend
 * User authorization: after authenticating, make sure the user has a valid entitlement for an action
 * Offering various payment models: usually through in app purchases like subscriptions and one time purchases
-* Expose user profile within the app for various uses such as analytics
+* Expose user profile within the app for various uses such as analytics and personalization
 
 The base functionality contains the 2 following actions:
 * Upon encountering a locked item, check user compliance to a policy.
