@@ -13,8 +13,7 @@
 
 ##### Description
 `Screen Hooks` are hooks that are presented before or after loading the screens. They can be attached to a screens launched from navigation bar, root (menu) or on cell click inside application. Screen hooks can be native or react native. In this document you'll find a guide that explains how to configure such a plugin.
-
-![ScreenPluginsGeneral.png](./Files/PreHooks/preHookGeneral.png)
+![ScreenPluginsGeneral.png](/ui-builder/ios/Files/PreHooks/preHookGeneral.png)
 ***
 
 <a name="general" />
@@ -22,9 +21,9 @@
 ##### General
 
 `Hooks Plugins` can be two types.
-1. `Screen Plugin Hooks` - This types of hooks are [Screen Plugins](/ui-builder/ios/ScreenPlugin.md) that can defined and customized from Zapp's App Builder.
+1. `Screen Plugin Hooks` - This types of hooks are [Screen Plugins](../../../../screen/ios/screen-plugin-ios.md) that can defined and customized from Zapp's App Builder.
 	
-  __Note:__ These plugins must conform to [Screen Plugins](/ui-builder/ios/ScreenPlugin.md) protocol, for example Login and Storefront screens.
+  __Note:__ These plugins must conform to [Screen Plugins](../../../../screen/ios/screen-plugin-ios.md) protocol, for example Login and Storefront screens.
   
 2. `Hooks Plugin` - Plugin that does not require UI, or that the UI is controlled by the plugin itself, and should not act as screen. For example, Analytics or Advertisement plugin.
 
@@ -59,7 +58,7 @@ This method is general method that will be used to invoke `hook plugin` It will 
 __Note:__ Make sure you always pass `dataDict` as a param in `taskFinishedWithCompletion` for further hooks to use it
 
 
-```
+```swift
 @objc func executeHook(presentationIndex:NSInteger,
                            dataDict:[String:Any]?,
                            taskFinishedWithCompletion:@escaping (_ succeed:Bool,
@@ -77,14 +76,14 @@ Implement Initializer func.
 
 __Note:__ `pluginModel` and `dataSourceModel` params will be passed from the rivers.json API. These params will be used in the target screen and will be used after all hooks will finish their invocation.
 
-```
-    init?(pluginModel:ZPPluginModel,
-          dataSourceModel:NSObject?)
+```swift
+init?(pluginModel:ZPPluginModel,
+      dataSourceModel:NSObject?)
 ```
 
 ___Hooks Screen Plugin___
 
-Make sure that your `hook screen` plugin manifest indicates that it is a screen plugin - [Screen Plugin](/ui-builder/ios/ScreenPlugin.md)
+Make sure that your `hook screen` plugin manifest indicates that it is a screen plugin - [Screen Plugin](../../../../screen/ios/screen-plugin-ios.md)
 
 Implement Initializer func.
 
@@ -95,17 +94,17 @@ Implement Initializer func.
 `dataSourceModel` - Data source of your screen plugin (optional). In some cases, your screen will require dynamic data source configured by the user. If you want to allow users to launch the screen from a tap on a cell the data source of the cell (as defined in the data source entry) will be passed automatically.
 
 
-```
-    init?(pluginModel:ZPPluginModel,
-          screenModel:ZLScreenModel,
-          dataSourceModel:NSObject?)
+```swift
+init?(pluginModel:ZPPluginModel,
+      screenModel:ZLScreenModel,
+      dataSourceModel:NSObject?)
 ```
 
 `Optionals func`
 
 Getter method to determine if the plugin is a flow blocker. A flow blocker is a plugin that prevents the target screen to be presented in case of hook failure. It can be relevant in cases of `Login` plugin that should prevent the user from proceeding to the target until they enter proper password.
 
-```
+```swift
 @objc optional var isFlowBlocker:Bool { get }
 ```
 
@@ -113,13 +112,13 @@ Request `screen hook` plugin if screen that belongs to hook can be presented (op
 
 __Note:__ Make sure you implement this method if you don't want the hook to be presented every time the hook will be executed.
 
-```
+```swift
 @objc optional func requestScreenPluginPresentation(completion:@escaping (_ allowScreenPluginPresentation:Bool) -> Void)
 ```
 
 This methods will be called as notification of `screen hook` plugin in case screen was removed by user or navigation for any reason.
 
-```
+```swift
 @objc optional func hookPluginDidDisappear(viewController:UIViewController)
 ```
 
@@ -138,13 +137,13 @@ More inforamtion about [Pre hook manifest](https://github.com/applicaster/PreHoo
     ```
 3. If you want to make your hook as screen plugin add key to manifest:
     ```
-	  "screen": true,
+    "screen": true,
     ```
-    More details about [Screen Plugin](/ui-builder/ios/ScreenPlugin.md)
+    More details about [Screen Plugin](../../../../screen/ios/screen-plugin-ios.md)
 4. Upload manifest of your plugin.
 
 __Manifest Example__
-```
+```javascript
 {
   "api": {
     "require_startup_execution": false,
@@ -203,7 +202,7 @@ __Manifest Example__
 __React Native native module__
 
 RN screen hook should pass an interface to ReactNativeContext
-```
+```objective-c
 @interface RCT_EXTERN_MODULE(HookManager, Object)
 RCT_EXTERN_METHOD(hookListener(): Boolean
                  errorMessage: String
@@ -229,16 +228,16 @@ We invoke hooks in 3 places in our SDK:
 Behind the scenes when screen is trying to be presented from the screen model that was taken from the `river.json`, `GAScreenHookManager` or `CAScreenPickerBodyPrehookHelper` searching dictionary with key `hooks`
 
 __Example:__
-```
+```javascript
   "hooks": {
-            "preload_plugins": [
-                {
-                    "screen_id": "e6dca9ed-27ff-4764-94aa-818df06a39a0",
-                    "identifier": "hook_screen",
-                    "type": "general"
-                }
-            ]
+    "preload_plugins": [
+        {
+            "screen_id": "e6dca9ed-27ff-4764-94aa-818df06a39a0",
+            "identifier": "hook_screen",
+            "type": "general"
         }
+    ]
+  }
 ```
 
 `preload_plugins` - Array of hook plugins.
@@ -261,12 +260,12 @@ You can read in this section what happens with the `GAScreenHookManager` behind 
 1. The manager tries to retrieve hook plugins from the app available plugins list.
 2. The manager will try to create `pre-hook` plugins
 
-    ```
+    ```swift
     @objc optional func requestScreenPluginPresentation(completion:@escaping (_ allowScreenPluginPresentation:Bool) -> Void)
     ```
 3. The manager will try to present a screen if the hook requires it
 4. The manager will execute hook with protocol method.
-```
+```swift
 @objc func executeHook(presentationIndex:NSInteger,
                            dataDict:[String:Any]?,
                            taskFinishedWithCompletion:@escaping (_ succeed:Bool,

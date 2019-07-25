@@ -93,6 +93,8 @@ If this is not needed, feel free to remove the resources section.
 
 Please refer to our [Guide for deploying a plugin to cocoapods](/getting-started/ios-podspec.md) for instructions regarding the different options of hosting and serving the different podspec files and correctly versioning them.
 
+_NOTE: When using private pods and pod repositories - it is mandatory to use SSH - `git@github.com/<account>/<dependancy>.git` in the `s.source` field, and invite the CI github user to have access to the code. Unfortunatly HTTPS is not properly supported for this use._
+
 ## Starting a new project
 There are a couple of options of starting a new plugin project:
 * Use one of the [Applicaster examples](https://github.com/applicaster/zapp-plugins-examples/tree/master/VideoPlayer/iOS)
@@ -101,7 +103,8 @@ There are a couple of options of starting a new plugin project:
 
 ## Next Steps
 * [Applicaster Zapp App Connector utilities for iOS plugins](/dev-env/iOS/utils.md)
-* [Download iOS development project](/dev-env/iOS/download-development-project.md)
+* [Deploy & Submit](/getting-started/deploy-and-submit.md)
+* [Download a development project](/getting-started/download-development-project.md)
 
 ## Guides per plugin type
 * [Screen Plugins](/ui-builder/ios/ScreenPlugin.md)

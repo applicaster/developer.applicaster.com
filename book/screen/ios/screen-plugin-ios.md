@@ -15,7 +15,7 @@ Infrastructure that enables development of standalone screen (views) plugins.
 ##### Description
 `Screen Plugins` are plugins that are presented as standalone screens, A user can trigger the launch of a screen from navigation bar, root (menu) or click on any cell inside application. These plugins can be native or react native. In this document you can find a guide that explains how to configure such a plugin. In addition, a screen plugins provide an API that gives developers to ability to customize their plugin via Zapp's UI-Builder.
 
-![ScreenPluginsGeneral.png](./Files/ScreenPluginsGeneral.png)
+![ScreenPluginsGeneral.png](/ui-builder/ios/Files/ScreenPluginsGeneral.png)
 ***
 
 <a name="general" />
@@ -44,7 +44,7 @@ The interface provides 3 parameters to the plugin:
 After adding `screen: true` flag on Zapp manifest, you will able to see your plugin in the available screens list when adding a screen in the UI Builder.
 
 __Example:__ Contact Us or Settings Twitter Login
-![ScreenPluginsCreateScreen.png](./Files/ScreenPluginsCreateScreen.png)
+![ScreenPluginsCreateScreen.png](/ui-builder/ios/Files/ScreenPluginsCreateScreen.png)
 
 When user will select `Screen Plugins`, behind a scenes the `UI Builder` will add plugin the relevant plugin to `plugins.json` that will be sent to app during application creation process.
 
@@ -78,7 +78,7 @@ All screen plugins will be created in `GAScreenPluginGenericViewController`. `GA
 
 Screen Plugin Container will be used to add your screen plugin inside. This container will be used for native and react native screens.
 
-![ScreenPluginContainer.png](./Files/ScreenPluginContainer.png)
+![ScreenPluginContainer.png](/ui-builder/ios/Files/ScreenPluginContainer.png)
 
 The `screen plugins` can be used from the root menu or the app navigation like any other Zapp screen.
 
