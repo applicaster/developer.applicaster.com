@@ -89,9 +89,9 @@ When push notification arrives in an iOS app,  you may want to be able to downlo
 
 The following steps will help you setup and add a Notification Service Extension to an app:
 
-1. Inside the plugin manifest JSON add an extra dependency for the `Notification Service Extension` which should be published with cocoapods. In the following example, we added support for the `UrbanAirship App Extensions` file.
+1. Add an extra dependency inside the plugin manifest for the `Notification Service Extension` which should be published with cocoapods. In the following example, we added support for the `UrbanAirship App Extensions` file. Here's an example taken from the urban airship:
 
-    ```javascript
+    ```json
     "extra_dependencies": [
         {
             "NotificationServiceExtension": {
@@ -101,11 +101,11 @@ The following steps will help you setup and add a Notification Service Extension
     ],
     ```
 
-2. If the app extension is on different cocoapods dependency source than your push plugin, you will need to add the source (in a SSH format) to the `dependency_repository_url` array inside the manifest JSON.
+    *__Note:__* If the app extension's pod spec is included in a separate specs repository, please add it to the `dependency_repository_url` array inside the manifest JSON.
 
-3. In the manifest `custom configuration fields` JSON array you should include the following parameters in addition to the mandatory provider key/value parameters:
+2. The following keys must be added to the manifest's `custom_configuration_fields` as shown below:
 
-    ```javascript
+    ```json
     "custom_configuration_fields": [
         {
             "type": "checkbox",
@@ -128,7 +128,7 @@ We give that ability to add key-value parameters to app plist file. You can add 
 
 In the following example we added three parameters to the plist:
 
-```javascript
+```json
 "api": {
     "require_startup_execution": false,
     "class_name": "APPushProviderUrbanAirship",
