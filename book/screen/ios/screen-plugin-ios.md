@@ -44,7 +44,7 @@ The interface provides 3 parameters to the plugin:
 After adding `screen: true` flag on Zapp manifest, you will able to see your plugin in the available screens list when adding a screen in the UI Builder.
 
 __Example:__ Contact Us or Settings Twitter Login
-![ScreenPluginsCreateScreen.png](./Files/ScreenPluginsCreateScreen.png)
+![ScreenPluginsCreateScreen.png](/ui-builder/ios/Files/ScreenPluginsCreateScreen.png)
 
 When user will select `Screen Plugins`, behind a scenes the `UI Builder` will add plugin the relevant plugin to `plugins.json` that will be sent to app during application creation process.
 
@@ -78,7 +78,7 @@ All screen plugins will be created in `GAScreenPluginGenericViewController`. `GA
 
 Screen Plugin Container will be used to add your screen plugin inside. This container will be used for native and react native screens.
 
-![ScreenPluginContainer.png](./Files/ScreenPluginContainer.png)
+![ScreenPluginContainer.png](/ui-builder/ios/Files/ScreenPluginContainer.png)
 
 The `screen plugins` can be used from the root menu or the app navigation like any other Zapp screen.
 

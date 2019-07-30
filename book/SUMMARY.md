@@ -6,16 +6,6 @@
 - [Getting Started with Zapp Plugins](/getting-started/zapp-plugins.md)
   - [Plugin types](/getting-started/plugin-types.md)
   - [Plugin abilities](/getting-started/plugin-abilities.md)
-    - [Startup Hooks](/plugins/general-abilities/startup-hooks/startup-hooks.md)
-      - [Android](/plugins/general-abilities/startup-hooks/android/startup-hooks-android.md)
-      - [iOS](/plugins/general-abilities/startup-hooks/ios/startup-hooks-ios.md)
-    - [JS2Native and Events](/plugins/general-abilities/js2native/readme.md)
-    - [Communication Between Plugins](/plugins/general-abilities/communication-between-plugins/communication-between-plugins.md)
-    - [Screen Hook](/plugins/general-abilities/screen-hooks/screen-hooks-general.md)
-      - [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
-      - [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
-    - [Video Content Download](/plugins/general-abilities/video-content-download/video-content-download-general.md)
-      - [iOS](/plugins/general-abilities/video-content-download/ios/video-content-download-ios.md)
   - [Get Ready to Work](/dev-env/intro.md)
     - [iOS](/dev-env/iOS.md)
       - [Applicaster Zapp App Connector utilities for plugins](/dev-env/iOS/utils.md)
@@ -28,6 +18,7 @@
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
     - [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
       - [Zappifest Tool](/zappifest/zappifest.md)
+    - [Using One Code Base for Multiple Plugins](/plugins/general-abilities/multiple-types-one-repo/multiple-types-one-repo.md)
   - [Download a development project](/getting-started/download-development-project.md)
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
 
@@ -35,8 +26,8 @@
 
 ## Zapp Plugin Types
 - [Screen Plugins](/screen/screen-plugin-general.md)
-  - [Android](/screen/android/screen-plugin-android.md)
   - [iOS](/screen/ios/screen-plugin-ios.md)
+  - [Android](/screen/android/screen-plugin-android.md)
 - [Advertisement](/advertisement/intro.md)
   - [iOS](/advertisement/ios/ios.md)
     - [Tutorial](/advertisement/ios/tutorial.md)
@@ -89,11 +80,11 @@
   - [Android](/ui-builder/android/RootMenuPlugins.md)
   - [Design](/navigations/designer/Desgining_Menu.md)
 - [Analytics plugins](/analytics/overview.md)
+  - [iOS](/analytics/iOS.md)
+  - [Android](/analytics/android.md)
   - [Morpheus](/analytics/morpheus/morpheus.md)
-  - [Client Side API](/analytics/client_side_api/client_side_api.md)
+  - [Adding New Analytics Events](/analytics/client_side_api/client_side_api.md)
   - [Mobile Web Support](/analytics/mobile_web_support/mobile_web_support.md)
-  - [Developing Analytics Plugins](/analytics/developing_analytics_plugins/developing_analytics_plugins.md)
-  - [Using Analytics Plugins for Integration Apps](/analytics/plugins_integration_apps/plugins_integration_apps.md)
   - [Analytics Utility](/analytics/analytics_utility/analytics_utility.md)
 - [Player plugins](/player/intro.md)
   - [iOS](/player/iOS.md)
@@ -107,6 +98,22 @@
 - [UI component](/ui-components/ui-component-general.md)
   - [iOS](/ui-components/ios/ui-component-ios.md)
   - Android (Will be added soon)
+- [Push Plugins](/push/push-general.md)
+  - [iOS](/push/push-ios.md)
+  - [Android](/push/push-android.md)
+
+## Zapp Plugin Abilities
+
+- [Startup Hooks](/plugins/general-abilities/startup-hooks/startup-hooks.md)
+  - [iOS](/plugins/general-abilities/startup-hooks/ios/startup-hooks-ios.md)
+  - [Android](/plugins/general-abilities/startup-hooks/android/startup-hooks-android.md)
+- [JS2Native and Events](/plugins/general-abilities/js2native/readme.md)
+- [Communication Between Plugins](/plugins/general-abilities/communication-between-plugins/communication-between-plugins.md)
+- [Screen Hook](/plugins/general-abilities/screen-hooks/screen-hooks-general.md)
+  - [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
+  - [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
+- [Video Content Download](/plugins/general-abilities/video-content-download/video-content-download-general.md)
+  - [iOS](/plugins/general-abilities/video-content-download/ios/video-content-download-ios.md)
 # Applicaster Video Platform
 
 ## Applicaster Video Platform

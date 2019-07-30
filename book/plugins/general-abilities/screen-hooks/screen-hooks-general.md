@@ -16,5 +16,5 @@
 2. `Hooks Plugin` - Plugin that does not require UI, or that the UI is controlled by the plugin itself, and should not act as screen. For example, Analytics or Advertisement plugin.
 
 For more information check the following guides:
-* [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
 * [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
+* [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)

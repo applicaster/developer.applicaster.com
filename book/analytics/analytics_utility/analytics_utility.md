@@ -4,9 +4,6 @@
 
 Applicaster provides utilities for the development and testing of analytics functionality. All data handled by [Morpheus](/analytics/morpheus/morpheus.md), the analytics manager, can be viewed in the logs of the console for whatever platform you are working on. Additionally, data that is delivered to analytics providers will appear in an alert when using Applicaster Debug Mode. 
 
-This feature is supported from Zapp SDKs 4.15.9 (Android) and 4.3.8 (iOS), and above.
-
-
 ## Using Alerts: Viewing delivered data within the app
 
 Analytics data that is delivered to third party analytic providers are sent through Morpheus pipelines. Any data that is delivered can be viewed while in Debug Mode within the app directly, via alerts. These alerts will show:
@@ -21,21 +18,7 @@ Analytics data that is delivered to third party analytic providers are sent thro
 * Properties
 	* When the Data Type is Event, this will list an array of associated custom properties and their values
 
-When testing events, you can check against the catalogue of events documented [here](http://developer.applicaster.com/products-list?docType=Analytics).
-
-#### Android
-
-Download the app in debug mode. When you launch the app an alert will appear, asking if you want to receive notifications on analytics data delivered. If you hit yes, you'll be able to use the utility within the app directly.
-
-Once you do, if you do anything which should trigger sending one of the data types, an alert describing the data that was delivered (and to where) should appear.
-
-For example, when you click on the Side Menu, you’ll see:
-
-	![alert_android_1](./alert_android_1.png)
-
-You may notice that the Data Property field does not have values. That suggests that this particular event does not include any custom properties.
-
-#### iOS
+## iOS
 
 1. Download your app in debug mode
 2. Go to your app in Settings and turn on “Show Analytic Utility Alerts" within the *Applicaster Member Mode* section:
@@ -44,10 +27,45 @@ You may notice that the Data Property field does not have values. That suggests 
 4. You should now be able to see the alerts:
 	![alert_ios_5](./alert_ios_5.png)
 
+### Viewing Logs in the Console
 
-## Viewing Logs in the Console
+If you do not have XCode, you’ll need to download it. You can do so by clicking the button to download it [here](https://developer.apple.com/xcode/).
 
-#### Android
+1. Go to Zapp and download whatever app you want to test. Our example app is named “Analytics”:
+	* Click the download button here:
+	![logs_ios_1a](./logs_ios_1a.png)
+	* Then click on Debug Version:
+	![logs_ios_1b](./logs_ios_1b.png)
+	* You can now download the app via the QR code in the corner:
+	![logs_ios_1c](./logs_ios_1c.png)
+2. Connect your device to a computer
+3. Open XCode
+4. Go to Window → Devices:
+	![logs_ios_4](./logs_ios_4.png)
+5. Select your device:
+	![logs_ios_5](./logs_ios_5.png)
+6. You should now be able to see the run logs:
+	![logs_ios_6](./logs_ios_6.png)
+7. If you don’t see the logs, tap on the arrow here:
+	![logs_ios_7](./logs_ios_7.png)
+8. Start the app. Now the logs should reflect what is going on in the app.
+9. You can filter for analytics related activity.
+To do so, tap on the console panel and hit cmd+f for the search line. Enter there “Analytics Log:”
+10. Now, all activity related analytics handling will appear in the monitor, which you can use to assist with your debugging, QA, and development testing.
+
+## Android
+
+Download the app in debug mode. When you launch the app an alert will appear, asking if you want to receive notifications on analytics data delivered. If you hit yes, you'll be able to use the utility within the app directly.
+
+Once you do, if you do anything which should trigger sending one of the data types, an alert describing the data that was delivered (and to where) should appear.
+
+For example, when you click on the Side Menu, you’ll see:
+
+![alert_android_1](./alert_android_1.png)
+
+You may notice that the Data Property field does not have values. That suggests that this particular event does not include any custom properties.
+
+### Viewing Logs in the Console
 
 If you do not have Android Studio, you’ll need to download it. You can do so [here](https://developer.android.com/studio/index.html).
 
@@ -82,29 +100,3 @@ If you do not have Android Studio, you’ll need to download it. You can do so [
 16. Type “APDebugUtil” into the Search field and hit enter:
 	![logs_android_16](./logs_android_16.png)
 17. Now, all activity related analytics handling will appear in the monitor, which you can use to assist with your debugging, QA, and development testing.
-
-#### iOS
-
-If you do not have XCode, you’ll need to download it. You can do so by clicking the button to download it [here](https://developer.apple.com/xcode/).
-
-1. Go to Zapp and download whatever app you want to test. Our example app is named “Analytics”:
-	* Click the download button here:
-	![logs_ios_1a](./logs_ios_1a.png)
-	* Then click on Debug Version:
-	![logs_ios_1b](./logs_ios_1b.png)
-	* You can now download the app via the QR code in the corner:
-	![logs_ios_1c](./logs_ios_1c.png)
-2. Connect your device to a computer
-3. Open XCode
-4. Go to Window → Devices:
-	![logs_ios_4](./logs_ios_4.png)
-5. Select your device:
-	![logs_ios_5](./logs_ios_5.png)
-6. You should now be able to see the run logs:
-	![logs_ios_6](./logs_ios_6.png)
-7. If you don’t see the logs, tap on the arrow here:
-	![logs_ios_7](./logs_ios_7.png)
-8. Start the app. Now the logs should reflect what is going on in the app.
-9. You can filter for analytics related activity.
-To do so, tap on the console panel and hit cmd+f for the search line. Enter there “Analytics Log:”
-10. Now, all activity related analytics handling will appear in the monitor, which you can use to assist with your debugging, QA, and development testing.
