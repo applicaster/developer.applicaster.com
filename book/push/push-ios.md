@@ -89,7 +89,9 @@ When push notification arrives in an iOS app,  you may want to be able to downlo
 
 The following steps will help you setup and add a Notification Service Extension to an app:
 
-1. Add an extra dependency inside the plugin manifest for the `Notification Service Extension` which should be published with cocoapods. In the following example, we added support for the `UrbanAirship App Extensions` file. Here's an example taken from the urban airship:
+1. Add an extra dependency inside the plugin manifest for the `Notification Service Extension` which should be published with cocoapods. In the following example, we added support for the `UrbanAirship App Extensions` file.
+
+    Here's an example taken from the urban airship:
 
     ```json
     "extra_dependencies": [
