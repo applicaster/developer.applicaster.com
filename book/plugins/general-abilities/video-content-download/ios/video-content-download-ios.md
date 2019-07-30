@@ -18,9 +18,11 @@
 
 ##### General
 
-Downloading can be performed for 2 types of videos `m3u8`, `mp4`
-- being made by implementing the downloading mechanism introduced in iOS 10 (and improved in iOS 11)
-- downloaded item (including its model, images, video) stored on device and can be presented on dedicated screen, played locally, or removed.
+Zapp apps supports downloads of one of the following video container types:
+* Mpeg video files for progressive download - `mp4` video type
+* HLS using m3u8 manifests - `m3u8` video type
+	- The offline video caching is implemented using Apple's built in video caching capabilities introduces in iOS 10.
+	- The Downloaded item (including the relevant metadata such as the Atom model and images) is stored on the device and will be used for presenting in a downloaded content dedicated screen, played locally, and marking it for deletion.
 ***
 
 <a name="protocol-implementation" />
@@ -143,12 +145,12 @@ Downloads plugin should be added to the app.
 ##### Download button states images
 
 Download button states default images are defined in Zapp SDK and attached to the app.
-- Mandatory button states images:
+* Mandatory button states images:
 	- Start Download Button image - `generic_item_download_btn`
 	- Completed Download Button image - `generic_item_downloaded_btn`
 	- Error Download Button image - `generic_item_error_btn`
 
-- Optional button states images:
+* Optional button states images:
 	- Pending Download Button image - `generic_item_pending_download`.
 		- If image added to the SDK, it will appear on pending download state, otherwise the default native animation will appear.
 	- Downloading - sequence of 10 images creating an animation of item downloading - `generic_item_downloading_btn_XX` (XX is 0-9).
