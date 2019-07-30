@@ -10,7 +10,8 @@
 <a name="description" />
 
 ##### Description
-*Video Content download* ability uses the provided atom entry video url to download and save the content locally for offline playback.
+Given a screen plugin with Atom Item or items, the following guide goes through how to implement and customize a download button as a part of a Screen, component or cell.
+
 ***
 
 <a name="general" />
