@@ -4,14 +4,13 @@
 1. <a href="#description">Description</a>
 2. <a href="#general">General</a>
 3. <a href="#implementation">Download button protocol implementation</a>
-4. <a href="#download-button-states-images3
-">Download button states images</a>
+4. <a href="#download-button-states-images3">Download button states images</a>
 * * *
 
 <a name="description" />
 
 ##### Description
-`Video Content download` ability uses the provided atom entry video url to download and save the content locally for offline playback.
+*Video Content download* ability uses the provided atom entry video url to download and save the content locally for offline playback.
 ***
 
 <a name="general" />
@@ -33,7 +32,7 @@ Downloads plugin should be added to the app.
 ##### Protocol implementation
 1. Implement `ZPDownloadButtonDelegate` to prepare the download button appearance on your screen.
 
-	- `func downloadButton(_ downloadButton: ZPDownloadButtonProtocol, stateChanged state: ZPDownloadButtonState)`
+	* `func downloadButton(_ downloadButton: ZPDownloadButtonProtocol, stateChanged state: ZPDownloadButtonState)`
 		- fired on download button state change, usually no action is required on this function.
 
 		- implementation example:
@@ -53,7 +52,7 @@ Downloads plugin should be added to the app.
 		}
 		```
 
-	- `func downloadButton(_ downloadButton: ZPDownloadButtonProtocol, tappedWithState state: ZPDownloadButtonState)`
+	* `func downloadButton(_ downloadButton: ZPDownloadButtonProtocol, tappedWithState state: ZPDownloadButtonState)`
 		- fired on download button click, to implement the action on each one of the download button states.
 
 		- implementation example:
@@ -91,15 +90,15 @@ Downloads plugin should be added to the app.
 	  }
 		```
 
-	- `func downloadStateChangeNotificationName() -> String?`
+	* `func downloadStateChangeNotificationName() -> String?`
 		- Defines the unique StateChange notification name for download item based on item identifier
 			- example: "AssetDownloadStateChanged"+identifier.md5()
 
-	- `func downloadingProgressChangeNotificationName() -> String?`
+	* `func downloadingProgressChangeNotificationName() -> String?`
 		- Defines the unique ProgressChange notification name for download item based on item identifier
 			- example: "AssetDownloadProgressChanged"+identifier.md5()
 
-	- `func downloadButtonCustomImagesSuffix() -> String?`
+	* `func downloadButtonCustomImagesSuffix() -> String?`
 		- Defines the custom images suffix for download button download states images.
 		There are base sdk images for download button different states (explained in images section), custom suffix will be added to the image name lookup.
 		example:
@@ -145,12 +144,12 @@ Downloads plugin should be added to the app.
 ##### Download button states images
 
 Download button states default images are defined in Zapp SDK and attached to the app.
-* Mandatory button states images:
+* *Mandatory* button states images:
 	- Start Download Button image - `generic_item_download_btn`
 	- Completed Download Button image - `generic_item_downloaded_btn`
 	- Error Download Button image - `generic_item_error_btn`
 
-* Optional button states images:
+* *Optional* button states images:
 	- Pending Download Button image - `generic_item_pending_download`.
 		- If image added to the SDK, it will appear on pending download state, otherwise the default native animation will appear.
 	- Downloading - sequence of 10 images creating an animation of item downloading - `generic_item_downloading_btn_XX` (XX is 0-9).
