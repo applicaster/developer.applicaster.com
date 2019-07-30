@@ -3,8 +3,9 @@
 
 1. <a href="#description">Description</a>
 2. <a href="#general">General</a>
-3. <a href="#implementation">Download button protocol implementation</a>
-4. <a href="#download-button-states-images3">Download button states images</a>
+2. <a href="#direct-api-calls">Direct API calls</a>
+3. <a href="#protocol-implementation">Download button protocol implementation</a>
+4. <a href="#download-button-states-images">Download button states images</a>
 * * *
 
 <a name="description" />
@@ -23,14 +24,29 @@ Zapp apps supports downloads of one of the following video container types:
 * HLS using m3u8 manifests - `m3u8` video type
 	- The offline video caching is implemented using Apple's built in video caching capabilities introduces in iOS 10.
 	- The Downloaded item (including the relevant metadata such as the Atom model and images) is stored on the device and will be used for presenting in a downloaded content dedicated screen, played locally, and marking it for deletion.
-***
 
-<a name="protocol-implementation" />
+***
 
 ##### Pre-condition
 Downloads plugin should be added to the app.
 
-##### Protocol implementation
+<a name="direct-api-calls" />
+
+##### Direct API calls
+Direct API calls can be made thru the ZappAppConnector to interact with the download process for the given downloadable item (model implementing ZPDownloadableItemProtocol protocol)
+* Start download
+	- ZAAppConnector.sharedInstance().hqmeDelegate?.download(item)
+* Cancel downloading item
+	- ZAAppConnector.sharedInstance().hqmeDelegate?.cancelDownloading(item)
+* Get item current download state
+	- ZAAppConnector.sharedInstance().hqmeDelegate?.getItemOfflineState(forItem: item)
+		- ZPHqmeItemOfflineState has 3 states: `notExists`, `downloadInProgress`, `downloaded`
+* Get item playable AVURLAsset - if downloaded, it will return AVURLAsset with local path, otherwise the AVURLAsset with original remote url.
+	- ZAAppConnector.sharedInstance().hqmeDelegate?.getAvUrlAsset(forItem: item)
+
+<a name="protocol-implementation" />
+
+##### Download button protocol implementation
 1. Implement `ZPDownloadButtonDelegate` to prepare the download button appearance on your screen.
 
 	* `func downloadButton(_ downloadButton: ZPDownloadButtonProtocol, stateChanged state: ZPDownloadButtonState)`
@@ -111,7 +127,7 @@ Downloads plugin should be added to the app.
 
 ***
 
-<a name="images" />
+<a name="download-button-states-images" />
 
 ##### Download button states images
 
