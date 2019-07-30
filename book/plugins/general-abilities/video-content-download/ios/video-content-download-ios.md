@@ -106,37 +106,8 @@ Downloads plugin should be added to the app.
 			 - item download progress image `generic_item_downloading_btn_1` (value with custom suffix XYZ `generic_item_downloading_btnXYZ_1`)
 
 2. Create a download button container on screen.
+3. Add download button to the container.
 
-3. Add download button to the container
-
-	- implementation example:
-
-	```swift
-	let downloadButton = ZAAppConnector.sharedInstance().hqmeDelegate?.createDownloadButton(withDelegate: self, size: downloadButtonContainer.bounds.size) {
-	if let button = downloadButton as? UIView {
-	    downloadButtonContainer.isHidden = false
-	    downloadButtonContainer.removeAllSubviews()
-	    downloadButtonContainer.addSubview(button)
-	    button.translatesAutoresizingMaskIntoConstraints = false
-	    let views = ["button": button]
-	    downloadButtonContainer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[button]|", options: .alignAllCenterX, metrics: nil, views: views))
-	    downloadButtonContainer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[button]|", options: .alignAllCenterX, metrics: nil, views: views))
-
-			//update download button state according to the item offline state
-	    if let itemOfflineState = ZAAppConnector.sharedInstance().hqmeDelegate?.getItemOfflineState(forItem: item) {
-	        switch itemOfflineState {
-	            case .downloaded:
-	                downloadButton.downloadStateChange(to: .downloaded)
-	                break
-	            case .downloadInProgress:
-	                downloadButton.downloadStateChange(to: .downloading)
-	                break
-	            default:
-	                break
-	        }
-	    }
-	}
-	```
 ***
 
 <a name="images" />
