@@ -9,7 +9,7 @@
         * [Default Player](/quick-brick/tvOS/Plugins/Video/DefaultPlayer/DefaultPlayer.md)
     * [Player Dependent](/quick-brick/tvOS/Plugins/PlayerDependents/intro.md)
     	* [Plugin creation guide](/quick-brick/tvOS/Plugins/PlayerDependents/DependentPluginsHowCreate.md)
-	    * [GoogleIMA](/quick-brick/tvOS/Plugins/Video/PlayerDependents/VideoAds/GoogleIMA/GoogleIMA.md)
+	    * [GoogleIMA](/quick-brick/tvOS/Plugins/PlayerDependents/VideoAds/GoogleIMA/GoogleIMA.md)
 * [Environment](/quick-brick/tvOS/Environment/intro.md)
     * [Apple TV Debug](/quick-brick/tvOS/Environment/DebugBuildIntegration.md)
     * [Apple TV Release](/quick-brick/tvOS/Environment/ReleaseBuildIntegration.md)
