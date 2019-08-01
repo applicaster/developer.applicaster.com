@@ -8,4 +8,4 @@
     * [Default Player](/quick-brick/tvOS/Plugins/Video/DefaultPlayer/DefaultPlayer.md)
 * [Player Dependent](/quick-brick/tvOS/Plugins/PlayerDependents/intro.md)
     * [Plugin creation guide](/quick-brick/tvOS/Plugins/PlayerDependents/DependentPluginsHowCreate.md)
-    * [GoogleIMA](/quick-brick/tvOS/Plugins/Video/PlayerDependents/VideoAds/GoogleIMA/GoogleIMA.md)
+    * [GoogleIMA](/quick-brick/tvOS/Plugins/PlayerDependents/VideoAds/GoogleIMA/GoogleIMA.md)
