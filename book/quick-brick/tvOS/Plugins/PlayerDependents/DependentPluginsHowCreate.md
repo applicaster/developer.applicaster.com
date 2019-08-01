@@ -16,7 +16,7 @@ Add the following import:`import ZappPlugins`
 Please review the following [Example Project](https://github.com/applicaster/DefaultPlayer-tvOS) to see a fully implemented video player plugin example.
 
 1. Create new repo and project in Xcode
-2. Make sure that you are using `Cocoapods` `1.5.7`.
+2. Make sure that you are using `Cocoapods` `1.7.5`.
 3. Use the following template as a base of the Podfile and add any additional required dependancies.
 
 ###### Example:
