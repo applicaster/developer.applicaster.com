@@ -27,7 +27,7 @@ Pick up your your app version ids and save them for later.
 
 ### Prepare your QuickBrick workspace (when contributing on the main repository)
 
-First of all, clone [the Zapp-React-Native repo](https://github.com/applicaster/zapp-react-native), and run `yarn setup` to automatically install all dependencies.
+First of all, clone [the QuickBrick repo](https://github.com/applicaster/QuickBrick), and run `yarn setup` to automatically install all dependencies.
 Then run the following process inside the cloned repo :
 
 ```
