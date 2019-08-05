@@ -11,7 +11,7 @@ QuickBrick open beta is provided as-is, in its current state, and its current fe
 
 ### Contributing
 
-If you want to contribute to the main QuickBrick repository, simply create a pull request on the [Zapp-React-Native](https://github.com/applicaster/zapp-react-native) repo. Your PR will be reviewed by the QuickBrick team. If approved, a version will automatically be generated and made available from Zapp.
+If you want to contribute to the main QuickBrick repository, simply create a pull request on the [QuickBrick](https://github.com/applicaster/QuickBrick) repo. Your PR will be reviewed by the QuickBrick team. If approved, a version will automatically be generated and made available from Zapp.
 
 ### Plugins
 
