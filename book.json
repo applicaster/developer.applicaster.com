@@ -11,7 +11,7 @@
   "pluginsConfig": {
     "theme-gestalt": {
       "logo": "/icons/applicaster.png",
-      "favicon": "/icons/favicon.png",
+      "favicon": "/icons/favicon.ico",
       "baseUrl": null,
       "excludeDefaultStyles": true,
       "doNotHideChildrenChapters": false
