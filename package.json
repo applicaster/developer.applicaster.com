@@ -22,8 +22,10 @@
   },
   "scripts": {
     "build": "node ./node_modules/gitbook-cli/bin/gitbook.js build",
-    "start": "node app.js",
-    "heroku-postbuild": "echo 'Building again to include SUMMARY.md' && npm run build"
+    "heroku-postbuild": "echo 'Building again to include SUMMARY.md' && npm run build",
+    "serve:debug": "node ./node_modules/gitbook-cli/bin/gitbook.js serve",
+    "serve:production": "node app.js",
+    "start": "npm run serve:debug"
   },
   "repository": {
     "type": "git",
