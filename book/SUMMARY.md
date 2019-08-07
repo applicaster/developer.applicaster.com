@@ -155,3 +155,4 @@
   - [Components](/quick-brick/Api/Ui-components.md)
   - [Utilities](/quick-brick/Api/Utils.md)
 - [Plugin migration guide](/quick-brick/migration-guide.md)
+- [Using Cell Styles Builder](/quick-brick/cell-styles-builder/layouts-with-cell-builder-plugins.md)
