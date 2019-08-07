@@ -1,13 +1,23 @@
 # Layouts with cell styles builder & cell builder plugins
 
-### Supported platforms[^1]
+1. <a href="#purpose">Purpose</a>
+1. <a href="#supported-platforms1">Supported platforms</a>
+1. <a href="#contributing">Contributing</a>
+1. <a href="#ui-builder">UI Builder</a>
+
+## Purpose
+Allow the user to create and use his own set of stylized cells using the "Cell Style Builder" and plugins of type `cell_builder`, in the _layout_ level. This plugin type is comprised of two parts:
+1. The configuration in the manifest, which exposes the configurable parts of the cell.
+1. The implementation in the client side for drawing the cell (in react-native / react-native-web).
+
+## Supported platforms[^1]
 - [x] tvOS
 - [x] Samsung TV / DOM
 - [ ] Android TV
 
-### Contributing
+## Contributing
 
-The primary repo for cell builder plugins is [applicaster/demo-cell-builder-plugin](https://github.com/applicaster/demo-cell-builder-plugin). Please use it as a reference[^2] when creating a new plugin of the `cell_builder` type (clone, change manifest etc.). It is _highly recommended_ to follow this peculiar project structure, shown in details in the [plugin guide in Quickbrick](https://github.com/applicaster/QuickBrick/blob/master/DOCS/plugin-setup.md)
+The primary repo for cell builder plugins is [applicaster/demo-cell-builder-plugin](https://github.com/applicaster/demo-cell-builder-plugin). Please use it as a reference[^2] when creating a new plugin of the `cell_builder` type (clone, change manifest etc.). It is _highly recommended_ to follow this particular project structure, shown in details in the [plugin guide in Quickbrick](https://github.com/applicaster/QuickBrick/blob/master/DOCS/plugin-setup.md)
 
 ## UI Builder
 
