@@ -2,8 +2,15 @@
 
 iOS plugins can be written with Swift or Objective C.
 
-To be able to write iOS native plugins, you will need to make sure you are setting your iOS environment to:
+To be able to write iOS native plugins, you will need to make sure you are setting your iOS environment to match the correct Zapp SDK
 
+For working with Zapp iOS SDK 12.0 and up please use:
+* Xcode version 10.2.1
+* Swift version `5.0`
+* Make sure that your plugin is `bitcode enable`
+* Install [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) version `1.7.5`
+
+For older Zapp iOS SDK versions please use:
 * Xcode version 10.1
 * Swift version `4.2`
 * Make sure that your plugin is `bitcode enable`
@@ -26,7 +33,7 @@ install! 'cocoapods', :deterministic_uuids => false
 
 source 'git@github.com:applicaster/CocoaPods.git'
 source 'git@github.com:applicaster/PluginsBuilderCocoaPods.git'
-source 'git@github.com:CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
 
 def shared_pods
   pod 'ZappPlugins'
@@ -47,6 +54,7 @@ end
 ```
 
 This Podfile references the podspec and will create a structure where the plugin code is imported like a real project as a development pod.
+*Note:* The example above uses Swift 4.2. Please choose 4.2 or 5.0 according to the Zapp SDK version you are using for development as mentioned at the top of this document.
 
 ### Podspec example
 Here is a simple example for a podspec for a sample plugin:
