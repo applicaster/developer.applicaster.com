@@ -17,15 +17,14 @@ Apple TV 4th Generation or later using tvOS 11.0 or higher
 Please review the following [Example Project](https://github.com/applicaster/DefaultPlayer-tvOS) to see a fully implemented video player plugin example.
 
 1. Create new repo and project in Xcode
-2. Make sure that you are using `Cocoapods``1.5.3`.
-3. Use the following template as a base of the Podfile and add any additional required dependancies.
+2. Use the following template as a base of the Podfile and add any additional required dependancies.
 ```
     platform :tvos, '10.0'
     use_frameworks!
 
     source 'git@github.com:applicaster/CocoaPods.git'
     source 'git@github.com:applicaster/CocoaPods-Private.git'
-    source 'git@github.com:CocoaPods/Specs.git'
+    source 'https://cdn.cocoapods.org/'
 
     target MyVideoPlayer' do
       pod 'ZappPlugins'
@@ -69,10 +68,10 @@ Please review the following [Example Project](https://github.com/applicaster/Def
     end
 ```
 
-4. Run `pod update` in terminal to retrieve all cocoapods dependencies and create `xcworkspace`
-5. Open the generated Xcode workspace and create the new plugin class.
-6. Create `ReactNative` folder in your project.
-7. Inside this folder create file that will be used as module and add there following code changing naming that relevant for your plugin. Also can be added aditional implamentation
+3. Run `pod update` in terminal to retrieve all cocoapods dependencies and create `xcworkspace`
+4. Open the generated Xcode workspace and create the new plugin class.
+5. Create `ReactNative` folder in your project.
+6. Inside this folder create file that will be used as module and add there following code changing naming that relevant for your plugin. Also can be added aditional implamentation
     ```
     import Foundation
     import React
@@ -102,7 +101,7 @@ Please review the following [Example Project](https://github.com/applicaster/Def
         }
     }
     ```
-8. In same folder create `.m` file on Objective C to export react native methods to your plugin. Use following code as a template. Export more properties if you need
+7. In same folder create `.m` file on Objective C to export react native methods to your plugin. Use following code as a template. Export more properties if you need
     ```
     #import <React/RCTBridgeModule.h>
     #import <React/RCTBridge.h>
@@ -129,9 +128,9 @@ Please review the following [Example Project](https://github.com/applicaster/Def
     @end
 ```
 
-9. Implement the specific code for your player plugin.
-10. Make sure to connect it with exported React native properties
-11. Add unit tests
+8. Implement the specific code for your player plugin.
+9. Make sure to connect it with exported React native properties
+10. Add unit tests
 
 ##### Plugin preperation.
 
