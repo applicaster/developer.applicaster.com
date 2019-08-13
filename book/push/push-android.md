@@ -117,6 +117,10 @@ PushPluginsType getPluginType();
 *__Note__:*
 The received Context is a Application Context.
 
+## Rich Media Notifications
+
+On Android, you can create a custom notification using [NotificationCompat](https://developer.android.com/reference/android/support/v4/app/NotificationCompat) or a 3rd party push provider SDK solution. The implementation should be written within the plugin logic.
+
 ## Useful related documentation
 
 * [Get ready to work](/dev-env/intro.html)
