@@ -22,7 +22,7 @@
   - [Download a development project](/getting-started/download-development-project.md)
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
 - [What's New](/whats_new/whats_new.md)
-  - [Swift 5.0 Migration](/whats_new/aug-18/swift-5.0-migration.md)
+  - [Migrating your plugin to Swift 5.0 and Zapp-iOS v12](/whats_new/aug-18/swift-5.0-migration.md)
 
 # Zapp Plugins
 
