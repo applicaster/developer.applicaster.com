@@ -19,7 +19,7 @@ Your React Native plugins need to be built and published to NPM for selected ver
 
 
 #### Migrate your plugins
-In order to make Single Bundle aggregator work please make sure all your react native plugins has been migrated and published to npm as following [Plugins Migration](/react-native/plugins-migration.md) instructions advice.
+In order to make Single Bundle aggregator work please make sure all your react native plugins has been migrated and published to npm as following [Migration Guide](../../quick-brick/migration-guide.md) instructions advice.
 
 ### RUNNING LOCAL SERVER FOR SINGLE BUNDLE
 
