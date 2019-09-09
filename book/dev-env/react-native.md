@@ -9,5 +9,5 @@ Some of our projects are using [Typescript](https://www.typescriptlang.org/). Al
 All plugins must use the same react & react-native version. You will get warnings in your project when an update will be needed.
 Currently, we are relying on these versions :
 
-- react@16.0.0
-- react-native@0.50.4
+- react@16.8.3
+- react-native@0.59.10
