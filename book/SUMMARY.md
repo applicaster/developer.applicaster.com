@@ -158,3 +158,4 @@
   - [Utilities](/quick-brick/Api/Utils.md)
 - [Plugin migration guide](/quick-brick/migration-guide.md)
 - [Using Cell Styles Builder](/quick-brick/cell-styles-builder/layouts-with-cell-builder-plugins.md)
+- [Focus manager on TV platforms](/quick-brick/focus-manager/focus-manager.md)
