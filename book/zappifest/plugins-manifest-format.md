@@ -232,7 +232,7 @@ Field Key                         | Description
 **rules**                         | An optional section the defines plugin rules configuration. Read more [here](#custom-configuration-sections).
 **data**                          | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
 **advertising**                   | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
-**localizations**						  | An optional section the defines plugin localizations configuration, the languages is taken from app family configured languages. All the fields types in this section is textarea, and there is no need to mention field type in the manifest.  Read more [here](#custom-configuration-sections)
+**localizations**						  | An optional section the defines plugin localizations configuration, the languages is taken from app family configured languages. All the fields types in this section are `textarea`, and there is no need to mention field type in the manifest.  Read more [here](#custom-configuration-sections)
 **preload**                   | An optional boolean key, that defines if plugin can be hooked (loaded), before the screen loads
 
 <a name="extra-dependencies"></a>
