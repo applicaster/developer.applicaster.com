@@ -77,6 +77,20 @@ Choose from the current types of plugins. If it does not fit, choose to place it
 1. Describe its caveats, and/or out of scope features - specifically if there’s a core feature in your plugin that is not supported or will be supported in the future. (not mandatory).
 1. Use Markdown for the About.
 
+#### Configuration Documentation
+
+1. Part of the about text.
+1. Add the steps how to configure and customize the plugin (Mandatory). Please add screenshots to the explanation. 
+1. What are the analytics events & properties that are tracked?  You can also link to an external doc.
+1. Don’t forget to include steps that are required (if required) in other platforms (such AP2 CMS or any other 3rd party platform).
+1. If there are any differences between platforms, please indicate it.
+1. If the document is long, upload it to Zendesk and add the url in this field, or use Markdown to present the documentation in this section.
+
+#### Developer Documentation
+
+1. Part of the about text.
+1. Add the public link to the developer documentation when required, or alternatively use Markdown to present the documentation in this section. e.g.: how to create the feed for the plugin, what are the objects of an article plugin. The link could either be on github or in the 3rd party site that the plugin is integrating.
+
 ### Preview <a name="preview"></a>
 
 <img src="./images/Preview.png" width="500" />
@@ -89,23 +103,6 @@ Choose from the current types of plugins. If it does not fit, choose to place it
     1. Optional: Use the following color code in your preview files:
   <img src="./images/Palette_sml.png" width="400" />
 
-### Guide
-
-<img src="./images/Guide.png" width="500" />
-
-#### Configuration Documentation
-
-1. Update the field [guide]
-1. Add the steps how to configure and customize the plugin (Mandatory). Please add screenshots to the explanation. 
-1. What are the analytics events & properties that are tracked?  You can also link to an external doc.
-1. Don’t forget to include steps that are required (if required) in other platforms (such AP2 CMS or any other 3rd party platform).
-1. If there are any differences between platforms, please indicate it.
-1. If the document is long, upload it to Zendesk and add the url in this field, or use Markdown to present the documentation in this section.
-
-#### Developer Documentation
-
-1. Update the field [guide]
-1. Add the public link to the developer documentation when required, or alternatively use Markdown to present the documentation in this section. e.g.: how to create the feed for the plugin, what are the objects of an article plugin. The link could either be on github or in the 3rd party site that the plugin is integrating.
 
 ## Plugin Configurations
 Some Plugins have a vast configuration, and others a short one. Please follow the following guidelines when adding configuration keys. 
