@@ -19,3 +19,7 @@ Zapp Plugins provide the main way to expand the capabilities of an app by integr
 Zapp Plugins enables adding native / react native features and integrations.
 
 In order to learn more about what is a Zapp Plugin and how to develop one, please start from [**Getting Started with Zapp Plugins**](/getting-started/zapp-plugins.md).
+
+## Contact us & Help-desk
+
+For any question or request, you are welcome to contact us by [opening a ticket](https://applicaster.atlassian.net/servicedesk/customer/portal/2) or by [email](mailto:dev-rel@applicaster.com).
