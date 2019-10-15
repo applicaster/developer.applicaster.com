@@ -23,6 +23,7 @@
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
 - [What's New](/whats_new/whats_new.md)
   - [Migrating your plugin to Swift 5.0 and Zapp-iOS v12](/whats_new/aug-18/swift-5.0-migration.md)
+- [Contact Us & Help Desk](/contact_us/help_desk.md)
 
 # Zapp Plugins
 
