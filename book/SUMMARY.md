@@ -105,7 +105,7 @@
   - [iOS](/push/push-ios.md)
   - [Android](/push/push-android.md)
 - [Error Monitoring Plugins](/error-monitoring/error-monitoring-general.md)
-  - iOS (Will be added soon)
+  - [iOS](/error-monitoring/error-monitoring-ios.md)
   - [Android](/error-monitoring/error-monitoring-android.md)
 
 ## Zapp Plugin Abilities
