@@ -104,8 +104,8 @@
 - [Push Plugins](/push/push-general.md)
   - [iOS](/push/push-ios.md)
   - [Android](/push/push-android.md)
-- [Crashlog Plugins](/crashlog/crashlog-general.md)
-  - [iOS](/crashlog/crashlog-ios.md)
+- [Error Monitoring Plugins](/error-monitoring/error-monitoring-general.md)
+  - [iOS](/error-monitoring/error-monitoring-ios.md)
 ## Zapp Plugin Abilities
 
 - [Startup Hooks](/plugins/general-abilities/startup-hooks/startup-hooks.md)
