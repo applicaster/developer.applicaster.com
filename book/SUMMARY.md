@@ -21,6 +21,9 @@
     - [Using One Code Base for Multiple Plugins](/plugins/general-abilities/multiple-types-one-repo/multiple-types-one-repo.md)
   - [Download a development project](/getting-started/download-development-project.md)
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
+- [What's New](/whats_new/whats_new.md)
+  - [Migrating your plugin to Swift 5.0 and Zapp-iOS v12](/whats_new/aug-18/swift-5.0-migration.md)
+- [Contact Us & Help Desk](/contact_us/help_desk.md)
 
 # Zapp Plugins
 
@@ -157,3 +160,4 @@
   - [Utilities](/quick-brick/Api/Utils.md)
 - [Plugin migration guide](/quick-brick/migration-guide.md)
 - [Using Cell Styles Builder](/quick-brick/cell-styles-builder/layouts-with-cell-builder-plugins.md)
+- [Focus manager on TV platforms](/quick-brick/focus-manager/focus-manager.md)
