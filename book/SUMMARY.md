@@ -104,7 +104,8 @@
 - [Push Plugins](/push/push-general.md)
   - [iOS](/push/push-ios.md)
   - [Android](/push/push-android.md)
-
+- [Crashlog Plugins](/crashlog/crashlog-general.md)
+  - [iOS](/crashlog/crashlog-ios.md)
 ## Zapp Plugin Abilities
 
 - [Startup Hooks](/plugins/general-abilities/startup-hooks/startup-hooks.md)
@@ -115,7 +116,7 @@
 - [Screen Hook](/plugins/general-abilities/screen-hooks/screen-hooks-general.md)
   - [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
   - [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
-  
+
 # Applicaster Video Platform
 
 ## Applicaster Video Platform
