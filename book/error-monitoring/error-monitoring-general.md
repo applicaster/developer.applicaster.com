@@ -11,6 +11,10 @@ The base functionality contains the following actions:
 - Application activation on startup
 - Generation of a crash log every time your app crashes on a real device or in a device simulator
 
+Min supported version:
+- Android: 4.1.1  
+- iOS: 12.2.0
+
 Please use one of the following guides in order to develop a Error Monitoring plugin for the relevant platform:
 - [iOS](/error-monitoring/error-monitoring-ios.md)
 - [Android](/error-monitoring/error-monitoring-android.md)
