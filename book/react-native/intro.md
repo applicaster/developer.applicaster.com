@@ -6,6 +6,7 @@ If you want to learn more about React Native, don't hesitate to visit the offici
 This section will include all the necessary information for you to get started using React Native within Applicaster.
 
 #### Table of content:
+* [React Native Starter Project](/react-native/starter-project.md)
 * [Android React Native](/react-native/android/android.md)
     * [Running on device](/react-native/android/running-on-device.md)
     * [Debugging](/react-native/android/debugging.md)
