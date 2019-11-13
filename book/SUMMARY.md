@@ -39,7 +39,7 @@
     - [Tutorial](/advertisement/android/tutorial.md)
     - [API](/advertisement/android/api.md)
 - [React Native](/react-native/intro.md)
-- [React Native Starter Project](/react-native/starter-project.md)
+  - [React Native Starter Project](/react-native/starter-project.md)
   - [Android](/react-native/android/android.md)
     - [Running on device](/react-native/android/running-on-device.md)
     - [Debugging](/react-native/android/debugging.md)
