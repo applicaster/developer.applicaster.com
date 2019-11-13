@@ -106,6 +106,9 @@
 - [Push Plugins](/push/push-general.md)
   - [iOS](/push/push-ios.md)
   - [Android](/push/push-android.md)
+- [Error Monitoring Plugins](/error-monitoring/error-monitoring-general.md)
+  - [iOS](/error-monitoring/error-monitoring-ios.md)
+  - [Android](/error-monitoring/error-monitoring-android.md)
 
 ## Zapp Plugin Abilities
 
@@ -117,7 +120,7 @@
 - [Screen Hook](/plugins/general-abilities/screen-hooks/screen-hooks-general.md)
   - [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
   - [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
-  
+
 # Applicaster Video Platform
 
 ## Applicaster Video Platform
