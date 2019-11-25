@@ -24,6 +24,7 @@
 - [What's New](whats_new/whats_new.md)
   - [Migrating your plugin to Swift 5.1 with Zapp-iOS SDK v13.0](whats_new/20191124-swift-5.1-migration.md)
   - [Update repository structure in Zapp-iOS SDK v13.0](whats_new/20191120-update-zapp-ios-repository-structure.md)
+  - [Get ready for Zapp Android SDK 11.2.0](20191112-get-ready-for-zapp-android-11.2.0.md)
   - [Migrating your plugin to Swift 5.0 with Zapp-iOS SDK v12.0](whats_new/20190818-swift-5.0-migration.md)
 - [Contact Us & Help Desk](/contact_us/help_desk.md)
 

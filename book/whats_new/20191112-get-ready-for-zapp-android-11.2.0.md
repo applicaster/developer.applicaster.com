@@ -1,4 +1,4 @@
-# Get ready for Zapp Android SDK 11.2.0 stable
+# Get ready for Zapp Android SDK 11.2.0 Stable
 
 This article will go through recent changes in Zapp Android SDK 11.2.0 and up. For the full SDK 11.2.0 changelog go [here](https://github.com/applicaster/Zapp-Android/blob/master/CHANGELOG.md).
 
