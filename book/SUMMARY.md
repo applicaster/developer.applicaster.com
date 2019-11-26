@@ -21,9 +21,10 @@
     - [Using One Code Base for Multiple Plugins](/plugins/general-abilities/multiple-types-one-repo/multiple-types-one-repo.md)
   - [Download a development project](/getting-started/download-development-project.md)
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
-- [What's New](/whats_new/whats_new.md)
-  - [Migrating your plugin to Swift 5.0 and Zapp-iOS v12](/whats_new/20190818-swift-5.0-migration.md)
-  - [Update to Zapp-iOS repository structure](/whats_new/20191120-update-zapp-ios-repository-structure.md)
+- [What's New](whats_new/whats_new.md)
+  - [Migrating your plugin to Swift 5.1 with Zapp-iOS SDK v13.0](whats_new/20191124-swift-5.1-migration.md)
+  - [Update repository structure in Zapp-iOS SDK v13.0](whats_new/20191120-update-zapp-ios-repository-structure.md)
+  - [Migrating your plugin to Swift 5.0 with Zapp-iOS SDK v12.0](whats_new/20190818-swift-5.0-migration.md)
 - [Contact Us & Help Desk](/contact_us/help_desk.md)
 
 # Zapp Plugins
