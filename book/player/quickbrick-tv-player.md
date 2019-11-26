@@ -8,7 +8,7 @@ In order to have a working environment for your plugin, you will need several th
 
 - A repository for your plugin code.
 - Tooling to create the Quick-Brick react-native entry point, so you can start the React-Native server locally.
-- Native source code for the app you are working with, for that you can use the [Downloaded development project](/getting-started/download-development-project.md).
+- Native source code for the app you are working with, for that you can use the [downloaded development project](/getting-started/download-development-project.md).
 
 ## Specific requirements
 
@@ -16,7 +16,7 @@ Because the Quick-Brick app is built with react-native, and react-native is stil
 
 ## Anatomy of a QuickBrick player plugin
 
-The main export of your player plugin should simply be a view, extending UIView on iOS, and FrameLayout on android.
+The main export of your player plugin should simply be a view, extending `UIView` on **tvOS**, and `FrameLayout` on **AndroidTV/FireTV**.
 
 Your view must have the following properties below.
 
@@ -55,7 +55,7 @@ class PlayerComponent extends React.Component {
 
 The properties typed below as functions are callbacks which need to be invoked with the described payload when the relevant events are triggered.
 
-On tvOS, things are pretty straightforward. The functions from the javascript are received as `RCTBubblingEventBlock`, and can be invoked as a function, with a dictionary as argument.
+On **tvOS**, things are pretty straightforward. The functions from the javascript are received as `RCTBubblingEventBlock`, and can be invoked as a function, with a dictionary as argument.
 
 ```swift
 
@@ -108,7 +108,7 @@ On tvOS, things are pretty straightforward. The functions from the javascript ar
 
 ```
 
-On Android, things are a bit more complicated. What happens practically is you fire events, and the corresponding javascript functions are invoked when this happens. The payload sent with the event is a `WritableMap` from the React library, and is received as a plain javascript object on the javascript side. Fortunately, we've created an interface which lets you directly invoke these javascript functions from the native code. You simply need to implement the `QuickBrickPlayer` interface on your player view class, and fire the events when relevant, by using the functions accessible from the interface.
+On **AndroidTV** and **FireTV**, things are a bit more complicated. What happens practically is you fire events, and the corresponding javascript functions are invoked when this happens. The payload sent with the event is a `WritableMap` from the React library, and is received as a plain javascript object on the javascript side. Fortunately, we've created an interface which lets you directly invoke these javascript functions from the native code. You simply need to implement the `QuickBrickPlayer` interface on your player view class, and fire the events when relevant, by using the functions accessible from the interface.
 
 ```kotlin
 

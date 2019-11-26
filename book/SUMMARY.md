@@ -80,6 +80,7 @@
 - [Player plugins](/player/intro.md)
   - [iOS](/player/iOS.md)
   - [Android](/player/Android.md)
+  - [TV Quick-Brick based platforms](/player/quickbrick-tv-player.md)
   - [Supporting Ads in Datasources](/player/ads-in-datasource.md)
   - [Text Tracks](/player/text-tracks-from-dsp.md)
   - [Player Analytics](/player/player-analytics.md)
