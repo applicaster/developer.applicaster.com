@@ -1,24 +1,26 @@
 # Player Plugin
 
-This document explains how to create a player plugin for the Quick Brick framework.
+This document explains how to create a player plugin for the Quick-Brick framework.
 
 ## Create your plugin project
 
 In order to have a working environment for your plugin, you will need several things :
 
-- a repository for your plugin code
-- tooling to create the Quick Brick react-native entry point, so you can start the React-Native server locally
-- Native source code for the app you are working with.
+- A repository for your plugin code.
+- Tooling to create the Quick-Brick react-native entry point, so you can start the React-Native server locally.
+- Native source code for the app you are working with, for that you can use the [Downloaded development project](/getting-started/download-development-project.md).
 
 ## Specific requirements
 
-because The Quick Brick app is built with react-native, and react-native is still implemented in objective-C on iOS, it is important that the main player view class and all the properties declared below are annotated with `@objc` and declared as public
+Because the Quick-Brick app is built with react-native, and react-native is still implemented in objective-C on iOS, it is important that the main player view class and all the properties declared below are annotated with `@objc` and declared as public.
 
 ## Anatomy of a QuickBrick player plugin
 
-Simply put, the main export of your player plugin should simply be a view, extending UIView on iOS, and FrameLayout on android.
+The main export of your player plugin should simply be a view, extending UIView on iOS, and FrameLayout on android.
 
-your view must have the following properties below. Everytime the react-native code is setting or changing a property in the react-native component, it invokes the setter function of the relevant property. Depending on the value of that property, you can trigger whatever action is required on the native side (play / pause, mute / unmute, seek, etc...)
+Your view must have the following properties below.
+
+Everytime the react-native code is setting or changing a property in the react-native component, it invokes the setter function of the relevant property. Depending on the value of that property, you can trigger whatever action is required on the native side (play / pause, mute / unmute, seek, etc...)
 
 Typically, the javascript front end will look something like this (there are more props and component methods, but this is just an example)
 
@@ -53,7 +55,7 @@ class PlayerComponent extends React.Component {
 
 The properties typed below as functions are callbacks which need to be invoked with the described payload when the relevant events are triggered.
 
-On iOS & tvOS, things are pretty straightforward. The functions from the javascript are received as `RCTBubblingEventBlock`, and can be invoked as a function, with a dictionary as argument
+On tvOS, things are pretty straightforward. The functions from the javascript are received as `RCTBubblingEventBlock`, and can be invoked as a function, with a dictionary as argument.
 
 ```swift
 
@@ -106,7 +108,7 @@ On iOS & tvOS, things are pretty straightforward. The functions from the javascr
 
 ```
 
-on Android, things are a bit more complicated. What happens practically is you fire events, and the corresponding javascript functions are invoked when this happens. The payload sent with the event is a `WritableMap` from the React library, and is received as a plain javascript object on the javascript side. Fortunately, we've created an interface which lets you directly invoke these javascript functions from the native code. You simply need to implement the `QuickBrickPlayer` interface on your player view class, and fire the events when relevant, by using the functions accessible from the interface
+On Android, things are a bit more complicated. What happens practically is you fire events, and the corresponding javascript functions are invoked when this happens. The payload sent with the event is a `WritableMap` from the React library, and is received as a plain javascript object on the javascript side. Fortunately, we've created an interface which lets you directly invoke these javascript functions from the native code. You simply need to implement the `QuickBrickPlayer` interface on your player view class, and fire the events when relevant, by using the functions accessible from the interface.
 
 ```kotlin
 
@@ -142,12 +144,11 @@ class MyPlayerView(context: Context): FrameLayout(context), QuickBrickPlayer {
   }
 
 }
-
 ```
 
 ## Properties
 
-Required:
+### Required
 
 - src: { uri: string }
 
@@ -287,7 +288,7 @@ Required:
 
   should be invoked when the playback rate of the video changes
 
-optional:
+### optional
 
 - resizeMode: String
 
