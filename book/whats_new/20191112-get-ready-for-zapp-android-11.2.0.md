@@ -3,6 +3,7 @@
 This article will go through recent changes in Zapp Android SDK 11.2.0 and up. For the full SDK 11.2.0 changelog go [here](https://github.com/applicaster/Zapp-Android/blob/master/CHANGELOG.md).
 
 ## Main Changes
+
 - Upgrade Gradle Wrapper to 4.6 - for more information check the official gradle [release notes](https://docs.gradle.org/4.6/release-notes.html).
 
 - Upgrade Kotlin version to 1.2.51 - for more information check [jetbrains](https://plugins.jetbrains.com/plugin/6954-kotlin/update/47480) notes.
@@ -13,3 +14,9 @@ This article will go through recent changes in Zapp Android SDK 11.2.0 and up. F
 
 - Minimum Android OS supported: 4.4.x
 - React Native version: 0.59.10
+
+## Modules dependencies
+
+Please use these modules dependencies to support Zapp Android SDK 11.2.0 in plugin development:
+- applicaster-android-sdk - 4.2.0
+- zappRoot-android - 5.1.2
