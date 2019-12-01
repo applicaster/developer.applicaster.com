@@ -7,9 +7,7 @@ This document explains how to create a player plugin for the Quick-Brick framewo
 In order to have a working environment for your plugin, you will need several things:
 
 - A repository for your plugin code.
-- Tooling to create the Quick-Brick react-native entry point, so you can start the React-Native server locally (it is not mandatory, unless you want to work on the UI part of the app).
 - Native source code for the app you are working with, for that you can use the [downloaded development project](/getting-started/download-development-project.md).
-- Please use [quickbrick-player-plugin-starter]() project as your starting point.
 
 ## Specific requirements
 
