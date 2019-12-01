@@ -232,8 +232,35 @@ Field Key                         | Description
 **rules**                         | An optional section the defines plugin rules configuration. Read more [here](#custom-configuration-sections).
 **data**                          | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
 **advertising**                   | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
-**localizations**						  | An optional section the defines plugin localizations configuration, the languages is taken from app family configured languages. All the fields types in this section are `textarea`, and there is no need to mention field type in the manifest.  Read more [here](#custom-configuration-sections)
 **preload**                   | An optional boolean key, that defines if plugin can be hooked (loaded), before the screen loads
+**localizations**						  | This section defines plugin localizations configuration, the languages is taken from app family configured languages. All the fields types in this section are `textarea`, and there is no need to mention field type in the manifest.  Read more [here](#custom-configuration-sections)
+
+<a name=localizations"></a>
+##### Localizations Example
+
+```
+"localizations": {
+    "fields": [
+      {
+        "key": "screen_title_text",
+        "label": "Screen Title",
+        "tooltip":  "some text",
+        "initial_value": "With initial value"
+      },
+      {
+        "key": "restore_password",
+        "label": "Restore Password",
+        "tooltip":  "some text"
+      },
+      {
+        "key": "logout_test",
+        "label": "Logout Text",
+        "tooltip":  "some text"
+      }
+    ]
+  },
+
+```
 
 <a name="extra-dependencies"></a>
 ##### Extra Dependencies Example
