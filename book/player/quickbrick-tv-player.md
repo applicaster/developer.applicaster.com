@@ -15,7 +15,7 @@ Because the Quick-Brick app is built with react-native, and react-native is stil
 
 ## Anatomy of a QuickBrick player plugin
 
-The main export of your player plugin should simply be a view, extending `UIView` on **tvOS**, and `FrameLayout` on **AndroidTV/FireTV**.
+Your player plugin should simply be a view, extending `UIView` on **tvOS**, and `FrameLayout` on **AndroidTV/FireTV**.
 
 Your view must have the following properties below.
 
