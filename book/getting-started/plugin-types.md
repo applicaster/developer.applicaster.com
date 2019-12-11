@@ -78,4 +78,7 @@ For more info about Player Plugins, [Click Here](/player/intro.md).
 ### Push providers
 Push provider plugins are implementations of push notifications services.
 
+### Error Monitoring providers
+Error Monitoring provider plugins are implementations of error monitoring services.
+
 [Plugin abilities](/getting-started/plugin-abilities.md)
