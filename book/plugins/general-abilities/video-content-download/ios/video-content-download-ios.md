@@ -33,89 +33,87 @@ Downloads plugin should be added to the app.
 <a name="direct-api-calls" />
 
 ##### Direct API calls
-Direct API calls can be made thru the ZappAppConnector to interact with the download process for the given downloadable item (model implementing ZPDownloadableItemProtocol protocol)
+Direct API calls can be made thru the ZappAppConnector to interact with the download process for the given downloadable item (model implementing ZPHqmeSupportingItemProtocol protocol)
 * Start download
-	- ZAAppConnector.sharedInstance().hqmeDelegate?.download(item)
+	- ZAAppConnector.sharedInstance().hqmeDelegate?.startProcess(for: model)
 * Cancel downloading item
-	- ZAAppConnector.sharedInstance().hqmeDelegate?.cancelDownloading(item)
+	- ZAAppConnector.sharedInstance().hqmeDelegate?.cancelProcess(for: model)
 * Get item current download state
-	- ZAAppConnector.sharedInstance().hqmeDelegate?.getItemOfflineState(forItem: item)
-		- ZPHqmeItemOfflineState has 3 states: `notExists`, `downloadInProgress`, `downloaded`
+	- ZAAppConnector.sharedInstance().hqmeDelegate?.getState(for: item)
+		- ZPHqmeItemState has 3 states: `notExists`, `inProgress`, `completed`
 * Get item playable AVURLAsset - if downloaded, it will return AVURLAsset with local path, otherwise the AVURLAsset with original remote url.
 	- ZAAppConnector.sharedInstance().hqmeDelegate?.getAvUrlAsset(forItem: item)
 
 <a name="protocol-implementation" />
 
 ##### Download button protocol implementation
-1. Implement `ZPDownloadButtonDelegate` to prepare the download button appearance on your screen.
+1. Implement `ZPDownloadButtonDelegate` to prepare the download button appearance on your screen (cell).
 
-	* `func downloadButton(_ downloadButton: ZPDownloadButtonProtocol, stateChanged state: ZPDownloadButtonState)`
+	* `func hqmeButton(_ button: ZPHqmeButtonProtocol, stateChanged state: ZPHqmeButtonState)`
 		- fired on download button state change, usually no action is required on this function.
 
 		- implementation example:
 		```swift
-		public func downloadButton(_ downloadButton: ZPDownloadButtonProtocol, stateChanged state: ZPDownloadButtonState) {
-				guard let model = self.componentDataSourceModel as? ZPDownloadableItemProtocol else {
-						return
-				}
+		public func hqmeButton(_ button: ZPHqmeButtonProtocol, stateChanged state: ZPHqmeButtonState) {
+		        guard let model = self.componentDataSourceModel as? ZPHqmeSupportingItemProtocol else {
+		            return
+		        }
 
-				switch state {
-						case .error:
-								//as an example, cancel downloading if error received
-								ZAAppConnector.sharedInstance().hqmeDelegate?.cancelDownloading(model)
-						default:
-								break
-				}
-		}
+		        switch state {
+		            case .error:
+		                ZAAppConnector.sharedInstance().hqmeDelegate?.cancelProcess(for: model)
+
+		            default:
+		                break
+		        }
+		    }
 		```
 
-	* `func downloadButton(_ downloadButton: ZPDownloadButtonProtocol, tappedWithState state: ZPDownloadButtonState)`
+	* `func hqmeButton(_ button: ZPHqmeButtonProtocol, tappedWithState state: ZPHqmeButtonState)`
 		- fired on download button click, to implement the action on each one of the download button states.
 
 		- implementation example:
 
 		```swift
-		public func downloadButton(_ downloadButton: ZPDownloadButtonProtocol, tappedWithState state: ZPDownloadButtonState) {
-		    guard let model = self.componentDataSourceModel as? ZPDownloadableItemProtocol else {
-		        return
-		    }
+		public func hqmeButton(_ button: ZPHqmeButtonProtocol, tappedWithState state: ZPHqmeButtonState) {
+        guard let model = self.componentDataSourceModel as? ZPHqmeSupportingItemProtocol else {
+            return
+        }
 
-		    switch state {
-		    case .downloaded:
+        switch state {
+        case .completed:
 						//perform an action on already downloaded item. (ex. remove)
-		        break
-		    case .startDownload:
-						//perform an action on not downloaded item
-						ZAAppConnector.sharedInstance().hqmeDelegate?.download(model)
+            break
+        case .initial:
+						//perform an action on not downloaded item (ex. start downloading)
+						ZAAppConnector.sharedInstance().hqmeDelegate?.startProcess(for: model)
 
-						//update state to pending
-						downloadButton.downloadStateChange(to: .pending)
-		        break
-		    case .downloading:
+            break
+        case .inProgress:
 						//perform an action on item that is currently being downloaded
-		        ZAAppConnector.sharedInstance().hqmeDelegate?.cancelDownloading(model)
 
-		        //update state to initial after cleanup
-		        downloadButton.downloadStateChange(to: .startDownload)
-		        break
-		    case .error:
+            ZAAppConnector.sharedInstance().hqmeDelegate?.cancelProcess(for: model)
+            //update state to initial after cleanp
+            button.hqmeStateChange(to: .initial)
+            break
+        case .error:
 						//perform an action on item that got an error in downloading. (ex. remove)
-		        break
-		    default:
-		        break
-		    }
-	  }
+            break
+        default:
+            break
+        }
+    }
 		```
 
-	* `func downloadStateChangeNotificationName() -> String?`
+	* `func hqmeStateChangeNotificationName() -> String?`
 		- Defines the unique StateChange notification name for download item based on item identifier
 			- example: "AssetDownloadStateChanged"+identifier.md5()
 
-	* `func downloadingProgressChangeNotificationName() -> String?`
+	* `func hqmeInProgressChangeNotificationName() -> String?`
 		- Defines the unique ProgressChange notification name for download item based on item identifier
 			- example: "AssetDownloadProgressChanged"+identifier.md5()
 
-	* `func downloadButtonCustomImagesSuffix() -> String?`
+	* `func hqmeButtonCustomImagesSuffix() -> String?`
 		- Defines the custom images suffix for download button download states images.
 		There are base sdk images for download button different states (explained in images section), custom suffix will be added to the image name lookup.
 		example:
