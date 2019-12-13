@@ -124,6 +124,7 @@
 - [Screen Hook](/plugins/general-abilities/screen-hooks/screen-hooks-general.md)
   - [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
   - [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
+- [Navigation and Refresh](/plugins/general-abilities/refresh-and-navigation/refresh-and-navigation.md)
 
 # Applicaster Video Platform
 
