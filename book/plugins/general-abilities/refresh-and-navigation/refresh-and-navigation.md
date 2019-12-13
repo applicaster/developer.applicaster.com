@@ -30,8 +30,8 @@ See below the main useable methods:
 
 To use the following utility methods you first need to do the following:
 
-1. In your plugin gradle file add a dependency to `applicaster-android-sdk`. Please note that the minimum version required is v4.2.5.
-2. The plugin can be tested with `Zapp-android` v13.0.0 and above.
+1. In your plugin gradle file add a dependency to `applicaster-android-sdk`. Please note that the minimum version required is v4.2.6.
+2. The plugin can be tested with `Zapp-android` v11.3.0 and above.
 
 ### Redirect
 
@@ -43,6 +43,12 @@ See below the main useable methods:
 
     ```swift
     AppRedirectReceiver.INSTANCE.redirect(screenId)
+    ```
+
+2. Clean the app screens stack and open `Home` screen. The behavior is equivalent to restart app without showing a splash screen and open the Home screen.
+
+    ```swift
+    AppRedirectReceiver.INSTANCE.fun redirectHome()
     ```
 
 ### Refresh
