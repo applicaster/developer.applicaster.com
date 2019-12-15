@@ -10,7 +10,7 @@ To use the following utility methods you first need to do the following:
 
 1. In your podspec file add a dependency to `ZappPlugins`. The minimum `ZappPlugins` version required is v11.0.3.
 2. In your plugin adapter class add an import to `ZappPlugins`.
-3. The plugin can be tested with minimum of `Zapp-iOS v13.0.0` and above.
+3. The plugin can be tested with `minimum` of `Zapp-iOS v13.0.0 and above`.
 
 See below the main useable methods:
 
@@ -31,7 +31,7 @@ See below the main useable methods:
 To use the utility methods you first need to do the following:
 
 1. In your plugin gradle file add a dependency to `applicaster-android-sdk`. Please note that the minimum version required is v4.2.6.
-2. The plugin can be tested with a minimum of `Zapp-android` **v11.3.0 and above**.
+2. The plugin can be tested with a `minimum` of `Zapp-android v11.3.0 and above`.
 
 ### Redirect
 
