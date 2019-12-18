@@ -63,6 +63,8 @@
   - [How to connect the provider to the app](/Zapp-Pipes/7.-Connect-to-Zapp.md)
   - [Debugging](/Zapp-Pipes/10.-Debugging.md)
   - [Feeds Made Easy](/Zapp-Feed/2.-Create-Functional-Demo-Feeds.md)
+  - [Protocols](/Zapp-Pipes/11.-Protocols)
+  	- [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
 - [Navigation Bar Plugins](/ui-builder/NavigationBarPluginsIntro.md)
   - [iOS](/ui-builder/ios/NavigatioBarPlugins.md)
   - [Android](/ui-builder/android/NavigationBarPlugin.md)
