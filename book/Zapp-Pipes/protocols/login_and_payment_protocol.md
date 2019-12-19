@@ -4,7 +4,7 @@ This document outlines the requirements for mapping the data to determine whethe
 
 ## The "Free" flag
 Previously, the flag that was used to achieve this was the "free" flag in the extensions section of the item. However, there are a few drawbacks for using the "free" flag:
-1. The flag doesn't distinguish between whether an item requires login or payment to get access to, and might create some confusion. 
+1. The flag doesn't distinguish between whether access to an item requires login or payment, and this might create some confusion. 
 2. If the item requires purchase, the "free" flag doesn't specify what entitlements are needed in order to unlock the item.
 
 The suggested protocol is meant to be used by DSPs, who want to provide this information to the app, and can be used by Login / Payment plugins to interpret the action that is needed for the item to be unlocked. 
@@ -22,7 +22,7 @@ If the flag is not specified, the default value is `false`, which means the item
 
 * **ds_product_ids**: a list of entitlements needed to unlock the item. 
 It is up to the Login / Payment provider to decide if *all* entitlements are required, or a single entitlement is sufficient. 
-If the field is not specified, this means that the item does not require purchase.
+If the field is not provided or is left blank, this means that the item does not require purchase.
 
 
 ### Example:
@@ -43,4 +43,4 @@ Here is an example of how the field will be configured on a video item:
 }
 ```
 In the example above, the video item requires both login and payment. 
-The list of entitlements that are attached to the item, are listed as "entitlement1",  "entitlement2" and "entitlement3".
+The list of entitlements that are attached to the item, are listed as "entitlement1",  "entitlement2" and "entitlement3", but typically they are some sort of code/ID. When possible, we recommend aligning this code/ID to what the store and plugin provider use in order to eliminate the need for mapping across systems.
