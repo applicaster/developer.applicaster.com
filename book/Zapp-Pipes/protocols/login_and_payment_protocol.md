@@ -20,8 +20,9 @@ The protocol is based on two fields that are added to the "extensions" section o
 This field should be of type "boolean" (true/false) and *not* a "string".
 If the flag is not specified, the default value is `false`, which means the item does not require authentication.
 
-* **ds_product_ids**: a list of entitlements needed to unlock the item. 
-It is up to the Login / Payment provider to decide if *all* entitlements are required, or a single entitlement is sufficient. 
+* **ds_product_ids**: a list of entitlements needed to unlock the item.
+Typically they are some sort of code/ID. 
+When possible, we recommend aligning this code/ID to what the store and plugin provider use in order to eliminate the need for mapping across systems.
 If the field is not provided or is left blank, this means that the item does not require purchase.
 
 
@@ -43,4 +44,4 @@ Here is an example of how the field will be configured on a video item:
 }
 ```
 In the example above, the video item requires both login and payment. 
-The list of entitlements that are attached to the item, are listed as "entitlement1",  "entitlement2" and "entitlement3", but typically they are some sort of code/ID. When possible, we recommend aligning this code/ID to what the store and plugin provider use in order to eliminate the need for mapping across systems.
+The list of entitlements that are attached to the item, are listed as "entitlement1",  "entitlement2" and "entitlement3", 
