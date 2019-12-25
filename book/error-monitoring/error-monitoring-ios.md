@@ -1,8 +1,8 @@
 
 # Error Monitoring plugin - iOS
 
-The iOS Error Monitoring plugin for Zapp is based on `ZPCrashlogsBaseProvider` implementing the `ZPCrashlogsPluginProtocol`.
-The `ZPCrashlogsPluginProtocol` goes through all of the functions for initializing an error monitoring provider.
+The iOS Error Monitoring plugin for Zapp implementing the `CrashlogsPluginProtocol`.
+The `CrashlogsPluginProtocol` goes through all of the functions for initializing an error monitoring provider.
 
 ## Create a new Error Monitoring provider
 
@@ -12,27 +12,26 @@ This chapter describes how to build an error monitoring provider plugin. What ki
 
 Before you start, please do the following important steps:
 
-1. In your cocoapods files, add a dependency to `ZappCrashlogsPluginsSDK`. This dependency is a mandatory dependency for your error monitoring provider plugin. The dependency is available from the public repository cocoapods source `git@github.com:applicaster/PluginsBuilderCocoaPods.git`.
-2. Create a new class for you plugin adapter that inherits from ZPCrashlogsBaseProvider.
-3. Import `ZappCrashlogsPluginsSDK` and `ZappPlugins`
-4. Start the plugin development
+1. In your cocoapods files, add a dependency to `ZappCore`. This dependency is a mandatory dependency for your error monitoring provider plugin. The dependency is available from the public repository  `https://github.com/applicaster/AppleApplicasterFrameworks.git`.
+2. Import `ZappCore`
+3. Start the plugin development
 
 *__Notes__:*
 
-* By inheriting `ZPCrashlogsBaseProvider` which is a base class for an error monitoring provider protocol you can wrap your error monitoring provider logic and use it inside the Zapp app.
-* `ZappCrashlogsPluginsSDK` has a dependency to `ZappPlugins`. This SDK is not mandatory but it gives the developer access to use the Applicaster plugin tools, extensions, helper methods, ZappConnector logic, etc.
-* The `ZPCrashlogsBaseProvider` class implements the `ZPCrashlogsPluginProtocol` protocol which is the protocol you should implement in every error monitoring provider plugin.
+* In Dependency `ZappCore` provided protocol `CrashlogsPluginProtocol`
+* This protcol must be implemented as part of `error_monitoring` plugin. tyoe
+
 
 ### Protocol description
 
-The below describes the `ZPCrashlogsPluginProtocol` protocol methods.
+The below describes the `CrashlogsPluginProtocol` protocol methods.
 
 #### Configure Provider
 
 Initialize and register to your monitoring provider provider and call the completion when it done
 
 ```swift
-func func activate(object: NSObject?, completion: ((NSObject?) -> Void)?)
+func prepareProvider(completion: (_ isReady: Bool) -> Void)
 ```
 
 ## Plist Addition
