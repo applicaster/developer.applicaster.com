@@ -1,5 +1,6 @@
 
 # Error Monitoring plugin - iOS
+## Supported from iOS SDK 13 and above
 
 The iOS Error Monitoring plugin for Zapp implementing the `CrashlogsPluginProtocol`.
 The `CrashlogsPluginProtocol` goes through all of the functions for initializing an error monitoring provider.
@@ -19,7 +20,7 @@ Before you start, please do the following important steps:
 *__Notes__:*
 
 * In Dependency `ZappCore` provided protocol `CrashlogsPluginProtocol`
-* This protcol must be implemented as part of `error_monitoring` plugin. tyoe
+* This protcol must be implemented as part of `error_monitoring` plugin. type
 
 
 ### Protocol description
