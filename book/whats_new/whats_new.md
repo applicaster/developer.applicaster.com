@@ -1,5 +1,8 @@
 # What's New
 
+## December 29 - 2019
+* [Datasource Provider Protocols](20191229-dsp-protocols.md)
+
 ## November 24 - 2019
 * [Migrating your plugin to Swift 5.1 with Zapp-iOS SDK v13.0](20191124-swift-5.1-migration.md)
 
