@@ -44,4 +44,4 @@ Here is an example of how the field will be configured on a video item:
 }
 ```
 In the example above, the video item requires both login and payment. 
-The list of entitlements that are attached to the item, are listed as "entitlement1",  "entitlement2" and "entitlement3", 
+The list of entitlements that are attached to the item, are listed as "entitlement1",  "entitlement2", and "entitlement3".
