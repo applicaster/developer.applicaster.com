@@ -23,7 +23,7 @@ If the flag is not specified, the default value is `false`, which means the item
 * **ds_product_ids**: a list of entitlements needed to unlock the item.
 Typically an entitlement is some sort of code/ID.
 When possible, we recommend aligning this code/ID to what the store and plugin provider use in order to eliminate the need for mapping across systems.
-More than one entitlement can be provided, as a comma separated list of values. 
+More than one entitlement can be provided, as a comma separated list of values, as illustrated in the example below.
 When multiple entitlements are provided, it means that **any** of them provide authorization to the item, not that **all** of them are required.
 If the field is not provided or is left blank, this means that the item does not require purchase.
 
