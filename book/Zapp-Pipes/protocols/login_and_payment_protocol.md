@@ -21,7 +21,7 @@ This field should be of type "boolean" (true/false) and *not* a "string".
 If the flag is not specified, the default value is `false`, which means the item does not require authentication.
 
 * **ds_product_ids**: a list of entitlements needed to unlock the item.
-Typically they are some sort of code/ID. 
+Typically an entitlement is some sort of code/ID. 
 When possible, we recommend aligning this code/ID to what the store and plugin provider use in order to eliminate the need for mapping across systems.
 If the field is not provided or is left blank, this means that the item does not require purchase.
 
