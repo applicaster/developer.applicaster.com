@@ -1,6 +1,6 @@
 # Login and Payment Protocol
 
-This document outlines the requirements for mapping the data to determine whether login and/or payment are required to gain access to a video item.
+This document outlines the requirements for mapping the data which determines whether login and/or payment are required to gain access to a video item.
 
 ## The "Free" flag
 Previously, the flag that was used to achieve this was the "free" flag in the extensions section of the item. However, there are a few drawbacks to using the "free" flag:
