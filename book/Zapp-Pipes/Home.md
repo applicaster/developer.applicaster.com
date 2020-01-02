@@ -73,7 +73,7 @@ In order to make the js library work as intended these too features are polyfill
 
 The bridge also contains features that enable data source plugins to get data from the app. The bridge API is described in detail [here](/Zapp-Pipes/3.-Native-bridge-API.md)
 
-## Table of content
+## Table of Contents
 Browse the following content to know more about Zapp-pipes :
 * [Prerequisites](/Zapp-Pipes/0.-Prerequisites.md) : this section will highlight some key development tools which are required to create a new provider
 * [Setting up the environment](/Zapp-Pipes/1.-Set-up.md) : this section will help you set up your environment to start development
@@ -85,3 +85,4 @@ Browse the following content to know more about Zapp-pipes :
 * [How configure the app](/Zapp-Pipes/7.-Connect-to-Zapp.md) : this section explains how to set up your app to use Zapp-pipes
 * [Step by step tutorial](/Zapp-Pipes/provider-stepbystep.md) : this section will guide throw the steps of creating a new data source provider, in this tutorial we will create a Wordpress provider.
 * [Examples](/Zapp-Pipes/8.-Examples.md) : can be used in the Feed manager
+* [Protocols](/Zapp-Pipes/11.-Protocols.md) : this section contains a list of recommended protocols that datasource providers should implement to deliver specific data to the app (advertising, closed captions, authorization requirements, etc)
