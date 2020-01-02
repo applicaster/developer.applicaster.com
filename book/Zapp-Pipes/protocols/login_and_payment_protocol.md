@@ -3,7 +3,7 @@
 This document outlines the requirements for mapping the data to determine whether login and/or payment are required to gain access to a video item.
 
 ## The "Free" flag
-Previously, the flag that was used to achieve this was the "free" flag in the extensions section of the item. However, there are a few drawbacks for using the "free" flag:
+Previously, the flag that was used to achieve this was the "free" flag in the extensions section of the item. However, there are a few drawbacks to using the "free" flag:
 1. The flag doesn't distinguish between whether access to an item requires login or payment, and this might create some confusion. 
 2. If the item requires purchase, the "free" flag doesn't specify what entitlements are needed in order to unlock the item.
 
