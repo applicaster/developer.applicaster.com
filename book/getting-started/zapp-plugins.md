@@ -26,7 +26,7 @@ In the creation of your project you can use one of following tools / code exampl
 
 **2. Publish to Zapp** 
 
-Each plugin should be pushed to its own git repository and deployed (preferably by CI) to a dependancy manager; CocoaPods for [iOS](/getting-started/ios-podspec.md), Maven for [Android](/getting-started/set-up-bintray-and-circle-ci.md), and NPM for React-Native and Datasource providers.
+Each plugin should be pushed to its own git repository and deployed (preferably by CI) to a dependency manager; CocoaPods for [iOS](/getting-started/ios-podspec.md), Maven for [Android](/getting-started/set-up-bintray-and-circle-ci.md), and NPM for React-Native and Datasource providers.
 
 Then publish the [Zapp plugin manifest](/zappifest/plugins-manifest-format.md) (zappifest), which is a JSON that declares the plugin getaways (Class name, Pod/Maven/NPM, and more) and enables the plugin developer to add custom plugin configuration fields in Zapp. You can do it easliy by using the [zappifest cli](https://github.com/applicaster/zappifest).
 
@@ -41,7 +41,7 @@ Use the development project and finalize your plugin, don't forget to test it lo
 Plugins can be submitted as a public plugin or a whitelisted plugin. 
 A whitelisted plugin is a plugin that will be available only to specific accounts in Zapp, whereas a public plugin will be available to all accounts and applications to use.
 
-New plugins are always submitted as a whitelisted plugins and can be upgraded to a public status only after review according to the [plugins submission guideline](/plugins-guidelines/plugin_submission_guideline.md).
+New plugins are always submitted as whitelisted plugins and can be upgraded to a public status only after review according to the [plugins submission guideline](/plugins-guidelines/plugin_submission_guideline.md).
 
 ## Next steps
 * [Different types of plugins (in detail)](/getting-started/plugin-types.md)
