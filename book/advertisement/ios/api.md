@@ -98,7 +98,7 @@ Method `init` creates a new ad presenter.
 
 ###### load
 
-Method `load` is called whenever ad configuration need to be setup and ad suppose to start loading its content. As a parameter it takes `ZPAdConfig` which defines everything what Ad view needs to present content.
+Method `load` is called whenever ad configuration need to be setup and ad suppose to start loading its content. As a parameter it takes `ZPAdConfig` which defines everything that Ad view needs to present content.
 
 |Parameters|Type           | Description                                                  |
 |----------|---------------|--------------------------------------------------------------|
