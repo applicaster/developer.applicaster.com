@@ -19,7 +19,8 @@ The applicaster player is a full fledged player implementing all of the optional
 
 #### Datasource Protocols
 
-The following pages contain protocols for datasource providers to send additional data on a video item. 
+The following pages contain protocols for datasource providers to send additional data related to a video item, 
+as part of the video item's feed.
 Video players that implement these features should rely on these protocols to obtain the relevant data:
 * [Video Advertising](/Zapp-Pipes/protocols/video_advertising_protocol.md)
 * [Text Tracks](/Zapp-Pipes/protocols/video_text_tracks_protocol.md) 
