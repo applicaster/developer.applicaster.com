@@ -1,6 +1,14 @@
 # Login Plugin - iOS
 
-The iOS Login plugin for Zapp is based on implementing the `ZPLoginProviderProtocol`.
+1. [The Login Provider Protocol](#login)
+2. [The User Data Protocol](#user)
+3. [The Provider Logic Protocol](#provider)
+4. [Screen Hooks](#screen)
+5. [Startup Hooks](#startup)
+
+* * *
+
+The iOS Login plugin for Zapp is based on implementing the `ZPLoginProviderProtocol`.</br>
 This protocol goes through all of the functions for initializing, checking complience and presenting a login screen.
 
 In order to see a basic implementation of a login plugin, we suggest reviewing the [Login Plugin Demo Project](https://github.com/applicaster/zapp-plugins-examples/tree/master/LoginPlugin/iOS) as it's a good starting point for implementing a login plugin.
@@ -9,7 +17,7 @@ This guide will go through the basic terms and functions that need to be impleme
 
 For more info about Initial iOS Plugin Setup, [Click Here](/dev-env/iOS.md)
 
-## The Login Provider protocol
+## The Login Provider protocol {#login}
 The main protocol used for login plugins is `ZPLoginProviderProtocol`.
 All login plugins must implement this protocol as it's part of what Zapp apps are expecting when initializing a login plugin.
 
@@ -60,7 +68,7 @@ The set user token function can be optionally exposed in order to allow webviews
   @objc optional func setUserToken(token: String?)
 ```
 
-## The User Data Protocol
+## The User Data Protocol {#user}
 The user data protocol is used for enforcing specific user complience and is comprised by 2 optional methods differenciated by the use of a completion method:
 
 ``` swift
@@ -73,10 +81,9 @@ The policies object is a dictionary that will be containing the metadata giving 
 Example values can be `playable_items` which would be an array of `ZPPlayable` items or `vod_item_id` for an Applicaster VOD item ID.
 
 This complience method is usually called before a screen or a player to validate if a user should have access to the requested content.
-To read more about `ZPPlayableItem` please refer to the iOS Player plugin documente [Here](/player/iOS.md)
+To read more about `ZPPlayableItem` please refer to the iOS Player plugin document [Here](/player/iOS.md)
 
-## The Provider Logic Protocol
-
+## The Provider Logic Protocol {#provider}
 The `ZPLoginProviderLogicProtocol` is a protocol meant for starndartising the structure and calls through a flow.
 This protocol is meant to be implemented in cases where the login interface is provided through React Native and is passed at the initialization of a React Native `ZPLoginReactNativeBridge` initialization method.
 
@@ -91,14 +98,13 @@ Here are the functions included in this protocol:
   func loginCancelled(params : [String: Any]?, completion: ((_ success: Bool, _ errorMessage: String?) -> Void)?)
 ```
 
-## Screen Hooks
+## Screen Hooks {#screen}
 A common way to involve the login plugin as a part of the flow of the app is setting it up as a hook between screens.
 This means the plugin will be called before screen presentation and can choose to check complience, present login, or deny access.
 
 For more about Hook Plugins [Click Here](/ui-builder/ios/PreHooks-ScreenPlugin.md).
 
-## Startup Hooks
-
+## Startup Hooks {#startup}
 Some login plugins need an initial startup to either:
 * Present a login gateway at app launch
 * Do an initial setup and try to silently login, update entitlements, etc.
