@@ -1,27 +1,23 @@
 ## Zapp Screen Plugins infrastructure
 Infrastructure that enables development of standalone screen (views) plugins.
 
-1. <a href="#description">Description</a>
-2. <a href="#general">General</a>
-3. <a href="#connection">Connection PlugnsScreen with River.json</a>
-4. <a href="#clientExplanation">Client side explanation</a>
-4. <a href="#keys">Styles, keys and data source</a>
-5. <a href="#screens">React Native screen and Native screens</a>
+1. [Description](#description)
+2. [General](#general)
+3. [Connection Plugins Screen with River.json](#connection)
+4. [Client side explanation](#clientExplanation)
+5. [Styles, keys and data source](#keys)
+6. [React Native screen and Native screens](#screens)
 
 * * *
 
-<a name="description"></a>
-
-##### Description
+##### Description {#description}
 `Screen Plugins` are plugins that are presented as standalone screens, a user can trigger the launch of a screen from the navigation bar, root (menu) or click on any cell inside the application.These plugins can be native or react native. </br>
 In this document you will find a guide that explains how to configure such a plugin. In addition, a screen plugin provides an API that gives developers to ability to customize their plugin via Zapp's UI-Builder.
 
 ![ScreenPluginsGeneral.png](/ui-builder/ios/Files/ScreenPluginsGeneral.png)
 ***
 
-<a name="general"></a>
-
-##### General
+##### General {#general}
 
 Any plugin can be defined as Screen Plugin. In order to do so, please follow these steps:
 1. Implement `ZPPluggableScreenProtocol`. This protocol provides a simple initialization for your plugin. This is a simple initialization for your plugin.
@@ -38,9 +34,7 @@ The interface provides 3 parameters to the plugin:
 2. In the manifest of the plugin the `screen: true` key must be added. This key is needed to explain to UI Builder that this plugin can be added in the screen section. [Plugins manifest format](/zappifest/plugins-manifest-format.md)
 3. A default presentation should be provided, read more below. <a href="#clientExplanation">Client side explanation</a>
 
-<a name="connection"></a>
-
-##### Connect Plugin with Rivers API
+##### Connect Plugin with Rivers API {#connection}
 
 After adding `screen: true` flag on Zapp manifest, you will able to see your plugin in the available screens list when adding a screen in the UI Builder.
 
@@ -70,9 +64,8 @@ This is an example of a screen plugin that will be passed with `rivers.json`.</b
         "ui_components": []
 	}
 ```
-<a name="clientExplanation"></a>
 
-##### Client side explanation
+##### Client side explanation {#clientExplanation}
 ###### GAScreenPluginGenericViewController
 
 All screen plugins will be created in `GAScreenPluginGenericViewController`.</br>
@@ -97,9 +90,7 @@ The default behaviors are:
 
 If you select in presentation type present and you do not want to have a navigation bar, you have to set add `force_nav_bar_hidden: true` key to the plugin manifest. If you will use this key make sure you add a functionality to close screen, since nav bar will be hidden and close button will not be available.
 
-<a name="keys"></a>
-
-##### Styles, keys and data source
+##### Styles, keys and data source {#keys}
 Screen plugin allows you to pass additional customization that are set in the UI Builder.
 
 Here is an example manifest:</br>
@@ -168,9 +159,8 @@ __Note:__
     }
 }
 ```
-<a name="screens"></a>
 
-##### React Native screen and Native screens
+##### React Native screen and Native screens {#screens}
 This section describes the difference between React Native and native screen plugins.
 
 ###### Native
