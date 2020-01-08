@@ -10,34 +10,35 @@ Infrastructure that enables development of standalone screen (views) plugins.
 
 * * *
 
-<a name="description" />
+<a name="description"></a>
 
 ##### Description
-`Screen Plugins` are plugins that are presented as standalone screens, A user can trigger the launch of a screen from navigation bar, root (menu) or click on any cell inside application. These plugins can be native or react native. In this document you can find a guide that explains how to configure such a plugin. In addition, a screen plugins provide an API that gives developers to ability to customize their plugin via Zapp's UI-Builder.
+`Screen Plugins` are plugins that are presented as standalone screens, a user can trigger the launch of a screen from the navigation bar, root (menu) or click on any cell inside the application.These plugins can be native or react native. </br>
+In this document you will find a guide that explains how to configure such a plugin. In addition, a screen plugin provides an API that gives developers to ability to customize their plugin via Zapp's UI-Builder.
 
 ![ScreenPluginsGeneral.png](/ui-builder/ios/Files/ScreenPluginsGeneral.png)
 ***
 
-<a name="general" />
+<a name="general"></a>
 
 ##### General
 
-Any plugin can be defined as Screen Plugin. In order to do so, please follow these:
-1. Implement `ZPPluggableScreenProtocol`. This protocol provides a simple initialization for your plugin. This is a simple initialization for your plugin.`
+Any plugin can be defined as Screen Plugin. In order to do so, please follow these steps:
+1. Implement `ZPPluggableScreenProtocol`. This protocol provides a simple initialization for your plugin. This is a simple initialization for your plugin.
 The interface provides 3 parameters to the plugin:
-`pluginModel` - Plugin Model itself will be passed in any case.
-`screenModel` - ScreenModel that connected to your plugin
-`dataSourceModel` - Data source of your screen plugin (optional). In some cases, your screen will require dynamic data source configured by the user. If you want to allow users to launch the screen from a tap on a cell the data source of the cell (as defined in the data source entry) will be passed automatically.
+- `pluginModel` Plugin Model itself will be passed in any case.
+- `screenModel` ScreenModel that connected to your plugin
+- `dataSourceModel` Data source of your screen plugin (optional). In some cases, your screen will require dynamic data source configured by the user. If you want to allow users to launch the screen from a tap on a cell the data source of the cell (as defined in the data source entry) will be passed automatically.
 
 ```
     init?(pluginModel:ZPPluginModel,
           screenModel:ZLScreenModel,
           dataSourceModel:NSObject?)
 ```
-2. In the manifest of the plugin the `screen`: `true` key must be added. This key is needed to explain UI Builder that this plugin can be added in the screen section. [Plugins manifest format](/zappifest/plugins-manifest-format.md)
+2. In the manifest of the plugin the `screen: true` key must be added. This key is needed to explain to UI Builder that this plugin can be added in the screen section. [Plugins manifest format](/zappifest/plugins-manifest-format.md)
 3. A default presentation should be provided, read more below. <a href="#clientExplanation">Client side explanation</a>
 
-<a name="connection" />
+<a name="connection"></a>
 
 ##### Connect Plugin with Rivers API
 
@@ -46,11 +47,11 @@ After adding `screen: true` flag on Zapp manifest, you will able to see your plu
 __Example:__ Contact Us or Settings Twitter Login
 ![ScreenPluginsCreateScreen.png](/ui-builder/ios/Files/ScreenPluginsCreateScreen.png)
 
-When user will select `Screen Plugins`, behind a scenes the `UI Builder` will add plugin the relevant plugin to `plugins.json` that will be sent to app during application creation process.
+When a user selects `Screen Plugins`, behind the scenes `UI Builder` will add the relevant plugin to `plugins.json` that will be sent to the app during application creation process.
 
-###### River.json screen plugin example
-This is an example of screen plugin that will be passed with `river.json`
-`type` field is representation of your plugin id `settings_contact_us_legacy`. Using this ID, the client will locate the plugin and will try to create it with `ZPPluggableScreenProtocol` initialization method.
+##### Rivers.json Screen Plugin Example
+This is an example of a screen plugin that will be passed with `rivers.json`.</br>
+`type` field is representation of your plugin id, in this example "`settings_contact_us_legacy`". Using this ID, the client will locate the plugin and will try to create it with `ZPPluggableScreenProtocol` initialization method.
 
 ```
     {
@@ -69,12 +70,13 @@ This is an example of screen plugin that will be passed with `river.json`
         "ui_components": []
 	}
 ```
-<a name="clientExplanation" />
+<a name="clientExplanation"></a>
 
 ##### Client side explanation
 ###### GAScreenPluginGenericViewController
 
-All screen plugins will be created in `GAScreenPluginGenericViewController`. `GAScreenPluginGenericViewController` works in a similar way to `GAGenericViewController`. It creates a container that will use same rules for same type of the plugins screens.
+All screen plugins will be created in `GAScreenPluginGenericViewController`.</br>
+`GAScreenPluginGenericViewController` works in a similar way to `GAGenericViewController`. It creates a container that will use same rules for same type of the plugins screens.
 
 Screen Plugin Container will be used to add your screen plugin inside. This container will be used for native and react native screens.
 
@@ -87,20 +89,20 @@ There are 2 states that a screen can be presented:
 1. `Push`
 2. `Present`
 
-Generally this behaviour will take affect if you will select cell inside your app.
-If you going to add a `screen` plugin to `root` or `nav_bar`, screen plugin will use default rules of Root or Navigation bar.
+Generally this behaviour will take affect if you will select a cell inside your app.</br>
+If you going to add a `screen` plugin to `root` or `nav_bar`, the screen plugin will use default rules of Root or Navigation bar.
 The default behaviors are:
 * `Push` for any root (menu) plugin
 * `Present` for Navigation Bar
 
-If you select in presentation type present and you do not want to have navigation bar, you have to set in manifest key `force_nav_bar_hidden`:`true`. If you will use this key make sure you add a functionality to close screen, since nav bar will be hidden and close button will not be available.
+If you select in presentation type present and you do not want to have a navigation bar, you have to set add `force_nav_bar_hidden: true` key to the plugin manifest. If you will use this key make sure you add a functionality to close screen, since nav bar will be hidden and close button will not be available.
 
-<a name="keys" />
+<a name="keys"></a>
 
 ##### Styles, keys and data source
 Screen plugin allows you to pass additional customization that are set in the UI Builder.
 
-Here manifest example:
+Here is an example manifest:</br>
 __Note:__
 1. The example presented below shows a plugin that does not allow the user to select `presentation` style
 2. Key `background_color` will allow user to select background color with a color picker.
@@ -166,10 +168,10 @@ __Note:__
     }
 }
 ```
-<a name="screens" />
+<a name="screens"></a>
 
 ##### React Native screen and Native screens
-This section describes the difference beetween React Native and native screen plugins.
+This section describes the difference between React Native and native screen plugins.
 
 ###### Native
 
@@ -200,7 +202,7 @@ During init of protocol method we use standard method of initialization and pass
 Example of receiving props:
 1. `ZLScreenModel` is passed as `reactProps[uibuilder_screen_model]`
 2. If we have DS we wil pass dictionary of the data source with key `reactProps[data_source_model]`
-3. For backward compatibility reasons, we will flat map of `ZLScreenModel` dictionary to give ability to retrieve keys without additional migration. Note This is a temporary solution and plugin should be migrated to use `ZLScreenModel`.
+3. For backward compatibility reasons, we will flat map of `ZLScreenModel` dictionary to give ability to retrieve keys without additional migration. __Note:__ This is a temporary solution and plugin should be migrated to use `ZLScreenModel`.
 At the end you will get something like this
 
 ```
