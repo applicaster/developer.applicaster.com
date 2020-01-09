@@ -30,4 +30,4 @@ Please write the reproduction sequence in the description field:
 * Verify, is reproduction stable, i.e. one can get it 100% of tries. Please try to reproduce the bug at least 3 times, including a clean application install.
 * If you are using a non-trivial developer project (custom plugins in source code form locally, and so on), verify that the bug can be reproduced on the version downloaded from Zapp/Github, or provide a zip archive with the entire project where the bug can be reproduced.
 
-Please take the time to describe the problem best. A ticket that will contain all the requested parameters will be handled quicker. You can also attach files and videos that describe the problem. We do not restrict the number of attached files.
+Please take the time to describe the problem best. A ticket that will contain all the requested parameters will be handled more quickly. You can also attach files and videos that describe the problem. We do not restrict the number of attached files.
