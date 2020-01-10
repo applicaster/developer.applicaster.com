@@ -89,7 +89,7 @@ After we need to implement a method that is used by our analytics system to know
 Lastly we need a method to know the size for inline banners.
 
 There are 3 types of banners: **screen banners** (fixed banners that always appear at the bottom of the screen), **interstitial** (banners that pop up, usually fullscreen, when you open a new screen) and **inline banners** (banners that mix with the content of a screen, usually between cells).
-Inline banners can have different sizes, each different size is represented by a string. This string can have any value and your plugin must define those values, but usually there are 3 that are common to any kind of plugin provider, these are: **BANNER** (standar size banners), **BOX_BANNER** (squared size banners) and **SMART_BANNER** (usually occupying the full width of the device and a fixed height).
+Inline banners can have different sizes, each different size is represented by a string. This string can have any value and your plugin must define those values, but usually there are 3 that are common to any kind of plugin provider, these are: **BANNER** (standard size banners), **BOX_BANNER** (square size banners) and **SMART_BANNER** (usually occupying the full width of the device and a fixed height).
 
 Here is our implementation (as we will need to use as well in the presenter we extracted the code to its own class).
 
@@ -132,7 +132,7 @@ public class AdSizeMapper {
 public class MyAdvertisementPresenter: NSObject, ZPAdPresenterProtocol {...}
 ```
 
-We will need some variables. The **parentVC** and **adView** we explained before, we store them to be able to call them in other parts of our code. **adConfig** is a model that hold the different parameters we need to configure our ad (the type of ad, its size, and the unit id). We also need a variable to hold the view controller for our **interstitial** banner.
+We will need some variables. The **parentVC** and **adView** we explained before, we store them to be able to call them in other parts of our code. **adConfig** is a model that holds the different parameters we need to configure our ad (the type of ad, its size, and the unit id). We also need a variable to hold the view controller for our **interstitial** banner.
 
 ``` swift
 	var parentVC: UIViewController
@@ -218,9 +218,9 @@ You can read more about publishing [here](/getting-started/deploy-and-submit.md)
 
 As we mentioned earlier:
 ```
-Inline banners can have different sizes, each different size is represented by a string. This string can have any value and your plugin must define those values, but usually there are 3 that are common to any kind of plugin provider, these are: **BANNER** (standar size banners), **BOX_BANNER** (squared size banners) and **SMART_BANNER** (usually occupying the full width of the device and a fixed height).
+Inline banners can have different sizes, each different size is represented by a string. This string can have any value and your plugin must define those values, but usually there are 3 that are common to any kind of plugin provider, these are: **BANNER** (standard size banners), **BOX_BANNER** (square size banners) and **SMART_BANNER** (usually occupying the full width of the device and a fixed height).
 ```
-If your plugin wants different sizes that the standard defined, you need to declared them in the manifest using the **exporting attributes functionality** to override these 3 values with your desired ones. 
+If your plugin wants different sizes that the standard defined, you need to declare them in the manifest using the **exporting attributes functionality** to override these 3 values with your desired ones. 
 
 For the full documentation, [Click Here](/zappifest/plugins-manifest-format.md)
 
