@@ -10,7 +10,7 @@ All public plugins will be seen in the Plugins section:
 <img src="./images/PluginGallery.png" width="500" />
 
 ## Request for Review 
-When publishing a public plugin, fill in this [form](https://airtable.com/shrmnWALC8fdDAig8) to request Marketplace team to review your plugin. An Approval / Reject with exaplanation will be sent to you by mail. 
+When publishing a public plugin, fill in this [form](https://airtable.com/shrmnWALC8fdDAig8) to request Marketplace team to review your plugin. An Approval / Reject with an explanation will be sent to you by e-mail. 
 
 
 ## Whitelist to Public Plugins 

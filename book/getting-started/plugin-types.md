@@ -1,6 +1,6 @@
 # Plugin types
 
-Before going into the technical parts of how a plugin is created and submitted, let's quickly discuss the different types of plugins and the functionalities that the applicaster platform offers.
+Before going into the technical parts of how a plugin is created and submitted, let's quickly discuss the different types of plugins and the functionalities that the Applicaster platform offers.
 
 ## Plugin types
 
