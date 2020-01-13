@@ -9,6 +9,7 @@ Single Bundle is a plugin that makes the implementation of multiple React Native
 
 #### Add "Single Bundle Plugin" to the Project Configuration
 Add  `"single bundle plugin"`  and from the available list of versions of `react-native`, `react` and `react-native-zapp-bridge` *(The Applicaster standard bridge for communicating between React Native and the Applicaster SDK)* please select the combination which is supported by your plugins.
+
 ![Single Bundle Configuration]( https://assets-production.applicaster.com/applicaster-employees/zapp_team/anna_bauza/react_native/single-bundle-config.png  "Single Bundle Configuration")
 
 Save the plugin configuration and rebuild.
