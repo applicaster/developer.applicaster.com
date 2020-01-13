@@ -18,7 +18,7 @@ Save the plugin configuration and rebuild.
 
 
 #### Make Sure that the Plugins Support the Selected Versions
-Your React Native plugins have to be built and published to `npm` for the selected versions of React and React-Native.
+Your React Native plugins have to be built and published to `npm` for the selected versions of react and react-native.
 
 
 #### Migrate your Plugins
