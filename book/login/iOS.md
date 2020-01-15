@@ -69,7 +69,7 @@ The set user token function can be optionally exposed in order to allow webviews
 ```
 
 ## The User Data Protocol {#user}
-The user data protocol is used for enforcing specific user complience and is comprised by 2 optional methods differenciated by the use of a completion method:
+The user data protocol is used for enforcing specific user complience and is comprised by 2 optional methods differentiated by the use of a completion method:
 
 ``` swift
   @objc optional func isUserComply(policies:[String: NSObject]) -> Bool
@@ -77,14 +77,14 @@ The user data protocol is used for enforcing specific user complience and is com
 ```
 
 Please implement the appropriate one according to the usage.
-The policies object is a dictionary that will be containing the metadata giving the specific context.
+The policies object is a dictionary that will contain the metadata giving the specific context.
 Example values can be `playable_items` which would be an array of `ZPPlayable` items or `vod_item_id` for an Applicaster VOD item ID.
 
 This complience method is usually called before a screen or a player to validate if a user should have access to the requested content.
 To read more about `ZPPlayableItem` please refer to the iOS Player plugin document [Here](/player/iOS.md)
 
 ## The Provider Logic Protocol {#provider}
-The `ZPLoginProviderLogicProtocol` is a protocol meant for starndartising the structure and calls through a flow.
+The `ZPLoginProviderLogicProtocol` is a protocol meant for standarizing the structure and calls through a flow.
 This protocol is meant to be implemented in cases where the login interface is provided through React Native and is passed at the initialization of a React Native `ZPLoginReactNativeBridge` initialization method.
 
 Here are the functions included in this protocol:
