@@ -16,8 +16,6 @@
   - [Deploy and Submit](/getting-started/deploy-and-submit.md)
     - [iOS - CocoaPods](/getting-started/ios-podspec.md)
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
-    - [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
-      - [Zappifest Tool](/zappifest/zappifest.md)
     - [Using One Code Base for Multiple Plugins](/plugins/general-abilities/multiple-types-one-repo/multiple-types-one-repo.md)
   - [Download a development project](/getting-started/download-development-project.md)
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
@@ -30,7 +28,14 @@
 
 # Zapp Plugins
 
+## Zapp Plugin Manifest
+
+- [Plugin Manifest](/zappifest/plugins-manifest-format.md)
+- [Configuration Fields](plugins-manifest/configuration-fields.md)
+- [Zappifest Tool](/zappifest/zappifest.md)
+
 ## Zapp Plugin Types
+
 - [Screen Plugins](/screen/screen-plugin-general.md)
   - [iOS](/screen/ios/screen-plugin-ios.md)
   - [Android](/screen/android/screen-plugin-android.md)
@@ -64,7 +69,7 @@
   - [Debugging](/Zapp-Pipes/10.-Debugging.md)
   - [Feeds Made Easy](/Zapp-Feed/2.-Create-Functional-Demo-Feeds.md)
   - [Protocols](/Zapp-Pipes/11.-Protocols.md)
-  	- [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
+    - [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
 - [Navigation Bar Plugins](/ui-builder/NavigationBarPluginsIntro.md)
   - [iOS](/ui-builder/ios/NavigatioBarPlugins.md)
   - [Android](/ui-builder/android/NavigationBarPlugin.md)
@@ -133,6 +138,7 @@
 # Applicaster Video Platform
 
 ## Applicaster Video Platform
+
 - [Applicaster Video Platform](/applicaster-video-platform/intro.md)
   - [VOD Ingestion VIA XML](/applicaster-video-platform/content-ingestion/vod-ingestion-xml/vod_via_xml.md)
   - [VOD Ingestion VIA RSS](/applicaster-video-platform/content-ingestion/vod-ingestion-rss/RSSVODIngestion.md)
@@ -148,19 +154,19 @@
 
 - [Introduction](/quick-brick/intro.md)
 - [Apple TV](/quick-brick/tvOS/intro.md)
-	- [Plugins](/quick-brick/tvOS/Plugins/intro.md)
-		- [Analytics](/quick-brick/tvOS/Plugins/Analytics/intro.md)
-            - [Plugin creation guide](/quick-brick/tvOS/Plugins/Analytics/GeneralAnalyticsHowCreate.md)
-            - [Google Analytics](/quick-brick/tvOS/Plugins/Analytics/GoogleAnalytics/GoogleAnalytics.md)
-        - [Player](quick-brick/tvOS/Plugins/Video/intro.md)
-            - [Plugin creation guide](quick-brick/tvOS/Plugins/Video/VideoPluginsHowCreate.md)
-            - [Default Player](quick-brick/tvOS/Plugins/Video/DefaultPlayer/DefaultPlayer.md)
-        - [Player Dependent](quick-brick/tvOS/Plugins/PlayerDependents/intro.md)
-            - [Plugin creation guide](quick-brick/tvOS/Plugins/PlayerDependents/DependentPluginsHowCreate.md)
-            - [GoogleIMA](quick-brick/tvOS/Plugins/PlayerDependents/VideoAds/GoogleIMA/GoogleIMA.md)
-	- [Environment](/quick-brick/tvOS/Environment/intro.md)
-    	- [Apple TV Debug](/quick-brick/tvOS/Environment/DebugBuildIntegration.md)
-        - [Apple TV Release](quick-brick/tvOS/Environment/ReleaseBuildIntegration.md)
+  - [Plugins](/quick-brick/tvOS/Plugins/intro.md)
+    - [Analytics](/quick-brick/tvOS/Plugins/Analytics/intro.md)
+      - [Plugin creation guide](/quick-brick/tvOS/Plugins/Analytics/GeneralAnalyticsHowCreate.md)
+      - [Google Analytics](/quick-brick/tvOS/Plugins/Analytics/GoogleAnalytics/GoogleAnalytics.md)
+    - [Player](quick-brick/tvOS/Plugins/Video/intro.md)
+      - [Plugin creation guide](quick-brick/tvOS/Plugins/Video/VideoPluginsHowCreate.md)
+      - [Default Player](quick-brick/tvOS/Plugins/Video/DefaultPlayer/DefaultPlayer.md)
+      - [Player Dependent](quick-brick/tvOS/Plugins/PlayerDependents/intro.md)
+        - [Plugin creation guide](quick-brick/tvOS/Plugins/PlayerDependents/DependentPluginsHowCreate.md)
+        - [GoogleIMA](quick-brick/tvOS/Plugins/PlayerDependents/VideoAds/GoogleIMA/GoogleIMA.md)
+  - [Environment](/quick-brick/tvOS/Environment/intro.md)
+  - [Apple TV Debug](/quick-brick/tvOS/Environment/DebugBuildIntegration.md)
+  - [Apple TV Release](quick-brick/tvOS/Environment/ReleaseBuildIntegration.md)
 - [Beta Guidelines & information](/quick-brick/Beta-guidelines.md)
 - [Setup your project](/quick-brick/Setup.md)
 - [Inside QuickBrick](/quick-brick/Inside-QuickBrick.md)
