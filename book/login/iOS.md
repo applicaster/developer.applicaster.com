@@ -8,7 +8,7 @@
 
 * * *
 
-The iOS Login plugin for Zapp is based on implementing the `ZPLoginProviderProtocol`.</br>
+The iOS Login plugin for Zapp is based on implementing the `ZPLoginProviderProtocol`.
 This protocol goes through all of the functions for initializing, checking complience and presenting a login screen.
 
 In order to see a basic implementation of a login plugin, we suggest reviewing the [Login Plugin Demo Project](https://github.com/applicaster/zapp-plugins-examples/tree/master/LoginPlugin/iOS) as it's a good starting point for implementing a login plugin.
@@ -58,7 +58,7 @@ The following methods are helper methods used to understand the state of a user:
   func isPerformingAuthorizationFlow() -> Bool
 ```
 
-### User token
+### User Token
 The following methods are used for getting and setting user tokens.
 
 The set user token function can be optionally exposed in order to allow webviews and react native views to set the token. If this function recieves `nil` - it should clear the user token.
