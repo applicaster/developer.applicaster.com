@@ -83,6 +83,6 @@ Browse the following content to learn more about Zapp-pipes:
 * [Feed API](/Zapp-Pipes/5.-Feed-API.md): this section describes the expected output format for feeds returned by a provider
 * [How to publish a provider in Zapp](/Zapp-Pipes/6.-How-to-publish.md): this section explains how to publish a provider in zapp
 * [How to configure the app](/Zapp-Pipes/7.-Connect-to-Zapp.md): this section explains how to set up your app to use Zapp-pipes
-* [Step by step tutorial](/Zapp-Pipes/provider-stepbystep.md): this section will guide you throgh the steps of creating a new data source provider, in this tutorial we will create a WordPress provider
+* [Step by step tutorial](/Zapp-Pipes/provider-stepbystep.md): this section will guide you through the steps of creating a new data source provider, in this tutorial we will create a WordPress provider
 * [Examples](/Zapp-Pipes/8.-Examples.md): can be used in the Feed manager
 * [Protocols](/Zapp-Pipes/11.-Protocols.md): this section contains a list of recommended protocols that datasource providers should implement so as to deliver specific data to the app (advertising, closed captions, authorization requirements, etc)
