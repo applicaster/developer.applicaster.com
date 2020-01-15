@@ -84,7 +84,7 @@ This complience method is usually called before a screen or a player to validate
 To read more about `ZPPlayableItem` please refer to the iOS Player plugin document [Here](/player/iOS.md)
 
 ## The Provider Logic Protocol {#provider}
-The `ZPLoginProviderLogicProtocol` is a protocol meant for standarizing the structure and calls through a flow.
+The `ZPLoginProviderLogicProtocol` is a protocol meant for standardizing the structure and calls through a flow.
 This protocol is meant to be implemented in cases where the login interface is provided through React Native and is passed at the initialization of a React Native `ZPLoginReactNativeBridge` initialization method.
 
 Here are the functions included in this protocol:
