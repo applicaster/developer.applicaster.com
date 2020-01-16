@@ -1,8 +1,37 @@
 # Configuration Fields
 
+> All fields inside the [sections](#available-sections) adhere to the same structure:
+
+```json
+{
+  ...
+  general: {                        // Section key
+    fields: [
+      {
+        "key": "my_field_key",      // Required: unique identifier
+        "label": "My Field",        // Required user-facing label
+        "type": "select",           // Required: any of the available field types
+        "initial_value": "foobar",  // Recommended: Initial value
+        "placeholder": "Enter URL", // Recommended: placeholder
+        "label_tooltip": "...",     // Recommended: tooltip text
+        ...                         // Additional required keys, depending on field type
+      },
+      {
+        "key": "my_other_field_key",
+        ...                         // etc. see above ^
+      }
+    ]
+  }
+```
+
+# Table of contents
+
+- [Available Sections](#available-sections)
+- [Reserved Keys](#reserved-keys)
+
 ## Available sections
 
-Each Plugin can have fields inside any of the following sections
+> Each Plugin can have fields inside any of the following sections
 
 - assets
 - data
@@ -10,34 +39,12 @@ Each Plugin can have fields inside any of the following sections
 - styles
 - rules
 
-## Structure: fields inside a section
+---
 
-```json
-{
-  ...
-  general: {
-    fields: [
-      {
-        "key": "my_field_key",      // REQUIRED: unique identifier
-        "label": "My Field",        // REQUIRED user-facing label
-        "type": "select",           // REQUIRED: any of the available field types
-        "initial_value": "foobar",  // RECOMMENDED: Initial value
-        "placeholder": "Enter URL", // RECOMMENDED: placeholder
-        "label_tooltip": "..."      // RECOMMENDED: tooltip text
-        ...                         // additional objects, REQUIRED or OPTIONAL, depending on field type
-      },
-      {
-        "key": "my_other_field_key"
-        ...                         // etc. see above ^
-      }
-    ]
-  }
-```
-
-## Available field types
+## Reserved keys
 
 - TBD
 
-## Reserved field types
+## Available field types
 
 - TBD
