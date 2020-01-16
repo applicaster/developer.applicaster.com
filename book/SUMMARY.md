@@ -31,7 +31,6 @@
 ## Zapp Plugin Manifest
 
 - [Plugin Manifest](/zappifest/plugins-manifest-format.md)
-- [Configuration Fields](plugins-manifest/configuration-fields.md)
 - [Zappifest Tool](/zappifest/zappifest.md)
 
 ## Zapp Plugin Types
