@@ -13,5 +13,6 @@ The applicaster player is a full fledged player implementing all of the optional
 
 * [iOS](/player/iOS.md)
 * [Android](/player/Android.md)
+* [TV Quick-Brick based platforms](/player/quickbrick-tv-player.md)
 * [Supporting Video Ads in Datasources](/player/ads-in-datasource.md)
 * [Player Analytics](/player/player-analytics.md)

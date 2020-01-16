@@ -63,6 +63,8 @@
   - [How to connect the provider to the app](/Zapp-Pipes/7.-Connect-to-Zapp.md)
   - [Debugging](/Zapp-Pipes/10.-Debugging.md)
   - [Feeds Made Easy](/Zapp-Feed/2.-Create-Functional-Demo-Feeds.md)
+  - [Protocols](/Zapp-Pipes/11.-Protocols.md)
+  	- [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
 - [Navigation Bar Plugins](/ui-builder/NavigationBarPluginsIntro.md)
   - [iOS](/ui-builder/ios/NavigatioBarPlugins.md)
   - [Android](/ui-builder/android/NavigationBarPlugin.md)
@@ -81,6 +83,7 @@
 - [Player plugins](/player/intro.md)
   - [iOS](/player/iOS.md)
   - [Android](/player/Android.md)
+  - [TV Quick-Brick based platforms](/player/quickbrick-tv-player.md)
   - [Supporting Ads in Datasources](/player/ads-in-datasource.md)
   - [Text Tracks](/player/text-tracks-from-dsp.md)
   - [Player Analytics](/player/player-analytics.md)
@@ -123,6 +126,9 @@
 - [Screen Hook](/plugins/general-abilities/screen-hooks/screen-hooks-general.md)
   - [iOS](/plugins/general-abilities/screen-hooks/ios/screen-hook-ios.md)
   - [Android](/plugins/general-abilities/screen-hooks/android/screen-hook-android.md)
+- [Video Content Download](/plugins/general-abilities/video-content-download/video-content-download-general.md)
+  - [iOS](/plugins/general-abilities/video-content-download/ios/video-content-download-ios.md)
+- [Navigation and Refresh](/plugins/general-abilities/refresh-and-navigation/refresh-and-navigation.md)
 
 # Applicaster Video Platform
 
