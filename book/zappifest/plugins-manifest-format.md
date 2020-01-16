@@ -394,6 +394,21 @@ Here is the example:
   },
 ```
 
+- ** screen_selector**
+ -- This selector will allow the user to select a screen in the current layout, and return its `external_id`.
+ Example : 
+```
+"general": {
+    "fields": [
+        {
+            "key": "target_screen_id",
+            "label": "Target Screen",
+            "type": "screen_selector"
+        }
+    ]  
+}
+```
+
 ###### Bundled Assets
 If there is a need to add image assets that should be compiled in the app (not remotely configured) you can use the following fields:
 
