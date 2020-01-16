@@ -32,6 +32,7 @@
 
 - [Plugin Manifest](/zappifest/plugins-manifest-format.md)
 - [Configuration Fields](plugins-manifest/configuration-fields.md)
+  - [Text Input](plugins-manifest/fields/text-input.md)
   - [Font Selectors](plugins-manifest/fields/font-selectors.md)
 - [Zappifest Tool](/zappifest/zappifest.md)
 
@@ -180,4 +181,4 @@
   - [Utilities](/quick-brick/Api/Utils.md)
 - [Plugin migration guide](/quick-brick/migration-guide.md)
 - [Using Cell Styles Builder](/quick-brick/cell-styles-builder/layouts-with-cell-builder-plugins.md)
-- [Focus manager on TV platforms](/quick-brick/focus-manager/focus-manager.md) -->
+- [Focus manager on TV platforms](/quick-brick/focus-manager/focus-manager.md) --> -->

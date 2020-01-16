@@ -8,11 +8,47 @@ Single Bundle is a plugin that makes the implementation of multiple React Native
 ### PLUGIN PREPERATION
 
 #### Add "Single Bundle Plugin" to the Project Configuration
-Add  `"single bundle plugin"`  and from the available list of versions of `react-native`, `react` and `react-native-zapp-bridge` *(The Applicaster standard bridge for communicating between React Native and the Applicaster SDK)* please select the combination which is supported by your plugins.
+Add  `"single bundle plugin"` and from the available list of versions of `react-native`, `react` and `react-native-zapp-bridge` *(The Applicaster standard bridge for communicating between React Native and the Applicaster SDK)* please select the combination which is supported by your plugins.
+
+The following JSON extract from the Single Bundle plugin manifest describes its configuration parameters.
+
+```
+"custom_configuration_fields":[ 
+    { 
+        "key":"react-native",
+        "tooltip_text":"React Native Version",
+        "default":"0.5.10",
+        "options":[ 
+            "0.59.0",
+            "0.59.10"
+        ],
+        "type":"dropdown"
+    },
+    { 
+        "key":"react",
+        "tooltip_text":"React Version",
+        "default":"16.8.3",
+        "options":[ 
+            "16.8.0",
+            "16.8.3"
+        ],
+        "type":"dropdown"
+    },
+    { 
+        "key":"react-native-zapp-bridge",
+        "tooltip_text":"React Native Zapp Bridge",
+        "default":"2.7.4",
+        "options":[ 
+            "2.7.4"
+        ],
+        "type":"dropdown"
+    }
+]
+```
 
 ![Single Bundle Configuration]( https://assets-production.applicaster.com/applicaster-employees/zapp_team/anna_bauza/react_native/single-bundle-config.png  "Single Bundle Configuration")
 
-Save the plugin configuration and rebuild.
+Save the plugin configuration and rebuild. The selected values will be set for all React Native plugins in the project.
 
 **Please note** that rebuilding is necessary every time when you change versions or add/remove React Native plugins.
 

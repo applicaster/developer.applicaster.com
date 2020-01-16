@@ -1,9 +1,9 @@
 # Font selectors
 
-| type                      | sections | screenshot                                                  |
-| ------------------------- | -------- | ----------------------------------------------------------- |
-| **ios_font_selector**     | any      | <img src="../assets/ios_font_selector.png" width=220 />     |
-| **android_font_selector** | any      | <img src="../assets/android_font_selector.png" width=220 /> |
+| type                      | sections                             | value type | screenshot                                                  |
+| ------------------------- | ------------------------------------ | ---------- | ----------------------------------------------------------- |
+| **ios_font_selector**     | assets, data, general, styles, rules | `string`   | <img src="../assets/ios_font_selector.png" width=220 />     |
+| **android_font_selector** | assets, data, general, styles, rules | `string`   | <img src="../assets/android_font_selector.png" width=220 /> |
 
 ### Description
 
@@ -21,11 +21,12 @@ Both field types create a `select` dropdown automatically populated with:
       "key": "my_field_key",                              // Required
       "type": "ios_font_selector|android_font_selector",  // Required
       "placeholder": "select font"                        // Recommended
+      "label_tooltip": "...",                             // Recommended
       ...
 
 ```
 
 ### Notes
 
-- It is possible to provide an initial value
+- It is possible to provide an initial value (String)
 - Do not provide any `"options"` object in the field's configuration

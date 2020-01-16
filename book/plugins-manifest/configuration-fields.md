@@ -1,11 +1,31 @@
 # Configuration Fields
 
-## Table of contents
+### Table of contents
 
-- [Structure](#structure)
-- [Available Sections](#available-sections)
 - [Supported Field Types](#supported-field-types)
 - [Special Field Types](#special-field-types)
+- [Available Sections](#available-sections)
+- [Structure](#structure)
+
+## Supported field types
+
+- [Text Input](/plugins-manifest/fields/text-input.md)
+- ...
+
+## Special field types
+
+- [Font Selectors](/plugins-manifest/fields/font-selectors.md)
+- ...
+
+## Available sections
+
+> Each Plugin can have fields inside any of the following sections
+
+- assets
+- data
+- general
+- styles
+- rules
 
 ## Structure
 
@@ -32,21 +52,3 @@
     ]
   }
 ```
-
-## Available sections
-
-> Each Plugin can have fields inside any of the following sections
-
-- assets
-- data
-- general
-- styles
-- rules
-
-## Supported field types
-
-- TBD
-
-## Special field types
-
-- [Font Selectors](/plugins-manifest/fields/font-selectors.md)
