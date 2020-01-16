@@ -1,5 +1,14 @@
 # Configuration Fields
 
+## Table of contents
+
+- [Structure](#structure)
+- [Available Sections](#available-sections)
+- [Supported Field Types](#supported-field-types)
+- [Special Field Types](#special-field-types)
+
+## Structure
+
 > All fields inside the [sections](#available-sections) adhere to the same structure:
 
 ```json
@@ -24,11 +33,6 @@
   }
 ```
 
-# Table of contents
-
-- [Available Sections](#available-sections)
-- [Reserved Keys](#reserved-keys)
-
 ## Available sections
 
 > Each Plugin can have fields inside any of the following sections
@@ -39,12 +43,10 @@
 - styles
 - rules
 
----
-
-## Reserved keys
+## Supported field types
 
 - TBD
 
-## Available field types
+## Special field types
 
-- TBD
+- [Font Selectors](/plugins-manifest/fields/font-selectors.md)

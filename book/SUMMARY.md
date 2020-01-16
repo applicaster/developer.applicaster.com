@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-- [Code Of Conduct](/Code-Of-Conduct.md)
+<!-- - [Code Of Conduct](/Code-Of-Conduct.md)
 - [Getting Started with Zapp Plugins](/getting-started/zapp-plugins.md)
   - [Plugin types](/getting-started/plugin-types.md)
   - [Plugin abilities](/getting-started/plugin-abilities.md)
@@ -24,7 +24,7 @@
   - [Update repository structure in Zapp-iOS SDK v13.0](whats_new/20191120-update-zapp-ios-repository-structure.md)
   - [Get ready for Zapp Android SDK 11.2.0](whats_new/20191112-get-ready-for-zapp-android-11.2.0.md)
   - [Migrating your plugin to Swift 5.0 with Zapp-iOS SDK v12.0](whats_new/20190818-swift-5.0-migration.md)
-- [Contact Us & Help Desk](/contact_us/help_desk.md)
+- [Contact Us & Help Desk](/contact_us/help_desk.md) -->
 
 # Zapp Plugins
 
@@ -32,9 +32,10 @@
 
 - [Plugin Manifest](/zappifest/plugins-manifest-format.md)
 - [Configuration Fields](plugins-manifest/configuration-fields.md)
+  - [Font Selectors](plugins-manifest/fields/font-selectors.md)
 - [Zappifest Tool](/zappifest/zappifest.md)
 
-## Zapp Plugin Types
+<!-- ## Zapp Plugin Types
 
 - [Screen Plugins](/screen/screen-plugin-general.md)
   - [iOS](/screen/ios/screen-plugin-ios.md)
@@ -179,4 +180,4 @@
   - [Utilities](/quick-brick/Api/Utils.md)
 - [Plugin migration guide](/quick-brick/migration-guide.md)
 - [Using Cell Styles Builder](/quick-brick/cell-styles-builder/layouts-with-cell-builder-plugins.md)
-- [Focus manager on TV platforms](/quick-brick/focus-manager/focus-manager.md)
+- [Focus manager on TV platforms](/quick-brick/focus-manager/focus-manager.md) -->
