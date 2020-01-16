@@ -1,22 +1,33 @@
 # Applicaster Developer Portal
 
 ## About
+
 The Applicaster Developer Portal goal is to be the home for all the Zapp Plugins technical documentation and guides and legacy applicaster.developer.com content.
 The main sections in the book are Zapp-pipes, Zapp React Native Plugins, Zapp-iOS & Zapp-Android.
 
-Any change or adding new doc is done by creating a [Pull Request](https://help.github.com/articles/about-pull-requests/) and having it [reviewed by GitHub "review" process](https://help.github.com/articles/about-pull-request-reviews/). 
+Any change or adding new doc is done by creating a [Pull Request](https://help.github.com/articles/about-pull-requests/) and having it [reviewed by GitHub "review" process](https://help.github.com/articles/about-pull-request-reviews/).
 
-## The book structure 
+## The book structure
+
 The book content is located at the `book` folder. The main file that defines the book structure is `/book/SUMMARY.md`.
 To find out more on how to arrange the content read the following:
 
-* [Directory Structure](https://toolchain.gitbook.com/structure.html)
-* [Pages and Summary](https://toolchain.gitbook.com/pages.html) 
+- [Directory Structure](https://toolchain.gitbook.com/structure.html)
+- [Pages and Summary](https://toolchain.gitbook.com/pages.html)
 
-## How to update existing document 
+---
+
+## Running locally
+
+- `npm start` + open `http://localhost:4000/`
+- Optional: to override default port, use `PORT=4001 npm start`
+
+## How to update existing document
+
 Updating existing document is a very easy task, just clone the repo, create a new branch, change the doc, push it and create a new Pull Request (don't forget to assign it to review).
 
 ## How to add a new document
+
 Adding a new document can be easily done by the following steps:
 
 1. Clone the repo.
@@ -29,5 +40,6 @@ Adding a new document can be easily done by the following steps:
 8. Create the pull request.
 
 ## If NPM Install fails
+
 There is a known issue with the gitbook stack that `npm install` might fail.
 In this please delete your modules directory (`rm -rf node_modules/`)
