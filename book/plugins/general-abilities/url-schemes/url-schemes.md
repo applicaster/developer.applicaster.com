@@ -4,7 +4,7 @@ The Zapp system allows that one or more URL schemes are defined for each version
 
 ## Typical Use
 
-Plugin Url schemes are useful for launching the plugin by using a link from a HTML page or a push notification.
+Plugin Url schemes are useful for launching the plugin by using a link from a HTML page or a push notification. They are also used in App Builder to specify what page to open after a button click and for plugins to open other screens, for example after a hook or an onboarding page.
 
 ## Plugin Scheme Interface
 
