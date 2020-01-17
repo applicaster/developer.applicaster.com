@@ -133,6 +133,7 @@
 - [Video Content Download](/plugins/general-abilities/video-content-download/video-content-download-general.md)
   - [iOS](/plugins/general-abilities/video-content-download/ios/video-content-download-ios.md)
 - [Navigation and Refresh](/plugins/general-abilities/refresh-and-navigation/refresh-and-navigation.md)
+- [URL Schemes](/plugins/general-abilities/url-schemes/url-schemes.md)
 
 # Applicaster Video Platform
 
