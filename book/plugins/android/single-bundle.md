@@ -3,35 +3,74 @@
 ![single-bundle.png](./single-bundle.png)
 
 ### OVERVIEW
-Single bundle is a plugin that makes multiple react native components implementation stable, increase performance and it is more efficient and easy to handle in a native app. This plugin gives ability to change version of react native and react. It also aggregate all react native plugins into one single bundle and upload it to S3. Plugins becomes modules under the names specified as plugin identifiers from plugin configuration.
+Single Bundle is a plugin that makes the implementation of multiple React Native components stable, it increases performance and it is more efficient and easy to handle in a native app. This plugin gives the ability to change the versions of React Native and React. It also aggregates all the React Native plugins into a single bundle and it uploads it to S3. Plugins become modules under the names specified as plugin identifiers from the plugin configuration.
 
-### PLUGINS PREPERATIONS
+### PLUGIN PREPERATION
 
-#### Add "Single Bundle Plugin" to project configuration
-Add  `"single bundle plugin"`  and from available list of versions of `react-native`, `react` and `react-native-zapp-bridge` *(Applicaster standard bridge for communicating react native with Applicaster SDK)* please select the one which is supported by your plugins.
+#### Add "Single Bundle Plugin" to the Project Configuration
+Add  `"single bundle plugin"` and from the available list of versions of `react-native`, `react` and `react-native-zapp-bridge` *(The Applicaster standard bridge for communicating between React Native and the Applicaster SDK)* please select the combination which is supported by your plugins.
+
+The following JSON extract from the Single Bundle plugin manifest describes its configuration parameters.
+
+```
+"custom_configuration_fields":[ 
+    { 
+        "key":"react-native",
+        "tooltip_text":"React Native Version",
+        "default":"0.5.10",
+        "options":[ 
+            "0.59.0",
+            "0.59.10"
+        ],
+        "type":"dropdown"
+    },
+    { 
+        "key":"react",
+        "tooltip_text":"React Version",
+        "default":"16.8.3",
+        "options":[ 
+            "16.8.0",
+            "16.8.3"
+        ],
+        "type":"dropdown"
+    },
+    { 
+        "key":"react-native-zapp-bridge",
+        "tooltip_text":"React Native Zapp Bridge",
+        "default":"2.7.4",
+        "options":[ 
+            "2.7.4"
+        ],
+        "type":"dropdown"
+    }
+]
+```
+
 ![Single Bundle Configuration]( https://assets-production.applicaster.com/applicaster-employees/zapp_team/anna_bauza/react_native/single-bundle-config.png  "Single Bundle Configuration")
-Save plugin configuration and rebuild.
-**Please note** rebuild is necessary every time you change versions or adding/removing other react native plugins.
+
+Save the plugin configuration and rebuild. The selected values will be set for all React Native plugins in the project.
+
+**Please note** that rebuilding is necessary every time when you change versions or add/remove React Native plugins.
 
 
-#### Make sure plugins support selected versions
-Your React Native plugins need to be built and published to NPM for selected versions of react and react-native.
+#### Make Sure that the Plugins Support the Selected Versions
+Your React Native plugins have to be built and published to `npm` for the selected versions of react and react-native.
 
 
-#### Migrate your plugins
-In order to make Single Bundle aggregator work please make sure all your react native plugins has been migrated and published to npm as following [Migration Guide](../../quick-brick/migration-guide.md) instructions advice.
+#### Migrate your Plugins
+In order to make the Single Bundle aggregator work please make sure that all your React Native plugins have been migrated and published to `npm` by following the instructions from the [Migration Guide](../../quick-brick/migration-guide.md).
 
-### RUNNING LOCAL SERVER FOR SINGLE BUNDLE
+### RUNNING A LOCAL SERVER FOR SINGLE BUNDLE
 
-In Zapp-Android folder execute command :
+In the Zapp-Android folder execute the command:
 `bundle exec rake single_bundle_aggregator:build`.
 
 
-The `Rake` task will create a folder `single-bundle-aggregator` - this is your local server for single bundle.
+The `Rake` task will create a folder `single-bundle-aggregator`. This is your local server for Single Bundle.
 
-If you wish to debug package inside your single-bundle please place the package folder inside `single-bundle-aggregator/packages`. Please edit `single-bundle-aggregator/index.js` to give information about local packages.
+If you wish to debug a package inside your single-bundle please place the package folder inside `single-bundle-aggregator/packages`. Please edit `single-bundle-aggregator/index.js` adding information about local packages.
 
-Local single bundle is ready to run.
+Your local Single Bundle is ready to run.
 
 ### PLUGIN IS MISSING EXPECTED VERSIONS?
-The Zapp Team can add version when territories have tried specific version in development and confirm it is working.
+Zapp Team can add new versions when territories have tried a specific version in development and they confirm that it is working.

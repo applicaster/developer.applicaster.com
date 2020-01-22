@@ -16,8 +16,6 @@
   - [Deploy and Submit](/getting-started/deploy-and-submit.md)
     - [iOS - CocoaPods](/getting-started/ios-podspec.md)
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
-    - [Zapp Plugins Manifest](/zappifest/plugins-manifest-format.md)
-      - [Zappifest Tool](/zappifest/zappifest.md)
     - [Using One Code Base for Multiple Plugins](/plugins/general-abilities/multiple-types-one-repo/multiple-types-one-repo.md)
   - [Download a development project](/getting-started/download-development-project.md)
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
@@ -31,7 +29,13 @@
 
 # Zapp Plugins
 
+## Zapp Plugin Manifest
+
+- [Plugin Manifest](/zappifest/plugins-manifest-format.md)
+- [Zappifest Tool](/zappifest/zappifest.md)
+
 ## Zapp Plugin Types
+
 - [Screen Plugins](/screen/screen-plugin-general.md)
   - [iOS](/screen/ios/screen-plugin-ios.md)
   - [Android](/screen/android/screen-plugin-android.md)
@@ -130,10 +134,12 @@
 - [Video Content Download](/plugins/general-abilities/video-content-download/video-content-download-general.md)
   - [iOS](/plugins/general-abilities/video-content-download/ios/video-content-download-ios.md)
 - [Navigation and Refresh](/plugins/general-abilities/refresh-and-navigation/refresh-and-navigation.md)
+- [URL Schemes](/plugins/general-abilities/url-schemes/url-schemes.md)
 
 # Applicaster Video Platform
 
 ## Applicaster Video Platform
+
 - [Applicaster Video Platform](/applicaster-video-platform/intro.md)
   - [VOD Ingestion VIA XML](/applicaster-video-platform/content-ingestion/vod-ingestion-xml/vod_via_xml.md)
   - [VOD Ingestion VIA RSS](/applicaster-video-platform/content-ingestion/vod-ingestion-rss/RSSVODIngestion.md)
@@ -149,19 +155,19 @@
 
 - [Introduction](/quick-brick/intro.md)
 - [Apple TV](/quick-brick/tvOS/intro.md)
-	- [Plugins](/quick-brick/tvOS/Plugins/intro.md)
-		- [Analytics](/quick-brick/tvOS/Plugins/Analytics/intro.md)
-            - [Plugin creation guide](/quick-brick/tvOS/Plugins/Analytics/GeneralAnalyticsHowCreate.md)
-            - [Google Analytics](/quick-brick/tvOS/Plugins/Analytics/GoogleAnalytics/GoogleAnalytics.md)
-        - [Player](quick-brick/tvOS/Plugins/Video/intro.md)
-            - [Plugin creation guide](quick-brick/tvOS/Plugins/Video/VideoPluginsHowCreate.md)
-            - [Default Player](quick-brick/tvOS/Plugins/Video/DefaultPlayer/DefaultPlayer.md)
-        - [Player Dependent](quick-brick/tvOS/Plugins/PlayerDependents/intro.md)
-            - [Plugin creation guide](quick-brick/tvOS/Plugins/PlayerDependents/DependentPluginsHowCreate.md)
-            - [GoogleIMA](quick-brick/tvOS/Plugins/PlayerDependents/VideoAds/GoogleIMA/GoogleIMA.md)
-	- [Environment](/quick-brick/tvOS/Environment/intro.md)
-    	- [Apple TV Debug](/quick-brick/tvOS/Environment/DebugBuildIntegration.md)
-        - [Apple TV Release](quick-brick/tvOS/Environment/ReleaseBuildIntegration.md)
+  - [Plugins](/quick-brick/tvOS/Plugins/intro.md)
+    - [Analytics](/quick-brick/tvOS/Plugins/Analytics/intro.md)
+      - [Plugin creation guide](/quick-brick/tvOS/Plugins/Analytics/GeneralAnalyticsHowCreate.md)
+      - [Google Analytics](/quick-brick/tvOS/Plugins/Analytics/GoogleAnalytics/GoogleAnalytics.md)
+    - [Player](quick-brick/tvOS/Plugins/Video/intro.md)
+      - [Plugin creation guide](quick-brick/tvOS/Plugins/Video/VideoPluginsHowCreate.md)
+      - [Default Player](quick-brick/tvOS/Plugins/Video/DefaultPlayer/DefaultPlayer.md)
+      - [Player Dependent](quick-brick/tvOS/Plugins/PlayerDependents/intro.md)
+        - [Plugin creation guide](quick-brick/tvOS/Plugins/PlayerDependents/DependentPluginsHowCreate.md)
+        - [GoogleIMA](quick-brick/tvOS/Plugins/PlayerDependents/VideoAds/GoogleIMA/GoogleIMA.md)
+  - [Environment](/quick-brick/tvOS/Environment/intro.md)
+  - [Apple TV Debug](/quick-brick/tvOS/Environment/DebugBuildIntegration.md)
+  - [Apple TV Release](quick-brick/tvOS/Environment/ReleaseBuildIntegration.md)
 - [Beta Guidelines & information](/quick-brick/Beta-guidelines.md)
 - [Setup your project](/quick-brick/Setup.md)
 - [Inside QuickBrick](/quick-brick/Inside-QuickBrick.md)
