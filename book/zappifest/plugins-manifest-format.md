@@ -355,6 +355,23 @@ Field Key         | Description
 ###### General Fields:
 - **ios_font_selector**: Will populate fonts dropdown with iOS system fonts and Zapp app custom uploaded fonts
 - **android_font_selector**: Will populate fonts dropdown with Android system fonts and Zapp app custom uploaded fonts
+- **samsung_tv_font_selector**: Will populate fonts dropdown with Samsung TV system fonts and Zapp app custom uploaded fonts
+- **tvos_font_selector**: Will populate fonts dropdown with TVOS system fonts  and Zapp app custom uploaded fonts
+- **roku_font_selector**: Will populate fonts dropdown with Roku system fonts and Zapp app custom uploaded fonts
+- **lg_tv_font_selector**: Will populate fonts dropdown with LG TV system fonts  and Zapp app custom uploaded fonts
+- **web_font_selector**: Will populate fonts dropdown with WEB system fonts and Zapp app custom uploaded fonts
+Here is the example, in the `custom_configuration_fields` will be shown only the relevat platform font, the rest will be ignored if configured:
+
+```
+"fields": [
+  {
+    "key": "ios_font_family",
+    "label": "iOS font",
+    "options": [],
+    "type": "ios_font_selector"
+  }
+]
+```
 - **nav_bar_selector**:
  --  This selector is allowing to override default navigation bar for a screen.
  --  Each screen in the app can have a different navigation bar.
@@ -396,7 +413,7 @@ Here is the example:
 
 - ** screen_selector**
  -- This selector will allow the user to select a screen in the current layout, and return its `external_id`.
- Example : 
+ Example :
 ```
 "general": {
     "fields": [
@@ -405,7 +422,7 @@ Here is the example:
             "label": "Target Screen",
             "type": "screen_selector"
         }
-    ]  
+    ]
 }
 ```
 
