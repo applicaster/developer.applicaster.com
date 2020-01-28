@@ -363,14 +363,29 @@ Field Key         | Description
 Here is the example, in the `custom_configuration_fields` will be shown only the relevat platform font, the rest will be ignored if configured:
 
 ```
-"fields": [
+"general": {
+  "fields": [
+    {
+      "key": "any_key_you_want",
+      "label": "iOS font",
+      "options": [],
+      "type": "ios_font_selector"
+    }
+  ]
+}
+```
+or
+
+```
+"custom_configuration_fields": [
   {
-    "key": "ios_font_family",
-    "label": "iOS font",
-    "options": [],
-    "type": "ios_font_selector"
+     "key": "any_key_you_want",
+      "label": "iOS font",
+      "options": [],
+      "type": "ios_font_selector"
   }
 ]
+
 ```
 - **nav_bar_selector**:
  --  This selector is allowing to override default navigation bar for a screen.
