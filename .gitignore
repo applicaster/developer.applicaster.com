@@ -3,3 +3,4 @@
 book/_book
 /node_modules
 .DS_Store
+.idea/
