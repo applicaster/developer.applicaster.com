@@ -20,6 +20,7 @@
   - [Download a development project](/getting-started/download-development-project.md)
   - [Public Plugin Submission Guideline](/plugins-guidelines/plugin_submission_guideline.md)
 - [What's New](whats_new/whats_new.md)
+  - [DSP Protocols](whats_new/20191229-dsp-protocols.md)
   - [Migrating your plugin to Swift 5.1 with Zapp-iOS SDK v13.0](whats_new/20191124-swift-5.1-migration.md)
   - [Update repository structure in Zapp-iOS SDK v13.0](whats_new/20191120-update-zapp-ios-repository-structure.md)
   - [Get ready for Zapp Android SDK 11.2.0](whats_new/20191112-get-ready-for-zapp-android-11.2.0.md)
@@ -71,7 +72,11 @@
   - [Debugging](/Zapp-Pipes/10.-Debugging.md)
   - [Feeds Made Easy](/Zapp-Feed/2.-Create-Functional-Demo-Feeds.md)
   - [Protocols](/Zapp-Pipes/11.-Protocols.md)
-    - [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
+  	- [Video Advertising](/Zapp-Pipes/protocols/video_advertising_protocol.md)
+  	- [Video Text Tracks](/Zapp-Pipes/protocols/video_text_tracks_protocol.md)
+  	- [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
+  - [DataSource for Roku TV](/Zapp-Pipes/12.-Datasource-for-rokuTV.md)  
+
 - [Navigation Bar Plugins](/ui-builder/NavigationBarPluginsIntro.md)
   - [iOS](/ui-builder/ios/NavigatioBarPlugins.md)
   - [Android](/ui-builder/android/NavigationBarPlugin.md)
@@ -91,8 +96,6 @@
   - [iOS](/player/iOS.md)
   - [Android](/player/Android.md)
   - [TV Quick-Brick based platforms](/player/quickbrick-tv-player.md)
-  - [Supporting Ads in Datasources](/player/ads-in-datasource.md)
-  - [Text Tracks](/player/text-tracks-from-dsp.md)
   - [Player Analytics](/player/player-analytics.md)
 - [Login Plugins](/login/intro.md)
   - [iOS](/login/iOS.md)
@@ -136,6 +139,7 @@
 - [Video Content Download](/plugins/general-abilities/video-content-download/video-content-download-general.md)
   - [iOS](/plugins/general-abilities/video-content-download/ios/video-content-download-ios.md)
 - [Navigation and Refresh](/plugins/general-abilities/refresh-and-navigation/refresh-and-navigation.md)
+- [URL Schemes](/plugins/general-abilities/url-schemes/url-schemes.md)
 
 # Applicaster Video Platform
 
