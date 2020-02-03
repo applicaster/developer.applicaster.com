@@ -34,6 +34,7 @@
 - [Plugin Manifest](/zappifest/plugins-manifest-format.md)
 - [Configuration Fields](plugins-manifest/configuration-fields.md)
   - [Text Input](plugins-manifest/fields/text-input.md)
+  - [Number Input](plugins-manifest/fields/number-input.md)
   - [Font Selectors](plugins-manifest/fields/font-selectors.md)
 - [Zappifest Tool](/zappifest/zappifest.md)
 
@@ -75,7 +76,7 @@
   	- [Video Advertising](/Zapp-Pipes/protocols/video_advertising_protocol.md)
   	- [Video Text Tracks](/Zapp-Pipes/protocols/video_text_tracks_protocol.md)
   	- [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
-  - [DataSource for Roku TV](/Zapp-Pipes/12.-Datasource-for-rokuTV.md)  
+  - [DataSource for Roku TV](/Zapp-Pipes/12.-Datasource-for-rokuTV.md)
 
 - [Navigation Bar Plugins](/ui-builder/NavigationBarPluginsIntro.md)
   - [iOS](/ui-builder/ios/NavigatioBarPlugins.md)
