@@ -11,6 +11,7 @@
 
 - [Text Input](/plugins-manifest/fields/text-input.md)
 - [Number Input](/plugins-manifest/fields/number-input.md)
+- [Inline Input](/plugins-manifest/fields/inline-input.md)
 - ...
 
 ## Special field types
