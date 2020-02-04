@@ -191,7 +191,7 @@ Field Key                   | Description
 **min_zapp_sdk**            | minimum zapp version required for the field, when the plugin is a multi platform, please specify the the platform in the following format: `"min_zapp_sdk": { "ios": "1.0.0", "android": "1.0.0" }`
 **whitelisted_account_ids** | Array of Applicaster's account_ids as individual strings. To find the relevent account_ids go to `accounts.applicaster.com`. *Please note - this field is only updated when creating a new plugin. Any further changes must be made by admins in the Zapp portal.*
 **ui_builder_support**      | Indicates if the plugin should be used in Zapp's UI Builder apps.
-**targets**      | Array type. Some platforms (like Android and Android TV) enables to develop the same plugin for mobile and TV. This param indicates if this plugin should be used on mobile or tv or both devise targets.  Currently the valid options is ["mobile"], ["tv"] or ["mobile", "tv"].
+**targets**      | Array type. Some platforms (like Android and Android TV) enables to develop the same plugin for mobile and TV. This param indicates if this plugin should be used on mobile or tv or both device targets.  Currently the valid options is ["mobile"], ["tv"] or ["mobile", "tv"].
 
 
 #### Optional:
@@ -234,8 +234,9 @@ Field Key                         | Description
 **advertising**                   | An optional section the defines plugin data source configuration. Read more [here](#custom-configuration-sections).
 **preload**                   | An optional boolean key, that defines if plugin can be hooked (loaded), before the screen loads
 **localizations**						  | This section defines plugin localizations configuration, the languages is taken from app family configured languages. All the fields types in this section are `textarea`, and there is no need to mention field type in the manifest.  Read more [here](#custom-configuration-sections)
+**ui_frameworks**						  | Array type. Used to specify which UI Platforms are supported by the plugin. Available options: `["native", "quickbrick"]`. Default value: `["native"]`. Used to filter & show available plugins per app version in the Plugin Gallery.
 
-<a name=localizations"></a>
+
 ##### Localizations Example
 
 ```
@@ -426,9 +427,11 @@ Here is the example:
   },
 ```
 
-- ** screen_selector**
- -- This selector will allow the user to select a screen in the current layout, and return its `external_id`.
- Example :
+- **screen_selector**
+-- This selector will allow the user to select a screen in the current layout, and return its `external_id`.
+
+Example:
+
 ```
 "general": {
     "fields": [
