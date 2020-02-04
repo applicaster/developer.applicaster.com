@@ -47,7 +47,8 @@ If you are adding files or assets in your development pod - run `pod update Your
     1. Go to the version you are working on -> Plugin configuration, find your plugin and add to build.
     2. If you added the plugin in the step above, run the build again following the steps above. 
 2. Download the project, and edit the podfile:
-    1. Comment out your pod under the line `Zapptool pods - Do not remove or change` and add another line pointing to your local version
+    1. Comment out your pod under the line `Zapptool pods - Do not remove or change` and add another line pointing to your local version like
+    `pod '<pod name>', :path => '<path to podspec>'`
     2. If necessary also comment out `target ’NotificationServiceExtension’`
 3. In the downloaded project folder in your terminal program run `pod update <pod name as appears in the podfile> —no-repo-update`
 
