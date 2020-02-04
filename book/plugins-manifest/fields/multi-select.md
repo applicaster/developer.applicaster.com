@@ -1,8 +1,8 @@
-# Text Input
+# Multi Select
 
-| type           | sections                             | value type | screenshot                                       |
-| -------------- | ------------------------------------ | ---------- | ------------------------------------------------ |
-| **text_input** | assets, data, general, styles, rules | `string`   | <img src="../assets/text_input.png" width=220 /> |
+| type             | sections                             | value type | screenshot                                       |
+| ---------------- | ------------------------------------ | ---------- | ------------------------------------------------ |
+| **multi_select** | assets, data, general, styles, rules | `string`   | <img src="../assets/text_input.png" width=220 /> |
 
 ### Description
 
@@ -15,7 +15,7 @@ Creates a text `input`. Initial value is an empty string: `""`
   "fields: [
     {
       "key": "my_field_key",               // Required
-      "type": "text_input",                // Required
+      "type": "multi_select"               // Required
       "initial_value": "foo bar baz",      // Optional
       "label": "My Field",                 // Recommended
       "placeholder": "enter some string",  // Recommended

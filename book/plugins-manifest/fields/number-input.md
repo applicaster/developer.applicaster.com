@@ -6,7 +6,7 @@
 
 ### Description
 
-Creates an `input` that accepts only [numbers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) - both integers and floating points. Initial value is `undefined`.
+A Creates an `input` that accepts only [numbers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) - both integers and floating points. Initial value is `undefined`.
 
 ### Example
 

@@ -20,6 +20,7 @@ Both field types create a `select` dropdown automatically populated with:
     {
       "key": "my_field_key",                              // Required
       "type": "ios_font_selector|android_font_selector",  // Required
+      "label": "My Field",                                // Recommended
       "placeholder": "select font"                        // Recommended
       "label_tooltip": "...",                             // Recommended
       ...
