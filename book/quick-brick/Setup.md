@@ -9,7 +9,7 @@ Please refer to [the environment setup guide](/dev-env/node.md) to set up your n
 
 ### Native
 
-QuickBrick relies on the ZappAppleBuilder & Zapp-Android apps to run on devices or on the emulator. This means that you need to have fully functionnal ZappAppleBuilderS & Zapp-Android environment.
+QuickBrick relies on the ZappAppleBuilder & Zapp-Android apps to run on devices or on the emulator. This means that you need to have fully functionnal ZappAppleBuilder & Zapp-Android environment.
 This includes:
 
 - access to both ZappAppleBuilder & Zapp-Android repos
