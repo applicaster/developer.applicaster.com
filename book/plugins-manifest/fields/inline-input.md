@@ -1,6 +1,4 @@
-inline_input
-
-# Text Input
+# Inline Input
 
 | type             | sections                             | value type | screenshot                                         |
 | ---------------- | ------------------------------------ | ---------- | -------------------------------------------------- |
