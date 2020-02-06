@@ -37,6 +37,7 @@
   - [Number Input](plugins-manifest/fields/number-input.md)
   - [Inline Input](plugins-manifest/fields/inline-input.md)
   - [Multi Select](/plugins-manifest/fields/multi-select.md)
+  - [Tag Select](/plugins-manifest/fields/tag-select.md)
   - [Font Selectors](plugins-manifest/fields/font-selectors.md)
 - [Zappifest Tool](/zappifest/zappifest.md)
 

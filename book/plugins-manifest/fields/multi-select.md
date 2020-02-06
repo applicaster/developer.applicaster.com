@@ -6,7 +6,7 @@
 
 ### Description
 
-Creates an input that allows selection of multiple values. Selected values are shown as green labels. The default value is an empty array (no values).
+Creates an input that allows selection of multiple values. Selected values are shown as green labels. Initial value is an empty `Array`.
 
 ### Example
 
