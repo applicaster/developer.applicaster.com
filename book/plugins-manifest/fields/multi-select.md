@@ -16,7 +16,7 @@ Creates an input that allows selection of multiple values. Selected values are s
     {
       "key": "my_field_key",          // Required
       "type": "multi_select"          // Required
-      "options": [                    // Required (!)
+      "options": [                    // Required
         { "text": "Option One", "value": "option_1" },
         { "text": "Option Two", "value": "option_2" }
         ...

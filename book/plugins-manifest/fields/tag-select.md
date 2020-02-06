@@ -18,7 +18,7 @@ Basically identical to [Tag Select](/plugins-manifest/fields/tag-select.md), the
     {
       "key": "my_field_key",        // Required
       "type": "tag_select"          // Required
-      "options": [                  // Required (!)
+      "options": [                  // Required
         { "text": "Option One", "value": "option_1" },
         { "text": "Option Two", "value": "option_2" }
         ...
@@ -47,7 +47,13 @@ Basically identical to [Tag Select](/plugins-manifest/fields/tag-select.md), the
   - All boxes are black
   - Plugin configuration value is an empty string: `""`
 
-- When the second option selected
+- When the second option is selected
+
   - Input appears with two boxes
   - Box labeled "Option Two" has a green color
-  - Plugin configuration is: `"option_2"`
+  - Plugin configuration value is: `"option_2"`
+
+- When the second option selected and the user removes it
+  - Input appears with two boxes
+  - All boxes are black
+  - ⚠️ Plugin configuration value is: `null` ⚠️

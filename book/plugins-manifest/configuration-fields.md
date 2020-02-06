@@ -12,6 +12,7 @@
 - [Text Input](/plugins-manifest/fields/text-input.md)
 - [Number Input](/plugins-manifest/fields/number-input.md)
 - [Inline Input](/plugins-manifest/fields/inline-input.md)
+- [Select](/plugins-manifest/fields/select.md)
 - [Multi Select](/plugins-manifest/fields/multi-select.md)
 - [Tag Select](/plugins-manifest/fields/tag-select.md)
 - ...
