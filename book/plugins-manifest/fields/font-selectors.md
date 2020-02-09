@@ -1,14 +1,14 @@
 # Font selectors
 
-| type                         | sections                                                          | value type | screenshot                                                  |
-| ---------------------------- | ----------------------------------------------------------------- | ---------- | ----------------------------------------------------------- |
-| **ios_font_selector**        | assets, data, general, styles, rules, custom_configuration_fields | `string`   | <img src="../assets/ios_font_selector.png" width=220 />     |
-| **android_font_selector**    | assets, data, general, styles, rules, custom_configuration_fields | `string`   | <img src="../assets/android_font_selector.png" width=220 /> |
-| **samsung_tv_font_selector** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ""                                                          |
-| **tvos_font_selector**       | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ""                                                          |
-| **roku_font_selector**       | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ""                                                          |
-| **lg_tv_font_selector**      | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ""                                                          |
-| **web_font_selector**        | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ""                                                          |
+| type                         | sections                                                          | value type | screenshot                                  |
+| ---------------------------- | ----------------------------------------------------------------- | ---------- | ------------------------------------------- |
+| **ios_font_selector**        | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ![img](../assets/ios_font_selector.png)     |
+| **android_font_selector**    | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ![img](../assets/android_font_selector.png) |
+| **samsung_tv_font_selector** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ""                                          |
+| **tvos_font_selector**       | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ""                                          |
+| **roku_font_selector**       | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ""                                          |
+| **lg_tv_font_selector**      | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ""                                          |
+| **web_font_selector**        | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ""                                          |
 
 ### Description
 

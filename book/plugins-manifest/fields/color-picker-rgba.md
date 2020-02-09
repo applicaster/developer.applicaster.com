@@ -1,8 +1,8 @@
 # Color Picker RGBA
 
-| type                  | sections                                                          | value type | screenshot                                         |
-| --------------------- | ----------------------------------------------------------------- | ---------- | -------------------------------------------------- |
-| **color_picker_rgba** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | <img src="../assets/color_picker.png" width=220 /> |
+| type                  | sections                                                          | value type | screenshot                         |
+| --------------------- | ----------------------------------------------------------------- | ---------- | ---------------------------------- |
+| **color_picker_rgba** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ![img](../assets/color_picker.png) |
 
 ### Description
 

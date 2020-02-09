@@ -1,8 +1,8 @@
 # Select
 
-| type       | sections                                                          | value type | screenshot                                   |
-| ---------- | ----------------------------------------------------------------- | ---------- | -------------------------------------------- |
-| **select** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | <img src="../assets/select.png" width=220 /> |
+| type       | sections                                                          | value type | screenshot                   |
+| ---------- | ----------------------------------------------------------------- | ---------- | ---------------------------- |
+| **select** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ![img](../assets/select.png) |
 
 ### Description
 

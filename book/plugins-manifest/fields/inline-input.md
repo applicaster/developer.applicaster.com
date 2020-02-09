@@ -1,8 +1,8 @@
 # Inline Input
 
-| type             | sections                                                          | value type | screenshot                                         |
-| ---------------- | ----------------------------------------------------------------- | ---------- | -------------------------------------------------- |
-| **inline_input** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | <img src="../assets/inline_input.png" width=220 /> |
+| type             | sections                                                          | value type | screenshot                         |
+| ---------------- | ----------------------------------------------------------------- | ---------- | ---------------------------------- |
+| **inline_input** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ![img](../assets/inline_input.png) |
 
 ### Description
 

@@ -1,8 +1,8 @@
 # Multi Select
 
-| type             | sections                                                          | value type      | screenshot                                         |
-| ---------------- | ----------------------------------------------------------------- | --------------- | -------------------------------------------------- |
-| **multi_select** | assets, data, general, styles, rules, custom_configuration_fields | `Array<string>` | <img src="../assets/multi_select.png" width=220 /> |
+| type             | sections                                                          | value type      | screenshot                         |
+| ---------------- | ----------------------------------------------------------------- | --------------- | ---------------------------------- |
+| **multi_select** | assets, data, general, styles, rules, custom_configuration_fields | `Array<string>` | ![img](../assets/multi_select.png) |
 
 ### Description
 
