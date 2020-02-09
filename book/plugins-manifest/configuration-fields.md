@@ -17,6 +17,8 @@
 - [Tag Select](/plugins-manifest/fields/tag-select.md)
 - [Color Picker](/plugins-manifest/fields/color-picker.md)
 - [Color Picker RGBA](/plugins-manifest/fields/color-picker-rgba.md)
+- [Switch](/plugins-manifest/fields/switch.md)
+- [File Uploader](/plugins-manifest/fields/uploader.md)
 - ...
 
 ## Special field types
