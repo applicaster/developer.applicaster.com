@@ -15,6 +15,8 @@
 - [Select](/plugins-manifest/fields/select.md)
 - [Multi Select](/plugins-manifest/fields/multi-select.md)
 - [Tag Select](/plugins-manifest/fields/tag-select.md)
+- [Color Picker](/plugins-manifest/fields/color-picker.md)
+- [Color Picker RGBA](/plugins-manifest/fields/color-picker-rgba.md)
 - ...
 
 ## Special field types

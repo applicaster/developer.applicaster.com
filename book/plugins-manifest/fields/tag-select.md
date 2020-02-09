@@ -1,8 +1,8 @@
 # Tag Select
 
-| type             | sections                             | value type | screenshot                                       |
-| ---------------- | ------------------------------------ | ---------- | ------------------------------------------------ |
-| **multi_select** | assets, data, general, styles, rules | `string`   | <img src="../assets/tag_select.png" width=220 /> |
+| type             | sections                                                          | value type | screenshot                                       |
+| ---------------- | ----------------------------------------------------------------- | ---------- | ------------------------------------------------ |
+| **multi_select** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | <img src="../assets/tag_select.png" width=220 /> |
 
 ### Description
 

@@ -1,8 +1,8 @@
 # Number Input
 
-| type             | sections                             | value type | screenshot                                         |
-| ---------------- | ------------------------------------ | ---------- | -------------------------------------------------- |
-| **number_input** | assets, data, general, styles, rules | `number`   | <img src="../assets/number_input.png" width=220 /> |
+| type             | sections                                                          | value type | screenshot                                         |
+| ---------------- | ----------------------------------------------------------------- | ---------- | -------------------------------------------------- |
+| **number_input** | assets, data, general, styles, rules, custom_configuration_fields | `number`   | <img src="../assets/number_input.png" width=220 /> |
 
 ### Description
 
