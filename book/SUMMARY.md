@@ -88,7 +88,10 @@
   - [How to connect the provider to the app](/Zapp-Pipes/7.-Connect-to-Zapp.md)
   - [Debugging](/Zapp-Pipes/10.-Debugging.md)
   - [Feeds Made Easy](/Zapp-Feed/2.-Create-Functional-Demo-Feeds.md)
-  - [Protocols](/Zapp-Pipes/11.-Protocols.md) - [Video Advertising](/Zapp-Pipes/protocols/video_advertising_protocol.md) - [Video Text Tracks](/Zapp-Pipes/protocols/video_text_tracks_protocol.md) - [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
+  - [Protocols](/Zapp-Pipes/11.-Protocols.md)
+    - [Video Advertising](/Zapp-Pipes/protocols/video_advertising_protocol.md)
+    - [Video Text Tracks](/Zapp-Pipes/protocols/video_text_tracks_protocol.md)
+    - [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
   - [DataSource for Roku TV](/Zapp-Pipes/12.-Datasource-for-rokuTV.md)
 
 - [Navigation Bar Plugins](/ui-builder/NavigationBarPluginsIntro.md)
