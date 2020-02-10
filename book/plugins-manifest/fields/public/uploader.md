@@ -1,8 +1,8 @@
 # File Uploader
 
-| type         | sections                                                          | value type | screenshot                     |
-| ------------ | ----------------------------------------------------------------- | ---------- | ------------------------------ |
-| **uploader** | assets, data, general, styles, rules, custom_configuration_fields | `file`     | ![img](../assets/uploader.png) |
+| type         | sections                                                          | value type | screenshot                        |
+| ------------ | ----------------------------------------------------------------- | ---------- | --------------------------------- |
+| **uploader** | assets, data, general, styles, rules, custom_configuration_fields | `file`     | ![img](../../assets/uploader.png) |
 
 ### Description
 

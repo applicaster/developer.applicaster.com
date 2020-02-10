@@ -1,8 +1,8 @@
 # Switch
 
-| type       | sections                             | value type | screenshot                   |
-| ---------- | ------------------------------------ | ---------- | ---------------------------- |
-| **switch** | assets, data, general, styles, rules | `boolean`  | ![img](../assets/switch.png) |
+| type       | sections                             | value type | screenshot                      |
+| ---------- | ------------------------------------ | ---------- | ------------------------------- |
+| **switch** | assets, data, general, styles, rules | `boolean`  | ![img](../../assets/switch.png) |
 
 ### Description
 

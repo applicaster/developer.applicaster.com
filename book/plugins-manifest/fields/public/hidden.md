@@ -6,7 +6,7 @@
 
 ### Description
 
-Hidden [Text Input](/plugins-manifest/fields/text-input.md). Value can never be changed by user. Initial value is an empty string: `""`
+Hidden [Text Input](/plugins-manifest/fields/public/text-input.md). Value can never be changed by user. Initial value is an empty string: `""`
 
 ### Example
 

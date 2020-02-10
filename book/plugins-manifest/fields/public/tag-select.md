@@ -1,14 +1,14 @@
 # Tag Select
 
-| type             | sections                                                          | value type | screenshot                       |
-| ---------------- | ----------------------------------------------------------------- | ---------- | -------------------------------- |
-| **multi_select** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ![img](../assets/tag_select.png) |
+| type             | sections                                                          | value type | screenshot                          |
+| ---------------- | ----------------------------------------------------------------- | ---------- | ----------------------------------- |
+| **multi_select** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ![img](../../assets/tag_select.png) |
 
 ### Description
 
 Creates an input that allows selection of a single values from given tags. Selected value is shown as a green box. Initial value is an empty string: `""`
 
-Basically identical to [Tag Select](/plugins-manifest/fields/tag-select.md), the only difference is that only a single value can be selected.
+Basically identical to [Multi Select](/plugins-manifest/fields/public/multi-select.md), the only difference is that only a single value can be selected.
 
 ### Example
 

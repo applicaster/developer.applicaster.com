@@ -7,24 +7,25 @@
 - [Available Sections](#available-sections)
 - [Structure](#structure)
 
-## Supported field types
+## General (Public) field types
 
-- [Text Input](/plugins-manifest/fields/text-input.md)
-- [Number Input](/plugins-manifest/fields/number-input.md)
-- [Inline Input](/plugins-manifest/fields/inline-input.md)
-- [Select](/plugins-manifest/fields/select.md)
-- [Multi Select](/plugins-manifest/fields/multi-select.md)
-- [Tag Select](/plugins-manifest/fields/tag-select.md)
-- [Color Picker](/plugins-manifest/fields/color-picker.md)
-- [Color Picker RGBA](/plugins-manifest/fields/color-picker-rgba.md)
-- [Switch](/plugins-manifest/fields/switch.md)
-- [Hidden](/plugins-manifest/fields/hidden.md)
-- [File Uploader](/plugins-manifest/fields/uploader.md)
+- [Text Input](/plugins-manifest/fields/public/text-input.md)
+- [Number Input](/plugins-manifest/fields/public/number-input.md)
+- [Inline Input](/plugins-manifest/fields/public/inline-input.md)
+- [Select](/plugins-manifest/fields/public/select.md)
+- [Multi Select](/plugins-manifest/fields/public/multi-select.md)
+- [Tag Select](/plugins-manifest/fields/public/tag-select.md)
+- [Color Picker](/plugins-manifest/fields/public/color-picker.md)
+- [Color Picker RGBA](/plugins-manifest/fields/public/color-picker-rgba.md)
+- [Switch](/plugins-manifest/fields/public/switch.md)
+- [Hidden](/plugins-manifest/fields/public/hidden.md)
+- [File Uploader](/plugins-manifest/fields/public/uploader.md)
 - ...
 
 ## Special field types
 
-- [Font Selectors](/plugins-manifest/fields/font-selectors.md)
+- [Font Selectors](/plugins-manifest/fields/special/font-selectors.md)
+- [Fields for Internal User Only](/plugins-manifest/fields/special/fields-for-internal-use.md)
 - ...
 
 ## Available sections

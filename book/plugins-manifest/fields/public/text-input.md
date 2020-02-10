@@ -1,8 +1,8 @@
 # Text Input
 
-| type           | sections                                                          | value type | screenshot                       |
-| -------------- | ----------------------------------------------------------------- | ---------- | -------------------------------- |
-| **text_input** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ![img](../assets/text_input.png) |
+| type           | sections                                                          | value type | screenshot                          |
+| -------------- | ----------------------------------------------------------------- | ---------- | ----------------------------------- |
+| **text_input** | assets, data, general, styles, rules, custom_configuration_fields | `string`   | ![img](../../assets/text_input.png) |
 
 ### Description
 

@@ -1,8 +1,8 @@
 # Number Input
 
-| type             | sections                                                          | value type | screenshot                         |
-| ---------------- | ----------------------------------------------------------------- | ---------- | ---------------------------------- |
-| **number_input** | assets, data, general, styles, rules, custom_configuration_fields | `number`   | ![img](../assets/number_input.png) |
+| type             | sections                                                          | value type | screenshot                            |
+| ---------------- | ----------------------------------------------------------------- | ---------- | ------------------------------------- |
+| **number_input** | assets, data, general, styles, rules, custom_configuration_fields | `number`   | ![img](../../assets/number_input.png) |
 
 ### Description
 
@@ -26,4 +26,4 @@ A Creates an `input` that accepts only [numbers](https://developer.mozilla.org/e
 
 ### Notes
 
-- Unlike `text_input`, It is warmly recommended to set an initial value
+- Unlike [Text Input](/plugins-manifest/fields/public/text-input.md), It is warmly recommended to set an initial value.

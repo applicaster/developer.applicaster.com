@@ -341,7 +341,7 @@ Can be used for **assets**, **styles**, **rules**, **data**, **advertising**, **
 
 Field Key         | Description
 ------------------| -----------
-**type**          | Required, Field type. Supported types: `text_input`, `number_input`, `inline_input`, `multi_select` , `tag_select`, `color_picker`, `uploader`, `switch`, `hidden`, `BUTTON` or [special types](#special-field-types)
+**type**          | Required, Field type. Supported types: `text_input`, `number_input`, `inline_input`, `multi_select` , `tag_select`, `color_picker`, `uploader`, `switch`, `hidden` or [special types](#special-field-types)
 **key**           | Required, name of the field
 **label**         | The label next to the field, if not set, will be using normalized key value
 **placeholder**   | Placeholder attribute of the input field
