@@ -36,12 +36,13 @@ Creates a `select` input that allows overriding the default navigation bar in sc
   - A `"screen": true` attribute.
 - In order for the nav bar selector to appear, there should be more than one navigation of type `nav_bar` in the layout.
 - ⚠️ Caution: Unlike other general / public fields, the `key` attribute must have the value `nav_bar_id`. Please conform to the precise structure shown in the example, it won't work otherwise. ⚠️
+- Do _not_ provide any `initial_value` attribute.
 
 #### User stories
 
 > Given the plugin configuration of the example above
 
-- When there are threw navigation bars in the layout (navigation plugins of type `nav_bar)`
+- When there are three navigation bars in the layout (navigation plugins of type `nav_bar)`
   - The Nav Bar selector will be visible
   - It will present three options to choose from
   - Selected nav bar will be shown on the matching screen in the app

@@ -20,12 +20,12 @@
 - [Switch](/plugins-manifest/fields/public/switch.md)
 - [Hidden](/plugins-manifest/fields/public/hidden.md)
 - [File Uploader](/plugins-manifest/fields/public/uploader.md)
-- ...
 
 ## Special field types
 
 - [Font Selectors](/plugins-manifest/fields/special/font-selectors.md)
 - [Nav Bar Selector](/plugins-manifest/fields/special/nav-bar-selector.md)
+- [Preload Plugins Selector](/plugins-manifest/fields/special/preload-plugins-selector.md)
 - [Fields for Internal User Only](/plugins-manifest/fields/special/fields-for-internal-use.md)
 - ...
 
