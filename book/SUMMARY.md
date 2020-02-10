@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-<!-- - [Code Of Conduct](/Code-Of-Conduct.md)
+- [Code Of Conduct](/Code-Of-Conduct.md)
 - [Getting Started with Zapp Plugins](/getting-started/zapp-plugins.md)
   - [Plugin types](/getting-started/plugin-types.md)
   - [Plugin abilities](/getting-started/plugin-abilities.md)
@@ -25,7 +25,7 @@
   - [Update repository structure in Zapp-iOS SDK v13.0](whats_new/20191120-update-zapp-ios-repository-structure.md)
   - [Get ready for Zapp Android SDK 11.2.0](whats_new/20191112-get-ready-for-zapp-android-11.2.0.md)
   - [Migrating your plugin to Swift 5.0 with Zapp-iOS SDK v12.0](whats_new/20190818-swift-5.0-migration.md)
-- [Contact Us & Help Desk](/contact_us/help_desk.md) -->
+- [Contact Us & Help Desk](/contact_us/help_desk.md)
 
 # Zapp Plugins
 
@@ -53,7 +53,7 @@
     - [Internal Use Only](/plugins-manifest/fields/special/fields-for-internal-use.md)
 - [Zappifest Tool](/zappifest/zappifest.md)
 
-<!-- ## Zapp Plugin Types
+## Zapp Plugin Types
 
 - [Screen Plugins](/screen/screen-plugin-general.md)
   - [iOS](/screen/ios/screen-plugin-ios.md)
@@ -72,6 +72,7 @@
     - [Debugging](/react-native/android/debugging.md)
     - [Single Bundle](/plugins/android/single-bundle.md)
 - [Datasource providers](/Zapp-Pipes/Home.md)
+
   - [Prerequisites](/Zapp-Pipes/0.-Prerequisites.md)
     - [Setting up the environment](/Zapp-Pipes/1.-Set-up.md)
     - [Structure of a provider](/Zapp-Pipes/2.-Provider-structure.md)
@@ -87,10 +88,7 @@
   - [How to connect the provider to the app](/Zapp-Pipes/7.-Connect-to-Zapp.md)
   - [Debugging](/Zapp-Pipes/10.-Debugging.md)
   - [Feeds Made Easy](/Zapp-Feed/2.-Create-Functional-Demo-Feeds.md)
-  - [Protocols](/Zapp-Pipes/11.-Protocols.md)
-  	- [Video Advertising](/Zapp-Pipes/protocols/video_advertising_protocol.md)
-  	- [Video Text Tracks](/Zapp-Pipes/protocols/video_text_tracks_protocol.md)
-  	- [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
+  - [Protocols](/Zapp-Pipes/11.-Protocols.md) - [Video Advertising](/Zapp-Pipes/protocols/video_advertising_protocol.md) - [Video Text Tracks](/Zapp-Pipes/protocols/video_text_tracks_protocol.md) - [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
   - [DataSource for Roku TV](/Zapp-Pipes/12.-Datasource-for-rokuTV.md)
 
 - [Navigation Bar Plugins](/ui-builder/NavigationBarPluginsIntro.md)
@@ -201,4 +199,4 @@
   - [Utilities](/quick-brick/Api/Utils.md)
 - [Plugin migration guide](/quick-brick/migration-guide.md)
 - [Using Cell Styles Builder](/quick-brick/cell-styles-builder/layouts-with-cell-builder-plugins.md)
-- [Focus manager on TV platforms](/quick-brick/focus-manager/focus-manager.md) --> -->
+- [Focus manager on TV platforms](/quick-brick/focus-manager/focus-manager.md)
