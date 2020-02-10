@@ -6,6 +6,8 @@
 
 ### Description
 
+Used in [Screen Plugins](/screen/screen-plugin-general.md) only.
+
 Creates a `select` input that allows overriding the default navigation bar in screen plugins. Initial value is the `nav_bar_id` of the default navigation bar.
 
 ### Example
@@ -29,7 +31,7 @@ Creates a `select` input that allows overriding the default navigation bar in sc
 
 ### Notes
 
-- The plugin using this field must have:
+- The plugin using this field must be a [Screen Plugin](/screen/screen-plugin-general.md) with the following attributes in the manifest:
   - A `general` type.
   - A `"screen": true` attribute.
 - In order for the nav bar selector to appear, there should be more than one navigation of type `nav_bar` in the layout.
