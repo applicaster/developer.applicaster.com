@@ -43,6 +43,7 @@
   - [Color Picker RGBA](/plugins-manifest/fields/color-picker-rgba.md)
   - [File Uploader](/plugins-manifest/fields/uploader.md)
   - [Switch](/plugins-manifest/fields/switch.md)
+  - [Hidden](/plugins-manifest/fields/hidden.md)
   - [Font Selectors](plugins-manifest/fields/font-selectors.md)
 - [Zappifest Tool](/zappifest/zappifest.md)
 

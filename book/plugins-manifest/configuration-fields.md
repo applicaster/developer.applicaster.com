@@ -18,6 +18,7 @@
 - [Color Picker](/plugins-manifest/fields/color-picker.md)
 - [Color Picker RGBA](/plugins-manifest/fields/color-picker-rgba.md)
 - [Switch](/plugins-manifest/fields/switch.md)
+- [Hidden](/plugins-manifest/fields/hidden.md)
 - [File Uploader](/plugins-manifest/fields/uploader.md)
 - ...
 
