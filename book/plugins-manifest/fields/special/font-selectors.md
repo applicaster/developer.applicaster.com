@@ -17,6 +17,8 @@ Using one of these field type will create a `select` dropdown automatically popu
 - Matching system fonts of each platform.
 - Custom fonts uploaded via the `Edit App > Upload fonts` section.
 
+_**IMPORTANT NOTE**_: When one or more of these field types is put inside `custom_configuration_fields`, only the relevant font selector for the platform will be shown in the Plugin Gallery.
+
 ### Example
 
 ```

@@ -2,7 +2,7 @@
 
 ### Table of contents
 
-- [Supported Field Types](#supported-field-types)
+- [General (Public) Field Types](#general-public-field-types)
 - [Special Field Types](#special-field-types)
 - [Available Sections](#available-sections)
 - [Structure](#structure)
