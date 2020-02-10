@@ -356,68 +356,6 @@ Can be used for **assets**, **styles**, **rules**, **data**, **advertising**, **
 | **options**       | for `tag_select`, `multi_select` types - an array of objects in the format of `{ "text": "Text Option", "value": "option" }`                                                                                  |
 | **mandatory**     | Optional key for select field. If set to `true` the select box will not present an x button to clear the selected option.                                                                                     |
 
-<a name="special-field-types"></a>
-
-##### Special Field Types
-
-- [Font Selectors](/plugins-manifest/fields/special/font-selectors.md) - select fonts for each platform from a pre-populated list of options.
-
-- **nav_bar_selector**:
-  -- This selector is allowing to override default navigation bar for a screen.
-  -- Each screen in the app can have a different navigation bar.
-  If the screen want to use this feature, add in the manifest field with `nav_bar_selector` type and `nav_bar_id` key, that will populate all the nav_bars that available for the current layout.
-  \*\* Important to mention that in order to populate the field and for it to work `nav_bar_selector` type and `nav_bar_id` key is mandatory.
-
-Here is the example:
-
-```
-"fields": [
-  {
-    "key": "nav_bar_id",
-    "type": "nav_bar_selector",
-    "label": "Navigation Bar",
-    "placeholder": "Choose Nav Bar"
-  }
-]
-```
-
-- **preload_plugins_selector** (Screen feature):
-  -- This selector is allowing to choose additional screens/plugins in order to load them before your configured screen.
-  Only works for screen plugins (screen param must be set to true, otherwise this field is ignored).
-  If the screen needs to present or load some additional feature before the screen presentation, use this selector.
-  \*\* Important to mention that in order to populate the field and for it to work `preload_plugins_selector` type and `preload_plugins` key is mandatory within the selector.
-
-Here is the example:
-
-```
-"hooks": {
-    "fields": [
-       {
-        "key": "preload_plugins",
-        "type": "preload_plugins_selector",
-        "label": "Select Preload Plugins"
-      }
-    ]
-  },
-```
-
-- **screen_selector**
-  -- This selector will allow the user to select a screen in the current layout, and return its `external_id`.
-
-Example:
-
-```
-"general": {
-    "fields": [
-        {
-            "key": "target_screen_id",
-            "label": "Target Screen",
-            "type": "screen_selector"
-        }
-    ]
-}
-```
-
 ###### Bundled Assets
 
 If there is a need to add image assets that should be compiled in the app (not remotely configured) you can use the following fields:
