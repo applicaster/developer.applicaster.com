@@ -13,6 +13,7 @@
     - [React-Native](/dev-env/react-native.md)
     - [Node.js](/dev-env/node.md)
     - [Ruby](/dev-env/ruby.md)
+    - [Quick-Brick](/quick-brick/quick-brick-project-setup.md)
   - [Deploy and Submit](/getting-started/deploy-and-submit.md)
     - [iOS - CocoaPods](/getting-started/ios-podspec.md)
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
