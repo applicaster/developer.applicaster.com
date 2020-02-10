@@ -47,6 +47,7 @@
     - [File Uploader](/plugins-manifest/fields/public/uploader.md)
   - [Special Fields](/plugins-manifest/fields/special/special-fields-index.md)
     - [Font Selectors](/plugins-manifest/fields/special/font-selectors.md)
+    - [Nav Bar Selector](/plugins-manifest/fields/special/nav-bar-selector.md)
     - [Internal Use Only](/plugins-manifest/fields/special/fields-for-internal-use.md)
 - [Zappifest Tool](/zappifest/zappifest.md)
 

@@ -25,6 +25,7 @@
 ## Special field types
 
 - [Font Selectors](/plugins-manifest/fields/special/font-selectors.md)
+- [Nav Bar Selector](/plugins-manifest/fields/special/nav-bar-selector.md)
 - [Fields for Internal User Only](/plugins-manifest/fields/special/fields-for-internal-use.md)
 - ...
 
