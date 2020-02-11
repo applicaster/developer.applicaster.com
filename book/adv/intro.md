@@ -24,9 +24,9 @@ The developer documentation here outlines how to build and maintain advertising 
 
 ## Documentation:
 
-* [Android](advertisement/android/android.md)
-  * [Tutorial](/advertisement/android/tutorial.md)
-  * [API](/advertisement/android/api.md)
-* [iOS](advertisement/ios/android.md)
-  * [Tutorial](/advertisement/ios/tutorial.md)
-  * [API](/advertisement/ios/api.md)
+* [Android](/adv/android/android.md)
+  * [Tutorial](/adv/android/tutorial.md)
+  * [API](/adv/android/api.md)
+* [iOS](/adv/ios/ios.md)
+  * [Tutorial](/adv/ios/tutorial.md)
+  * [API](/adv/ios/api.md)
