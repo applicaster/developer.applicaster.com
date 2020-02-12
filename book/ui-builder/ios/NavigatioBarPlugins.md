@@ -2,51 +2,54 @@
 This plugin provides a navigation structure and UI at the top of the application. It is placed on top of the `root plugin` and directs navigation behavior.
 
 1. [Description](#description)
-2. [General behaviours](#general)
+2. [General Behaviours](#general)
 3. [Protocols](#protocol)
 4. [Navigation Bar Manager](#navigationBarManager)
 5. [UIBuilder API](#api)
 6. [Navigation Bar Plugins](#navigationBarPlugins)
-	* [UI Builder general navigation bar](#generalNavBarPlugin)
+	* [UI Builder General Navigation Bar](#generalNavBarPlugin)
 		* [Adding new style](#generalNavBarPluginAddingNewStyle)
-7. [Creation new Navigation Bar plugin](#createNavBarPlugin)
-	* [How to prepare development environment](#devEnv)
-	* [How to test](#howToTest)
+7. [Creation new Navigation Bar Plugin](#createNavBarPlugin)
+	* [How to prepare Development Environment](#devEnv)
+	* [How to Test](#howToTest)
 
 * * *
 
 ##### Description {#description}
 
 This is a plugin that provides top navigation structure of the application and placed on top of the `Root plugin` and provides navigation behaviour.
+
 ![NavigationBarGeneral.png](./Files/NavigationBarGeneral.png)
 
-The navigation bar can be customized in the UI Builder via the Navigation section, illustrated below. The customized navigation bar will be available on each screen via the `river.json`.
+The Navigation Bar can be customized in the UI Builder via the Navigation section, illustrated below. The customized Navigation Bar will be available on each screen via the `river.json`.
 
 ![NavBarCustomization.png](./Files/NavBarCustomization.png)
 ***
 
-##### General behaviours {#general}
+##### General Behaviours {#general}
 
-The navigation bar plugin provides general features which will be implemented in any plugin of this type.
+The Navigation Bar plugin provides general features which will be implemented in any plugin of this type.
 
-##### Status bar
+##### Status Bar
 The Status Bar is part of the Navigation Bar container, and will use the same styling (background color or image) as the navigation bar.
+
 ![StatusBarChanges.png](./Files/StatusBarChanges.png)
 
 
-###### Customization per screen
+###### Customization per Screen
 The Navigation Bar can be customized per screen. This gives the ability to use different settings for each screen as it relates to the customer’s needs. Behind the scenes, when the end-user selects a new screen, the application will send a notification to update the navigation bar title and navigation bar model.
 
 __Note:__ Screens which do not have the navigation model (like white label screens including `Settings` and `Epg`) will use the navigation model from the Home screen.
 
 The `Home` screen can be defined in the UI Build in the Screen section, as illustrated below.
+
 ![Home.png](./Files/Home.png)
 
-###### Navigation bar view style.
+###### Navigation Bar View Style.
 The Navigation Bar can have different styles. The Zapp user can select the layout for the style they’d like.
 
-###### Presentation state
-This feature defines placements of the Navigation Bar View according to the Root Plugin. More details can be found in the documentation on [UIBuilder Api](#api) and [UI Builder general navigation bar](#generalNavBarPlugin) section.
+###### Presentation State
+This feature defines placements of the Navigation Bar View according to the Root Plugin. More details can be found in the documentation on [UIBuilder API](#api) and [UI Builder General Navigation Bar](#generalNavBarPlugin) section.
 
 __Note__: All white label screens (such as `Settings` and `EPG`) will use the state: OnTop to avoid possible support issues.
 
@@ -57,8 +60,8 @@ Example:
 
 ![NavigationBarStates.png](./Files/NavigationBarStates.png)
 
-###### Presentation style
-This feature allows the Navigation Bar to present Logo or Title differently on the screen level. More details can be found in the documentation on [UIBuilder Api](#api) and [UI Builder general navigation bar](#generalNavBarPlugin).
+###### Presentation Style
+This feature allows the Navigation Bar to present Logo or Title differently on the screen level. More details can be found in the documentation on [UIBuilder API](#api) and [UI Builder General Navigation Bar](#generalNavBarPlugin).
 
 Examples:
 
@@ -71,12 +74,12 @@ __Title__
 __Hidden__
 ![NavigationBarNoLogoTitle.png](./Files/NavigationBarNoLogoTitle.png)
 
-###### Backgound view
+###### Backgound View
 The Navigation Bar plugin also enables customization of the background. Currently, there are two types of background view presentations available: `Color` and `Image`.
 
 __Note__: In the UI Builder, the Zapp user will only have one of these options available, but the plugin developer will get both keys if it was defined in the development of the plugin. In this case, items must be used according to their priority. Image has a higher priority than Color. During the implementation of new plugins it is important to use the same behaviour.
 
-###### Context buttons
+###### Context Buttons
 Context buttons are buttons which control the screen or root navigation. Context buttons are not controlled by the user, but all these buttons must be implemented in the development of new plugins.
 
 1. `Menu button` or `Special button`. This button, if enabled, sends to Root plugin the action that root must call some specific Root behaviour. Please Note: This button will be visible only if Root plugin implemented protocol of this button, otherwise it will be hidden. Please be aware of this when developing new nav bar plugins.
@@ -88,13 +91,13 @@ Context buttons are buttons which control the screen or root navigation. Context
 __Please Note__: Only one type of context button can be visible per screen.
 
 ###### Navigation Buttons
-This button is responsible for navigation items tat make presentation - present generic screen, open url, open white label screen, etc.
+This button is responsible for navigation items that present a view - present generic screen, open url, open white label screen, etc.
 
-The number of `navigation button` is defined in the UI Builder, but the style of the navigation bar may create a limitation which would not allow to show more than one button within the suitable view.
+The number of `navigation button` is defined in the UI Builder, but the style of the Navigation Bar may create a limitation which would not allow to show more than one button within the suitable view.
 
 ![NavigationItemsAdd.png](./Files/NavigationItemsAdd.png)
 
-Availible Navigation Buttons:
+Available Navigation Buttons:
 
 | Button type | Description                 | Api button key         | Class in Code              |
 |-------------|-----------------------------| ---------------------- | ---------------------------|
@@ -109,19 +112,20 @@ __Please Note__: Different buttons use different classes, so the logic of each c
 ***
 
 ##### Protocols {#protocol}
-`ZPNavigationBarCustomizationHelperDelegate` - This protocol defines a helper object that helps to retrive data.
-`ZPNavigationBarUIBuilderProtocol` - This protocol contects `navigation bar view` plugin adapter with `navigation bar view`
-`ZPNavigationBarViewDelegate` - This protocol delegates logic from `navigation bar view` like navigation button was pushed
+There are three available protocols:
+* `ZPNavigationBarCustomizationHelperDelegate` - This protocol defines a helper object that helps to retrive data.
+* `ZPNavigationBarUIBuilderProtocol` - This protocol contects `navigation bar view` plugin adapter with `navigation bar view`
+* `ZPNavigationBarViewDelegate` - This protocol delegates logic from `navigation bar view` like navigation button was pushed
 
 ***
 
 ##### Navigation Bar Manager {#navigationBarManager}
 
-The navigation bar manager is a class which controls the work of the `Navigation Bar` plugin adapaters
+The Navigation Bar Manager is a class which controls the work of the `Navigation Bar` plugin adapaters
 
-The navigation bar manager will receive calls from the nav bar adapter to take an action from a navigation button. There is no need to implement all of these calls when developing a new nav bar plugin; simply send the information to the `GANavigationBarManager`
+The Navigation Bar Manager will receive calls from the nav bar adapter to take an action from a navigation button. There is no need to implement all of these calls when developing a new nav bar plugin; simply send the information to the `GANavigationBarManager`
 
-NavigationBarManager has a mechanism for creating the screens that were generated when an end-user pushed on a Navigation Button from the navbar.
+`Navigation Bar Manager` has a mechanism for creating the screens that were generated when an end-user pushed on a Navigation Button from the nav bar.
 
 ###### ZPNavigationBarManagerDelegate
 
@@ -135,16 +139,16 @@ Structure of presenting screen is next
 `GARootViewContainerController` -> `ZPNavigationViewController` -> `GenericViewController`
 
 ###### ZPNavigationBarViewDelegate
-Instance of the `GANavigationBarManager` conforms protocol `ZPNavigationBarViewDelegate`
-This protocol send info that one of the navigation button was push. Navigation bar manager transfer call to proper place of app of `GARootHelper`
+Instance of the `GANavigationBarManager` conforms to protocol `ZPNavigationBarViewDelegate`.
+This protocol sends info that one of the navigation button was pushed. Navigation Bar Manager transfers the call to the proper place of app of `GARootHelper`
 
 __Note:__ For more information please read about [Zapp-iOS Application Structure](NavigationStructure.md)
 
 ##### UIBuilder API {#api}
 
-To make more understanding of this section please review: [Rivers.json API](NavigationStructure.md)
+For more information on this section section please read: [Rivers.json API](NavigationStructure.md)
 
-Navigation Bar api placed in `navigations` array inside `screen model`
+Navigation Bar API placed in `navigations` array inside `screen model`
 `category` - of the navigation model is define navigation model type. Navigation model has type `nav_bar`
 
 Example:
@@ -178,13 +182,13 @@ Example:
 ***
 
 #### Navigation Bar Plugins {#navigationBarPlugins}
-Here you can read information about Availible navigation bar plugins
+Here you can read information about the available Navigation Bar plugins.
 
 * * *
-##### UI Builder general navigation bar {#generalNavBarPlugin}
-This is a default navigation plugin that will be presented in case if user will not select and new plugin using UIBuilder application.
+##### UI Builder General Navigation Bar {#generalNavBarPlugin}
+This is a default navigation plugin that will be presented in case the user has not selected a new plugin using UIBuilder application.
 
-Api Example with all availible keys:
+API Example with all availible keys:
 
 ```
 {
@@ -278,7 +282,7 @@ Api Example with all availible keys:
 
 ***
 
-__Navigation Bar model schema: styles__
+__Navigation Bar Model Schema: styles__
 
 | key                 | Type         | Description                                      |
 |-------------------- |--------------| ------------------------------------------------ |
@@ -295,7 +299,7 @@ __Navigation Bar model schema: styles__
 ***
 __styles: schema: "presentation_style"__
 
-| Values | Discription |
+| Values | Description |
 |-------------|-------------|
 | logo        | `Navigation Bar` will present logo image|
 | title       | `Navigation Bar` will present title label |
@@ -303,10 +307,10 @@ __styles: schema: "presentation_style"__
 ***
 __styles: schema: "style"__
 
-| Values | Discription |
+| Values | Description |
 |-------------|-------------|
-| left        | This style define `context buttons` on left and `navigation buttons` on right of the navigation bar view. Free space will be fully provided to `logo image view` or `title label`. Aligment of text in `title label` and image in `logo image view` - `left`.|
-| center      | This style define `context buttons` on left and `navigation buttons` on right of the navigation bar view.`logo image view` or `title label` will take biggest width of `context button container` or `navigation buttons summ` and use it as offset left and right form navigation bar view. Aligment of text in `title label` and image in `logo image view` - `centered` |
+| left        | This style places the `context buttons` on left and `navigation buttons` on right of the Navigation Bar view. Free space will be fully provided to `logo image view` or `title label`. Aligment of text in `title label` and image in `logo image view` - `left`.|
+| center      | This style places the `context buttons` on left and `navigation buttons` on right of the navigation bar view.`logo image view` or `title label` will take biggest width of `context button container` or `navigation buttons` and use it as offset left and right from Navigation Bar view. Aligment of text in `title label` and image in `logo image view` - `centered` |
 
 __Left__
 
@@ -321,12 +325,12 @@ __styles: schema: "state"__
 | Values | Discription |
 |-------------|-------------|
 | on_top      | `Navigation Bar container` placed on top of `root container`. |
-| overlay      | `Navigation Bar container` placed overlay of the `root container`. `Root container` take full availible space.` |
-| hidden      | `Navigation Bar container` is hidden. `Root container` take full availible space. |
+| overlay      | `Navigation Bar container` placed overlay of the `Root container`. `Root container` takes all available space. |
+| hidden      | `Navigation Bar container` is hidden. `Root container` takes all available space. |
 
 ***
 
-__Navigation Bar model schema: assets__
+__Navigation Bar Model Schema: assets__
 
 | key                 | Type           | Description                                      |
 |-------------------- |----------------| ------------------------------------------------ |
@@ -341,16 +345,16 @@ __Navigation Bar model schema: assets__
 
 ###### How to add new style {#generalNavBarPluginAddingNewStyle}
 
-1. In ZappNavigationBarPlugins repo create new xib file in `DefaultUIBuilder/xibs`
-2. Xib name must must have prefix `DefaultNavigationBar` + `styke key from Zapp`. Example: `DefaultNavigationBarMyNewStyle`
+1. In `ZappNavigationBarPlugins` repo create new xib file in `DefaultUIBuilder/xibs`
+2. Xib name must must have prefix `DefaultNavigationBar` + `style key from Zapp`. Example: `DefaultNavigationBarMyNewStyle`
 3. Make sure that new style will define `Context buttons`, `Title`, `Logo` and `Navigation buttons`
 4. Open PR.
-5. Realase new closed version of ZappNavigationBar plugin sdk
+5. Realase new closed version of Zapp Navigation Bar plugin sdk
 6. Add to Navigation bar plugin manifest new style and upload it with new version
 
 ***
 
-##### Creation new Navigation Bar plugin {#createNavBarPlugin}
+##### Create a new Navigation Bar Plugin {#createNavBarPlugin}
 
 #### ZappNavigationBarPlugin
 1. Create target for your new plugin `MyAwesomeNavBarPlugin`
@@ -369,7 +373,7 @@ __Navigation Bar model schema: assets__
 1. Create manifest for new navigation plugin with plugin type `nav bar`. How to create manifest please check zappifest documentation
 2. Upload manifest to the zapp.
 
-###### How to use dev environment {#devEnv}
+###### How to use Development Environment {#devEnv}
 1. Clone in `folderPath` `https://github.com/applicaster/ZappNavigationBarPlugins-iOS.git`
 2. In Podfile of Zapp-iOS project remove  line `pod 'NavigationBarPlugins', '~> *`
 3. Add in podfile
@@ -380,7 +384,7 @@ __Navigation Bar model schema: assets__
 4. This will give ability to create develompent pod of the NavigationBarPlugin
 5. Make sure that this test changes will not be merged to Zapp-iOS __This is only for your testing__
 
-###### How to test {#howToTest}
+###### How to Test {#howToTest}
 
 1. Open UI Builder and add your navigation plugin in `navigation` section.
 2. Customize your navigation menu plugin accourding your setting and add navigation buttons.
