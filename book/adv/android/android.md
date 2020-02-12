@@ -4,5 +4,5 @@ This section includes all the useful information about Advertisement inside the 
 
 ## Table of Contents:
 
-* [Tutorial](/advertisement/android/tutorial.md)
-* [API](/advertisement/android/api.md)
+* [Tutorial](/adv/android/tutorial.md)
+* [API](/adv/android/api.md)

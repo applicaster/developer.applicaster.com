@@ -4,5 +4,5 @@ This section includes all the useful information about the Advertisement functio
 
 ## Table of Contents:
 
-* [Tutorial](/advertisement/ios/tutorial.md)
-* [API](/advertisement/ios/api.md)
+* [Tutorial](/adv/ios/tutorial.md)
+* [API](/adv/ios/api.md)
