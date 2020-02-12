@@ -49,7 +49,7 @@ The `Home` screen can be defined in the UI Build in the Screen section, as illus
 The Navigation Bar can have different styles. The Zapp user can select the layout for the style they’d like.
 
 ###### Presentation State
-This feature defines placements of the Navigation Bar View according to the Root Plugin. More details can be found in the documentation on [UIBuilder API](#api) and [UI Builder General Navigation Bar](#generalNavBarPlugin) section.
+This feature defines placements of the Navigation Bar view according to the Root Plugin. More details can be found in the documentation on [UIBuilder API](#api) and [UI Builder General Navigation Bar](#generalNavBarPlugin) section.
 
 __Note__: All white label screens (such as `Settings` and `EPG`) will use the state: OnTop to avoid possible support issues.
 
@@ -349,7 +349,7 @@ __Navigation Bar Model Schema: assets__
 2. Xib name must must have prefix `DefaultNavigationBar` + `style key from Zapp`. Example: `DefaultNavigationBarMyNewStyle`
 3. Make sure that new style will define `Context buttons`, `Title`, `Logo` and `Navigation buttons`
 4. Open PR.
-5. Realase new closed version of Zapp Navigation Bar plugin sdk
+5. Release new closed version of Zapp Navigation Bar plugin sdk
 6. Add to Navigation bar plugin manifest new style and upload it with new version
 
 ***
@@ -358,15 +358,15 @@ __Navigation Bar Model Schema: assets__
 
 #### ZappNavigationBarPlugin
 1. Create target for your new plugin `MyAwesomeNavBarPlugin`
-2. Inside your tartget folder add files that you will want to use.
+2. Inside your target folder add files that you will want to use.
 3. Add your target as `dependency` to `BuildAll` target. It will be needed to create crosed sdk.
 ![navBarPluginDependency.png](./Files/navBarPluginDependency.png)
-4. Add in `pofile` new target for building with all relevant dependencies. Please look example of `Base` target in podfile
+4. Add in `podfile` new target for building with all relevant dependencies. You cann follow the `Base` example in podfile if you need too.
 5. Add in `NavigationBarPlugins.podspec` and `NavigationBarPlugins-Dev.podspec` subspec of your new plugin.
 6. Implement navigation bar plugin.
-7. Make sure that helper class will conform protocol `ZPNavigationBarCustomizationHelperDelegate` that you can use. If you prefer you can use your own helper methig ignoring default one.
+7. Make sure that helper class will conform protocol `ZPNavigationBarCustomizationHelperDelegate` that you can use. If you prefer you can use your own helper method ignoring default one.
 8. You navigation bar adapter must inherit from class `NavigationBarBaseAdapter` or conform protocol `ZPAdapterNavBarProtocol` if you do not want to use existing logic.
-9. Make sure that your navigation bar view is conforming `ZPNavigationBarUIBuilderProtocol` and call `ZPNavigationBarViewDelegate` passing to `GANavigationBarManager` delegate that button from navigation bar view was pushed.
+9. Make sure that your navigation bar view conforms to `ZPNavigationBarUIBuilderProtocol` and call `ZPNavigationBarViewDelegate` passing to `GANavigationBarManager` delegate that button from navigation bar view was pushed.
 10. When code will be ready. Write unit-tests.
 
 ##### UIBuilder
@@ -378,7 +378,7 @@ __Navigation Bar Model Schema: assets__
 2. In Podfile of Zapp-iOS project remove  line `pod 'NavigationBarPlugins', '~> *`
 3. Add in podfile
 ```
-    pod 'NavigationBarPluginBase', :path => 'folderPath/ZappNavigationBarPlugins-iOS/NavigationBarPluginBase-Dev.podspec
+    pod 'NavigationBarPluginBase', :path => 'folderPath/ZappNavigationBarPlugins-iOS/NavigationBarPluginBase-Dev.podspec'
     pod 'NavigationBarPlugins', :path => 'folderPath/ZappNavigationBarPlugins-iOS/NavigationBarPlugins-Dev.podspec'
 ```
 4. This will give ability to create develompent pod of the NavigationBarPlugin
