@@ -13,8 +13,6 @@ This plugin provides a navigation structure and UI at the top of the application
 	* [How to prepare Development Environment](#devEnv)
 	* [How to Test](#howToTest)
 
-* * *
-
 ##### Description {#description}
 
 This is a plugin that provides top navigation structure of the application and placed on top of the `Root plugin` and provides navigation behaviour.
@@ -24,7 +22,6 @@ This is a plugin that provides top navigation structure of the application and p
 The Navigation Bar can be customized in the UI Builder via the Navigation section, illustrated below. The customized Navigation Bar will be available on each screen via the `river.json`.
 
 ![NavBarCustomization.png](./Files/NavBarCustomization.png)
-***
 
 ##### General Behaviours {#general}
 
@@ -34,7 +31,6 @@ The Navigation Bar plugin provides general features which will be implemented in
 The Status Bar is part of the Navigation Bar container, and will use the same styling (background color or image) as the navigation bar.
 
 ![StatusBarChanges.png](./Files/StatusBarChanges.png)
-
 
 ###### Customization per Screen
 The Navigation Bar can be customized per screen. This gives the ability to use different settings for each screen as it relates to the customer’s needs. Behind the scenes, when the end-user selects a new screen, the application will send a notification to update the navigation bar title and navigation bar model.
@@ -109,15 +105,12 @@ Available Navigation Buttons:
 | Chromecast  | Opens Cromecast player      | chromecast             | ChromecastNavigationButton |
 
 __Please Note__: Different buttons use different classes, so the logic of each can be different.
-***
 
 ##### Protocols {#protocol}
 There are three available protocols:
 * `ZPNavigationBarCustomizationHelperDelegate` - This protocol defines a helper object that helps to retrive data.
 * `ZPNavigationBarUIBuilderProtocol` - This protocol contects `navigation bar view` plugin adapter with `navigation bar view`
 * `ZPNavigationBarViewDelegate` - This protocol delegates logic from `navigation bar view` like navigation button was pushed
-
-***
 
 ##### Navigation Bar Manager {#navigationBarManager}
 
@@ -179,12 +172,10 @@ Example:
         "assets" : {}
     }
 ```
-***
 
 #### Navigation Bar Plugins {#navigationBarPlugins}
 Here you can read information about the available Navigation Bar plugins.
 
-* * *
 ##### UI Builder General Navigation Bar {#generalNavBarPlugin}
 This is a default navigation plugin that will be presented in case the user has not selected a new plugin using UIBuilder application.
 
@@ -280,8 +271,6 @@ API Example with all availible keys:
     }
 ```
 
-***
-
 __Navigation Bar Model Schema: styles__
 
 | key                 | Type         | Description                                      |
@@ -296,7 +285,6 @@ __Navigation Bar Model Schema: styles__
 |  style              |  String in enum        | Defines xib style for the navigation bar|
 |  state              |  String in enum        | Define placements for the navigation bar accouring root|
 
-***
 __styles: schema: "presentation_style"__
 
 | Values | Description |
@@ -304,7 +292,7 @@ __styles: schema: "presentation_style"__
 | logo        | `Navigation Bar` will present logo image|
 | title       | `Navigation Bar` will present title label |
 | hidden      | `Navigation Bar` will hide title label and logo image|
-***
+
 __styles: schema: "style"__
 
 | Values | Description |
@@ -319,7 +307,7 @@ __Left__
 __Center__
 
 ![NavigationBarStyleCenter.png](./Files/NavigationBarStyleCenter.png)
-***
+
 __styles: schema: "state"__
 
 | Values | Discription |
@@ -327,8 +315,6 @@ __styles: schema: "state"__
 | on_top      | `Navigation Bar container` placed on top of `root container`. |
 | overlay      | `Navigation Bar container` placed overlay of the `Root container`. `Root container` takes all available space. |
 | hidden      | `Navigation Bar container` is hidden. `Root container` takes all available space. |
-
-***
 
 __Navigation Bar Model Schema: assets__
 
@@ -341,8 +327,6 @@ __Navigation Bar Model Schema: assets__
 |  background         |  String in URL | Background image URL |
 |  background_tablet  |  String in URL | Background tablet image URL |
 
-***
-
 ###### How to add new style {#generalNavBarPluginAddingNewStyle}
 
 1. In `ZappNavigationBarPlugins` repo create new xib file in `DefaultUIBuilder/xibs`
@@ -351,8 +335,6 @@ __Navigation Bar Model Schema: assets__
 4. Open PR.
 5. Release new closed version of Zapp Navigation Bar plugin sdk
 6. Add to Navigation bar plugin manifest new style and upload it with new version
-
-***
 
 ##### Create a new Navigation Bar Plugin {#createNavBarPlugin}
 
@@ -381,13 +363,13 @@ __Navigation Bar Model Schema: assets__
     pod 'NavigationBarPluginBase', :path => 'folderPath/ZappNavigationBarPlugins-iOS/NavigationBarPluginBase-Dev.podspec'
     pod 'NavigationBarPlugins', :path => 'folderPath/ZappNavigationBarPlugins-iOS/NavigationBarPlugins-Dev.podspec'
 ```
-4. This will give ability to create develompent pod of the NavigationBarPlugin
-5. Make sure that this test changes will not be merged to Zapp-iOS __This is only for your testing__
+4. This will give the ability to create a develompent pod of the NavigationBarPlugin
+5. Make sure that these test changes will not be merged to Zapp-iOS __This is only for your testing__
 
 ###### How to Test {#howToTest}
 
 1. Open UI Builder and add your navigation plugin in `navigation` section.
-2. Customize your navigation menu plugin accourding your setting and add navigation buttons.
+2. Customize your navigation menu plugin according to your settings and add navigation buttons.
 3. Copy ID of the application version of your tesing application
 4. Use ZappTool to prepare application environment. (How to work with Zapptool please read zapptool documentation)
 5. If your plugin has dependencies and you are using dev env for navigation plugin. Find in podfile of Zapp-iOS pod with your plugin dependency under `# Zaptool pods - Do not remove or change.` section. It will look something like `pod 'NavigationBarPlugins/MyAwesomePlugin', '~> 0.4.1'` and change it to `pod 'NavigationBarPlugins/MyAwesomePlugin', :path => 'folderPath/ZappNavigationBarPlugins-iOS/NavigationBarPlugins-Dev.podspec`. This will remove issue with dependecy conflicts
