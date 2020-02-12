@@ -1,18 +1,21 @@
-
-# Push plugin - iOS
-
+# Zapp Push Plugins
 The iOS push plugin for Zapp is based on implementing the `ZPPushProviderProtocol`.
 The `ZPPushProviderProtocol` goes through all of the functions for initializing a push provider.
 
-## Create a new push provider
+1. [Create a New Push Provider](#create)
+2. [Rich Media Notifications](#rich)
+3. [Plist Addition](#plist)
+4. [Useful Related Documentation](#useful)
+
+### Create a New Push Provider {#create}
 
 This chapter describes how to build a push provider plugin. What kind of preparations are necessary, which protocol methods should be implemented etc.
 
-### General Implementation
+##### General Implementation
 
 Before you start, please do the following important steps:
 
-1. In your cocoapods files, add a dependency to `ZappPushPluginsSDK`. This dependency is a mandatory dependency for your push provider plugin. The dependency is available from the public repository cocoapods source `git@github.com:applicaster/PluginsBuilderCocoaPods.git`.
+1. In your cocoapods files, add a dependency to `ZappPlugins`. This dependency is a mandatory dependency for your push provider plugin. The dependency is available from the public repository cocoapods source `git@github.com:applicaster/CocoaPods.git`.
 2. Create a new class for you plugin adapter that inherits from ZPPushProvider.
 3. Import `ZappPushPluginsSDK` and `ZappPlugins` 
 4. Start the plugin development
@@ -20,14 +23,13 @@ Before you start, please do the following important steps:
 *__Notes__:*
 
 * By inheriting `ZPPushProvider` which is a base class for a push provider protocol you can wrap your push provider logic and use it inside the Zapp app.
-* `ZappPushPluginsSDK` has a dependency to `ZappPlugins`. This SDK is not mandatory but it gives the developer access to use the Applicaster plugin tools, extensions, helper methods, ZappConnector logic, etc.
 * The `ZPPushProvider` class implements the `ZPPushProviderProtocol` protocol which is the protocol you should implement in every push provider plugin.
 
-### Protocol description
+###### Protocol description
 
 The below describes the `ZPPushProviderProtocol` protocol methods.
 
-#### Base Parameters
+###### Base Parameters
 
 Add base parameters
 
@@ -35,7 +37,7 @@ Add base parameters
 func setBaseParameter(_ value:NSObject?, forKey key:String)
 ```
 
-#### Get Provider Key
+###### Get Provider Key
 
 Return a unique `string` base key
 
@@ -43,7 +45,7 @@ Return a unique `string` base key
 func getKey() -> String
 ```
 
-#### Configure Provider
+###### Configure Provider
 
 Initialize and register to your push provider and return the state setup
 
@@ -51,7 +53,7 @@ Initialize and register to your push provider and return the state setup
 func configureProvider() -> Bool
 ```
 
-#### Add/Remove Tags
+###### Add/Remove Tags
 
 UNSubscribe/Subscribe to all relevant tags
 
@@ -61,7 +63,7 @@ UNSubscribe/Subscribe to all relevant tags
 @objc optional func removeTagsToDevice(_ tags: [String]?, completion: @escaping (_ success: Bool, _ tags: [String]?) -> Void)
 ```
 
-#### Get Device Tags
+###### Get Device Tags
 
 Get device's tag list
 
@@ -69,7 +71,7 @@ Get device's tag list
 @objc optional func getDeviceTags() -> [String]?
 ```
 
-#### Notifications
+###### Notifications
 
 Register Token with push server
 
@@ -83,7 +85,7 @@ Register userNotificationSettings with push server
 @objc optional func didRegisterUserNotificationSettings(_ notificationSettings: UIUserNotificationSettings)
 ```
 
-## Rich Media Notifications
+## Rich Media Notifications {#rich}
 
 When push notification arrives in an iOS app,  you may want to be able to download content in response to it or edit the content before it’s shown to the user. In iOS 10 and later, Apple allows apps to do that using new Notification Service Extension.
 
@@ -124,7 +126,7 @@ The following steps will help you setup and add a Notification Service Extension
 
     *__note__:* We are using the `notification_extension_provisioning_profile` file on the Zapp app relese proccess.  
 
-## Plist Addition
+## Plist Addition {#plist}
 
 We give that ability to add key-value parameters to app plist file. You can add new values in the plugin manifest `api.plist` section.
 
@@ -145,7 +147,7 @@ In the following example we added three parameters to the plist:
 }
 ```
 
-## Useful related documentation
+## Useful related documentation {#useful}
 
 * [Get ready to work](/dev-env/intro.html)
 * [Deploy and submit and plugin](/getting-started/deploy-and-submit.html)
