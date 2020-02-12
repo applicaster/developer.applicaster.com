@@ -104,7 +104,6 @@
     - [Navigation Structure](/ui-builder/ios/NavigationStructure.md)
     - [Rivers](/ui-builder/ios/Rivers.md)
     - [Classes and Plists](/ui-builder/ios/Classes-and-Plists.md)
-    - [Create new component](/ui-builder/ios/Creation-New-Component.md)
     - [Testing locally](/ui-builder/ios/Testing-Locally.md)
   - [Android](/ui-builder/android/android.md)
     - [Family Interface](/ui-builder/android/family-interface/family-interface.md)
