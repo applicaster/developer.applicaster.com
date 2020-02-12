@@ -13,7 +13,6 @@ Table of contents:
 	* [Navigation Structure](/ui-builder/ios/NavigationStructure.md)
 	* [Rivers](/ui-builder/ios/Rivers.md)
 	* [Classes and Plists](/ui-builder/ios/Classes-and-Plists.md)
-	* [Create new component](/ui-builder/ios/Creation-New-Component.md)
 	* [Testing locally](/ui-builder/ios/Testing-Locally.md)
 * [Android UI Builder](/ui-builder/android/android.md)
 * [Url Scheme](/ui-builder/scheme/scheme.md)
