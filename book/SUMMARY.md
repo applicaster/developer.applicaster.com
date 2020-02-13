@@ -97,6 +97,7 @@
 - [Login Plugins](/login/intro.md)
   - [iOS](/login/iOS.md)
   - [Android](/login/Android.md)
+  - [User Account Component](/login/user_account_component.md)  
 - [UI Builder](/ui-builder/intro.md)
   - [API](/ui-builder/API.md)
   - [Designer Guide](/ui-builder/designer/designer.md)
