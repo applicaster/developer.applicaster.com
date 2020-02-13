@@ -12,7 +12,7 @@ The diagrams below show the Banner and the interstitial loading flows. The blue 
 
 #### Failure
 
-![ad-failed.png](./img/ad-failed.png)
+![adv-failed.png](./img/adv-failed.png)
 
 ### INTERSTITIAL FLOW
 
@@ -22,7 +22,7 @@ The diagrams below show the Banner and the interstitial loading flows. The blue 
 
 #### Failure
 
-![ad-failed.png](./img/ad-failed.png)
+![adv-failed.png](./img/adv-failed.png)
 
 ## INTERFACE IMPLEMENTATION
 ### Ad View - implemented in the Applicaster SDK
