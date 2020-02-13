@@ -20,6 +20,7 @@ Creates a text `input`. Initial value is an empty string: `""`
       "label": "My Field",                 // Recommended
       "placeholder": "enter some string",  // Recommended
       "label_tooltip": "...",              // Recommended
+      "multiline": false,                  // Optional
       ...
 
 ```
@@ -27,3 +28,5 @@ Creates a text `input`. Initial value is an empty string: `""`
 ### Notes
 
 - It is possible to set `null` as an initial value
+- When setting the `"multiline": true"` attribute, we get an input identical to [Text Area](/plugins-manifest/fields/public/text-area.md)
+  . Value type remains the same - `string`.

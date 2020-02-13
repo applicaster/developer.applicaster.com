@@ -1,6 +1,7 @@
 ## General (Public) field types
 
 - [Text Input](/plugins-manifest/fields/public/text-input.md)
+- [Text Area](/plugins-manifest/fields/public/text-area.md)
 - [Number Input](/plugins-manifest/fields/public/number-input.md)
 - [Inline Input](/plugins-manifest/fields/public/inline-input.md)
 - [Select](/plugins-manifest/fields/public/select.md)

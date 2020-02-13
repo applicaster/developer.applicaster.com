@@ -35,6 +35,7 @@
 - [Configuration Fields](plugins-manifest/configuration-fields.md)
   - [General Fields](/plugins-manifest/fields/public/general-fields-index.md)
     - [Text Input](/plugins-manifest/fields/public/text-input.md)
+    - [Text Area](/plugins-manifest/fields/public/text-area.md)
     - [Number Input](/plugins-manifest/fields/public/number-input.md)
     - [Inline Input](/plugins-manifest/fields/public/inline-input.md)
     - [Select](/plugins-manifest/fields/public/select.md)
