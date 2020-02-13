@@ -36,10 +36,7 @@ Public plugins are presented to all clients in the marketplace and are openly av
 			* Change Log
 				* Unless you are populating this after your first release, you likely won’t include this part, but as you make changes, you’ll want to record each version release and what changes they entailed, organized by platform.
 	* Marketplace & Support review
-		* Meet the support team. Conduct a demo, and receive approval from support, a product representative of the Marketplace, and Dev Relations. To organize this demo and review, contact:
-			* y.gol@applicaster.com - Head of Support
-			* y.osteen@applicaster.com - Product Lead, Marketplace, Partner Product Success
-			* dev-rel@applicaster.com - Dev Relations general contact
+		* Meet the support team. Conduct a demo, and receive approval from support, a product representative of the Marketplace, and Dev Relations. To organize this demo and review, please contact Yoni Osteen (Partner Product Success) at y.osteen@applicaster.com
 		* We will discuss how to improve visibility and marketability of your plugin, leading to the next step:
 			* Create a slide that Applicaster Sales and Customer Success can insert into their presentations
 				* Applicaster uses Google Slides for presentations, and we’ve made [a template with our styling](https://drive.google.com/open?id=1o9kHv-nPc_FbO-JteWj3L7DwQ9CAWWHN) available so you can create a slide about your plugin that our team can insert into our own presentations for relevant shared customers to help find potential matches and drive business to your company through the plugin.
