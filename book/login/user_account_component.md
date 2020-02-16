@@ -2,10 +2,10 @@
 
 ## Overview
 
-The User Account Component is a UI component that can be added to screens via the UI builder to trigger the Login / Logout functionality of the Login Plugin used by the app.
-The typical usage of this component is on a Settings screen, where the app lets the user to login / logout to their account.
+The User Account Component is a UI component that can be added to screens via Zapp Studio (aka the UI builder) to trigger the Login / Logout functionality of the Login Plugin used by the app.
+The typical usage of this component is on a Settings screen, where the app lets the user login to / logout out their account.
 
-Login plugin developers should follow the implementation notes to make sure their login plugin is compatible with the User Account Component.
+Login plugin developers should follow the implementation notes below to make sure their login plugin is compatible with the User Account Component.
 
 
 ## Implementation Notes
