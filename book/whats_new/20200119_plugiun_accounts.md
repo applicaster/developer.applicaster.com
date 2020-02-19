@@ -13,7 +13,7 @@ What is a valid account id?
 
 An account id must comply with the following terms:
 It should be a real account id.
-The zapp user using zappifest must have a plugin_developer for this account.
+The zapp user using zappifest must have a `plugin_developer` role for this account.
 
 Exceptions and how to handle them:
 
