@@ -47,7 +47,7 @@ in dependencies section import your plugin. Please use exactly the same name tha
 
 At this step all configuration is done and you can sync the project to apply all the changes.
 
-![step11.png](img./step11.png)
+![step11.png](img/step11.png)
 
 ## Implementation
 Advertisement Plugin is using MVP pattern, so your plugin needs to implement interface for AdViewPresenter. Presenter is holding reference to AdView and AdView interface implementation is a real View used in Applicaster SDK.

@@ -4,21 +4,21 @@
 
 ### React - node.js
 
-QuickBrick runs on node.js LTS ^8.x.x.
+QuickBrick runs on node.js ^12.0.x 
 Please refer to [the environment setup guide](/dev-env/node.md) to set up your node environment
 
 ### Native
 
-QuickBrick relies on the Zapp-iOS & Zapp-Android apps to run on devices or on the emulator. This means that you need to have fully functionnal Zapp-iOS & Zapp-Android environment.
+QuickBrick relies on the ZappAppleBuilder & Zapp-Android apps to run on devices or on the emulator. This means that you need to have fully functionnal ZappAppleBuilder & Zapp-Android environment.
 This includes:
 
-- access to both Zapp-iOS & Zapp-Android repos
+- access to both ZappAppleBuilder & Zapp-Android repos
 - [ruby environment](/dev-env/ruby.md)
 - latest zapptool
-- Xcode 9.3
+- Xcode 11.2.x
 - Android studio 3.1.1 with Gradle 4.5.1
 
-The Zapp-iOS and Zapp-Android workspaces don't need to be in the same folder. They can be located anywhere on your environment.
+The ZappAppleBuilder and Zapp-Android workspaces don't need to be in the same folder. They can be located anywhere on your environment.
 
 ## Project workflow
 

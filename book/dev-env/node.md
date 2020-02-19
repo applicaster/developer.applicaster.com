@@ -1,12 +1,12 @@
 # Node.js
 
-We're using Node.js LTS version, currently ^8.x.x
+We're using Node.js LTS version, currently ^12.x.x
 We recommend using [NVM](https://github.com/creationix/nvm) to easily manage node versions
 
 ## Versions
 
-- node ^8.0.0
-- npm ^5.5.0
+- node ^12.0.0
+- npm ^6.0.0
 - yarn ^1.6.0
 
 ## NVM
