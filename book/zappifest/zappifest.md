@@ -22,6 +22,7 @@ Just run `zappifest init` and follow the instructions.
 
 #### Prerequisites
 Reach Applicaster support team to generate User access-token, assign plugin_developer role and get valid account id's.
+Note that plugins with no owner account cannot be updated.
 
 The tool allow you to publish the plugin to Zapp.
 
