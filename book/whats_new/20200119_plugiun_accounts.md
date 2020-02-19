@@ -1,3 +1,16 @@
+# New zappifest version
+
+We have released a new version of Zappifest v0.62.0 which contains these changes
+
+From this version, there will be a plugin owner publishing restriction,
+Please check the release notes for the complete explanation.
+
+To get the latest Zappifest please run the following:
+`
+brew update 
+brew upgrade zappifest
+`
+
 # Plugin accounts
 
 This article will cover the changes we made to the access for plugin developers
