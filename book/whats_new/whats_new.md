@@ -1,5 +1,8 @@
 # What's New
 
+## February 20 - 2020
+* [Plugins developer account and premissions](20200119_plugiun_accounts.md)
+
 ## December 29 - 2019
 * [Datasource Provider Protocols](20191229-dsp-protocols.md)
 
