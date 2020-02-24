@@ -35,14 +35,14 @@ Public plugins are presented to all clients in the marketplace and are openly av
 				* Use this space to point out anything that would otherwise surprise a user or cause them to unnecessarily reach out to your support. For example, this is a good place to document known issues and limitations, anything that is out of scope, or work currently in development. 
 			* Change Log
 				* Unless you are populating this after your first release, you likely won’t include this part, but as you make changes, you’ll want to record each version release and what changes they entailed, organized by platform.
-	* Marketplace & Support review
-		* Meet the support team. Conduct a demo, and receive approval from support, a product representative of the Marketplace, and Dev Relations. To organize this demo and review, please contact Yoni Osteen (Partner Product Success) at y.osteen@applicaster.com
+* Marketplace & Support review
+	* Meet the support team. Conduct a demo, and receive approval from support, a product representative of the Marketplace, and Dev Relations. To organize this demo and review, please contact Yoni Osteen (Partner Product Success) at y.osteen@applicaster.com
 		* We will discuss how to improve visibility and marketability of your plugin, leading to the next step:
-			* Create a slide that Applicaster Sales and Customer Success can insert into their presentations
-				* Applicaster uses Google Slides for presentations, and we’ve made [a template with our styling](https://drive.google.com/open?id=1o9kHv-nPc_FbO-JteWj3L7DwQ9CAWWHN) available so you can create a slide about your plugin that our team can insert into our own presentations for relevant shared customers to help find potential matches and drive business to your company through the plugin.
-				* If you create a slide following the template and share it with us, we’ll make sure the right people at Applicaster have it as a resource to represent you.
-		* Marketplace Team will mark the plugin as public after the previous call is conducted and approval received
-		* Presentation to Applicaster’s Sales and Customer Success Team, which can drive adoption for your plugin. 
-		* Shared Public Statement
-			* We recommend working with Applicaster’s marketing team to announce the release of your plugin, which can help drive attention from the market and ensure the success of your efforts.
-				* Reach out to Alexandra Urrea at a.urrea@applicaster.com to get this orgaanized
+* Create a slide that Applicaster Sales and Customer Success can insert into their presentations
+	* Applicaster uses Google Slides for presentations, and we’ve made [a template with our styling](https://drive.google.com/open?id=1o9kHv-nPc_FbO-JteWj3L7DwQ9CAWWHN) available so you can create a slide about your plugin that our team can insert into our own presentations for relevant shared customers to help find potential matches and drive business to your company through the plugin.
+	* If you create a slide following the template and share it with us, we’ll make sure the right people at Applicaster have it as a resource to represent you.
+* Marketplace Team will mark the plugin as public after the previous call is conducted and approval received
+* Presentation to Applicaster’s Sales and Customer Success Team, which can drive adoption for your plugin. 
+* Shared Public Statement
+	* We recommend working with Applicaster’s marketing team to announce the release of your plugin, which can help drive attention from the market and ensure the success of your efforts.
+	* Reach out to Alexandra Urrea at a.urrea@applicaster.com to get this organized
