@@ -6,9 +6,9 @@ Public plugins are presented to all customers in the marketplace and are openly 
 
 ### Checklist
 
-- If you haven’t established a relationship with our Business Development team yet, reach out to Erik Koland (e.kolad@applicaster.com) in order to do so. This can help establish a mutually beneficial relationship so you can best capitalize on the opportunities our marketplace enables.
+- If you haven’t established a relationship with someone from our Partnership team yet, reach out to them at partnerships@applicaster.com. Formalizing a business relationship can help establish a mutually beneficial dynamic and help you capitalize on the opportunities our marketplace enables.
 
-- Prep for your plugin kickoff call with the Marketplace Team. This will be a good time to raise any open questions or request feedback. You should check off the following items prior to the call:
+- Prepare for your plugin kickoff call with the Marketplace Team. This will be a good time to raise any open questions or request feedback. You should check off the following items prior to the call:
 	- Identify your full product scope for your plugin so we can guide you on choices for which Zapp APIs are best suited to your needs
 	- Create a request for starting [the onboarding process for your developers](https://applicaster.atlassian.net/servicedesk/customer/portal/2/group/3/create/18) (if it is the first time, click the “signup” button) 
 	- Identify who will fill the roles of Product Manager and Project Manager for your plugin development. 
