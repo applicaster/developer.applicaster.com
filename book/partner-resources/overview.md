@@ -1,6 +1,6 @@
 #  Partner Resources - Overview
 
-Applicaster provides an array of resources for the development of partner plugins. The partner portal this page sits in one such as resource, as well as the developer service desk which developers can use to submit tickets to our Dev Relations team for technical support with building and maintaining plugins.
+Applicaster provides an array of resources for the development of partner plugins. The partner portal is one such as resource, as well as the developer service desk which developers can use to submit tickets to our Dev Relations team for technical support with building and maintaining plugins.
 
 This page is aimed at Product and Project Managers of partner public plugins. A "public" plugin is available to all Applicaster customers and, as such, is held to different standards than custom proprietary plugins so that new customers can implement the plugins with ease.
 
