@@ -371,7 +371,7 @@ For iOS:
 ```
 
 _Please note_: The required file should be a zip file, contains a flat list of files following [these](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/) guidelines. When creating the file the user needs to make sure the Zip file was created by compressing the **flat list of files** and not adding extra folders.
-To get the correct file heirarchy, you should select the files you wish to zip not a folder containing those files, i.e:
+To get the correct file heirarchy, you should zip your files by selecting them directly. Please note that the files should not be inside a directory.
 
 ![flat_heirarchy_example](./flat_heirarchy.png) 
 
