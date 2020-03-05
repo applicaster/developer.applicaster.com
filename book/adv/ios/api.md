@@ -14,7 +14,7 @@ The diagrams below show banner and interstitial loading flow. The blue part is c
 
 #### Failure
 
-![ad-failed-ios.png](./img/ad-failed-ios.png)
+![adv-failed-ios.png](./img/adv-failed-ios.png)
 
 ### INTERSTITIAL FLOW
 
@@ -24,7 +24,7 @@ The diagrams below show banner and interstitial loading flow. The blue part is c
 
 #### Failure
 
-![ad-failed-ios.png](./img/ad-failed-ios.png)
+![adv-failed-ios.png](./img/adv-failed-ios.png)
 
 ## PROTOCOLS IMPLEMENTATION
 
