@@ -26,7 +26,7 @@ Here are the currently used versions of React and React-Native used on the suppo
 - React Native 0.59.10
 - React Native Web 0.11.5 (for samsung, web & webOS only)
 
-Notes:
+*Notes*:
 
 Tizen (Samsung) and webOS environments are running on web engines compatible with Chrome 38 and earlier
 
@@ -36,6 +36,17 @@ For performance reasons, our webpack configuration doesn't transpile all `node_m
 
 If you want to transpile your module directly, you can use our babel preset `@applicaster/babel-preset-quick-brick`
 
+### Applicaster Dependencies and Tooling
+
+Before you start, run `npx @applicaster/zapplicaster-cli init` to check that all the Applicaster dependencies and tooling are properly installed, and if not, it will install what's needed.
+
+There are a few things that the command doesn't test, for example:
+
+- Ruby versions
+- Xcode version
+- Android studio & gradle plugin versions
+
+Those should still be checked & installed manually.
 ***
 
 ## Prepare a QuickBrick workspace {#prepare_workspace_qb}
@@ -228,7 +239,7 @@ Now that your manifests have been uploaded, you can add your plugin to your app,
 That's it, you're ready to run your app and start coding !
 You can refer to the following documentation to start creating your plugin:
 
-- [data source provider](https://developer.applicaster.com/Zapp-Pipes/Home.html)
-- [hook plugin (login)](plugins/hooks.md)
-- [ui_component](plugins/ui_component.md)
-- [full screen plugin](plugins/full_screen_plugin.md)
+- [Data Source Provider](https://developer.applicaster.com/Zapp-Pipes/Home.html)
+- [Hook Plugin (Login)](plugins/hooks.md)
+- [UI Components](plugins/ui_component.md)
+- [Full Screen Plugin](plugins/full_screen_plugin.md)

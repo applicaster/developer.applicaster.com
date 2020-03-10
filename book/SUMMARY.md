@@ -14,7 +14,7 @@
     - [Node.js](/dev-env/node.md)
     - [Ruby](/dev-env/ruby.md)
     - [Quick-Brick](/quick-brick/plugin-setup.md)
-      - [Run Quick-Brick Natively](/quick-brick/native-project-dev.md)
+      - [Run the Quick-Brick App](/quick-brick/native-project-dev.md)
   - [Deploy and Submit](/getting-started/deploy-and-submit.md)
     - [iOS - CocoaPods](/getting-started/ios-podspec.md)
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)

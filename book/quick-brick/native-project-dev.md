@@ -9,15 +9,15 @@
 
 ## Description {#description}
 
-This guide will provide information about how to test your react native bundle on a native simulator/emulator or actual devices.
+This guide will provide information about how to test your react native quick-brick bundle on a native simulator/emulator or actual devices.
 
 There are two options to run a quick-brick bundle on a native device.
 
-* [Zapplicaster-cli](https://github.com/applicaster/QuickBrick/blob/master/packages/zapplicaster-cli/README.md) - this is the offical tool Applicaster provide for developing, testing and running an app on native device.
+* [@applicaster/zapplicaster-cli](https://github.com/applicaster/QuickBrick/blob/master/packages/zapplicaster-cli/README.md) - this is the offical tool Applicaster provide for developing, testing and running an app on native devices.
 
 * Manual build - you can create a native project without using the Applicaster CLI tool. With this you will understand the steps needed to create a native project.
 
-The following guide will describe the process of a manual build. Please note that you can run everything directly by using the [Zapplicaster-cli](https://github.com/applicaster/QuickBrick/blob/master/packages/zapplicaster-cli/README.md) tooling.
+The following guide will describe the process of a manual build. Please note that you can run everything directly by using the [@applicaster/zapplicaster-cli](https://github.com/applicaster/QuickBrick/blob/master/packages/zapplicaster-cli/README.md) tooling.
 
 ***
 
@@ -33,7 +33,6 @@ Following the plugin [plugin setup](/book/quick-brick/plugin-setup.md) guide, we
 
     *Notes:*
     * The `app_version_id` is the app version id string value from earlier stage.
-
 2. Start the react-native packager by running `yarn start`. This will invoke the script we've just created:
 
     ```base
@@ -56,7 +55,7 @@ To prepare a project for iOS or tvOS with quick-brick you need to `git clone` th
 
 * [ZappAppleBuilder](https://github.com/applicaster/ZappAppleBuilder) - the actual native application that will run the react-native quick-brick bundle.
 
-The repository readme files contains information about the setup prerequisites.  
+The repository readme files contains information about the setup prerequisites.
 
 ### Create an app for iOS/tvOS with Quick-Brick Q.A using Xcode simulators
 
@@ -125,3 +124,5 @@ The following steps will guide you how to create a quick-brick app that will uti
 
     Note:
     You can add that within the Android Studio project by going to `Preferences > Build, Execution, Development > Compiler > Command-line Options` and add `-PREACT_NATIVE_PACKAGER_ROOT=localhost:8081`.
+
+***
