@@ -55,6 +55,7 @@
     - [Nav Bar Selector](/plugins-manifest/fields/special/nav-bar-selector.md)
     - [Preload Plugins Selector](/plugins-manifest/fields/special/preload-plugins-selector.md)
     - [Screen Selector](/plugins-manifest/fields/special/screen-selector.md)
+    - [Text Style Field](/plugins-manifest/fields/special/text-style.md)
     - [Internal Use Only](/plugins-manifest/fields/special/fields-for-internal-use.md)
 - [Zappifest Tool](/zappifest/zappifest.md)
 
@@ -122,7 +123,7 @@
 - [Login Plugins](/login/intro.md)
   - [iOS](/login/iOS.md)
   - [Android](/login/Android.md)
-  - [User Account Component](/login/user_account_component.md)  
+  - [User Account Component](/login/user_account_component.md)
 - [UI Builder](/ui-builder/intro.md)
   - [API](/ui-builder/API.md)
   - [Designer Guide](/ui-builder/designer/designer.md)

@@ -1,0 +1,50 @@
+{
+  "api": {},
+  "data": {},
+  "assets": {},
+  "general": {},
+  "styles": {
+    "fields": [
+      {
+        "type": "text_style",
+        "key": "single_field_demo",
+        "label": "Single Field Demo",
+        "form_configuration": {
+          "sections": [
+            {
+              "label": "section 1",
+              "key": "section_1",
+              "fields": [
+                {
+                  "type": "text_input",
+                  "label": "Text",
+                  "key": "my_text_input",
+                  "placeholder": "type here..."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "name": "Demo",
+  "type": "cell_builder",
+  "platform": "android",
+  "identifier": "demo",
+  "author_name": "Demo Demo",
+  "description": "Demo",
+  "author_email": "zapp@applicaster.com",
+  "min_zapp_sdk": "",
+  "react_native": true,
+  "dependency_name": "@applicaster/demo",
+  "dependency_version": "0.0.1",
+  "manifest_version": "0.0.1",
+  "whitelisted_account_ids": [],
+  "dependency_repository_url": [],
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "ui_builder_support": true,
+  "targets": ["mobile"],
+  "ui_frameworks": ["quickbrick"]
+}
