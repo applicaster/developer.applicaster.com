@@ -51,11 +51,9 @@ This chapter will explain how to test a project for iOS/tvOS platforms with quic
 
 ### Prerequisites for iOS/tvOS with Quick-Brick
 
-To prepare a project for iOS or tvOS with quick-brick you need to `git clone` the following repositories:
+To prepare a project for iOS or tvOS with quick-brick you need to `git clone` the [ZappAppleBuilder](https://github.com/applicaster/ZappAppleBuilder) repository.
 
-* [ZappAppleBuilder](https://github.com/applicaster/ZappAppleBuilder) - the actual native application that will run the react-native quick-brick bundle.
-
-The repository readme files contains information about the setup prerequisites.
+**Important** - The [ZappAppleBuilder](https://github.com/applicaster/ZappAppleBuilder) repository readme file contains information about the setup prerequisites. Please make sure you're aligned.
 
 ### Create an app for iOS/tvOS with Quick-Brick Q.A using Xcode simulators
 
@@ -95,11 +93,9 @@ We have created extra documentations about the following issues:
 
 ## Android and Android T.V {#android_qb}
 
-To prepare a project for iOS or tvOS with quick-brick you need to `git clone` the following repositories:
+To prepare a project for Android or Android T.V with quick-brick you need to `git clone` the [Zapp-Android](https://github.com/applicaster/Zapp-Android) repository:
 
-* [Zapp-Android](https://github.com/applicaster/Zapp-Android) - the actual native application that will run the react-native quick-brick bundle.
-
-The repository readme file contains information about the setup prerequisites.
+**Important** - The [Zapp-Android](https://github.com/applicaster/Zapp-Android) repository readme file contains information about the setup prerequisites. Please make sure you're aligned.
 
 ### Create an app for Android and Android T.V with Quick-Brick Q.A using Android Emulators
 
@@ -115,14 +111,22 @@ The following steps will guide you how to create a quick-brick app that will uti
     bundle exec rake prepare_workspace VERSION=<Applicastion_ID>
     ```
 
-3. Open the Android Studio project and run the project on an Android Emulator.
-4. To test the quick-brick bundle from localhost, you need to pass the following argument `-PREACT_NATIVE_PACKAGER_ROOT=localhost:8081`. For example:
+3. Open the Android Studio project and run the project on an Android Emulator. Note that you have two option to test the quick-brick bundle from localhost:
 
-    ```base
-    <your_android_project_path>/.gradlew assembleDebug -PREACT_NATIVE_PACKAGER_ROOT=localhost:8081
-    ```
+    * Add the following argument `-PREACT_NATIVE_PACKAGER_ROOT=localhost:8081` with every gradle build command. For example:
 
-    Note:
-    You can add that within the Android Studio project by going to `Preferences > Build, Execution, Development > Compiler > Command-line Options` and add `-PREACT_NATIVE_PACKAGER_ROOT=localhost:8081`.
+        ```base
+        <your_android_project_path>/.gradlew assembleDebug -PREACT_NATIVE_PACKAGER_ROOT=localhost:8081
+        ```
+
+        To run commands gradle command directly from Android Studio, you can add the argument by going to `Preferences > Build, Execution, Development > Compiler > Command-line Options` and add `-PREACT_NATIVE_PACKAGER_ROOT=localhost:8081`.
+
+    * Before Installing the app, open he Android Studio emulator and run the following command from your command line:
+
+        ```base
+        adb reverse tcp:8081 tcp:8081
+        ```
+
+        When your device or emulator is trying to access local port 8081, that request will be routed to your laptop’s port 8081.
 
 ***
