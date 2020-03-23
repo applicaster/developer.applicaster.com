@@ -231,6 +231,7 @@ _Please note that some of the fields are relevant to only one platform or only o
 | **preload**                       | An optional boolean key, that defines if plugin can be hooked (loaded), before the screen loads                                                                                                                                                                                                 |
 | **localizations**                 | This section defines plugin localizations configuration, the languages is taken from app family configured languages. All the fields types in this section are `textarea`, and there is no need to mention field type in the manifest. Read more [here](#custom-configuration-sections)         |
 | **ui_frameworks**                 | Array type. Used to specify which UI Platforms are supported by the plugin. Available options: `["native", "quickbrick"]`. Default value: `["native"]`. Used to filter & show available plugins per app version in the Plugin Gallery.                                                          |
+| **characteristics**               | Object type. Used to define behavior of ui component properties in the UI builder, starting with Screen and Groups. See [extended characteristics documentation](/ui-components/ui-component-characteristics.md)                                                                                |
 
 ##### Localizations Example
 
@@ -373,7 +374,7 @@ For iOS:
 _Please note_: The required file should be a zip file, contains a flat list of files following [these](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/) guidelines. When creating the file the user needs to make sure the Zip file was created by compressing the **flat list of files** and not adding extra folders.
 To get the correct file heirarchy, you should zip your files by selecting them directly. Please note that the files should not be inside a directory.
 
-![flat_heirarchy_example](./flat_heirarchy.png) 
+![flat_heirarchy_example](./flat_heirarchy.png)
 
 For Android:
 
