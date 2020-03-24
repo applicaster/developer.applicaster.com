@@ -100,6 +100,7 @@
     - [Video Advertising](/Zapp-Pipes/protocols/video_advertising_protocol.md)
     - [Video Text Tracks](/Zapp-Pipes/protocols/video_text_tracks_protocol.md)
     - [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
+  - [Add DSP Search Handler](/Zapp-Pipes/11.1-dsp-search-handler.md)
   - [DataSource for Roku TV](/Zapp-Pipes/12.-Datasource-for-rokuTV.md)
 
 - [Navigation Bar Plugins](/ui-builder/NavigationBarPluginsIntro.md)
