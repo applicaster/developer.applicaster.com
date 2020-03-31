@@ -102,6 +102,7 @@
     - [Login/Payment](/Zapp-Pipes/protocols/login_and_payment_protocol.md)
   - [Add DSP Search Handler](/Zapp-Pipes/11.1-dsp-search-handler.md)
   - [DataSource for Roku TV](/Zapp-Pipes/12.-Datasource-for-rokuTV.md)
+  - [Structure Feed for single channel EPG](/Zapp-Pipes/13.-single-channel-epg-feeds.md)
 
 - [Navigation Bar Plugins](/ui-builder/NavigationBarPluginsIntro.md)
   - [iOS](/ui-builder/ios/NavigatioBarPlugins.md)
