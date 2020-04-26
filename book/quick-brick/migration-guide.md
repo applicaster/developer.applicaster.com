@@ -32,7 +32,14 @@ All you need to do is the following:
 
 1. Update your package name in your package.json file. If you want your plugin's access to be restricted, then you need to use a scoped name `@applicaster/my-plugin-name`
 2. Add a `main: "./export.js"` property to your package.json
-3. Create a `export.js` file which will import from your root component, and export it as a default export.
+3. Create a `export.js` file which will import from your root component, and export it as a default export:
+
+```javascript
+import MyPlugin from "./src";
+
+export default MyPlugin;
+```
+
 4. update your zapp plugin manifest with the `dependency_name` and `dependency_version` fields, matching the values in your package.json file
 5. publish your plugin to npm
 6. publish your updated plugin manifest to Zapp with the zappifest tool

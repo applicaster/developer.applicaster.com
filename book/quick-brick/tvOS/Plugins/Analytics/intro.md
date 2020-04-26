@@ -1,25 +1,30 @@
 ## TvOS Analytics plugins
 
 ### Introduction
-This Document will explain general structure how Analytics plugin are working on TvOS with QuickBrick
+
+This Document will describe the general structure of Analytics plugins, and how they are working on TvOS with QuickBrick
 
 #### Supported Apple TV variant:
+
 Apple TV 4th Generation or later using tvOS 11.0 or higher
 
 #### Available from ZappSDK 10.0.0 and above
 
 #### Required Applicaster Frameworks:
-* ZappPlugins
-* ZappAnalyticsPluginsSDK
+
+- ZappPlugins
+- ZappAnalyticsPluginsSDK
 
 ### Content
-* <a href="#general">General</a>
-* <a href="#api">API</a>
 
-* [How To Create New Plugin?](/quick-brick/tvOS/Plugins/Analytics/GeneralAnalyticsHowCreate.md)
+- <a href="#general">General</a>
+- <a href="#api">API</a>
+
+- [How To Create New Plugin?](/quick-brick/tvOS/Plugins/Analytics/GeneralAnalyticsHowCreate.md)
 
 ### Plugins
-* [Google Analytics](/quick-brick/tvOS/Plugins/Analytics//GoogleAnalytics/GoogleAnalytics.md)
+
+- [Google Analytics](/quick-brick/tvOS/Plugins/Analytics//GoogleAnalytics/GoogleAnalytics.md)
 
 <a name="general" />
 
@@ -34,48 +39,48 @@ All analytics plugins must conform to the ZPAnalyticsProviderProtocol protocol a
 
 ##### Plugin initialization
 
-1. During the application launch phase - the `PluginManager` will try to initialize analytics plugin through the the `AnalyticsManager`.
-the AnalyticsManager will retrieve all available analytics plugins from the `plugin_configurations.json`.
+1.  During the application launch phase - the `PluginManager` will try to initialize analytics plugin through the the `AnalyticsManager`.
+    the AnalyticsManager will retrieve all available analytics plugins from the `plugin_configurations.json`.
 
-    __Example:__ `plugin_configurations.json`
-    ```
-    [
-        {
-            "plugin": {
-                "api": {
-                    "require_startup_execution": false,
-                    "class_name": "ZappAnalyticsPluginGAtvOS.GoogleAnalyticsPluginAdapter",
-                    "modules": []
+        __Example:__ `plugin_configurations.json`
+        ```
+        [
+            {
+                "plugin": {
+                    "api": {
+                        "require_startup_execution": false,
+                        "class_name": "ZappAnalyticsPluginGAtvOS.GoogleAnalyticsPluginAdapter",
+                        "modules": []
+                    },
+                    "dependency_repository_url": [],
+                    "platform": "tvos",
+                    "author_name": "Anton Kononenko",
+                    "author_email": "a.kononenko@applicaster.com",
+                    "manifest_version": "0.1.1",
+                    "name": "Google Analytics tvOS 2.0",
+                    "description": "Provide Google Analytics as agent",
+                    "type": "analytics",
+                    "identifier": "google_analytics_tvos2",
+                    "ui_builder_support": true,
+                    "dependency_name": "ZappAnalyticsPluginGAtvOS",
+                    "dependency_version": "0.1.1",
+                    "whitelisted_account_ids": [
+                        "5ae06cef8fba0f00084bd3c6"
+                    ],
+                    "min_zapp_sdk": "10.0.0",
+                    "deprecated_since_zapp_sdk": "",
+                    "unsupported_since_zapp_sdk": "",
+                    "react_native": false
                 },
-                "dependency_repository_url": [],
-                "platform": "tvos",
-                "author_name": "Anton Kononenko",
-                "author_email": "a.kononenko@applicaster.com",
-                "manifest_version": "0.1.1",
-                "name": "Google Analytics tvOS 2.0",
-                "description": "Provide Google Analytics as agent",
-                "type": "analytics",
-                "identifier": "google_analytics_tvos2",
-                "ui_builder_support": true,
-                "dependency_name": "ZappAnalyticsPluginGAtvOS",
-                "dependency_version": "0.1.1",
-                "whitelisted_account_ids": [
-                    "5ae06cef8fba0f00084bd3c6"
-                ],
-                "min_zapp_sdk": "10.0.0",
-                "deprecated_since_zapp_sdk": "",
-                "unsupported_since_zapp_sdk": "",
-                "react_native": false
-            },
-            "configuration_json": {
-                "blacklisted_events": ""
+                "configuration_json": {
+                    "blacklisted_events": ""
+                }
             }
-        }
-    ]
-    ```
+        ]
+        ```
 
-2. `AnalyticsManager` will save to local storage instances of the created plugins.
-3. After the Analytics manager will finish the initialization process for all plugins - they would be ready to use.
+2.  `AnalyticsManager` will save to local storage instances of the created plugins.
+3.  After the Analytics manager will finish the initialization process for all plugins - they would be ready to use.
 
 ##### Sending events
 
@@ -85,15 +90,16 @@ the AnalyticsManager will retrieve all available analytics plugins from the `plu
 4. `AnalyticsManager` will dispatch the event to all the previously initialized analytics plugins
 
 The react native of the manager is implemented inside the following manager - zapp-react-native-utils/manager.js.
-Please go to the <a href="#api">API</a>  section for more details.
+Please go to the <a href="#api">API</a> section for more details.
 
 <a name="api" />
 
 #### React-Native API
 
 ##### zapp-react-native-utils/manager.js
-this helper is used to pass analytics events from React Native to the native side of the SDK.
-__Note:__ All events from React Native should use the following method and utility.
+
+This helper is used to pass analytics events from React Native to the native side of the SDK.
+**Note:** All events from React Native should use the following method and utility.
 
 ###### Public API
 
@@ -145,4 +151,3 @@ It is highly advisable for other analytics plugins to inherit this class rather 
 ### How to crete a new analytics plugin?
 
 Please review the following [Example Project](https://github.com/applicaster/ZappAnalyticsPluginGAtvOS) to see a fully implemented analytics plugin example.
-
