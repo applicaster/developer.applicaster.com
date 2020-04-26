@@ -1,24 +1,37 @@
 ---
-keywords: hook plugin quick brick quickbrick qb login
+search:
+  keywords: [hook, plugin, quick, brick, quickbrick, qb, login]
 ---
+
 # Hook Plugin
 
 ## Concepts
 
 Hook plugins allow you to implement custom logic between the transition between two screens.
-A Hook plugin is basically an object which contains several properties to customize the hook behaviour, and a `Component` property which contains a react component to render when evaluating the hook.
+A Hook plugin is an object which contains several properties to customize the hook behaviour, and a `Component` property which contains a react component to render when evaluating the hook.
+
+A hook plugin is useful for varying use cases, the most common being:
+
+- login and authentication flows
+- stream security & signing before playback
+- business logic enforcement
+- personalization
+- parental gates or consent dialogs
 
 The flow is as follows:
 
 1. the user presses on a cell, this triggers a navigation action with a specific payload (the entry of the cell)
-2. the target route is being resolved by the Quick Brick App's navigation module
+2. The target route is being resolved by the Quick Brick App's navigation module
 3. The hooks manager looks for hooks to run when reaching that target, from the ui builder configuration
    3.b if the target is a player, the hook manager will look for all hook plugins flagged as having a player hook
 4. If hooks manager finds a hook, it starts to run them sequentially. As the hook's evaluation is asynchroneous, the apps renders the hook plugin's component until the hook completes.
-5. the hook plugin runs its own custom login. Once it is done, it invokes a callback to complete the hook. Completion can yield 3 outcomes:
-   5.1 success: the hook was successful, so the process can continue, to either evaluate the next hook, or execute the transition
-   5.2 cancel: the hook was cancelled, so the process is stopped. the navigation engine of the app will then abort the transition and leave the user on the screen opened before the transition
-   5.3 error: the hook failed. If the hook plugin is flagged as being a flow blocker, this will terminate the hook evaluation and abort the transition. If not, the hook manager will proceed to evaluate the next hook
+5. The hook plugin runs its own custom logic such as login flow, paywall, parental gate, etc.
+  Once it is done, it invokes a callback to complete the hook.
+  Completion can yield 3 outcomes:
+
+  1. success: the hook was successful, so the process can continue, to either evaluate the next hook, or execute the transition
+  2. cancel: the hook was cancelled, so the process is stopped. the navigation engine of the app will then abort the transition and leave the user on the screen opened before the transition
+  3. error: the hook failed. If the hook plugin is flagged as being a flow blocker, this will terminate the hook evaluation and abort the transition. If not, the hook manager will proceed to evaluate the next hook
 
 The React Component in the screen hook is a basic React Component and can use all the APIs available in the Quick Brick framework. It also receives the data which initiated the transition, so this data can be mutated and passed along the transition. The main use case for this is for authorizing content, when it is required to append a token to a stream url, based on data available in local storage for instance. See the API reference below for more details
 
