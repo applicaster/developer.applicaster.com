@@ -125,7 +125,7 @@ function MyAwesomeComponent(props) {
   const entries = props.zappPipesData.data?.entry;
 
   return (
-    <View style={{flex: 1}}>
+    <View style={ {flex: 1} }>
       {
         entries.map((entry, index) => (
           <TouchableHighlight onPress={() => navigator.push(entry)}>

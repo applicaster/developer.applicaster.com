@@ -43,7 +43,7 @@ When the Player is triggered to present a video, QuickBrick will try to retrieve
 
 Please review example of `render()` func in the `PlayerWrapperComponent`
 
-```
+```jsx
   render() {
     const { item = {}, Player, PlayerControls } = this.props;
     const showControls = this.shouldShowControls();
@@ -54,7 +54,7 @@ Please review example of `render()` func in the `PlayerWrapperComponent`
       <TVEventHandlerComponent tvEventHandler={this.playerRemoteHandler}>
         <View style={style.container}>
           <Player
-            source={{ uri }}
+            source={ { uri } }
             paused={showControls}
             controls={!PlayerControls}
             onLoadStart={this.onLoadStart}

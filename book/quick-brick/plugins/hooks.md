@@ -1,3 +1,6 @@
+---
+keywords: hook plugin quick brick quickbrick qb login
+---
 # Hook Plugin
 
 ## Concepts

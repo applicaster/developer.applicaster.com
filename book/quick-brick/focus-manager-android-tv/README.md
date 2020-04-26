@@ -18,7 +18,7 @@ function MyComponent(props) {
   const button2Ref = React.useRef(null);
 
   return (
-    <View style={{ flex: 1, flexDirection: "column"}}>
+    <View style={ { flex: 1, flexDirection: "column"} }>
       <Focusable ref={button1Ref} nextFocusDown={button2Ref} />
       <Focusable ref={button2Ref} nextFocusUp={button1Ref}>
     <View>
@@ -34,7 +34,7 @@ The Focusable component doesn't render anything. it simply holds the ability to 
 
   return (
     <Focusable ref={ref} nextFocusDown={upRef}>
-      {focused => <View style={{ backgroundColor: focused ? "red" : "grey" }}>}
+      {focused => <View style={ { backgroundColor: focused ? "red" : "grey" } }>}
     <Focusable>
   )
 
