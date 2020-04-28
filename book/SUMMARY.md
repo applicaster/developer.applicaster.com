@@ -11,7 +11,7 @@
   - [Plugin abilities](/getting-started/plugin-abilities.md)
   - [Get Ready to Work](/dev-env/intro.md)
     - [iOS](/dev-env/iOS.md)
-    - [Applicaster Zapp App Connector utilities for plugins](/dev-env/iOS/utils.md)
+      - [Applicaster Zapp App Connector utilities for plugins](/dev-env/iOS/utils.md)
     - [Android](/dev-env/android.md)
     - [React-Native](/dev-env/react-native.md)
     - [Node.js](/dev-env/node.md)
