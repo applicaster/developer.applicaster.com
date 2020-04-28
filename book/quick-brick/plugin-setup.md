@@ -243,3 +243,4 @@ You can refer to the following documentation to start creating your plugin:
 - [Hook Plugin (Login)](plugins/hooks.md)
 - [UI Components](plugins/ui_component.md)
 - [Full Screen Plugin](plugins/full_screen_plugin.md)
+- [Running on a device](/quick-brick/native-project-dev.md)

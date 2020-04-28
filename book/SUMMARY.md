@@ -17,6 +17,7 @@
     - [Node.js](/dev-env/node.md)
     - [Ruby](/dev-env/ruby.md)
     - [Quick-Brick](/quick-brick/plugin-setup.md)
+      - [Running on a device](/quick-brick/native-project-dev.md)
   - [Deploy and Submit](/getting-started/deploy-and-submit.md)
     - [iOS - CocoaPods](/getting-started/ios-podspec.md)
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
@@ -64,6 +65,7 @@
 
 - [Introduction](/quick-brick/intro.md)
 - [Inside QuickBrick](/quick-brick/Inside-QuickBrick.md)
+- [Setup your project](/quick-brick/plugin-setup.md)
 - [Plugin Types](/quick-brick/plugins/README.md)
   - [Cell](/quick-brick/plugins/cell_builder_plugins.md)
   - [Hook](/quick-brick/plugins/hooks.md)
@@ -89,6 +91,7 @@
         - [GoogleIMA](quick-brick/tvOS/Plugins/PlayerDependents/VideoAds/GoogleIMA/GoogleIMA.md)
   - [Apple TV Debug](/quick-brick/tvOS/Environment/DebugBuildIntegration.md)
   - [Apple TV Release](quick-brick/tvOS/Environment/ReleaseBuildIntegration.md)
+
 
 ## Zapp Plugin Types (previous-generation)
 
