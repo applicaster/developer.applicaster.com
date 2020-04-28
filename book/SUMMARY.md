@@ -72,6 +72,7 @@
   - [UI Component](/quick-brick/plugins/ui_component.md)
 
 - [API documentation](/quick-brick/Api-documentation.md)
+- [Running on a device](/quick-brick/native-project-dev.md)
 - [Plugin migration guide](/quick-brick/migration-guide.md)
 - [Focus manager on TV platforms](/quick-brick/focus-manager/focus-manager.md)
 - [Focus manager on Android TV](/quick-brick/focus-manager-android-tv/README.md)
