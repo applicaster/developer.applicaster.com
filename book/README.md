@@ -18,8 +18,13 @@ You can find guides here to further expand your products and to build, maintain,
 Zapp Plugins provide the main way to expand the capabilities of an app by integrating new features into an existing or new app.
 Zapp Plugins enables adding native / react native features and integrations.
 
-In order to learn more about what is a Zapp Plugin and how to develop one, please start from [**Getting Started with Zapp Plugins**](/getting-started/zapp-plugins.md).
+This website contains the documentation of both the previous-generation plugins, based on native technologies only, to QuickBrick based plugins that can use either native or JavaScript and ReactNative.
+The previous generation plugins should only be used in case they target a specific application that cannot be converted to QuickBrick. In genral plugin development and maintenance is much easier with QuickBrick.
+
+In order to learn more about what is a Zapp Plugin and how to develop one, start from [**QuickBrick Introduction**](/quick-brick/intro.md)
+
+For the previous-generation plugins please start from [**Getting Started with Zapp Plugins [previous-generation]**](/getting-started/zapp-plugins.md).
 
 ## Contact us & Help-desk
 
-For any question or request, you are welcome to contact us by [opening a ticket](https://applicaster.atlassian.net/servicedesk/customer/portal/2) or by [email](mailto:dev-rel@applicaster.com).
+For any question or request, you are welcome to contact us by [email](mailto:support@applicaster.com).

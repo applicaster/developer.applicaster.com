@@ -1,8 +1,11 @@
 # Applicaster Developer's Center
 
-## Getting Started
+## General
 
 - [Code Of Conduct](/Code-Of-Conduct.md)
+
+## Zapp Plugins Getting Started
+
 - [Getting Started with Zapp Plugins](/getting-started/zapp-plugins.md)
   - [Plugin types](/getting-started/plugin-types.md)
   - [Plugin abilities](/getting-started/plugin-abilities.md)
@@ -13,8 +16,6 @@
     - [React-Native](/dev-env/react-native.md)
     - [Node.js](/dev-env/node.md)
     - [Ruby](/dev-env/ruby.md)
-    - [Quick-Brick](/quick-brick/plugin-setup.md)
-      - [Run the Quick-Brick App](/quick-brick/native-project-dev.md)
   - [Deploy and Submit](/getting-started/deploy-and-submit.md)
     - [iOS - CocoaPods](/getting-started/ios-podspec.md)
     - [Android - Bintray and CircleCI](/getting-started/set-up-bintray-and-circle-ci.md)
@@ -31,8 +32,6 @@
   - [Update repository structure in Zapp-iOS SDK v13.0](whats_new/20191120-update-zapp-ios-repository-structure.md)
   - [Get ready for Zapp Android SDK 11.2.0](whats_new/20191112-get-ready-for-zapp-android-11.2.0.md)
   - [Migrating your plugin to Swift 5.0 with Zapp-iOS SDK v12.0](whats_new/20190818-swift-5.0-migration.md)
-
-# Zapp Plugins
 
 ## Zapp Plugin Manifest
 
@@ -60,7 +59,39 @@
     - [Internal Use Only](/plugins-manifest/fields/special/fields-for-internal-use.md)
 - [Zappifest Tool](/zappifest/zappifest.md)
 
-## Zapp Plugin Types
+## QuickBrick
+
+- [Introduction](/quick-brick/intro.md)
+- [Inside QuickBrick](/quick-brick/Inside-QuickBrick.md)
+- [Setup your project](/quick-brick/plugin-setup.md)
+- [Running on a device](/quick-brick/native-project-dev.md)
+- [Plugin Types](/quick-brick/plugins/README.md)
+  - [Cell](/quick-brick/plugins/cell_builder_plugins.md)
+  - [Hook](/quick-brick/plugins/hooks.md)
+  - [Navigation](/quick-brick/plugins/navigation_plugins.md)
+  - [Player](/quick-brick/plugins/player_plugin.md)
+  - [UI Component](/quick-brick/plugins/ui_component.md)
+
+- [API documentation](/quick-brick/Api-documentation.md)
+- [Plugin migration guide](/quick-brick/migration-guide.md)
+- [Focus manager on TV platforms](/quick-brick/focus-manager/focus-manager.md)
+- [Focus manager on Android TV](/quick-brick/focus-manager-android-tv/README.md)
+- [Apple TV](/quick-brick/tvOS/intro.md)
+  - [Plugins](/quick-brick/tvOS/Plugins/intro.md)
+    - [Analytics](/quick-brick/tvOS/Plugins/Analytics/intro.md)
+      - [Plugin creation guide](/quick-brick/tvOS/Plugins/Analytics/GeneralAnalyticsHowCreate.md)
+      - [Google Analytics](/quick-brick/tvOS/Plugins/Analytics/GoogleAnalytics/GoogleAnalytics.md)
+    - [Player](quick-brick/tvOS/Plugins/Video/intro.md)
+      - [Plugin creation guide](quick-brick/tvOS/Plugins/Video/VideoPluginsHowCreate.md)
+      - [Default Player](quick-brick/tvOS/Plugins/Video/DefaultPlayer/DefaultPlayer.md)
+      - [Player Dependent](quick-brick/tvOS/Plugins/PlayerDependents/intro.md)
+        - [Plugin creation guide](quick-brick/tvOS/Plugins/PlayerDependents/DependentPluginsHowCreate.md)
+        - [GoogleIMA](quick-brick/tvOS/Plugins/PlayerDependents/VideoAds/GoogleIMA/GoogleIMA.md)
+  - [Apple TV Debug](/quick-brick/tvOS/Environment/DebugBuildIntegration.md)
+  - [Apple TV Release](quick-brick/tvOS/Environment/ReleaseBuildIntegration.md)
+
+
+## Zapp Plugin Types (previous-generation)
 
 - [Screen Plugins](/screen/screen-plugin-general.md)
   - [iOS](/screen/ios/screen-plugin-ios.md)
@@ -168,7 +199,6 @@
 - [Navigation and Refresh](/plugins/general-abilities/refresh-and-navigation/refresh-and-navigation.md)
 - [URL Schemes](/plugins/general-abilities/url-schemes/url-schemes.md)
 
-# Applicaster Video Platform
 
 ## Applicaster Video Platform
 
@@ -180,37 +210,3 @@
   - [EPG Ingestion](/applicaster-video-platform/content-ingestion/epg-ingestion/index.md)
   - [Collection Ingestion](/applicaster-video-platform/content-ingestion/collection-ingestion-xml/collection_via_xml.md)
   - [Authorization Providers](/applicaster-video-platform/authorization-provider/authorization_provider.md)
-
-# QuickBrick
-
-## QuickBrick
-
-- [Introduction](/quick-brick/intro.md)
-- [Apple TV](/quick-brick/tvOS/intro.md)
-  - [Plugins](/quick-brick/tvOS/Plugins/intro.md)
-    - [Analytics](/quick-brick/tvOS/Plugins/Analytics/intro.md)
-      - [Plugin creation guide](/quick-brick/tvOS/Plugins/Analytics/GeneralAnalyticsHowCreate.md)
-      - [Google Analytics](/quick-brick/tvOS/Plugins/Analytics/GoogleAnalytics/GoogleAnalytics.md)
-    - [Player](quick-brick/tvOS/Plugins/Video/intro.md)
-      - [Plugin creation guide](quick-brick/tvOS/Plugins/Video/VideoPluginsHowCreate.md)
-      - [Default Player](quick-brick/tvOS/Plugins/Video/DefaultPlayer/DefaultPlayer.md)
-      - [Player Dependent](quick-brick/tvOS/Plugins/PlayerDependents/intro.md)
-        - [Plugin creation guide](quick-brick/tvOS/Plugins/PlayerDependents/DependentPluginsHowCreate.md)
-        - [GoogleIMA](quick-brick/tvOS/Plugins/PlayerDependents/VideoAds/GoogleIMA/GoogleIMA.md)
-  - [Environment](/quick-brick/tvOS/Environment/intro.md)
-  - [Apple TV Debug](/quick-brick/tvOS/Environment/DebugBuildIntegration.md)
-  - [Apple TV Release](quick-brick/tvOS/Environment/ReleaseBuildIntegration.md)
-- [Beta Guidelines & information](/quick-brick/Beta-guidelines.md)
-- [Setup your project](/quick-brick/plugin-setup.md)
-  - [Run Quick-Brick Natively](/quick-brick/native-project-dev.md)
-- [Inside QuickBrick](/quick-brick/Inside-QuickBrick.md)
-- [API documentation](/quick-brick/Api-documentation.md)
-  - [CLI](/quick-brick/Api/Cli.md)
-  - [App](/quick-brick/Api/App.md)
-  - [Bridge](/quick-brick/Api/Bridge.md)
-  - [Redux](/quick-brick/Api/Redux.md)
-  - [Components](/quick-brick/Api/Ui-components.md)
-  - [Utilities](/quick-brick/Api/Utils.md)
-- [Plugin migration guide](/quick-brick/migration-guide.md)
-- [Using Cell Styles Builder](/quick-brick/cell-styles-builder/layouts-with-cell-builder-plugins.md)
-- [Focus manager on TV platforms](/quick-brick/focus-manager/focus-manager.md)

@@ -120,12 +120,12 @@ This prop should only be set when you are setting the source, changing it after 
 
 Example with default values:
 ```
-bufferConfig={{
+bufferConfig={
   minBufferMs: 15000,
   maxBufferMs: 50000,
   bufferForPlaybackMs: 2500,
   bufferForPlaybackAfterRebufferMs: 5000
-}}
+}
 ```
 This is usually used to cut down delay for live streams mainly.
 
@@ -159,7 +159,7 @@ Add video filter
 
 For more details on these filters refer to the [iOS docs](https://developer.apple.com/library/archive/documentation/GraphicsImaging/Reference/CoreImageFilterReference/index.html#//apple_ref/doc/uid/TP30000136-SW55).
 
-Notes: 
+Notes:
 1. Using a filter can impact CPU usage. A workaround is to save the video with the filter and then load the saved video.
 2. Only on progressive download and locally served files (non HLS caching).
 
@@ -179,7 +179,7 @@ Platforms: iOS
 
 #### fullscreenOrientation
 
-* **all (default)** - 
+* **all (default)** -
 * **landscape**
 * **portrait**
 
@@ -247,7 +247,7 @@ Default: 250.0
 Platforms: all
 
 ### rate
-Speed at which the media should play. 
+Speed at which the media should play.
 * **0.0** - Pauses the video
 * **1.0** - Play at normal speed
 * **Other values** - Slow down or speed up playback
@@ -274,7 +274,7 @@ The docs for this prop are incomplete and will be updated as each option is inve
 
 ##### Asset loaded via require
 
-Example: 
+Example:
 ```
 const sintel = require('./sintel.mp4');
 
@@ -407,7 +407,7 @@ textTracks | array | An array of text track info objects with the following prop
 
 Example:
 ```
-{ 
+{
   canPlaySlowForward: true,
   canPlayReverse: false,
   canPlaySlowReverse: false,
@@ -571,17 +571,17 @@ let path = response.uri;
 Notes:
  - Currently only supports highest quality export
  - Currently only supports MP4 export
- - Currently only supports exporting to user's cache directory with a generated UUID filename. 
+ - Currently only supports exporting to user's cache directory with a generated UUID filename.
  - User will need to remove the saved video through their Photos app
  - Works with cached videos as well. (Checkout video-caching example)
  - If the video is has not began buffering (e.g. there is no internet connection) then the save function will throw an error.
  - If the video is buffering then the save function promise will return after the video has finished buffering and processing.
- 
-Future: 
+
+Future:
  - Will support multiple qualities through options
  - Will support more formats in the future through options
  - Will support custom directory and file name through options
- 
+
 Platforms: iOS
 
 #### seek()

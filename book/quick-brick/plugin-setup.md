@@ -90,13 +90,13 @@ In this step, we will prepare a plugin workspace. It will have a structure like 
   |-- yarn.lock
 ```
 
-To build the structure please follow this guidelines: 
+To build the structure please follow this guidelines:
 
 - Create a folder and create a git repository by running `git init`
 - Run `npm init` to create a package.json file for your plugin repository. Add the following properties into the `package.json` to enable yarn workspaces
   - `"private": true`
   - `workspaces: ["plugin", "development-app"]`
-- Inside the `plugins` directory, create a folder for your plugin. In this folder, create another npm package by running `npm init`. the name in the package.json here will be the actual name of your plugin package. It should be scoped with `@applicaster` domain, and be prefixed with `quick-brick` like this `@applicaster/quick-brick-my-plugin-name`. Make sure the `main` property of this package.json points to the entry point of your plugin. 
+- Inside the `plugins` directory, create a folder for your plugin. In this folder, create another npm package by running `npm init`. the name in the package.json here will be the actual name of your plugin package. It should be scoped with `@applicaster` domain, and be prefixed with `quick-brick` like this `@applicaster/quick-brick-my-plugin-name`. Make sure the `main` property of this package.json points to the entry point of your plugin.
 
   *Note*: Please note that the babel transpiler _will fail miserably in builds_ without `@applicaster/quick-brick-` scope and prefix, it depends on both for picking the dependency correctly.
 
@@ -153,7 +153,7 @@ To build the structure please follow this guidelines:
 - Make sure to set the flag `"react_native": true` in the manifest.
 - [publish your manifests](https://developer.applicaster.com/zappifest/zappifest.html) using zappifest.
 
-  Note: 
+  Note:
   At this point, you don't need to publish your plugin to npm yet. Using yarn workspaces will ensure that yarn will resolve the plugin locally in the workspace, instead of using the npm registry.
 
 ***
@@ -242,4 +242,4 @@ You can refer to the following documentation to start creating your plugin:
 - [Data Source Provider](https://developer.applicaster.com/Zapp-Pipes/Home.html)
 - [Hook Plugin (Login)](plugins/hooks.md)
 - [UI Components](plugins/ui_component.md)
-- [Full Screen Plugin](plugins/full_screen_plugin.md)
+- [Running on a device](/quick-brick/native-project-dev.md)

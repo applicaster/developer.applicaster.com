@@ -11,7 +11,7 @@ Menu cells are available in 4 states:
 - unfocused and selected
 - focused and selected
 
-For better understanding, the diagrams will show normally blue components, unless it will be showing potential targets of focus movement then it will be shown in green. As the table below shows.
+In the following diagrams, the components will be marked in blue, and the potential targets of focus movement will be marked in green. See table below.
 
 | Normal states    | Target states           |
 | ------------- |:-------------:|
@@ -20,8 +20,8 @@ For better understanding, the diagrams will show normally blue components, unles
 
 ### Directions:
 
-The direction of potential targets areas is calculated from the edge of currently holding focus state component.
-There is 4 direction:
+The direction of potential targets areas is calculated from the edge of the component holding the "focused" state.
+There are 4 directions:
 - left
 - up
 - right
@@ -98,7 +98,7 @@ Each `Focusable` item has to be placed in `FocusableGroup`. `FocusableGroup` can
      </FocusableGroup>
 ```
 ### Focus events sequence:
-Focus events are sent on into 2 `Focusable` items `current` and `next` when moving focus in following sequance:
+Focus events are propagated to two `Focusable` items, `current` and `next`, when moving focus in following sequence:
 - `current.willLoseFocus`
 - if `next` has been found
   - `next.willReceiveFocus`
