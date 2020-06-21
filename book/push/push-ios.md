@@ -6,6 +6,7 @@ The `ZPPushProviderProtocol` goes through all of the functions for initializing 
 2. [Rich Media Notifications](#rich)
 3. [Plist Addition](#plist)
 4. [Useful Related Documentation](#useful)
+4. [Podspec additions for the notification extensions](#podspec)
 
 ### Create a New Push Provider {#create}
 
@@ -96,7 +97,7 @@ When push notification arrives in an iOS app,  you may want to be able to downlo
 
 The following steps will help you setup and add a Notification Service Extension to an app:
 
-1. Add an extra dependency inside the plugin manifest for the `Notification Service Extension` which should be published with cocoapods. In the following example, we added support for the `UrbanAirship App Extensions` file.
+1. Add an extra dependency inside the plugin manifest for the `Notification Service Extension` or `Notification Content Extension`  which should be published with cocoapods. In the following example, we added support for the `UrbanAirship App Extensions` file.
 
     Here's an example taken from the urban airship:
 
@@ -104,7 +105,10 @@ The following steps will help you setup and add a Notification Service Extension
     "extra_dependencies": [
         {
             "NotificationServiceExtension": {
-                "ZappPushPluginUrbanAirship/UrbanAirshipAppExtensions": "'~> 7.0.0'"
+                "ZappPushPluginUrbanAirship/ServiceExtension": "'~> 12.0.0'"
+            },
+            "NotificationContentExtension": {
+                "ZappPushPluginUrbanAirship/ContentExtension": "'~> 12.0.0'"
             }
         }
     ],
@@ -112,7 +116,10 @@ The following steps will help you setup and add a Notification Service Extension
 
     *__Note:__* If the app extension's pod spec is included in a separate specs repository, please add it to the `dependency_repository_url` array inside the manifest JSON.
 
-2. The following keys must be added to the manifest's `custom_configuration_fields` as shown below:
+2. The following keys should be added to the manifest's `custom_configuration_fields` as shown below in order to allow: 
+    * push notifications in debug builds
+    * service extension for store builds
+    * content extension for store builds
 
     ```json
     "custom_configuration_fields": [
@@ -123,13 +130,18 @@ The following steps will help you setup and add a Notification Service Extension
         },
         {
             "type": "uploader",
-            "key": "notification_extension_provisioning_profile",
-            "tooltip_text": "Upload Notification Extension Provisioning Profile for Store builds only"
+            "key": "notification_service_extension_provisioning_profile",
+            "tooltip_text": "Upload Notification Service Extension Provisioning Profile for Store builds only"
+        },
+        {
+            "type": "uploader",
+            "key": "notification_content_extension_provisioning_profile",
+            "tooltip_text": "Upload Notification Content Extension Provisioning Profile for Store builds only"
         }
     ]
     ```
 
-    *__note__:* We are using the `notification_extension_provisioning_profile` file on the Zapp app relese proccess.  
+    *__note__:* We are using the extension provisioning profile file on the Zapp app relesae proccess.  
 
 ## Plist Addition {#plist}
 
@@ -150,6 +162,64 @@ In the following example we added three parameters to the plist:
       "NSLocationAlwaysUsageDescription": "Your current location will be used to enable location based push notifications."
     }
 }
+```
+
+## Podspec {#podspec}
+
+To be able to add your custom implementation for the notification extension target on the project (one or more extensions)
+1. Create following folders structure in your repo
+```bash
+    Extensions  |__ service 
+                           |__ NotificationService.swift
+                |__ content 
+                           |__ NotificationViewController.swift
+
+    Scripts |__ prepare_service_extension.sh
+            |__ prepare_content_extension.sh
+```
+Extensions folder will have the implementation for the notification extension main class that will replace default implementation exists on our project.
+2. Add `prepare_service_extension.sh` script with following code for the service extension
+```bash
+    #Finds the project level dir
+    export ZAPP_HOME=`find /Users/$USER -name ZappiOS | head -n 1`
+    echo "The ZAPP_HOME dir is $ZAPP_HOME"
+
+    # Get NotificationService.swift file path
+    old_file_path=`find "$ZAPP_HOME" -maxdepth 3 -name "NotificationService.swift" | tail -1`
+    new_file_path="Extensions/service/NotificationService.swift"
+
+    echo "Replacing file: $old_file_path"
+
+    if [ -z "$old_file_path" ]; then
+        echo "Can't find the NotificationService.swift file, going to skip this script."
+    else
+        mv $new_file_path $old_file_path
+    fi
+```
+3. Add `prepare_content_extension.sh` script with following code for the content extension
+```bash
+    #Finds the project level dir
+    export ZAPP_HOME=`find /Users/$USER -name ZappiOS | head -n 1`
+    echo "The ZAPP_HOME dir is $ZAPP_HOME"
+
+    # Get NotificationService.swift file path
+    old_file_path=`find "$ZAPP_HOME" -maxdepth 3 -name "NotificationViewController.swift" | tail -1`
+    new_file_path="Extensions/content/NotificationViewController.swift"
+
+    echo "Replacing file: $old_file_path"
+
+    if [ -z "$old_file_path" ]; then
+        echo "Can't find the NotificationViewController.swift file, going to skip this script."
+    else
+        mv $new_file_path $old_file_path
+    fi
+```
+4. Add `prepare_command` to the podspec file which will run separate scripts created above to replace main notification swift class with your implementation
+```ruby
+    s.prepare_command = <<-CMD
+                            sh Scripts/prepare_service_extension.sh
+                            sh Scripts/prepare_content_extension.sh
+                            CMD
 ```
 
 ## Useful related documentation {#useful}
