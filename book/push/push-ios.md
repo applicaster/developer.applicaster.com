@@ -167,7 +167,7 @@ In the following example we added three parameters to the plist:
 ## Podspec (iOS for QB SDK only) {#podspec} 
 
 To be able to add your custom implementation for the notification extension target on the project (one or more extensions)
-1. Create following folders structure in your repo
+1. Create following folders structure in your repo (for one or both extension types)
 ```bash
     |-- Extensions  
     |   |-- service 
