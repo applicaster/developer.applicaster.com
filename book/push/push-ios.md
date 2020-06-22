@@ -141,7 +141,7 @@ The following steps will help you setup and add a Notification Service Extension
     ]
     ```
 
-    *__note__:* We are using the extension provisioning profile file on the Zapp app relesae proccess.  
+    *__note__:* We are using the extension provisioning profile file on the Zapp app release proccess.  
 
 ## Plist Addition {#plist}
 
