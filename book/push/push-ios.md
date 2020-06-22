@@ -169,15 +169,15 @@ In the following example we added three parameters to the plist:
 To be able to add your custom implementation for the notification extension target on the project (one or more extensions)
 1. Create following folders structure in your repo
 ```bash
-    Extensions  
-            service 
-                    NotificationService.swift
-            content 
-                    NotificationViewController.swift
-
-    Scripts 
-            prepare_service_extension.sh
-            prepare_content_extension.sh
+    |-- Extensions  
+    |   |-- service 
+    |       |-- NotificationService.swift
+    |   |-- content 
+    |       |-- NotificationViewController.swift
+    |
+    |-- Scripts 
+    |   |-- prepare_service_extension.sh
+    |   |-- prepare_content_extension.sh
 ```
 Extensions folder will have the implementation for the notification extension main class that will replace default implementation exists on our project.
 2. Add `prepare_service_extension.sh` script with following code for the service extension
