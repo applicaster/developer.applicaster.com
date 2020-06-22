@@ -164,18 +164,20 @@ In the following example we added three parameters to the plist:
 }
 ```
 
-## Podspec (iOS for QB SDK only) {#podspec}
+## Podspec (iOS for QB SDK only) {#podspec} 
 
 To be able to add your custom implementation for the notification extension target on the project (one or more extensions)
 1. Create following folders structure in your repo
 ```bash
-    Extensions  |__ service 
-                           |__ NotificationService.swift
-                |__ content 
-                           |__ NotificationViewController.swift
+    Extensions  
+            service 
+                    NotificationService.swift
+            content 
+                    NotificationViewController.swift
 
-    Scripts |__ prepare_service_extension.sh
-            |__ prepare_content_extension.sh
+    Scripts 
+            prepare_service_extension.sh
+            prepare_content_extension.sh
 ```
 Extensions folder will have the implementation for the notification extension main class that will replace default implementation exists on our project.
 2. Add `prepare_service_extension.sh` script with following code for the service extension
