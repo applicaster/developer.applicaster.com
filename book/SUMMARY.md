@@ -71,6 +71,7 @@
   - [Navigation](/quick-brick/plugins/navigation_plugins.md)
   - [Player](/quick-brick/plugins/player_plugin.md)
   - [UI Component](/quick-brick/plugins/ui_component.md)
+  - [Screen](/quick-brick/plugins/screen_plugins.md)
 
 - [API documentation](/quick-brick/Api-documentation.md)
 - [Plugin migration guide](/quick-brick/migration-guide.md)
