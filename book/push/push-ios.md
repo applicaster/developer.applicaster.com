@@ -188,7 +188,7 @@ Extensions folder will have the implementation for the notification extension ma
 2. Add `prepare_service_extension.sh` script with following code for the service extension
 
 * for QB SDK, set project base folder to : BASE_FOLDER="ZappiOS"
-* for Natvive SDK, set project base folder to : BASE_FOLDER="Zapp-iOS"
+* for Native SDK, set project base folder to : BASE_FOLDER="Zapp-iOS"
 
 ```bash
     #set project base folder
@@ -213,7 +213,7 @@ Extensions folder will have the implementation for the notification extension ma
 3. Add `prepare_content_extension.sh` script with following code for the content extension
 
 * for QB SDK, set project base folder to : BASE_FOLDER="ZappiOS"
-* for Natvive SDK, set project base folder to : BASE_FOLDER="Zapp-iOS"
+* for Native SDK, set project base folder to : BASE_FOLDER="Zapp-iOS"
 
 ```bash
     #set project base folder
