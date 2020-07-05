@@ -164,9 +164,11 @@ In the following example we added three parameters to the plist:
 }
 ```
 
-## Podspec (iOS for QB SDK only) {#podspec} 
+## Podspec {#podspec} 
 
-* Min iOS for QB SDK version: 0.1.0
+* Min version for QB iOS SDK: 0.1.0
+* Min version for Native iOS SDK: 14.1.10
+
 
 To be able to add your custom implementation for the notification extension target on the project (one or more extensions)
 1. Create following folders structure in your repo (for one or both extension types)
@@ -182,10 +184,18 @@ To be able to add your custom implementation for the notification extension targ
     |   |-- prepare_content_extension.sh
 ```
 Extensions folder will have the implementation for the notification extension main class that will replace default implementation exists on our project.
+
 2. Add `prepare_service_extension.sh` script with following code for the service extension
+
+* for QB SDK, set project base folder to : BASE_FOLDER="ZappiOS"
+* for Natvive SDK, set project base folder to : BASE_FOLDER="Zapp-iOS"
+
 ```bash
+    #set project base folder
+    BASE_FOLDER="ZappiOS"
+
     #Finds the project level dir
-    export ZAPP_HOME=`find /Users/$USER -name ZappiOS | head -n 1`
+    export ZAPP_HOME=`find /Users/$USER -name $BASE_FOLDER | head -n 1`
     echo "The ZAPP_HOME dir is $ZAPP_HOME"
 
     # Get NotificationService.swift file path
@@ -201,9 +211,16 @@ Extensions folder will have the implementation for the notification extension ma
     fi
 ```
 3. Add `prepare_content_extension.sh` script with following code for the content extension
+
+* for QB SDK, set project base folder to : BASE_FOLDER="ZappiOS"
+* for Natvive SDK, set project base folder to : BASE_FOLDER="Zapp-iOS"
+
 ```bash
+    #set project base folder
+    BASE_FOLDER="ZappiOS"
+
     #Finds the project level dir
-    export ZAPP_HOME=`find /Users/$USER -name ZappiOS | head -n 1`
+    export ZAPP_HOME=`find /Users/$USER -name $BASE_FOLDER | head -n 1`
     echo "The ZAPP_HOME dir is $ZAPP_HOME"
 
     # Get NotificationService.swift file path
