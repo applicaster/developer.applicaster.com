@@ -5,3 +5,4 @@
 - [Navigation](/quick-brick/plugins/navigation_plugins.md)
 - [Player](/quick-brick/plugins/player_plugin.md)
 - [UI Component](/quick-brick/plugins/ui_component.md)
+- [Screen](/quick-brick/plugins/screen_plugins.md)

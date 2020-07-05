@@ -1,0 +1,53 @@
+{
+  "api": {},
+  "author_name": "Zapp",
+  "author_email": "zapp@applicaster.com",
+  "manifest_version": "1.0",
+  "name": "My Custom Screen",
+  "description": "Custom screen with components inside",
+  "whitelisted_account_ids": [],
+  "identifier": "my_custom_screen",
+  "type": "general",
+  "platform": "android",
+  "min_zapp_sdk": "0.0.1",
+  "screen": true,
+  "ui_builder_support": true,
+  "targets": [
+    "mobile"
+  ],
+  "ui_frameworks": [
+    "native"
+  ],
+  "characteristics": {
+    "can_have_components": true
+  },
+  "general": {
+    "fields": [
+      {
+        "key": "identifier",
+        "type": "text_input",
+        "disableField": true
+      }
+    ]
+  },
+  "styles": {
+    "fields": [
+      {
+        "key": "bg_color",
+        "type": "color_picker_rgba",
+        "label": "Background Color",
+        "initial_value": "rgba(255,255,255,1.0)"
+      }
+    ]
+  },
+  "hooks": {
+    "fields": [
+      {
+        "key": "preload_plugins",
+        "type": "preload_plugins_selector",
+        "label": "Select Plugins",
+        "initial_value": []
+      }
+    ]
+  }
+}
